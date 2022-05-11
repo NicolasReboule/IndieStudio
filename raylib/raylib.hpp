@@ -1,0 +1,16 @@
+/*
+** EPITECH PROJECT, 2022
+** raylib.hpp
+** File description:
+** raylib.hpp
+*/
+
+#ifndef B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_RAYLIB_HPP
+#define B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_RAYLIB_HPP
+
+extern "C" {
+#include "raylib.h"
+};
+
+
+#endif //B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_RAYLIB_HPP
