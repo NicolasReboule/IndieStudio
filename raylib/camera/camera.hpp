@@ -34,10 +34,7 @@ namespace raylib {
 
         void end();
 
-        Camera3D get();
-
     private:
-        Camera3D _camera;
         Vector3 _position;
         Vector3 _target;
         Vector3 _up;

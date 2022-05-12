@@ -7,55 +7,84 @@
 
 #include "camera.hpp"
 
+
 raylib::Camera::Camera(Vector3 position, Vector3 target, Vector3 up, float fovy, int projection)
 {
-    this->_camera.position = position;
-    this->_camera.target = target;
-    this->_camera.up = up;
-    this->_camera.fovy = fovy;
-    this->_camera.projection = projection;
+    this->_position = position;
+    this->_target = target;
+    this->_up = up;
+    this->_fovy = fovy;
+    this->_projection = projection;
 }
 
 raylib::Camera::~Camera() {}
 
-Camera3D raylib::Camera::get()
-{
-    return this->_camera;
-}
-
 void raylib::Camera::update()
 {
-    UpdateCamera(&this->_camera);
+    Camera3D camera;
+    camera.position = this->_position;
+    camera.target = this->_target;
+    camera.fovy = this->_fovy;
+    camera.up = this->_up;
+    camera.projection = this->_projection;
+    UpdateCamera(&camera);
+    this->_position = camera.position;
+    this->_target = camera.target;
+    this->_fovy = camera.fovy;
+    this->_up = camera.up;
+    this->_projection = camera.projection;
 }
 
 void raylib::Camera::setMode(int mode)
 {
-    SetCameraMode(this->_camera, mode);
+    Camera3D camera;
+    camera.position = this->_position;
+    camera.target = this->_target;
+    camera.fovy = this->_fovy;
+    camera.up = this->_up;
+    camera.projection = this->_projection;
+    SetCameraMode(camera, mode);
+    this->_position = camera.position;
+    this->_target = camera.target;
+    this->_fovy = camera.fovy;
+    this->_up = camera.up;
+    this->_projection = camera.projection;
 }
 
 void raylib::Camera::setPosition(Vector3 position)
 {
-    this->_camera.position = position;
+    this->_position = position;
 }
 
 void raylib::Camera::setTarget(Vector3 target)
 {
-    this->_camera.target = target;
+    this->_target = target;
 }
 
 void raylib::Camera::setFovy(float fovy)
 {
-    this->_camera.fovy = fovy;
+    this->_fovy = fovy;
 }
 
 void raylib::Camera::setProjection(int projection)
 {
-    this->_camera.projection = projection;
+    this->_projection = projection;
 }
 
 void raylib::Camera::begin()
 {
-    BeginMode3D(this->_camera);
+    Camera3D camera;
+    camera.position = this->_position;
+    camera.target = this->_target;
+    camera.fovy = this->_fovy;
+    camera.up = this->_up;
+    camera.projection = this->_projection;
+    BeginMode3D(camera);
+    this->_position = camera.position;
+    this->_target = camera.target;
+    this->_fovy = camera.fovy;
+    this->_up = camera.up;
+    this->_projection = camera.projection;
 }
 
 void raylib::Camera::end()

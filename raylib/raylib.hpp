@@ -12,5 +12,4 @@ extern "C" {
 #include "raylib.h"
 };
 
-
 #endif //B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_RAYLIB_HPP
