@@ -7,6 +7,16 @@
 
 #include "camera.hpp"
 
+raylib::Camera::Camera()
+{
+    Vector3 zero = {0, 0, 0};
+    this->_position = zero;
+    this->_target = zero;
+    this->_up = zero;
+    this->_fovy = 25.0f;
+    this->_projection = CAMERA_ORTHOGRAPHIC;
+    this->setMode(CAMERA_FREE);
+}
 
 raylib::Camera::Camera(Vector3 position, Vector3 target, Vector3 up, float fovy, int projection)
 {
@@ -15,6 +25,7 @@ raylib::Camera::Camera(Vector3 position, Vector3 target, Vector3 up, float fovy,
     this->_up = up;
     this->_fovy = fovy;
     this->_projection = projection;
+    this->setMode(projection);
 }
 
 raylib::Camera::~Camera() {}
@@ -61,6 +72,11 @@ void raylib::Camera::setTarget(Vector3 target)
     this->_target = target;
 }
 
+void raylib::Camera::setUp(Vector3 up)
+{
+    this->_up = up;
+}
+
 void raylib::Camera::setFovy(float fovy)
 {
     this->_fovy = fovy;
@@ -91,6 +107,8 @@ void raylib::Camera::end()
 {
     EndMode3D();
 }
+
+
 
 
 

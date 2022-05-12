@@ -7,6 +7,11 @@
 
 #include "gamepad.hpp"
 
+raylib::Gamepad::Gamepad()
+{
+    this->_number = 0;
+}
+
 raylib::Gamepad::Gamepad(int gamepadNumber)
 {
     this->_number = gamepadNumber;

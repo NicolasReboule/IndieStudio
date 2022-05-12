@@ -13,8 +13,17 @@
 namespace raylib {
     class Raycast {
     public:
+        Raycast();
         Raycast(Vector3 position, Vector3 direction, float distance);
         ~Raycast();
+
+        void setPosition(Vector3 position);
+
+        void setDirection(Vector3 direction);
+
+        void setDistance(float distance);
+
+        void setColor(Color color);
 
         bool isCollidingBox(Vector3 position, Vector3 size);
 

@@ -7,6 +7,14 @@
 
 #include "raycast.hpp"
 
+raylib::Raycast::Raycast()
+{
+    this->_position = (Vector3){0, 0, 0};
+    this->_direction = (Vector3){1, 0, 0};
+    this->_distance = 0.1f;
+    this->_color = RED;
+}
+
 raylib::Raycast::Raycast(Vector3 position, Vector3 direction, float distance)
 {
     this->_position = position;
@@ -33,6 +41,26 @@ void raylib::Raycast::draw()
 {
     Ray raycast = {this->_position, this->_direction};
     DrawRay(raycast, this->_color);
+}
+
+void raylib::Raycast::setDirection(Vector3 direction)
+{
+    this->_direction = direction;
+}
+
+void raylib::Raycast::setDistance(float distance)
+{
+    this->_distance = distance;
+}
+
+void raylib::Raycast::setColor(Color color)
+{
+    this->_color = color;
+}
+
+void raylib::Raycast::setPosition(Vector3 position)
+{
+    this->_position = position;
 }
 
 

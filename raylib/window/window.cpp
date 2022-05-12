@@ -7,7 +7,14 @@
 
 #include "window.hpp"
 
-#include <utility>
+raylib::Window::Window()
+{
+    this->_width = 800;
+    this->_height = 450;
+    this->_title = "---raylib---";
+    SetTargetFPS(60);
+    InitWindow(this->_width, this->_height, this->_title.c_str());
+}
 
 raylib::Window::Window(Vector2 size, std::string title, int fps)
 {
@@ -72,6 +79,8 @@ void raylib::Window::close()
 {
     CloseWindow();
 }
+
+
 
 
 

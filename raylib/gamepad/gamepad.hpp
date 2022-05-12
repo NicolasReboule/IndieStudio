@@ -13,6 +13,7 @@
 namespace raylib {
     class Gamepad {
     public:
+        Gamepad();
         Gamepad(int gamepadNumber);
         ~Gamepad();
 

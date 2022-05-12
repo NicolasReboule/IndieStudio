@@ -14,6 +14,7 @@
 namespace raylib {
     class Window {
     public:
+        Window();
         Window(Vector2 size, std::string title, int fps);
         ~Window();
 

@@ -13,8 +13,13 @@
 namespace raylib {
     class Cube {
     public:
+        Cube();
+
         Cube(Vector3 position, Vector3 size, Vector3 wireSize, Color color, Color wireColor);
+
         ~Cube();
+
+        void draw();
 
         void setPosition(Vector3 position);
 

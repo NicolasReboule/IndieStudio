@@ -7,6 +7,16 @@
 
 #include "cube.hpp"
 
+raylib::Cube::Cube()
+{
+    Vector3 one = {1, 1, 1};
+    this->_position = one;
+    this->_size = one;
+    this->_wireSize = one;
+    this->_color = GREEN;
+    this->_wireColor = MAROON;
+}
+
 raylib::Cube::Cube(Vector3 position, Vector3 size, Vector3 wireSize, Color color, Color wireColor)
 {
     this->_position = position;
@@ -66,6 +76,12 @@ void raylib::Cube::setWireColor(Color color)
 Color raylib::Cube::getWireColor()
 {
     return (this->_wireColor);
+}
+
+void raylib::Cube::draw()
+{
+    DrawCube(this->_position, this->_size.x, this->_size.y, this->_size.z, this->_color);
+    DrawCubeWires(this->_position, this->_size.x, this->_size.y, this->_size.z, this->_wireColor);
 }
 
 
