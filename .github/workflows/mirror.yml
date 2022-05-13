@@ -20,4 +20,4 @@ jobs:
           target_repo_url:
             git@github.com:EpitechPromo2025/B-YEP-400-RUN-4-1-indiestudio-alwyn.mattapullut.git
           ssh_private_key:
-            ${{ secrets.ACTIONS_DEPLOY_KEY }}
+            ${{ secrets.SSH_TO_EPITECH }}
