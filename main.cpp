@@ -14,8 +14,6 @@ int main() {
 
     raylib::Camera camera = raylib::Camera((Vector3){0, 100, 75}, (Vector3){0, 0, 0}, (Vector3){0, 10, 0}, 15, CAMERA_FREE);
 
-   /* Vector3 position, Vector3 size, Color color*/
-
     Player player = Player((Vector3){0, 1, 0}, (Vector3){1, 1, 1}, GREEN);
 
     raylib::Gamepad pad = raylib::Gamepad(0);
@@ -31,10 +29,8 @@ int main() {
 
         camera.begin();
 
-        if (pad.isButtonJustPressed(GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+        if (pad.isButtonJustPressed(GAMEPAD_BUTTON_LEFT_FACE_RIGHT))
             player.moveAndCollide(world);
-            std::cout << "lol" << std::endl;
-        }
 
         player.draw();
 

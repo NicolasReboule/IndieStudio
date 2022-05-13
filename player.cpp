@@ -6,6 +6,7 @@
 */
 
 #include "player.hpp"
+#include <iostream>
 
 Player::Player(Vector3 position, Vector3 size, Color color)
         : _firstRaycast(), _secondRaycast(), _texture() {
@@ -31,19 +32,23 @@ Player::Player(Vector3 position, Vector3 size, Color color)
 Player::~Player() = default;
 
 void Player::moveAndCollide(std::vector<raylib::Cube> world) {
-    /*for (auto &item: world) {
+    for (auto &item: world) {
         if (this->_firstRaycast.isCollidingBox(item.getPosition(), item.getSize()) &&
             !this->_secondRaycast.isCollidingBox(item.getPosition(), item.getSize())) {
             return;
         }
-    }*/
+    }
 
-    this->_position = (Vector3) {this->_position.x * this->_direction.x + this->_speed,
-                                 this->_position.y * this->_direction.y + this->_speed,
-                                 this->_position.z * this->_direction.z + this->_speed};
+    //std::cout << "position(" << this->_position.x << "," << this->_position.y << "," << this->_position.z << ")" << std::endl;
+    //std::cout << "direction(" << this->_direction.x << "," << this->_direction.y << "," << this->_direction.z << ")" << std::endl;
+    this->_position = (Vector3) {this->_position.x + this->_direction.x * this->_speed,
+                                 this->_position.y + this->_direction.y * this->_speed,
+                                 this->_position.z + this->_direction.z * this->_speed};
     this->_firstRaycast.setPosition(this->_position);
     this->_secondRaycast.setPosition(this->_position);
     this->_texture.setPosition(this->_position);
+    //std::cout << "position(" << this->_position.x << "," << this->_position.y << "," << this->_position.z << ")" << std::endl;
+    //std::cout << "direction(" << this->_direction.x << "," << this->_direction.y << "," << this->_direction.z << ")" << std::endl;
 }
 
 void Player::draw()
