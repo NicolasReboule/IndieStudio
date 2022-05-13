@@ -2,9 +2,9 @@ name: Doxygen Action
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   build:
@@ -18,12 +18,12 @@ jobs:
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@v1.9.2
         with:
-          working-directory: "./raylib-cpp"
+          working-directory: "./"
           doxyfile-path: "./Doxyfile"
           enable-latex: true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./doc/html
