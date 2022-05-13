@@ -1,19 +1,19 @@
 /*
 ** EPITECH PROJECT, 2022
-** player.hpp
+** KinematicBody.hpp
 ** File description:
-** player.hpp
+** KinematicBody.hpp
 */
 
-#ifndef B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_PLAYER_HPP
-#define B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_PLAYER_HPP
+#ifndef B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_KINEMATICBODY_HPP
+#define B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_KINEMATICBODY_HPP
 
 #include "./raylib/raylib-cpp.hpp"
 
-class Player {
+class KinematicBody {
 public:
-    Player(Vector3 position, Vector3 size, Color color);
-    ~Player();
+    KinematicBody(Vector3 position, Vector3 size, Color color);
+    ~KinematicBody();
 
     void moveAndCollide(std::vector<raylib::Cube> world);
 
@@ -31,4 +31,4 @@ private:
     raylib::Raycast _secondRaycast;
 };
 
-#endif //B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_PLAYER_HPP
+#endif //B_YEP_400_RUN_4_1_INDIESTUDIO_ALWYN_MATTAPULLUT_KINEMATICBODY_HPP
