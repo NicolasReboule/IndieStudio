@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  doxygen:
     runs-on: ubuntu-latest
 
     steps:
