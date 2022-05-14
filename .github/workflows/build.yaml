@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: bomberman_linux_x86_64
-          path: ${github.workspace}/build/bomberman
+          path: ${{github.workspace}}/build/bomberman
 
   build_windows:
     runs-on: windows-latest
@@ -61,4 +61,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: bomberman_windows.exe
-          path: ${github.workspace}/build/Debug/bomberman.exe
+          path: ${{github.workspace}}/build/Debug/bomberman.exe
