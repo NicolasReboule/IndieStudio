@@ -11,6 +11,7 @@ on:
 jobs:
   build_linux:
     runs-on: ubuntu-latest
+    container: docker://alwyn974/indie-ubuntu:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -18,11 +19,12 @@ jobs:
       - name: Create Build Environment
         run: cmake -E make_directory ${{github.workspace}}/build
 
-      - name: Setup Environment
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install gcc-multilib
-          sudo apt-get install -y --no-install-recommends libglfw3 libglfw3-dev libx11-dev libxcursor-dev libxrandr-dev libxinerama-dev libxi-dev libxext-dev libxfixes-dev
+      - name: Cache Raylib
+        id: cache-raylib
+        uses: actions/cache@v3
+        with:
+          path: build/_deps
+          key: ${{ runner.os }}-raylib
 
       - name: Configure CMake
         shell: bash
@@ -47,6 +49,13 @@ jobs:
 
       - name: Create Build Environment
         run: cmake -E make_directory ${{github.workspace}}/build
+
+      - name: Cache Raylib
+        id: cache-raylib
+        uses: actions/cache@v3
+        with:
+          path: build/_deps
+          key: ${{ runner.os }}-raylib
 
       - name: Configure CMake
         shell: powershell
