@@ -17,29 +17,29 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create Build Environment
-        run: cmake -E make_directory ${{github.workspace}}/build
+        run: mkdir build
 
       - name: Cache Raylib
         id: cache-raylib
         uses: actions/cache@v3
         with:
-          path: build/_deps
+          path: ./build/_deps
           key: ${{ runner.os }}-raylib
 
       - name: Configure CMake
         shell: bash
-        working-directory: ${{github.workspace}}/build
-        run: cmake ${{github.workspace}}
-      
+        working-directory: ./build
+        run: cmake ../
+
       - name: Build
         shell: bash
-        run: cmake --build ${{github.workspace}}/build
-        
+        run: cmake --build ./build
+
       #- name: Upload artifact
       #  uses: actions/upload-artifact@v3
       #  with:
       #    name: bomberman_linux_x86_64
-      #    path: ${{github.workspace}}/build/bomberman
+      #    path: ./build/bomberman
 
   build_windows:
     runs-on: windows-latest
@@ -48,26 +48,27 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create Build Environment
-        run: cmake -E make_directory ${{github.workspace}}/build
+        shell: bash
+        run: mkdir ./build
 
       - name: Cache Raylib
         id: cache-raylib
         uses: actions/cache@v3
         with:
-          path: build/_deps
-          key: ${{ runner.os }}-raylib
+          path: ./build/_deps
+          key: ${{ runner.os }}-raylib-v2
 
       - name: Configure CMake
-        shell: powershell
-        working-directory: ${{github.workspace}}/build
-        run: cmake ${{github.workspace}}
+        shell: bash
+        working-directory: ./build
+        run: cmake ../
 
       - name: Build
-        shell: powershell
-        run: cmake --build ${{github.workspace}}/build
-        
+        shell: bash
+        run: cmake --build ./build
+
       #- name: Upload artifact
       #  uses: actions/upload-artifact@v3
       #  with:
       #    name: bomberman_windows.exe
-      #    path: ${{github.workspace}}/build/Debug/bomberman.exe
+      #    path: ./build/Debug/bomberman.exe
