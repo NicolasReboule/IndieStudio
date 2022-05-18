@@ -2,14 +2,40 @@ name: Cross platform build
 
 on:
   push:
-    branches: [ master, dev, main ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, dev, main ]
+    branches: [ master, dev ]
 
   workflow_dispatch:
 
 jobs:
+  files_changed:
+    if: github.event_name != 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    outputs:
+      files_changed: ${{ steps.check_changed_files.outputs.files_changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get changed files
+        uses: tj-actions/changed-files@v20
+        id: changed_files
+
+      - name: Check changed files
+        id: check_changed_files
+        run: |
+          for file in ${{ steps.changed_files.outputs.all_modified_files }}; do
+            echo ""$file" was changed"
+            if [ ! -z "$(echo $file | grep -E "*.cpp|*.hpp|CMakeLists.txt")" ]; then
+              echo ::set-output name=files_changed::true
+              break
+            fi
+          done;
+
   build_linux:
+    needs: files_changed
+    if: always() && (needs.files_changed.outputs.files_changed == 'True' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     container: docker://alwyn974/indie-ubuntu:latest
     steps:
@@ -35,13 +61,16 @@ jobs:
         shell: bash
         run: cmake --build ./build
 
-      #- name: Upload artifact
-      #  uses: actions/upload-artifact@v3
-      #  with:
-      #    name: bomberman_linux_x86_64
-      #    path: ./build/bomberman
+      - name: Upload artifact
+        if: ${{ success() && github.event_name == 'workflow_dispatch' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: bomberman_linux_x86_64
+          path: ./build/bomberman
 
   build_windows:
+    needs: [ files_changed, build_linux ]
+    if: always() && needs.build_linux.result=='success' && (needs.files_changed.outputs.files_changed == 'True' || github.event_name == 'workflow_dispatch')
     runs-on: windows-latest
     steps:
       - name: Checkout
@@ -67,8 +96,9 @@ jobs:
         shell: bash
         run: cmake --build ./build
 
-      #- name: Upload artifact
-      #  uses: actions/upload-artifact@v3
-      #  with:
-      #    name: bomberman_windows.exe
-      #    path: ./build/Debug/bomberman.exe
+      - name: Upload artifact
+        if: ${{ success() && github.event_name == 'workflow_dispatch' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: bomberman_windows.exe
+          path: ./build/Debug/bomberman.exe
