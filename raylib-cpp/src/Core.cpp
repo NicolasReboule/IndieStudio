@@ -7,9 +7,9 @@
 
 #include "raylib/Core.hpp"
 
-void raylib::Core::initWindow(int width, int height, const char *title)
+void raylib::Core::initWindow(int width, int height, const std::string &title)
 {
-    InitWindow(width, height, title);
+    InitWindow(width, height, title.c_str());
 }
 
 bool raylib::Core::isOpen()

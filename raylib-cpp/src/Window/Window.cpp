@@ -6,16 +6,20 @@
 */
 
 #include "raylib/Window/Window.hpp"
+#include "raylib/Core.hpp"
 
-rl::Window::Window(const std::string &title, int width, int height)
+raylib::Window::Window(const std::string &title, int width, int height)
 {
     this->_title = title;
     this->_width = width;
     this->_height = height;
-    std::cout << "Window created" << std::endl;
+    raylib::Core::initWindow(this->_width, this->_height, this->_title);
+    std::cout << "Window created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
 }
 
-rl::Window::~Window()
+raylib::Window::~Window()
 {
+    raylib::Core::closeWindow();
+    //can't fix glfwInit leak
     std::cout << "Window destroyed" << std::endl;
 }

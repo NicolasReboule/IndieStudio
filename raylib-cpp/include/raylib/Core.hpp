@@ -18,7 +18,7 @@ namespace raylib {
     public:
 
         // Window-related functions
-        static void initWindow(int width, int height, const char *title);              // Initialize window and OpenGL context
+        static void initWindow(int width, int height, const std::string &title);              // Initialize window and OpenGL context
         static bool isOpen();                                           // Check if KEY_ESCAPE pressed or Close icon pressed
         static void closeWindow();                                                 // Close window and unload OpenGL context
         static bool isWindowReady();                                               // Check if window has been initialized successfully

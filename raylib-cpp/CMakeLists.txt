@@ -8,7 +8,7 @@ find_package(raylib REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
-        src/GameEngine/GameEngine.cpp
-        src/GameEngine/Component.cpp
-        src/GameEngine/Node.cpp src/Core.cpp include/raylib/Core.hpp)
+        src/Core.cpp
+        src/Window/Window.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)
