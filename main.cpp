@@ -9,6 +9,6 @@
 
 int main(int ac, char **av)
 {
-    rl::Window window("Raylib", 800, 600);
+    raylib::Window window("Raylib", 800, 600);
     return (0);
 }

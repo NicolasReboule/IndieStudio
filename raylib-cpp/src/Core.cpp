@@ -12,9 +12,9 @@ void raylib::Core::initWindow(int width, int height, const char *title)
     InitWindow(width, height, title);
 }
 
-bool raylib::Core::windowShouldClose()
+bool raylib::Core::isOpen()
 {
-    return WindowShouldClose();
+    return !WindowShouldClose();
 }
 
 void raylib::Core::closeWindow()
@@ -189,7 +189,7 @@ Vector2 raylib::Core::getWindowScaleDPI()
 
 std::string raylib::Core::getMonitorName(int monitor)
 {
-    return std::string(GetMonitorName(monitor));
+    return GetMonitorName(monitor);
 }
 
 void raylib::Core::setClipboardText(const std::string &text)
@@ -199,5 +199,5 @@ void raylib::Core::setClipboardText(const std::string &text)
 
 std::string raylib::Core::getClipboardText()
 {
-    return std::string(GetClipboardText());
+    return GetClipboardText();
 }

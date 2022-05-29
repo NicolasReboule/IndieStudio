@@ -12,7 +12,7 @@ TEST(test_window, test_window_creation_and_destroy)
 {
     testing::internal::CaptureStdout();
     {
-        rl::Window window("Test", 800, 600);
+        raylib::Window window("Test", 800, 600);
     }
     std::string output = testing::internal::GetCapturedStdout();
     std::string expected = "Window created\n"
