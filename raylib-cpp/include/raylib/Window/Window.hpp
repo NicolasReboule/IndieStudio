@@ -12,7 +12,7 @@
 #include <iostream>
 #include "raylib.h"
 
-namespace rl {
+namespace raylib {
     class Window {
     public:
         explicit Window(const std::string &title, int width, int height);

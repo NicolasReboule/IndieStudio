@@ -10,6 +10,6 @@
 
 #include <iostream>
 
-#include "Window/Window.hpp"
+#include "raylib/Window/Window.hpp"
 
 #endif //INDIESTUDIO_RAYLIB_HPP
