@@ -163,7 +163,7 @@ namespace raylib {
         // Compression/Encoding functionality
         unsigned char *compressData(unsigned char *data, int dataLength, int *compDataLength);        // Compress data (DEFLATE algorithm)
         unsigned char *decompressData(unsigned char *compData, int compDataLength, int *dataLength);  // Decompress data (DEFLATE algorithm)
-        std::string EncodeDataBase64(const unsigned char *data, int dataLength,int *outputLength);         // Encode data to Base64 string
+        std::string encodeDataBase64(unsigned char *data, int dataLength,int *outputLength);         // Encode data to Base64 string
         unsigned char *decodeDataBase64(unsigned char *data, int *outputLength);                      // Decode Base64 string data
 //
         // Persistent <storage management

@@ -639,7 +639,7 @@ unsigned char *raylib::Core::decompressData(unsigned char *compData, int compDat
     return DecompressData(compData, compDataLength, dataLength);
 }
 
-std::string raylib::Core::EncodeDataBase64(const unsigned char *data, int dataLength, int *outputLength)
+std::string raylib::Core::encodeDataBase64(unsigned char *data, int dataLength, int *outputLength)
 {
     return std::string(EncodeDataBase64(data, dataLength, outputLength));
 }
