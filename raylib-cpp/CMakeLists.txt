@@ -10,5 +10,5 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
         src/Core.cpp
         src/Window/Window.cpp
-        )
+        src/Text.cpp include/raylib/Text.hpp src/Shape.cpp include/raylib/Shape.hpp)
 target_link_libraries(${PROJECT_NAME} raylib)

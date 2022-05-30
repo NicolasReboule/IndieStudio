@@ -11,5 +11,6 @@
 #include <iostream>
 
 #include "raylib/Window/Window.hpp"
+#include "raylib/Core.hpp"
 
 #endif //INDIESTUDIO_RAYLIB_HPP
