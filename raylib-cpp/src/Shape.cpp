@@ -96,7 +96,7 @@ void raylib::Shape::drawEllipse(int centerX, int centerY, float radiusH, float r
 
 void raylib::Shape::drawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, Color color)
 {
-    DrawEllipseLines(centerX, centerY, radiusH, radiusV, color),
+    DrawEllipseLines(centerX, centerY, radiusH, radiusV, color);
 }
 
 void raylib::Shape::drawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color)
