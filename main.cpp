@@ -13,8 +13,7 @@ int main(int ac, char **av)
     while (raylib::Core::isOpen()) {
         raylib::Core::beginDrawing();
         raylib::Core::clearBackground(WHITE);
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-
+        raylib::Text::drawText("Congrats! Hugo est Gay", 190, 200, 20, LIGHTGRAY);
         raylib::Core::endDrawing();
     }
     return (0);

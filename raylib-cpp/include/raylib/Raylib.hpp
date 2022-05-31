@@ -12,5 +12,10 @@
 
 #include "raylib/Window/Window.hpp"
 #include "raylib/Core.hpp"
+#include "raylib/Text.hpp"
+#include "raylib/Shape.hpp"
+#include "raylib/Models.hpp"
+#include "raylib/Texture.hpp"
+#include "raylib/Audio.hpp"
 
 #endif //INDIESTUDIO_RAYLIB_HPP

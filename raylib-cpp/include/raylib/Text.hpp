@@ -27,7 +27,7 @@ namespace raylib {
 
         // Text drawing functions
         void drawFPS(int posX, int posY);                                                               // Draw current FPS
-        void drawText(const std::string &text, int posX, int posY, int fontSize, Color color);                 // Draw text (using default font)
+        static void drawText(const std::string &text, int posX, int posY, int fontSize, Color color);                 // Draw text (using default font)
         void drawTextEx(Font font, const std::string &text, Vector2 position, float fontSize, float spacing, Color tint);  // Draw text using font and additional parameters
         void drawTextPro(Font font, const std::string &text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint); // Draw text using Font and pro parameters (rotation)
         void drawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint); // Draw one character (codepoint)
