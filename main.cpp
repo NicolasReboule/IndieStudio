@@ -10,11 +10,11 @@
 int main(int ac, char **av)
 {
     raylib::Window window("Raylib", 800, 600);
-    while (raylib::Core::isOpen()) {
-        raylib::Core::beginDrawing();
-        raylib::Core::clearBackground(WHITE);
+    while (raylib::Window::isOpen()) {
+        raylib::Draw::beginDrawing();
+        raylib::Draw::clearBackground(WHITE);
         raylib::Text::drawText("Congrats! Hugo est Gay", 190, 200, 20, LIGHTGRAY);
-        raylib::Core::endDrawing();
+        raylib::Draw::endDrawing();
     }
     return (0);
 }

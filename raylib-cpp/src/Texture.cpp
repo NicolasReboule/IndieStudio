@@ -34,7 +34,7 @@ Image raylib::Texture::loadImageFromTexture(Texture2D texture)
     return LoadImageFromTexture(texture);
 }
 
-Image raylib::Texture::loadImageFromScreen(void)
+Image raylib::Texture::loadImageFromScreen()
 {
     return LoadImageFromScreen();
 }

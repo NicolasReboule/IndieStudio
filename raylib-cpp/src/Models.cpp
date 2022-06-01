@@ -294,7 +294,7 @@ Material *raylib::Models::loadMaterials(const std::string &fileName, int *materi
     return LoadMaterials(fileName.c_str(), materialCount);
 }
 
-Material raylib::Models::loadMaterialDefault(void)
+Material raylib::Models::loadMaterialDefault()
 {
     return LoadMaterialDefault();
 }

@@ -17,5 +17,10 @@
 #include "raylib/Models.hpp"
 #include "raylib/Texture.hpp"
 #include "raylib/Audio.hpp"
-
+#include "raylib/Draw.hpp"
+#include "raylib/Touch.hpp"
+#include "raylib/Mouse.hpp"
+#include "raylib/Keyboard.hpp"
+#include "raylib/Gamepad.hpp"
+#include "raylib/Cursor.hpp"
 #endif //INDIESTUDIO_RAYLIB_HPP

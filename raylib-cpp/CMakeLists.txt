@@ -10,5 +10,19 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
         src/Core.cpp
         src/Window/Window.cpp
-        src/Text.cpp include/raylib/Text.hpp src/Shape.cpp include/raylib/Shape.hpp src/Audio.cpp include/raylib/Audio.hpp src/Models.cpp include/raylib/Models.hpp src/Texture.cpp include/raylib/Texture.hpp)
+        src/Text.cpp
+        src/Shape.cpp
+        src/Audio.cpp
+        src/Models.cpp
+        src/Texture.cpp
+        src/Draw.cpp
+        src/Cameras.cpp
+        src/Cursor.cpp
+        src/Touch.cpp
+        src/Mouse.cpp
+        src/Keyboard.cpp
+        src/Gamepad.cpp
+        src/Shaders.cpp
+        src/Fonts.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

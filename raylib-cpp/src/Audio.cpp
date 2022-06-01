@@ -9,17 +9,17 @@
 
 // Audio device management functions
 
-void raylib::Audio::initAudioDevice(void)
+void raylib::Audio::initAudioDevice()
 {
     InitAudioDevice();
 }
 
-void raylib::Audio::closeAudioDevice(void)
+void raylib::Audio::closeAudioDevice()
 {
     CloseAudioDevice();
 }
 
-bool raylib::Audio::isAudioDeviceReady(void)
+bool raylib::Audio::isAudioDeviceReady()
 {
     return IsAudioDeviceReady();
 }
@@ -103,12 +103,12 @@ void raylib::Audio::playSoundMulti(Sound sound)
     PlaySoundMulti(sound);
 }
 
-void raylib::Audio::stopSoundMulti(void)
+void raylib::Audio::stopSoundMulti()
 {
     StopSoundMulti();
 }
 
-int raylib::Audio::getSoundsPlaying(void)
+int raylib::Audio::getSoundsPlaying()
 {
     return GetSoundsPlaying();
 }

@@ -16,9 +16,9 @@ namespace raylib {
     class Audio {
     public:
         // Audio device management functions
-        void initAudioDevice(void);                                                     // Initialize audio device and context
-        void closeAudioDevice(void);                                                    // Close the audio device and context
-        bool isAudioDeviceReady(void);                                                  // Check if audio device has been initialized successfully
+        void initAudioDevice();                                                     // Initialize audio device and context
+        void closeAudioDevice();                                                    // Close the audio device and context
+        bool isAudioDeviceReady();                                                  // Check if audio device has been initialized successfully
         void setMasterVolume(float volume);                                             // Set master volume (listener)
     
         // Wave/Sound loading/unloading functions
@@ -38,8 +38,8 @@ namespace raylib {
         void pauseSound(Sound sound);                                                   // Pause a sound
         void resumeSound(Sound sound);                                                  // Resume a paused sound
         void playSoundMulti(Sound sound);                                               // Play a sound (using multichannel buffer pool)
-        void stopSoundMulti(void);                                                      // Stop any sound playing (using multichannel buffer pool)
-        int getSoundsPlaying(void);                                                     // Get number of sounds playing in the multichannel
+        void stopSoundMulti();                                                      // Stop any sound playing (using multichannel buffer pool)
+        int getSoundsPlaying();                                                     // Get number of sounds playing in the multichannel
         bool isSoundPlaying(Sound sound);                                               // Check if a sound is currently playing
         void setSoundVolume(Sound sound, float volume);                                 // Set volume for a sound (1.0 is max level)
         void setSoundPitch(Sound sound, float pitch);                                   // Set pitch for a sound (1.0 is base level)
