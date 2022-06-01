@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['raylib_2ehpp_0',['Raylib.hpp',['../_raylib_8hpp.html',1,'']]]
+  ['audio_2ecpp_0',['Audio.cpp',['../_audio_8cpp.html',1,'']]],
+  ['audio_2ehpp_1',['Audio.hpp',['../_audio_8hpp.html',1,'']]]
 ];
