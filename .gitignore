@@ -22,3 +22,9 @@ cmake-build-debug-coverage/
 build/
 doc/
 bomberman
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.dir/
+*.lib
+*.pdb
