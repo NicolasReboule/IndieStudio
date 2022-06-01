@@ -23,4 +23,5 @@
 #include "raylib/Keyboard.hpp"
 #include "raylib/Gamepad.hpp"
 #include "raylib/Cursor.hpp"
+#include "raylib/Cameras.hpp"
 #endif //INDIESTUDIO_RAYLIB_HPP
