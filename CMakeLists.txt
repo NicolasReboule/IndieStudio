@@ -6,7 +6,7 @@ set(BINARY_NAME "bomberman") # Binary name
 set(ASSETS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/assets/") # Directory containing resources
 
 if (UNIX)
-    set(CMAKE_CXX_FLAGS "-W -Wall -Wextra")
+    set(CMAKE_CXX_FLAGS "-W -Wall -Wextra")  #TODO: remove this line
 endif (UNIX)
 
 add_subdirectory(raylib-cpp/) # Depend on raylib-cpp
