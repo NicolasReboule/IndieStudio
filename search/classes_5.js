@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyboard_0',['Keyboard',['../classraylib_1_1_keyboard.html',1,'raylib']]]
+  ['imagehelper_0',['ImageHelper',['../classraylib_1_1_image_helper.html',1,'raylib']]]
 ];

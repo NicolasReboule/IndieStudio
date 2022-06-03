@@ -1,5 +1,5 @@
-<map id="raylib&#45;cpp/include/raylib/Gamepad.hpp" name="raylib&#45;cpp/include/raylib/Gamepad.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="85,5,225,47"/>
+<map id="raylib&#45;cpp/include/raylib/Inputs/Gamepad.hpp" name="raylib&#45;cpp/include/raylib/Inputs/Gamepad.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="54,5,234,47"/>
 <area shape="rect" id="node2" href="$_raylib_8hpp.html" title=" " alt="" coords="5,95,128,136"/>
-<area shape="rect" id="node3" href="$_gamepad_8cpp.html" title=" " alt="" coords="153,102,335,129"/>
+<area shape="rect" id="node3" href="$_gamepad_8cpp.html" title=" " alt="" coords="152,95,291,136"/>
 </map>

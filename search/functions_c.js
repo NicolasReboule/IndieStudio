@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['pauseaudiostream_0',['pauseAudioStream',['../classraylib_1_1_audio.html#a9ee895698b9f37651fca897211bbd816',1,'raylib::Audio']]],
-  ['pausemusicstream_1',['pauseMusicStream',['../classraylib_1_1_audio.html#a3989c54cda261f95ce1d3abc0fa3b2ae',1,'raylib::Audio']]],
-  ['pausesound_2',['pauseSound',['../classraylib_1_1_audio.html#a0af9e3a037846e5a08715c991d4577e1',1,'raylib::Audio']]],
-  ['playaudiostream_3',['playAudioStream',['../classraylib_1_1_audio.html#a840b69c026bc0897aa5c2e09bedc391f',1,'raylib::Audio']]],
-  ['playmusicstream_4',['playMusicStream',['../classraylib_1_1_audio.html#a28fe82084d6324d565c5ea723fc5690a',1,'raylib::Audio']]],
-  ['playsound_5',['playSound',['../classraylib_1_1_audio.html#a20d5f20ef75d1383599683c8d13807ca',1,'raylib::Audio']]],
-  ['playsoundmulti_6',['playSoundMulti',['../classraylib_1_1_audio.html#ad1e2ae966e7afde50b0303cb22b37701',1,'raylib::Audio']]]
+  ['restorewindow_0',['restoreWindow',['../classraylib_1_1_window.html#a2bbbaa1b74f81e7b90e9b20bb8de2df2',1,'raylib::Window']]],
+  ['resumeaudiostream_1',['resumeAudioStream',['../classraylib_1_1_rl_audio_stream.html#a2d6c27b778f9001f086221b312954045',1,'raylib::RlAudioStream']]],
+  ['resumemusicstream_2',['resumeMusicStream',['../classraylib_1_1_rl_music.html#a590a66a94e7f297ad2302836281c70d9',1,'raylib::RlMusic']]],
+  ['resumesound_3',['resumeSound',['../classraylib_1_1_rl_sound.html#a26797766e8cc71bd2ffede2eb8a6cd38',1,'raylib::RlSound']]]
 ];

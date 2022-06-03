@@ -83,27 +83,29 @@ $(function() {
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_window_8hpp.html">raylib/Window/Window.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8hpp.html">raylib/Core.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_text_8hpp.html">raylib/Text.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_shape_8hpp.html">raylib/Shape.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_models_8hpp.html">raylib/Models.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_texture_8hpp.html">raylib/Texture.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="_audio_8hpp.html">raylib/Audio.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_draw_8hpp.html">raylib/Draw.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="_touch_8hpp.html">raylib/Touch.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="_mouse_8hpp.html">raylib/Mouse.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="_keyboard_8hpp.html">raylib/Keyboard.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="_gamepad_8hpp.html">raylib/Gamepad.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="_cursor_8hpp.html">raylib/Cursor.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif </span><span class="comment">//INDIESTUDIO_RAYLIB_HPP</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8hpp.html">raylib/Core/Core.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_text_8hpp.html">raylib/Text/Text.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_shape_8hpp.html">raylib/2DObject/Shape.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_rl_model_8hpp.html">raylib/3DObject/RlModel.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_texture_8hpp.html">raylib/Texture/Texture.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="_audio_8hpp.html">raylib/Audio/Audio.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_draw_helper_8hpp.html">raylib/Core/DrawHelper.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="_touch_8hpp.html">raylib/Inputs/Touch.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="_mouse_8hpp.html">raylib/Inputs/Mouse.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="_keyboard_8hpp.html">raylib/Inputs/Keyboard.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="_gamepad_8hpp.html">raylib/Inputs/Gamepad.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="_cursor_8hpp.html">raylib/Inputs/Cursor.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="_rl_camera_8hpp.html">raylib/Camera/RlCamera.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">//INDIESTUDIO_RAYLIB_HPP</span></div>
 <div class="ttc" id="a_audio_8hpp_html"><div class="ttname"><a href="_audio_8hpp.html">Audio.hpp</a></div></div>
 <div class="ttc" id="a_core_8hpp_html"><div class="ttname"><a href="_core_8hpp.html">Core.hpp</a></div></div>
 <div class="ttc" id="a_cursor_8hpp_html"><div class="ttname"><a href="_cursor_8hpp.html">Cursor.hpp</a></div></div>
-<div class="ttc" id="a_draw_8hpp_html"><div class="ttname"><a href="_draw_8hpp.html">Draw.hpp</a></div></div>
+<div class="ttc" id="a_draw_helper_8hpp_html"><div class="ttname"><a href="_draw_helper_8hpp.html">DrawHelper.hpp</a></div></div>
 <div class="ttc" id="a_gamepad_8hpp_html"><div class="ttname"><a href="_gamepad_8hpp.html">Gamepad.hpp</a></div></div>
 <div class="ttc" id="a_keyboard_8hpp_html"><div class="ttname"><a href="_keyboard_8hpp.html">Keyboard.hpp</a></div></div>
-<div class="ttc" id="a_models_8hpp_html"><div class="ttname"><a href="_models_8hpp.html">Models.hpp</a></div></div>
 <div class="ttc" id="a_mouse_8hpp_html"><div class="ttname"><a href="_mouse_8hpp.html">Mouse.hpp</a></div></div>
+<div class="ttc" id="a_rl_camera_8hpp_html"><div class="ttname"><a href="_rl_camera_8hpp.html">RlCamera.hpp</a></div></div>
+<div class="ttc" id="a_rl_model_8hpp_html"><div class="ttname"><a href="_rl_model_8hpp.html">RlModel.hpp</a></div></div>
 <div class="ttc" id="a_shape_8hpp_html"><div class="ttname"><a href="_shape_8hpp.html">Shape.hpp</a></div></div>
 <div class="ttc" id="a_text_8hpp_html"><div class="ttname"><a href="_text_8hpp.html">Text.hpp</a></div></div>
 <div class="ttc" id="a_texture_8hpp_html"><div class="ttname"><a href="_texture_8hpp.html">Texture.hpp</a></div></div>

@@ -22,8 +22,11 @@ var searchData=
   ['texture_19',['Texture',['../classraylib_1_1_texture.html',1,'raylib']]],
   ['texture_2ecpp_20',['Texture.cpp',['../_texture_8cpp.html',1,'']]],
   ['texture_2ehpp_21',['Texture.hpp',['../_texture_8hpp.html',1,'']]],
-  ['togglefullscreen_22',['toggleFullscreen',['../classraylib_1_1_window.html#a6937d689d24768835d16a33e04afa90f',1,'raylib::Window']]],
-  ['touch_23',['Touch',['../classraylib_1_1_touch.html',1,'raylib::Touch'],['../classraylib_1_1_touch.html#abcb00ddd4f0842e6176e784f60ec11c5',1,'raylib::Touch::Touch()']]],
-  ['touch_2ecpp_24',['Touch.cpp',['../_touch_8cpp.html',1,'']]],
-  ['touch_2ehpp_25',['Touch.hpp',['../_touch_8hpp.html',1,'']]]
+  ['texturehelper_22',['TextureHelper',['../classraylib_1_1_texture_helper.html',1,'raylib']]],
+  ['texturehelper_2ecpp_23',['TextureHelper.cpp',['../_texture_helper_8cpp.html',1,'']]],
+  ['texturehelper_2ehpp_24',['TextureHelper.hpp',['../_texture_helper_8hpp.html',1,'']]],
+  ['togglefullscreen_25',['toggleFullscreen',['../classraylib_1_1_window.html#a6937d689d24768835d16a33e04afa90f',1,'raylib::Window']]],
+  ['touch_26',['Touch',['../classraylib_1_1_touch.html',1,'raylib']]],
+  ['touch_2ecpp_27',['Touch.cpp',['../_touch_8cpp.html',1,'']]],
+  ['touch_2ehpp_28',['Touch.hpp',['../_touch_8hpp.html',1,'']]]
 ];

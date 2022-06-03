@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keyboard_2ecpp_0',['Keyboard.cpp',['../_keyboard_8cpp.html',1,'']]],
-  ['keyboard_2ehpp_1',['Keyboard.hpp',['../_keyboard_8hpp.html',1,'']]]
+  ['imagehelper_2ecpp_0',['ImageHelper.cpp',['../_image_helper_8cpp.html',1,'']]],
+  ['imagehelper_2ehpp_1',['ImageHelper.hpp',['../_image_helper_8hpp.html',1,'']]]
 ];
