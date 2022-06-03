@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Window.cpp
-** File description:
+** FileHelper description:
 ** Window.cpp
 */
 

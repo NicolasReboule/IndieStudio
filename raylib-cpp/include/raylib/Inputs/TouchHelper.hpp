@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
 ** IndieStudio
-** File description:
-** Touch
+** FileHelper description:
+** TouchHelper
 */
 
 #ifndef TOUCH_HPP_
@@ -11,7 +11,7 @@
 #include "raylib.h"
 
 namespace raylib {
-    class Touch {
+    class TouchHelper {
         public:
             // Input-related functions: touch
             static int getTouchX();                                                    // Get touch position X for touch point 0 (relative to screen size)
@@ -20,7 +20,7 @@ namespace raylib {
             static int getTouchPointId(int index);                                         // Get touch point identifier for given index
             static int getTouchPointCount();                                           // Get number of touch points
 
-            // Gestures and Touch Handling Functions (Module: rgestures)
+            // Gestures and TouchHelper Handling Functions (Module: rgestures)
             static void setGesturesEnabled(unsigned int flags);                            // Enable a set of gestures using flags
             static bool isGestureDetected(int gesture);                                    // Check if a gesture have been detected
             static int getGestureDetected();                                           // Get latest detected gesture

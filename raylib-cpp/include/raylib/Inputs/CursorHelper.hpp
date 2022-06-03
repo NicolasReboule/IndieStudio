@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
 ** IndieStudio
-** File description:
-** Cursor
+** FileHelper description:
+** CursorHelper
 */
 
 #ifndef CURSOR_HPP_
@@ -11,9 +11,9 @@
 #include "raylib.h"
 
 namespace raylib {
-    class Cursor {
+    class CursorHelper {
         public:
-            // Cursor-related functions
+            // CursorHelper-related functions
             static void showCursor();                                                  // Shows cursor
             static void hideCursor();                                                  // Hides cursor
             static bool isCursorHidden();                                              // Check if cursor is not visible

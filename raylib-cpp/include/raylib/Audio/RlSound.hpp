@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlSound.hpp
-** File description:
+** FileHelper description:
 ** RlSound.hpp
 */
 

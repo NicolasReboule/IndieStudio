@@ -1,19 +1,11 @@
 /*
 ** EPITECH PROJECT, 2022
 ** IndieStudio
-** File description:
+** FileHelper description:
 ** Shader
 */
 
 #include "raylib/Shader/RlShader.hpp"
-
-raylib::RlShader::RlShader()
-{
-}
-
-raylib::RlShader::~RlShader()
-{
-}
 
 // Shader management functions
 

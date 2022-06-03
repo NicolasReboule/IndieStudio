@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** MeshGenerator.cpp
-** File description:
+** FileHelper description:
 ** MeshGenerator.cpp
 */
 

@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlMusic.cpp
-** File description:
+** FileHelper description:
 ** RlMusic.cpp
 */
 

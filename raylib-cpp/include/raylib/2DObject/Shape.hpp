@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Shape.hpp
-** File description:
+** FileHelper description:
 ** Shape.hpp
 */
 

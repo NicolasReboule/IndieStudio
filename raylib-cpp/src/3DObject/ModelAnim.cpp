@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** ModelAnim.cpp
-** File description:
+** FileHelper description:
 ** ModelAnim.cpp
 */
 

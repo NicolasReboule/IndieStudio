@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlWave.hpp
-** File description:
+** FileHelper description:
 ** RlWave.hpp
 */
 
@@ -20,14 +20,6 @@ namespace raylib {
         void unloadWave(Wave wave);                                                     // Unload wave data
         bool exportWave(Wave wave, const std::string &fileName);                               // Export wave data to file, returns true on success
         bool exportWaveAsCode(Wave wave, const std::string &fileName);                         // Export wave sample data to code (.h), returns true on success
-
-        // Wave/RlSound management functions         // Set pitch for a sound (1.0 is base level)
-        void waveFormat(Wave *wave, int sampleRate, int sampleSize, int channels);      // Convert wave data to desired format
-        Wave waveCopy(Wave wave);                                                       // Copy a wave to a new wave
-        void waveCrop(Wave *wave, int initSample, int finalSample);                     // Crop a wave to defined samples range
-        float *loadWaveSamples(Wave wave);                                              // Load samples data from wave as a floats array
-        void unloadWaveSamples(float *samples);                                         // Unload samples data loaded with LoadWaveSamples()
-
     private:
     };
 }

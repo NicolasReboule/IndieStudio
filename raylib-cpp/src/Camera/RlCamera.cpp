@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** IndieStudio
-** File description:
+** FileHelper description:
 ** Camera
 */
 

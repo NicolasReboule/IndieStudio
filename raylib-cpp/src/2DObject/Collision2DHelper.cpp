@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Collision2DHelper.cpp
-** File description:
+** FileHelper description:
 ** Collision2DHelper.cpp
 */
 

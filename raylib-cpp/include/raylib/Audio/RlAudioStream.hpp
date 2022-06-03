@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlAudioStream.hpp
-** File description:
+** FileHelper description:
 ** RlAudioStream.hpp
 */
 

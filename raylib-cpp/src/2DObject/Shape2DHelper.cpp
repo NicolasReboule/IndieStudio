@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Shape2DHelper2DHelper.cpp
-** File description:
+** FileHelper description:
 ** Shape2DHelper2DHelper.cpp
 */
 

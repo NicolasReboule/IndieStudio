@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Material.cpp
-** File description:
+** FileHelper description:
 ** Material.cpp
 */
 

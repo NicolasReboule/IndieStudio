@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** ColorHelper.cpp
-** File description:
+** FileHelper description:
 ** ColorHelper.cpp
 */
 

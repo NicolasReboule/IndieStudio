@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Collision3DHelper.cpp
-** File description:
+** FileHelper description:
 ** Collision3DHelper.cpp
 */
 

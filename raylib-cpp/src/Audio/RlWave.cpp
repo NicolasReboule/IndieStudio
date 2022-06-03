@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlWave.cpp
-** File description:
+** FileHelper description:
 ** RlWave.cpp
 */
 
@@ -32,31 +32,4 @@ bool raylib::RlWave::exportWave(Wave wave, const std::string &fileName)
 bool raylib::RlWave::exportWaveAsCode(Wave wave, const std::string &fileName)
 {
     return ExportWaveAsCode(wave, fileName.c_str());
-}
-
-// Wave/RlSound management functions
-
-void raylib::RlWave::waveFormat(Wave *wave, int sampleRate, int sampleSize, int channels)
-{
-    WaveFormat(wave, sampleRate, sampleSize, channels);
-}
-
-Wave raylib::RlWave::waveCopy(Wave wave)
-{
-    return WaveCopy(wave);
-}
-
-void raylib::RlWave::waveCrop(Wave *wave, int initSample, int finalSample)
-{
-    WaveCrop(wave, initSample, finalSample);
-}
-
-float *raylib::RlWave::loadWaveSamples(Wave wave)
-{
-    return LoadWaveSamples(wave);
-}
-
-void raylib::RlWave::unloadWaveSamples(float *samples)
-{
-    UnloadWaveSamples(samples);
 }

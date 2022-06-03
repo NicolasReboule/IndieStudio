@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlMesh.hpp
-** File description:
+** FileHelper description:
 ** RlMesh.hpp
 */
 

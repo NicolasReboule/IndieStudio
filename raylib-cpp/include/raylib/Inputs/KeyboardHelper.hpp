@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
 ** IndieStudio
-** File description:
-** Keyboard
+** FileHelper description:
+** KeyboardHelper
 */
 
 #ifndef KEYBOARD_HPP_
@@ -11,7 +11,7 @@
 #include "raylib.h"
 
 namespace raylib {
-    class Keyboard {
+    class KeyboardHelper {
         public:
             // Input-related functions: keyboard
             static bool isKeyPressed(int key);                                             // Check if a key has been pressed once

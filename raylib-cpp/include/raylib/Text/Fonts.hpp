@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Font.hpp
-** File description:
+** FileHelper description:
 ** Font.hpp
 */
 

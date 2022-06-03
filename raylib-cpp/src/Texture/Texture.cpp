@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** Texture.cpp
-** File description:
+** FileHelper description:
 ** Texture.cpp
 */
 

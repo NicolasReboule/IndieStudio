@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** ModelHelper.cpp
-** File description:
+** FileHelper description:
 ** ModelHelper.cpp
 */
 

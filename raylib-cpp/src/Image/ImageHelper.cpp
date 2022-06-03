@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** ImageHelper.cpp
-** File description:
+** FileHelper description:
 ** ImageHelper.cpp
 */
 
@@ -78,3 +78,166 @@ void raylib::ImageHelper::imageDrawTextEx(Image *dst, Font font, const std::stri
 {
     ImageDrawTextEx(dst, font, text.c_str(), position, fontSize, spacing, tint);
 }
+
+// Image manipulation functions
+
+Image raylib::ImageHelper::imageCopy(Image image)
+{
+    return ImageCopy(image);
+}
+
+Image raylib::ImageHelper::imageFromImage(Image image, Rectangle rec)
+{
+    return ImageFromImage(image, rec);
+}
+
+Image raylib::ImageHelper::imageText(const std::string &text, int fontSize, Color color)
+{
+    return ImageText(text.c_str(), fontSize, color);
+}
+
+Image raylib::ImageHelper::imageTextEx(Font font, const std::string &text, float fontSize, float spacing, Color tint)
+{
+    return ImageTextEx(font, text.c_str(), fontSize, spacing, tint);
+}
+
+void raylib::ImageHelper::imageFormat(Image *image, int newFormat)
+{
+    ImageFormat(image, newFormat);
+}
+
+void raylib::ImageHelper::imageToPOT(Image *image, Color fill)
+{
+    ImageToPOT(image, fill);
+}
+
+void raylib::ImageHelper::imageCrop(Image *image, Rectangle crop)
+{
+    ImageCrop(image, crop);
+}
+
+void raylib::ImageHelper::imageAlphaCrop(Image *image, float threshold)
+{
+    ImageAlphaCrop(image, threshold);
+}
+
+void raylib::ImageHelper::imageAlphaClear(Image *image, Color color, float threshold)
+{
+    ImageAlphaClear(image, color, threshold);
+}
+
+void raylib::ImageHelper::imageAlphaMask(Image *image, Image alphaMask)
+{
+    ImageAlphaMask(image, alphaMask);
+}
+
+void raylib::ImageHelper::imageAlphaPremultiply(Image *image)
+{
+    ImageAlphaPremultiply(image);
+}
+
+void raylib::ImageHelper::imageResize(Image *image, int newWidth, int newHeight)
+{
+    ImageResize(image, newWidth, newHeight);
+}
+
+void raylib::ImageHelper::imageResizeNN(Image *image, int newWidth, int newHeight)
+{
+    ImageResizeNN(image, newWidth, newHeight);
+}
+
+void raylib::ImageHelper::imageResizeCanvas(Image *image, int newWidth, int newHeight, int offsetX, int offsetY, Color fill)
+{
+    ImageResizeCanvas(image, newWidth, newHeight, offsetX, offsetY, fill);
+}
+
+void raylib::ImageHelper::imageMipmaps(Image *image)
+{
+    ImageMipmaps(image);
+}
+
+void raylib::ImageHelper::imageDither(Image *image, int rBpp, int gBpp, int bBpp, int aBpp)
+{
+    ImageDither(image, rBpp, gBpp, bBpp, aBpp);
+}
+
+void raylib::ImageHelper::imageFlipVertical(Image *image)
+{
+    ImageFlipVertical(image);
+}
+
+void raylib::ImageHelper::imageFlipHorizontal(Image *image)
+{
+    ImageFlipHorizontal(image);
+}
+
+void raylib::ImageHelper::imageRotateCW(Image *image)
+{
+    ImageRotateCW(image);
+}
+
+void raylib::ImageHelper::imageRotateCCW(Image *image)
+{
+    ImageRotateCCW(image);
+}
+
+void raylib::ImageHelper::imageColorTint(Image *image, Color color)
+{
+    ImageColorTint(image, color);
+}
+
+void raylib::ImageHelper::imageColorInvert(Image *image)
+{
+    ImageColorInvert(image);
+}
+
+void raylib::ImageHelper::imageColorGrayscale(Image *image)
+{
+    ImageColorGrayscale(image);
+}
+
+void raylib::ImageHelper::imageColorContrast(Image *image, float contrast)
+{
+    ImageColorContrast(image, contrast);
+}
+
+void raylib::ImageHelper::imageColorBrightness(Image *image, int brightness)
+{
+    ImageColorBrightness(image, brightness);
+}
+
+void raylib::ImageHelper::imageColorReplace(Image *image, Color color, Color replace)
+{
+    ImageColorReplace(image, color, replace);
+}
+
+Color *raylib::ImageHelper::loadImageColors(Image image)
+{
+    return LoadImageColors(image);
+}
+
+Color *raylib::ImageHelper::loadImagePalette(Image image, int maxPaletteSize, int *colorsCount)
+{
+    return LoadImagePalette(image, maxPaletteSize, colorsCount);
+}
+
+void raylib::ImageHelper::unloadImageColors(Color *colors)
+{
+    UnloadImageColors(colors);
+}
+
+void raylib::ImageHelper::unloadImagePalette(Color *colors)
+{
+    UnloadImagePalette(colors);
+}
+
+Rectangle raylib::ImageHelper::getImageAlphaBorder(Image image, float threshold)
+{
+    return GetImageAlphaBorder(image, threshold);
+}
+
+Color raylib::ImageHelper::getImageColor(Image image, int x, int y)
+{
+    return GetImageColor(image, x, y);
+}
+

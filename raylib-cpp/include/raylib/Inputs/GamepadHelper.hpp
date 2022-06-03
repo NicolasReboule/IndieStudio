@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
 ** IndieStudio
-** File description:
-** Gamepad
+** FileHelper description:
+** GamepadHelper
 */
 
 #ifndef GAMEPAD_HPP_
@@ -13,7 +13,7 @@
 
 namespace raylib {
 
-    class Gamepad {
+    class GamepadHelper {
         public:
             // Input-related functions: gamepads
             static bool isGamepadAvailable(int gamepad);                                   // Check if a gamepad is available

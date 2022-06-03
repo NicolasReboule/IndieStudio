@@ -12,29 +12,26 @@ find_package(raylib REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
-        src/Core/Core.cpp
+        src/Core/CoreHelper.cpp
         src/Window/Window.cpp
         src/Text/Text.cpp
         src/2DObject/Shape.cpp
-        src/Audio/Audio.cpp
+        src/Audio/AudioHelper.cpp
         src/3DObject/RlModel.cpp
         src/Texture/Texture.cpp
         src/Core/DrawHelper.cpp
         src/Camera/RlCamera.cpp
-        src/Inputs/Cursor.cpp
-        src/Inputs/Touch.cpp
-        src/Inputs/Mouse.cpp
-        src/Inputs/Keyboard.cpp
-        src/Inputs/Gamepad.cpp
+        src/Inputs/CursorHelper.cpp
+        src/Inputs/TouchHelper.cpp
+        src/Inputs/MouseHelper.cpp
+        src/Inputs/KeyboardHelper.cpp
+        src/Inputs/GamepadHelper.cpp
         src/Shader/RlShader.cpp
         src/Text/Fonts.cpp
         src/Audio/RlSound.cpp
         src/Audio/RlWave.cpp
-        include/raylib/Audio/RlWave.hpp
         src/Audio/RlMusic.cpp
-        include/raylib/Audio/RlMusic.hpp
         src/Audio/RlAudioStream.cpp
-        include/raylib/Audio/RlAudioStream.hpp
         src/3DObject/ModelAnim.cpp
         src/3DObject/RlMaterial.cpp
         src/3DObject/RlMesh.cpp
@@ -48,5 +45,12 @@ add_library(${PROJECT_NAME}
         src/Image/ColorHelper.cpp
         src/Texture/TextureHelper.cpp
         src/3DObject/MeshGenerator.cpp
+        src/Text/Codepoint.cpp
+        src/Text/TextHelper.cpp
+        src/Image/ImageGenerator.cpp
+        src/Audio/WaveHelper.cpp
+        src/Core/WorldHelper.cpp
+        src/Core/FileHelper.cpp
+        src/Core/CompressHelper.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)

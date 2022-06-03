@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** main.cpp
-** File description:
+** FileHelper description:
 ** main.cpp
 */
 
@@ -24,13 +24,13 @@ int main(int ac, char **av)
 
     Model model = raylib::RlModel::loadModel("../assets/guy.iqm");                    // Load the animated model mesh and basic data
     Texture2D texture = raylib::Texture::loadTexture("../assets/guytex.png");         // Load model texture and set material
-    raylib::RlModel::setMaterialTexture(&model.materials[0], MATERIAL_MAP_DIFFUSE, texture);     // Set model material map texture
+    raylib::RlMaterial::setMaterialTexture(&model.materials[0], MATERIAL_MAP_DIFFUSE, texture);     // Set model material map texture
 
     Vector3 position = { 0.0f, 0.0f, 0.0f };            // Set model position
 
     // Load animation data
     unsigned int animsCount = 0;
-    ModelAnimation *anims = raylib::RlModel::loadModelAnimations("../assets/guyanim.iqm", &animsCount);
+    ModelAnimation *anims = raylib::ModelAnim::loadModelAnimations("../assets/guyanim.iqm", &animsCount);
     int animFrameCounter = 0;
 
     raylib::RlCamera::setCameraMode(camera, CAMERA_FREE); // Set free camera mode
@@ -46,10 +46,10 @@ int main(int ac, char **av)
         raylib::RlCamera::updateCamera(&camera);
 
         // Play animation when spacebar is held down
-        if (raylib::Keyboard::isKeyDown(KEY_SPACE))
+        if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE))
         {
             animFrameCounter++;
-            raylib::RlModel::updateModelAnimation(model, anims[0], animFrameCounter);
+            raylib::ModelAnim::updateModelAnimation(model, anims[0], animFrameCounter);
             if (animFrameCounter >= anims[0].frameCount) animFrameCounter = 0;
         }
         //----------------------------------------------------------------------------------
@@ -62,19 +62,19 @@ int main(int ac, char **av)
 
         raylib::DrawHelper::beginMode3D(camera);
 
-        raylib::RlModel::drawModelEx(model, position, (Vector3){1.0f, 0.0f, 0.0f }, -90.0f, (Vector3){1.0f, 1.0f, 1.0f }, WHITE);
+        raylib::ModelHelper::drawModelEx(model, position, (Vector3){1.0f, 0.0f, 0.0f }, -90.0f, (Vector3){1.0f, 1.0f, 1.0f }, WHITE);
 
         for (int i = 0; i < model.boneCount; i++)
         {
-            raylib::RlModel::drawCube(anims[0].framePoses[animFrameCounter][i].translation, 0.2f, 0.2f, 0.2f, RED);
+            raylib::Shape3DHelper::drawCube(anims[0].framePoses[animFrameCounter][i].translation, 0.2f, 0.2f, 0.2f, RED);
         }
 
-        raylib::RlModel::drawGrid(10, 1.0f);         // DrawHelper a grid
+        raylib::Shape3DHelper::drawGrid(10, 1.0f);         // DrawHelper a grid
 
         raylib::DrawHelper::endMode3D();
 
-        raylib::Text::drawText("PRESS SPACE to PLAY MODEL ANIMATION", 10, 10, 20, MAROON);
-        raylib::Text::drawText("(c) Guy IQM 3D model by @culacant", screenWidth - 200, screenHeight - 20, 10, GRAY);
+        raylib::TextHelper::drawText("PRESS SPACE to PLAY MODEL ANIMATION", 10, 10, 20, MAROON);
+        raylib::TextHelper::drawText("(c) Guy IQM 3D model by @culacant", screenWidth - 200, screenHeight - 20, 10, GRAY);
 
         raylib::DrawHelper::endDrawing();
         //----------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ int main(int ac, char **av)
     raylib::Texture::unloadTexture(texture);     // Unload texture
 
     // Unload model animations data
-    for (unsigned int i = 0; i < animsCount; i++) raylib::RlModel::unloadModelAnimation(anims[i]);
+    for (unsigned int i = 0; i < animsCount; i++) raylib::ModelAnim::unloadModelAnimation(anims[i]);
     RL_FREE(anims);
 
     raylib::RlModel::unloadModel(model);         // Unload model

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
 ** IndieStudio
-** File description:
-** Mouse
+** FileHelper description:
+** MouseHelper
 */
 
 #ifndef MOUSE_HPP_
@@ -11,7 +11,7 @@
 #include "raylib.h"
 
 namespace raylib {
-    class Mouse {
+    class MouseHelper {
         public:
             // Input-related functions: mouse
             static bool isMouseButtonPressed(int button);                                  // Check if a mouse button has been pressed once
