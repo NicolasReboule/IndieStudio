@@ -95,3 +95,18 @@ const Color &raylib::Text::getColor() const
 {
     return this->_color;
 }
+
+float raylib::Text::getHeight() const
+{
+    return _font.getFontSize();
+}
+
+float raylib::Text::getWidth() const
+{
+    return (float) MeasureText(_text.c_str(), (int) _font.getFontSize());
+}
+
+raylib::RlFont *raylib::Text::operator->()
+{
+    return &_font;
+}

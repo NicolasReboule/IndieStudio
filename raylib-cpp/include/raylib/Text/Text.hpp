@@ -36,6 +36,10 @@ namespace raylib {
         const RlFont &getFont() const;
         const Vector2 &getPosition() const;
         const Color &getColor() const;
+        float getHeight() const;
+        float getWidth() const;
+
+        RlFont *operator->();
     private:
         Color _color;
         Vector2 _position;

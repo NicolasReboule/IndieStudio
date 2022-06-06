@@ -12,10 +12,10 @@ int main(int ac, char **av)
     raylib::Window window("Test", 1920, 1080);
     raylib::CoreHelper::setFramerateLimit(60);
     raylib::RlFont font;
-    font.setFontSize(100);
     raylib::Text text("Hello", font);
     text.setPosition((Vector2) {860, 540});
     text.setColor(RED);
+    text->setFontSize(100);
     while (window.isOpen()) {
         raylib::DrawHelper::beginDrawing();
         raylib::DrawHelper::clearBackground(BLACK);
