@@ -16,6 +16,10 @@ namespace raylib {
     public:
         // Texture loading functions
         // NOTE: These functions require GPU access
+        explicit Texture(const std::string &fileName);
+        explicit Texture(Image image);
+        Texture(const Texture &texture);
+        ~Texture();
         Texture2D loadTexture(const std::string &fileName);                                                       // Load texture from file into GPU memory (VRAM)
         Texture2D loadTextureFromImage(Image image);                                                       // Load texture from image data
         TextureCubemap loadTextureCubemap(Image image, int layout);                                        // Load cubemap from image, multiple image cubemap layouts supported
@@ -28,8 +32,21 @@ namespace raylib {
         // Texture configuration functions
         void genTextureMipmaps(Texture2D *texture);                                                        // Generate GPU mipmaps for a texture
         void setTextureFilter(Texture2D texture, int filter);                                              // Set texture scaling filter mode
-        void setTextureWrap(Texture2D texture, int wrap);                                                  // Set texture wrapping mode
+        void setTextureWrap(Texture2D texture, int wrap);                                                   // Set texture wrapping mode
+
+        inline Texture2D getTexture() const {return _texture;};
+        inline std::string getTexturePath() const {return _texturePath;};
+        inline Rectangle getTextureRec() const {return _textureRec;};
+        inline TextureCubemap getTextureCubemap() const {return _textureCubemap;};
+        inline RenderTexture2D getRenderTexture() const {return _renderTexture;};
+
+        Texture &operator=(const Texture &texture);
     private:
+        Texture2D _texture;
+        std::string _texturePath;
+        Rectangle _textureRec;
+        TextureCubemap _textureCubemap;
+        RenderTexture2D _renderTexture;
     };
 }
 

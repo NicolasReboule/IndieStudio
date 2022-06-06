@@ -12,13 +12,15 @@ raylib::Window::Window(const std::string &title, int width, int height)
     this->_title = title;
     this->_width = width;
     this->_height = height;
-    raylib::Window::initWindow(this->_width, this->_height, this->_title);
+    this->_minWidth = 0;
+    this->_minHeight = 0;
+    this->initWindow(this->_width, this->_height, this->_title);
     std::cout << "Window created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
 }
 
 raylib::Window::~Window()
 {
-    raylib::Window::closeWindow();
+    this->closeWindow();
     //can't fix glfwInit leak
     std::cout << "Window destroyed" << std::endl;
 }
@@ -118,6 +120,7 @@ void raylib::Window::setWindowIcon(Image image)
 
 void raylib::Window::setWindowTitle(const std::string &title)
 {
+    _title = title;
     SetWindowTitle(title.c_str());
 }
 
@@ -133,11 +136,15 @@ void raylib::Window::setWindowMonitor(int monitor)
 
 void raylib::Window::setWindowMinSize(int width, int height)
 {
+    this->_minHeight = height;
+    this->_minWidth = width;
     SetWindowMinSize(width, height);
 }
 
 void raylib::Window::setWindowSize(int width, int height)
 {
+    this->_height = height;
+    this->_width = width;
     SetWindowSize(width, height);
 }
 

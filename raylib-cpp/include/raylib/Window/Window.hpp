@@ -59,11 +59,17 @@ namespace raylib {
         void setClipboardText(const std::string &text);                                // Set clipboard text content
         std::string getClipboardText();                                     // Get clipboard text content
 
-
+        inline std::string getTitle() const {return _title;};
+        inline int getHeight() const {return _height;};
+        inline int getWidth() const {return _width;};
+        inline int getMinHeight() const {return _minHeight;};
+        inline int getMinWidth() const {return _minWidth;};
     private:
         std::string _title;
         int _width;
         int _height;
+        int _minWidth;
+        int _minHeight;
     };
 }
 

@@ -10,6 +10,7 @@
 
 #include <raylib.h>
 #include <string>
+#include "Text.hpp"
 
 namespace raylib {
     class TextHelper {
@@ -17,6 +18,7 @@ namespace raylib {
         // Text drawing functions
         static void drawFPS(int posX, int posY);                                                               // DrawHelper current FPS
         static void drawText(const std::string &text, int posX, int posY, int fontSize, Color color);                 // DrawHelper text (using default font)
+        static void drawText(const Text &text);
         static void drawTextEx(Font font, const std::string &text, Vector2 position, float fontSize, float spacing, Color tint);  // DrawHelper text using font and additional parameters
         static void drawTextPro(Font font, const std::string &text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint); // DrawHelper text using Font and pro parameters (rotation)
         static void drawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint); // DrawHelper one character (codepoint)

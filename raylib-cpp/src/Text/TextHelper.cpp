@@ -9,6 +9,11 @@
 
 // Text drawing functions
 
+void raylib::TextHelper::drawText(const raylib::Text &text)
+{
+    DrawTextEx(text.getFont().getFont(), text.getText().c_str(), text.getPosition(), text.getFont().getFontSize(), text.getFont().getTextSpacing(), text.getColor());
+}
+
 void raylib::TextHelper::drawFPS(int posX, int posY)
 {
     DrawFPS(posX, posY);

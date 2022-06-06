@@ -27,7 +27,7 @@ add_library(${PROJECT_NAME}
         src/Inputs/KeyboardHelper.cpp
         src/Inputs/GamepadHelper.cpp
         src/Shader/RlShader.cpp
-        src/Text/Fonts.cpp
+        src/Text/RlFont.cpp
         src/Audio/RlSound.cpp
         src/Audio/RlWave.cpp
         src/Audio/RlMusic.cpp
