@@ -7,60 +7,47 @@
 
 #include "raylib/Text/Text.hpp"
 
-raylib::Text::Text(const std::string &text, Vector2 position, Color color) : _font()
+raylib::Text::Text(const std::string &text, Vector2 position, Color color)
+    : _color(color), _position(position), _font()
 {
-    this->_color = color;
-    this->_position = position;
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, Font font, Vector2 position, Color color) : _font(font)
+raylib::Text::Text(const std::string &text, Font font, Vector2 position, Color color)
+    : _color(color), _position(position), _font(font)
 {
-    this->_color = color;
-    this->_position = position;
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, const raylib::RlFont &font, Vector2 position, Color color) : _font(font)
+raylib::Text::Text(const std::string &text, const raylib::RlFont &font, Vector2 position, Color color)
+    : _color(color), _position(position), _font(font)
 {
-    this->_color = color;
-    this->_position = position;
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, Vector2 position, Color color) : _font(fontPath, fontSize, fontChars, glyphCount)
+raylib::Text::Text(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, Vector2 position, Color color)
+    : _color(color), _position(position), _font(fontPath, fontSize, fontChars, glyphCount)
 {
-    this->_color = color;
-    this->_position = position;
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, Image image, Color key, int firstChar, Vector2 position, Color color) : _font(image, key, firstChar)
+raylib::Text::Text(const std::string &text, Image image, Color key, int firstChar, Vector2 position, Color color)
+    : _color(color), _position(position), _font(image, key, firstChar)
 {
-    this->_color = color;
-    this->_position = position;
     this->_text = text;
 }
 
 raylib::Text::Text(const raylib::Text &text)
-{
-    *this = text;
-}
-
-raylib::Text::Text(const std::string &text, const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount,  Vector2 position, Color color) : _font(fileType, fileData, dataSize, fontSize, fontChars, glyphCount)
-{
-    this->_color = color;
-    this->_position = position;
-    this->_text = text;
-}
-
-raylib::Text &raylib::Text::operator=(const raylib::Text &text)
+    : _color(text.getColor()), _position(text.getPosition())
 {
     this->_text = text._text;
     this->_font = text._font;
-    this->_color = text._color;
-    this->_position = text._position;
-    return *this;
+}
+
+raylib::Text::Text(const std::string &text, const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount,  Vector2 position, Color color)
+    : _color(color), _position(position), _font(fileType, fileData, dataSize, fontSize, fontChars, glyphCount)
+{
+    this->_text = text;
 }
 
 void raylib::Text::setText(const std::string &text)
@@ -89,7 +76,22 @@ void raylib::Text::setColor(Color color)
     this->_color = color;
 }
 
-raylib::RlFont raylib::Text::getFont() const
+const raylib::RlFont &raylib::Text::getFont() const
 {
     return this->_font;
+}
+
+const std::string &raylib::Text::getText() const
+{
+    return this->_text;
+}
+
+const Vector2 &raylib::Text::getPosition() const
+{
+    return this->_position;
+}
+
+const Color &raylib::Text::getColor() const
+{
+    return this->_color;
 }

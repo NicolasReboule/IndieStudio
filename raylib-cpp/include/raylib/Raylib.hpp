@@ -32,4 +32,5 @@
 #include "raylib/3DObject/ModelHelper.hpp"
 #include "raylib/3DObject/RlMaterial.hpp"
 #include "raylib/Text/TextHelper.hpp"
+
 #endif //INDIESTUDIO_RAYLIB_HPP

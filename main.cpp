@@ -18,7 +18,7 @@ int main(int ac, char **av)
     text.setColor(RED);
     while (window.isOpen()) {
         raylib::DrawHelper::beginDrawing();
-        raylib::DrawHelper::clearBackground(WHITE);
+        raylib::DrawHelper::clearBackground(BLACK);
         raylib::TextHelper::drawText(text);
         raylib::DrawHelper::endDrawing();
     }

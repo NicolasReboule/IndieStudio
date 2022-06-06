@@ -12,19 +12,17 @@
 #include <string>
 
 namespace raylib {
-    #define DEFAULT_FONT_SIZE 10
-    #define DEFAULT_TEXT_SPACING 1
 
     class RlFont {
     public:
         // Font loading/unloading functions
         RlFont();
-        RlFont(Font font, float fontSize = DEFAULT_FONT_SIZE, float textSpacing = DEFAULT_TEXT_SPACING);
-        RlFont(const RlFont &font);
-        RlFont(const std::string &fileName, float fontSize = DEFAULT_FONT_SIZE, float textSpacing = DEFAULT_TEXT_SPACING);
-        RlFont(const std::string &fileName, int fontSize, int *fontChars, int glyphCount, float realfontSize = DEFAULT_FONT_SIZE, float textSpacing = DEFAULT_TEXT_SPACING);
-        RlFont(Image image, Color key, int firstChar, float fontSize = DEFAULT_FONT_SIZE, float textSpacing = DEFAULT_TEXT_SPACING);
-        RlFont(const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, float realfontSize = DEFAULT_FONT_SIZE, float textSpacing = DEFAULT_TEXT_SPACING);
+        explicit RlFont(Font font, float fontSize = 10, float textSpacing = 1);
+        explicit RlFont(const RlFont &font);
+        explicit RlFont(const std::string &fileName, float fontSize = 10, float textSpacing = 1);
+        explicit RlFont(const std::string &fileName, int fontSize, int *fontChars, int glyphCount, float realfontSize = 10, float textSpacing = 1);
+        explicit RlFont(Image image, Color key, int firstChar, float fontSize = 10, float textSpacing = 1);
+        explicit RlFont(const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, float realfontSize = 10, float textSpacing = 1);
 
         RlFont &operator=(const RlFont &font);
 
