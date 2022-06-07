@@ -7,62 +7,64 @@
 
 #include "raylib/Audio/RlAudioStream.hpp"
 
-AudioStream raylib::RlAudioStream::loadAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels)
+raylib::RlAudioStream::RlAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels)
 {
-    return LoadAudioStream(sampleRate, sampleSize, channels);
+    this->stream = LoadAudioStream(sampleRate, sampleSize, channels);
 }
 
-void raylib::RlAudioStream::updateAudioStream(AudioStream stream, const void *data, int samplesCount)
+raylib::RlAudioStream::~RlAudioStream()
 {
-    UpdateAudioStream(stream, data, samplesCount);
+    UnloadAudioStream(this->stream);
 }
 
-void raylib::RlAudioStream::closeAudioStream(AudioStream stream)
+void raylib::RlAudioStream::update(const void *data, int samplesCount)
 {
-    //    CloseAudioStream(stream); ??? doesnt find function
+    UpdateAudioStream(this->stream, data, samplesCount);
 }
 
-bool raylib::RlAudioStream::isAudioStreamProcessed(AudioStream stream)
+bool raylib::RlAudioStream::isProcessed()
 {
-    return IsAudioStreamProcessed(stream);
+    return IsAudioStreamProcessed(this->stream);
 }
 
-void raylib::RlAudioStream::playAudioStream(AudioStream stream)
+void raylib::RlAudioStream::play()
 {
-    PlayAudioStream(stream);
+    PlayAudioStream(this->stream);
 }
 
-void raylib::RlAudioStream::pauseAudioStream(AudioStream stream)
+void raylib::RlAudioStream::pause()
 {
-    PauseAudioStream(stream);
+    PauseAudioStream(this->stream);
 }
 
-void raylib::RlAudioStream::resumeAudioStream(AudioStream stream)
+void raylib::RlAudioStream::resume()
 {
-    ResumeAudioStream(stream);
+    ResumeAudioStream(this->stream);
 }
 
-bool raylib::RlAudioStream::isAudioStreamPlaying(AudioStream stream)
+bool raylib::RlAudioStream::isPlaying()
 {
-    return IsAudioStreamPlaying(stream);
+    return IsAudioStreamPlaying(this->stream);
 }
 
-void raylib::RlAudioStream::stopAudioStream(AudioStream stream)
+void raylib::RlAudioStream::stop()
 {
     StopAudioStream(stream);
 }
 
-void raylib::RlAudioStream::setAudioStreamVolume(AudioStream stream, float volume)
+void raylib::RlAudioStream::setVolume(float volume)
 {
-    SetAudioStreamVolume(stream, volume);
+    SetAudioStreamVolume(this->stream, volume);
 }
 
-void raylib::RlAudioStream::setAudioStreamPitch(AudioStream stream, float pitch)
+void raylib::RlAudioStream::setPitch(float pitch)
 {
-    SetAudioStreamPitch(stream, pitch);
+    SetAudioStreamPitch(this->stream, pitch);
 }
 
+/*
 void raylib::RlAudioStream::setAudioStreamBufferSizeDefault(int size)
 {
     SetAudioStreamBufferSizeDefault(size);
 }
+*/
