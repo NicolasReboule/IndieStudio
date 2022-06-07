@@ -23,7 +23,7 @@ namespace raylib {
         Text(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, Vector2 postion = {0, 0}, Color color = BLACK);
         Text(const std::string &text, Image image, Color key, int firstChar, Vector2 postion = {0, 0}, Color color = BLACK);
         Text(const std::string &text, const std::string &fileType, const unsigned char *fileDate, int dataSize, int fontSize, int *fontChars, int , Vector2 postion = {0, 0}, Color color = BLACK);
-
+        ~Text() = default;
         Text &operator=(const Text& text) = default;
 
         void setText(const std::string &text);
