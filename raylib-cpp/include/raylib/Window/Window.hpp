@@ -19,9 +19,7 @@ namespace raylib {
         explicit Window(const std::string &title, int width, int height);
         ~Window();
         // Window-related functions
-        void initWindow(int width, int height, const std::string &title);              // Initialize window and OpenGL context
         bool isOpen();                                           // Check if KEY_ESCAPE pressed or Close icon pressed
-        void closeWindow();                                                 // Close window and unload OpenGL context
         bool isWindowReady();                                               // Check if window has been initialized successfully
         bool isWindowFullscreen();                                          // Check if window is currently fullscreen
         bool isWindowHidden();                                              // Check if window is currently hidden (only PLATFORM_DESKTOP)

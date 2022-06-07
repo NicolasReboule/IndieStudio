@@ -10,18 +10,18 @@
 raylib::Texture::Texture(const std::string &fileName)
 {
     _texturePath = fileName;
-    this->_texture = this->loadTexture(fileName);
+    this->_texture = LoadTexture(fileName.c_str());
 }
 
 raylib::Texture::Texture(Image image)
 {
     _texturePath = "";
-    this->_texture = this->loadTextureFromImage(image);
+    this->_texture = LoadTextureFromImage(image);
 }
 
 raylib::Texture::~Texture()
 {
-    this->unloadTexture(this->_texture);
+    UnloadTexture(this->_texture);
 }
 
 raylib::Texture::Texture(const raylib::Texture &texture)
@@ -30,16 +30,6 @@ raylib::Texture::Texture(const raylib::Texture &texture)
 }
 
 // Texture loading functions
-
-Texture2D raylib::Texture::loadTexture(const std::string &fileName)
-{
-    return LoadTexture(fileName.c_str());
-}
-
-Texture2D raylib::Texture::loadTextureFromImage(Image image)
-{
-    return LoadTextureFromImage(image);
-}
 
 TextureCubemap raylib::Texture::loadTextureCubemap(Image image, int layout)
 {
@@ -51,11 +41,6 @@ RenderTexture2D raylib::Texture::loadRenderTexture(int width, int height)
 {
     this->_renderTexture = LoadRenderTexture(width, height);
     return this->_renderTexture;
-}
-
-void raylib::Texture::unloadTexture(Texture2D texture)
-{
-    UnloadTexture(texture);
 }
 
 void raylib::Texture::unloadRenderTexture(RenderTexture2D target)

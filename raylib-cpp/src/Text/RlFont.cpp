@@ -11,7 +11,7 @@ raylib::RlFont::RlFont()
 {
     this->_fontSize = 10;
     this->_textSpacing = 1;
-    this->_font = getFontDefault();
+    this->_font = GetFontDefault();
     this->_fontPath = "";
 }
 
@@ -33,7 +33,7 @@ raylib::RlFont::RlFont(const std::string &fileName, float fontSize, float textSp
     this->_fontSize = fontSize;
     this->_textSpacing = textSpacing;
     this->_fontPath = fileName;
-    this->_font = this->loadFont(fileName);
+    this->_font = LoadFont(fileName.c_str());
 }
 
 raylib::RlFont::RlFont(const std::string &fileName, int fontSize, int *fontChars, int glyphCount, float realFontSize, float textSpacing)
@@ -41,7 +41,7 @@ raylib::RlFont::RlFont(const std::string &fileName, int fontSize, int *fontChars
     this->_fontSize = realFontSize;
     this->_textSpacing = textSpacing;
     this->_fontPath = fileName;
-    this->_font = this->loadFontEx(fileName, fontSize, fontChars, glyphCount);
+    this->_font = LoadFontEx(fileName.c_str(), fontSize, fontChars, glyphCount);
 }
 
 raylib::RlFont::RlFont(Image image, Color key, int firstChar, float fontSize, float textSpacing)
@@ -49,7 +49,7 @@ raylib::RlFont::RlFont(Image image, Color key, int firstChar, float fontSize, fl
     this->_fontSize = fontSize;
     this->_textSpacing = textSpacing;
     this->_fontPath = "";
-    this->_font = this->loadFontFromImage(image, key, firstChar);
+    this->_font = LoadFontFromImage(image, key, firstChar);
 }
 
 raylib::RlFont::RlFont(const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, float realFontSize, float textSpacing)
@@ -57,7 +57,12 @@ raylib::RlFont::RlFont(const std::string &fileType, const unsigned char *fileDat
     this->_fontSize = realFontSize;
     this->_textSpacing = textSpacing;
     this->_fontPath = "";
-    this->_font = this->loadFontFromMemory(fileType, fileData, dataSize, fontSize, fontChars, glyphCount);
+    this->_font = LoadFontFromMemory(fileType.c_str(), fileData, dataSize, fontSize, fontChars, glyphCount);
+}
+
+raylib::RlFont::~RlFont()
+{
+    UnloadFont(_font);
 }
 
 raylib::RlFont &raylib::RlFont::operator=(const raylib::RlFont &font)
@@ -70,31 +75,6 @@ raylib::RlFont &raylib::RlFont::operator=(const raylib::RlFont &font)
 }
 
 // Font loading/unloading functions
-
-Font raylib::RlFont::getFontDefault()
-{
-    return GetFontDefault();
-}
-
-Font raylib::RlFont::loadFont(const std::string &fileName)
-{
-    return LoadFont(fileName.c_str());
-}
-
-Font raylib::RlFont::loadFontEx(const std::string &fileName, int fontSize, int *fontChars, int glyphCount)
-{
-    return LoadFontEx(fileName.c_str(), fontSize, fontChars, glyphCount);
-}
-
-Font raylib::RlFont::loadFontFromImage(Image image, Color key, int firstChar)
-{
-    return LoadFontFromImage(image, key, firstChar);
-}
-
-Font raylib::RlFont::loadFontFromMemory(const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount)
-{
-    return LoadFontFromMemory(fileType.c_str(), fileData, dataSize, fontSize, fontChars, glyphCount);
-}
 
 GlyphInfo *raylib::RlFont::loadFontData(const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, int type)
 {
@@ -109,11 +89,6 @@ Image raylib::RlFont::genImageFontAtlas(const GlyphInfo *chars, Rectangle **recs
 void raylib::RlFont::unloadFontData(GlyphInfo *chars, int glyphCount)
 {
     UnloadFontData(chars, glyphCount);
-}
-
-void raylib::RlFont::unloadFont(Font font)
-{
-    UnloadFont(font);
 }
 
 void raylib::RlFont::setFontSize(float fontSize)
