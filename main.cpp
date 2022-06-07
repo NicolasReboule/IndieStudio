@@ -11,15 +11,26 @@ int main(int ac, char **av)
 {
     raylib::Window window("Test", 1920, 1080);
     raylib::CoreHelper::setFramerateLimit(60);
-    raylib::RlFont font;
-    raylib::Text text("Hello", font);
-    text.setPosition((Vector2) {860, 540});
-    text.setColor(RED);
-    text->setFontSize(100);
+//    raylib::RlFont font;
+//    raylib::Text text("Hello", font);
+    raylib::RlModel model("../assets/player.iqm");
+//    text.setPosition((Vector2) {860, 540});
+//    text.setColor(RED);
+//    text->setFontSize(100);
+//    text->setTextSpacing(20);
+    Camera camera = { 0 };
+    camera.position = (Vector3){ 10.0f, 10.0f, 10.0f }; // Camera position
+    camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };      // Camera looking at point
+    camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };          // Camera up vector (rotation towards target)
+    camera.fovy = 45.0f;                                // Camera field-of-view Y
+    camera.projection = CAMERA_PERSPECTIVE;
     while (window.isOpen()) {
         raylib::DrawHelper::beginDrawing();
-        raylib::DrawHelper::clearBackground(BLACK);
-        raylib::TextHelper::drawText(text);
+        raylib::DrawHelper::clearBackground(WHITE);
+        raylib::DrawHelper::beginMode3D(camera);
+        raylib::ModelHelper::drawModel(model);
+        raylib::DrawHelper::endMode3D();
+//      raylib::TextHelper::drawText(text);
         raylib::DrawHelper::endDrawing();
     }
 //  <  const int screenWidth = 800;

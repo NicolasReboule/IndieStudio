@@ -9,6 +9,11 @@
 
 // Model drawing functions
 
+void raylib::ModelHelper::drawModel(const raylib::RlModel &model)
+{
+    DrawModelEx(model.getModel(), model.getPosition(), model.getRotationAxis(), model.getRotationAngle(), model.getScale(), model.getColor());
+}
+
 void raylib::ModelHelper::drawModel(Model model, Vector3 position, float scale, Color tint)
 {
     DrawModel(model, position, scale, tint);
@@ -48,3 +53,10 @@ void raylib::ModelHelper::drawBillboardPro(Camera camera, Texture2D texture, Rec
 {
     DrawBillboardPro(camera, texture, source, position, up, size, origin, rotation, tint);
 }
+
+BoundingBox raylib::ModelHelper::getModelBoundingBox(Model model)
+{
+    return GetModelBoundingBox(model);
+}
+
+
