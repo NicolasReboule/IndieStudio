@@ -59,4 +59,7 @@ BoundingBox raylib::ModelHelper::getModelBoundingBox(Model model)
     return GetModelBoundingBox(model);
 }
 
-
+void raylib::ModelHelper::unloadModelKeepMeshes(Model model)
+{
+    UnloadModelKeepMeshes(model);
+}

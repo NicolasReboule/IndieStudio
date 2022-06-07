@@ -25,6 +25,8 @@ namespace raylib {
         static void drawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color tint); // DrawHelper a billboard texture defined by source
         static void drawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, float rotation, Color tint); // DrawHelper a billboard texture defined by source and rotation
 
+        static void unloadModelKeepMeshes(Model model);                                                           // Unload model (but not meshes) from memory (RAM and/or VRAM)
+
         static BoundingBox getModelBoundingBox(Model model);                                                      // Compute model bounding box limits (considers all meshes)
 
     private:
