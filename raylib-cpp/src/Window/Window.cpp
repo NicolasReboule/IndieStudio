@@ -14,13 +14,14 @@ raylib::Window::Window(const std::string &title, int width, int height)
     this->_height = height;
     this->_minWidth = 0;
     this->_minHeight = 0;
-    this->initWindow(this->_width, this->_height, this->_title);
+    InitWindow(this->_width, this->_height, this->_title.c_str());
+
     std::cout << "Window created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
 }
 
 raylib::Window::~Window()
 {
-    this->closeWindow();
+    CloseWindow();
     //can't fix glfwInit leak
     std::cout << "Window destroyed" << std::endl;
 }
@@ -28,19 +29,9 @@ raylib::Window::~Window()
 
 // Window-related functions
 
-void raylib::Window::initWindow(int width, int height, const std::string &title)
-{
-    InitWindow(width, height, title.c_str());
-}
-
 bool raylib::Window::isOpen()
 {
     return !WindowShouldClose();
-}
-
-void raylib::Window::closeWindow()
-{
-    CloseWindow();
 }
 
 bool raylib::Window::isWindowReady()

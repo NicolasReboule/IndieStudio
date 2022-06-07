@@ -29,6 +29,7 @@ namespace  raylib {
             void setSoundVolume(Sound sound, float volume);                                 // Set volume for a sound (1.0 is max level)
             void setSoundPitch(Sound sound, float pitch);
     private:
+
     };
 }
 

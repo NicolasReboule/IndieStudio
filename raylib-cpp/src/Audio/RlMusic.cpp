@@ -9,72 +9,80 @@
 
 // Music management functions
 
-Music raylib::RlMusic::loadMusicStream(const std::string &fileName)
+raylib::RlMusic::RlMusic(const std::string &fileName)
 {
-    return LoadMusicStream(fileName.c_str());
+    this->music = LoadMusicStream(fileName.c_str());
+    this->volume = 100;
 }
 
-Music raylib::RlMusic::loadMusicStreamFromMemory(const std::string &fileType, unsigned char *data, int dataSize)
+raylib::RlMusic::RlMusic(const std::string &fileType, unsigned char *data, int dataSize)
 {
-    return LoadMusicStreamFromMemory(fileType.c_str(), data, dataSize);
+    LoadMusicStreamFromMemory(fileType.c_str(), data, dataSize);
+    this->volume = 100;
 }
 
-void raylib::RlMusic::unloadMusicStream(Music music)
+raylib::RlMusic::~RlMusic()
 {
-    UnloadMusicStream(music);
+    UnloadMusicStream(this->music);
 }
 
-void raylib::RlMusic::playMusicStream(Music music)
+void raylib::RlMusic::play()
 {
-    PlayMusicStream(music);
+    PlayMusicStream(this->music);
 }
 
-bool raylib::RlMusic::isMusicStreamPlaying(Music music)
+bool raylib::RlMusic::isPlaying()
 {
-    return IsMusicStreamPlaying(music);
+    return IsMusicStreamPlaying(this->music);
 }
 
-void raylib::RlMusic::updateMusicStream(Music music)
+void raylib::RlMusic::update()
 {
-    UpdateMusicStream(music);
+    UpdateMusicStream(this->music);
 }
 
-void raylib::RlMusic::stopMusicStream(Music music)
+void raylib::RlMusic::stop()
 {
-    StopMusicStream(music);
+    StopMusicStream(this->music);
 }
 
-void raylib::RlMusic::pauseMusicStream(Music music)
+void raylib::RlMusic::pause()
 {
-    PauseMusicStream(music);
+    PauseMusicStream(this->music);
 }
 
-void raylib::RlMusic::resumeMusicStream(Music music)
+void raylib::RlMusic::resume()
 {
-    ResumeMusicStream(music);
+    ResumeMusicStream(this->music);
 }
 
-void raylib::RlMusic::seekMusicStream(Music music, float position)
+void raylib::RlMusic::seek(float position)
 {
-    SeekMusicStream(music, position);
+    SeekMusicStream(this->music, position);
 }
 
-void raylib::RlMusic::setMusicVolume(Music music, float volume)
+void raylib::RlMusic::setVolume(float volumeSound)
 {
-    SetMusicVolume(music, volume);
+    this->volume = volumeSound;
+    SetMusicVolume(this->music, volume);
 }
 
-void raylib::RlMusic::setMusicPitch(Music music, float pitch)
+float raylib::RlMusic::getVolume() const
 {
-    SetMusicPitch(music, pitch);
+    return this->volume;
 }
 
-float raylib::RlMusic::getMusicTimeLength(Music music)
+void raylib::RlMusic::setPitch( float pitch)
 {
-    return GetMusicTimeLength(music);
+    SetMusicPitch(this->music, pitch);
 }
 
-float raylib::RlMusic::getMusicTimePlayed(Music music)
+float raylib::RlMusic::getTimeLength()
 {
-    return GetMusicTimePlayed(music);
+    return GetMusicTimeLength(this->music);
+}
+
+float raylib::RlMusic::getTimePlayed()
+{
+    return GetMusicTimePlayed(this->music);
 }

@@ -20,10 +20,6 @@ namespace raylib {
         explicit RlModel(Mesh mesh, const std::string &texturePath, Vector3 position = {0, 0, 0}, Vector3 scale = {1,1,  1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
 //        explicit RlModel(RlMesh mesh, Vector3 position = {0, 0, 0}, Vector2 scale = {1, 1, 1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
         ~RlModel();
-        // Model loading/unloading functions
-        Model loadModel(const std::string &fileName);                                                             // Load model from files (meshes and materials)
-        Model loadModelFromMesh(Mesh mesh);                                                                // Load model from generated mesh (default material)
-        void unloadModel(Model model);                                                                     // Unload model (including meshes) from memory (RAM and/or VRAM)
         void unloadModelKeepMeshes(Model model);                                                           // Unload model (but not meshes) from memory (RAM and/or VRAM)
 
         void setPosition(Vector3 position);

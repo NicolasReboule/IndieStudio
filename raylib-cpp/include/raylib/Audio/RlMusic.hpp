@@ -15,22 +15,26 @@ namespace raylib {
     class RlMusic {
     public:
         // Music management functions
-        Music loadMusicStream(const std::string &fileName);                                    // Load music stream from file
-        Music loadMusicStreamFromMemory(const std::string &fileType, unsigned char *data, int dataSize); // Load music stream from data
-        void unloadMusicStream(Music music);                                            // Unload music stream
-        void playMusicStream(Music music);                                              // Start music playing
-        bool isMusicStreamPlaying(Music music);                                         // Check if music is playing
-        void updateMusicStream(Music music);                                            // Updates buffers for music streaming
-        void stopMusicStream(Music music);                                              // Stop music playing
-        void pauseMusicStream(Music music);                                             // Pause music playing
-        void resumeMusicStream(Music music);                                            // Resume playing paused music
-        void seekMusicStream(Music music, float position);                              // Seek music to a position (in seconds)
-        void setMusicVolume(Music music, float volume);                                 // Set volume for music (1.0 is max level)
-        void setMusicPitch(Music music, float pitch);                                   // Set pitch for a music (1.0 is base level)
-        float getMusicTimeLength(Music music);                                          // Get music time length (in seconds)
-        float getMusicTimePlayed(Music music);                                          // Get current music time played (in seconds)
+        RlMusic(const std::string &fileName);// Load music stream from file
+        RlMusic(const std::string &fileType, unsigned char *data, int dataSize); // Load music stream from data
+        ~RlMusic();
+
+        void play();                                              // Start music playing
+        bool isPlaying();                                         // Check if music is playing
+        void update();                                            // Updates buffers for music streaming
+        void stop();                                              // Stop music playing
+        void pause();                                             // Pause music playing
+        void resume();                                            // Resume playing paused music
+        void seek(float position);                              // Seek music to a position (in seconds)
+        void setVolume(float volume);                                 // Set volume for music (1.0 is max level)
+        float getVolume() const;
+        void setPitch(float pitch);                                   // Set pitch for a music (1.0 is base level)
+        float getTimeLength();                                          // Get music time length (in seconds)
+        float getTimePlayed();                                          // Get current music time played (in seconds)
 
     private:
+        Music music;
+        float volume;
     };
 }
 

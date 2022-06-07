@@ -8,43 +8,28 @@
 #include "raylib/3DObject/RlModel.hpp"
 
 raylib::RlModel::RlModel(const std::string &fileName, const std::string &texturePath, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
-: _model(this->loadModel(fileName)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+: _model(LoadModel(fileName.c_str())), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
     setTextureMaterial();
 }
 
 raylib::RlModel::RlModel(Mesh mesh, const std::string &texturePath, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
-: _model(this->loadModelFromMesh(mesh)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+: _model(LoadModelFromMesh(mesh)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
     setTextureMaterial();
 }
 //
 //raylib::RlModel::RlModel(raylib::RlMesh mesh, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
-//: _model(this->loadModelFromMesh(mesh.getMesh())), _position(position), _color(color), _scale(scale)
+//: _model(LoadModelFromMesh(mesh.getMesh())), _position(position), _color(color), _scale(scale)
 //{
 // }
 
 raylib::RlModel::~RlModel()
 {
-    unloadModel(this->_model);
+    UnloadModel(this->_model);
 }
 
 // Model loading/unloading functions
-
-Model raylib::RlModel::loadModel(const std::string &fileName)
-{
-    return LoadModel(fileName.c_str());
-}
-
-Model raylib::RlModel::loadModelFromMesh(Mesh mesh)
-{
-    return LoadModelFromMesh(mesh);
-}
-
-void raylib::RlModel::unloadModel(Model model)
-{
-    UnloadModel(model);
-}
 
 void raylib::RlModel::unloadModelKeepMeshes(Model model)
 {
