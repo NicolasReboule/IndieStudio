@@ -13,7 +13,7 @@ int main(int ac, char **av)
     raylib::CoreHelper::setFramerateLimit(60);
 //    raylib::RlFont font;
 //    raylib::Text text("Hello", font);
-    raylib::RlModel model("../assets/player.iqm");
+    raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
     raylib::ModelAnim anim(model.getModel(), "../assets/player.iqm", 1);
 //    text.setPosition((Vector2) {860, 540});
 //    text.setColor(RED);

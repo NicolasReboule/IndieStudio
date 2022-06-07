@@ -11,12 +11,13 @@
 #include "raylib.h"
 #include <string>
 #include "RlMesh.hpp"
+#include "raylib/Texture/Texture.hpp"
 
 namespace raylib {
     class RlModel {
     public:
-        explicit RlModel(const std::string &fileName, Vector3 position = {0, 0,  0}, Vector3 scale = {1,1,  1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
-        explicit RlModel(Mesh mesh, Vector3 position = {0, 0, 0}, Vector3 scale = {1,1,  1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
+        explicit RlModel(const std::string &fileName, const std::string &texturePath,Vector3 position = {0, 0,  0}, Vector3 scale = {1,1,  1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
+        explicit RlModel(Mesh mesh, const std::string &texturePath, Vector3 position = {0, 0, 0}, Vector3 scale = {1,1,  1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
 //        explicit RlModel(RlMesh mesh, Vector3 position = {0, 0, 0}, Vector2 scale = {1, 1, 1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
         ~RlModel();
         // Model loading/unloading functions
@@ -33,6 +34,9 @@ namespace raylib {
         void setRotationAxis(Vector3 rotationAxis);
         void setRotationAxis(float x, float y, float z);
         void setRotationAngle(float rotationAngle);
+        void setTexture(const Texture &texture);
+
+        void setTextureMaterial();
 
         const Model &getModel() const;
         const Vector3 &getPosition() const;
@@ -40,10 +44,14 @@ namespace raylib {
         const Color &getColor() const;
         const Vector3 &getRotationAxis() const;
         const float &getRotationAngle() const;
+        const Texture &getTexture() const;
 
         BoundingBox getBoundingBox() const;
+
+        Texture *operator->();
     private:
         Model _model;
+        Texture _texture;
         Vector3 _position;
         Color _color;
         Vector3 _scale;

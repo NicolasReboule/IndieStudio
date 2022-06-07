@@ -100,3 +100,28 @@ raylib::Texture &raylib::Texture::operator=(const raylib::Texture &texture)
     this->_texturePath = texture._texturePath;
     return *this;
 }
+
+Texture2D raylib::Texture::getTexture() const
+{
+    return _texture;
+}
+
+std::string raylib::Texture::getTexturePath() const
+{
+    return _texturePath;
+}
+
+Rectangle raylib::Texture::getTextureRec() const
+{
+    return _textureRec;
+}
+
+TextureCubemap raylib::Texture::getTextureCubemap() const
+{
+    return _textureCubemap;
+}
+
+RenderTexture2D raylib::Texture::getRenderTexture() const
+{
+    return _renderTexture;
+}
