@@ -14,15 +14,24 @@ namespace raylib {
     class RlCamera {
         public:
             // Camera System Functions (Module: rcamera)
-            void setCameraMode(Camera camera, int mode);                            // Set camera mode (multiple camera modes available)
-            void updateCamera(Camera *camera);                                      // Update camera position for selected mode
-            void setCameraPanControl(int keyPan);                                   // Set camera pan key to combine with mouse movement (free camera)
-            void setCameraAltControl(int keyAlt);                                   // Set camera alt key to combine with mouse movement (free camera)
-            void setCameraSmoothZoomControl(int keySmoothZoom);                     // Set camera smooth zoom key to combine with mouse (free camera)
-            void setCameraMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown); // Set camera move controls (1st person and 3rd person cameras)
-            Matrix getCameraMatrix(Camera camera);                                  // Get camera transform matrix (view matrix)
-            Matrix getCameraMatrix2D(Camera2D camera);
+            RlCamera();
+            RlCamera(Vector3 position, Vector3 target, Vector3 up, float fovy, int projection);
+            ~RlCamera() = default;
+
+            void update();
+            void setPosition(Vector3 position);
+            void setTarget(Vector3 target);
+
+            Camera3D get();
+
+            void setPanControl(int keyPan);// Set camera pan key to combine with mouse movement (free camera)
+            void setAltControl(int keyAlt);// Set camera alt key to combine with mouse movement (free camera)
+            void setSmoothZoomControl(int keySmoothZoom);// Set camera smooth zoom key to combine with mouse (free camera)
+            void setMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown);// Set camera move controls (1st person and 3rd person cameras)
+            Matrix geMatrix();// Get camera transform matrix (view matrix)
+
     private:
+        Camera3D camera;
     };
 }
 
