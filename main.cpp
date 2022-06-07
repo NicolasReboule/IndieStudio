@@ -14,6 +14,7 @@ int main(int ac, char **av)
 //    raylib::RlFont font;
 //    raylib::Text text("Hello", font);
     raylib::RlModel model("../assets/player.iqm");
+    raylib::ModelAnim anim(model.getModel(), "../assets/player.iqm", 1);
 //    text.setPosition((Vector2) {860, 540});
 //    text.setColor(RED);
 //    text->setFontSize(100);
@@ -25,6 +26,8 @@ int main(int ac, char **av)
     camera.fovy = 45.0f;                                // Camera field-of-view Y
     camera.projection = CAMERA_PERSPECTIVE;
     while (window.isOpen()) {
+        if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE))
+            anim.update(0);
         raylib::DrawHelper::beginDrawing();
         raylib::DrawHelper::clearBackground(WHITE);
         raylib::DrawHelper::beginMode3D(camera);

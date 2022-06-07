@@ -15,10 +15,10 @@ namespace raylib {
     class ModelAnim {
     public:
         // Model animations loading/unloading functions
-        ModelAnim(Model model, const std::string &fileName, unsigned int *animCount);
+        explicit ModelAnim(Model model, const std::string &fileName, unsigned int animCount);
         ~ModelAnim();
 
-        void update(unsigned int anim, int frame);
+        void update(unsigned int anim);
         void unload(unsigned int anim);
         bool animationIsValid(unsigned int anim);
 
@@ -30,7 +30,8 @@ namespace raylib {
     private:
         Model model;
         ModelAnimation *animations;
-        unsigned int *count;
+        unsigned int count;
+        int frameCount;
     };
 }
 

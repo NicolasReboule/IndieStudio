@@ -9,27 +9,31 @@
 
 // Model animations loading/unloading functions
 
-raylib::ModelAnim::ModelAnim(Model model, const std::string &fileName, unsigned int *count)
+raylib::ModelAnim::ModelAnim(Model model, const std::string &fileName, unsigned int count)
 {
-    this->animations = LoadModelAnimations(fileName.c_str(), count);
+    this->animations = LoadModelAnimations(fileName.c_str(), &count);
     this->model = model;
     this->count = count;
+    this->frameCount = 0;
 }
 
 raylib::ModelAnim::~ModelAnim()
 {
-    UnloadModelAnimations(this->animations, *this->count);
+    UnloadModelAnimations(this->animations, this->count);
 }
 
-void raylib::ModelAnim::update(unsigned int anim, int frame)
+void raylib::ModelAnim::update(unsigned int anim)
 {
-    if (anim < *this->count)
-        UpdateModelAnimation(this->model, this->animations[anim], frame);
+    if (anim < this->count) {
+        UpdateModelAnimation(this->model, this->animations[anim],
+                             this->frameCount);
+        this->frameCount++;
+    }
 }
 
 void raylib::ModelAnim::unload(unsigned int anim)
 {
-    if (anim < *this->count) {
+    if (anim < this->count) {
         UnloadModelAnimation(this->animations[anim]);
         this->count -= 1;
     }
@@ -37,7 +41,7 @@ void raylib::ModelAnim::unload(unsigned int anim)
 
 bool raylib::ModelAnim::animationIsValid(unsigned int anim)
 {
-    if (anim < *this->count)
+    if (anim < this->count)
         return IsModelAnimationValid(this->model, this->animations[anim]);
     else
         return false;
