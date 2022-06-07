@@ -31,11 +31,6 @@ raylib::RlModel::~RlModel()
 
 // Model loading/unloading functions
 
-void raylib::RlModel::unloadModelKeepMeshes(Model model)
-{
-    UnloadModelKeepMeshes(model);
-}
-
 void raylib::RlModel::setPosition(Vector3 position)
 {
     _position = position;
@@ -117,17 +112,17 @@ BoundingBox raylib::RlModel::getBoundingBox() const
     return GetModelBoundingBox(this->_model);
 }
 
-void raylib::RlModel::setTexture(const raylib::Texture &texture)
+void raylib::RlModel::setTexture(const raylib::RlTexture &texture)
 {
     _texture = texture;
 }
 
-const raylib::Texture &raylib::RlModel::getTexture() const
+const raylib::RlTexture &raylib::RlModel::getTexture() const
 {
     return _texture;
 }
 
-raylib::Texture *raylib::RlModel::operator->()
+raylib::RlTexture *raylib::RlModel::operator->()
 {
     return &_texture;
 }

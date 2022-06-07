@@ -9,13 +9,13 @@
 
 int main(int ac, char **av)
 {
-    auto window = raylib::Window::getInstance();
+    auto window = raylib::RlWindow::getInstance();
     window->createWindow("toto", 1280, 720);
     raylib::CoreHelper::setFramerateLimit(60);
 //    raylib::RlFont font;
 //    raylib::Text text("Hello", font);
     raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
-    raylib::ModelAnim anim(model.getModel(), "../assets/player.iqm", 1);
+    raylib::RlModelAnim anim(model.getModel(), "../assets/player.iqm", 1);
     //    text.setPosition((Vector2) {860, 540});
 //    text.setColor(RED);
 //    text->setFontSize(100);
@@ -26,7 +26,7 @@ int main(int ac, char **av)
     camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };          // Camera up vector (rotation towards target)
     camera.fovy = 45.0f;                                // Camera field-of-view Y
     camera.projection = CAMERA_PERSPECTIVE;
-    while (raylib::Window::getInstance()->isOpen()) {
+    while (raylib::RlWindow::getInstance()->isOpen()) {
         if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE))
             anim.update(0);
         raylib::DrawHelper::beginDrawing();
@@ -40,7 +40,7 @@ int main(int ac, char **av)
 //  <  const int screenWidth = 800;
 //    const int screenHeight = 450;
 //
-//    raylib::Window::initWindow(screenWidth, screenHeight, "raylib [models] example - model animation");
+//    raylib::RlWindow::initWindow(screenWidth, screenHeight, "raylib [models] example - model animation");
 //
 //    // Define the camera to look into our 3d world
 //    Camera camera = { 0 };
@@ -51,14 +51,14 @@ int main(int ac, char **av)
 //    camera.projection = CAMERA_PERSPECTIVE;             // Camera mode type
 //
 //    Model model = raylib::RlModel::loadModel("../assets/guy.iqm");                    // Load the animated model mesh and basic data
-//    Texture2D texture = raylib::Texture::loadTexture("../assets/guytex.png");         // Load model texture and set material
+//    Texture2D texture = raylib::RlTexture::loadTexture("../assets/guytex.png");         // Load model texture and set material
 //    raylib::RlMaterial::setMaterialTexture(&model.materials[0], MATERIAL_MAP_DIFFUSE, texture);     // Set model material map texture
 //
 //    Vector3 position = { 0.0f, 0.0f, 0.0f };            // Set model position
 //
 //    // Load animation data
 //    unsigned int animsCount = 0;
-//    ModelAnimation *anims = raylib::ModelAnim::loadModelAnimations("../assets/guyanim.iqm", &animsCount);
+//    ModelAnimation *anims = raylib::RlModelAnim::loadModelAnimations("../assets/guyanim.iqm", &animsCount);
 //    int animFrameCounter = 0;
 //
 //    raylib::RlCamera::setCameraMode(camera, CAMERA_FREE); // Set free camera mode
@@ -67,7 +67,7 @@ int main(int ac, char **av)
 //    //--------------------------------------------------------------------------------------
 //
 //    // Main game loop
-//    while (raylib::Window::isOpen())        // Detect window close button or ESC key
+//    while (raylib::RlWindow::isOpen())        // Detect window close button or ESC key
 //    {
 //        // Update
 //        //----------------------------------------------------------------------------------
@@ -77,7 +77,7 @@ int main(int ac, char **av)
 //        if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE))
 //        {
 //            animFrameCounter++;
-//            raylib::ModelAnim::updateModelAnimation(model, anims[0], animFrameCounter);
+//            raylib::RlModelAnim::updateModelAnimation(model, anims[0], animFrameCounter);
 //            if (animFrameCounter >= anims[0].frameCount) animFrameCounter = 0;
 //        }
 //        //----------------------------------------------------------------------------------
@@ -110,15 +110,15 @@ int main(int ac, char **av)
 //
 //    // De-Initialization
 //    //--------------------------------------------------------------------------------------
-//    raylib::Texture::unloadTexture(texture);     // Unload texture
+//    raylib::RlTexture::unloadTexture(texture);     // Unload texture
 //
 //    // Unload model animations data
-//    for (unsigned int i = 0; i < animsCount; i++) raylib::ModelAnim::unloadModelAnimation(anims[i]);
+//    for (unsigned int i = 0; i < animsCount; i++) raylib::RlModelAnim::unloadModelAnimation(anims[i]);
 //    RL_FREE(anims);
 //
 //    raylib::RlModel::unloadModel(model);         // Unload model
 //
-//    raylib::Window::closeWindow();              // Close window and OpenGL context
+//    raylib::RlWindow::closeWindow();              // Close window and OpenGL context
 //    //--------------------------------------------------------------------------------------
     return (0);
 }

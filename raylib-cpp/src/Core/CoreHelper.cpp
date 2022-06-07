@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** Window.cpp
+** RlWindow.cpp
 ** FileHelper description:
-** Window.cpp
+** RlWindow.cpp
 */
 
 #include "raylib/Core/CoreHelper.hpp"

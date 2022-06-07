@@ -11,7 +11,7 @@
 #include "raylib.h"
 #include <string>
 #include "RlMesh.hpp"
-#include "raylib/Texture/Texture.hpp"
+#include "raylib/Texture/RlTexture.hpp"
 
 namespace raylib {
     class RlModel {
@@ -20,7 +20,6 @@ namespace raylib {
         explicit RlModel(Mesh mesh, const std::string &texturePath, Vector3 position = {0, 0, 0}, Vector3 scale = {1,1,  1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
 //        explicit RlModel(RlMesh mesh, Vector3 position = {0, 0, 0}, Vector2 scale = {1, 1, 1}, Color color = GRAY, Vector3 rotationAxis = {0,0,0}, float rotationAngle = 0);
         ~RlModel();
-        void unloadModelKeepMeshes(Model model);                                                           // Unload model (but not meshes) from memory (RAM and/or VRAM)
 
         void setPosition(Vector3 position);
         void setPosition(float x, float y, float z);
@@ -30,7 +29,7 @@ namespace raylib {
         void setRotationAxis(Vector3 rotationAxis);
         void setRotationAxis(float x, float y, float z);
         void setRotationAngle(float rotationAngle);
-        void setTexture(const Texture &texture);
+        void setTexture(const RlTexture &texture);
 
         void setTextureMaterial();
 
@@ -40,14 +39,14 @@ namespace raylib {
         const Color &getColor() const;
         const Vector3 &getRotationAxis() const;
         const float &getRotationAngle() const;
-        const Texture &getTexture() const;
+        const RlTexture &getTexture() const;
 
         BoundingBox getBoundingBox() const;
 
-        Texture *operator->();
+        RlTexture *operator->();
     private:
         Model _model;
-        Texture _texture;
+        RlTexture _texture;
         Vector3 _position;
         Color _color;
         Vector3 _scale;

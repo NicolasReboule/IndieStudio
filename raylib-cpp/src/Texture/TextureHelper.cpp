@@ -7,7 +7,7 @@
 
 #include "raylib/Texture/TextureHelper.hpp"
 
-// Texture drawing functions
+// RlTexture drawing functions
 
 void raylib::TextureHelper::drawTexture(Texture2D texture, int posX, int posY, Color tint)
 {

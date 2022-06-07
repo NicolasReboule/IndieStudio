@@ -13,7 +13,7 @@
 namespace raylib {
     class TextureHelper {
     public:
-        // Texture drawing functions
+        // RlTexture drawing functions
         static void drawTexture(Texture2D texture, int posX, int posY, Color tint);                               // DrawHelper a Texture2D
         static void drawTextureV(Texture2D texture, Vector2 position, Color tint);                                // DrawHelper a Texture2D with position defined as Vector2
         static void drawTextureEx(Texture2D texture, Vector2 position, float rotation, float scale, Color tint);  // DrawHelper a Texture2D with extended parameters

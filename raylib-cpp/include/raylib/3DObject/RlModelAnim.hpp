@@ -1,22 +1,22 @@
 /*
 ** EPITECH PROJECT, 2022
-** ModelAnim.hpp
+** RlModelAnim.hpp
 ** FileHelper description:
-** ModelAnim.hpp
+** RlModelAnim.hpp
 */
 
-#ifndef INDIESTUDIO_MODELANIM_HPP
-#define INDIESTUDIO_MODELANIM_HPP
+#ifndef INDIESTUDIO_RLMODELANIM_HPP
+#define INDIESTUDIO_RLMODELANIM_HPP
 
 #include "raylib.h"
 #include <string>
 
 namespace raylib {
-    class ModelAnim {
+    class RlModelAnim {
     public:
         // Model animations loading/unloading functions
-        explicit ModelAnim(Model model, const std::string &fileName, unsigned int animCount);
-        ~ModelAnim();
+        explicit RlModelAnim(Model model, const std::string &fileName, unsigned int animCount);
+        ~RlModelAnim();
 
         void update(unsigned int anim);
         void unload(unsigned int anim);
@@ -35,4 +35,4 @@ namespace raylib {
     };
 }
 
-#endif //INDIESTUDIO_MODELANIM_HPP
+#endif //INDIESTUDIO_RLMODELANIM_HPP

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** Window.hpp
+** RlWindow.hpp
 ** FileHelper description:
-** Window.hpp
+** RlWindow.hpp
 */
 
 #ifndef RAYLIB_CPP_WINDOW_HPP
@@ -15,19 +15,19 @@
 #include "raylib/exception/WindowException.hpp"
 
 namespace raylib {
-    class Window {
+    class RlWindow {
     public:
 
         /**
-         * @deprecated Don't use this use Window#getInstance
-         * @see Window#getInstanve Window#createWindow
+         * @deprecated Don't use this use RlWindow#getInstance
+         * @see RlWindow#getInstanve RlWindow#createWindow
          */
-        Window() = default;
+        RlWindow() = default;
 
         /**
-         * @brief Destroy the Window
+         * @brief Destroy the RlWindow
          */
-        ~Window();
+        ~RlWindow();
 
         /**
          * @brief Create a window with the given title, width and height
@@ -66,9 +66,9 @@ namespace raylib {
         inline int getMinHeight() const {return _minHeight;};
         inline int getMinWidth() const {return _minWidth;};
 
-        static std::shared_ptr<Window> &getInstance();
+        static std::shared_ptr<RlWindow> &getInstance();
     private:
-        static std::shared_ptr<Window> _instance;
+        static std::shared_ptr<RlWindow> _instance;
 
         std::string _title;
         int _width;

@@ -7,7 +7,7 @@
 
 #include "raylib/exception/WindowException.hpp"
 
-raylib::ex::WindowException::WindowException(const std::string &msg) : raylib::ex::RaylibException("[Window] " + msg)
+raylib::ex::WindowException::WindowException(const std::string &msg) : raylib::ex::RaylibException("[RlWindow] " + msg)
 {
 }
 

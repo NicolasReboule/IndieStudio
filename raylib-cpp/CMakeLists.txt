@@ -13,12 +13,12 @@ find_package(raylib REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
         src/Core/CoreHelper.cpp
-        src/Window/Window.cpp
+        src/Window/RlWindow.cpp
         src/Text/Text.cpp
         src/2DObject/Shape.cpp
         src/Audio/AudioHelper.cpp
         src/3DObject/RlModel.cpp
-        src/Texture/Texture.cpp
+        src/Texture/RlTexture.cpp
         src/Core/DrawHelper.cpp
         src/Camera/RlCamera.cpp
         src/Inputs/CursorHelper.cpp
@@ -32,7 +32,7 @@ add_library(${PROJECT_NAME}
         src/Audio/RlWave.cpp
         src/Audio/RlMusic.cpp
         src/Audio/RlAudioStream.cpp
-        src/3DObject/ModelAnim.cpp
+        src/3DObject/RlModelAnim.cpp
         src/3DObject/RlMaterial.cpp
         src/3DObject/RlMesh.cpp
         src/3DObject/Shape3DHelper.cpp
@@ -55,5 +55,7 @@ add_library(${PROJECT_NAME}
         src/exception/RaylibException.cpp
         src/exception/WindowException.cpp
         src/Window/MonitorHelper.cpp
+        src/Shader/ShaderUtils.cpp
+        src/3DObject/MeshHelper.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)

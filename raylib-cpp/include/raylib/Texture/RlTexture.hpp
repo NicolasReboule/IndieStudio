@@ -1,32 +1,32 @@
 /*
 ** EPITECH PROJECT, 2022
-** Texture.hpp
+** RlTexture.hpp
 ** FileHelper description:
-** Texture.hpp
+** RlTexture.hpp
 */
 
-#ifndef INDIESTUDIO_TEXTURE_HPP
-#define INDIESTUDIO_TEXTURE_HPP
+#ifndef INDIESTUDIO_RLTEXTURE_HPP
+#define INDIESTUDIO_RLTEXTURE_HPP
 
 #include "raylib.h"
 #include <string>
 
 namespace raylib {
-    class Texture {
+    class RlTexture {
     public:
-        // Texture loading functions
+        // RlTexture loading functions
         // NOTE: These functions require GPU access
-        explicit Texture(const std::string &fileName);
-        explicit Texture(Image image);
-        Texture(const Texture &texture);
-        ~Texture();
+        explicit RlTexture(const std::string &fileName);
+        explicit RlTexture(Image image);
+        RlTexture(const RlTexture &texture);
+        ~RlTexture();
         TextureCubemap loadTextureCubemap(Image image, int layout);                                        // Load cubemap from image, multiple image cubemap layouts supported
         RenderTexture2D loadRenderTexture(int width, int height);                                          // Load texture for rendering (framebuffer)
         void unloadRenderTexture(RenderTexture2D target);                                                  // Unload render texture from GPU memory (VRAM)
         void updateTexture(Texture2D texture, const void *pixels);                                         // Update GPU texture with new data
         void updateTextureRec(Texture2D texture, Rectangle rec, const void *pixels);                       // Update GPU texture rectangle with new data
 
-        // Texture configuration functions
+        // RlTexture configuration functions
         void genTextureMipmaps(Texture2D *texture);                                                        // Generate GPU mipmaps for a texture
         void setTextureFilter(Texture2D texture, int filter);                                              // Set texture scaling filter mode
         void setTextureWrap(Texture2D texture, int wrap);                                                   // Set texture wrapping mode
@@ -37,7 +37,7 @@ namespace raylib {
         TextureCubemap getTextureCubemap() const;
         RenderTexture2D getRenderTexture() const;
 
-        Texture &operator=(const Texture &texture);
+        RlTexture &operator=(const RlTexture &texture);
     private:
         Texture2D _texture;
         std::string _texturePath;
@@ -47,4 +47,4 @@ namespace raylib {
     };
 }
 
-#endif //INDIESTUDIO_TEXTURE_HPP
+#endif //INDIESTUDIO_RLTEXTURE_HPP
