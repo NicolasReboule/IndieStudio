@@ -26,10 +26,12 @@ namespace raylib {
         bool isPlaying();                                  // Check if audio stream is playing
         void stop();                                       // Stop audio stream
         void setVolume(float volume);                    // Set volume for audio stream (1.0 is max level)
+        float getVolume() const;
         void setPitch(float pitch);                      // Set pitch for audio stream (1.0 is base level)
         /*void setAudioStreamBufferSizeDefault(int size); */                                // Default size for new audio streams
     private:
         AudioStream stream;
+        float volume;
     };
 }
 

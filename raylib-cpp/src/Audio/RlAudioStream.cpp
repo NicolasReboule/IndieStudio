@@ -10,6 +10,8 @@
 raylib::RlAudioStream::RlAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels)
 {
     this->stream = LoadAudioStream(sampleRate, sampleSize, channels);
+    this->volume = 100;
+    this->setVolume(this->volume);
 }
 
 raylib::RlAudioStream::~RlAudioStream()
@@ -52,9 +54,15 @@ void raylib::RlAudioStream::stop()
     StopAudioStream(stream);
 }
 
-void raylib::RlAudioStream::setVolume(float volume)
+void raylib::RlAudioStream::setVolume(float volumeSound)
 {
-    SetAudioStreamVolume(this->stream, volume);
+    this->volume = volumeSound;
+    SetAudioStreamVolume(this->stream, this->volume);
+}
+
+float raylib::RlAudioStream::getVolume() const
+{
+    return this->volume;
 }
 
 void raylib::RlAudioStream::setPitch(float pitch)
