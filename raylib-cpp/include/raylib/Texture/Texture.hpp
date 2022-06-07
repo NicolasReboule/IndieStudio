@@ -34,11 +34,11 @@ namespace raylib {
         void setTextureFilter(Texture2D texture, int filter);                                              // Set texture scaling filter mode
         void setTextureWrap(Texture2D texture, int wrap);                                                   // Set texture wrapping mode
 
-        inline Texture2D getTexture() const {return _texture;};
-        inline std::string getTexturePath() const {return _texturePath;};
-        inline Rectangle getTextureRec() const {return _textureRec;};
-        inline TextureCubemap getTextureCubemap() const {return _textureCubemap;};
-        inline RenderTexture2D getRenderTexture() const {return _renderTexture;};
+        Texture2D getTexture() const;
+        std::string getTexturePath() const;
+        Rectangle getTextureRec() const;
+        TextureCubemap getTextureCubemap() const;
+        RenderTexture2D getRenderTexture() const;
 
         Texture &operator=(const Texture &texture);
     private:

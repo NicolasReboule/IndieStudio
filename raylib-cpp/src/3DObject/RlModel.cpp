@@ -7,14 +7,16 @@
 
 #include "raylib/3DObject/RlModel.hpp"
 
-raylib::RlModel::RlModel(const std::string &fileName, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
-: _model(this->loadModel(fileName)), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+raylib::RlModel::RlModel(const std::string &fileName, const std::string &texturePath, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
+: _model(this->loadModel(fileName)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
+    setTextureMaterial();
 }
 
-raylib::RlModel::RlModel(Mesh mesh, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
-: _model(this->loadModelFromMesh(mesh)), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+raylib::RlModel::RlModel(Mesh mesh, const std::string &texturePath, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
+: _model(this->loadModelFromMesh(mesh)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
+    setTextureMaterial();
 }
 //
 //raylib::RlModel::RlModel(raylib::RlMesh mesh, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
@@ -24,7 +26,6 @@ raylib::RlModel::RlModel(Mesh mesh, Vector3 position, Vector3 scale, Color color
 
 raylib::RlModel::~RlModel()
 {
-    puts("2");
     unloadModel(this->_model);
 }
 
@@ -131,3 +132,22 @@ BoundingBox raylib::RlModel::getBoundingBox() const
     return GetModelBoundingBox(this->_model);
 }
 
+void raylib::RlModel::setTexture(const raylib::Texture &texture)
+{
+    _texture = texture;
+}
+
+const raylib::Texture &raylib::RlModel::getTexture() const
+{
+    return _texture;
+}
+
+raylib::Texture *raylib::RlModel::operator->()
+{
+    return &_texture;
+}
+
+void raylib::RlModel::setTextureMaterial()
+{
+    SetMaterialTexture(&_model.materials[0], MATERIAL_MAP_DIFFUSE, _texture.getTexture());
+}
