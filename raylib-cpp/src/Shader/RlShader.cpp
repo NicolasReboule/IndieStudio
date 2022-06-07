@@ -9,47 +9,53 @@
 
 // Shader management functions
 
-Shader raylib::RlShader::loadShader(const std::string &vsFileName, const std::string &fsFileName)
+raylib::RlShader::RlShader()
 {
-    return LoadShader(vsFileName.c_str(), fsFileName.c_str());
+    this->_shader.id = 0;
+    this->_shader.locs = nullptr;
 }
 
-Shader raylib::RlShader::loadShaderFromMemory(const std::string &vsCode, const std::string &fsCode)
+raylib::RlShader::~RlShader()
 {
-    return LoadShaderFromMemory(vsCode.c_str(), fsCode.c_str());
+    UnloadShader(this->_shader);
 }
 
-int raylib::RlShader::getShaderLocation(Shader shader, const std::string &uniformName)
+void raylib::RlShader::load(const std::string &vsFileName, const std::string &fsFileName)
 {
-    return GetShaderLocation(shader, uniformName.c_str());
+    this->_shader = LoadShader(vsFileName.c_str(), fsFileName.c_str());
 }
 
-int raylib::RlShader::getShaderLocationAttrib(Shader shader, const std::string &attribName)
+void raylib::RlShader::loadFromMemory(const std::string &vsCode, const std::string &fsCode)
 {
-    return GetShaderLocationAttrib(shader, attribName.c_str());
+    this->_shader = LoadShaderFromMemory(vsCode.c_str(), fsCode.c_str());
 }
 
-void raylib::RlShader::setShaderValue(Shader shader, int locIndex, const void *value, int uniformType)
+int raylib::RlShader::getLocation(const std::string &uniformName)
 {
-    SetShaderValue(shader, locIndex, value, uniformType);
+    return GetShaderLocation(this->_shader, uniformName.c_str());
 }
 
-void raylib::RlShader::setShaderValueV(Shader shader, int locIndex, const void *value, int uniformType, int count)
+int raylib::RlShader::getLocationAttrib(const std::string &attribName)
 {
-    SetShaderValueV(shader, locIndex, value, uniformType, count);
+    return GetShaderLocationAttrib(this->_shader, attribName.c_str());
 }
 
-void raylib::RlShader::setShaderValueMatrix(Shader shader, int locIndex, Matrix mat)
+void raylib::RlShader::setValue(int locIndex, const void *value, int uniformType)
 {
-    SetShaderValueMatrix(shader, locIndex, mat);
+    SetShaderValue(this->_shader, locIndex, value, uniformType);
 }
 
-void raylib::RlShader::setShaderValueTexture(Shader shader, int locIndex, Texture2D texture)
+void raylib::RlShader::setValueV(int locIndex, const void *value, int uniformType, int count)
 {
-    SetShaderValueTexture(shader, locIndex, texture);
+    SetShaderValueV(this->_shader, locIndex, value, uniformType, count);
 }
 
-void raylib::RlShader::unloadShader(Shader shader)
+void raylib::RlShader::setValueMatrix(int locIndex, Matrix mat)
 {
-    UnloadShader(shader);
+    SetShaderValueMatrix(this->_shader, locIndex, mat);
+}
+
+void raylib::RlShader::setValueTexture(int locIndex, Texture2D texture)
+{
+    SetShaderValueTexture(this->_shader, locIndex, texture);
 }

@@ -9,39 +9,48 @@
 
 // Image loading functions
 
-Image raylib::RlImage::loadImage(const std::string &fileName)
+raylib::RlImage::RlImage()
 {
-    return LoadImage(fileName.c_str());
+    this->_image.data = nullptr;
+    this->_image.format = 0;
+    this->_image.mipmaps = 0;
+    this->_image.width = 0;
+    this->_image.height = 0;
 }
 
-Image raylib::RlImage::loadImageRaw(const std::string &fileName, int width, int height, int format, int headerSize)
+raylib::RlImage::~RlImage()
 {
-    return LoadImageRaw(fileName.c_str(), width, height, format, headerSize);
+    UnloadImage(this->_image);
 }
 
-Image raylib::RlImage::loadImageAnim(const std::string &fileName, int *frames)
+void raylib::RlImage::load(const std::string &fileName)
 {
-    return LoadImageAnim(fileName.c_str(), frames);
+    this->_image = LoadImage(fileName.c_str());
 }
 
-Image raylib::RlImage::loadImageFromMemory(const std::string &fileType, const unsigned char *fileData, int dataSize)
+void raylib::RlImage::loadRaw(const std::string &fileName, int width, int height, int format, int headerSize)
 {
-    return LoadImageFromMemory(fileType.c_str(), fileData, dataSize);
+    this->_image = LoadImageRaw(fileName.c_str(), width, height, format, headerSize);
 }
 
-Image raylib::RlImage::loadImageFromTexture(Texture2D texture)
+void raylib::RlImage::loadAnim(const std::string &fileName, int *frames)
 {
-    return LoadImageFromTexture(texture);
+    this->_image = LoadImageAnim(fileName.c_str(), frames);
 }
 
-Image raylib::RlImage::loadImageFromScreen()
+void raylib::RlImage::loadFromMemory(const std::string &fileType, const unsigned char *fileData, int dataSize)
 {
-    return LoadImageFromScreen();
+    this->_image = LoadImageFromMemory(fileType.c_str(), fileData, dataSize);
 }
 
-void raylib::RlImage::unloadImage(Image image)
+void raylib::RlImage::loadFromTexture(Texture2D texture)
 {
-    UnloadImage(image);
+    this->_image = LoadImageFromTexture(texture);
+}
+
+void raylib::RlImage::loadFromScreen()
+{
+    this->_image = LoadImageFromScreen();
 }
 
 bool raylib::RlImage::exportImage(Image image, const std::string &fileName)
@@ -49,7 +58,7 @@ bool raylib::RlImage::exportImage(Image image, const std::string &fileName)
     return ExportImage(image, fileName.c_str());
 }
 
-bool raylib::RlImage::exportImageAsCode(Image image, const std::string &fileName)
+bool raylib::RlImage::exportAsCode(Image image, const std::string &fileName)
 {
     return ExportImageAsCode(image, fileName.c_str());
 }
