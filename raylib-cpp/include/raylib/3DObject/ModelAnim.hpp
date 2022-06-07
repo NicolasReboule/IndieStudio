@@ -15,12 +15,22 @@ namespace raylib {
     class ModelAnim {
     public:
         // Model animations loading/unloading functions
-        ModelAnimation *loadModelAnimations(const std::string &fileName, unsigned int *animCount);                // Load model animations from file
+        ModelAnim(Model model, const std::string &fileName, unsigned int *animCount);
+        ~ModelAnim();
+
+        void update(unsigned int anim, int frame);
+        void unload(unsigned int anim);
+        bool animationIsValid(unsigned int anim);
+
+   /*     ModelAnimation *loadModelAnimations(const std::string &fileName, unsigned int *animCount);                // Load model animations from file
         void updateModelAnimation(Model model, ModelAnimation anim, int frame);                            // Update model animation pose
         void unloadModelAnimation(ModelAnimation anim);                                                    // Unload animation data
-        void unloadModelAnimations(ModelAnimation* animations, unsigned int count);                        // Unload animation array data
-        bool isModelAnimationValid(Model model, ModelAnimation anim);                                      // Check model animation skeleton match
+        void unloadModelAnimations(ModelAnimation* anim, unsigned int count);                        // Unload animation array data
+        bool isModelAnimationValid(Model model, ModelAnimation anim);   */                                   // Check model animation skeleton match
     private:
+        Model model;
+        ModelAnimation *animations;
+        unsigned int *count;
     };
 }
 
