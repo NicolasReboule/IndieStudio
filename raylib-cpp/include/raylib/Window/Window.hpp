@@ -12,13 +12,32 @@
 #include <iostream>
 #include <memory>
 #include "raylib.h"
+#include "raylib/exception/WindowException.hpp"
 
 namespace raylib {
-    class Window { //TODO: Singleton
+    class Window {
     public:
-        explicit Window(const std::string &title, int width, int height);
+
+        /**
+         * @deprecated Don't use this use Window#getInstance
+         * @see Window#getInstanve Window#createWindow
+         */
+        Window() = default;
+
+        /**
+         * @brief Destroy the Window
+         */
         ~Window();
-        // Window-related functions
+
+        /**
+         * @brief Create a window with the given title, width and height
+         * @param title
+         * @param height
+         * @param width
+         * @throws WindowException if the window has already been created
+         */
+        void createWindow(const std::string &title, int height, int width);
+
         bool isOpen();                                           // Check if KEY_ESCAPE pressed or Close icon pressed
         bool isWindowReady();                                               // Check if window has been initialized successfully
         bool isWindowFullscreen();                                          // Check if window is currently fullscreen
@@ -40,34 +59,23 @@ namespace raylib {
         void setWindowMonitor(int monitor);                                     // Set monitor for the current window (fullscreen mode)
         void setWindowMinSize(int width, int height);                           // Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE)
         void setWindowSize(int width, int height);                              // Set window dimensions
-        std::shared_ptr<void *> getWindowHandle();                                            // Get native window handle
-        int getScreenWidth();                                               // Get current screen width
-        int getScreenHeight();                                              // Get current screen height
-        int getMonitorCount();                                              // Get number of connected monitors
-        int getCurrentMonitor();                                            // Get current connected monitor
-        Vector2 getMonitorPosition(int monitor);                                // Get specified monitor position
-        int getMonitorWidth(int monitor);                                       // Get specified monitor width (max available by monitor)
-        int getMonitorHeight(int monitor);                                      // Get specified monitor height (max available by monitor)
-        int getMonitorPhysicalWidth(int monitor);                               // Get specified monitor physical width in millimetres
-        int getMonitorPhysicalHeight(int monitor);                              // Get specified monitor physical height in millimetres
-        int getMonitorRefreshRate(int monitor);                                 // Get specified monitor refresh rate
-        Vector2 getWindowPosition();                                        // Get window position XY on monitor
-        Vector2 getWindowScaleDPI();                                        // Get window scale DPI factor
-        std::string getMonitorName(int monitor);                                // Get the human-readable, UTF-8 encoded name of the primary monitor
-        void setClipboardText(const std::string &text);                                // Set clipboard text content
-        std::string getClipboardText();                                     // Get clipboard text content
 
         inline std::string getTitle() const {return _title;};
         inline int getHeight() const {return _height;};
         inline int getWidth() const {return _width;};
         inline int getMinHeight() const {return _minHeight;};
         inline int getMinWidth() const {return _minWidth;};
+
+        static std::shared_ptr<Window> &getInstance();
     private:
+        static std::shared_ptr<Window> _instance;
+
         std::string _title;
         int _width;
         int _height;
         int _minWidth;
         int _minHeight;
+        bool _isCreated = false;
     };
 }
 

@@ -52,5 +52,8 @@ add_library(${PROJECT_NAME}
         src/Core/WorldHelper.cpp
         src/Core/FileHelper.cpp
         src/Core/CompressHelper.cpp
+        src/exception/RaylibException.cpp
+        src/exception/WindowException.cpp
+        src/Window/MonitorHelper.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)

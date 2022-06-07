@@ -9,13 +9,14 @@
 
 int main(int ac, char **av)
 {
-    raylib::Window window("Test", 1920, 1080);
+    auto window = raylib::Window::getInstance();
+    window->createWindow("toto", 1280, 720);
     raylib::CoreHelper::setFramerateLimit(60);
 //    raylib::RlFont font;
 //    raylib::Text text("Hello", font);
     raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
     raylib::ModelAnim anim(model.getModel(), "../assets/player.iqm", 1);
-//    text.setPosition((Vector2) {860, 540});
+    //    text.setPosition((Vector2) {860, 540});
 //    text.setColor(RED);
 //    text->setFontSize(100);
 //    text->setTextSpacing(20);
@@ -25,7 +26,7 @@ int main(int ac, char **av)
     camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };          // Camera up vector (rotation towards target)
     camera.fovy = 45.0f;                                // Camera field-of-view Y
     camera.projection = CAMERA_PERSPECTIVE;
-    while (window.isOpen()) {
+    while (raylib::Window::getInstance()->isOpen()) {
         if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE))
             anim.update(0);
         raylib::DrawHelper::beginDrawing();

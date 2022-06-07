@@ -7,16 +7,26 @@
 
 #include "raylib/Window/Window.hpp"
 
-raylib::Window::Window(const std::string &title, int width, int height)
-{
-    this->_title = title;
-    this->_width = width;
-    this->_height = height;
-    this->_minWidth = 0;
-    this->_minHeight = 0;
-    InitWindow(this->_width, this->_height, this->_title.c_str());
+std::shared_ptr<raylib::Window> raylib::Window::_instance;
 
-    std::cout << "Window created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
+void raylib::Window::createWindow(const std::string &title, int height, int width)
+{
+    try {
+        if (_isCreated)
+            throw raylib::ex::WindowException("Window already created");
+        else {
+            this->_title = title;
+            this->_width = width;
+            this->_height = height;
+            this->_minWidth = 0;
+            this->_minHeight = 0;
+            InitWindow(this->_width, this->_height, this->_title.c_str());
+            _isCreated = true;
+            std::cout << "Window created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
+        }
+    } catch (const raylib::ex::WindowException &e) {
+        std::cerr << e.what() << std::endl;
+    }
 }
 
 raylib::Window::~Window()
@@ -26,6 +36,12 @@ raylib::Window::~Window()
     std::cout << "Window destroyed" << std::endl;
 }
 
+std::shared_ptr<raylib::Window> &raylib::Window::getInstance()
+{
+    if (!_instance)
+        _instance = std::make_shared<raylib::Window>();
+    return _instance;
+}
 
 // Window-related functions
 
@@ -137,84 +153,4 @@ void raylib::Window::setWindowSize(int width, int height)
     this->_height = height;
     this->_width = width;
     SetWindowSize(width, height);
-}
-
-std::shared_ptr<void *> raylib::Window::getWindowHandle()
-{
-    return std::make_shared<void *>(GetWindowHandle());
-}
-
-int raylib::Window::getScreenWidth()
-{
-    return GetScreenWidth();
-}
-
-int raylib::Window::getScreenHeight()
-{
-    return GetScreenHeight();
-}
-
-int raylib::Window::getMonitorCount()
-{
-    return GetMonitorCount();
-}
-
-int raylib::Window::getCurrentMonitor()
-{
-    return GetCurrentMonitor();
-}
-
-Vector2 raylib::Window::getMonitorPosition(int monitor)
-{
-    return GetMonitorPosition(monitor);
-}
-
-int raylib::Window::getMonitorWidth(int monitor)
-{
-    return GetMonitorWidth(monitor);
-}
-
-int raylib::Window::getMonitorHeight(int monitor)
-{
-    return GetMonitorHeight(monitor);
-}
-
-int raylib::Window::getMonitorPhysicalWidth(int monitor)
-{
-    return GetMonitorPhysicalWidth(monitor);
-}
-
-int raylib::Window::getMonitorPhysicalHeight(int monitor)
-{
-    return GetMonitorPhysicalHeight(monitor);
-}
-
-int raylib::Window::getMonitorRefreshRate(int monitor)
-{
-    return GetMonitorRefreshRate(monitor);
-}
-
-Vector2 raylib::Window::getWindowPosition()
-{
-    return GetWindowPosition();
-}
-
-Vector2 raylib::Window::getWindowScaleDPI()
-{
-    return GetWindowScaleDPI();
-}
-
-std::string raylib::Window::getMonitorName(int monitor)
-{
-    return GetMonitorName(monitor);
-}
-
-void raylib::Window::setClipboardText(const std::string &text)
-{
-    SetClipboardText(text.c_str());
-}
-
-std::string raylib::Window::getClipboardText()
-{
-    return GetClipboardText();
 }
