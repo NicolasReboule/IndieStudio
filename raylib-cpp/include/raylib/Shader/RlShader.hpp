@@ -26,6 +26,7 @@ namespace raylib {
             void setValue(int locIndex, const void *value, int uniformType);               // Set shader uniform value
             void setValueV(int locIndex, const void *value, int uniformType, int count);   // Set shader uniform value vector
             void setValueMatrix(int locIndex, Matrix mat);         // Set shader uniform value (matrix 4x4)
+            const Shader &getShader() const;
             void setValueTexture(int locIndex, Texture2D texture); // Set shader uniform value for texture (sampler2d)
         private:
             Shader _shader;

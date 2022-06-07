@@ -59,3 +59,8 @@ void raylib::RlShader::setValueTexture(int locIndex, Texture2D texture)
 {
     SetShaderValueTexture(this->_shader, locIndex, texture);
 }
+
+const Shader &raylib::RlShader::getShader() const
+{
+    return this->_shader;
+}
