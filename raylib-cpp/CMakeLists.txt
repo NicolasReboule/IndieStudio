@@ -57,5 +57,6 @@ add_library(${PROJECT_NAME}
         src/Window/MonitorHelper.cpp
         src/Shader/ShaderUtils.cpp
         src/3DObject/MeshHelper.cpp
+        src/Math/VectorHelper.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)

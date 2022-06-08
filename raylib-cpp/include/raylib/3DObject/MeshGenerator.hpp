@@ -9,6 +9,7 @@
 #define INDIESTUDIO_MESHGENERATOR_HPP
 
 #include <raylib.h>
+#include <raylib/Math.hpp>
 
 namespace raylib {
     class MeshGenerator {
@@ -23,8 +24,8 @@ namespace raylib {
         static Mesh genMeshCone(float radius, float height, int slices);                                          // Generate cone/pyramid mesh
         static Mesh genMeshTorus(float radius, float size, int radSeg, int sides);                                // Generate torus mesh
         static Mesh genMeshKnot(float radius, float size, int radSeg, int sides);                                 // Generate trefoil knot mesh
-        static Mesh genMeshHeightmap(Image heightmap, Vector3 size);                                              // Generate heightmap mesh from image data
-        static Mesh genMeshCubicmap(Image cubicmap, Vector3 cubeSize);                                            // Generate cubes-based map mesh from image data
+        static Mesh genMeshHeightmap(Image heightmap, Vector3f size);                                              // Generate heightmap mesh from image data
+        static Mesh genMeshCubicmap(Image cubicmap, Vector3f cubeSize);                                            // Generate cubes-based map mesh from image data
     private:
     };
 }

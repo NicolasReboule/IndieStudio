@@ -7,19 +7,19 @@
 
 #include "raylib/3DObject/RlModel.hpp"
 
-raylib::RlModel::RlModel(const std::string &fileName, const std::string &texturePath, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
+raylib::RlModel::RlModel(const std::string &fileName, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 : _model(LoadModel(fileName.c_str())), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
     setTextureMaterial();
 }
 
-raylib::RlModel::RlModel(Mesh mesh, const std::string &texturePath, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
+raylib::RlModel::RlModel(Mesh mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 : _model(LoadModelFromMesh(mesh)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
     setTextureMaterial();
 }
 //
-//raylib::RlModel::RlModel(raylib::RlMesh mesh, Vector3 position, Vector3 scale, Color color, Vector3 rotationAxis, float rotationAngle)
+//raylib::RlModel::RlModel(raylib::RlMesh mesh, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 //: _model(LoadModelFromMesh(mesh.getMesh())), _position(position), _color(color), _scale(scale)
 //{
 // }
@@ -31,7 +31,7 @@ raylib::RlModel::~RlModel()
 
 // Model loading/unloading functions
 
-void raylib::RlModel::setPosition(Vector3 position)
+void raylib::RlModel::setPosition(Vector3f position)
 {
     _position = position;
 }
@@ -50,7 +50,7 @@ void raylib::RlModel::setScale(float x, float y, float z)
     _scale.z = z;
 }
 
-void raylib::RlModel::setScale(Vector3 scale)
+void raylib::RlModel::setScale(Vector3f scale)
 {
     _scale = scale;
 }
@@ -60,7 +60,7 @@ void raylib::RlModel::setColor(Color color)
     _color = color;
 }
 
-void raylib::RlModel::setRotationAxis(Vector3 rotationAxis)
+void raylib::RlModel::setRotationAxis(Vector3f rotationAxis)
 {
     _rotationAxis = rotationAxis;
 }
@@ -82,17 +82,17 @@ const Model &raylib::RlModel::getModel() const
     return this->_model;
 }
 
-const Vector3 &raylib::RlModel::getPosition() const
+const Vector3f &raylib::RlModel::getPosition() const
 {
     return this->_position;
 }
 
-const Vector3 &raylib::RlModel::getScale() const
+const Vector3f &raylib::RlModel::getScale() const
 {
     return this->_scale;
 }
 
-const Vector3 &raylib::RlModel::getRotationAxis() const
+const Vector3f &raylib::RlModel::getRotationAxis() const
 {
     return this->_rotationAxis;
 }

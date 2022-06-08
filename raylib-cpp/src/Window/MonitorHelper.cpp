@@ -27,9 +27,9 @@ int raylib::MonitorHelper::getCurrentMonitor()
     return GetCurrentMonitor();
 }
 
-Vector2 raylib::MonitorHelper::getMonitorPosition(int monitor)
+Vector2f raylib::MonitorHelper::getMonitorPosition(int monitor)
 {
-    return GetMonitorPosition(monitor);
+    return raylib::VectorHelper::toVectorf(GetMonitorPosition(monitor));
 }
 
 int raylib::MonitorHelper::getMonitorWidth(int monitor)
@@ -57,14 +57,14 @@ int raylib::MonitorHelper::getMonitorRefreshRate(int monitor)
     return GetMonitorRefreshRate(monitor);
 }
 
-Vector2 raylib::MonitorHelper::getWindowPosition()
+Vector2f raylib::MonitorHelper::getWindowPosition()
 {
-    return GetWindowPosition();
+    return raylib::VectorHelper::toVectorf(GetWindowPosition());
 }
 
-Vector2 raylib::MonitorHelper::getWindowScaleDPI()
+Vector2f raylib::MonitorHelper::getWindowScaleDPI()
 {
-    return GetWindowScaleDPI();
+    return raylib::VectorHelper::toVectorf(GetWindowScaleDPI());
 }
 
 std::string raylib::MonitorHelper::getMonitorName(int monitor)

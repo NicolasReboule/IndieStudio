@@ -7,44 +7,44 @@
 
 #include "raylib/Camera/RlCamera.hpp"
 
-// Camera System Functions (Module: rcamera)
+// Camera System Functions (Module: r_camera)
 
-raylib::RlCamera::RlCamera()
+raylib::RlCamera::RlCamera() : _camera()
 {
-    this->camera.position = (Vector3){ 10.0f, 10.0f, 10.0f }; // Camera position
-    this->camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };      // Camera looking at point
-    this->camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };          // Camera up vector (rotation towards target)
-    this->camera.fovy = 45.0f;                                // Camera field-of-view Y
-    this->camera.projection = CAMERA_PERSPECTIVE;
+    this->_camera.position = { 10.0f, 10.0f, 10.0f }; // Camera position
+    this->_camera.target = { 0.0f, 0.0f, 0.0f };      // Camera looking at point
+    this->_camera.up = { 0.0f, 1.0f, 0.0f };          // Camera up vector (rotation towards target)
+    this->_camera.fovy = 45.0f;                                // Camera field-of-view Y
+    this->_camera.projection = CAMERA_PERSPECTIVE;
 }
 
-raylib::RlCamera::RlCamera(Vector3 position, Vector3 target, Vector3 up, float fovy, int projection)
+raylib::RlCamera::RlCamera(Vector3f position, Vector3f target, Vector3f up, float fovy, int projection) : _camera()
 {
-    this->camera.position = position; // Camera position
-    this->camera.target = target;      // Camera looking at point
-    this->camera.up = up;          // Camera up vector (rotation towards target)
-    this->camera.fovy = fovy;                                // Camera field-of-view Y
-    this->camera.projection = projection;
+    this->_camera.position = raylib::VectorHelper::toRaylibVector(position); // Camera position
+    this->_camera.target = raylib::VectorHelper::toRaylibVector(target);      // Camera looking at point
+    this->_camera.up = raylib::VectorHelper::toRaylibVector(up);          // Camera up vector (rotation towards target)
+    this->_camera.fovy = fovy;                                // Camera field-of-view Y
+    this->_camera.projection = projection;
 }
 
 void raylib::RlCamera::update()
 {
-    UpdateCamera(&this->camera);
+    UpdateCamera(&this->_camera);
 }
 
 Camera3D raylib::RlCamera::get()
 {
-    return this->camera;
+    return this->_camera;
 }
 
-void raylib::RlCamera::setPosition(Vector3 position)
+void raylib::RlCamera::setPosition(Vector3f position)
 {
-    this->camera.position = position;
+    this->_camera.position = raylib::VectorHelper::toRaylibVector(position);
 }
 
-void raylib::RlCamera::setTarget(Vector3 target)
+void raylib::RlCamera::setTarget(Vector3f target)
 {
-    this->camera.target = target;
+    this->_camera.target = raylib::VectorHelper::toRaylibVector(target);
 }
 
 void raylib::RlCamera::setPanControl(int keyPan)
@@ -70,5 +70,5 @@ void raylib::RlCamera::setMoveControls(int keyFront, int keyBack, int keyRight, 
 
 Matrix raylib::RlCamera::geMatrix()
 {
-    return GetCameraMatrix(this->camera);
+    return GetCameraMatrix(this->_camera);
 }

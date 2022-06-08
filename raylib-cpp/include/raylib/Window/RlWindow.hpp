@@ -11,7 +11,7 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include "raylib.h"
+#include <raylib.h>
 #include "raylib/exception/WindowException.hpp"
 
 namespace raylib {
@@ -46,7 +46,7 @@ namespace raylib {
         bool isWindowMaximized();                                           // Check if window is currently maximized (only PLATFORM_DESKTOP)
         bool isWindowFocused();                                             // Check if window is currently focused (only PLATFORM_DESKTOP)
         bool isWindowResized();                                             // Check if window has been resized last frame
-        bool isWindowState(unsigned int flag);                                  // Check if one specific window flag is enabled
+        bool hasWindowState(unsigned int flag);                                  // Check if one specific window flag is enabled
         void setWindowState(unsigned int flags);                                // Set window configuration state using flags
         void clearWindowState(unsigned int flags);                              // Clear window configuration state flags
         void toggleFullscreen();                                            // Toggle window state: fullscreen/windowed (only PLATFORM_DESKTOP)

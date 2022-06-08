@@ -19,9 +19,9 @@ int raylib::TouchHelper::getTouchY()
     return GetTouchY();
 }
 
-Vector2 raylib::TouchHelper::getTouchPosition(int index)
+Vector2f raylib::TouchHelper::getTouchPosition(int index)
 {
-    return GetTouchPosition(index);
+    return raylib::VectorHelper::toVectorf(GetTouchPosition(index));
 }
 
 int raylib::TouchHelper::getTouchPointId(int index)
@@ -56,9 +56,9 @@ float raylib::TouchHelper::getGestureHoldDuration()
     return GetGestureHoldDuration();
 }
 
-Vector2 raylib::TouchHelper::getGestureDragVector()
+Vector2f raylib::TouchHelper::getGestureDragVector()
 {
-    return GetGestureDragVector();
+    return raylib::VectorHelper::toVectorf(GetGestureDragVector());
 }
 
 float raylib::TouchHelper::getGestureDragAngle()
@@ -66,9 +66,9 @@ float raylib::TouchHelper::getGestureDragAngle()
     return GetGestureDragAngle();
 }
 
-Vector2 raylib::TouchHelper::getGesturePinchVector()
+Vector2f raylib::TouchHelper::getGesturePinchVector()
 {
-    return GetGesturePinchVector();
+    return raylib::VectorHelper::toVectorf(GetGesturePinchVector());
 }
 
 float raylib::TouchHelper::getGesturePinchAngle()

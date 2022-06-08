@@ -9,6 +9,7 @@
 #define TOUCH_HPP_
 
 #include "raylib.h"
+#include "raylib/Math.hpp"
 
 namespace raylib {
     class TouchHelper {
@@ -16,7 +17,7 @@ namespace raylib {
             // Input-related functions: touch
             static int getTouchX();                                                    // Get touch position X for touch point 0 (relative to screen size)
             static int getTouchY();                                                    // Get touch position Y for touch point 0 (relative to screen size)
-            static Vector2 getTouchPosition(int index);                                    // Get touch position XY for a touch point index (relative to screen size)
+            static Vector2f getTouchPosition(int index);                                    // Get touch position XY for a touch point index (relative to screen size)
             static int getTouchPointId(int index);                                         // Get touch point identifier for given index
             static int getTouchPointCount();                                           // Get number of touch points
 
@@ -25,9 +26,9 @@ namespace raylib {
             static bool isGestureDetected(int gesture);                                    // Check if a gesture have been detected
             static int getGestureDetected();                                           // Get latest detected gesture
             static float getGestureHoldDuration();                                     // Get gesture hold time in milliseconds
-            static Vector2 getGestureDragVector();                                     // Get gesture drag vector
+            static Vector2f getGestureDragVector();                                     // Get gesture drag vector
             static float getGestureDragAngle();                                        // Get gesture drag angle
-            static Vector2 getGesturePinchVector();                                    // Get gesture pinch delta
+            static Vector2f getGesturePinchVector();                                    // Get gesture pinch delta
             static float getGesturePinchAngle();                                       // Get gesture pinch angle
         private:
     };

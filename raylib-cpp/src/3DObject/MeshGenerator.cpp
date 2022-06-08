@@ -54,12 +54,12 @@ Mesh raylib::MeshGenerator::genMeshKnot(float radius, float size, int radSeg, in
     return GenMeshKnot(radius, size, radSeg, sides);
 }
 
-Mesh raylib::MeshGenerator::genMeshHeightmap(Image heightmap, Vector3 size)
+Mesh raylib::MeshGenerator::genMeshHeightmap(Image heightmap, Vector3f size)
 {
-    return GenMeshHeightmap(heightmap, size);
+    return GenMeshHeightmap(heightmap, raylib::VectorHelper::toRaylibVector(size));
 }
 
-Mesh raylib::MeshGenerator::genMeshCubicmap(Image cubicmap, Vector3 cubeSize)
+Mesh raylib::MeshGenerator::genMeshCubicmap(Image cubicmap, Vector3f cubeSize)
 {
-    return GenMeshCubicmap(cubicmap, cubeSize);
+    return GenMeshCubicmap(cubicmap, raylib::VectorHelper::toRaylibVector(cubeSize));
 }

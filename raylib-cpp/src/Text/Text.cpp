@@ -7,31 +7,31 @@
 
 #include "raylib/Text/Text.hpp"
 
-raylib::Text::Text(const std::string &text, Vector2 position, Color color)
+raylib::Text::Text(const std::string &text, Vector2f position, Color color)
     : _color(color), _position(position), _font()
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, Font font, Vector2 position, Color color)
+raylib::Text::Text(const std::string &text, Font font, Vector2f position, Color color)
     : _color(color), _position(position), _font(font)
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, const raylib::RlFont &font, Vector2 position, Color color)
+raylib::Text::Text(const std::string &text, const raylib::RlFont &font, Vector2f position, Color color)
     : _color(color), _position(position), _font(font)
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, Vector2 position, Color color)
+raylib::Text::Text(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, Vector2f position, Color color)
     : _color(color), _position(position), _font(fontPath, fontSize, fontChars, glyphCount)
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, Image image, Color key, int firstChar, Vector2 position, Color color)
+raylib::Text::Text(const std::string &text, Image image, Color key, int firstChar, Vector2f position, Color color)
     : _color(color), _position(position), _font(image, key, firstChar)
 {
     this->_text = text;
@@ -44,7 +44,7 @@ raylib::Text::Text(const raylib::Text &text)
     this->_font = text._font;
 }
 
-raylib::Text::Text(const std::string &text, const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount,  Vector2 position, Color color)
+raylib::Text::Text(const std::string &text, const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount,  Vector2f position, Color color)
     : _color(color), _position(position), _font(fileType, fileData, dataSize, fontSize, fontChars, glyphCount)
 {
     this->_text = text;
@@ -66,7 +66,7 @@ void raylib::Text::setPosition(float x, float y)
     _position.y = y;
 }
 
-void raylib::Text::setPosition(Vector2 pos)
+void raylib::Text::setPosition(Vector2f pos)
 {
     this->_position = pos;
 }
@@ -86,7 +86,7 @@ const std::string &raylib::Text::getText() const
     return this->_text;
 }
 
-const Vector2 &raylib::Text::getPosition() const
+const Vector2f &raylib::Text::getPosition() const
 {
     return this->_position;
 }

@@ -11,28 +11,23 @@ std::shared_ptr<raylib::RlWindow> raylib::RlWindow::_instance;
 
 void raylib::RlWindow::createWindow(const std::string &title, int height, int width)
 {
-    try {
-        if (_isCreated)
-            throw raylib::ex::WindowException("RlWindow already created");
-        else {
-            this->_title = title;
-            this->_width = width;
-            this->_height = height;
-            this->_minWidth = 0;
-            this->_minHeight = 0;
-            InitWindow(this->_width, this->_height, this->_title.c_str());
-            _isCreated = true;
-            std::cout << "RlWindow created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
-        }
-    } catch (const raylib::ex::WindowException &e) {
-        std::cerr << e.what() << std::endl;
+    if (_isCreated)
+        throw raylib::ex::WindowException("RlWindow already created");
+    else {
+        this->_title = title;
+        this->_width = width;
+        this->_height = height;
+        this->_minWidth = 0;
+        this->_minHeight = 0;
+        InitWindow(this->_width, this->_height, this->_title.c_str());
+        _isCreated = true;
+        std::cout << "RlWindow created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
     }
 }
 
 raylib::RlWindow::~RlWindow()
 {
     CloseWindow();
-    //can't fix glfwInit leak
     std::cout << "RlWindow destroyed" << std::endl;
 }
 
@@ -42,8 +37,6 @@ std::shared_ptr<raylib::RlWindow> &raylib::RlWindow::getInstance()
         _instance = std::make_shared<raylib::RlWindow>();
     return _instance;
 }
-
-// RlWindow-related functions
 
 bool raylib::RlWindow::isOpen()
 {
@@ -60,7 +53,7 @@ bool raylib::RlWindow::isWindowFullscreen()
     return IsWindowFullscreen();
 }
 
-bool  raylib::RlWindow::isWindowHidden()
+bool raylib::RlWindow::isWindowHidden()
 {
     return IsWindowHidden();
 }
@@ -85,7 +78,7 @@ bool raylib::RlWindow::isWindowResized()
     return IsWindowResized();
 }
 
-bool raylib::RlWindow::isWindowState(unsigned int flag)
+bool raylib::RlWindow::hasWindowState(unsigned int flag)
 {
     return IsWindowState(flag);
 }

@@ -33,7 +33,8 @@
 #include "raylib/3DObject/RlMaterial.hpp"
 #include "raylib/Text/TextHelper.hpp"
 #include "raylib/Window/MonitorHelper.hpp"
-
 #include "raylib/Shader/ShaderUtils.hpp"
+
+#include "Math.hpp"
 
 #endif //INDIESTUDIO_RAYLIB_HPP

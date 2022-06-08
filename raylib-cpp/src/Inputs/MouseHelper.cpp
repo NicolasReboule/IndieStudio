@@ -39,14 +39,14 @@ int raylib::MouseHelper::getMouseY()
     return GetMouseY();
 }
 
-Vector2 raylib::MouseHelper::getMousePosition()
+Vector2f raylib::MouseHelper::getMousePosition()
 {
-    return GetMousePosition();
+    return raylib::VectorHelper::toVectorf(GetMousePosition());
 }
 
-Vector2 raylib::MouseHelper::getMouseDelta()
+Vector2f raylib::MouseHelper::getMouseDelta()
 {
-    return GetMouseDelta();
+    return raylib::VectorHelper::toVectorf(GetMouseDelta());
 }
 
 void raylib::MouseHelper::setMousePosition(int x, int y)
@@ -74,7 +74,7 @@ void raylib::MouseHelper::setMouseCursor(int cursor)
     SetMouseCursor(cursor);
 }
 
-Ray raylib::MouseHelper::getMouseRay(Vector2 mousePosition, Camera camera)
+Ray raylib::MouseHelper::getMouseRay(Vector2f mousePosition, Camera camera)
 {
-    return GetMouseRay(mousePosition, camera);
+    return GetMouseRay(raylib::VectorHelper::toRaylibVector(mousePosition), camera);
 }

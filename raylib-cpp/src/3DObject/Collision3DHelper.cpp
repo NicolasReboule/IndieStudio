@@ -10,9 +10,9 @@
 
 // Collision detection functions
 
-bool raylib::Collision3dHelper::checkCollisionSpheres(Vector3 center1, float radius1, Vector3 center2, float radius2)
+bool raylib::Collision3dHelper::checkCollisionSpheres(Vector3f center1, float radius1, Vector3f center2, float radius2)
 {
-    return CheckCollisionSpheres(center1, radius1, center2, radius2);
+    return CheckCollisionSpheres(raylib::VectorHelper::toRaylibVector(center1), radius1, raylib::VectorHelper::toRaylibVector(center2), radius2);
 }
 
 bool raylib::Collision3dHelper::checkCollisionBoxes(BoundingBox box1, BoundingBox box2)
@@ -20,14 +20,14 @@ bool raylib::Collision3dHelper::checkCollisionBoxes(BoundingBox box1, BoundingBo
     return CheckCollisionBoxes(box1, box2);
 }
 
-bool raylib::Collision3dHelper::checkCollisionBoxSphere(BoundingBox box, Vector3 center, float radius)
+bool raylib::Collision3dHelper::checkCollisionBoxSphere(BoundingBox box, Vector3f center, float radius)
 {
-    return CheckCollisionBoxSphere(box, center, radius);
+    return CheckCollisionBoxSphere(box, raylib::VectorHelper::toRaylibVector(center), radius);
 }
 
-RayCollision raylib::Collision3dHelper::getRayCollisionSphere(Ray ray, Vector3 center, float radius)
+RayCollision raylib::Collision3dHelper::getRayCollisionSphere(Ray ray, Vector3f center, float radius)
 {
-    return GetRayCollisionSphere(ray, center, radius);
+    return GetRayCollisionSphere(ray, raylib::VectorHelper::toRaylibVector(center), radius);
 }
 
 RayCollision raylib::Collision3dHelper::getRayCollisionBox(Ray ray, BoundingBox box)
@@ -45,12 +45,13 @@ RayCollision raylib::Collision3dHelper::getRayCollisionMesh(Ray ray, Mesh mesh, 
     return GetRayCollisionMesh(ray, mesh, transform);
 }
 
-RayCollision raylib::Collision3dHelper::getRayCollisionTriangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3)
+RayCollision raylib::Collision3dHelper::getRayCollisionTriangle(Ray ray, Vector3f p1, Vector3f p2, Vector3f p3)
 {
-    return GetRayCollisionTriangle(ray, p1, p2, p3);
+    return GetRayCollisionTriangle(ray, raylib::VectorHelper::toRaylibVector(p1), raylib::VectorHelper::toRaylibVector(p2), raylib::VectorHelper::toRaylibVector(p3));
 }
 
-RayCollision raylib::Collision3dHelper::getRayCollisionQuad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4)
+RayCollision raylib::Collision3dHelper::getRayCollisionQuad(Ray ray, Vector3f p1, Vector3f p2, Vector3f p3, Vector3f p4)
 {
-    return GetRayCollisionQuad(ray, p1, p2, p3, p4);
+    return GetRayCollisionQuad(ray, raylib::VectorHelper::toRaylibVector(p1), raylib::VectorHelper::toRaylibVector(p2),
+                               raylib::VectorHelper::toRaylibVector(p3), raylib::VectorHelper::toRaylibVector(p4));
 }

@@ -9,18 +9,19 @@
 #define CAMERA_HPP_
 
 #include "raylib.h"
+#include "raylib/Math.hpp"
 
 namespace raylib {
     class RlCamera {
         public:
             // Camera System Functions (Module: rcamera)
             RlCamera();
-            RlCamera(Vector3 position, Vector3 target, Vector3 up, float fovy, int projection);
+            RlCamera(Vector3f position, Vector3f target, Vector3f up, float fovy, int projection);
             ~RlCamera() = default;
 
             void update();
-            void setPosition(Vector3 position);
-            void setTarget(Vector3 target);
+            void setPosition(Vector3f position);
+            void setTarget(Vector3f target);
 
             Camera3D get();
 
@@ -31,7 +32,7 @@ namespace raylib {
             Matrix geMatrix();// Get camera transform matrix (view matrix)
 
     private:
-        Camera3D camera;
+        Camera3D _camera;
     };
 }
 
