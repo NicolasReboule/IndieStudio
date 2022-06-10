@@ -9,27 +9,27 @@
 #include <GameEngine/myStaticBody.hpp>
 #include <GameEngine/myButton.hpp>
 #include <GameEngine/MainScene.hpp>
-
+#include "raylib/Raylib.hpp"
 
 int main(int ac, char **av)
 {
     auto window = raylib::RlWindow::getInstance();
-    auto audioManager = GameEngine::AudioManager::getInstance();
-    auto sceneManager = GameEngine::SceneManager::getInstance();
 
     window->createWindow("Bomberman", 1280, 720, 60);
     raylib::RlCamera camera;
-
-    std::shared_ptr<GameEngine::MainScene> mainScene = std::make_shared<GameEngine::MainScene>();
-    sceneManager->addScene(mainScene);
-
-    sceneManager->changeScene("main");
-
+    raylib::RlImageBuilder image;
+    image.setType(raylib::RlImageBuilder::ImageGradientH);
+    image.setWidth(1000);
+    image.setHeight(1000);
+    image.setLeft(BLUE);
+    image.setRight(RED);
+    raylib::RlImage rlimage(image.build());
+    raylib::RlTexture texture(rlimage);
     while (window->isOpen()) {
+        raylib::DrawHelper::beginDrawing();
 
-        sceneManager->update();
-        sceneManager->drawAll(camera);
-
+        raylib::TextureHelper::drawTexture(texture.getTexture(), 0, 0, WHITE);
+        raylib::DrawHelper::endDrawing();
     }
     return (0);
 }

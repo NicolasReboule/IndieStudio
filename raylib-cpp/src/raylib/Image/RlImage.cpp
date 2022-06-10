@@ -9,7 +9,7 @@
 
 // Image loading functions
 
-raylib::RlImage::RlImage()
+raylib::RlImage::RlImage() : _image()
 {
     this->_image.data = nullptr;
     this->_image.format = 0;
@@ -18,9 +18,13 @@ raylib::RlImage::RlImage()
     this->_image.height = 0;
 }
 
+raylib::RlImage::RlImage(const Image &image) : _image()
+{
+    _image = image;
+}
+
 raylib::RlImage::~RlImage()
 {
-    UnloadImage(this->_image);
 }
 
 void raylib::RlImage::load(const std::string &fileName)
@@ -61,4 +65,9 @@ bool raylib::RlImage::exportImage(Image image, const std::string &fileName)
 bool raylib::RlImage::exportAsCode(Image image, const std::string &fileName)
 {
     return ExportImageAsCode(image, fileName.c_str());
+}
+
+const Image &raylib::RlImage::getImage() const
+{
+    return _image;
 }

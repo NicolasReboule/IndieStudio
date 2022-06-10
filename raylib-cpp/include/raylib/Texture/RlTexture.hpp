@@ -10,6 +10,7 @@
 
 #include "raylib.h"
 #include <string>
+#include "raylib/Image/RlImage.hpp"
 
 namespace raylib {
     class RlTexture {
@@ -17,7 +18,7 @@ namespace raylib {
         // RlTexture loading functions
         // NOTE: These functions require GPU access
         explicit RlTexture(const std::string &fileName);
-        explicit RlTexture(Image image);
+        explicit RlTexture(RlImage image);
         RlTexture(const RlTexture &texture);
         ~RlTexture();
         TextureCubemap loadTextureCubemap(Image image, int layout);                                        // Load cubemap from image, multiple image cubemap layouts supported

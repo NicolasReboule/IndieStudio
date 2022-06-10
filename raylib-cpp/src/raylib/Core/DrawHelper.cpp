@@ -93,3 +93,31 @@ void raylib::DrawHelper::endVrStereoMode()
 {
     EndVrStereoMode();
 }
+
+void raylib::DrawHelper::drawBoundingBox(BoundingBox box, Color color)
+{
+    DrawBoundingBox(box, color);
+}
+
+void raylib::DrawHelper::drawBillboard(Camera camera, Texture2D texture, Vector3f position, float size, Color tint)
+{
+    DrawBillboard(camera, texture,
+                  raylib::VectorHelper::toRaylibVector(position), size, tint);
+}
+
+void raylib::DrawHelper::drawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3f position, Vector2f size, Color tint)
+{
+    DrawBillboardRec(camera, texture, source,
+                     raylib::VectorHelper::toRaylibVector(position),
+                     raylib::VectorHelper::toRaylibVector(size), tint);
+}
+
+void raylib::DrawHelper::drawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3f position, Vector3f up, Vector2f size, Vector2f origin, float rotation, Color tint)
+{
+    DrawBillboardPro(camera, texture, source,
+                     raylib::VectorHelper::toRaylibVector(position),
+                     raylib::VectorHelper::toRaylibVector(up),
+                     raylib::VectorHelper::toRaylibVector(size),
+                     raylib::VectorHelper::toRaylibVector(origin), rotation, tint);
+}
+

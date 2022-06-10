@@ -9,59 +9,59 @@
 
 // Color/pixel related functions
 
-Color raylib::ColorHelper::fade(Color color, float alpha)
+raylib::RlColor raylib::ColorHelper::fade(RlColor color, float alpha)
 {
-    return Fade(color, alpha);
+    return Fade(color.getColor(), alpha);
 }
 
-int raylib::ColorHelper::colorToInt(Color color)
+int raylib::ColorHelper::colorToInt(RlColor color)
 {
-    return ColorToInt(color);
+    return ColorToInt(color.getColor());
 }
 
-Vector4 raylib::ColorHelper::colorNormalize(Color color)
+Vector4 raylib::ColorHelper::colorNormalize(RlColor color)
 {
-    return ColorNormalize(color);
+    return ColorNormalize(color.getColor());
 }
 
-Color raylib::ColorHelper::colorFromNormalized(Vector4 normalized)
+raylib::RlColor raylib::ColorHelper::colorFromNormalized(Vector4 normalized)
 {
     return ColorFromNormalized(normalized);
 }
 
-Vector3 raylib::ColorHelper::colorToHSV(Color color)
+Vector3f raylib::ColorHelper::colorToHSV(RlColor color)
 {
-    return ColorToHSV(color);
+    return raylib::VectorHelper::toVectorf(ColorToHSV(color.getColor()));
 }
 
-Color raylib::ColorHelper::colorFromHSV(float hue, float saturation, float value)
+raylib::RlColor raylib::ColorHelper::colorFromHSV(float hue, float saturation, float value)
 {
     return ColorFromHSV(hue, saturation, value);
 }
 
-Color raylib::ColorHelper::colorAlpha(Color color, float alpha)
+raylib::RlColor raylib::ColorHelper::colorAlpha(RlColor color, float alpha)
 {
-    return ColorAlpha(color, alpha);
+    return ColorAlpha(color.getColor(), alpha);
 }
 
-Color raylib::ColorHelper::colorAlphaBlend(Color dst, Color src, Color tint)
+raylib::RlColor raylib::ColorHelper::colorAlphaBlend(RlColor dst, RlColor src, RlColor tint)
 {
-    return ColorAlphaBlend(dst, src, tint);
+    return ColorAlphaBlend(dst.getColor(), src.getColor(), tint.getColor());
 }
 
-Color raylib::ColorHelper::getColor(unsigned int hexValue)
+raylib::RlColor raylib::ColorHelper::getColor(unsigned int hexValue)
 {
     return GetColor(hexValue);
 }
 
-Color raylib::ColorHelper::getPixelColor(void *srcPtr, int format)
+raylib::RlColor raylib::ColorHelper::getPixelColor(void *srcPtr, int format)
 {
     return GetPixelColor(srcPtr, format);
 }
 
-void raylib::ColorHelper::setPixelColor(void *dstPtr, Color color, int format)
+void raylib::ColorHelper::setPixelColor(void *dstPtr, RlColor color, int format)
 {
-    SetPixelColor(dstPtr, color, format);
+    SetPixelColor(dstPtr, color.getColor(), format);
 }
 
 int raylib::ColorHelper::getPixelDataSize(int width, int height, int format)

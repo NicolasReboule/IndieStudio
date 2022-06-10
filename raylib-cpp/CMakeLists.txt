@@ -60,6 +60,8 @@ add_library(${PROJECT_NAME}
         src/raylib/Color/RlColor.cpp
         src/raylib/exception/BuilderException.cpp
         src/raylib/3DObject/RlMesh.cpp
+        src/raylib/Color/ColorHelper.cpp
+        src/raylib/3DObject/RlMeshBuilder.cpp
 
         src/raylib/Audio/RlMusic.cpp
         src/raylib/Audio/RlSound.cpp
@@ -75,5 +77,6 @@ add_library(${PROJECT_NAME}
         src/GameEngine/MainScene.cpp
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/myButton.cpp
+        src/raylib/Image/RlImageBuilder.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)

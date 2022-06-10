@@ -9,22 +9,22 @@
 
 // Screen-space-related functions
 
-Vector2 raylib::WorldHelper::getWorldToScreen(Vector3 position, Camera camera)
+Vector2f raylib::WorldHelper::getWorldToScreen(Vector3f position, Camera camera)
 {
-    return GetWorldToScreen(position, camera);
+    return raylib::VectorHelper::toVectorf(GetWorldToScreen(raylib::VectorHelper::toRaylibVector(position), camera));
 }
 
-Vector2 raylib::WorldHelper::getWorldToScreenEx(Vector3 position, Camera camera, int width, int height)
+Vector2f raylib::WorldHelper::getWorldToScreenEx(Vector3f position, Camera camera, int width, int height)
 {
-    return GetWorldToScreenEx(position, camera, width, height);
+    return raylib::VectorHelper::toVectorf(GetWorldToScreenEx(raylib::VectorHelper::toRaylibVector(position), camera, width, height));
 }
 
-Vector2 raylib::WorldHelper::getWorldToScreen2D(Vector2 position, Camera2D camera)
+Vector2f raylib::WorldHelper::getWorldToScreen2D(Vector2f position, Camera2D camera)
 {
-    return GetWorldToScreen2D(position, camera);
+    return raylib::VectorHelper::toVectorf(GetWorldToScreen2D(raylib::VectorHelper::toRaylibVector(position), camera));
 }
 
-Vector2 raylib::WorldHelper::getScreenToWorld2D(Vector2 position, Camera2D camera)
+Vector2f raylib::WorldHelper::getScreenToWorld2D(Vector2f position, Camera2D camera)
 {
-    return GetScreenToWorld2D(position, camera);
+    return raylib::VectorHelper::toVectorf(GetScreenToWorld2D(raylib::VectorHelper::toRaylibVector(position), camera));
 }

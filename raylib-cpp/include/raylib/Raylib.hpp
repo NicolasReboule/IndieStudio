@@ -28,6 +28,8 @@
 #include "raylib/3DObject/RlModelAnim.hpp"
 #include "raylib/3DObject/MeshGenerator.hpp"
 #include "raylib/3DObject/RlMeshBuilder.hpp"
+#include "raylib/Core/WorldHelper.hpp"
+#include "raylib/Core/FileHelper.hpp"
 #include "raylib/3DObject/Shape3DHelper.hpp"
 #include "raylib/3DObject/ModelHelper.hpp"
 #include "raylib/3DObject/RlMaterial.hpp"
@@ -36,10 +38,10 @@
 #include "raylib/Shader/ShaderUtils.hpp"
 #include "raylib/Audio/RlSound.hpp"
 #include "raylib/Audio/RlMusic.hpp"
-
+#include "raylib/Color/ColorHelper.hpp"
 #include "raylib/2DObject/Collision2DHelper.hpp"
 #include "raylib/Texture/TextureHelper.hpp"
-
+#include "raylib/Image/RlImageBuilder.hpp"
 #include "Math.hpp"
 
 #endif //INDIESTUDIO_RAYLIB_HPP

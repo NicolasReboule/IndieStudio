@@ -77,7 +77,6 @@ namespace raylib {
 
         RlMesh build() override;
     private:
-        Mesh _mesh;
         long _flags;
         float _radius;
         float _width;

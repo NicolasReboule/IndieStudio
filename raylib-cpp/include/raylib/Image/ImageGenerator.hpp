@@ -10,16 +10,17 @@
 
 #include <raylib.h>
 #include <string>
+#include "raylib/Color/RlColor.hpp"
 
 namespace raylib {
     class ImageGenerator {
     public:
         // Image generation functions
-        static Image genImageColor(int width, int height, Color color);                                           // Generate image: plain color
-        static Image genImageGradientV(int width, int height, Color top, Color bottom);                           // Generate image: vertical gradient
-        static Image genImageGradientH(int width, int height, Color left, Color right);                           // Generate image: horizontal gradient
-        static Image genImageGradientRadial(int width, int height, float density, Color inner, Color outer);      // Generate image: radial gradient
-        static Image genImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);    // Generate image: checked
+        static Image genImageColor(int width, int height, RlColor color);                                           // Generate image: plain color
+        static Image genImageGradientV(int width, int height, RlColor top, RlColor bottom);                           // Generate image: vertical gradient
+        static Image genImageGradientH(int width, int height, RlColor left, RlColor right);                           // Generate image: horizontal gradient
+        static Image genImageGradientRadial(int width, int height, float density, RlColor inner, RlColor outer);      // Generate image: radial gradient
+        static Image genImageChecked(int width, int height, int checksX, int checksY, RlColor col1, RlColor col2);    // Generate image: checked
         static Image genImageWhiteNoise(int width, int height, float factor);                                     // Generate image: white noise
         static Image genImageCellular(int width, int height, int tileSize);                                       // Generate image: cellular algorithm. Bigger tileSize means bigger cells
     private:

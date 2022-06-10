@@ -9,6 +9,7 @@
 #define DRAW_HPP_
 
 #include "raylib.h"
+#include "raylib/Math.hpp"
 
 namespace raylib {
     class DrawHelper {
@@ -31,7 +32,13 @@ namespace raylib {
             static void endScissorMode();                                              // End scissor mode
             static void beginVrStereoMode(VrStereoConfig config);                          // Begin stereo rendering (requires VR simulator)
             static void endVrStereoMode();                                             // End stereo rendering (requires VR simulator)
-        private:
+
+            static void drawBoundingBox(BoundingBox box, Color color);                                                // DrawHelper bounding box (wires)
+            static void drawBillboard(Camera camera, Texture2D texture, Vector3f position, float size, Color tint);    // DrawHelper a billboard texture
+            static void drawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3f position, Vector2f size, Color tint); // DrawHelper a billboard texture defined by source
+            static void drawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3f position, Vector3f up, Vector2f size, Vector2f origin, float rotation, Color tint); // DrawHelper a billboard texture defined by source and rotation
+
+    private:
     };
 }
 

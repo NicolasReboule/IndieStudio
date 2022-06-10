@@ -10,29 +10,29 @@
 
 // Image generation functions
 
-Image raylib::ImageGenerator::genImageColor(int width, int height, Color color)
+Image raylib::ImageGenerator::genImageColor(int width, int height, RlColor color)
 {
-    return GenImageColor(width, height, color);
+    return GenImageColor(width, height, color.getColor());
 }
 
-Image raylib::ImageGenerator::genImageGradientV(int width, int height, Color top, Color bottom)
+Image raylib::ImageGenerator::genImageGradientV(int width, int height, RlColor top, RlColor bottom)
 {
-    return GenImageGradientV(width, height, top, bottom);
+    return GenImageGradientV(width, height, top.getColor(), bottom.getColor());
 }
 
-Image raylib::ImageGenerator::genImageGradientH(int width, int height, Color left, Color right)
+Image raylib::ImageGenerator::genImageGradientH(int width, int height, RlColor left, RlColor right)
 {
-    return GenImageGradientH(width, height, left, right);
+    return GenImageGradientH(width, height, left.getColor(), right.getColor());
 }
 
-Image raylib::ImageGenerator::genImageGradientRadial(int width, int height, float density, Color inner, Color outer)
+Image raylib::ImageGenerator::genImageGradientRadial(int width, int height, float density, RlColor inner, RlColor outer)
 {
-    return GenImageGradientRadial(width, height, density, inner, outer);
+    return GenImageGradientRadial(width, height, density, inner.getColor(), outer.getColor());
 }
 
-Image raylib::ImageGenerator::genImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2)
+Image raylib::ImageGenerator::genImageChecked(int width, int height, int checksX, int checksY, RlColor col1, RlColor col2)
 {
-    return GenImageChecked(width, height, checksX, checksY, col1, col2);
+    return GenImageChecked(width, height, checksX, checksY, col1.getColor(), col2.getColor());
 }
 
 Image raylib::ImageGenerator::genImageWhiteNoise(int width, int height, float factor)

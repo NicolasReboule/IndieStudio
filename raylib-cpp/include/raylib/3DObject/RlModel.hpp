@@ -42,7 +42,7 @@ namespace raylib {
         const float &getRotationAngle() const;
         const RlTexture &getTexture() const;
 
-        BoundingBox getBoundingBox() const;
+        const BoundingBox &getBoundingBox() const;
 
         RlTexture *operator->();
     private:
@@ -53,6 +53,7 @@ namespace raylib {
         Vector3f _scale;
         Vector3f _rotationAxis;
         float _rotationAngle;
+        BoundingBox _boundingBox;
     };
 }
 

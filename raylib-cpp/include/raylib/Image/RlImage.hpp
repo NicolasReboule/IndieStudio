@@ -17,6 +17,7 @@ namespace raylib {
         // Image loading functions
         // NOTE: These functions do not require GPU access
         RlImage();
+        explicit RlImage(const Image &image);
         ~RlImage();
         void load(const std::string &fileName);                                                             // Load image from file into CPU memory (RAM)
         void loadRaw(const std::string &fileName, int width, int height, int format, int headerSize);       // Load image from RAW file data
@@ -26,6 +27,8 @@ namespace raylib {
         void loadFromScreen();                                                                   // Load image from screen buffer and (screenshot)
         bool exportImage(Image image, const std::string &fileName);                                               // Export image data to file, returns true on success
         bool exportAsCode(Image image, const std::string &fileName);                                         // Export image as code file defining an array of bytes, returns true on success
+
+        const Image &getImage() const;
     private:
         Image _image;
     };
