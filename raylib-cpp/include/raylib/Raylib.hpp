@@ -34,6 +34,11 @@
 #include "raylib/Text/TextHelper.hpp"
 #include "raylib/Window/MonitorHelper.hpp"
 #include "raylib/Shader/ShaderUtils.hpp"
+#include "raylib/Audio/RlSound.hpp"
+#include "raylib/Audio/RlMusic.hpp"
+
+#include "raylib/2DObject/Collision2DHelper.hpp"
+#include "raylib/Texture/TextureHelper.hpp"
 
 #include "Math.hpp"
 

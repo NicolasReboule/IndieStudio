@@ -5,120 +5,91 @@
 ** main.cpp
 */
 
-#include <raylib/Raylib.hpp>
+#include <GameEngine/GameEngine.hpp>
+#include <GameEngine/myStaticBody.hpp>
+#include <GameEngine/myButton.hpp>
+#include <GameEngine/MainScene.hpp>
+
 
 int main(int ac, char **av)
 {
     auto window = raylib::RlWindow::getInstance();
-    window->createWindow("toto", 1280, 720);
-    raylib::CoreHelper::setFramerateLimit(60);
-//    raylib::RlFont font;
-//    raylib::Text text("Hello", font);
-    raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
-    raylib::RlModelAnim anim(model.getModel(), "../assets/player.iqm", 1);
-    //    text.setPosition((Vector2) {860, 540});
-//    text.setColor(RED);
-//    text->setFontSize(100);
-//    text->setTextSpacing(20);
-    Camera camera = { 0 };
-    camera.position = (Vector3){ 10.0f, 10.0f, 10.0f }; // Camera position
-    camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };      // Camera looking at point
-    camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };          // Camera up vector (rotation towards target)
-    camera.fovy = 45.0f;                                // Camera field-of-view Y
-    camera.projection = CAMERA_PERSPECTIVE;
-    while (raylib::RlWindow::getInstance()->isOpen()) {
-        if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE))
-            anim.update(0);
-        raylib::DrawHelper::beginDrawing();
-        raylib::DrawHelper::clearBackground(WHITE);
-        raylib::DrawHelper::beginMode3D(camera);
-        raylib::ModelHelper::drawModel(model);
-        raylib::DrawHelper::endMode3D();
-//      raylib::TextHelper::drawText(text);
-        raylib::DrawHelper::endDrawing();
+    auto audioManager = GameEngine::AudioManager::getInstance();
+    auto sceneManager = GameEngine::SceneManager::getInstance();
+
+    window->createWindow("Bomberman", 720, 720, 60);
+    raylib::RlCamera camera;
+
+    std::shared_ptr<GameEngine::MainScene> mainScene = std::make_shared<GameEngine::MainScene>();
+    sceneManager->addScene(mainScene);
+
+    sceneManager->changeScene("main");
+
+    while (window->isOpen()) {
+
+        sceneManager->update();
+        sceneManager->drawAll(camera);
+
     }
-//  <  const int screenWidth = 800;
-//    const int screenHeight = 450;
-//
-//    raylib::RlWindow::initWindow(screenWidth, screenHeight, "raylib [models] example - model animation");
-//
-//    // Define the camera to look into our 3d world
-//    Camera camera = { 0 };
-//    camera.position = (Vector3){ 10.0f, 10.0f, 10.0f }; // Camera position
-//    camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };      // Camera looking at point
-//    camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };          // Camera up vector (rotation towards target)
-//    camera.fovy = 45.0f;                                // Camera field-of-view Y
-//    camera.projection = CAMERA_PERSPECTIVE;             // Camera mode type
-//
-//    Model model = raylib::RlModel::loadModel("../assets/guy.iqm");                    // Load the animated model mesh and basic data
-//    Texture2D texture = raylib::RlTexture::loadTexture("../assets/guytex.png");         // Load model texture and set material
-//    raylib::RlMaterial::setMaterialTexture(&model.materials[0], MATERIAL_MAP_DIFFUSE, texture);     // Set model material map texture
-//
-//    Vector3 position = { 0.0f, 0.0f, 0.0f };            // Set model position
-//
-//    // Load animation data
-//    unsigned int animsCount = 0;
-//    ModelAnimation *anims = raylib::RlModelAnim::loadModelAnimations("../assets/guyanim.iqm", &animsCount);
-//    int animFrameCounter = 0;
-//
-//    raylib::RlCamera::setCameraMode(camera, CAMERA_FREE); // Set free camera mode
-//
-//    SetTargetFPS(60);                   // Set our game to run at 60 frames-per-second
-//    //--------------------------------------------------------------------------------------
-//
-//    // Main game loop
-//    while (raylib::RlWindow::isOpen())        // Detect window close button or ESC key
-//    {
-//        // Update
-//        //----------------------------------------------------------------------------------
-//        raylib::RlCamera::updateCamera(&camera);
-//
-//        // Play animation when spacebar is held down
-//        if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE))
-//        {
-//            animFrameCounter++;
-//            raylib::RlModelAnim::updateModelAnimation(model, anims[0], animFrameCounter);
-//            if (animFrameCounter >= anims[0].frameCount) animFrameCounter = 0;
-//        }
-//        //----------------------------------------------------------------------------------
-//
-//        // DrawHelper
-//        //----------------------------------------------------------------------------------
-//        raylib::DrawHelper::beginDrawing();
-//
-//        raylib::DrawHelper::clearBackground(RAYWHITE);
-//
-//        raylib::DrawHelper::beginMode3D(camera);
-//
-//        raylib::ModelHelper::drawModelEx(model, position, (Vector3){1.0f, 0.0f, 0.0f }, -90.0f, (Vector3){1.0f, 1.0f, 1.0f }, WHITE);
-//
-//        for (int i = 0; i < model.boneCount; i++)
-//        {
-//            raylib::Shape3DHelper::drawCube(anims[0].framePoses[animFrameCounter][i].translation, 0.2f, 0.2f, 0.2f, RED);
-//        }
-//
-//        raylib::Shape3DHelper::drawGrid(10, 1.0f);         // DrawHelper a grid
-//
-//        raylib::DrawHelper::endMode3D();
-//
-//        raylib::TextHelper::drawText("PRESS SPACE to PLAY MODEL ANIMATION", 10, 10, 20, MAROON);
-//        raylib::TextHelper::drawText("(c) Guy IQM 3D model by @culacant", screenWidth - 200, screenHeight - 20, 10, GRAY);
-//
-//        raylib::DrawHelper::endDrawing();
-//        //----------------------------------------------------------------------------------
-//    }
-//
-//    // De-Initialization
-//    //--------------------------------------------------------------------------------------
-//    raylib::RlTexture::unloadTexture(texture);     // Unload texture
-//
-//    // Unload model animations data
-//    for (unsigned int i = 0; i < animsCount; i++) raylib::RlModelAnim::unloadModelAnimation(anims[i]);
-//    RL_FREE(anims);
-//
-//    raylib::RlModel::unloadModel(model);         // Unload model
-//
-//    raylib::RlWindow::closeWindow();              // Close window and OpenGL context
-//    //--------------------------------------------------------------------------------------
     return (0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+int main(int ac, char **av)
+{
+    auto window = raylib::RlWindow::getInstance();
+    auto audio = GameEngine::AudioManager::getInstance();
+
+    window->createWindow("Bomberman", 720, 720, 60);
+    audio->addSound("sound.wav", FX);
+
+
+
+
+    GameEngine::myStaticBody static_body("../assets/player.iqm", "../assets/blue.png");
+    static_body.getRlModel().setRotationAxis(0, 1, 0);
+    static_body.getRlModel().setRotationAngle(120);
+
+    //raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
+    raylib::RlModelAnim anim(static_body.getRlModel().getModel(), "../assets/player.iqm", 1);
+
+    raylib::RlCamera camera;
+
+    while (window->isOpen()) {
+        if (raylib::KeyboardHelper::isKeyPressed(KEY_A)) {
+            //audio->playSound("sound.wav");
+            static_body.setPosition((Vector3){static_body.getPosition().x - 1, static_body.getPosition().y, static_body.getPosition().z});
+        }
+
+        if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE)) {
+            anim.update(0);
+        }
+
+
+        window->startDrawing(camera);
+        window->drawGrid(10, 1.0f);
+
+        raylib::ModelHelper::drawModel(static_body.getRlModel());
+
+        window->endDrawing();
+    }
+
+    return (0);
+}*/

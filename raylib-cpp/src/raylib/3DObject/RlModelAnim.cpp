@@ -6,6 +6,7 @@
 */
 
 #include "raylib/3DObject/RlModelAnim.hpp"
+#include "raylib/3DObject/RlModel.hpp"
 
 // Model animations loading/unloading functions
 
@@ -46,6 +47,8 @@ bool raylib::RlModelAnim::animationIsValid(unsigned int anim)
     else
         return false;
 }
+
+
 
 /*
 ModelAnimation *raylib::RlModelAnim::loadModelAnimations(const std::string &fileName, unsigned int *animCount)

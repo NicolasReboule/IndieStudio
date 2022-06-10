@@ -13,6 +13,10 @@
 #include <memory>
 #include <raylib.h>
 #include "raylib/exception/WindowException.hpp"
+#include "raylib/Camera/RlCamera.hpp"
+#include "raylib/Core/DrawHelper.hpp"
+#include "raylib/3DObject/Shape3DHelper.hpp"
+#include "raylib/Core/CoreHelper.hpp"
 
 namespace raylib {
     class RlWindow {
@@ -36,7 +40,13 @@ namespace raylib {
          * @param width
          * @throws WindowException if the window has already been created
          */
-        void createWindow(const std::string &title, int height, int width);
+        void createWindow(const std::string &title, int height, int width, int fps);
+
+        void setFps(int fps);
+
+        void startDrawing(raylib::RlCamera camera);
+        void endDrawing();
+        void drawGrid(int slices, float spacing);
 
         bool isOpen();                                           // Check if KEY_ESCAPE pressed or Close icon pressed
         bool isWindowReady();                                               // Check if window has been initialized successfully

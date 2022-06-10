@@ -19,6 +19,11 @@ raylib::RlSound::RlSound(const std::string &fileName)
     this->volume = 100;
 }
 
+raylib::RlSound::~RlSound()
+{
+    UnloadSound(this->sound);
+}
+
 void raylib::RlSound::update(const void *data, int samplesCount)
 {
     UpdateSound(this->sound, data, samplesCount);

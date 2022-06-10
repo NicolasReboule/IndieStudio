@@ -9,12 +9,12 @@
 
 // AudioHelper device management functions
 
-void raylib::AudioHelper::initAudioDevice()
+raylib::AudioHelper::AudioHelper()
 {
     InitAudioDevice();
 }
 
-void raylib::AudioHelper::closeAudioDevice()
+raylib::AudioHelper::~AudioHelper()
 {
     CloseAudioDevice();
 }
@@ -28,3 +28,4 @@ void raylib::AudioHelper::setMasterVolume(float volume)
 {
     SetMasterVolume(volume);
 }
+

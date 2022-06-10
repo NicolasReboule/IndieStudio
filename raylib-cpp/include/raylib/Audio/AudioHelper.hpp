@@ -13,14 +13,16 @@
 
 namespace raylib {
 
-    class AudioHelper {
+class AudioHelper {
     public:
-        // AudioHelper device management functions
-        static void initAudioDevice();                                                     // Initialize audio device and context
-        static void closeAudioDevice();                                                    // Close the audio device and context
-        static bool isAudioDeviceReady();                                                  // Check if audio device has been initialized successfully
-        static void setMasterVolume(float volume);                                             // Set master volume (listener)
 
+        AudioHelper();
+        ~AudioHelper();
+        // AudioHelper device management functions
+        //void initAudioDevice();                                                     // Initialize audio device and context
+        //void closeAudioDevice();                                                    // Close the audio device and context
+        bool isAudioDeviceReady();                                                  // Check if audio device has been initialized successfully
+        void setMasterVolume(float volume);                                             // Set master volume (listener)
     private:
     };
 }

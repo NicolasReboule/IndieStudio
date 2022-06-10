@@ -88,7 +88,7 @@ raylib::RlTexture &raylib::RlTexture::operator=(const raylib::RlTexture &texture
 
 Texture2D raylib::RlTexture::getTexture() const
 {
-    return _texture;
+    return this->_texture;
 }
 
 std::string raylib::RlTexture::getTexturePath() const

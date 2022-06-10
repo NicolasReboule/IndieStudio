@@ -9,13 +9,14 @@
 #define INDIESTUDIO_RLMODELANIM_HPP
 
 #include "raylib.h"
+#include "RlModel.hpp"
 #include <string>
 
 namespace raylib {
     class RlModelAnim {
     public:
         // Model animations loading/unloading functions
-        explicit RlModelAnim(Model model, const std::string &fileName, unsigned int animCount);
+        explicit RlModelAnim(Model model, const std::string &fileName, unsigned int count);
         ~RlModelAnim();
 
         void update(unsigned int anim);

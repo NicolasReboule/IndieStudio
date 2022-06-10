@@ -19,7 +19,6 @@ namespace  raylib {
             RlSound(Wave wave);// Load sound from wave
             ~RlSound();// Unload sound
 
-
             void update(const void *data, int samplesCount);              // Update sound buffer with new data
             void play();                                             // Play a sound
             void stop();                                                    // Stop playing a sound
