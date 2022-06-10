@@ -36,7 +36,7 @@ namespace raylib {
          * @param width
          * @throws WindowException if the window has already been created
          */
-        void createWindow(const std::string &title, int height, int width);
+        void createWindow(const std::string &title, int width, int height);
 
         bool isOpen();                                           // Check if KEY_ESCAPE pressed or Close icon pressed
         bool isWindowReady();                                               // Check if window has been initialized successfully

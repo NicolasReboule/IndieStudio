@@ -9,7 +9,7 @@
 
 std::shared_ptr<raylib::RlWindow> raylib::RlWindow::_instance;
 
-void raylib::RlWindow::createWindow(const std::string &title, int height, int width)
+void raylib::RlWindow::createWindow(const std::string &title, int width, int height)
 {
     if (_isCreated)
         throw raylib::ex::WindowException("RlWindow already created");

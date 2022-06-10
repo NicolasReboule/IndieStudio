@@ -5,7 +5,7 @@
 ** ColorHelper.cpp
 */
 
-#include "raylib/Image/ColorHelper.hpp"
+#include "raylib/Color/ColorHelper.hpp"
 
 // Color/pixel related functions
 

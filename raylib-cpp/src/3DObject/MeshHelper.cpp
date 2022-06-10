@@ -9,6 +9,7 @@
 
 void raylib::MeshHelper::drawMesh(Mesh mesh, Material material, Matrix transform)
 {
+//    raylib::RlMesh rlMesh = raylib::RlMesh(RlMesh::MeshType::MESH_CUBE, nullptr);
     DrawMesh(mesh, material, transform);
 }
 
@@ -35,4 +36,14 @@ void raylib::MeshHelper::genMeshTangents(Mesh *mesh)
 void raylib::MeshHelper::genMeshBinormals(Mesh *mesh)
 {
     GenMeshBinormals(mesh);
+}
+
+void raylib::MeshHelper::uploadMesh(Mesh *mesh, bool dynamic)
+{
+    UploadMesh(mesh, dynamic);
+}
+
+void raylib::MeshHelper::updateMeshBuffer(Mesh mesh, int index, void *data, int dataSize, int offset)
+{
+    UpdateMeshBuffer(mesh, index, data, dataSize, offset);
 }

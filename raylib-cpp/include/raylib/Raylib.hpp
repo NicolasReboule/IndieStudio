@@ -27,7 +27,7 @@
 #include "raylib/3DObject/Collision3DHelper.hpp"
 #include "raylib/3DObject/RlModelAnim.hpp"
 #include "raylib/3DObject/MeshGenerator.hpp"
-#include "raylib/3DObject/RlMesh.hpp"
+#include "raylib/3DObject/RlMeshBuilder.hpp"
 #include "raylib/3DObject/Shape3DHelper.hpp"
 #include "raylib/3DObject/ModelHelper.hpp"
 #include "raylib/3DObject/RlMaterial.hpp"

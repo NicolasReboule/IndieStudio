@@ -34,7 +34,7 @@ add_library(${PROJECT_NAME}
         src/Audio/RlAudioStream.cpp
         src/3DObject/RlModelAnim.cpp
         src/3DObject/RlMaterial.cpp
-        src/3DObject/RlMesh.cpp
+        src/3DObject/RlMeshBuilder.cpp
         src/3DObject/Shape3DHelper.cpp
         src/3DObject/ModelHelper.cpp
         src/3DObject/Collision3DHelper.cpp
@@ -42,7 +42,7 @@ add_library(${PROJECT_NAME}
         src/2DObject/Collision2DHelper.cpp
         src/Image/RlImage.cpp
         src/Image/ImageHelper.cpp
-        src/Image/ColorHelper.cpp
+        src/Color/ColorHelper.cpp
         src/Texture/TextureHelper.cpp
         src/3DObject/MeshGenerator.cpp
         src/Text/Codepoint.cpp
@@ -58,5 +58,8 @@ add_library(${PROJECT_NAME}
         src/Shader/ShaderUtils.cpp
         src/3DObject/MeshHelper.cpp
         src/Math/VectorHelper.cpp
+        src/Color/RlColor.cpp
+        src/exception/BuilderException.cpp
+        src/3DObject/RlMesh.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)
