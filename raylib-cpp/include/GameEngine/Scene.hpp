@@ -17,7 +17,7 @@ namespace GameEngine {
     class Scene {
     public:
         Scene(std::string name = "empty", std::string sceneSource = "empty");
-        ~Scene() = default;
+        virtual ~Scene() = default;
 
         virtual void sceneLauncher() = 0;
 

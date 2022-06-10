@@ -15,7 +15,7 @@ namespace GameEngine {
     class MainScene : public Scene {
     public:
         explicit MainScene(std::string name = "main", std::string sceneSource = "main");
-        ~MainScene() = default;
+        ~MainScene() override = default;
 
         void sceneLauncher() override;
 
