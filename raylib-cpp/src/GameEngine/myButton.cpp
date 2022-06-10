@@ -7,11 +7,18 @@
 
 #include "GameEngine/myButton.hpp"
 
-GameEngine::myButton::myButton(const std::string &filename) : Button(filename)
+GameEngine::myButton::myButton(const std::string& filename) : Button(filename)
 {
+}
+
+void GameEngine::myButton::ready()
+{
+
 }
 
 void GameEngine::myButton::pressed()
 {
     std::cout << "pressed" << std::endl;
 }
+
+

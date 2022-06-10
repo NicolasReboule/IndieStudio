@@ -15,7 +15,7 @@ namespace GameEngine {
     class myStaticBody : public StaticBody {
     public:
         myStaticBody(const std::string& modelPath, const std::string& texturePath);
-        ~myStaticBody() = default;
+        ~myStaticBody() override = default;
 
         void update() override;
         void ready() override;

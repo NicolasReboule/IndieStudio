@@ -19,6 +19,8 @@ namespace GameEngine {
 
         ~myButton() override = default;
 
+        void ready() override;
+
         void pressed() override;
 
     private:
