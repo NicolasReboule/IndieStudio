@@ -80,7 +80,7 @@ Collaboration diagram for raylib::RlWave:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_rl_wave__coll__graph.png" border="0" usemap="#araylib_1_1_rl_wave_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_rl_wave_coll__map" id="araylib_1_1_rl_wave_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,180,215"/>
+<area shape="rect" title=" " alt="" coords="5,5,180,141"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -96,16 +96,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a587827de77c6652fe2bd0b128cd3d05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08df21f7e54f7a2b5ae8f84a3822318d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_wave.html#a08df21f7e54f7a2b5ae8f84a3822318d">exportWaveAsCode</a> (Wave wave, const std::string &amp;fileName)</td></tr>
 <tr class="separator:a08df21f7e54f7a2b5ae8f84a3822318d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ef4a1312be4629e22008ae56f45913b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_wave.html#a6ef4a1312be4629e22008ae56f45913b">waveFormat</a> (Wave *wave, int sampleRate, int sampleSize, int channels)</td></tr>
-<tr class="separator:a6ef4a1312be4629e22008ae56f45913b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa75b1f8e6cd7eaf6700bb3b198f7f31b"><td class="memItemLeft" align="right" valign="top">Wave&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_wave.html#aa75b1f8e6cd7eaf6700bb3b198f7f31b">waveCopy</a> (Wave wave)</td></tr>
-<tr class="separator:aa75b1f8e6cd7eaf6700bb3b198f7f31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacc57a37b49765f9126cfd487852eb55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_wave.html#aacc57a37b49765f9126cfd487852eb55">waveCrop</a> (Wave *wave, int initSample, int finalSample)</td></tr>
-<tr class="separator:aacc57a37b49765f9126cfd487852eb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa46e411092bb0f7ec8b499dd1577ba02"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_wave.html#aa46e411092bb0f7ec8b499dd1577ba02">loadWaveSamples</a> (Wave wave)</td></tr>
-<tr class="separator:aa46e411092bb0f7ec8b499dd1577ba02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa067f8cd818220d650c060da5c836ed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_wave.html#aa067f8cd818220d650c060da5c836ed0">unloadWaveSamples</a> (float *samples)</td></tr>
-<tr class="separator:aa067f8cd818220d650c060da5c836ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a587827de77c6652fe2bd0b128cd3d05f" name="a587827de77c6652fe2bd0b128cd3d05f"></a>
@@ -216,24 +206,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa46e411092bb0f7ec8b499dd1577ba02" name="aa46e411092bb0f7ec8b499dd1577ba02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa46e411092bb0f7ec8b499dd1577ba02">&#9670;&nbsp;</a></span>loadWaveSamples()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float * raylib::RlWave::loadWaveSamples </td>
-          <td>(</td>
-          <td class="paramtype">Wave&#160;</td>
-          <td class="paramname"><em>wave</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a860f79084f402f75dff0c93e9acc28cb" name="a860f79084f402f75dff0c93e9acc28cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a860f79084f402f75dff0c93e9acc28cb">&#9670;&nbsp;</a></span>unloadWave()</h2>
 
@@ -252,119 +224,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa067f8cd818220d650c060da5c836ed0" name="aa067f8cd818220d650c060da5c836ed0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa067f8cd818220d650c060da5c836ed0">&#9670;&nbsp;</a></span>unloadWaveSamples()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::RlWave::unloadWaveSamples </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>samples</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa75b1f8e6cd7eaf6700bb3b198f7f31b" name="aa75b1f8e6cd7eaf6700bb3b198f7f31b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa75b1f8e6cd7eaf6700bb3b198f7f31b">&#9670;&nbsp;</a></span>waveCopy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Wave raylib::RlWave::waveCopy </td>
-          <td>(</td>
-          <td class="paramtype">Wave&#160;</td>
-          <td class="paramname"><em>wave</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aacc57a37b49765f9126cfd487852eb55" name="aacc57a37b49765f9126cfd487852eb55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacc57a37b49765f9126cfd487852eb55">&#9670;&nbsp;</a></span>waveCrop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::RlWave::waveCrop </td>
-          <td>(</td>
-          <td class="paramtype">Wave *&#160;</td>
-          <td class="paramname"><em>wave</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>initSample</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>finalSample</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6ef4a1312be4629e22008ae56f45913b" name="a6ef4a1312be4629e22008ae56f45913b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ef4a1312be4629e22008ae56f45913b">&#9670;&nbsp;</a></span>waveFormat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::RlWave::waveFormat </td>
-          <td>(</td>
-          <td class="paramtype">Wave *&#160;</td>
-          <td class="paramname"><em>wave</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sampleRate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sampleSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>channels</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>raylib-cpp/include/raylib/Audio/<a class="el" href="_rl_wave_8hpp_source.html">RlWave.hpp</a></li>
-<li>raylib-cpp/src/Audio/<a class="el" href="_rl_wave_8cpp.html">RlWave.cpp</a></li>
+<li>raylib-cpp/src/raylib/Audio/<a class="el" href="_rl_wave_8cpp.html">RlWave.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fonts_0',['Fonts',['../classraylib_1_1_fonts.html',1,'raylib']]]
+  ['drawhelper_0',['DrawHelper',['../classraylib_1_1_draw_helper.html',1,'raylib']]]
 ];

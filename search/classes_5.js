@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imagehelper_0',['ImageHelper',['../classraylib_1_1_image_helper.html',1,'raylib']]]
+  ['gamepadhelper_0',['GamepadHelper',['../classraylib_1_1_gamepad_helper.html',1,'raylib']]]
 ];

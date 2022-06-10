@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gameengine_0',['GameEngine',['../class_game_engine.html',1,'']]],
-  ['gamepad_1',['Gamepad',['../classraylib_1_1_gamepad.html',1,'raylib']]]
+  ['filehelper_0',['FileHelper',['../classraylib_1_1_file_helper.html',1,'raylib']]],
+  ['fx_1',['Fx',['../class_game_engine_1_1_audio_1_1_fx.html',1,'GameEngine::Audio']]]
 ];

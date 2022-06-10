@@ -1,0 +1,5 @@
+<map id="GameEngine::Button::draw" name="GameEngine::Button::draw">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,145,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_texture_helper.html#ac38ecfbd8747e089e4d3e442d687d18b" title=" " alt="" coords="193,5,332,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="380,5,515,47"/>
+</map>

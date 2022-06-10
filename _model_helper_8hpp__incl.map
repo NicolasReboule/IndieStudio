@@ -1,4 +1,12 @@
 <map id="raylib&#45;cpp/include/raylib/3DObject/ModelHelper.hpp" name="raylib&#45;cpp/include/raylib/3DObject/ModelHelper.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,220,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="81,95,144,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="348,393,411,420"/>
+<area shape="rect" id="node3" href="$_rl_model_8hpp.html" title=" " alt="" coords="213,95,306,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="168,244,223,271"/>
+<area shape="rect" id="node5" href="$_rl_mesh_8hpp.html" title=" " alt="" coords="67,169,158,196"/>
+<area shape="rect" id="node6" href="$_rl_texture_8hpp.html" title=" " alt="" coords="233,169,416,196"/>
+<area shape="rect" id="node7" href="$_math_8hpp.html" title=" " alt="" coords="511,169,621,196"/>
+<area shape="rect" id="node8" href="$_vector_8hpp.html" title=" " alt="" coords="523,319,673,345"/>
+<area shape="rect" id="node10" href="$_vector_helper_8hpp.html" title=" " alt="" coords="471,244,661,271"/>
+<area shape="rect" id="node9" title=" " alt="" coords="562,393,634,420"/>
 </map>

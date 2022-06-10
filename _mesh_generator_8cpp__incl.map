@@ -1,5 +1,9 @@
-<map id="raylib&#45;cpp/src/3DObject/MeshGenerator.cpp" name="raylib&#45;cpp/src/3DObject/MeshGenerator.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="40,5,197,47"/>
+<map id="raylib&#45;cpp/src/raylib/3DObject/MeshGenerator.cpp" name="raylib&#45;cpp/src/raylib/3DObject/MeshGenerator.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="20,5,217,47"/>
 <area shape="rect" id="node2" href="$_mesh_generator_8hpp.html" title=" " alt="" coords="5,95,232,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="87,169,150,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="113,393,175,420"/>
+<area shape="rect" id="node4" href="$_math_8hpp.html" title=" " alt="" coords="131,169,240,196"/>
+<area shape="rect" id="node5" href="$_vector_8hpp.html" title=" " alt="" coords="182,319,333,345"/>
+<area shape="rect" id="node7" href="$_vector_helper_8hpp.html" title=" " alt="" coords="91,244,280,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="221,393,293,420"/>
 </map>

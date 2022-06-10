@@ -1,5 +1,10 @@
 <map id="raylib&#45;cpp/include/raylib/Text/Text.hpp" name="raylib&#45;cpp/include/raylib/Text/Text.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="9,5,147,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,68,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="92,95,147,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="8,5,146,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="119,319,182,345"/>
+<area shape="rect" id="node3" title=" " alt="" coords="24,169,79,196"/>
+<area shape="rect" id="node4" href="$_rl_font_8hpp.html" title=" " alt="" coords="60,95,206,121"/>
+<area shape="rect" id="node5" href="$_math_8hpp.html" title=" " alt="" coords="230,95,340,121"/>
+<area shape="rect" id="node6" href="$_vector_8hpp.html" title=" " alt="" coords="214,244,364,271"/>
+<area shape="rect" id="node8" href="$_vector_helper_8hpp.html" title=" " alt="" coords="162,169,352,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="253,319,325,345"/>
 </map>

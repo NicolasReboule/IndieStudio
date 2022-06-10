@@ -1,0 +1,5 @@
+<map id="GameEngine::Audio::Music" name="GameEngine::Audio::Music">
+<area shape="rect" id="node1" title=" " alt="" coords="84,336,225,428"/>
+<area shape="rect" id="node2" href="$class_game_engine_1_1_isound.html" title=" " alt="" coords="5,86,147,207"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_music.html" title=" " alt="" coords="171,5,299,288"/>
+</map>

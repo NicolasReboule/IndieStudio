@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['pauseaudiostream_0',['pauseAudioStream',['../classraylib_1_1_rl_audio_stream.html#adae22bfeb3a34d145e0b842dede8a964',1,'raylib::RlAudioStream']]],
-  ['pausemusicstream_1',['pauseMusicStream',['../classraylib_1_1_rl_music.html#a91a26f64d38a735d56a0f60882637ed0',1,'raylib::RlMusic']]],
-  ['pausesound_2',['pauseSound',['../classraylib_1_1_rl_sound.html#a071d9b66e399ac906a779dac3dd38323',1,'raylib::RlSound']]],
-  ['playaudiostream_3',['playAudioStream',['../classraylib_1_1_rl_audio_stream.html#a815a263f897d60ad8a25b163a07f097c',1,'raylib::RlAudioStream']]],
-  ['playmusicstream_4',['playMusicStream',['../classraylib_1_1_rl_music.html#a531545ad4f71b5abbd110b226cdc0773',1,'raylib::RlMusic']]],
-  ['playsound_5',['playSound',['../classraylib_1_1_rl_sound.html#a41f320c176a028d6d4df09d05f28eec0',1,'raylib::RlSound']]],
-  ['playsoundmulti_6',['playSoundMulti',['../classraylib_1_1_rl_sound.html#a2543b46170505097afa0edb026ae171f',1,'raylib::RlSound']]]
+  ['openurl_0',['openURL',['../classraylib_1_1_core_helper.html#a4f3435c1b20e9fda95a5986b7b687aa2',1,'raylib::CoreHelper']]],
+  ['operator_21_3d_1',['operator!=',['../structraylib_1_1_vector2.html#a5a65df78f1bf919cc356a98e18934e3c',1,'raylib::Vector2::operator!=()'],['../structraylib_1_1_vector3.html#a92d6ce254e98a77bda13f5d40062c305',1,'raylib::Vector3::operator!=()']]],
+  ['operator_2d_3e_2',['operator-&gt;',['../classraylib_1_1_rl_model.html#a6ceb0da4f3e609d254dcbcf2057e1ad7',1,'raylib::RlModel::operator-&gt;()'],['../classraylib_1_1_text.html#ab841bebd7598f29dbe3e5bcec1cecf22',1,'raylib::Text::operator-&gt;()']]],
+  ['operator_3c_3c_3',['operator&lt;&lt;',['../_vector_8hpp.html#a358d714a0d75b0578b5bcc7f91ed329d',1,'operator&lt;&lt;(std::ostream &amp;os, const Vector2i &amp;vector):&#160;Vector.hpp'],['../_vector_8hpp.html#a152d83f1fe1405289ee2d1c22869b6ca',1,'operator&lt;&lt;(std::ostream &amp;os, const Vector2f &amp;vector):&#160;Vector.hpp'],['../_vector_8hpp.html#ab40241d3592fec3c7ad04e9f6b32c23a',1,'operator&lt;&lt;(std::ostream &amp;os, const Vector2u &amp;vector):&#160;Vector.hpp'],['../_vector_8hpp.html#a8874c9177823c9d5dac2aa2e33ca1724',1,'operator&lt;&lt;(std::ostream &amp;os, const Vector3i &amp;vector):&#160;Vector.hpp'],['../_vector_8hpp.html#a5149a703af7bf3cb9949aee2046c8aff',1,'operator&lt;&lt;(std::ostream &amp;os, const Vector3f &amp;vector):&#160;Vector.hpp'],['../_vector_8hpp.html#a64407e9f26cf87d429928d0da9461b50',1,'operator&lt;&lt;(std::ostream &amp;os, const Vector3u &amp;vector):&#160;Vector.hpp']]],
+  ['operator_3d_4',['operator=',['../classraylib_1_1_rl_font.html#a80bc0328f4549c32e73c54d600772e78',1,'raylib::RlFont::operator=()'],['../classraylib_1_1_text.html#a1cf57e897000dc719e4e7c6436ffd674',1,'raylib::Text::operator=()'],['../classraylib_1_1_rl_texture.html#a4691a8b8c1bb0b9b6104ae2f98c40d36',1,'raylib::RlTexture::operator=()']]],
+  ['operator_3d_3d_5',['operator==',['../structraylib_1_1_vector2.html#a59241ac148e99b2433a32b9ace16eb75',1,'raylib::Vector2::operator==()'],['../structraylib_1_1_vector3.html#ad85a0a67bace4cfdc35ae5a998f2a882',1,'raylib::Vector3::operator==()']]]
 ];
