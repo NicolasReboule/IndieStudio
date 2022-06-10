@@ -14,8 +14,13 @@ namespace GameEngine {
 
     class myButton : public Button {
     public:
+
         explicit myButton(const std::string& filename);
+
+        ~myButton() override = default;
+
         void pressed() override;
+
     private:
     };
 }

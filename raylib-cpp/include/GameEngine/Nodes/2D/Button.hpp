@@ -16,14 +16,11 @@ namespace GameEngine {
     public:
         explicit Button(const std::string& filename);
 
-        ~Button() = default;
-
-        void ready() override;
+        ~Button() override = default;
 
         void update() override;
 
         void draw() override;
-
 
         Vector2f getPosition() override;
 

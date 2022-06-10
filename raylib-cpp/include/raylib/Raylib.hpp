@@ -40,6 +40,8 @@
 #include "raylib/2DObject/Collision2DHelper.hpp"
 #include "raylib/Texture/TextureHelper.hpp"
 
+#include "raylib/Color/RlColor.hpp"
+
 #include "Math.hpp"
 
 #endif //INDIESTUDIO_RAYLIB_HPP

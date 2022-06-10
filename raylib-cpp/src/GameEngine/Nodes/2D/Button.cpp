@@ -21,10 +21,6 @@ GameEngine::Button::Button(const std::string& filename)
     this->_bounds = (Rectangle){this->_position.x, this->_position.y, (float)this->_texture.getTexture().width, this->_frameHeight};
 }
 
-void GameEngine::Button::ready()
-{
-}
-
 void GameEngine::Button::update()
 {
     if (this->_action) {
@@ -83,3 +79,4 @@ void GameEngine::Button::setRotationDegrees(float rotationDegrees)
 {
     this->_rotationDegrees = rotationDegrees;
 }
+

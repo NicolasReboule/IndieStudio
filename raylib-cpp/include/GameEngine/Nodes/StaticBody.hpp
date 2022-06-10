@@ -12,7 +12,7 @@
 
 namespace GameEngine {
 
-    class StaticBody : public GameEngine::Node {
+    class StaticBody : public Node {
     public:
         StaticBody(const std::string &modelPath, const std::string &texturePath);
 
