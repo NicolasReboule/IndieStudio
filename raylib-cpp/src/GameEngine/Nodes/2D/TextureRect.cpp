@@ -8,8 +8,10 @@
 
 #include "GameEngine/Nodes/2D/TextureRect.hpp"
 
-GameEngine::TextureRect::TextureRect(const std::string& filename, Vector2f position, Vector2f scale, float degrees, raylib::RlColor color)
-    : _texture(filename), _color(color), _position(position), _scale(scale), _rotationDegrees(degrees)
+#include <utility>
+
+GameEngine::TextureRect::TextureRect(std::string name, const std::string& filename, Vector2f position, Vector2f scale, float degrees, raylib::RlColor color)
+    : Node2D(std::move(name)), _texture(filename), _color(color), _position(position), _scale(scale), _rotationDegrees(degrees)
 {
 }
 
@@ -51,4 +53,22 @@ float GameEngine::TextureRect::getRotationDegrees()
 void GameEngine::TextureRect::setRotationDegrees(float rotationDegrees)
 {
     this->_rotationDegrees = rotationDegrees;
+}
+
+void GameEngine::TextureRect::ready()
+{
+}
+
+void GameEngine::TextureRect::update()
+{
+}
+
+void GameEngine::TextureRect::setColor(unsigned int r, unsigned int g, unsigned int b, unsigned int a)
+{
+    this->_color.setColor(r, g, b, a);
+}
+
+raylib::RlColor GameEngine::TextureRect::getcolor()
+{
+    return this->_color;
 }

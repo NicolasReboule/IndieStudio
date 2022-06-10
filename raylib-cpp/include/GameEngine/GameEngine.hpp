@@ -21,4 +21,6 @@
 #include "GameEngine/Nodes/2D/Node2D.hpp"
 #include "GameEngine/Nodes/2D/Button.hpp"
 
+#include "GameEngine/Nodes/2D/TextureRect.hpp"
+
 #endif //INDIESTUDIO_GAMEENGINE_HPP

@@ -19,9 +19,15 @@ namespace GameEngine {
         SceneManager() = default;
         ~SceneManager() = default;
 
-        void changeScene(const std::string &newScene);
+        void changeScene(const std::string &scene);
 
         void addScene(const std::shared_ptr<GameEngine::Scene> &scene);
+
+        void deleteScene(const std::string &scene);
+
+        void makeLoop(raylib::RlCamera camera);
+
+        std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
 
         void update();
 

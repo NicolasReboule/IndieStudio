@@ -6,10 +6,12 @@
 */
 
 #include "GameEngine/Nodes/2D/Button.hpp"
+
+#include <utility>
 #include "raylib/Math/VectorHelper.hpp"
 
-GameEngine::Button::Button(const std::string& filename)
-    : _texture(filename), _position((Vector2f){0, 0}), _scale((Vector2f){1, 1})
+GameEngine::Button::Button(std::string name, const std::string& filename)
+    : Node2D(std::move(name)), _texture(filename), _position((Vector2f){0, 0}), _scale((Vector2f){1, 1})
 {
     this->_rotationDegrees = 0;
 

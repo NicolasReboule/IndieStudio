@@ -22,6 +22,8 @@ namespace raylib {
         unsigned int getGreen() const;
         unsigned int getBlue() const;
         unsigned int getAlpha() const;
+
+        void setColor(unsigned int r,unsigned int g, unsigned int b, unsigned int a);
     private:
         Color _color;
     };

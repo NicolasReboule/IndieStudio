@@ -44,3 +44,11 @@ unsigned int raylib::RlColor::getAlpha() const
 {
     return _color.a;
 }
+
+void raylib::RlColor::setColor(unsigned int r, unsigned int g, unsigned int b, unsigned int a)
+{
+    _color.r = r;
+    _color.g = g;
+    _color.b = b;
+    _color.a = a;
+}

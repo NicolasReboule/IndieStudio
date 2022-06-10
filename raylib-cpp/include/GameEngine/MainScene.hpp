@@ -19,7 +19,6 @@ namespace GameEngine {
 
         void sceneLauncher() override;
 
-    private:
     };
 }
 

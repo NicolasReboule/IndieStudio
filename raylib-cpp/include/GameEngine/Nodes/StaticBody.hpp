@@ -14,7 +14,7 @@ namespace GameEngine {
 
     class StaticBody : public Node {
     public:
-        StaticBody(const std::string &modelPath, const std::string &texturePath);
+        StaticBody(std::string name, const std::string &modelPath, const std::string &texturePath);
 
         ~StaticBody() override = default;
 

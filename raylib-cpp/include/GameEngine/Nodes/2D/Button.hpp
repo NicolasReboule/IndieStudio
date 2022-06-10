@@ -14,7 +14,7 @@ namespace GameEngine {
 
     class Button : public Node2D {
     public:
-        explicit Button(const std::string& filename);
+        explicit Button(std::string name, const std::string& filename);
 
         ~Button() override = default;
 

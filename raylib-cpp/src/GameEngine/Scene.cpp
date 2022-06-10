@@ -77,3 +77,13 @@ void GameEngine::Scene::draw2D()
         }
     }
 }
+
+std::shared_ptr<GameEngine::Base> GameEngine::Scene::getNode(const std::string &name)
+{
+    for (const auto &item: this->_nodes)
+        if (item->getName() == name) {
+            std::cout << item->getName() << std::endl;
+            return item;
+        }
+    return nullptr;
+}

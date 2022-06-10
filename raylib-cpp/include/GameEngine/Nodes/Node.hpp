@@ -14,7 +14,7 @@ namespace GameEngine {
 
     class Node : public Base {
     public:
-        Node() = default;
+        explicit Node(std::string name);
 
         Node(const Node &) = default;
 

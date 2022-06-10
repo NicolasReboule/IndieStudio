@@ -12,8 +12,12 @@ endif (UNIX)
 add_subdirectory(raylib-cpp/) # Depend on raylib-cpp
 
 include_directories(include raylib-cpp/include/) # Add the good includes
-add_executable(${BINARY_NAME} main.cpp
-        )
+
+add_executable(${BINARY_NAME}
+        main.cpp
+        src/start/StartScene.cpp
+        include/start/Logo.hpp src/start/Logo.cpp)
+
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 
 # Change default target on Visual Studio

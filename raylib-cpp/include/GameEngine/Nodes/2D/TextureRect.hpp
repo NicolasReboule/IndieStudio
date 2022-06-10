@@ -14,9 +14,13 @@ namespace GameEngine {
 
     class TextureRect : public Node2D {
     public:
-        explicit TextureRect(const std::string& filename, Vector2f position = {0, 0}, Vector2f scale = {1, 1}, float = 0, raylib::RlColor color = {255, 255, 255, 255});
+        explicit TextureRect(std::string name, const std::string& filename, Vector2f position = {0, 0}, Vector2f scale = {1, 1}, float = 0, raylib::RlColor color = {255, 255, 255, 255});
 
         ~TextureRect() override = default;
+
+        void ready() override;
+
+        void update() override;
 
         void draw() override;
 
@@ -31,6 +35,10 @@ namespace GameEngine {
         float getRotationDegrees() override;
 
         void setRotationDegrees(float rotationDegrees) override;
+
+        void setColor(unsigned int r,unsigned int g, unsigned int b, unsigned int a);
+
+        raylib::RlColor getcolor();
 
     private:
         raylib::RlTexture _texture;

@@ -22,23 +22,49 @@ void GameEngine::SceneManager::addScene(const std::shared_ptr<GameEngine::Scene>
     this->_scenes.push_back(scene);
 }
 
-void GameEngine::SceneManager::changeScene(const std::string &newScene)
+void GameEngine::SceneManager::deleteScene(const std::string &scene)
 {
-    for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
-        if (scene->getSceneSource() == newScene) {
-            this->_actualScene = scene->getName();
-            continue;
+    unsigned i = 0;
+    for (const auto &item: this->_scenes) {
+        if (item->getName() == scene)
+            break;
+        i = i + 1;
+    }
+    this->_scenes.erase(this->_scenes.begin() + i);
+}
+
+void GameEngine::SceneManager::changeScene(const std::string &scene)
+{
+    for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes)
+        if (sceneItem->getSceneSource() == scene) {
+            this->_actualScene = sceneItem->getName();
+            break;
         }
 
     if (this->_actualScene == "empty")
         return;
 
-    for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
-        if (scene->getSceneSource() == this->_actualScene) {
-            scene->sceneLauncher();
-            scene->ready();
+    for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes)
+        if (sceneItem->getSceneSource() == this->_actualScene) {
+            sceneItem->sceneLauncher();
+            sceneItem->ready();
         }
 }
+
+std::shared_ptr<GameEngine::Base> GameEngine::SceneManager::getNode(const std::string& name)
+{
+    for (const auto &item: this->_scenes)
+        if (item->getSceneSource() == this->_actualScene) {
+            std::shared_ptr<GameEngine::Base> temp;
+            if ((temp = item->getNode(name)) == nullptr) {
+                continue;
+            }
+            else
+                return temp;
+        }
+    return nullptr;
+}
+
 
 void GameEngine::SceneManager::update()
 {
@@ -89,4 +115,10 @@ void GameEngine::SceneManager::draw2D()
     for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
         if (scene->getSceneSource() == this->_actualScene)
             scene->draw2D();
+}
+
+void GameEngine::SceneManager::makeLoop(raylib::RlCamera camera)
+{
+    this->update();
+    this->drawAll(camera);
 }

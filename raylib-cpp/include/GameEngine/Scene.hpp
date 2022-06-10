@@ -21,7 +21,9 @@ namespace GameEngine {
 
         virtual void sceneLauncher() = 0;
 
-        void addNode(const std::shared_ptr<GameEngine::Base>& node);
+        void addNode(const std::shared_ptr<GameEngine::Base> &node);
+
+        std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
 
         std::string getName();
 

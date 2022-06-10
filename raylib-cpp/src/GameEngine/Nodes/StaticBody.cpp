@@ -7,8 +7,10 @@
 
 #include "GameEngine/Nodes/StaticBody.hpp"
 
-GameEngine::StaticBody::StaticBody(const std::string &modelPath, const std::string &texturePath)
-    : _model(modelPath, texturePath), _position((Vector3f){0, 0, 0}), _scale((Vector3f){1, 1, 1})
+#include <utility>
+
+GameEngine::StaticBody::StaticBody(std::string name, const std::string &modelPath, const std::string &texturePath)
+    : Node(std::move(name)), _model(modelPath, texturePath), _position((Vector3f){0, 0, 0}), _scale((Vector3f){1, 1, 1})
 {
     this->_rotationDegrees = 0;
 }
@@ -56,3 +58,5 @@ void GameEngine::StaticBody::setScale(Vector3f newScale)
 {
     this->_scale = newScale;
 }
+
+

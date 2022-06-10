@@ -6,8 +6,6 @@
 */
 
 #include "GameEngine/MainScene.hpp"
-#include "GameEngine/myStaticBody.hpp"
-#include "GameEngine/myButton.hpp"
 
 GameEngine::MainScene::MainScene(std::string name, std::string sceneSource) : Scene(std::move(name), std::move(sceneSource))
 {
@@ -15,12 +13,10 @@ GameEngine::MainScene::MainScene(std::string name, std::string sceneSource) : Sc
 
 void GameEngine::MainScene::sceneLauncher()
 {
-    std::shared_ptr<GameEngine::myStaticBody> body = std::make_shared<GameEngine::myStaticBody>("./assets/player.iqm", "./assets/blue.png");
+    /*auto body = std::make_shared<GameEngine::myStaticBody>("./assets/player.iqm", "./assets/blue.png");
     this->addNode(body);
 
     auto button = std::make_shared<GameEngine::myButton>("./assets/gui/button.png");
     this->addNode(button);
-
-   /* std::shared_ptr<GameEngine::myStaticBody> btn = std::make_shared<GameEngine::myStaticBody>("./assets/player.iqm", "./assets/blue.png");
-    this->addNode(btn);*/
+    */
 }

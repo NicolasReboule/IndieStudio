@@ -14,7 +14,7 @@ namespace GameEngine {
 
     class Base {
     public:
-        Base() = default;
+        explicit Base(std::string name);
 
         Base(const Base &) = default;
 
@@ -29,6 +29,11 @@ namespace GameEngine {
         virtual float getRotationDegrees() = 0;
 
         virtual void setRotationDegrees(float degrees) = 0;
+
+        std::string &getName();
+
+    private:
+        std::string _name;
     };
 }
 
