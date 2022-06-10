@@ -9,7 +9,7 @@
 
 std::shared_ptr<raylib::RlWindow> raylib::RlWindow::_instance;
 
-void raylib::RlWindow::createWindow(const std::string &title, int height, int width, int fps)
+void raylib::RlWindow::createWindow(const std::string &title, int width, int height, int fps)
 {
     if (_isCreated)
         throw raylib::ex::WindowException("RlWindow already created");
@@ -20,7 +20,7 @@ void raylib::RlWindow::createWindow(const std::string &title, int height, int wi
         this->_minWidth = 0;
         this->_minHeight = 0;
         InitWindow(this->_width, this->_height, this->_title.c_str());
-        this->setFps(fps);
+        raylib::CoreHelper::setFramerateLimit(fps);
         this->_isCreated = true;
         std::cout << "RlWindow created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
     }
@@ -147,27 +147,4 @@ void raylib::RlWindow::setWindowSize(int width, int height)
     this->_height = height;
     this->_width = width;
     SetWindowSize(width, height);
-}
-
-void raylib::RlWindow::startDrawing(raylib::RlCamera camera)
-{
-    raylib::DrawHelper::beginDrawing();
-    raylib::DrawHelper::clearBackground(WHITE);
-    raylib::DrawHelper::beginMode3D(camera.get());
-}
-
-void raylib::RlWindow::endDrawing()
-{
-    raylib::DrawHelper::endMode3D();
-    raylib::DrawHelper::endDrawing();
-}
-
-void raylib::RlWindow::drawGrid(int slices, float spacing)
-{
-    raylib::Shape3DHelper::drawGrid(slices, spacing);
-}
-
-void raylib::RlWindow::setFps(int fps)
-{
-    raylib::CoreHelper::setFramerateLimit(fps);
 }

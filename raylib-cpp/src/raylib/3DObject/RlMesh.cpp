@@ -1,26 +1,23 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlMesh.cpp
-** FileHelper description:
+** File description:
 ** RlMesh.cpp
 */
 
 #include "raylib/3DObject/RlMesh.hpp"
 
-// Mesh management functions
-
-void raylib::RlMesh::uploadMesh(Mesh *mesh, bool dynamic)
+raylib::RlMesh::RlMesh(Mesh &mesh)
 {
-    UploadMesh(mesh, dynamic);
+    this->_mesh = mesh;
 }
 
-void raylib::RlMesh::updateMeshBuffer(Mesh mesh, int index, void *data, int dataSize, int offset)
+const Mesh &raylib::RlMesh::getMesh() const
 {
-    UpdateMeshBuffer(mesh, index, data, dataSize, offset);
+    return _mesh;
 }
 
-void raylib::RlMesh::unloadMesh(Mesh mesh)
+void raylib::RlMesh::setMesh(const Mesh &mesh)
 {
-    UnloadMesh(mesh);
+    _mesh = mesh;
 }
-

@@ -59,7 +59,7 @@ void GameEngine::SceneManager::drawAll(raylib::RlCamera camera)
 
     raylib::DrawHelper::beginMode3D(camera.get());
 
-    window->drawGrid(10, 1.0f);
+    //window->drawGrid(10, 1.0f);
 
     this->draw();
 

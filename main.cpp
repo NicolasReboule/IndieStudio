@@ -17,7 +17,7 @@ int main(int ac, char **av)
     auto audioManager = GameEngine::AudioManager::getInstance();
     auto sceneManager = GameEngine::SceneManager::getInstance();
 
-    window->createWindow("Bomberman", 720, 720, 60);
+    window->createWindow("Bomberman", 1280, 720, 60);
     raylib::RlCamera camera;
 
     std::shared_ptr<GameEngine::MainScene> mainScene = std::make_shared<GameEngine::MainScene>();

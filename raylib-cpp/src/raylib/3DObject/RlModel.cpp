@@ -10,19 +10,23 @@
 raylib::RlModel::RlModel(const std::string &fileName, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 : _model(LoadModel(fileName.c_str())), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
-    setTextureMaterial();
+    if (!texturePath.empty())
+        setTextureMaterial();
 }
 
 raylib::RlModel::RlModel(Mesh mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 : _model(LoadModelFromMesh(mesh)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
-    setTextureMaterial();
+    if (!texturePath.empty())
+        setTextureMaterial();
 }
 //
-//raylib::RlModel::RlModel(raylib::RlMesh mesh, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-//: _model(LoadModelFromMesh(mesh.getMesh())), _position(position), _color(color), _scale(scale)
-//{
-// }
+raylib::RlModel::RlModel(const raylib::RlMesh &mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
+: _model(LoadModelFromMesh(mesh.getMesh())), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+{
+    if (!texturePath.empty())
+        setTextureMaterial();
+}
 
 raylib::RlModel::~RlModel()
 {

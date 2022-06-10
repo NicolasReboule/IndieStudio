@@ -42,7 +42,6 @@ add_library(${PROJECT_NAME}
         src/raylib/2DObject/Collision2DHelper.cpp
         src/raylib/Image/RlImage.cpp
         src/raylib/Image/ImageHelper.cpp
-        src/raylib/Image/ColorHelper.cpp
         src/raylib/Texture/TextureHelper.cpp
         src/raylib/3DObject/MeshGenerator.cpp
         src/raylib/Text/Codepoint.cpp
@@ -58,6 +57,9 @@ add_library(${PROJECT_NAME}
         src/raylib/Shader/ShaderUtils.cpp
         src/raylib/3DObject/MeshHelper.cpp
         src/raylib/Math/VectorHelper.cpp
+        src/raylib/Color/RlColor.cpp
+        src/raylib/exception/BuilderException.cpp
+        src/raylib/3DObject/RlMesh.cpp
 
         src/raylib/Audio/RlMusic.cpp
         src/raylib/Audio/RlSound.cpp
@@ -65,5 +67,13 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Audio/AudioManager.cpp
         src/GameEngine/Audio/Isound.cpp
         src/GameEngine/Audio/Fx.cpp
-        src/GameEngine/Audio/Music.cpp src/GameEngine/Nodes/StaticBody.cpp include/GameEngine/Nodes/StaticBody.hpp src/GameEngine/myStaticBody.cpp include/GameEngine/myStaticBody.hpp src/GameEngine/SceneManager.cpp include/GameEngine/SceneManager.hpp src/GameEngine/Scene.cpp include/GameEngine/Scene.hpp include/GameEngine/Nodes/Base.hpp src/GameEngine/MainScene.cpp include/GameEngine/MainScene.hpp include/GameEngine/Nodes/2D/Node2D.hpp include/GameEngine/Nodes/2D/Button.hpp src/GameEngine/Nodes/2D/Button.cpp include/GameEngine/myButton.hpp src/GameEngine/myButton.cpp)
+        src/GameEngine/Audio/Music.cpp
+        src/GameEngine/Nodes/StaticBody.cpp
+        src/GameEngine/myStaticBody.cpp
+        src/GameEngine/SceneManager.cpp
+        src/GameEngine/Scene.cpp
+        src/GameEngine/MainScene.cpp
+        src/GameEngine/Nodes/2D/Button.cpp
+        src/GameEngine/myButton.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

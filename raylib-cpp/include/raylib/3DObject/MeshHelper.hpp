@@ -10,6 +10,7 @@
 
 #include <raylib.h>
 #include <string>
+#include "raylib/3DObject/RlMesh.hpp"
 
 namespace raylib {
     class MeshHelper {
@@ -20,6 +21,9 @@ namespace raylib {
         static BoundingBox getMeshBoundingBox(Mesh mesh);                                                         // Compute mesh bounding box limits
         static void genMeshTangents(Mesh *mesh);                                                                  // Compute mesh tangents
         static void genMeshBinormals(Mesh *mesh);
+        // Mesh management functions
+        static void uploadMesh(Mesh *mesh, bool dynamic);                                                         // Upload mesh vertex data in GPU and provide VAO/VBO ids
+        static void updateMeshBuffer(Mesh mesh, int index, void *data, int dataSize, int offset);                 // Update mesh vertex data in GPU for a specific buffer index
     private:
     };
 }

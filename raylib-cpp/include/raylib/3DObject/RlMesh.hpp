@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2022
 ** RlMesh.hpp
-** FileHelper description:
+** File description:
 ** RlMesh.hpp
 */
 
@@ -14,13 +14,20 @@
 namespace raylib {
     class RlMesh {
     public:
-        RlMesh() = default;
-        ~RlMesh() = default;
-        // Mesh management functions
-        void uploadMesh(Mesh *mesh, bool dynamic);                                                         // Upload mesh vertex data in GPU and provide VAO/VBO ids
-        void updateMeshBuffer(Mesh mesh, int index, void *data, int dataSize, int offset);                 // Update mesh vertex data in GPU for a specific buffer index
-        void unloadMesh(Mesh mesh);                                                                        // Unload mesh data from CPU and GPU         // Compute mesh binormals
+        /**
+         * @brief Creates a new RlMesh
+         * @param mesh the mesh to use
+         * @attention Don't use this, use the RlMeshBuilder instead
+         */
+        explicit RlMesh(Mesh &mesh);
+
+    public:
+        const Mesh &getMesh() const;
+
+        void setMesh(const Mesh &mesh);
+
     private:
+        Mesh _mesh;
     };
 }
 
