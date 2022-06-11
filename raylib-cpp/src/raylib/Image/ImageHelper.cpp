@@ -7,8 +7,6 @@
 
 #include "raylib/Image/ImageHelper.hpp"
 
-// Image drawing functions
-
 void raylib::ImageHelper::imageClearBackground(Image *dst, RlColor color)
 {
     ImageClearBackground(dst, color.getColor());

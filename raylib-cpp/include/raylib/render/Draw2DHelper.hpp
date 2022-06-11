@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2022
-** Shape2DHelper.hpp
-** FileHelper description:
-** Shape2DHelper.hpp
+** Draw2DHelper.hpp
+** File description:
+** Draw2DHelper.hpp
 */
 
-#ifndef INDIESTUDIO_SHAPE2DHELPER_HPP
-#define INDIESTUDIO_SHAPE2DHELPER_HPP
+#ifndef INDIESTUDIO_DRAW2DHELPER_HPP
+#define INDIESTUDIO_DRAW2DHELPER_HPP
 
 #include "raylib/Math.hpp"
 #include "raylib/Color/RlColor.hpp"
@@ -19,14 +19,14 @@ namespace raylib {
     /**
      * @brief Helper class for drawing.
      */
-    class Shape2DHelper {
+    class Draw2DHelper {
     public:
         /**
          * @brief Set texture and rectangle to be used on shapes drawing
          * NOTE: It can be useful when using basic shapes and one single font,
          * defining a font char white rectangle would allow drawing everything in a single draw call
-         * @param texture
-         * @param source
+         * @param texture texture to be used
+         * @param source texture rectangle to be used
          */
         static void setShapesTexture(const RlTexture &texture, const Rectangle &source);
 
@@ -385,4 +385,4 @@ namespace raylib {
     };
 }
 
-#endif //INDIESTUDIO_SHAPE2DHELPER_HPP
+#endif //INDIESTUDIO_DRAW2DHELPER_HPP

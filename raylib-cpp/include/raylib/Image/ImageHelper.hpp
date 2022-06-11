@@ -14,10 +14,12 @@
 #include <string>
 
 namespace raylib {
+    /**
+     * @brief Image drawing functions
+     * NOTE: Image software-rendering functions (CPU)
+     */
     class ImageHelper {
     public:
-        // Image drawing functions
-        // NOTE: Image software-rendering functions (CPU)
         static void imageClearBackground(Image *dst, RlColor color);                                                // Clear image background with given color
         static void imageDrawPixel(Image *dst, int posX, int posY, RlColor color);                                  // DrawHelper pixel within an image
         static void imageDrawPixelV(Image *dst, Vector2f position, RlColor color);                                   // DrawHelper pixel within an image (Vector version)

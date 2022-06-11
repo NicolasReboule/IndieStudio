@@ -5,7 +5,7 @@
 ** DrawHelper
 */
 
-#include "raylib/Core/DrawHelper.hpp"
+#include "raylib/render/DrawHelper.hpp"
 
 void raylib::DrawHelper::clearBackground(Color color)
 {

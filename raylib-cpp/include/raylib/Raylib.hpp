@@ -30,7 +30,7 @@
 #include "raylib/Camera/RlCamera.hpp"
 #include "raylib/Color/ColorHelper.hpp"
 #include "raylib/Core/CoreHelper.hpp"
-#include "raylib/Core/DrawHelper.hpp"
+#include "raylib/render/DrawHelper.hpp"
 #include "raylib/Core/FileHelper.hpp"
 #include "raylib/Core/WorldHelper.hpp"
 #include "raylib/Image/RlImageBuilder.hpp"

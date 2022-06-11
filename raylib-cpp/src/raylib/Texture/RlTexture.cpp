@@ -7,7 +7,7 @@
 
 #include "raylib/Texture/RlTexture.hpp"
 
-raylib::RlTexture::RlTexture(const std::string &fileName)
+raylib::RlTexture::RlTexture(const std::string &fileName) : _texture(), _textureRec(), _textureCubemap(), _renderTexture()
 {
     _texturePath = fileName;
     this->_texture = LoadTexture(fileName.c_str());

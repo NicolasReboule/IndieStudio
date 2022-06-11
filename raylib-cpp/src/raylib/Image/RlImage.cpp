@@ -7,8 +7,6 @@
 
 #include "raylib/Image/RlImage.hpp"
 
-// Image loading functions
-
 raylib::RlImage::RlImage() : _image()
 {
     this->_image.data = nullptr;
@@ -21,10 +19,6 @@ raylib::RlImage::RlImage() : _image()
 raylib::RlImage::RlImage(const Image &image) : _image()
 {
     _image = image;
-}
-
-raylib::RlImage::~RlImage()
-{
 }
 
 void raylib::RlImage::load(const std::string &fileName)

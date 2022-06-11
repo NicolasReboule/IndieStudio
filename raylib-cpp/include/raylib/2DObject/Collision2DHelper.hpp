@@ -81,7 +81,7 @@ namespace raylib {
          * @param collisionPoint the collision point (stored in it)
          * @return true if the lines are colliding, false otherwise
          */
-        bool checkCollisionLines(const Vector2f &startPos1, const Vector2f &endPos1, const Vector2f &startPos2, const Vector2f &endPos2, Vector2f &collisionPoint);
+        static bool checkCollisionLines(const Vector2f &startPos1, const Vector2f &endPos1, const Vector2f &startPos2, const Vector2f &endPos2, Vector2f &collisionPoint);
 
         /**
          * @brief Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold]

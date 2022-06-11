@@ -169,7 +169,7 @@ raylib::RlImage raylib::RlImageBuilder::build()
             image = raylib::ImageGenerator::genImageCellular(_width, _height, _titleSize);
             break;
         default:
-            throw (raylib::ex::BuilderException("Unknown Image pattern"));
+            throw raylib::ex::BuilderException("Unknown Image pattern");
     }
     return RlImage(image);
 }

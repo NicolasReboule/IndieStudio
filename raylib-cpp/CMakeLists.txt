@@ -13,7 +13,6 @@ find_package(raylib REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
         src/raylib/2DObject/Collision2DHelper.cpp
-        src/raylib/2DObject/Shape2DHelper.cpp
         src/raylib/3DObject/Collision3DHelper.cpp
         src/raylib/3DObject/MeshGenerator.cpp
         src/raylib/3DObject/MeshHelper.cpp
@@ -38,7 +37,6 @@ add_library(${PROJECT_NAME}
         src/raylib/Color/ColorHelper.cpp
         src/raylib/Color/RlColor.cpp
         src/raylib/Core/CoreHelper.cpp
-        src/raylib/Core/DrawHelper.cpp
         src/raylib/Core/FileHelper.cpp
         src/raylib/Core/WorldHelper.cpp
         src/raylib/exception/BuilderException.cpp
@@ -54,6 +52,9 @@ add_library(${PROJECT_NAME}
         src/raylib/Inputs/MouseHelper.cpp
         src/raylib/Inputs/TouchHelper.cpp
         src/raylib/Math/VectorHelper.cpp
+        src/raylib/Random.cpp
+        src/raylib/render/Draw2DHelper.cpp
+        src/raylib/render/DrawHelper.cpp
         src/raylib/Shader/RlShader.cpp
         src/raylib/Shader/ShaderUtils.cpp
         src/raylib/Text/Codepoint.cpp
@@ -62,7 +63,6 @@ add_library(${PROJECT_NAME}
         src/raylib/Text/TextHelper.cpp
         src/raylib/Texture/RlTexture.cpp
         src/raylib/Texture/TextureHelper.cpp
-        src/raylib/Random.cpp
         src/raylib/Window/RlWindow.cpp
         src/raylib/Window/System.cpp
 
