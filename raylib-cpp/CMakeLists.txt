@@ -65,17 +65,16 @@ add_library(${PROJECT_NAME}
         src/raylib/Texture/RlTexture.cpp
         src/raylib/Texture/TextureHelper.cpp
         src/raylib/Window/RlWindow.cpp
+        src/raylib/Window/System.cpp
 
         src/GameEngine/Audio/AudioManager.cpp
         src/GameEngine/Audio/Isound.cpp
         src/GameEngine/Audio/Fx.cpp
         src/GameEngine/Audio/Music.cpp
         src/GameEngine/Nodes/StaticBody.cpp
-        src/GameEngine/myStaticBody.cpp
         src/GameEngine/SceneManager.cpp
         src/GameEngine/Scene.cpp
         src/GameEngine/MainScene.cpp
         src/GameEngine/Nodes/2D/Button.cpp
-        src/GameEngine/myButton.cpp
-        include/raylib/Window/System.hpp src/raylib/Window/System.cpp)
+        include/raylib/Inputs/CursorHelper.hpp)
 target_link_libraries(${PROJECT_NAME} raylib)

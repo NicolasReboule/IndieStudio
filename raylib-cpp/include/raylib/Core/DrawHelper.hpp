@@ -12,9 +12,11 @@
 #include "raylib/Math.hpp"
 
 namespace raylib {
+    /**
+     * @brief Helper class for drawing.
+     */
     class DrawHelper {
         public:
-            // Drawing-related functions
             static void clearBackground(Color color);                                      // Set background color (framebuffer clear color)
             static void beginDrawing();                                                // Setup canvas (framebuffer) to start drawing
             static void endDrawing();                                                  // End canvas drawing and swap buffers (double buffering)

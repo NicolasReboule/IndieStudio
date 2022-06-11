@@ -1,4 +1,4 @@
-static /*
+/*
 ** EPITECH PROJECT, 2022
 ** System.h
 ** File description:

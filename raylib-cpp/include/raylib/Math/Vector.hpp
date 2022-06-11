@@ -133,7 +133,6 @@ namespace raylib {
         {
             return x != other.x || y != other.y || z != other.z || w != other.w;
         }
-
     };
 }
 

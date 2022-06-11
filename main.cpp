@@ -6,8 +6,6 @@
 */
 
 #include <GameEngine/GameEngine.hpp>
-#include <GameEngine/myStaticBody.hpp>
-#include <GameEngine/myButton.hpp>
 #include <GameEngine/MainScene.hpp>
 #include "raylib/Raylib.hpp"
 
@@ -20,7 +18,7 @@ int main(int ac, char **av)
     raylib::RlImageBuilder imageBuilder;
     raylib::RlImage rlimage = raylib::RlImageBuilder().setType(raylib::RlImageBuilder::ImageGradientH)
         .setWidth(1000).setHeight(1000)
-        .setLeft(BLUE).setRight(RED)
+        .setLeft(raylib::RlColor::Blue).setRight(raylib::RlColor::Red)
         .build();
     raylib::RlTexture texture(rlimage);
 
