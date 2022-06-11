@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_RLTEXTURE_HPP
 #define INDIESTUDIO_RLTEXTURE_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 #include "raylib/Image/RlImage.hpp"
 

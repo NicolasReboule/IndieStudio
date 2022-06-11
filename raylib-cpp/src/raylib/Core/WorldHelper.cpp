@@ -7,16 +7,14 @@
 
 #include "raylib/Core/WorldHelper.hpp"
 
-// Screen-space-related functions
-
-Vector2f raylib::WorldHelper::getWorldToScreen(Vector3f position, Camera camera)
+Vector2f raylib::WorldHelper::getWorldToScreen(Vector3f position, const RlCamera &camera)
 {
-    return raylib::VectorHelper::toVectorf(GetWorldToScreen(raylib::VectorHelper::toRaylibVector(position), camera));
+    return raylib::VectorHelper::toVectorf(GetWorldToScreen(raylib::VectorHelper::toRaylibVector(position), camera.get()));
 }
 
-Vector2f raylib::WorldHelper::getWorldToScreenEx(Vector3f position, Camera camera, int width, int height)
+Vector2f raylib::WorldHelper::getWorldToScreenEx(Vector3f position, const RlCamera &camera, int width, int height)
 {
-    return raylib::VectorHelper::toVectorf(GetWorldToScreenEx(raylib::VectorHelper::toRaylibVector(position), camera, width, height));
+    return raylib::VectorHelper::toVectorf(GetWorldToScreenEx(raylib::VectorHelper::toRaylibVector(position), camera.get(), width, height));
 }
 
 Vector2f raylib::WorldHelper::getWorldToScreen2D(Vector2f position, Camera2D camera)

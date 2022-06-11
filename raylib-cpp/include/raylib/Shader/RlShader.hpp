@@ -83,7 +83,7 @@ namespace raylib {
 
         /**
          * @brief Get the raylib Shader's
-         * @return
+         * @return the raylib Shader
          */
         const Shader &getShader() const;
 

@@ -9,7 +9,7 @@
 #define INDIESTUDIO_VECTOR_HPP
 
 #include <iostream>
-#include "raylib.h"
+#include <raylib.h>
 
 namespace raylib {
     /**

@@ -8,7 +8,7 @@
 #ifndef KEYBOARD_HPP_
 #define KEYBOARD_HPP_
 
-#include "raylib.h"
+#include <raylib.h>
 
 namespace raylib {
     class KeyboardHelper {

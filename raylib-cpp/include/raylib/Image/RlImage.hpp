@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_RLIMAGE_HPP
 #define INDIESTUDIO_RLIMAGE_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

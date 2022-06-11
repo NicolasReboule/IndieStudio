@@ -9,7 +9,7 @@
 #define INDIESTUDIO_VECTORHELPER_HPP
 
 #include "Vector.hpp"
-#include "raylib.h"
+#include <raylib.h>
 
 namespace raylib {
     class VectorHelper {

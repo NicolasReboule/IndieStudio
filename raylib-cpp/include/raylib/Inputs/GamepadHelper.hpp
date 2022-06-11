@@ -8,7 +8,7 @@
 #ifndef GAMEPAD_HPP_
 #define GAMEPAD_HPP_
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

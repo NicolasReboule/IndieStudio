@@ -8,10 +8,13 @@
 #ifndef CAMERA_HPP_
 #define CAMERA_HPP_
 
-#include "raylib.h"
+#include <raylib.h>
 #include "raylib/Math.hpp"
 
 namespace raylib {
+    /**
+     * @brief Camera class
+     */
     class RlCamera {
         public:
             /**

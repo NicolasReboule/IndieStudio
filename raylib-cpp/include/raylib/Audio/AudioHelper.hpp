@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_AUDIOHELPER_HPP
 #define INDIESTUDIO_AUDIOHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

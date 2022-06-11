@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_IMAGEHELPER_HPP
 #define INDIESTUDIO_IMAGEHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 #include "raylib/Color/RlColor.hpp"
 #include "raylib/Math.hpp"

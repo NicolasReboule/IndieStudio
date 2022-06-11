@@ -8,12 +8,14 @@
 #ifndef INDIESTUDIO_COREHELPER_HPP
 #define INDIESTUDIO_COREHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 #include <memory>
 
 namespace raylib {
-
+    /**
+     * @brief Helper class for raylib core functions
+     */
     class CoreHelper {
     public:
         // VR stereo config functions for VR simulator

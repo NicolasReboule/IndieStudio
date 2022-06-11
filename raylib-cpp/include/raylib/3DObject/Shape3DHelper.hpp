@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_SHAPE3DHELPER_HPP
 #define INDIESTUDIO_SHAPE3DHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include "raylib/Math.hpp"
 #include "raylib/Color/RlColor.hpp"
 

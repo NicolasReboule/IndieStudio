@@ -8,7 +8,7 @@
 #ifndef TOUCH_HPP_
 #define TOUCH_HPP_
 
-#include "raylib.h"
+#include <raylib.h>
 #include "raylib/Math.hpp"
 
 namespace raylib {

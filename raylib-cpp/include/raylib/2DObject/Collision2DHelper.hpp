@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_COLLISION2DHELPER_HPP
 #define INDIESTUDIO_COLLISION2DHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include "raylib/Math/Vector.hpp"
 
 namespace raylib {

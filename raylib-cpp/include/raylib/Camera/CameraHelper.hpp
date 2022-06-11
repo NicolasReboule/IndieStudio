@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_CAMERAHELPER_HPP
 #define INDIESTUDIO_CAMERAHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 
 namespace raylib {
     class CameraHelper {

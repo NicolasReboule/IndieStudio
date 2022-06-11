@@ -9,7 +9,7 @@
 #define INDIESTUDIO_RLCOLOR_HPP
 
 #include <cstdint>
-#include "raylib.h"
+#include <raylib.h>
 #include "raylib/Math/Vector.hpp"
 
 namespace raylib {

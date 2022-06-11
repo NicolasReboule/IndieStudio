@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_TEXT_HPP
 #define INDIESTUDIO_TEXT_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 #include "raylib/Text/RlFont.hpp"
 #include "raylib/Math.hpp"

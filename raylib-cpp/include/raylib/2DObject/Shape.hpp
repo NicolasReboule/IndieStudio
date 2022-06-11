@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_SHAPE_HPP
 #define INDIESTUDIO_SHAPE_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

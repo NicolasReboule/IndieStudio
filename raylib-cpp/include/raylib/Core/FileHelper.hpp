@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_FILEHELPER_HPP
 #define INDIESTUDIO_FILEHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {
