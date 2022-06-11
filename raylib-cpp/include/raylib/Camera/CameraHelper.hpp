@@ -8,6 +8,7 @@
 #ifndef INDIESTUDIO_CAMERAHELPER_HPP
 #define INDIESTUDIO_CAMERAHELPER_HPP
 
+#include "RlCamera.hpp"
 #include <raylib.h>
 
 namespace raylib {
@@ -41,6 +42,13 @@ namespace raylib {
          * @param keyDown the key to down
          */
         static void setMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown);
+
+        /**
+         * @brief Set camera mode (global camera)
+         * @param camera the camera to set
+         * @param mode the mode to set
+         */
+        static void setCameraMode(const RlCamera &camera, const CameraMode &mode);
     };
 }
 

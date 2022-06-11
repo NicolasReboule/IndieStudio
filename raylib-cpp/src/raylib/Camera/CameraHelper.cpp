@@ -26,3 +26,8 @@ void raylib::CameraHelper::setMoveControls(int keyFront, int keyBack, int keyRig
 {
     SetCameraMoveControls(keyFront, keyBack, keyRight, keyLeft, keyUp, keyDown);
 }
+
+void raylib::CameraHelper::setCameraMode(const raylib::RlCamera &camera, const CameraMode &mode)
+{
+    SetCameraMode(camera.get(), mode);
+}
