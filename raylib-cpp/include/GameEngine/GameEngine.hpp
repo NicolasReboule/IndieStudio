@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_GAMEENGINE_HPP
 #define INDIESTUDIO_GAMEENGINE_HPP
 
-#include "Audio/Isound.hpp"
+#include "Audio/ISound.hpp"
 #include "Audio/Music.hpp"
 #include "Audio/Fx.hpp"
 #include "Audio/AudioManager.hpp"

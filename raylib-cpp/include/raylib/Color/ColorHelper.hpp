@@ -8,9 +8,9 @@
 #ifndef INDIESTUDIO_COLORHELPER_HPP
 #define INDIESTUDIO_COLORHELPER_HPP
 
-#include <raylib.h>
 #include "raylib/Color/RlColor.hpp"
 #include "raylib/Math.hpp"
+#include <raylib.h>
 
 namespace raylib {
     /**

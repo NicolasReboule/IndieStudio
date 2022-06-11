@@ -8,8 +8,8 @@
 #ifndef INDIESTUDIO_WORLDHELPER_HPP
 #define INDIESTUDIO_WORLDHELPER_HPP
 
-#include <raylib.h>
 #include "raylib/Camera/RlCamera.hpp"
+#include <raylib.h>
 
 namespace raylib {
     /**

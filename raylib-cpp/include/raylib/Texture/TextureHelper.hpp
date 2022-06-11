@@ -8,10 +8,10 @@
 #ifndef INDIESTUDIO_TEXTUREHELPER_HPP
 #define INDIESTUDIO_TEXTUREHELPER_HPP
 
-#include <raylib.h>
 #include "raylib/Math/VectorHelper.hpp"
 #include "raylib/Math/Vector.hpp"
 #include "raylib/Color/RlColor.hpp"
+#include <raylib.h>
 
 namespace raylib {
     class TextureHelper {

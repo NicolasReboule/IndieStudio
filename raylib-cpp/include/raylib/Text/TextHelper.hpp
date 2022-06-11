@@ -8,9 +8,9 @@
 #ifndef INDIESTUDIO_TEXTHELPER_HPP
 #define INDIESTUDIO_TEXTHELPER_HPP
 
+#include "Text.hpp"
 #include <raylib.h>
 #include <string>
-#include "Text.hpp"
 
 namespace raylib {
     class TextHelper {

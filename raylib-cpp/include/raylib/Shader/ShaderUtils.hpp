@@ -8,8 +8,8 @@
 #ifndef INDIESTUDIO_SHADERUTILS_HPP
 #define INDIESTUDIO_SHADERUTILS_HPP
 
-#include <raylib.h>
 #include "raylib/Shader/RlShader.hpp"
+#include <raylib.h>
 
 namespace raylib {
     class ShaderUtils {

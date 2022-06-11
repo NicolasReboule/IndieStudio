@@ -1,16 +1,16 @@
 /*
 ** EPITECH PROJECT, 2022
-** System.h
+** System.hpp
 ** File description:
-** System.h
+** System.hpp
 */
 
 #ifndef INDIESTUDIO_SYSTEM_HPP
 #define INDIESTUDIO_SYSTEM_HPP
 
+#include "raylib/Math.hpp"
 #include <raylib.h>
 #include <string>
-#include "raylib/Math.hpp"
 
 namespace raylib {
     class System {

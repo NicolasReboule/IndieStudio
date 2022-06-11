@@ -15,7 +15,7 @@
 #include "raylib/Image/ImageGenerator.hpp"
 
 namespace raylib {
-    class RlImageBuilder : IBuilder<RlImage> {
+    class RlImageBuilder : public IBuilder<RlImage> {
     public:
         enum ParameterName {
             Width = 1,

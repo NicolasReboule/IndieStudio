@@ -9,15 +9,13 @@
 #define INDIESTUDIO_MUSIC_HPP
 
 #include "raylib/Raylib.hpp"
-#include "Isound.hpp"
+#include "ISound.hpp"
 
-namespace GameEngine {
-    namespace Audio {
-        class Music : public Isound, public raylib::RlMusic {
+namespace GameEngine::Audio {
+        class Music : public ISound, public raylib::RlMusic {
         public:
             Music(const std::string &fileName, int category);
         };
     }
-}
 
 #endif //INDIESTUDIO_MUSIC_HPP

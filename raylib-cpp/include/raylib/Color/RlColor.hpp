@@ -8,9 +8,9 @@
 #ifndef INDIESTUDIO_RLCOLOR_HPP
 #define INDIESTUDIO_RLCOLOR_HPP
 
+#include "raylib/Math/Vector.hpp"
 #include <cstdint>
 #include <raylib.h>
-#include "raylib/Math/Vector.hpp"
 
 namespace raylib {
     class RlColor {

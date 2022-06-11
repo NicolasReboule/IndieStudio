@@ -8,11 +8,11 @@
 #ifndef INDIESTUDIO_RLMODEL_HPP
 #define INDIESTUDIO_RLMODEL_HPP
 
-#include <raylib.h>
-#include <string>
 #include "RlMesh.hpp"
 #include "raylib/Texture/RlTexture.hpp"
 #include "raylib/Math.hpp"
+#include <raylib.h>
+#include <string>
 
 namespace raylib {
     class RlModel {

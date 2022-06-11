@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** Isound.hpp
+** ISound.hpp
 ** File description:
-** Isound.hpp
+** ISound.hpp
 */
 
 #ifndef INDIESTUDIO_ISOUND_HPP
@@ -16,10 +16,10 @@ enum SoundCategory{
 };
 
 namespace GameEngine {
-    class Isound {
+    class ISound {
     public:
-        explicit Isound(std::string fileName, int category);
-        virtual ~Isound() = default;
+        explicit ISound(std::string fileName, int category);
+        virtual ~ISound() = default;
 
         int getCategory() const;
         std::string getName();

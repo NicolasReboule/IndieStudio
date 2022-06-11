@@ -8,8 +8,8 @@
 #ifndef INDIESTUDIO_MOUSEHELPER_HPP
 #define INDIESTUDIO_MOUSEHELPER_HPP
 
-#include <raylib.h>
 #include "raylib/Math.hpp"
+#include <raylib.h>
 
 namespace raylib {
     /**

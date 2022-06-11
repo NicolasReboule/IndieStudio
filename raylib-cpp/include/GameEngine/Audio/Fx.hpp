@@ -9,15 +9,13 @@
 #define INDIESTUDIO_FX_HPP
 
 #include "raylib/Raylib.hpp"
-#include "Isound.hpp"
+#include "ISound.hpp"
 
-namespace GameEngine {
-    namespace Audio {
-    class Fx : public Isound, public raylib::RlSound {
+namespace GameEngine::Audio {
+    class Fx : public ISound, public raylib::RlSound {
         public:
             Fx(const std::string &fileName, int category);
         };
     }
-}
 
 #endif //INDIESTUDIO_FX_HPP

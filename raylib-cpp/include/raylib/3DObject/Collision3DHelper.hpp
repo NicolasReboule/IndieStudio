@@ -8,10 +8,10 @@
 #ifndef INDIESTUDIO_COLLISION3DHELPER_HPP
 #define INDIESTUDIO_COLLISION3DHELPER_HPP
 
-#include <raylib.h>
 #include "raylib/Math.hpp"
 #include "raylib/3DObject/RlModel.hpp"
 #include "raylib/3DObject/RlMesh.hpp"
+#include <raylib.h>
 
 namespace raylib {
     class Collision3dHelper {

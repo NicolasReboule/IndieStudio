@@ -8,7 +8,10 @@
 #ifndef INDIESTUDIO_RAYLIB_HPP
 #define INDIESTUDIO_RAYLIB_HPP
 
-#include <iostream>
+/**
+ * @brief All raylib includes
+ * @file Raylib.hpp
+ */
 
 #include "Math.hpp"
 #include "raylib/2DObject/Collision2DHelper.hpp"
@@ -43,5 +46,7 @@
 #include "raylib/Texture/TextureHelper.hpp"
 #include "raylib/Window/System.hpp"
 #include "raylib/Window/RlWindow.hpp"
+
+#include <iostream>
 
 #endif //INDIESTUDIO_RAYLIB_HPP

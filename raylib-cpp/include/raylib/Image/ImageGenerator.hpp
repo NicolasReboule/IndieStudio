@@ -8,9 +8,9 @@
 #ifndef INDIESTUDIO_IMAGEGENERATOR_HPP
 #define INDIESTUDIO_IMAGEGENERATOR_HPP
 
+#include "raylib/Color/RlColor.hpp"
 #include <raylib.h>
 #include <string>
-#include "raylib/Color/RlColor.hpp"
 
 namespace raylib {
     class ImageGenerator {

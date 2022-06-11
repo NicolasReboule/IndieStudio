@@ -8,8 +8,8 @@
 #ifndef INDIESTUDIO_MODELHELPER_HPP
 #define INDIESTUDIO_MODELHELPER_HPP
 
-#include <raylib.h>
 #include "RlModel.hpp"
+#include <raylib.h>
 
 namespace raylib {
     class ModelHelper {

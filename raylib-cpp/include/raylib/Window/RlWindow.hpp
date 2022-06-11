@@ -8,13 +8,13 @@
 #ifndef RAYLIB_CPP_WINDOW_HPP
 #define RAYLIB_CPP_WINDOW_HPP
 
+#include "raylib/exception/WindowException.hpp"
+#include "raylib/Core/CoreHelper.hpp"
+#include "raylib/Image/RlImage.hpp"
 #include <string>
 #include <iostream>
 #include <memory>
 #include <raylib.h>
-#include "raylib/exception/WindowException.hpp"
-#include "raylib/Core/CoreHelper.hpp"
-#include "raylib/Image/RlImage.hpp"
 
 namespace raylib {
     class RlWindow {

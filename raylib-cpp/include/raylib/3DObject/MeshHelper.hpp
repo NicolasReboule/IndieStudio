@@ -8,9 +8,9 @@
 #ifndef INDIESTUDIO_MESHHELPER_HPP
 #define INDIESTUDIO_MESHHELPER_HPP
 
+#include "raylib/3DObject/RlMesh.hpp"
 #include <raylib.h>
 #include <string>
-#include "raylib/3DObject/RlMesh.hpp"
 
 namespace raylib {
     class MeshHelper {
