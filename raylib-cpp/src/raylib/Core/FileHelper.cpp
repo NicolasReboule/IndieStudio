@@ -7,96 +7,87 @@
 
 #include "raylib/Core/FileHelper.hpp"
 
-// Files management functions
-
-unsigned char *raylib::FileHelper::loadFileData(const std::string &fileName, unsigned int *bytesRead)
+std::vector<unsigned char> raylib::FileHelper::loadFileData(const std::string &fileName)
 {
-    return LoadFileData(fileName.c_str(), bytesRead);
-}
-
-void raylib::FileHelper::unloadFileData(unsigned char *data)
-{
-    UnloadFileData(data);
-}
-
-bool raylib::FileHelper::saveFileData(const std::string &fileName, void *data, unsigned int bytesToWrite)
-{
-    return SaveFileData(fileName.c_str(), data, bytesToWrite);
+    std::ifstream file(fileName, std::ios::binary);
+    std::vector<unsigned char> buffer(std::istreambuf_iterator<char>(file), {});
+    return buffer;
 }
 
 std::string raylib::FileHelper::loadFileText(const std::string &fileName)
 {
-    return std::string(LoadFileText(fileName.c_str()));
+    std::ifstream file(fileName);
+    std::string buffer((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+    return buffer;
 }
 
-void raylib::FileHelper::unloadFileText(char *text)
+bool raylib::FileHelper::saveFileText(const std::string &fileName, const std::string &text)
 {
-    UnloadFileText(text);
-}
-
-bool raylib::FileHelper::saveFileText(const std::string &fileName, char *text)
-{
-    return SaveFileText(fileName.c_str(), text);
+    std::ofstream file(fileName);
+    if (file.is_open()) {
+        file << text;
+        file.close();
+        return true;
+    }
+    return false;
 }
 
 bool raylib::FileHelper::fileExists(const std::string &fileName)
 {
-    return FileExists(fileName.c_str());
+    return std::filesystem::exists(fileName);
 }
 
 bool raylib::FileHelper::directoryExists(const std::string &dirPath)
 {
-    return DirectoryExists(dirPath.c_str());
+    return std::filesystem::is_directory(dirPath);
 }
 
 bool raylib::FileHelper::isFileExtension(const std::string &fileName, const std::string &ext)
 {
-    return IsFileExtension(fileName.c_str(), ext.c_str());
+    return fileName.substr(fileName.find_last_of('.') + 1) == ext;
 }
 
 std::string raylib::FileHelper::getFileExtension(const std::string &fileName)
 {
-    return std::string(GetFileExtension(fileName.c_str()));
+    return fileName.substr(fileName.find_last_of('.') + 1);
 }
 
 std::string raylib::FileHelper::getFileName(const std::string &filePath)
 {
-    return std::string(GetFileName(filePath.c_str()));
+    return filePath.substr(filePath.find_last_of('/') + 1);
 }
 
 std::string raylib::FileHelper::getFileNameWithoutExt(const std::string &filePath)
 {
-    return std::string(GetFileNameWithoutExt(filePath.c_str()));
+    return filePath.substr(filePath.find_last_of('/') + 1, filePath.find_last_of('.') - filePath.find_last_of('/') - 1);
 }
 
 std::string raylib::FileHelper::getDirectoryPath(const std::string &filePath)
 {
-    return std::string(GetDirectoryPath(filePath.c_str()));
+    return filePath.substr(0, filePath.find_last_of('/'));
 }
 
 std::string raylib::FileHelper::getPrevDirectoryPath(const std::string &dirPath)
 {
-    return std::string(GetPrevDirectoryPath(dirPath.c_str()));
+    return dirPath.substr(0, dirPath.find_last_of('/'));
 }
 
 std::string raylib::FileHelper::getWorkingDirectory()
 {
-    return std::string(GetWorkingDirectory());
+    return std::filesystem::current_path().string();
 }
 
-char **raylib::FileHelper::getDirectoryFiles(const std::string &dirPath, int *count)
+std::vector<std::string> raylib::FileHelper::getDirectoryFiles(const std::string &dirPath)
 {
-    return GetDirectoryFiles(dirPath.c_str(), count);
+    std::vector<std::string> files;
+    for (auto &p : std::filesystem::directory_iterator(dirPath))
+        files.push_back(p.path().string());
+    return files;
 }
 
-void raylib::FileHelper::clearDirectoryFiles()
+void raylib::FileHelper::changeDirectory(const std::string &dir)
 {
-    ClearDirectoryFiles();
-}
-
-bool raylib::FileHelper::changeDirectory(const std::string &dir)
-{
-    return ChangeDirectory(dir.c_str());
+    std::filesystem::current_path(dir);
 }
 
 bool raylib::FileHelper::isFileDropped()
@@ -104,17 +95,18 @@ bool raylib::FileHelper::isFileDropped()
     return IsFileDropped();
 }
 
-char **raylib::FileHelper::getDroppedFiles(int *count)
+std::vector<std::string> raylib::FileHelper::getDroppedFiles()
 {
-    return GetDroppedFiles(count);
-}
-
-void raylib::FileHelper::clearDroppedFiles()
-{
+    int count = 0;
+    char **files = GetDroppedFiles(&count);
+    std::vector<std::string> droppedFiles;
+    for (int i = 0; i < count; i++)
+        droppedFiles.emplace_back(files[i]);
     ClearDroppedFiles();
+    return droppedFiles;
 }
 
 long raylib::FileHelper::getFileModTime(const std::string &fileName)
 {
-    return GetFileModTime(fileName.c_str());
+    return std::filesystem::last_write_time(fileName).time_since_epoch().count();
 }
