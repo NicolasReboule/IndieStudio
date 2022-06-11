@@ -13,6 +13,9 @@
 #include "raylib/Math.hpp"
 
 namespace raylib {
+    /**
+     * @brief Helper class for Color
+     */
     class ColorHelper {
     public:
         /**

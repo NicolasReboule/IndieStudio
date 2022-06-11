@@ -7,9 +7,7 @@
 
 #include "raylib/Shader/RlShader.hpp"
 
-// Shader management functions
-
-raylib::RlShader::RlShader()
+raylib::RlShader::RlShader() : _shader()
 {
     this->_shader.id = 0;
     this->_shader.locs = nullptr;
@@ -50,14 +48,14 @@ void raylib::RlShader::setValueV(int locIndex, const void *value, int uniformTyp
     SetShaderValueV(this->_shader, locIndex, value, uniformType, count);
 }
 
-void raylib::RlShader::setValueMatrix(int locIndex, Matrix mat)
+void raylib::RlShader::setValueMatrix(int locIndex, const Matrix &mat)
 {
     SetShaderValueMatrix(this->_shader, locIndex, mat);
 }
 
-void raylib::RlShader::setValueTexture(int locIndex, Texture2D texture)
+void raylib::RlShader::setValueTexture(int locIndex, const RlTexture &texture)
 {
-    SetShaderValueTexture(this->_shader, locIndex, texture);
+    SetShaderValueTexture(this->_shader, locIndex, texture.getTexture());
 }
 
 const Shader &raylib::RlShader::getShader() const

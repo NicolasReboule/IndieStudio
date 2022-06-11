@@ -76,5 +76,6 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Scene.cpp
         src/GameEngine/MainScene.cpp
         src/GameEngine/Nodes/2D/Button.cpp
-        include/raylib/Inputs/CursorHelper.hpp)
+
+        )
 target_link_libraries(${PROJECT_NAME} raylib)
