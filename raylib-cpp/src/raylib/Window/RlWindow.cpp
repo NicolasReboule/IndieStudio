@@ -89,6 +89,11 @@ void raylib::RlWindow::setWindowState(unsigned int flags)
     SetWindowState(flags);
 }
 
+void raylib::RlWindow::setConfigFlags(unsigned int flags)
+{
+    SetConfigFlags(flags);
+}
+
 void raylib::RlWindow::clearWindowState(unsigned int flags)
 {
     ClearWindowState(flags);
@@ -147,4 +152,9 @@ void raylib::RlWindow::setWindowSize(int width, int height)
     this->_height = height;
     this->_width = width;
     SetWindowSize(width, height);
+}
+
+void raylib::RlWindow::setTakeScreenShot(const std::string &fileName)
+{
+    TakeScreenshot(fileName.c_str());
 }

@@ -102,6 +102,12 @@ namespace raylib {
         void setWindowState(unsigned int flags);
 
         /**
+         * @brief Set window configuration state using flags
+         * @param flags the flags to set (@see ConfigFlags enum)
+         */
+        void setConfigFlags(unsigned int flags);
+
+        /**
          * @brief Clear window configuration state flags
          * @param flags the flags to clear (@see ConfigFlags enum)
          */
@@ -165,6 +171,12 @@ namespace raylib {
          * @param height the height
          */
         void setWindowSize(int width, int height);
+
+        /**
+         * @brief Take a screenshot of the current window
+         * @param fileName the file name to save the screenshot
+         */
+        void setTakeScreenShot(const std::string &fileName);
 
         inline const std::string &getTitle() const { return _title; };
         inline const int &getHeight() const { return _height; };

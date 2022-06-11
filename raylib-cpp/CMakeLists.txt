@@ -64,6 +64,7 @@ add_library(${PROJECT_NAME}
         src/raylib/Text/TextHelper.cpp
         src/raylib/Texture/RlTexture.cpp
         src/raylib/Texture/TextureHelper.cpp
+        src/raylib/Random.cpp
         src/raylib/Window/RlWindow.cpp
         src/raylib/Window/System.cpp
 

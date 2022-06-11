@@ -9,12 +9,12 @@
 
 // VR stereo config functions for VR simulator
 
-VrStereoConfig raylib::CoreHelper::loadVrStereoConfig(VrDeviceInfo device)
+VrStereoConfig raylib::CoreHelper::loadVrStereoConfig(const VrDeviceInfo &device)
 {
     return LoadVrStereoConfig(device);
 }
 
-void raylib::CoreHelper::unloadVrStereoConfig(VrStereoConfig config)
+void raylib::CoreHelper::unloadVrStereoConfig(const VrStereoConfig &config)
 {
     UnloadVrStereoConfig(config);
 }
@@ -39,18 +39,6 @@ float raylib::CoreHelper::getFrameTime()
 double raylib::CoreHelper::getTime()
 {
     return GetTime();
-}
-
-// Misc. functions
-
-void raylib::CoreHelper::takeScreenshot(const std::string &fileName)
-{
-    TakeScreenshot(fileName.c_str());
-}
-
-void raylib::CoreHelper::setConfigFlags(unsigned int flags)
-{
-    SetConfigFlags(flags);
 }
 
 // Misc.

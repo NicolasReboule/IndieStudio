@@ -10,7 +10,6 @@
 
 #include <raylib.h>
 #include <string>
-#include <memory>
 
 namespace raylib {
     /**
@@ -18,23 +17,48 @@ namespace raylib {
      */
     class CoreHelper {
     public:
-        // VR stereo config functions for VR simulator
-        static VrStereoConfig loadVrStereoConfig(VrDeviceInfo device);                 // Load VR stereo config for VR simulator device parameters
-        static void unloadVrStereoConfig(VrStereoConfig config);                       // Unload VR stereo config
+        /**
+         * @brief Load VR stereo config for VR simulator device parameters
+         * @param device the device to load the config for
+         * @return VR stereo config
+         */
+        static VrStereoConfig loadVrStereoConfig(const VrDeviceInfo &device);
 
-        // Timing-related functions
-        static void setFramerateLimit(int fps);                                             // Set target FPS (maximum)
-        static int getFPS();                                                       // Get current FPS
-        static float getFrameTime();                                               // Get time in seconds for last frame drawn (delta time)
-        static double getTime();                                                   // Get elapsed time in seconds since InitWindow()
+        /**
+         * @brief Unload VR stereo config
+         * @param config the config to unload
+         */
+        static void unloadVrStereoConfig(const VrStereoConfig &config);
 
-        // Misc. functions
-        static void takeScreenshot(const std::string &fileName);                              // Takes a screenshot of current screen (filename extension defines format)
-        static void setConfigFlags(unsigned int flags);                                // Setup init configuration flags (view FLAGS)
+        /**
+         * @brief Set target FPS (maximum)
+         * @param fps the target FPS
+         */
+        static void setFramerateLimit(int fps);
 
-        // Misc.
-        static void openURL(const std::string &url);                                          // Open URL with default system browser (if available)
-    private:
+        /**
+         * @brief Get current FPS
+         * @return the current FPS
+         */
+        static int getFPS();
+
+        /**
+         * @brief Get time in seconds for last frame drawn (delta time)
+         * @return the time in seconds for last frame drawn (delta time)
+         */
+        static float getFrameTime();
+
+        /**
+         * @brief Get elapsed time in seconds since InitWindow()
+         * @return the elapsed time in seconds since InitWindow()
+         */
+        static double getTime();
+
+        /**
+         * @brief Open URL with default system browser (if available)
+         * @param url the URL to open
+         */
+        static void openURL(const std::string &url);
     };
 }
 
