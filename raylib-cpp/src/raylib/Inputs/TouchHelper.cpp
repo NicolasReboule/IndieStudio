@@ -7,8 +7,6 @@
 
 #include "raylib/Inputs/TouchHelper.hpp"
 
-// Input-related functions: touch
-
 int raylib::TouchHelper::getTouchX()
 {
     return GetTouchX();
@@ -33,8 +31,6 @@ int raylib::TouchHelper::getTouchPointCount()
 {
     return GetTouchPointCount();
 }
-
-// Gestures and TouchHelper Handling Functions (Module: rgestures)
 
 void raylib::TouchHelper::setGesturesEnabled(unsigned int flags)
 {
