@@ -38,7 +38,6 @@ add_library(${PROJECT_NAME}
         src/raylib/Camera/RlCamera.cpp
         src/raylib/Color/ColorHelper.cpp
         src/raylib/Color/RlColor.cpp
-        src/raylib/Core/CompressHelper.cpp
         src/raylib/Core/CoreHelper.cpp
         src/raylib/Core/DrawHelper.cpp
         src/raylib/Core/FileHelper.cpp
