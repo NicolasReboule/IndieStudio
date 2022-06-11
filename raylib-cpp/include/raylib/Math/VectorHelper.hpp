@@ -16,8 +16,11 @@ namespace raylib {
     public:
         static ::Vector2 toRaylibVector(Vector2f vector);
         static ::Vector3 toRaylibVector(Vector3f vector);
+        static ::Vector4 toRaylibVector(Vector4f vector);
+
         static Vector2f toVectorf(::Vector2 vector);
         static Vector3f toVectorf(::Vector3 vector);
+        static Vector4f toVectorf(::Vector4 vector);
     };
 }
 #endif //INDIESTUDIO_VECTORHELPER_HPP

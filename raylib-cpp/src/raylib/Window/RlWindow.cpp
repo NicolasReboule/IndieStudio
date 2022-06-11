@@ -79,7 +79,7 @@ bool raylib::RlWindow::isWindowResized()
     return IsWindowResized();
 }
 
-bool raylib::RlWindow::hasWindowState(unsigned int flag)
+bool raylib::RlWindow::hasWindowState(const ConfigFlags &flag)
 {
     return IsWindowState(flag);
 }
@@ -114,9 +114,9 @@ void raylib::RlWindow::restoreWindow()
     RestoreWindow();
 }
 
-void raylib::RlWindow::setWindowIcon(Image image)
+void raylib::RlWindow::setWindowIcon(const RlImage &image)
 {
-    SetWindowIcon(image);
+    SetWindowIcon(image.getImage());
 }
 
 void raylib::RlWindow::setWindowTitle(const std::string &title)

@@ -64,7 +64,6 @@ add_library(${PROJECT_NAME}
         src/raylib/Text/TextHelper.cpp
         src/raylib/Texture/RlTexture.cpp
         src/raylib/Texture/TextureHelper.cpp
-        src/raylib/Window/MonitorHelper.cpp
         src/raylib/Window/RlWindow.cpp
 
         src/GameEngine/Audio/AudioManager.cpp
@@ -78,5 +77,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/MainScene.cpp
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/myButton.cpp
-        )
+        include/raylib/Window/System.hpp src/raylib/Window/System.cpp)
 target_link_libraries(${PROJECT_NAME} raylib)

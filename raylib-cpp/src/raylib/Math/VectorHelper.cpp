@@ -24,6 +24,16 @@
     return rlVector;
 }
 
+::Vector4 raylib::VectorHelper::toRaylibVector(Vector4f vector)
+{
+    ::Vector4 rlVector;
+    rlVector.x = vector.x;
+    rlVector.y = vector.y;
+    rlVector.z = vector.z;
+    rlVector.w = vector.w;
+    return rlVector;
+}
+
 Vector2f raylib::VectorHelper::toVectorf(::Vector2 rlvector)
 {
     return {rlvector.x, rlvector.y};
@@ -32,4 +42,9 @@ Vector2f raylib::VectorHelper::toVectorf(::Vector2 rlvector)
 Vector3f raylib::VectorHelper::toVectorf(::Vector3 rlvector)
 {
     return {rlvector.x, rlvector.y, rlvector.z};
+}
+
+Vector4f raylib::VectorHelper::toVectorf(::Vector4 vector)
+{
+    return {vector.x, vector.y, vector.z, vector.w};
 }

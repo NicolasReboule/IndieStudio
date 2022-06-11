@@ -17,18 +17,21 @@ int main(int ac, char **av)
 
     window->createWindow("Bomberman", 1280, 720, 60);
     raylib::RlCamera camera;
-    raylib::RlImageBuilder image;
-    image.setType(raylib::RlImageBuilder::ImageGradientH);
-    image.setWidth(1000);
-    image.setHeight(1000);
-    image.setLeft(BLUE);
-    image.setRight(RED);
-    raylib::RlImage rlimage(image.build());
+    raylib::RlImageBuilder imageBuilder;
+    raylib::RlImage rlimage = raylib::RlImageBuilder().setType(raylib::RlImageBuilder::ImageGradientH)
+        .setWidth(1000).setHeight(1000)
+        .setLeft(BLUE).setRight(RED)
+        .build();
     raylib::RlTexture texture(rlimage);
+
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();
-
-        raylib::TextureHelper::drawTexture(texture.getTexture(), 0, 0, WHITE);
+        raylib::DrawHelper::clearBackground(WHITE);
+        raylib::TextHelper::drawFPS(10, 10);
+        raylib::DrawHelper::beginMode3D(camera.get());
+        raylib::Shape3DHelper::drawGrid(999, 1.0f);
+        raylib::DrawHelper::endMode3D();
+        //raylib::TextureHelper::drawTexture(texture.getTexture(), 0, 0, WHITE);
         raylib::DrawHelper::endDrawing();
     }
     return (0);
