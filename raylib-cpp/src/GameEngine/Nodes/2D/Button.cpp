@@ -9,7 +9,7 @@
 #include "raylib/Math/VectorHelper.hpp"
 
 GameEngine::Button::Button(const std::string& filename)
-    : _texture(filename), _position((Vector2f){0, 0}), _scale((Vector2f){1, 1}), _bounds(), _rectangle()
+    : _texture(filename), _position({0, 0}), _scale({1, 1}), _bounds(), _rectangle()
 {
     this->_rotationDegrees = 0;
 
@@ -17,8 +17,8 @@ GameEngine::Button::Button(const std::string& filename)
     this->_state = 0;
     this->_frameNum = 3;
     this->_frameHeight = (float)this->_texture.getTexture().height / (float)this->_frameNum;
-    this->_rectangle = (Rectangle){0, 0, (float)this->_texture.getTexture().width, (float)this->_frameHeight};
-    this->_bounds = (Rectangle){this->_position.x, this->_position.y, (float)this->_texture.getTexture().width, this->_frameHeight};
+    this->_rectangle = {0, 0, (float)this->_texture.getTexture().width, (float)this->_frameHeight};
+    this->_bounds = {this->_position.x, this->_position.y, (float)this->_texture.getTexture().width, this->_frameHeight};
 }
 
 void GameEngine::Button::ready()

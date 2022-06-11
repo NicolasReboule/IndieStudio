@@ -8,7 +8,7 @@
 #include "GameEngine/Nodes/StaticBody.hpp"
 
 GameEngine::StaticBody::StaticBody(const std::string &modelPath, const std::string &texturePath)
-    : _model(modelPath, texturePath), _position((Vector3f){0, 0, 0}), _scale((Vector3f){0, 0, 0})
+    : _model(modelPath, texturePath), _position({0, 0, 0}), _scale({0, 0, 0})
 {
  /*   this->_position = (Vector3f){0, 0, 0};
     this->_scale = (Vector3f){0, 0, 0};*/
