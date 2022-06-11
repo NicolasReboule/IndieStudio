@@ -130,4 +130,7 @@ namespace raylib {
         Color _color; /**< The Raylib's Color */
     };
 }
+
+using RlColor = raylib::RlColor;
+
 #endif //INDIESTUDIO_RLCOLOR_HPP

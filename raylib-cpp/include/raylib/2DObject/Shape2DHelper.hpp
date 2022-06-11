@@ -8,52 +8,380 @@
 #ifndef INDIESTUDIO_SHAPE2DHELPER_HPP
 #define INDIESTUDIO_SHAPE2DHELPER_HPP
 
-#include <raylib.h>
 #include "raylib/Math.hpp"
 #include "raylib/Color/RlColor.hpp"
+#include "raylib/Texture/RlTexture.hpp"
+#include <raylib.h>
+#include <rlgl.h>
+#include <vector>
 
 namespace raylib {
+    /**
+     * @brief Helper class for drawing.
+     */
     class Shape2DHelper {
     public:
-        // Basic shapes drawing functions
-        static void drawPixel(int posX, int posY, RlColor color);                                                    // DrawHelper a pixel
-        static void drawPixelV(Vector2f position, RlColor color);                                                     // DrawHelper a pixel (Vector version)
-        static void drawLine(int startPosX, int startPosY, int endPosX, int endPosY, RlColor color);                 // DrawHelper a line
-        static void drawLineV(Vector2f startPos, Vector2f endPos, RlColor color);                                      // DrawHelper a line (Vector version)
-        static void drawLineEx(Vector2f startPos, Vector2f endPos, float thick, RlColor color);                        // DrawHelper a line defining thickness
-        static void drawLineBezier(Vector2f startPos, Vector2f endPos, float thick, RlColor color);                    // DrawHelper a line using cubic-bezier curves in-out
-        static void drawLineBezierQuad(Vector2f startPos, Vector2f endPos, Vector2f controlPos, float thick, RlColor color); //DrawHelper line using quadratic bezier curves with a control point
-        static void drawLineBezierCubic(Vector2f startPos, Vector2f endPos, Vector2f startControlPos, Vector2f endControlPos, float thick, RlColor color); // DrawHelper line using cubic bezier curves with 2 control points
-        static void drawLineStrip(::Vector2 *points, int pointsCount, RlColor color);                                  // DrawHelper lines sequence
-        static void drawCircle(int centerX, int centerY, float radius, RlColor color);                               // DrawHelper a color-filled circle
-        static void drawCircleSector(Vector2f center, float radius, float startAngle, float endAngle, int segments, RlColor color);      // DrawHelper a piece of a circle
-        static void drawCircleSectorLines(Vector2f center, float radius, float startAngle, float endAngle, int segments, RlColor color); // DrawHelper circle sector outline
-        static void drawCircleGradient(int centerX, int centerY, float radius, RlColor color1, RlColor color2);        // DrawHelper a gradient-filled circle
-        static void drawCircleV(Vector2f center, float radius, RlColor color);                                        // DrawHelper a color-filled circle (Vector version)
-        static void drawCircleLines(int centerX, int centerY, float radius, RlColor color);                          // DrawHelper circle outline
-        static void drawEllipse(int centerX, int centerY, float radiusH, float radiusV, RlColor color);              // DrawHelper ellipse
-        static void drawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, RlColor color);         // DrawHelper ellipse outline
-        static void drawRing(Vector2f center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, RlColor color); // DrawHelper ring
-        static void drawRingLines(Vector2f center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, RlColor color);    // DrawHelper ring outline
-        static void drawRectangle(int posX, int posY, int width, int height, RlColor color);                         // DrawHelper a color-filled rectangle
-        static void drawRectangleV(Vector2f position, Vector2f size, RlColor color);                                   // DrawHelper a color-filled rectangle (Vector version)
-        static void drawRectangleRec(Rectangle rec, RlColor color);                                                  // DrawHelper a color-filled rectangle
-        static void drawRectanglePro(Rectangle rec, Vector2f origin, float rotation, RlColor color);                  // DrawHelper a color-filled rectangle with pro parameters
-        static void drawRectangleGradientV(int posX, int posY, int width, int height, RlColor color1, RlColor color2); // DrawHelper a vertical-gradient-filled rectangle
-        static void drawRectangleGradientH(int posX, int posY, int width, int height, RlColor color1, RlColor color2); // DrawHelper a horizontal-gradient-filled rectangle
-        static void drawRectangleGradientEx(Rectangle rec, RlColor col1, RlColor col2, RlColor col3, RlColor col4);        // DrawHelper a gradient-filled rectangle with custom vertex colors
-        static void drawRectangleLines(int posX, int posY, int width, int height, RlColor color);                    // DrawHelper rectangle outline
-        static void drawRectangleLinesEx(Rectangle rec, float lineThick, RlColor color);                               // DrawHelper rectangle outline with extended parameters
-        static void drawRectangleRounded(Rectangle rec, float roundness, int segments, RlColor color);               // DrawHelper rectangle with rounded edges
-        static void drawRectangleRoundedLines(Rectangle rec, float roundness, int segments, float lineThick, RlColor color); // DrawHelper rectangle with rounded edges outline
-        static void drawTriangle(Vector2f v1, Vector2f v2, Vector2f v3, RlColor color);                                 // DrawHelper a color-filled triangle (vertex in counter-clockwise order!)
-        static void drawTriangleLines(Vector2f v1, Vector2f v2, Vector2f v3, RlColor color);                            // DrawHelper triangle outline (vertex in counter-clockwise order!)
-        static void drawTriangleFan(::Vector2 *points, int pointsCount, RlColor color);                                // DrawHelper a triangle fan defined by points (first vertex is the center)
-        static void drawTriangleStrip(::Vector2 *points, int pointsCount, RlColor color);                              // DrawHelper a triangle strip defined by points
-        static void drawPoly(Vector2f center, int sides, float radius, float rotation, RlColor color);                // DrawHelper a regular polygon (Vector version)
-        static void drawPolyLines(Vector2f center, int sides, float radius, float rotation, RlColor color);           // DrawHelper a polygon outline of n sides
-        static void drawPolyLinesEx(Vector2f center, int sides, float radius, float rotation, float lineThick, RlColor color); // DrawHelper a polygon outline of n sides with extended parameters
+        /**
+         * @brief Set texture and rectangle to be used on shapes drawing
+         * NOTE: It can be useful when using basic shapes and one single font,
+         * defining a font char white rectangle would allow drawing everything in a single draw call
+         * @param texture
+         * @param source
+         */
+        static void setShapesTexture(const RlTexture &texture, const Rectangle &source);
+
+        /**
+         * @brief Draw a pixel
+         * @param posX to draw at
+         * @param posY to draw at
+         * @param color to use
+         */
+        static void drawPixel(int posX, int posY, const RlColor &color);
+
+        /**
+         * @brief Draw a pixel
+         * @param position to draw at
+         * @param color to use
+         */
+        static void drawPixel(const Vector2f &position, const RlColor &color);
+
+        /**
+         * @brief Draw a line
+         * @param startPosX to draw from
+         * @param startPosY to draw from
+         * @param endPosX to draw to
+         * @param endPosY to draw to
+         * @param color to use
+         */
+        static void drawLine(int startPosX, int startPosY, int endPosX, int endPosY, const RlColor &color);
+
+        /**
+         * @brief Draw a line
+         * @param startPos to draw from
+         * @param endPos to draw to
+         * @param color to use
+         */
+        static void drawLine(const Vector2f &startPos, const Vector2f &endPos, const RlColor &color);
+
+        /**
+         * @brief Draw a line
+         * @param startPos to draw from
+         * @param endPos to draw to
+         * @param thick to use
+         * @param color to use
+         */
+        static void drawLine(const Vector2f &startPos, const Vector2f &endPos, float thick, const RlColor &color);
+
+        /**
+         * @brief Draw a Line using cubic-bezier curves in-out
+         * @param startPos to draw from
+         * @param endPos to draw to
+         * @param thick to use
+         * @param color to use
+         */
+        static void drawLineBezier(const Vector2f &startPos, const Vector2f &endPos, float thick, const RlColor &color);
+
+        /**
+         * @brief Draw a line using quadratic bezier curves with a control point
+         * @param startPos to draw from
+         * @param endPos to draw to
+         * @param controlPos to use
+         * @param thick to use
+         * @param color to use
+         */
+        static void drawLineBezierQuad(const Vector2f &startPos, const Vector2f &endPos, const Vector2f &controlPos, float thick, const RlColor &color);
+
+        /**
+         * @brief Draw a line using cubic bezier curves with 2 control points
+         * @param startPos to draw from
+         * @param endPos to draw to
+         * @param startControlPos to use
+         * @param endControlPos to use
+         * @param thick to use
+         * @param color to use
+         */
+        static void drawLineBezierCubic(const Vector2f &startPos, const Vector2f &endPos, const Vector2f &startControlPos, const Vector2f &endControlPos, float thick, const RlColor &color);
+
+        /**
+         * @brief Draw lines sequence
+         * @param points
+         * @param pointsCount
+         * @param color
+         */
+        static void drawLineStrip(const std::vector<Vector2f> &points, const RlColor &color);
+
+        /**
+         * @brief Draw a color-filled circle
+         * @param centerX to draw at
+         * @param centerY to draw at
+         * @param radius to use
+         * @param color to use
+         */
+        static void drawCircle(int centerX, int centerY, float radius, const RlColor &color);
+
+        /**
+         * @brief Draw a piece of a circle
+         * @param center to draw at
+         * @param radius to use
+         * @param startAngle to use
+         * @param endAngle to use
+         * @param segments to use
+         * @param color to use
+         */
+        static void drawCircleSector(const Vector2f &center, float radius, float startAngle, float endAngle, int segments, const RlColor &color);
+
+        /**
+         * @brief Draw circle sector outline
+         * @param center to draw at
+         * @param radius to use
+         * @param startAngle to use
+         * @param endAngle to use
+         * @param segments to use
+         * @param color to use
+         */
+        static void drawCircleSectorLines(const Vector2f &center, float radius, float startAngle, float endAngle, int segments, const RlColor &color);
+
+        /**
+         * @brief Draw a gradient-filled circle
+         * @param centerX to draw at
+         * @param centerY to draw at
+         * @param radius to use
+         * @param color1 to use
+         * @param color2 to use
+         */
+        static void drawCircleGradient(int centerX, int centerY, float radius, const RlColor &color1, const RlColor &color2);
+
+        /**
+         * @brief Draw a color-filled circle
+         * @param center
+         * @param radius
+         * @param color
+         */
+        static void drawCircle(const Vector2f &center, float radius, const RlColor &color);
+
+        /**
+         * @brief Draw circle outline
+         * @param centerX to draw at
+         * @param centerY to draw at
+         * @param radius to use
+         * @param color to use
+         */
+        static void drawCircleLines(int centerX, int centerY, float radius, const RlColor &color);
+
+        /**
+         * @brief Draw ellipse
+         * @param centerX to draw at
+         * @param centerY to draw at
+         * @param radiusH to use
+         * @param radiusV to use
+         * @param color to use
+         */
+        static void drawEllipse(int centerX, int centerY, float radiusH, float radiusV, const RlColor &color);
+
+        /**
+         * @brief Draw ellipse outline
+         * @param centerX to draw at
+         * @param centerY to draw at
+         * @param radiusH to use
+         * @param radiusV to use
+         * @param color to use
+         */
+        static void drawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, const RlColor &color);
+
+        /**
+         * @brief Draw a ring
+         * @param center to draw at
+         * @param innerRadius to use
+         * @param outerRadius to use
+         * @param startAngle to use
+         * @param endAngle to use
+         * @param segments to use
+         * @param color to use
+         */
+        static void drawRing(const Vector2f &center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, const RlColor &color);
+
+        /**
+         * @brief Draw a ring outline
+         * @param center to draw at
+         * @param innerRadius to use
+         * @param outerRadius to use
+         * @param startAngle to use
+         * @param endAngle to use
+         * @param segments to use
+         * @param color to use
+         */
+        static void drawRingLines(const Vector2f &center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, const RlColor &color);
+
+        /**
+         * @brief Draw a filled rectangle
+         * @param posX to draw at
+         * @param posY to draw at
+         * @param width to use
+         * @param height to use
+         * @param color to use
+         */
+        static void drawRectangle(int posX, int posY, int width, int height, const RlColor &color);
+
+        /**
+         * @brief Draw a filled rectangle
+         * @param position to draw at
+         * @param size to use
+         * @param color to use
+         */
+        static void drawRectangle(const Vector2f &position, const Vector2f &size, const RlColor &color);
+
+        /**
+         * @brief Draw a filled rectangle
+         * @param rec to draw
+         * @param color to use
+         */
+        static void drawRectangle(const Rectangle &rec, const RlColor &color);
+
+        /**
+         * @brief Draw a filled rectangle
+         * @param rec to draw
+         * @param origin to use
+         * @param rotation to use
+         * @param color to use
+         */
+        static void drawRectangle(const Rectangle &rec, const Vector2f &origin, float rotation, const RlColor &color);
+
+        /**
+         * @brief Draw a vertical-gradient-filled rectangle
+         * @param posX to draw at
+         * @param posY to draw at
+         * @param width to use
+         * @param height to use
+         * @param color1 to use
+         * @param color2 to use
+         */
+        static void drawRectangleGradientV(int posX, int posY, int width, int height, const RlColor &color1, const RlColor &color2);
+
+        /**
+         * @brief Draw a horizontal-gradient-filled rectangle
+         * @param posX to draw at
+         * @param posY to draw at
+         * @param width to use
+         * @param height to use
+         * @param color1 to use
+         * @param color2 to use
+         */
+        static void drawRectangleGradientH(int posX, int posY, int width, int height, const RlColor &color1, const RlColor &color2);
+
+        /**
+         * @brief Draw a gradient-filled rectangle with custom vertex colors
+         * @param posX to draw at
+         * @param posY to draw at
+         * @param width to use
+         * @param height to use
+         * @param color to use
+         */
+        static void drawRectangleGradient(const Rectangle &rec, const RlColor &col1, const RlColor &col2, const RlColor &col3, const RlColor &col4);
+
+        /**
+         * @brief Draw rectangle outline
+         * @param posX to draw at
+         * @param posY to draw at
+         * @param width to use
+         * @param height to use
+         * @param color to use
+         */
+        static void drawRectangleLines(int posX, int posY, int width, int height, const RlColor &color);
+
+        /**
+         * @brief Draw rectangle outline with extended parameters
+         * @param rec to draw
+         * @param lineThick to use
+         * @param color to use
+         */
+        static void drawRectangleLinesEx(const Rectangle &rec, float lineThick, const RlColor &color);
+
+        /**
+         * @brief Draw rectangle with rounded edges
+         * @param rec to draw
+         * @param roundness to use
+         * @param segments to use
+         * @param color to use
+         */
+        static void drawRectangleRounded(const Rectangle &rec, float roundness, int segments, const RlColor &color);
+
+        /**
+         * @brief Draw rectangle with rounded edges outline
+         * @param rec to draw
+         * @param roundness to use
+         * @param segments to use
+         * @param lineThick to use
+         * @param color to use
+         */
+        static void drawRectangleRoundedLines(const Rectangle &rec, float roundness, int segments, float lineThick, const RlColor &color); // DrawHelper
+
+        /**
+         * @brief Draw a color-filled triangle (vertex in counter-clockwise order!)
+         * @param v1 to draw at
+         * @param v2 to draw at
+         * @param v3 to draw at
+         * @param color to use
+         */
+        static void drawTriangle(const Vector2f &v1, const Vector2f &v2, const Vector2f &v3, const RlColor &color);
+
+        /**
+         * @brief Draw a triangle outline (vertex in counter-clockwise order!)
+         * @param v1 to draw at
+         * @param v2 to draw at
+         * @param v3 to draw at
+         * @param color to use
+         */
+        static void drawTriangleLines(const Vector2f &v1, const Vector2f &v2, const Vector2f &v3, const RlColor &color);
+
+        /**
+         * @brief Draw a triangle fan defined by points (first vertex is the center, shared by all triangles)
+         * By default, following vertex should be provided in counter-clockwise order
+         * @param points to draw
+         * @param color to use
+         */
+        static void drawTriangleFan(const std::vector<Vector2f> &points, const RlColor &color);
+
+        /**
+         * @brief Draw a triangle strip defined by points
+         * @param points to draw
+         * @param color to use
+         */
+        static void drawTriangleStrip(const std::vector<Vector2f> &points,  const RlColor &color);
+
+        /**
+         * @brief Draw a regular polygon (Vector version)
+         * @param center to draw at
+         * @param sides to use
+         * @param radius to use
+         * @param rotation to use
+         * @param color to use
+         */
+        static void drawPoly(const Vector2f &center, int sides, float radius, float rotation, const RlColor &color);
+
+        /**
+         * @brief Draw a polygon outline of n sides
+         * @param center to draw at
+         * @param sides to use
+         * @param radius to use
+         * @param rotation to use
+         * @param color to use
+         */
+        static void drawPolyLines(const Vector2f &center, int sides, float radius, float rotation, const RlColor &color);
+
+        /**
+         * @brief Draw a polygon outline of n sides with extended parameters
+         * @param center to draw at
+         * @param sides to use
+         * @param radius to use
+         * @param rotation to use
+         * @param lineThick to use
+         * @param color to use
+         */
+        static void drawPolyLines(const Vector2f &center, int sides, float radius, float rotation, float lineThick, const RlColor &color);
+
     private:
+        static Texture2D _texShapes;
+        static Rectangle _texShapesRec;
     };
 }
 

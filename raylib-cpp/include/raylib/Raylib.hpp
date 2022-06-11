@@ -12,7 +12,7 @@
 
 #include "Math.hpp"
 #include "raylib/2DObject/Collision2DHelper.hpp"
-#include "raylib/2DObject/Shape.hpp"
+#include "raylib/2DObject/Shape2DHelper.hpp"
 #include "raylib/3DObject/Collision3DHelper.hpp"
 #include "raylib/3DObject/MeshGenerator.hpp"
 #include "raylib/3DObject/ModelHelper.hpp"

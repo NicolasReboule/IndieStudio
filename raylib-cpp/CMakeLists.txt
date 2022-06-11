@@ -13,7 +13,6 @@ find_package(raylib REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
         src/raylib/2DObject/Collision2DHelper.cpp
-        src/raylib/2DObject/Shape.cpp
         src/raylib/2DObject/Shape2DHelper.cpp
         src/raylib/3DObject/Collision3DHelper.cpp
         src/raylib/3DObject/MeshGenerator.cpp

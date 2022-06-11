@@ -9,7 +9,7 @@
 #include "raylib/Math/VectorHelper.hpp"
 
 GameEngine::Button::Button(const std::string& filename)
-    : _texture(filename), _position((Vector2f){0, 0}), _scale((Vector2f){1, 1})
+    : _texture(filename), _position((Vector2f){0, 0}), _scale((Vector2f){1, 1}), _bounds(), _rectangle()
 {
     this->_rotationDegrees = 0;
 
@@ -51,7 +51,7 @@ void GameEngine::Button::update()
 
 void GameEngine::Button::draw()
 {
-    raylib::TextureHelper::drawTextureRec(this->_texture.getTexture(), this->_rectangle, this->_position, WHITE);
+    raylib::TextureHelper::drawTextureRec(this->_texture.getTexture(), this->_rectangle, this->_position, RlColor::White);
 }
 
 Vector2f GameEngine::Button::getPosition()

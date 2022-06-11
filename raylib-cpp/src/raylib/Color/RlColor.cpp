@@ -7,33 +7,33 @@
 
 #include "raylib/Color/RlColor.hpp"
 
-static const raylib::RlColor LightGray = raylib::RlColor(200, 200, 200, 255);
-static const raylib::RlColor Gray = raylib::RlColor(130, 130, 130, 255);
-static const raylib::RlColor DarkGray = raylib::RlColor(80, 80, 80, 255);
-static const raylib::RlColor Yellow = raylib::RlColor(253, 249, 0, 255);
-static const raylib::RlColor Gold = raylib::RlColor(255, 203, 0, 255);
-static const raylib::RlColor Orange = raylib::RlColor(255, 161, 0, 255);
-static const raylib::RlColor Pink = raylib::RlColor(255, 109, 194, 255);
-static const raylib::RlColor Red = raylib::RlColor(230, 41, 55, 255);
-static const raylib::RlColor Maroon = raylib::RlColor(190, 33, 55, 255);
-static const raylib::RlColor Green = raylib::RlColor(0, 228, 48, 255);
-static const raylib::RlColor Lime = raylib::RlColor(0, 158, 47, 255);
-static const raylib::RlColor DarkGreen = raylib::RlColor(0, 117, 44, 255);
-static const raylib::RlColor SkyBlue = raylib::RlColor(102, 191, 255, 255);
-static const raylib::RlColor Blue = raylib::RlColor(0, 121, 241, 255);
-static const raylib::RlColor DarkBlue = raylib::RlColor(0, 82, 172, 255);
-static const raylib::RlColor Purple = raylib::RlColor(200, 122, 255, 255);
-static const raylib::RlColor Violet = raylib::RlColor(135, 60, 190, 255);
-static const raylib::RlColor DarkPurple = raylib::RlColor(112, 31, 126, 255);
-static const raylib::RlColor Beige = raylib::RlColor(211, 176, 131, 255);
-static const raylib::RlColor Brown = raylib::RlColor(127, 106, 79, 255);
-static const raylib::RlColor DarkBrown = raylib::RlColor(76, 63, 47, 255);
+const raylib::RlColor raylib::RlColor::LightGray = raylib::RlColor(200, 200, 200, 255);
+const raylib::RlColor raylib::RlColor::Gray = raylib::RlColor(130, 130, 130, 255);
+const raylib::RlColor raylib::RlColor::DarkGray = raylib::RlColor(80, 80, 80, 255);
+const raylib::RlColor raylib::RlColor::Yellow = raylib::RlColor(253, 249, 0, 255);
+const raylib::RlColor raylib::RlColor::Gold = raylib::RlColor(255, 203, 0, 255);
+const raylib::RlColor raylib::RlColor::Orange = raylib::RlColor(255, 161, 0, 255);
+const raylib::RlColor raylib::RlColor::Pink = raylib::RlColor(255, 109, 194, 255);
+const raylib::RlColor raylib::RlColor::Red = raylib::RlColor(230, 41, 55, 255);
+const raylib::RlColor raylib::RlColor::Maroon = raylib::RlColor(190, 33, 55, 255);
+const raylib::RlColor raylib::RlColor::Green = raylib::RlColor(0, 228, 48, 255);
+const raylib::RlColor raylib::RlColor::Lime = raylib::RlColor(0, 158, 47, 255);
+const raylib::RlColor raylib::RlColor::DarkGreen = raylib::RlColor(0, 117, 44, 255);
+const raylib::RlColor raylib::RlColor::SkyBlue = raylib::RlColor(102, 191, 255, 255);
+const raylib::RlColor raylib::RlColor::Blue = raylib::RlColor(0, 121, 241, 255);
+const raylib::RlColor raylib::RlColor::DarkBlue = raylib::RlColor(0, 82, 172, 255);
+const raylib::RlColor raylib::RlColor::Purple = raylib::RlColor(200, 122, 255, 255);
+const raylib::RlColor raylib::RlColor::Violet = raylib::RlColor(135, 60, 190, 255);
+const raylib::RlColor raylib::RlColor::DarkPurple = raylib::RlColor(112, 31, 126, 255);
+const raylib::RlColor raylib::RlColor::Beige = raylib::RlColor(211, 176, 131, 255);
+const raylib::RlColor raylib::RlColor::Brown = raylib::RlColor(127, 106, 79, 255);
+const raylib::RlColor raylib::RlColor::DarkBrown = raylib::RlColor(76, 63, 47, 255);
 
-static const raylib::RlColor White = raylib::RlColor(255, 255, 255, 255);
-static const raylib::RlColor Black = raylib::RlColor(0, 0, 0, 255);
-static const raylib::RlColor Blank = raylib::RlColor(0, 0, 0, 0);
-static const raylib::RlColor Magenta = raylib::RlColor(255, 0, 255, 255);
-static const raylib::RlColor RayWhite = raylib::RlColor(245, 245, 245, 255);
+const raylib::RlColor raylib::RlColor::White = raylib::RlColor(255, 255, 255, 255);
+const raylib::RlColor raylib::RlColor::Black = raylib::RlColor(0, 0, 0, 255);
+const raylib::RlColor raylib::RlColor::Transparent = raylib::RlColor(0, 0, 0, 0);
+const raylib::RlColor raylib::RlColor::Magenta = raylib::RlColor(255, 0, 255, 255);
+const raylib::RlColor raylib::RlColor::RayWhite = raylib::RlColor(245, 245, 245, 255);
 
 raylib::RlColor::RlColor(Color color) : _color()
 {
