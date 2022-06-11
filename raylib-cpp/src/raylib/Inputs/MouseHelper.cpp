@@ -7,24 +7,22 @@
 
 #include "raylib/Inputs/MouseHelper.hpp"
 
-// Input-related functions: mouse
-
-bool raylib::MouseHelper::isMouseButtonPressed(int button)
+bool raylib::MouseHelper::isMouseButtonPressed(const MouseButton &button)
 {
     return IsMouseButtonPressed(button);
 }
 
-bool raylib::MouseHelper::isMouseButtonDown(int button)
+bool raylib::MouseHelper::isMouseButtonDown(const MouseButton &button)
 {
     return IsMouseButtonDown(button);
 }
 
-bool raylib::MouseHelper::isMouseButtonReleased(int button)
+bool raylib::MouseHelper::isMouseButtonReleased(const MouseButton &button)
 {
     return IsMouseButtonReleased(button);
 }
 
-bool raylib::MouseHelper::isMouseButtonUp(int button)
+bool raylib::MouseHelper::isMouseButtonUp(const MouseButton &button)
 {
     return IsMouseButtonUp(button);
 }
@@ -69,7 +67,7 @@ float raylib::MouseHelper::getMouseWheelMove()
     return GetMouseWheelMove();
 }
 
-void raylib::MouseHelper::setMouseCursor(int cursor)
+void raylib::MouseHelper::setMouseCursor(const MouseCursor &cursor)
 {
     SetMouseCursor(cursor);
 }
