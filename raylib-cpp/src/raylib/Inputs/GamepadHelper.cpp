@@ -7,16 +7,14 @@
 
 #include "raylib/Inputs/GamepadHelper.hpp"
 
-// Input-related functions: gamepads
-
 bool raylib::GamepadHelper::isGamepadAvailable(int gamepad)
 {
     return IsGamepadAvailable(gamepad);
 }
 
-const std::string raylib::GamepadHelper::getGamepadName(int gamepad)
+std::string raylib::GamepadHelper::getGamepadName(int gamepad)
 {
-    return std::string(GetGamepadName(gamepad));
+    return GetGamepadName(gamepad);
 }
 
 bool raylib::GamepadHelper::isGamepadButtonPressed(int gamepad, int button)
@@ -41,7 +39,7 @@ bool raylib::GamepadHelper::isGamepadButtonUp(int gamepad, int button)
 
 int raylib::GamepadHelper::getGamepadButtonPressed()
 {
-    return getGamepadButtonPressed();
+    return GetGamepadButtonPressed();
 }
 
 int raylib::GamepadHelper::getGamepadAxisCount(int gamepad)

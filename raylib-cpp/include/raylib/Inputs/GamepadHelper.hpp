@@ -1,34 +1,99 @@
 /*
 ** EPITECH PROJECT, 2022
-** IndieStudio
-** FileHelper description:
-** GamepadHelper
+** GamepadHelper.hpp
+** File description:
+** GamepadHelper.hpp
 */
 
-#ifndef GAMEPAD_HPP_
-#define GAMEPAD_HPP_
+#ifndef INDIESTUDIO_GAMEPADHELPER_HPP
+#define INDIESTUDIO_GAMEPADHELPER_HPP
 
 #include <raylib.h>
 #include <string>
+#include <GLFW/glfw3.h>
 
 namespace raylib {
-
+    /**
+     * @brief Input-related functions: gamepads
+     */
     class GamepadHelper {
-        public:
-            // Input-related functions: gamepads
-            static bool isGamepadAvailable(int gamepad);                                   // Check if a gamepad is available
-            static const std::string getGamepadName(int gamepad);                                // Get gamepad internal name id
-            static bool isGamepadButtonPressed(int gamepad, int button);                   // Check if a gamepad button has been pressed once
-            static bool isGamepadButtonDown(int gamepad,int button);                      // Check if a gamepad button is being pressed
-            static bool isGamepadButtonReleased(int gamepad, int button);                  // Check if a gamepad button has been released once
-            static bool isGamepadButtonUp(int gamepad,int button);                        // Check if a gamepad button is NOT being pressed
-            static int getGamepadButtonPressed();                                      // Get the last gamepad button pressed
-            static int getGamepadAxisCount(int gamepad);                                   // Get gamepad axis count for a gamepad
-            static float getGamepadAxisMovement(int gamepad, int axis);                    // Get axis movement value for a gamepad axis
-            static int setGamepadMappings(const std::string &mappings);                           // Set internal gamepad mappings (SDL_GameControllerDB)
-        private:
-    };
+    public:
 
+        /**
+         * @brief Check if a gamepad is available
+         * @param gamepad the gamepad to check
+         * @return true if the gamepad is available
+         */
+        static bool isGamepadAvailable(int gamepad);
+
+        /**
+         * @brief Get the name of a gamepad
+         * @param gamepad the gamepad to get the name from
+         * @return the name of the gamepad
+         */
+        static std::string getGamepadName(int gamepad);
+
+        /**
+         * @brief Check if a gamepad button is pressed (once)
+         * @param gamepad the gamepad to check
+         * @param button the button to check
+         * @return true if the button is pressed
+         */
+        static bool isGamepadButtonPressed(int gamepad, int button);
+
+        /**
+         * @brief Check if a gamepad button is down
+         * @param gamepad the gamepad to check
+         * @param button the button to check
+         * @return true if the button is down
+         */
+        static bool isGamepadButtonDown(int gamepad, int button);
+
+        /**
+         * @brief Check if a gamepad button is released (once)
+         * @param gamepad the gamepad to check
+         * @param button the button to check
+         * @return true if the button is released
+         */
+        static bool isGamepadButtonReleased(int gamepad, int button);
+
+        /**
+         * @brief Check if a gamepad button is NOT being pressed
+         * @param gamepad the gamepad to check
+         * @param button the button to check
+         * @return true if the button is NOT being pressed
+         */
+        static bool isGamepadButtonUp(int gamepad, int button);
+
+        /**
+         * @brief Get the last pressed gamepad button
+         * @return the last pressed gamepad button
+         */
+        static int getGamepadButtonPressed();
+
+        /**
+         * @brief Get gamepad axis count for a gamepad
+         * @param gamepad the gamepad to get the axis count from
+         * @return the axis count of the gamepad
+         */
+        static int getGamepadAxisCount(int gamepad);
+
+        /**
+         * @brief Get axis movement value for a gamepad axis
+         * @param gamepad the gamepad to get the axis movement from
+         * @param axis the axis to get the movement from
+         * @return the axis movement value
+         */
+        static float getGamepadAxisMovement(int gamepad, int axis);
+
+        /**
+         * @brief Set internal gamepad mappings (SDL_GameControllerDB)
+         * @param mappings the mappings to set
+         * @return the number of mappings set
+         */
+        static int setGamepadMappings(const std::string &mappings);
+
+    };
 }
 
-#endif /* !GAMEPAD_HPP_ */
+#endif //INDIESTUDIO_GAMEPADHELPER_HPP
