@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define INDIESTUDIO_AUDIOMANAGER_HPP</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_raylib_8hpp.html">raylib/Raylib.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_isound_8hpp.html">Isound.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_i_sound_8hpp.html">ISound.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespace_game_engine.html">   15</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_game_engine.html">GameEngine</a> {</div>
@@ -102,13 +102,13 @@ $(function() {
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">static</span> std::shared_ptr&lt;AudioManager&gt; _instance;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        std::vector&lt;std::unique_ptr&lt;GameEngine::Isound&gt;&gt; _sounds;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        std::vector&lt;std::unique_ptr&lt;GameEngine::ISound&gt;&gt; _sounds;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    };</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">//INDIESTUDIO_AUDIOMANAGER_HPP</span></div>
-<div class="ttc" id="a_isound_8hpp_html"><div class="ttname"><a href="_isound_8hpp.html">Isound.hpp</a></div></div>
-<div class="ttc" id="a_raylib_8hpp_html"><div class="ttname"><a href="_raylib_8hpp.html">Raylib.hpp</a></div></div>
+<div class="ttc" id="a_i_sound_8hpp_html"><div class="ttname"><a href="_i_sound_8hpp.html">ISound.hpp</a></div></div>
+<div class="ttc" id="a_raylib_8hpp_html"><div class="ttname"><a href="_raylib_8hpp.html">Raylib.hpp</a></div><div class="ttdoc">All raylib includes.</div></div>
 <div class="ttc" id="aclass_game_engine_1_1_audio_manager_html"><div class="ttname"><a href="class_game_engine_1_1_audio_manager.html">GameEngine::AudioManager</a></div><div class="ttdef"><b>Definition:</b> AudioManager.hpp:16</div></div>
 <div class="ttc" id="aclass_game_engine_1_1_audio_manager_html_a60baaed6de69f37bd0fa01ef103ccb0d"><div class="ttname"><a href="class_game_engine_1_1_audio_manager.html#a60baaed6de69f37bd0fa01ef103ccb0d">GameEngine::AudioManager::getInstance</a></div><div class="ttdeci">static std::shared_ptr&lt; AudioManager &gt; &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> AudioManager.cpp:12</div></div>
 <div class="ttc" id="aclass_game_engine_1_1_audio_manager_html_a82d164d16ce7fb0facaf9ca1b8ef6d3d"><div class="ttname"><a href="class_game_engine_1_1_audio_manager.html#a82d164d16ce7fb0facaf9ca1b8ef6d3d">GameEngine::AudioManager::playSound</a></div><div class="ttdeci">void playSound(const std::string &amp;fileName)</div><div class="ttdef"><b>Definition:</b> AudioManager.cpp:43</div></div>

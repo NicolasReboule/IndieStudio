@@ -74,38 +74,46 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Helper class for raylib core functions.  
+ <a href="classraylib_1_1_core_helper.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_core_helper_8hpp_source.html">CoreHelper.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::CoreHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_core_helper__coll__graph.png" border="0" usemap="#araylib_1_1_core_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_core_helper_coll__map" id="araylib_1_1_core_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,172,200"/>
+<area shape="rect" title="Helper class for raylib core functions." alt="" coords="5,5,172,171"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a90989fb502e5656509b42b49ec4789cc"><td class="memItemLeft" align="right" valign="top">static VrStereoConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#a90989fb502e5656509b42b49ec4789cc">loadVrStereoConfig</a> (VrDeviceInfo device)</td></tr>
-<tr class="separator:a90989fb502e5656509b42b49ec4789cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91009c59b0c9eb9496c11ab6645ea3b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#a91009c59b0c9eb9496c11ab6645ea3b9">unloadVrStereoConfig</a> (VrStereoConfig config)</td></tr>
-<tr class="separator:a91009c59b0c9eb9496c11ab6645ea3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0686aa67c745b0f5a7e5350ba89285d"><td class="memItemLeft" align="right" valign="top">static VrStereoConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#aa0686aa67c745b0f5a7e5350ba89285d">loadVrStereoConfig</a> (const VrDeviceInfo &amp;device)</td></tr>
+<tr class="memdesc:aa0686aa67c745b0f5a7e5350ba89285d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load VR stereo config for VR simulator device parameters.  <a href="classraylib_1_1_core_helper.html#aa0686aa67c745b0f5a7e5350ba89285d">More...</a><br /></td></tr>
+<tr class="separator:aa0686aa67c745b0f5a7e5350ba89285d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e46f4150303069ecf09679bc638230b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#a4e46f4150303069ecf09679bc638230b">unloadVrStereoConfig</a> (const VrStereoConfig &amp;config)</td></tr>
+<tr class="memdesc:a4e46f4150303069ecf09679bc638230b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload VR stereo config.  <a href="classraylib_1_1_core_helper.html#a4e46f4150303069ecf09679bc638230b">More...</a><br /></td></tr>
+<tr class="separator:a4e46f4150303069ecf09679bc638230b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa08dc0c2aac994147c12748d7122208f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#aa08dc0c2aac994147c12748d7122208f">setFramerateLimit</a> (int fps)</td></tr>
+<tr class="memdesc:aa08dc0c2aac994147c12748d7122208f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set target FPS (maximum)  <a href="classraylib_1_1_core_helper.html#aa08dc0c2aac994147c12748d7122208f">More...</a><br /></td></tr>
 <tr class="separator:aa08dc0c2aac994147c12748d7122208f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c65ce8fe7cc55da692df89a685ea39"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#a73c65ce8fe7cc55da692df89a685ea39">getFPS</a> ()</td></tr>
+<tr class="memdesc:a73c65ce8fe7cc55da692df89a685ea39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current FPS.  <a href="classraylib_1_1_core_helper.html#a73c65ce8fe7cc55da692df89a685ea39">More...</a><br /></td></tr>
 <tr class="separator:a73c65ce8fe7cc55da692df89a685ea39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd86f2c6d677b845d93e287d5a0b3078"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#abd86f2c6d677b845d93e287d5a0b3078">getFrameTime</a> ()</td></tr>
+<tr class="memdesc:abd86f2c6d677b845d93e287d5a0b3078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time in seconds for last frame drawn (delta time)  <a href="classraylib_1_1_core_helper.html#abd86f2c6d677b845d93e287d5a0b3078">More...</a><br /></td></tr>
 <tr class="separator:abd86f2c6d677b845d93e287d5a0b3078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5033b1bd65cf9749a186f69550834a93"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#a5033b1bd65cf9749a186f69550834a93">getTime</a> ()</td></tr>
+<tr class="memdesc:a5033b1bd65cf9749a186f69550834a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get elapsed time in seconds since InitWindow()  <a href="classraylib_1_1_core_helper.html#a5033b1bd65cf9749a186f69550834a93">More...</a><br /></td></tr>
 <tr class="separator:a5033b1bd65cf9749a186f69550834a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaae81156d33b7f4eeea40c676934e406"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#aaae81156d33b7f4eeea40c676934e406">takeScreenshot</a> (const std::string &amp;fileName)</td></tr>
-<tr class="separator:aaae81156d33b7f4eeea40c676934e406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf2a9afe800d709f8e21cfbe9231265"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#a8cf2a9afe800d709f8e21cfbe9231265">setConfigFlags</a> (unsigned int flags)</td></tr>
-<tr class="separator:a8cf2a9afe800d709f8e21cfbe9231265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3435c1b20e9fda95a5986b7b687aa2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_core_helper.html#a4f3435c1b20e9fda95a5986b7b687aa2">openURL</a> (const std::string &amp;url)</td></tr>
+<tr class="memdesc:a4f3435c1b20e9fda95a5986b7b687aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open URL with default system browser (if available)  <a href="classraylib_1_1_core_helper.html#a4f3435c1b20e9fda95a5986b7b687aa2">More...</a><br /></td></tr>
 <tr class="separator:a4f3435c1b20e9fda95a5986b7b687aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Helper class for raylib core functions. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a73c65ce8fe7cc55da692df89a685ea39" name="a73c65ce8fe7cc55da692df89a685ea39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73c65ce8fe7cc55da692df89a685ea39">&#9670;&nbsp;</a></span>getFPS()</h2>
 
@@ -128,6 +136,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get current FPS. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current FPS </dd></dl>
 
 </div>
 </div>
@@ -154,6 +165,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get time in seconds for last frame drawn (delta time) </p>
+<dl class="section return"><dt>Returns</dt><dd>the time in seconds for last frame drawn (delta time) </dd></dl>
+
 </div>
 </div>
 <a id="a5033b1bd65cf9749a186f69550834a93" name="a5033b1bd65cf9749a186f69550834a93"></a>
@@ -179,10 +193,13 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get elapsed time in seconds since InitWindow() </p>
+<dl class="section return"><dt>Returns</dt><dd>the elapsed time in seconds since InitWindow() </dd></dl>
+
 </div>
 </div>
-<a id="a90989fb502e5656509b42b49ec4789cc" name="a90989fb502e5656509b42b49ec4789cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90989fb502e5656509b42b49ec4789cc">&#9670;&nbsp;</a></span>loadVrStereoConfig()</h2>
+<a id="aa0686aa67c745b0f5a7e5350ba89285d" name="aa0686aa67c745b0f5a7e5350ba89285d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0686aa67c745b0f5a7e5350ba89285d">&#9670;&nbsp;</a></span>loadVrStereoConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +210,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">VrStereoConfig raylib::CoreHelper::loadVrStereoConfig </td>
           <td>(</td>
-          <td class="paramtype">VrDeviceInfo&#160;</td>
+          <td class="paramtype">const VrDeviceInfo &amp;&#160;</td>
           <td class="paramname"><em>device</em></td><td>)</td>
           <td></td>
         </tr>
@@ -204,6 +221,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Load VR stereo config for VR simulator device parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>the device to load the config for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>VR stereo config </dd></dl>
 
 </div>
 </div>
@@ -231,31 +257,13 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a8cf2a9afe800d709f8e21cfbe9231265" name="a8cf2a9afe800d709f8e21cfbe9231265"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cf2a9afe800d709f8e21cfbe9231265">&#9670;&nbsp;</a></span>setConfigFlags()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::CoreHelper::setConfigFlags </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>flags</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Open URL with default system browser (if available) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>the URL to open </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -282,46 +290,28 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set target FPS (maximum) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fps</td><td>the target FPS </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_core_helper_aa08dc0c2aac994147c12748d7122208f_icgraph.png" border="0" usemap="#aclassraylib_1_1_core_helper_aa08dc0c2aac994147c12748d7122208f_icgraph" alt=""/></div>
 <map name="aclassraylib_1_1_core_helper_aa08dc0c2aac994147c12748d7122208f_icgraph" id="aclassraylib_1_1_core_helper_aa08dc0c2aac994147c12748d7122208f_icgraph">
-<area shape="rect" title=" " alt="" coords="212,5,347,47"/>
+<area shape="rect" title="Set target FPS (maximum)" alt="" coords="212,5,347,47"/>
 <area shape="rect" href="classraylib_1_1_rl_window.html#a8528b120b6056739b2d6bd1fe6574428" title="Create a window with the given title, width and height." alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aaae81156d33b7f4eeea40c676934e406" name="aaae81156d33b7f4eeea40c676934e406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaae81156d33b7f4eeea40c676934e406">&#9670;&nbsp;</a></span>takeScreenshot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::CoreHelper::takeScreenshot </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a91009c59b0c9eb9496c11ab6645ea3b9" name="a91009c59b0c9eb9496c11ab6645ea3b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91009c59b0c9eb9496c11ab6645ea3b9">&#9670;&nbsp;</a></span>unloadVrStereoConfig()</h2>
+<a id="a4e46f4150303069ecf09679bc638230b" name="a4e46f4150303069ecf09679bc638230b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e46f4150303069ecf09679bc638230b">&#9670;&nbsp;</a></span>unloadVrStereoConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +322,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void raylib::CoreHelper::unloadVrStereoConfig </td>
           <td>(</td>
-          <td class="paramtype">VrStereoConfig&#160;</td>
+          <td class="paramtype">const VrStereoConfig &amp;&#160;</td>
           <td class="paramname"><em>config</em></td><td>)</td>
           <td></td>
         </tr>
@@ -343,6 +333,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Unload VR stereo config. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>the config to unload </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

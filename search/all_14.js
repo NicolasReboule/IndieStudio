@@ -12,7 +12,12 @@ var searchData=
   ['vector3f_9',['Vector3f',['../_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb',1,'Vector.hpp']]],
   ['vector3i_10',['Vector3i',['../_vector_8hpp.html#a561c5cb951bdc5081ed9e85c0cb0e20a',1,'Vector.hpp']]],
   ['vector3u_11',['Vector3u',['../_vector_8hpp.html#a180bdd8297fa76013c6e24469b2f5b8f',1,'Vector.hpp']]],
-  ['vectorhelper_12',['VectorHelper',['../classraylib_1_1_vector_helper.html',1,'raylib']]],
-  ['vectorhelper_2ecpp_13',['VectorHelper.cpp',['../_vector_helper_8cpp.html',1,'']]],
-  ['vectorhelper_2ehpp_14',['VectorHelper.hpp',['../_vector_helper_8hpp.html',1,'']]]
+  ['vector4_12',['Vector4',['../structraylib_1_1_vector4.html',1,'raylib::Vector4&lt; T &gt;'],['../structraylib_1_1_vector4.html#acf9ffde7dbdc287a82fb9d8eb475a565',1,'raylib::Vector4::Vector4()']]],
+  ['vector4f_13',['Vector4f',['../_vector_8hpp.html#ab6d23b6a75706ef7840b1fe071045889',1,'Vector.hpp']]],
+  ['vector4i_14',['Vector4i',['../_vector_8hpp.html#a2002155ebfffd228e237262ee5b9220d',1,'Vector.hpp']]],
+  ['vector4u_15',['Vector4u',['../_vector_8hpp.html#ad195e7996e30ff0dbab544beac463e28',1,'Vector.hpp']]],
+  ['vectorhelper_16',['VectorHelper',['../classraylib_1_1_vector_helper.html',1,'raylib']]],
+  ['vectorhelper_2ecpp_17',['VectorHelper.cpp',['../_vector_helper_8cpp.html',1,'']]],
+  ['vectorhelper_2ehpp_18',['VectorHelper.hpp',['../_vector_helper_8hpp.html',1,'']]],
+  ['violet_19',['Violet',['../classraylib_1_1_rl_color.html#a53f8f640b34bb05b7517ac448bcdc8f0',1,'raylib::RlColor']]]
 ];

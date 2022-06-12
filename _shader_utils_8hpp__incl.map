@@ -1,6 +1,13 @@
 <map id="raylib&#45;cpp/include/raylib/Shader/ShaderUtils.hpp" name="raylib&#45;cpp/include/raylib/Shader/ShaderUtils.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,203,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="31,169,94,196"/>
-<area shape="rect" id="node3" href="$_rl_shader_8hpp.html" title=" " alt="" coords="79,95,257,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="141,169,195,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,414,47"/>
+<area shape="rect" id="node2" href="$_rl_shader_8hpp.html" title=" " alt="" coords="98,95,277,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="312,468,375,495"/>
+<area shape="rect" id="node3" href="$_rl_texture_8hpp.html" title=" " alt="" coords="182,169,364,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="95,319,150,345"/>
+<area shape="rect" id="node4" href="$_rl_image_8hpp.html" title=" " alt="" coords="210,244,378,271"/>
+<area shape="rect" id="node5" href="$_rl_color_8hpp.html" title=" " alt="" coords="174,319,330,345"/>
+<area shape="rect" id="node10" title=" " alt="" coords="405,319,464,345"/>
+<area shape="rect" id="node6" href="$_vector_8hpp.html" title=" " alt="" coords="44,393,195,420"/>
+<area shape="rect" id="node9" title=" " alt="" coords="220,393,281,420"/>
+<area shape="rect" id="node7" title=" " alt="" coords="84,468,156,495"/>
 </map>

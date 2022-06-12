@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['soundcategory_0',['SoundCategory',['../_isound_8hpp.html#a50a44a76ef922639676d5ea1e8cebfc7',1,'Isound.hpp']]]
+  ['parametername_0',['ParameterName',['../classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98',1,'raylib::RlMeshBuilder::ParameterName()'],['../classraylib_1_1_rl_image_builder.html#a83af25e753298a7cb98bfc0962c3fa1f',1,'raylib::RlImageBuilder::ParameterName()']]]
 ];

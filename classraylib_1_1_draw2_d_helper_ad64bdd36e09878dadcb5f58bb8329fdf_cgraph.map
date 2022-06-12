@@ -1,0 +1,4 @@
+<map id="raylib::Draw2DHelper::drawRectangleGradientV" name="raylib::Draw2DHelper::drawRectangleGradientV">
+<area shape="rect" id="node1" title="Draw a vertical&#45;gradient&#45;filled rectangle." alt="" coords="5,5,177,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="225,13,380,39"/>
+</map>

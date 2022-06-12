@@ -1,9 +1,9 @@
 <map id="raylib&#45;cpp/src/raylib/Inputs/TouchHelper.cpp" name="raylib&#45;cpp/src/raylib/Inputs/TouchHelper.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="21,5,185,47"/>
-<area shape="rect" id="node2" href="$_touch_helper_8hpp.html" title=" " alt="" coords="5,95,200,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,393,159,420"/>
-<area shape="rect" id="node4" href="$_math_8hpp.html" title=" " alt="" coords="115,169,224,196"/>
-<area shape="rect" id="node5" href="$_vector_8hpp.html" title=" " alt="" coords="166,319,317,345"/>
-<area shape="rect" id="node7" href="$_vector_helper_8hpp.html" title=" " alt="" coords="75,244,264,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="205,393,277,420"/>
+<area shape="rect" id="node1" title=" " alt="" coords="137,5,301,47"/>
+<area shape="rect" id="node2" href="$_touch_helper_8hpp.html" title=" " alt="" coords="122,95,317,121"/>
+<area shape="rect" id="node3" href="$_math_8hpp.html" title=" " alt="" coords="99,169,209,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="163,393,225,420"/>
+<area shape="rect" id="node4" href="$_vector_8hpp.html" title=" " alt="" coords="5,319,156,345"/>
+<area shape="rect" id="node7" href="$_vector_helper_8hpp.html" title=" " alt="" coords="59,244,249,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="45,393,117,420"/>
 </map>

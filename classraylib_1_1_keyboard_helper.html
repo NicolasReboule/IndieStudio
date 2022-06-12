@@ -74,34 +74,49 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Input-related functions: keyboard.  
+ <a href="classraylib_1_1_keyboard_helper.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_keyboard_helper_8hpp_source.html">KeyboardHelper.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::KeyboardHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_keyboard_helper__coll__graph.png" border="0" usemap="#araylib_1_1_keyboard_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_keyboard_helper_coll__map" id="araylib_1_1_keyboard_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,156,171"/>
+<area shape="rect" title="Input&#45;related functions: keyboard." alt="" coords="5,5,156,185"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b8b8cb583c123bbdacb7e61447c9ddc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#a8b8b8cb583c123bbdacb7e61447c9ddc">isKeyPressed</a> (int key)</td></tr>
+<tr class="memdesc:a8b8b8cb583c123bbdacb7e61447c9ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key has been pressed once.  <a href="classraylib_1_1_keyboard_helper.html#a8b8b8cb583c123bbdacb7e61447c9ddc">More...</a><br /></td></tr>
 <tr class="separator:a8b8b8cb583c123bbdacb7e61447c9ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b28d1b713c42f74fb7bf1145a900da9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#a0b28d1b713c42f74fb7bf1145a900da9">isKeyDown</a> (int key)</td></tr>
+<tr class="memdesc:a0b28d1b713c42f74fb7bf1145a900da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key is being pressed.  <a href="classraylib_1_1_keyboard_helper.html#a0b28d1b713c42f74fb7bf1145a900da9">More...</a><br /></td></tr>
 <tr class="separator:a0b28d1b713c42f74fb7bf1145a900da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56235f6708fcfc74e6abd66ee9111016"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#a56235f6708fcfc74e6abd66ee9111016">isKeyReleased</a> (int key)</td></tr>
+<tr class="memdesc:a56235f6708fcfc74e6abd66ee9111016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key has been released once.  <a href="classraylib_1_1_keyboard_helper.html#a56235f6708fcfc74e6abd66ee9111016">More...</a><br /></td></tr>
 <tr class="separator:a56235f6708fcfc74e6abd66ee9111016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3e8f6bfed6b34c109308fb2b6404609"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#ad3e8f6bfed6b34c109308fb2b6404609">isKeyUp</a> (int key)</td></tr>
+<tr class="memdesc:ad3e8f6bfed6b34c109308fb2b6404609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key is NOT being pressed.  <a href="classraylib_1_1_keyboard_helper.html#ad3e8f6bfed6b34c109308fb2b6404609">More...</a><br /></td></tr>
 <tr class="separator:ad3e8f6bfed6b34c109308fb2b6404609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada7d572e39bf81f9575db48ad0f3a5f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#ada7d572e39bf81f9575db48ad0f3a5f1">setExitKey</a> (int key)</td></tr>
+<tr class="memdesc:ada7d572e39bf81f9575db48ad0f3a5f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom key to exit program (default is ESC)  <a href="classraylib_1_1_keyboard_helper.html#ada7d572e39bf81f9575db48ad0f3a5f1">More...</a><br /></td></tr>
 <tr class="separator:ada7d572e39bf81f9575db48ad0f3a5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91faad54f552ef280542cf064975a06f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#a91faad54f552ef280542cf064975a06f">getKeyPressed</a> ()</td></tr>
+<tr class="memdesc:a91faad54f552ef280542cf064975a06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty.  <a href="classraylib_1_1_keyboard_helper.html#a91faad54f552ef280542cf064975a06f">More...</a><br /></td></tr>
 <tr class="separator:a91faad54f552ef280542cf064975a06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9e153c1a5a3d85411786ce6ad5e96e6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#af9e153c1a5a3d85411786ce6ad5e96e6">getCharPressed</a> ()</td></tr>
+<tr class="memdesc:af9e153c1a5a3d85411786ce6ad5e96e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty.  <a href="classraylib_1_1_keyboard_helper.html#af9e153c1a5a3d85411786ce6ad5e96e6">More...</a><br /></td></tr>
 <tr class="separator:af9e153c1a5a3d85411786ce6ad5e96e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ee8bfc1e113794bf290960eb0e0ab2"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_keyboard_helper.html#ae8ee8bfc1e113794bf290960eb0e0ab2">getKeyName</a> (const int &amp;key, const int &amp;scancode)</td></tr>
+<tr class="memdesc:ae8ee8bfc1e113794bf290960eb0e0ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get key name.  <a href="classraylib_1_1_keyboard_helper.html#ae8ee8bfc1e113794bf290960eb0e0ab2">More...</a><br /></td></tr>
+<tr class="separator:ae8ee8bfc1e113794bf290960eb0e0ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Input-related functions: keyboard. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af9e153c1a5a3d85411786ce6ad5e96e6" name="af9e153c1a5a3d85411786ce6ad5e96e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9e153c1a5a3d85411786ce6ad5e96e6">&#9670;&nbsp;</a></span>getCharPressed()</h2>
 
@@ -124,6 +139,55 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd>the char pressed </dd></dl>
+
+</div>
+</div>
+<a id="ae8ee8bfc1e113794bf290960eb0e0ab2" name="ae8ee8bfc1e113794bf290960eb0e0ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ee8bfc1e113794bf290960eb0e0ab2">&#9670;&nbsp;</a></span>getKeyName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string raylib::KeyboardHelper::getKeyName </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>scancode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get key name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key to get the name </td></tr>
+    <tr><td class="paramname">scancode</td><td>the scancode to get the name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the key name </dd></dl>
 
 </div>
 </div>
@@ -149,6 +213,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd>the key pressed </dd></dl>
 
 </div>
 </div>
@@ -176,6 +243,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if a key is being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the key is being pressed </dd></dl>
+
 </div>
 </div>
 <a id="a8b8b8cb583c123bbdacb7e61447c9ddc" name="a8b8b8cb583c123bbdacb7e61447c9ddc"></a>
@@ -201,6 +277,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if a key has been pressed once. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the key is pressed </dd></dl>
 
 </div>
 </div>
@@ -228,6 +313,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if a key has been released once. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the key is released </dd></dl>
+
 </div>
 </div>
 <a id="ad3e8f6bfed6b34c109308fb2b6404609" name="ad3e8f6bfed6b34c109308fb2b6404609"></a>
@@ -254,6 +348,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if a key is NOT being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the key is NOT being pressed </dd></dl>
+
 </div>
 </div>
 <a id="ada7d572e39bf81f9575db48ad0f3a5f1" name="ada7d572e39bf81f9575db48ad0f3a5f1"></a>
@@ -279,6 +382,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set a custom key to exit program (default is ESC) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key to set </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

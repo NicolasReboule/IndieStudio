@@ -1,0 +1,5 @@
+<map id="raylib::Collision2DHelper::checkCollisionLines" name="raylib::Collision2DHelper::checkCollisionLines">
+<area shape="rect" id="node1" title="Check the collision between two lines defined by two points each, returns collision point by referenc..." alt="" coords="5,39,167,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="215,5,349,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#a8cb9b9c972dc4b95ee1c1297542bba10" title=" " alt="" coords="215,71,349,112"/>
+</map>

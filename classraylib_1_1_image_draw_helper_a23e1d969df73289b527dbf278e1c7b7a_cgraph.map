@@ -1,0 +1,5 @@
+<map id="raylib::ImageDrawHelper::drawRectangle" name="raylib::ImageDrawHelper::drawRectangle">
+<area shape="rect" id="node1" title="Draw rectangle within an image." alt="" coords="5,23,168,65"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="222,5,377,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_image.html#ac6b5367fe5b7a7ea87880c6d136ce743" title="Get the image (const)" alt="" coords="216,56,383,83"/>
+</map>

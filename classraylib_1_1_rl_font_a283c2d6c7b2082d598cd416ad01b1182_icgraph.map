@@ -1,4 +1,6 @@
 <map id="raylib::RlFont::getFont" name="raylib::RlFont::getFont">
-<area shape="rect" id="node1" title=" " alt="" coords="175,13,321,39"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_text_helper.html#abd8f8653c816f8dd885187581da32d14" title=" " alt="" coords="5,5,127,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="216,78,363,105"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_image_draw_helper.html#ad2da82d25c8c0ef7d9d04b9caa391b0d" title="Draw text (custom sprite font) within an image (destination)" alt="" coords="5,5,168,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_text_helper.html#abd8f8653c816f8dd885187581da32d14" title=" " alt="" coords="26,71,147,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_image_helper.html#a93e9ae4b0c2198194891f066cc8d1e30" title="Create an image from text (custom sprite font)" alt="" coords="21,136,153,177"/>
 </map>

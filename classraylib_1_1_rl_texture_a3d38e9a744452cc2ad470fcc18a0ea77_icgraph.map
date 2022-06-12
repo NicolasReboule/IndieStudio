@@ -1,0 +1,5 @@
+<map id="raylib::RlTexture::getTexture" name="raylib::RlTexture::getTexture">
+<area shape="rect" id="node1" title=" " alt="" coords="221,39,340,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_draw2_d_helper.html#a534798dba9d79a3d18f612ae369a8e70" title="Set texture and rectangle to be used on shapes drawing NOTE: It can be useful when using basic shapes..." alt="" coords="18,5,161,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_shader.html#a433b8507eb8ce02dae514c54703c24d2" title="Set shader uniform value for texture (sampler2d)" alt="" coords="5,71,173,112"/>
+</map>

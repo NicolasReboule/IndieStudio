@@ -74,13 +74,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Shader management functions NOTE: Shader functionality is not available on OpenGL 1.1.  
+ <a href="classraylib_1_1_rl_shader.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_rl_shader_8hpp_source.html">RlShader.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::RlShader:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_rl_shader__coll__graph.png" border="0" usemap="#araylib_1_1_rl_shader_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_rl_shader_coll__map" id="araylib_1_1_rl_shader_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,147,229"/>
+<area shape="rect" title="Shader management functions NOTE: Shader functionality is not available on OpenGL 1...." alt="" coords="5,5,147,229"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -91,25 +94,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a944a929c52824181349a4cec5e41b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a1a944a929c52824181349a4cec5e41b9">~RlShader</a> ()</td></tr>
 <tr class="separator:a1a944a929c52824181349a4cec5e41b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac36fc88c654b1c2e997dd832f1f16055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#ac36fc88c654b1c2e997dd832f1f16055">load</a> (const std::string &amp;vsFileName, const std::string &amp;fsFileName)</td></tr>
+<tr class="memdesc:ac36fc88c654b1c2e997dd832f1f16055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load shader from files and bind default locations.  <a href="classraylib_1_1_rl_shader.html#ac36fc88c654b1c2e997dd832f1f16055">More...</a><br /></td></tr>
 <tr class="separator:ac36fc88c654b1c2e997dd832f1f16055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b090df5ad69330b95c53621389f054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a90b090df5ad69330b95c53621389f054">loadFromMemory</a> (const std::string &amp;vsCode, const std::string &amp;fsCode)</td></tr>
+<tr class="memdesc:a90b090df5ad69330b95c53621389f054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load shader from code strings and bind default locations.  <a href="classraylib_1_1_rl_shader.html#a90b090df5ad69330b95c53621389f054">More...</a><br /></td></tr>
 <tr class="separator:a90b090df5ad69330b95c53621389f054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af01c5152a4ff3a02f6a55e336aaf450a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#af01c5152a4ff3a02f6a55e336aaf450a">getLocation</a> (const std::string &amp;uniformName)</td></tr>
+<tr class="memdesc:af01c5152a4ff3a02f6a55e336aaf450a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get shader uniform location.  <a href="classraylib_1_1_rl_shader.html#af01c5152a4ff3a02f6a55e336aaf450a">More...</a><br /></td></tr>
 <tr class="separator:af01c5152a4ff3a02f6a55e336aaf450a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf4f856d6d8fd847e7f2917ae4d58e73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#abf4f856d6d8fd847e7f2917ae4d58e73">getLocationAttrib</a> (const std::string &amp;attribName)</td></tr>
+<tr class="memdesc:abf4f856d6d8fd847e7f2917ae4d58e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get shader attribute location.  <a href="classraylib_1_1_rl_shader.html#abf4f856d6d8fd847e7f2917ae4d58e73">More...</a><br /></td></tr>
 <tr class="separator:abf4f856d6d8fd847e7f2917ae4d58e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1126e9da8007c61cdd245c153ad45967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a1126e9da8007c61cdd245c153ad45967">setValue</a> (int locIndex, const void *value, int uniformType)</td></tr>
+<tr class="memdesc:a1126e9da8007c61cdd245c153ad45967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shader uniform value.  <a href="classraylib_1_1_rl_shader.html#a1126e9da8007c61cdd245c153ad45967">More...</a><br /></td></tr>
 <tr class="separator:a1126e9da8007c61cdd245c153ad45967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1705d6b17deab2a125178e92b0cdd3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a1705d6b17deab2a125178e92b0cdd3d4">setValueV</a> (int locIndex, const void *value, int uniformType, int count)</td></tr>
+<tr class="memdesc:a1705d6b17deab2a125178e92b0cdd3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shader uniform value vector.  <a href="classraylib_1_1_rl_shader.html#a1705d6b17deab2a125178e92b0cdd3d4">More...</a><br /></td></tr>
 <tr class="separator:a1705d6b17deab2a125178e92b0cdd3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a10d64a9e078207054ed49db7b37bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a3a10d64a9e078207054ed49db7b37bb2">setValueMatrix</a> (int locIndex, Matrix mat)</td></tr>
-<tr class="separator:a3a10d64a9e078207054ed49db7b37bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1bbf3bb8bcf7d2c7a57ef93fb857153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#ae1bbf3bb8bcf7d2c7a57ef93fb857153">setValueMatrix</a> (int locIndex, const Matrix &amp;mat)</td></tr>
+<tr class="memdesc:ae1bbf3bb8bcf7d2c7a57ef93fb857153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shader uniform value (matrix 4x4)  <a href="classraylib_1_1_rl_shader.html#ae1bbf3bb8bcf7d2c7a57ef93fb857153">More...</a><br /></td></tr>
+<tr class="separator:ae1bbf3bb8bcf7d2c7a57ef93fb857153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433b8507eb8ce02dae514c54703c24d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a433b8507eb8ce02dae514c54703c24d2">setValueTexture</a> (int locIndex, const <a class="el" href="classraylib_1_1_rl_texture.html">RlTexture</a> &amp;texture)</td></tr>
+<tr class="memdesc:a433b8507eb8ce02dae514c54703c24d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shader uniform value for texture (sampler2d)  <a href="classraylib_1_1_rl_shader.html#a433b8507eb8ce02dae514c54703c24d2">More...</a><br /></td></tr>
+<tr class="separator:a433b8507eb8ce02dae514c54703c24d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3850f179463757bac91e9f6a7ce0b269"><td class="memItemLeft" align="right" valign="top">const Shader &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a3850f179463757bac91e9f6a7ce0b269">getShader</a> () const</td></tr>
+<tr class="memdesc:a3850f179463757bac91e9f6a7ce0b269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the raylib Shader's.  <a href="classraylib_1_1_rl_shader.html#a3850f179463757bac91e9f6a7ce0b269">More...</a><br /></td></tr>
 <tr class="separator:a3850f179463757bac91e9f6a7ce0b269"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e0f1c8981a238a87c069eaea7523071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_shader.html#a3e0f1c8981a238a87c069eaea7523071">setValueTexture</a> (int locIndex, Texture2D texture)</td></tr>
-<tr class="separator:a3e0f1c8981a238a87c069eaea7523071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Shader management functions NOTE: Shader functionality is not available on OpenGL 1.1. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab3a668b1e16ea7e66170955d5d5095ba" name="ab3a668b1e16ea7e66170955d5d5095ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3a668b1e16ea7e66170955d5d5095ba">&#9670;&nbsp;</a></span>RlShader()</h2>
 
@@ -161,6 +175,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get shader uniform location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uniformName</td><td>to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the location of the uniform </dd></dl>
+
 </div>
 </div>
 <a id="abf4f856d6d8fd847e7f2917ae4d58e73" name="abf4f856d6d8fd847e7f2917ae4d58e73"></a>
@@ -179,6 +202,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get shader attribute location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attribName</td><td>to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the location of the attribute </dd></dl>
+
 </div>
 </div>
 <a id="a3850f179463757bac91e9f6a7ce0b269" name="a3850f179463757bac91e9f6a7ce0b269"></a>
@@ -195,6 +227,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the raylib Shader's. </p>
+<dl class="section return"><dt>Returns</dt><dd>the raylib Shader </dd></dl>
 
 </div>
 </div>
@@ -224,6 +259,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Load shader from files and bind default locations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vsFileName</td><td>to load </td></tr>
+    <tr><td class="paramname">fsFileName</td><td>to load </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a90b090df5ad69330b95c53621389f054" name="a90b090df5ad69330b95c53621389f054"></a>
@@ -251,6 +295,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Load shader from code strings and bind default locations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vsCode</td><td>to load </td></tr>
+    <tr><td class="paramname">fsCode</td><td>to load </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -286,10 +339,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set shader uniform value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locIndex</td><td>to set </td></tr>
+    <tr><td class="paramname">value</td><td>to set </td></tr>
+    <tr><td class="paramname">uniformType</td><td>to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a3a10d64a9e078207054ed49db7b37bb2" name="a3a10d64a9e078207054ed49db7b37bb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a10d64a9e078207054ed49db7b37bb2">&#9670;&nbsp;</a></span>setValueMatrix()</h2>
+<a id="ae1bbf3bb8bcf7d2c7a57ef93fb857153" name="ae1bbf3bb8bcf7d2c7a57ef93fb857153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1bbf3bb8bcf7d2c7a57ef93fb857153">&#9670;&nbsp;</a></span>setValueMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +366,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Matrix&#160;</td>
+          <td class="paramtype">const Matrix &amp;&#160;</td>
           <td class="paramname"><em>mat</em>&#160;</td>
         </tr>
         <tr>
@@ -314,10 +377,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set shader uniform value (matrix 4x4) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locIndex</td><td>to set </td></tr>
+    <tr><td class="paramname">mat</td><td>to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a3e0f1c8981a238a87c069eaea7523071" name="a3e0f1c8981a238a87c069eaea7523071"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e0f1c8981a238a87c069eaea7523071">&#9670;&nbsp;</a></span>setValueTexture()</h2>
+<a id="a433b8507eb8ce02dae514c54703c24d2" name="a433b8507eb8ce02dae514c54703c24d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a433b8507eb8ce02dae514c54703c24d2">&#9670;&nbsp;</a></span>setValueTexture()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +403,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Texture2D&#160;</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_texture.html">RlTexture</a> &amp;&#160;</td>
           <td class="paramname"><em>texture</em>&#160;</td>
         </tr>
         <tr>
@@ -341,6 +413,24 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set shader uniform value for texture (sampler2d) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locIndex</td><td>to set </td></tr>
+    <tr><td class="paramname">texture</td><td>to set </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_shader_a433b8507eb8ce02dae514c54703c24d2_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_shader_a433b8507eb8ce02dae514c54703c24d2_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_shader_a433b8507eb8ce02dae514c54703c24d2_cgraph" id="aclassraylib_1_1_rl_shader_a433b8507eb8ce02dae514c54703c24d2_cgraph">
+<area shape="rect" title="Set shader uniform value for texture (sampler2d)" alt="" coords="5,5,173,47"/>
+<area shape="rect" href="classraylib_1_1_rl_texture.html#a3d38e9a744452cc2ad470fcc18a0ea77" title=" " alt="" coords="221,5,340,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -381,6 +471,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set shader uniform value vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locIndex</td><td>to set </td></tr>
+    <tr><td class="paramname">value</td><td>to set </td></tr>
+    <tr><td class="paramname">uniformType</td><td>to set </td></tr>
+    <tr><td class="paramname">count</td><td>to set </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

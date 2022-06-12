@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['knotradseg_0',['KnotRadSeg',['../classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a87da7550d9c42cde027e65eff85d2ebb',1,'raylib::RlMeshBuilder']]]
+  ['factor_0',['Factor',['../classraylib_1_1_rl_image_builder.html#a83af25e753298a7cb98bfc0962c3fa1fa0c4ba107b9cff27d797a5255b0cc60fc',1,'raylib::RlImageBuilder']]],
+  ['fx_1',['FX',['../_i_sound_8hpp.html#a50a44a76ef922639676d5ea1e8cebfc7a48b424735b6e21a4a4fe044feaee5a50',1,'ISound.hpp']]]
 ];

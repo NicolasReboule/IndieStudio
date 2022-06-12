@@ -69,6 +69,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classraylib_1_1_rl_color-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">raylib::RlColor Class Reference</div></div>
 </div><!--header-->
@@ -80,33 +81,116 @@ Collaboration diagram for raylib::RlColor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_rl_color__coll__graph.png" border="0" usemap="#araylib_1_1_rl_color_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_rl_color_coll__map" id="araylib_1_1_rl_color_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,105,171"/>
+<area shape="rect" title=" " alt="" coords="5,5,109,479"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8cb03dc0d113f001af8ca5a4884a2d17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a8cb03dc0d113f001af8ca5a4884a2d17">RlColor</a> (Color color)</td></tr>
+<tr class="memdesc:a8cb03dc0d113f001af8ca5a4884a2d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> from Raylib's Color.  <a href="classraylib_1_1_rl_color.html#a8cb03dc0d113f001af8ca5a4884a2d17">More...</a><br /></td></tr>
 <tr class="separator:a8cb03dc0d113f001af8ca5a4884a2d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b4efedf7706bdab519bb21702868ed6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a1b4efedf7706bdab519bb21702868ed6">RlColor</a> (unsigned int r, unsigned int g, unsigned int b, unsigned int a)</td></tr>
-<tr class="separator:a1b4efedf7706bdab519bb21702868ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6058c1bd89beb9c7796346d443bc8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a1c6058c1bd89beb9c7796346d443bc8e">RlColor</a> (unsigned char r, unsigned char g, unsigned char b, unsigned char a)</td></tr>
+<tr class="memdesc:a1c6058c1bd89beb9c7796346d443bc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> from RGBA values.  <a href="classraylib_1_1_rl_color.html#a1c6058c1bd89beb9c7796346d443bc8e">More...</a><br /></td></tr>
+<tr class="separator:a1c6058c1bd89beb9c7796346d443bc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043111bd5bed2de9d0d882431cfb553f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a043111bd5bed2de9d0d882431cfb553f">RlColor</a> (std::uint32_t color)</td></tr>
+<tr class="memdesc:a043111bd5bed2de9d0d882431cfb553f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the color from 32-bit unsigned integer.  <a href="classraylib_1_1_rl_color.html#a043111bd5bed2de9d0d882431cfb553f">More...</a><br /></td></tr>
+<tr class="separator:a043111bd5bed2de9d0d882431cfb553f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120a660ee2e294cb3dcd9489d55c1b73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a120a660ee2e294cb3dcd9489d55c1b73">RlColor</a> (const <a class="el" href="_vector_8hpp.html#ab6d23b6a75706ef7840b1fe071045889">Vector4f</a> &amp;normalizedColor)</td></tr>
+<tr class="memdesc:a120a660ee2e294cb3dcd9489d55c1b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color from normalized values [0..1].  <a href="classraylib_1_1_rl_color.html#a120a660ee2e294cb3dcd9489d55c1b73">More...</a><br /></td></tr>
+<tr class="separator:a120a660ee2e294cb3dcd9489d55c1b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7bc3f45ba3ab0dd1dd37d3c0baadbb"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#abc7bc3f45ba3ab0dd1dd37d3c0baadbb">toInteger</a> () const</td></tr>
+<tr class="memdesc:abc7bc3f45ba3ab0dd1dd37d3c0baadbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the color as a 32-bit unsigned integer (hexadecimal)  <a href="classraylib_1_1_rl_color.html#abc7bc3f45ba3ab0dd1dd37d3c0baadbb">More...</a><br /></td></tr>
+<tr class="separator:abc7bc3f45ba3ab0dd1dd37d3c0baadbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c57a33f1e4cc1d394247e1d5371259b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector_8hpp.html#ab6d23b6a75706ef7840b1fe071045889">Vector4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a1c57a33f1e4cc1d394247e1d5371259b">normalize</a> () const</td></tr>
+<tr class="memdesc:a1c57a33f1e4cc1d394247e1d5371259b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize the color to [0..1].  <a href="classraylib_1_1_rl_color.html#a1c57a33f1e4cc1d394247e1d5371259b">More...</a><br /></td></tr>
+<tr class="separator:a1c57a33f1e4cc1d394247e1d5371259b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc01c768ea633c5f8c0db7c126596b13"><td class="memItemLeft" align="right" valign="top">const Color &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13">getColor</a> () const</td></tr>
+<tr class="memdesc:acc01c768ea633c5f8c0db7c126596b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Raylib's Color.  <a href="classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13">More...</a><br /></td></tr>
 <tr class="separator:acc01c768ea633c5f8c0db7c126596b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb1c49d714d9119dd236f9761b23cb04"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#adb1c49d714d9119dd236f9761b23cb04">getRed</a> () const</td></tr>
-<tr class="separator:adb1c49d714d9119dd236f9761b23cb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdd318738605b73a2b92405ee0399d17"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#afdd318738605b73a2b92405ee0399d17">getGreen</a> () const</td></tr>
-<tr class="separator:afdd318738605b73a2b92405ee0399d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d3cf80236d92df6c42d1e600f7416af"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a8d3cf80236d92df6c42d1e600f7416af">getBlue</a> () const</td></tr>
-<tr class="separator:a8d3cf80236d92df6c42d1e600f7416af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1c62eddfb11f3e01574c8e90d13086"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a5c1c62eddfb11f3e01574c8e90d13086">getAlpha</a> () const</td></tr>
-<tr class="separator:a5c1c62eddfb11f3e01574c8e90d13086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7bc62493866b7239f55bacaef681b6"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#add7bc62493866b7239f55bacaef681b6">getRed</a> () const</td></tr>
+<tr class="memdesc:add7bc62493866b7239f55bacaef681b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the red value.  <a href="classraylib_1_1_rl_color.html#add7bc62493866b7239f55bacaef681b6">More...</a><br /></td></tr>
+<tr class="separator:add7bc62493866b7239f55bacaef681b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d75d7942d1624641283eb836cac3d3e"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a4d75d7942d1624641283eb836cac3d3e">getGreen</a> () const</td></tr>
+<tr class="memdesc:a4d75d7942d1624641283eb836cac3d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the green value.  <a href="classraylib_1_1_rl_color.html#a4d75d7942d1624641283eb836cac3d3e">More...</a><br /></td></tr>
+<tr class="separator:a4d75d7942d1624641283eb836cac3d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae179088e49f67a1d1ea8fa79bf9c6452"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#ae179088e49f67a1d1ea8fa79bf9c6452">getBlue</a> () const</td></tr>
+<tr class="memdesc:ae179088e49f67a1d1ea8fa79bf9c6452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the blue value.  <a href="classraylib_1_1_rl_color.html#ae179088e49f67a1d1ea8fa79bf9c6452">More...</a><br /></td></tr>
+<tr class="separator:ae179088e49f67a1d1ea8fa79bf9c6452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e715dff28071efb80c36e406d9623c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a44e715dff28071efb80c36e406d9623c">getAlpha</a> () const</td></tr>
+<tr class="memdesc:a44e715dff28071efb80c36e406d9623c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the alpha value.  <a href="classraylib_1_1_rl_color.html#a44e715dff28071efb80c36e406d9623c">More...</a><br /></td></tr>
+<tr class="separator:a44e715dff28071efb80c36e406d9623c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d9f1d893aa9b9374fbe2a384fb553c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c">operator==</a> (const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a60d9f1d893aa9b9374fbe2a384fb553c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check equality between two colors.  <a href="classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c">More...</a><br /></td></tr>
+<tr class="separator:a60d9f1d893aa9b9374fbe2a384fb553c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac948b4a42e96432b79ca41461dac6427"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#ac948b4a42e96432b79ca41461dac6427">operator!=</a> (const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:ac948b4a42e96432b79ca41461dac6427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check inequality between two colors.  <a href="classraylib_1_1_rl_color.html#ac948b4a42e96432b79ca41461dac6427">More...</a><br /></td></tr>
+<tr class="separator:ac948b4a42e96432b79ca41461dac6427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:afee742f29dc53fe3ca370441000cb981"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#afee742f29dc53fe3ca370441000cb981">LightGray</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(200, 200, 200, 255)</td></tr>
+<tr class="separator:afee742f29dc53fe3ca370441000cb981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7f60c7d78b932ff062f1ff49d9646c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a2c7f60c7d78b932ff062f1ff49d9646c">Gray</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(130, 130, 130, 255)</td></tr>
+<tr class="separator:a2c7f60c7d78b932ff062f1ff49d9646c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a5fea0eed0b1c803d6d367964f7e39"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a13a5fea0eed0b1c803d6d367964f7e39">DarkGray</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(80, 80, 80, 255)</td></tr>
+<tr class="separator:a13a5fea0eed0b1c803d6d367964f7e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd852bd12226cb9ca3d2a6d54f5f4ed8"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#acd852bd12226cb9ca3d2a6d54f5f4ed8">Yellow</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(253, 249, 0, 255)</td></tr>
+<tr class="separator:acd852bd12226cb9ca3d2a6d54f5f4ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887cd536ef9e4b97c3ce4c417f66546e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a887cd536ef9e4b97c3ce4c417f66546e">Gold</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 203, 0, 255)</td></tr>
+<tr class="separator:a887cd536ef9e4b97c3ce4c417f66546e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affba046380f8bdb18182c48878f7b69d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#affba046380f8bdb18182c48878f7b69d">Orange</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 161, 0, 255)</td></tr>
+<tr class="separator:affba046380f8bdb18182c48878f7b69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50570401259843859f240203bbe66b94"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a50570401259843859f240203bbe66b94">Pink</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 109, 194, 255)</td></tr>
+<tr class="separator:a50570401259843859f240203bbe66b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28a43808682c4cf9b0163c171010b9a"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#ac28a43808682c4cf9b0163c171010b9a">Red</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(230, 41, 55, 255)</td></tr>
+<tr class="separator:ac28a43808682c4cf9b0163c171010b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034e6c68ad80c1d0751185c79263c0cc"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a034e6c68ad80c1d0751185c79263c0cc">Maroon</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(190, 33, 55, 255)</td></tr>
+<tr class="separator:a034e6c68ad80c1d0751185c79263c0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc74329d791c89d954acb8b8798556d1"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#acc74329d791c89d954acb8b8798556d1">Green</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 228, 48, 255)</td></tr>
+<tr class="separator:acc74329d791c89d954acb8b8798556d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a259359ab25cda84c894bf757d55afd"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a6a259359ab25cda84c894bf757d55afd">Lime</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 158, 47, 255)</td></tr>
+<tr class="separator:a6a259359ab25cda84c894bf757d55afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed6cd29f30ad30c3ad01062858734fd"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a6ed6cd29f30ad30c3ad01062858734fd">DarkGreen</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 117, 44, 255)</td></tr>
+<tr class="separator:a6ed6cd29f30ad30c3ad01062858734fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0810135357365ada2aa23852229181c4"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a0810135357365ada2aa23852229181c4">SkyBlue</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(102, 191, 255, 255)</td></tr>
+<tr class="separator:a0810135357365ada2aa23852229181c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc29873cccf4a77d796fe02ccb8b6b9"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#adbc29873cccf4a77d796fe02ccb8b6b9">Blue</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 121, 241, 255)</td></tr>
+<tr class="separator:adbc29873cccf4a77d796fe02ccb8b6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb75afbbb2aaaaa6bfa8ca0e5eb0c293"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#acb75afbbb2aaaaa6bfa8ca0e5eb0c293">DarkBlue</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 82, 172, 255)</td></tr>
+<tr class="separator:acb75afbbb2aaaaa6bfa8ca0e5eb0c293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771a3c6e1a4ff9af0a8651db731b7fed"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a771a3c6e1a4ff9af0a8651db731b7fed">Purple</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(200, 122, 255, 255)</td></tr>
+<tr class="separator:a771a3c6e1a4ff9af0a8651db731b7fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53f8f640b34bb05b7517ac448bcdc8f0"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a53f8f640b34bb05b7517ac448bcdc8f0">Violet</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(135, 60, 190, 255)</td></tr>
+<tr class="separator:a53f8f640b34bb05b7517ac448bcdc8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021d36060e5a920718e01fa21cfd44da"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a021d36060e5a920718e01fa21cfd44da">DarkPurple</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(112, 31, 126, 255)</td></tr>
+<tr class="separator:a021d36060e5a920718e01fa21cfd44da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb91e14a06408dff86ea30ce5e1481f5"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#acb91e14a06408dff86ea30ce5e1481f5">Beige</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(211, 176, 131, 255)</td></tr>
+<tr class="separator:acb91e14a06408dff86ea30ce5e1481f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af9d3c9f6c5412def3221091216e06e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a4af9d3c9f6c5412def3221091216e06e">Brown</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(127, 106, 79, 255)</td></tr>
+<tr class="separator:a4af9d3c9f6c5412def3221091216e06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede06e8dcd4c482974ae0a7cc88ddee5"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#aede06e8dcd4c482974ae0a7cc88ddee5">DarkBrown</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(76, 63, 47, 255)</td></tr>
+<tr class="separator:aede06e8dcd4c482974ae0a7cc88ddee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035328b5af51c01764776f525a213eea"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a035328b5af51c01764776f525a213eea">White</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 255, 255, 255)</td></tr>
+<tr class="separator:a035328b5af51c01764776f525a213eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5406ac4aa5bb6b29e17ea1961d1b17e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#ad5406ac4aa5bb6b29e17ea1961d1b17e">Black</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 0, 0, 255)</td></tr>
+<tr class="separator:ad5406ac4aa5bb6b29e17ea1961d1b17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0feb4b581b973230f7c7963669192a21"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#a0feb4b581b973230f7c7963669192a21">Transparent</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 0, 0, 0)</td></tr>
+<tr class="separator:a0feb4b581b973230f7c7963669192a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ce5f27fc72c97f619f17dcab03a174"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#ab3ce5f27fc72c97f619f17dcab03a174">Magenta</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 0, 255, 255)</td></tr>
+<tr class="separator:ab3ce5f27fc72c97f619f17dcab03a174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49a1696df7d021c9f77e2964214a6ad"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_color.html#ab49a1696df7d021c9f77e2964214a6ad">RayWhite</a> = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(245, 245, 245, 255)</td></tr>
+<tr class="separator:ab49a1696df7d021c9f77e2964214a6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8cb03dc0d113f001af8ca5a4884a2d17" name="a8cb03dc0d113f001af8ca5a4884a2d17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cb03dc0d113f001af8ca5a4884a2d17">&#9670;&nbsp;</a></span>RlColor() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb03dc0d113f001af8ca5a4884a2d17">&#9670;&nbsp;</a></span>RlColor() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">raylib::RlColor::RlColor </td>
@@ -116,38 +200,54 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Construct an <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> from Raylib's Color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the Raylib's Color </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a1b4efedf7706bdab519bb21702868ed6" name="a1b4efedf7706bdab519bb21702868ed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b4efedf7706bdab519bb21702868ed6">&#9670;&nbsp;</a></span>RlColor() <span class="overload">[2/2]</span></h2>
+<a id="a1c6058c1bd89beb9c7796346d443bc8e" name="a1c6058c1bd89beb9c7796346d443bc8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6058c1bd89beb9c7796346d443bc8e">&#9670;&nbsp;</a></span>RlColor() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">raylib::RlColor::RlColor </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>r</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>g</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>a</em>&#160;</td>
         </tr>
         <tr>
@@ -156,19 +256,103 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Construct an <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> from RGBA values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>the red value </td></tr>
+    <tr><td class="paramname">g</td><td>the green value </td></tr>
+    <tr><td class="paramname">b</td><td>the blue value </td></tr>
+    <tr><td class="paramname">a</td><td>the alpha value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a043111bd5bed2de9d0d882431cfb553f" name="a043111bd5bed2de9d0d882431cfb553f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043111bd5bed2de9d0d882431cfb553f">&#9670;&nbsp;</a></span>RlColor() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::RlColor::RlColor </td>
+          <td>(</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct the color from 32-bit unsigned integer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>Number containing the RGBA components (in that order) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a120a660ee2e294cb3dcd9489d55c1b73" name="a120a660ee2e294cb3dcd9489d55c1b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120a660ee2e294cb3dcd9489d55c1b73">&#9670;&nbsp;</a></span>RlColor() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::RlColor::RlColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ab6d23b6a75706ef7840b1fe071045889">Vector4f</a> &amp;&#160;</td>
+          <td class="paramname"><em>normalizedColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get color from normalized values [0..1]. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normalizedColor</td><td>the normalized color </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5c1c62eddfb11f3e01574c8e90d13086" name="a5c1c62eddfb11f3e01574c8e90d13086"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c1c62eddfb11f3e01574c8e90d13086">&#9670;&nbsp;</a></span>getAlpha()</h2>
+<a id="a44e715dff28071efb80c36e406d9623c" name="a44e715dff28071efb80c36e406d9623c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e715dff28071efb80c36e406d9623c">&#9670;&nbsp;</a></span>getAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int raylib::RlColor::getAlpha </td>
+          <td class="memname">unsigned char raylib::RlColor::getAlpha </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -176,22 +360,52 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the alpha value. </p>
+<dl class="section return"><dt>Returns</dt><dd>the alpha value </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_color_a44e715dff28071efb80c36e406d9623c_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_color_a44e715dff28071efb80c36e406d9623c_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_color_a44e715dff28071efb80c36e406d9623c_icgraph" id="aclassraylib_1_1_rl_color_a44e715dff28071efb80c36e406d9623c_icgraph">
+<area shape="rect" title="Get the alpha value." alt="" coords="223,111,380,138"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ad0e670b8f04248e8f838b4603a83f309" title="Draw lines sequence." alt="" coords="19,5,161,47"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a53a0ff43f97d2780f881988ea10fc2e4" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="19,71,161,112"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#aec37a3e2fba86c90662386720efd78ba" title="Draw a triangle strip defined by points." alt="" coords="19,136,161,177"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="5,202,175,229"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a8d3cf80236d92df6c42d1e600f7416af" name="a8d3cf80236d92df6c42d1e600f7416af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d3cf80236d92df6c42d1e600f7416af">&#9670;&nbsp;</a></span>getBlue()</h2>
+<a id="ae179088e49f67a1d1ea8fa79bf9c6452" name="ae179088e49f67a1d1ea8fa79bf9c6452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae179088e49f67a1d1ea8fa79bf9c6452">&#9670;&nbsp;</a></span>getBlue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int raylib::RlColor::getBlue </td>
+          <td class="memname">unsigned char raylib::RlColor::getBlue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the blue value. </p>
+<dl class="section return"><dt>Returns</dt><dd>the blue value </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_color_ae179088e49f67a1d1ea8fa79bf9c6452_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_color_ae179088e49f67a1d1ea8fa79bf9c6452_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_color_ae179088e49f67a1d1ea8fa79bf9c6452_icgraph" id="aclassraylib_1_1_rl_color_ae179088e49f67a1d1ea8fa79bf9c6452_icgraph">
+<area shape="rect" title="Get the blue value." alt="" coords="223,111,373,138"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ad0e670b8f04248e8f838b4603a83f309" title="Draw lines sequence." alt="" coords="19,5,161,47"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a53a0ff43f97d2780f881988ea10fc2e4" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="19,71,161,112"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#aec37a3e2fba86c90662386720efd78ba" title="Draw a triangle strip defined by points." alt="" coords="19,136,161,177"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="5,202,175,229"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -210,16 +424,109 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the Raylib's Color. </p>
+<dl class="section return"><dt>Returns</dt><dd>the Raylib's Color </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_color_acc01c768ea633c5f8c0db7c126596b13_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_color_acc01c768ea633c5f8c0db7c126596b13_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_color_acc01c768ea633c5f8c0db7c126596b13_icgraph" id="aclassraylib_1_1_rl_color_acc01c768ea633c5f8c0db7c126596b13_icgraph">
+<area shape="rect" title="Get the Raylib&#39;s Color." alt="" coords="445,2552,600,2579"/>
+<area shape="rect" href="classraylib_1_1_rl_image.html#a75b072596df8759421c58d437c68b0d5" title="Clear alpha channel to desired color." alt="" coords="212,5,385,32"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#a152f52f5827bb2b12ede3896a1caa16f" title="Clear image background with given color." alt="" coords="217,57,380,98"/>
+<area shape="rect" href="classraylib_1_1_color_helper.html#aad600fd1979ce1fe3ca6f4cd1f4261cb" title="Returns color with alpha applied, alpha goes from 0.0f to 1.0f." alt="" coords="235,122,362,163"/>
+<area shape="rect" href="classraylib_1_1_color_helper.html#acef9fe61e3fa64dba0fbccee756b2362" title="Returns src alpha&#45;blended into dst color with tint." alt="" coords="235,187,362,229"/>
+<area shape="rect" href="classraylib_1_1_rl_image.html#a782461ae282ccfb82b033d108adf0365" title="Modify image color: replace color." alt="" coords="205,253,392,280"/>
+<area shape="rect" href="classraylib_1_1_rl_image.html#a706f1740b0c26c0204873c33f3e80103" title="Modify image color: tint." alt="" coords="217,304,380,331"/>
+<area shape="rect" href="classraylib_1_1_color_helper.html#af53c62c1a3022c3ec08482a9d3b803d8" title="Returns HSV values for a Color, hue [0..360], saturation/value [0..1]." alt="" coords="235,355,362,397"/>
+<area shape="rect" href="classraylib_1_1_draw_helper.html#af1379a4db8bbdaac98277783d75b57c1" title="Draw bounding box (wires)" alt="" coords="233,421,365,462"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a271589e7fbb58a3babb84d7154576799" title="Draw a color&#45;filled circle." alt="" coords="227,486,370,527"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#ab1cd2deefa8e5fd2a6dc8cfbb51bf241" title="Draw circle within an image." alt="" coords="217,551,380,593"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a3619d3ff741c2eabbe0b492f7a9a3200" title=" " alt="" coords="224,617,373,658"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ac3564584fc299a21b00126db26bb5069" title="Draw a gradient&#45;filled circle." alt="" coords="227,682,370,723"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ab124669c10a413660d42f820932d6641" title="Draw circle outline." alt="" coords="227,747,370,789"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ad44dbd49fe04f5403f140509272f50aa" title="Draw a piece of a circle." alt="" coords="227,813,370,854"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a83a75b0b9edbaa4addff0f320c16fb8b" title="Draw circle sector outline." alt="" coords="219,878,378,919"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#aea6489646a84876d067989fa3e459fce" title=" " alt="" coords="224,943,373,985"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#aee739e16ab9b4fb6b42094681c07aaff" title=" " alt="" coords="224,1009,373,1050"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#ae0370583bec7b2c5a69eca43833d5a42" title=" " alt="" coords="223,1074,375,1115"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#ac7b48ef6732aa5f483226b0cc9f0455c" title=" " alt="" coords="224,1139,373,1181"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#ab4c0ba98efb4d20dacb1925de4e0a5f5" title=" " alt="" coords="224,1205,373,1246"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a1c35b672284701d78fe864fb3680570b" title=" " alt="" coords="224,1270,373,1311"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#ac923768996a72ea792fd46015af6267c" title=" " alt="" coords="224,1335,373,1377"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a6da9be7dc1f32c56f978f5ef52d53d4e" title=" " alt="" coords="224,1401,373,1442"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a9ef141e872cb3924628369aa0cf228e6" title=" " alt="" coords="224,1466,373,1507"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a4abf375963ef42eeb6052965cd5b2730" title=" " alt="" coords="224,1531,373,1573"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a129c5dcc7bfe017e60866cd0ff0cfa04" title="Draw ellipse." alt="" coords="227,1597,370,1638"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a742d465a1b0a2b395a443de8383e3ad9" title="Draw ellipse outline." alt="" coords="227,1662,370,1703"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#a42f3a6139c679f9bed1c1f4ae58beb4c" title="Draw a source image within a destination image (tint applied to source)" alt="" coords="217,1727,380,1769"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#a0133ff4194b9cb5d5f21df82b837990f" title="Draw text (using default font) within an image (destination)" alt="" coords="217,1793,380,1834"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a1515108d580f56b2b50d19e3b0f2c39f" title="Draw a line." alt="" coords="227,1858,370,1899"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#a82a648986a09f5702ddb90af14d237e0" title="Draw line within an image." alt="" coords="217,1923,380,1965"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a74fa9bc17f92c5474817c1f175a36f33" title=" " alt="" coords="224,1989,373,2030"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a965eeb2fba5fec8d67cae1c51a2265c6" title="Draw a Line using cubic&#45;bezier curves in&#45;out." alt="" coords="227,2054,370,2095"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a0ce762985245c3bbfb8ff5ac9a598ba7" title="Draw a line using cubic bezier curves with 2 control points." alt="" coords="223,2119,374,2161"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ab874f27d58d0877d86b4da621a21f223" title="Draw a line using quadratic bezier curves with a control point." alt="" coords="225,2185,373,2226"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a194bc53262e7505dfdb37bd6f8fcd774" title="Draw a pixel." alt="" coords="227,2250,370,2291"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#af0cdee0722d98fe250f9c58024d916a6" title="Draw pixel within an image." alt="" coords="217,2315,380,2357"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a11a4a1c4d0e5ce85836edc5084006308" title=" " alt="" coords="224,2381,373,2422"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#afffa41bfe349d99983544ccd0b47c383" title=" " alt="" coords="224,2446,373,2487"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a645c956044116b0ee86f1fca077ce889" title="Draw a regular polygon (Vector version)" alt="" coords="227,2511,370,2553"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a11e96d0957a775e0744809b0312bf4e1" title="Draw a polygon outline of n sides." alt="" coords="227,2577,370,2618"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a23ecc5ca0fc0c1b05554c0fd9b4d404b" title=" " alt="" coords="224,2642,373,2683"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a825bccf2a2a24a910f9844c050f6b6af" title="Draw a filled rectangle." alt="" coords="227,2707,370,2749"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#a0593dab685815271f4ca3fcaaebd1f78" title="Draw rectangle within an image." alt="" coords="217,2773,380,2814"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#aeafd2d0f19d00a4d6729442b3ab5b466" title="Draw a gradient&#45;filled rectangle with custom vertex colors." alt="" coords="217,2838,380,2879"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ab737a365993de96954b2334b62bc39fa" title="Draw a horizontal&#45;gradient&#45;filled rectangle." alt="" coords="212,2903,385,2945"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ad64bdd36e09878dadcb5f58bb8329fdf" title="Draw a vertical&#45;gradient&#45;filled rectangle." alt="" coords="213,2969,385,3010"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#aec406549b243317e492a03fe20578407" title="Draw rectangle outline." alt="" coords="225,3034,372,3075"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#a308bea0af38a4dc1730beddebae42642" title="Draw rectangle lines within an image." alt="" coords="217,3099,380,3141"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a0903b1375ce3a3c46d8091b23cc386f9" title="Draw rectangle outline with extended parameters." alt="" coords="219,3165,379,3206"/>
+<area shape="rect" href="classraylib_1_1_image_draw_helper.html#a9975380b1eb3a9bd80bd139fe0f9fe62" title="Draw rectangle within an image." alt="" coords="217,3230,380,3271"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a73844bc11a4c6aa688d34fb4f8ff88d5" title="Draw rectangle with rounded edges." alt="" coords="216,3295,381,3337"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#aa2d75cd236c027d6e95768dd637b3727" title="Draw rectangle with rounded edges outline." alt="" coords="200,3361,397,3402"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ad9786d0423835571b7f269f73e668e12" title="Draw a ring." alt="" coords="227,3426,370,3467"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#adc9afed268d44bd8a25c5a07d63b2b67" title="Draw a ring outline." alt="" coords="227,3491,370,3533"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#aad6511ef6946106c5787c5c902c070fd" title=" " alt="" coords="224,3557,373,3598"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#ad32d53cb45b7579ded9a0cb8d2a4ad79" title=" " alt="" coords="224,3622,373,3663"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a9eca5fc9690fe4a5ba4c34337276a42f" title=" " alt="" coords="224,3687,373,3729"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#a1e46536f476de551e7b6e529c2b64002" title=" " alt="" coords="229,3753,368,3794"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#a44cec776fa8562437e12e7e9777f51a7" title=" " alt="" coords="229,3818,368,3859"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#a1fa4fd6409344f6739de737cbf699301" title=" " alt="" coords="227,3883,370,3925"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#aff39fdb713fbf059e476371d2f3b8861" title=" " alt="" coords="229,3949,368,3990"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#a82d8662f5599bb21330d4ef03a4da7e4" title=" " alt="" coords="229,4014,368,4055"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#a0eb9b43437b04870d47e4cbf30593134" title=" " alt="" coords="229,4079,368,4121"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#afd0f23a92687fa710877199b8dcb54b2" title=" " alt="" coords="229,4145,368,4186"/>
+<area shape="rect" href="classraylib_1_1_texture_helper.html#a1691f6500742bd0693e885aecef8b7da" title=" " alt="" coords="229,4210,368,4251"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a0c3c5e984b924c1c09e7dc4661548ce2" title="Draw a color&#45;filled triangle (vertex in counter&#45;clockwise order!)" alt="" coords="227,4275,370,4317"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#a3fc1d6cb04d979da16ec5b2538a66f96" title=" " alt="" coords="224,4341,373,4382"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a2ddf9ae7e41fdf06d895a754852289c3" title="Draw a triangle outline (vertex in counter&#45;clockwise order!)" alt="" coords="227,4406,370,4447"/>
+<area shape="rect" href="classraylib_1_1_shape3_d_helper.html#afdf1303ed8744432ff21492196ef42f3" title=" " alt="" coords="224,4471,373,4513"/>
+<area shape="rect" href="classraylib_1_1_color_helper.html#a30121e55faaf86d562feb57b10248891" title="Returns color with alpha applied, alpha goes from 0.0f to 1.0f." alt="" coords="235,4537,362,4578"/>
+<area shape="rect" href="classraylib_1_1_image_helper.html#acd18b354553c0a10e3aacc6bbc233a7e" title="Create an image from text (default font)" alt="" coords="233,4602,365,4643"/>
+<area shape="rect" href="classraylib_1_1_image_generator.html#a0b5b822be8fc85ed8d1ce57eae685b16" title="Generate image: checked." alt="" coords="223,4667,374,4709"/>
+<area shape="rect" href="classraylib_1_1_image_generator.html#acda807be2bcde28fb52ac9e6d51817c3" title="Generate image: plain color." alt="" coords="223,4733,374,4774"/>
+<area shape="rect" href="classraylib_1_1_image_generator.html#a75e578b4014629551e2d42d75d514cd6" title="Generate image: horizontal gradient." alt="" coords="223,4798,374,4839"/>
+<area shape="rect" href="classraylib_1_1_image_generator.html#a1f01d83cde4a98d61c983800b67858ea" title="Generate image: radial gradient." alt="" coords="213,4863,384,4905"/>
+<area shape="rect" href="classraylib_1_1_image_generator.html#adc593eed42bddba4aa1106fe629788f8" title="Generate image: vertical gradient." alt="" coords="223,4929,374,4970"/>
+<area shape="rect" href="classraylib_1_1_rl_image.html#a2aab2e9aa63d8ad27614d16b4e57c211" title="Resize canvas and fill with color." alt="" coords="203,4995,394,5021"/>
+<area shape="rect" href="classraylib_1_1_color_helper.html#a46eaf260d46383347d8095502ec4c95b" title="Set color formatted into destination pixel pointer." alt="" coords="235,5046,362,5087"/>
+<area shape="rect" href="classraylib_1_1_rl_image.html#a2adceaa1282ee5c17f11b21935c35880" title="Convert image to POT (power&#45;of&#45;two)" alt="" coords="227,5112,370,5139"/>
+<area shape="rect" href="class_game_engine_1_1_button.html#ae9ac174f995345dff53bb0dc8d44216b" title=" " alt="" coords="9,4079,149,4121"/>
+<area shape="rect" href="classraylib_1_1_rl_image_builder.html#a9a91b5d5bc5fe9a826644860368d606b" title="Will return an instance of the templated parameter." alt="" coords="5,4798,152,4839"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="afdd318738605b73a2b92405ee0399d17" name="afdd318738605b73a2b92405ee0399d17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdd318738605b73a2b92405ee0399d17">&#9670;&nbsp;</a></span>getGreen()</h2>
+<a id="a4d75d7942d1624641283eb836cac3d3e" name="a4d75d7942d1624641283eb836cac3d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d75d7942d1624641283eb836cac3d3e">&#9670;&nbsp;</a></span>getGreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int raylib::RlColor::getGreen </td>
+          <td class="memname">unsigned char raylib::RlColor::getGreen </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -227,22 +534,757 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the green value. </p>
+<dl class="section return"><dt>Returns</dt><dd>the green value </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_color_a4d75d7942d1624641283eb836cac3d3e_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_color_a4d75d7942d1624641283eb836cac3d3e_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_color_a4d75d7942d1624641283eb836cac3d3e_icgraph" id="aclassraylib_1_1_rl_color_a4d75d7942d1624641283eb836cac3d3e_icgraph">
+<area shape="rect" title="Get the green value." alt="" coords="223,111,381,138"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ad0e670b8f04248e8f838b4603a83f309" title="Draw lines sequence." alt="" coords="19,5,161,47"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a53a0ff43f97d2780f881988ea10fc2e4" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="19,71,161,112"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#aec37a3e2fba86c90662386720efd78ba" title="Draw a triangle strip defined by points." alt="" coords="19,136,161,177"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="5,202,175,229"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="adb1c49d714d9119dd236f9761b23cb04" name="adb1c49d714d9119dd236f9761b23cb04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb1c49d714d9119dd236f9761b23cb04">&#9670;&nbsp;</a></span>getRed()</h2>
+<a id="add7bc62493866b7239f55bacaef681b6" name="add7bc62493866b7239f55bacaef681b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7bc62493866b7239f55bacaef681b6">&#9670;&nbsp;</a></span>getRed()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int raylib::RlColor::getRed </td>
+          <td class="memname">unsigned char raylib::RlColor::getRed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the red value. </p>
+<dl class="section return"><dt>Returns</dt><dd>the red value </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_color_add7bc62493866b7239f55bacaef681b6_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_color_add7bc62493866b7239f55bacaef681b6_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_color_add7bc62493866b7239f55bacaef681b6_icgraph" id="aclassraylib_1_1_rl_color_add7bc62493866b7239f55bacaef681b6_icgraph">
+<area shape="rect" title="Get the red value." alt="" coords="223,111,369,138"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#ad0e670b8f04248e8f838b4603a83f309" title="Draw lines sequence." alt="" coords="19,5,161,47"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#a53a0ff43f97d2780f881988ea10fc2e4" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="19,71,161,112"/>
+<area shape="rect" href="classraylib_1_1_draw2_d_helper.html#aec37a3e2fba86c90662386720efd78ba" title="Draw a triangle strip defined by points." alt="" coords="19,136,161,177"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="5,202,175,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1c57a33f1e4cc1d394247e1d5371259b" name="a1c57a33f1e4cc1d394247e1d5371259b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c57a33f1e4cc1d394247e1d5371259b">&#9670;&nbsp;</a></span>normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_vector_8hpp.html#ab6d23b6a75706ef7840b1fe071045889">Vector4f</a> raylib::RlColor::normalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Normalize the color to [0..1]. </p>
+<dl class="section return"><dt>Returns</dt><dd>the normalized color </dd></dl>
+
+</div>
+</div>
+<a id="ac948b4a42e96432b79ca41461dac6427" name="ac948b4a42e96432b79ca41461dac6427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac948b4a42e96432b79ca41461dac6427">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::RlColor::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check inequality between two colors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>another color </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the two color are not equal, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a60d9f1d893aa9b9374fbe2a384fb553c" name="a60d9f1d893aa9b9374fbe2a384fb553c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d9f1d893aa9b9374fbe2a384fb553c">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::RlColor::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check equality between two colors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>another color </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the two color are equal, false otherwise </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_color_a60d9f1d893aa9b9374fbe2a384fb553c_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_color_a60d9f1d893aa9b9374fbe2a384fb553c_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_color_a60d9f1d893aa9b9374fbe2a384fb553c_cgraph" id="aclassraylib_1_1_rl_color_a60d9f1d893aa9b9374fbe2a384fb553c_cgraph">
+<area shape="rect" title="Check equality between two colors." alt="" coords="5,81,175,108"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#a44e715dff28071efb80c36e406d9623c" title="Get the alpha value." alt="" coords="223,5,381,32"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#ae179088e49f67a1d1ea8fa79bf9c6452" title="Get the blue value." alt="" coords="227,56,377,83"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#a4d75d7942d1624641283eb836cac3d3e" title="Get the green value." alt="" coords="223,107,381,133"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#add7bc62493866b7239f55bacaef681b6" title="Get the red value." alt="" coords="229,157,375,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abc7bc3f45ba3ab0dd1dd37d3c0baadbb" name="abc7bc3f45ba3ab0dd1dd37d3c0baadbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7bc3f45ba3ab0dd1dd37d3c0baadbb">&#9670;&nbsp;</a></span>toInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint32_t raylib::RlColor::toInteger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the color as a 32-bit unsigned integer (hexadecimal) </p>
+<dl class="section return"><dt>Returns</dt><dd>Color represented as a 32-bit unsigned integer (hexadecimal) </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acb91e14a06408dff86ea30ce5e1481f5" name="acb91e14a06408dff86ea30ce5e1481f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb91e14a06408dff86ea30ce5e1481f5">&#9670;&nbsp;</a></span>Beige</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Beige = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(211, 176, 131, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Beige </p>
+
+</div>
+</div>
+<a id="ad5406ac4aa5bb6b29e17ea1961d1b17e" name="ad5406ac4aa5bb6b29e17ea1961d1b17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5406ac4aa5bb6b29e17ea1961d1b17e">&#9670;&nbsp;</a></span>Black</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Black = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 0, 0, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Black </p>
+
+</div>
+</div>
+<a id="adbc29873cccf4a77d796fe02ccb8b6b9" name="adbc29873cccf4a77d796fe02ccb8b6b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc29873cccf4a77d796fe02ccb8b6b9">&#9670;&nbsp;</a></span>Blue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Blue = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 121, 241, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Blue </p>
+
+</div>
+</div>
+<a id="a4af9d3c9f6c5412def3221091216e06e" name="a4af9d3c9f6c5412def3221091216e06e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af9d3c9f6c5412def3221091216e06e">&#9670;&nbsp;</a></span>Brown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Brown = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(127, 106, 79, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Brown </p>
+
+</div>
+</div>
+<a id="acb75afbbb2aaaaa6bfa8ca0e5eb0c293" name="acb75afbbb2aaaaa6bfa8ca0e5eb0c293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb75afbbb2aaaaa6bfa8ca0e5eb0c293">&#9670;&nbsp;</a></span>DarkBlue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::DarkBlue = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 82, 172, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Dark Blue </p>
+
+</div>
+</div>
+<a id="aede06e8dcd4c482974ae0a7cc88ddee5" name="aede06e8dcd4c482974ae0a7cc88ddee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede06e8dcd4c482974ae0a7cc88ddee5">&#9670;&nbsp;</a></span>DarkBrown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::DarkBrown = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(76, 63, 47, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Dark Brown </p>
+
+</div>
+</div>
+<a id="a13a5fea0eed0b1c803d6d367964f7e39" name="a13a5fea0eed0b1c803d6d367964f7e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a5fea0eed0b1c803d6d367964f7e39">&#9670;&nbsp;</a></span>DarkGray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::DarkGray = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(80, 80, 80, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Dark Gray </p>
+
+</div>
+</div>
+<a id="a6ed6cd29f30ad30c3ad01062858734fd" name="a6ed6cd29f30ad30c3ad01062858734fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ed6cd29f30ad30c3ad01062858734fd">&#9670;&nbsp;</a></span>DarkGreen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::DarkGreen = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 117, 44, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Dark Green </p>
+
+</div>
+</div>
+<a id="a021d36060e5a920718e01fa21cfd44da" name="a021d36060e5a920718e01fa21cfd44da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021d36060e5a920718e01fa21cfd44da">&#9670;&nbsp;</a></span>DarkPurple</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::DarkPurple = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(112, 31, 126, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Dark Purple </p>
+
+</div>
+</div>
+<a id="a887cd536ef9e4b97c3ce4c417f66546e" name="a887cd536ef9e4b97c3ce4c417f66546e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a887cd536ef9e4b97c3ce4c417f66546e">&#9670;&nbsp;</a></span>Gold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Gold = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 203, 0, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Gold </p>
+
+</div>
+</div>
+<a id="a2c7f60c7d78b932ff062f1ff49d9646c" name="a2c7f60c7d78b932ff062f1ff49d9646c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7f60c7d78b932ff062f1ff49d9646c">&#9670;&nbsp;</a></span>Gray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Gray = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(130, 130, 130, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Gray </p>
+
+</div>
+</div>
+<a id="acc74329d791c89d954acb8b8798556d1" name="acc74329d791c89d954acb8b8798556d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc74329d791c89d954acb8b8798556d1">&#9670;&nbsp;</a></span>Green</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Green = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 228, 48, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Green </p>
+
+</div>
+</div>
+<a id="afee742f29dc53fe3ca370441000cb981" name="afee742f29dc53fe3ca370441000cb981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee742f29dc53fe3ca370441000cb981">&#9670;&nbsp;</a></span>LightGray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::LightGray = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(200, 200, 200, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Light Gray </p>
+
+</div>
+</div>
+<a id="a6a259359ab25cda84c894bf757d55afd" name="a6a259359ab25cda84c894bf757d55afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a259359ab25cda84c894bf757d55afd">&#9670;&nbsp;</a></span>Lime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Lime = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 158, 47, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Lime </p>
+
+</div>
+</div>
+<a id="ab3ce5f27fc72c97f619f17dcab03a174" name="ab3ce5f27fc72c97f619f17dcab03a174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ce5f27fc72c97f619f17dcab03a174">&#9670;&nbsp;</a></span>Magenta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Magenta = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 0, 255, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Magenta </p>
+
+</div>
+</div>
+<a id="a034e6c68ad80c1d0751185c79263c0cc" name="a034e6c68ad80c1d0751185c79263c0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034e6c68ad80c1d0751185c79263c0cc">&#9670;&nbsp;</a></span>Maroon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Maroon = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(190, 33, 55, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Maroon </p>
+
+</div>
+</div>
+<a id="affba046380f8bdb18182c48878f7b69d" name="affba046380f8bdb18182c48878f7b69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affba046380f8bdb18182c48878f7b69d">&#9670;&nbsp;</a></span>Orange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Orange = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 161, 0, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Orange </p>
+
+</div>
+</div>
+<a id="a50570401259843859f240203bbe66b94" name="a50570401259843859f240203bbe66b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50570401259843859f240203bbe66b94">&#9670;&nbsp;</a></span>Pink</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Pink = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 109, 194, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Pink </p>
+
+</div>
+</div>
+<a id="a771a3c6e1a4ff9af0a8651db731b7fed" name="a771a3c6e1a4ff9af0a8651db731b7fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771a3c6e1a4ff9af0a8651db731b7fed">&#9670;&nbsp;</a></span>Purple</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Purple = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(200, 122, 255, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Purple </p>
+
+</div>
+</div>
+<a id="ab49a1696df7d021c9f77e2964214a6ad" name="ab49a1696df7d021c9f77e2964214a6ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49a1696df7d021c9f77e2964214a6ad">&#9670;&nbsp;</a></span>RayWhite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::RayWhite = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(245, 245, 245, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Raylib White </p>
+
+</div>
+</div>
+<a id="ac28a43808682c4cf9b0163c171010b9a" name="ac28a43808682c4cf9b0163c171010b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28a43808682c4cf9b0163c171010b9a">&#9670;&nbsp;</a></span>Red</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Red = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(230, 41, 55, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Red </p>
+
+</div>
+</div>
+<a id="a0810135357365ada2aa23852229181c4" name="a0810135357365ada2aa23852229181c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0810135357365ada2aa23852229181c4">&#9670;&nbsp;</a></span>SkyBlue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::SkyBlue = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(102, 191, 255, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sky Blue </p>
+
+</div>
+</div>
+<a id="a0feb4b581b973230f7c7963669192a21" name="a0feb4b581b973230f7c7963669192a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0feb4b581b973230f7c7963669192a21">&#9670;&nbsp;</a></span>Transparent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Transparent = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(0, 0, 0, 0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Transparent (Blank) </p>
+
+</div>
+</div>
+<a id="a53f8f640b34bb05b7517ac448bcdc8f0" name="a53f8f640b34bb05b7517ac448bcdc8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53f8f640b34bb05b7517ac448bcdc8f0">&#9670;&nbsp;</a></span>Violet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Violet = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(135, 60, 190, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Violet </p>
+
+</div>
+</div>
+<a id="a035328b5af51c01764776f525a213eea" name="a035328b5af51c01764776f525a213eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a035328b5af51c01764776f525a213eea">&#9670;&nbsp;</a></span>White</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::White = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(255, 255, 255, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >White </p>
+
+</div>
+</div>
+<a id="acd852bd12226cb9ca3d2a6d54f5f4ed8" name="acd852bd12226cb9ca3d2a6d54f5f4ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd852bd12226cb9ca3d2a6d54f5f4ed8">&#9670;&nbsp;</a></span>Yellow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a> raylib::RlColor::Yellow = <a class="el" href="classraylib_1_1_rl_color.html">raylib::RlColor</a>(253, 249, 0, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Yellow </p>
 
 </div>
 </div>

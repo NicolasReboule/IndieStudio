@@ -1,5 +1,6 @@
 <map id="GameEngine::Button::draw" name="GameEngine::Button::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,145,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_texture_helper.html#ac38ecfbd8747e089e4d3e442d687d18b" title=" " alt="" coords="193,5,332,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="380,5,515,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,27,145,69"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_texture_helper.html#a0eb9b43437b04870d47e4cbf30593134" title=" " alt="" coords="193,27,332,69"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="380,5,535,32"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="390,57,525,98"/>
 </map>

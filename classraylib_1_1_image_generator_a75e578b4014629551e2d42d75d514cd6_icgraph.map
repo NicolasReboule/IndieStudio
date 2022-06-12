@@ -1,0 +1,4 @@
+<map id="raylib::ImageGenerator::genImageGradientH" name="raylib::ImageGenerator::genImageGradientH">
+<area shape="rect" id="node1" title="Generate image: horizontal gradient." alt="" coords="200,5,351,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_image_builder.html#a9a91b5d5bc5fe9a826644860368d606b" title="Will return an instance of the templated parameter." alt="" coords="5,5,152,47"/>
+</map>

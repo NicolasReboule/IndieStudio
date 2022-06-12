@@ -1,5 +1,10 @@
 <map id="raylib&#45;cpp/include/raylib/Image/RlImage.hpp" name="raylib&#45;cpp/include/raylib/Image/RlImage.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,177,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="19,95,81,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="105,95,160,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="277,5,449,47"/>
+<area shape="rect" id="node2" href="$_rl_color_8hpp.html" title=" " alt="" coords="127,95,283,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="163,244,225,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="367,95,426,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="451,95,505,121"/>
+<area shape="rect" id="node3" href="$_vector_8hpp.html" title=" " alt="" coords="5,169,156,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="231,169,293,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="45,244,117,271"/>
 </map>

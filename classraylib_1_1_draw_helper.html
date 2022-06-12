@@ -74,54 +74,88 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Helper class for drawing.  
+ <a href="classraylib_1_1_draw_helper.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_draw_helper_8hpp_source.html">DrawHelper.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::DrawHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_draw_helper__coll__graph.png" border="0" usemap="#araylib_1_1_draw_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_draw_helper_coll__map" id="araylib_1_1_draw_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,160,317"/>
+<area shape="rect" title="Helper class for drawing." alt="" coords="5,5,160,376"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af375164c108b3abbb67619f80653061e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#af375164c108b3abbb67619f80653061e">clearBackground</a> (Color color)</td></tr>
+<tr class="memdesc:af375164c108b3abbb67619f80653061e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set background color (framebuffer clear color)  <a href="classraylib_1_1_draw_helper.html#af375164c108b3abbb67619f80653061e">More...</a><br /></td></tr>
 <tr class="separator:af375164c108b3abbb67619f80653061e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fbcb61d594a80294767d198573d5d43"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a8fbcb61d594a80294767d198573d5d43">beginDrawing</a> ()</td></tr>
+<tr class="memdesc:a8fbcb61d594a80294767d198573d5d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup canvas (framebuffer) to start drawing.  <a href="classraylib_1_1_draw_helper.html#a8fbcb61d594a80294767d198573d5d43">More...</a><br /></td></tr>
 <tr class="separator:a8fbcb61d594a80294767d198573d5d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdaef2c6dbd9f1a847a716c8e1c6cd4c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#abdaef2c6dbd9f1a847a716c8e1c6cd4c">endDrawing</a> ()</td></tr>
+<tr class="memdesc:abdaef2c6dbd9f1a847a716c8e1c6cd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">End canvas drawing and swap buffers (double buffering)  <a href="classraylib_1_1_draw_helper.html#abdaef2c6dbd9f1a847a716c8e1c6cd4c">More...</a><br /></td></tr>
 <tr class="separator:abdaef2c6dbd9f1a847a716c8e1c6cd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69df8c1ec7c1450d36f5b1d85c978a5a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a69df8c1ec7c1450d36f5b1d85c978a5a">beginMode2D</a> (Camera2D camera)</td></tr>
-<tr class="separator:a69df8c1ec7c1450d36f5b1d85c978a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af263671892ff757109650734284377b2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#af263671892ff757109650734284377b2">beginMode2D</a> (const Camera2D &amp;camera)</td></tr>
+<tr class="memdesc:af263671892ff757109650734284377b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin 2D mode with custom camera (2D)  <a href="classraylib_1_1_draw_helper.html#af263671892ff757109650734284377b2">More...</a><br /></td></tr>
+<tr class="separator:af263671892ff757109650734284377b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f043e46884f7c67d3503e70196f53e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#ad7f043e46884f7c67d3503e70196f53e">endMode2D</a> ()</td></tr>
+<tr class="memdesc:ad7f043e46884f7c67d3503e70196f53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends 2D mode with custom camera (2D)  <a href="classraylib_1_1_draw_helper.html#ad7f043e46884f7c67d3503e70196f53e">More...</a><br /></td></tr>
 <tr class="separator:ad7f043e46884f7c67d3503e70196f53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5967391072067265192dcdd4accdac6f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a5967391072067265192dcdd4accdac6f">beginMode3D</a> (Camera3D camera)</td></tr>
-<tr class="separator:a5967391072067265192dcdd4accdac6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb3580ad5bfc5249719f8a1b6e6cf34"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a6bb3580ad5bfc5249719f8a1b6e6cf34">beginMode3D</a> (const Camera3D &amp;camera)</td></tr>
+<tr class="memdesc:a6bb3580ad5bfc5249719f8a1b6e6cf34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin 3D mode with custom camera (3D)  <a href="classraylib_1_1_draw_helper.html#a6bb3580ad5bfc5249719f8a1b6e6cf34">More...</a><br /></td></tr>
+<tr class="separator:a6bb3580ad5bfc5249719f8a1b6e6cf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4789bdb5518fcf1f039e138258276232"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a4789bdb5518fcf1f039e138258276232">endMode3D</a> ()</td></tr>
+<tr class="memdesc:a4789bdb5518fcf1f039e138258276232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends 3D mode and returns to default 2D orthographic mode.  <a href="classraylib_1_1_draw_helper.html#a4789bdb5518fcf1f039e138258276232">More...</a><br /></td></tr>
 <tr class="separator:a4789bdb5518fcf1f039e138258276232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27151339fae6f95df7fcdb119d430f7c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a27151339fae6f95df7fcdb119d430f7c">beginTextureMode</a> (RenderTexture2D target)</td></tr>
-<tr class="separator:a27151339fae6f95df7fcdb119d430f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8afada7761aee5d162c1b2441e8f02"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a2c8afada7761aee5d162c1b2441e8f02">beginTextureMode</a> (const RenderTexture2D &amp;target)</td></tr>
+<tr class="memdesc:a2c8afada7761aee5d162c1b2441e8f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin drawing to render texture.  <a href="classraylib_1_1_draw_helper.html#a2c8afada7761aee5d162c1b2441e8f02">More...</a><br /></td></tr>
+<tr class="separator:a2c8afada7761aee5d162c1b2441e8f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cd3eb36b6917bfebfdc105d47a49297"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a9cd3eb36b6917bfebfdc105d47a49297">endTextureMode</a> ()</td></tr>
+<tr class="memdesc:a9cd3eb36b6917bfebfdc105d47a49297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends drawing to render texture.  <a href="classraylib_1_1_draw_helper.html#a9cd3eb36b6917bfebfdc105d47a49297">More...</a><br /></td></tr>
 <tr class="separator:a9cd3eb36b6917bfebfdc105d47a49297"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85734e1021d961e0d47167c081122f5d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a85734e1021d961e0d47167c081122f5d">beginShaderMode</a> (Shader shader)</td></tr>
-<tr class="separator:a85734e1021d961e0d47167c081122f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1dc46a36a96107ae4e264b6848ced33"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#ad1dc46a36a96107ae4e264b6848ced33">beginShaderMode</a> (const Shader &amp;shader)</td></tr>
+<tr class="memdesc:ad1dc46a36a96107ae4e264b6848ced33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin custom shader drawing.  <a href="classraylib_1_1_draw_helper.html#ad1dc46a36a96107ae4e264b6848ced33">More...</a><br /></td></tr>
+<tr class="separator:ad1dc46a36a96107ae4e264b6848ced33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f710cf1c0ecfba366bc0bc498eb8e55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a6f710cf1c0ecfba366bc0bc498eb8e55">endShaderMode</a> ()</td></tr>
+<tr class="memdesc:a6f710cf1c0ecfba366bc0bc498eb8e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">End custom shader drawing (use default shader)  <a href="classraylib_1_1_draw_helper.html#a6f710cf1c0ecfba366bc0bc498eb8e55">More...</a><br /></td></tr>
 <tr class="separator:a6f710cf1c0ecfba366bc0bc498eb8e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5c6899b11cdfd90d1cc14b9edf52f86"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#ab5c6899b11cdfd90d1cc14b9edf52f86">beginBlendMode</a> (int mode)</td></tr>
+<tr class="memdesc:ab5c6899b11cdfd90d1cc14b9edf52f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin blending mode (alpha, additive, multiplied, subtract, custom)  <a href="classraylib_1_1_draw_helper.html#ab5c6899b11cdfd90d1cc14b9edf52f86">More...</a><br /></td></tr>
 <tr class="separator:ab5c6899b11cdfd90d1cc14b9edf52f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf0904b8a772c0b81b0c4e032133c66"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a0bf0904b8a772c0b81b0c4e032133c66">endBlendMode</a> ()</td></tr>
+<tr class="memdesc:a0bf0904b8a772c0b81b0c4e032133c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">End blending mode (reset to default: alpha blending)  <a href="classraylib_1_1_draw_helper.html#a0bf0904b8a772c0b81b0c4e032133c66">More...</a><br /></td></tr>
 <tr class="separator:a0bf0904b8a772c0b81b0c4e032133c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74a53524e50652aae7bd18711b2bcee9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a74a53524e50652aae7bd18711b2bcee9">beginScissorMode</a> (int x, int y, int width, int height)</td></tr>
+<tr class="memdesc:a74a53524e50652aae7bd18711b2bcee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin scissor mode (define screen area for following drawing)  <a href="classraylib_1_1_draw_helper.html#a74a53524e50652aae7bd18711b2bcee9">More...</a><br /></td></tr>
 <tr class="separator:a74a53524e50652aae7bd18711b2bcee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6893bb768ffead1b5d20daa3e29421dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a6893bb768ffead1b5d20daa3e29421dd">endScissorMode</a> ()</td></tr>
+<tr class="memdesc:a6893bb768ffead1b5d20daa3e29421dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">End scissor mode.  <a href="classraylib_1_1_draw_helper.html#a6893bb768ffead1b5d20daa3e29421dd">More...</a><br /></td></tr>
 <tr class="separator:a6893bb768ffead1b5d20daa3e29421dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17bd925c61a2e41b6936085eaab5294e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a17bd925c61a2e41b6936085eaab5294e">beginVrStereoMode</a> (VrStereoConfig config)</td></tr>
+<tr class="memdesc:a17bd925c61a2e41b6936085eaab5294e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin stereo rendering (requires VR simulator)  <a href="classraylib_1_1_draw_helper.html#a17bd925c61a2e41b6936085eaab5294e">More...</a><br /></td></tr>
 <tr class="separator:a17bd925c61a2e41b6936085eaab5294e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab723c4980343ca71327402256f6c4dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#ab723c4980343ca71327402256f6c4dde">endVrStereoMode</a> ()</td></tr>
+<tr class="memdesc:ab723c4980343ca71327402256f6c4dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">End stereo rendering (requires VR simulator)  <a href="classraylib_1_1_draw_helper.html#ab723c4980343ca71327402256f6c4dde">More...</a><br /></td></tr>
 <tr class="separator:ab723c4980343ca71327402256f6c4dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1379a4db8bbdaac98277783d75b57c1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#af1379a4db8bbdaac98277783d75b57c1">drawBoundingBox</a> (const BoundingBox &amp;box, const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;color)</td></tr>
+<tr class="memdesc:af1379a4db8bbdaac98277783d75b57c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw bounding box (wires)  <a href="classraylib_1_1_draw_helper.html#af1379a4db8bbdaac98277783d75b57c1">More...</a><br /></td></tr>
+<tr class="separator:af1379a4db8bbdaac98277783d75b57c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79fa3fb8506e1d753a0f14d8470fcdb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#af79fa3fb8506e1d753a0f14d8470fcdb">drawBillboard</a> (Camera camera, Texture2D texture, <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> position, float size, Color tint)</td></tr>
+<tr class="memdesc:af79fa3fb8506e1d753a0f14d8470fcdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a billboard texture.  <a href="classraylib_1_1_draw_helper.html#af79fa3fb8506e1d753a0f14d8470fcdb">More...</a><br /></td></tr>
+<tr class="separator:af79fa3fb8506e1d753a0f14d8470fcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8f19254ee6f89d3845e6aa1848abd0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#a5b8f19254ee6f89d3845e6aa1848abd0">drawBillboardRec</a> (Camera camera, Texture2D texture, Rectangle source, <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> position, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> size, Color tint)</td></tr>
+<tr class="memdesc:a5b8f19254ee6f89d3845e6aa1848abd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a billboard texture defined by source.  <a href="classraylib_1_1_draw_helper.html#a5b8f19254ee6f89d3845e6aa1848abd0">More...</a><br /></td></tr>
+<tr class="separator:a5b8f19254ee6f89d3845e6aa1848abd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af591610ff279bd281bc0b2055bcad5ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_draw_helper.html#af591610ff279bd281bc0b2055bcad5ee">drawBillboardPro</a> (Camera camera, Texture2D texture, Rectangle source, <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> position, <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> up, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> size, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> origin, float rotation, Color tint)</td></tr>
+<tr class="memdesc:af591610ff279bd281bc0b2055bcad5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a billboard texture defined by source and rotation.  <a href="classraylib_1_1_draw_helper.html#af591610ff279bd281bc0b2055bcad5ee">More...</a><br /></td></tr>
+<tr class="separator:af591610ff279bd281bc0b2055bcad5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Helper class for drawing. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab5c6899b11cdfd90d1cc14b9edf52f86" name="ab5c6899b11cdfd90d1cc14b9edf52f86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5c6899b11cdfd90d1cc14b9edf52f86">&#9670;&nbsp;</a></span>beginBlendMode()</h2>
 
@@ -145,6 +179,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Begin blending mode (alpha, additive, multiplied, subtract, custom) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -170,20 +212,22 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Setup canvas (framebuffer) to start drawing. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_draw_helper_a8fbcb61d594a80294767d198573d5d43_icgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_a8fbcb61d594a80294767d198573d5d43_icgraph" alt=""/></div>
 <map name="aclassraylib_1_1_draw_helper_a8fbcb61d594a80294767d198573d5d43_icgraph" id="aclassraylib_1_1_draw_helper_a8fbcb61d594a80294767d198573d5d43_icgraph">
-<area shape="rect" title=" " alt="" coords="243,5,369,47"/>
+<area shape="rect" title="Setup canvas (framebuffer) to start drawing." alt="" coords="243,5,369,47"/>
 <area shape="rect" href="class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a69df8c1ec7c1450d36f5b1d85c978a5a" name="a69df8c1ec7c1450d36f5b1d85c978a5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69df8c1ec7c1450d36f5b1d85c978a5a">&#9670;&nbsp;</a></span>beginMode2D()</h2>
+<a id="af263671892ff757109650734284377b2" name="af263671892ff757109650734284377b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af263671892ff757109650734284377b2">&#9670;&nbsp;</a></span>beginMode2D()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +238,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void raylib::DrawHelper::beginMode2D </td>
           <td>(</td>
-          <td class="paramtype">Camera2D&#160;</td>
+          <td class="paramtype">const Camera2D &amp;&#160;</td>
           <td class="paramname"><em>camera</em></td><td>)</td>
           <td></td>
         </tr>
@@ -206,10 +250,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Begin 2D mode with custom camera (2D) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a5967391072067265192dcdd4accdac6f" name="a5967391072067265192dcdd4accdac6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5967391072067265192dcdd4accdac6f">&#9670;&nbsp;</a></span>beginMode3D()</h2>
+<a id="a6bb3580ad5bfc5249719f8a1b6e6cf34" name="a6bb3580ad5bfc5249719f8a1b6e6cf34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb3580ad5bfc5249719f8a1b6e6cf34">&#9670;&nbsp;</a></span>beginMode3D()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +272,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void raylib::DrawHelper::beginMode3D </td>
           <td>(</td>
-          <td class="paramtype">Camera3D&#160;</td>
+          <td class="paramtype">const Camera3D &amp;&#160;</td>
           <td class="paramname"><em>camera</em></td><td>)</td>
           <td></td>
         </tr>
@@ -231,12 +283,20 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Begin 3D mode with custom camera (3D) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_draw_helper_a5967391072067265192dcdd4accdac6f_icgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_a5967391072067265192dcdd4accdac6f_icgraph" alt=""/></div>
-<map name="aclassraylib_1_1_draw_helper_a5967391072067265192dcdd4accdac6f_icgraph" id="aclassraylib_1_1_draw_helper_a5967391072067265192dcdd4accdac6f_icgraph">
-<area shape="rect" title=" " alt="" coords="243,5,369,47"/>
+<div class="center"><img src="classraylib_1_1_draw_helper_a6bb3580ad5bfc5249719f8a1b6e6cf34_icgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_a6bb3580ad5bfc5249719f8a1b6e6cf34_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_draw_helper_a6bb3580ad5bfc5249719f8a1b6e6cf34_icgraph" id="aclassraylib_1_1_draw_helper_a6bb3580ad5bfc5249719f8a1b6e6cf34_icgraph">
+<area shape="rect" title="Begin 3D mode with custom camera (3D)" alt="" coords="243,5,369,47"/>
 <area shape="rect" href="class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
 </map>
 </div>
@@ -289,10 +349,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Begin scissor mode (define screen area for following drawing) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>to use </td></tr>
+    <tr><td class="paramname">y</td><td>to use </td></tr>
+    <tr><td class="paramname">width</td><td>to use </td></tr>
+    <tr><td class="paramname">height</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a85734e1021d961e0d47167c081122f5d" name="a85734e1021d961e0d47167c081122f5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85734e1021d961e0d47167c081122f5d">&#9670;&nbsp;</a></span>beginShaderMode()</h2>
+<a id="ad1dc46a36a96107ae4e264b6848ced33" name="ad1dc46a36a96107ae4e264b6848ced33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1dc46a36a96107ae4e264b6848ced33">&#9670;&nbsp;</a></span>beginShaderMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +374,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void raylib::DrawHelper::beginShaderMode </td>
           <td>(</td>
-          <td class="paramtype">Shader&#160;</td>
+          <td class="paramtype">const Shader &amp;&#160;</td>
           <td class="paramname"><em>shader</em></td><td>)</td>
           <td></td>
         </tr>
@@ -315,10 +386,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Begin custom shader drawing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a27151339fae6f95df7fcdb119d430f7c" name="a27151339fae6f95df7fcdb119d430f7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27151339fae6f95df7fcdb119d430f7c">&#9670;&nbsp;</a></span>beginTextureMode()</h2>
+<a id="a2c8afada7761aee5d162c1b2441e8f02" name="a2c8afada7761aee5d162c1b2441e8f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8afada7761aee5d162c1b2441e8f02">&#9670;&nbsp;</a></span>beginTextureMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +408,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void raylib::DrawHelper::beginTextureMode </td>
           <td>(</td>
-          <td class="paramtype">RenderTexture2D&#160;</td>
+          <td class="paramtype">const RenderTexture2D &amp;&#160;</td>
           <td class="paramname"><em>target</em></td><td>)</td>
           <td></td>
         </tr>
@@ -340,6 +419,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Begin drawing to render texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>to draw to </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -367,6 +454,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Begin stereo rendering (requires VR simulator) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="af375164c108b3abbb67619f80653061e" name="af375164c108b3abbb67619f80653061e"></a>
@@ -392,13 +487,335 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set background color (framebuffer clear color) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_draw_helper_af375164c108b3abbb67619f80653061e_icgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_af375164c108b3abbb67619f80653061e_icgraph" alt=""/></div>
 <map name="aclassraylib_1_1_draw_helper_af375164c108b3abbb67619f80653061e_icgraph" id="aclassraylib_1_1_draw_helper_af375164c108b3abbb67619f80653061e_icgraph">
-<area shape="rect" title=" " alt="" coords="243,5,369,47"/>
+<area shape="rect" title="Set background color (framebuffer clear color)" alt="" coords="243,5,369,47"/>
 <area shape="rect" href="class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af79fa3fb8506e1d753a0f14d8470fcdb" name="af79fa3fb8506e1d753a0f14d8470fcdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79fa3fb8506e1d753a0f14d8470fcdb">&#9670;&nbsp;</a></span>drawBillboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::DrawHelper::drawBillboard </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Texture2D&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>tint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a billboard texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>to use </td></tr>
+    <tr><td class="paramname">texture</td><td>to use </td></tr>
+    <tr><td class="paramname">position</td><td>to use </td></tr>
+    <tr><td class="paramname">size</td><td>to use </td></tr>
+    <tr><td class="paramname">tint</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_draw_helper_af79fa3fb8506e1d753a0f14d8470fcdb_cgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_af79fa3fb8506e1d753a0f14d8470fcdb_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_draw_helper_af79fa3fb8506e1d753a0f14d8470fcdb_cgraph" id="aclassraylib_1_1_draw_helper_af79fa3fb8506e1d753a0f14d8470fcdb_cgraph">
+<area shape="rect" title="Draw a billboard texture." alt="" coords="5,5,132,47"/>
+<area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="180,5,315,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af591610ff279bd281bc0b2055bcad5ee" name="af591610ff279bd281bc0b2055bcad5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af591610ff279bd281bc0b2055bcad5ee">&#9670;&nbsp;</a></span>drawBillboardPro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::DrawHelper::drawBillboardPro </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Texture2D&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a>&#160;</td>
+          <td class="paramname"><em>up</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>tint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a billboard texture defined by source and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>to use </td></tr>
+    <tr><td class="paramname">texture</td><td>to use </td></tr>
+    <tr><td class="paramname">source</td><td>to use </td></tr>
+    <tr><td class="paramname">position</td><td>to use </td></tr>
+    <tr><td class="paramname">up</td><td>to use </td></tr>
+    <tr><td class="paramname">size</td><td>to use </td></tr>
+    <tr><td class="paramname">origin</td><td>to use </td></tr>
+    <tr><td class="paramname">rotation</td><td>to use </td></tr>
+    <tr><td class="paramname">tint</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_draw_helper_af591610ff279bd281bc0b2055bcad5ee_cgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_af591610ff279bd281bc0b2055bcad5ee_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_draw_helper_af591610ff279bd281bc0b2055bcad5ee_cgraph" id="aclassraylib_1_1_draw_helper_af591610ff279bd281bc0b2055bcad5ee_cgraph">
+<area shape="rect" title="Draw a billboard texture defined by source and rotation." alt="" coords="5,5,132,47"/>
+<area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="180,5,315,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5b8f19254ee6f89d3845e6aa1848abd0" name="a5b8f19254ee6f89d3845e6aa1848abd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8f19254ee6f89d3845e6aa1848abd0">&#9670;&nbsp;</a></span>drawBillboardRec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::DrawHelper::drawBillboardRec </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Texture2D&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>tint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a billboard texture defined by source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>to use </td></tr>
+    <tr><td class="paramname">texture</td><td>to use </td></tr>
+    <tr><td class="paramname">source</td><td>to use </td></tr>
+    <tr><td class="paramname">position</td><td>to use </td></tr>
+    <tr><td class="paramname">size</td><td>to use </td></tr>
+    <tr><td class="paramname">tint</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_draw_helper_a5b8f19254ee6f89d3845e6aa1848abd0_cgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_a5b8f19254ee6f89d3845e6aa1848abd0_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_draw_helper_a5b8f19254ee6f89d3845e6aa1848abd0_cgraph" id="aclassraylib_1_1_draw_helper_a5b8f19254ee6f89d3845e6aa1848abd0_cgraph">
+<area shape="rect" title="Draw a billboard texture defined by source." alt="" coords="5,5,135,47"/>
+<area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="183,5,317,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1379a4db8bbdaac98277783d75b57c1" name="af1379a4db8bbdaac98277783d75b57c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1379a4db8bbdaac98277783d75b57c1">&#9670;&nbsp;</a></span>drawBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::DrawHelper::drawBoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">const BoundingBox &amp;&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw bounding box (wires) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">box</td><td>to use </td></tr>
+    <tr><td class="paramname">color</td><td>to use </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_draw_helper_af1379a4db8bbdaac98277783d75b57c1_cgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_af1379a4db8bbdaac98277783d75b57c1_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_draw_helper_af1379a4db8bbdaac98277783d75b57c1_cgraph" id="aclassraylib_1_1_draw_helper_af1379a4db8bbdaac98277783d75b57c1_cgraph">
+<area shape="rect" title="Draw bounding box (wires)" alt="" coords="5,5,137,47"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="185,13,340,39"/>
 </map>
 </div>
 
@@ -427,6 +844,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>End blending mode (reset to default: alpha blending) </p>
+
 </div>
 </div>
 <a id="abdaef2c6dbd9f1a847a716c8e1c6cd4c" name="abdaef2c6dbd9f1a847a716c8e1c6cd4c"></a>
@@ -451,12 +870,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>End canvas drawing and swap buffers (double buffering) </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_draw_helper_abdaef2c6dbd9f1a847a716c8e1c6cd4c_icgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_abdaef2c6dbd9f1a847a716c8e1c6cd4c_icgraph" alt=""/></div>
 <map name="aclassraylib_1_1_draw_helper_abdaef2c6dbd9f1a847a716c8e1c6cd4c_icgraph" id="aclassraylib_1_1_draw_helper_abdaef2c6dbd9f1a847a716c8e1c6cd4c_icgraph">
-<area shape="rect" title=" " alt="" coords="243,5,369,47"/>
+<area shape="rect" title="End canvas drawing and swap buffers (double buffering)" alt="" coords="243,5,369,47"/>
 <area shape="rect" href="class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
 </map>
 </div>
@@ -486,6 +907,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Ends 2D mode with custom camera (2D) </p>
+
 </div>
 </div>
 <a id="a4789bdb5518fcf1f039e138258276232" name="a4789bdb5518fcf1f039e138258276232"></a>
@@ -510,12 +933,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ends 3D mode and returns to default 2D orthographic mode. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_draw_helper_a4789bdb5518fcf1f039e138258276232_icgraph.png" border="0" usemap="#aclassraylib_1_1_draw_helper_a4789bdb5518fcf1f039e138258276232_icgraph" alt=""/></div>
 <map name="aclassraylib_1_1_draw_helper_a4789bdb5518fcf1f039e138258276232_icgraph" id="aclassraylib_1_1_draw_helper_a4789bdb5518fcf1f039e138258276232_icgraph">
-<area shape="rect" title=" " alt="" coords="243,5,369,47"/>
+<area shape="rect" title="Ends 3D mode and returns to default 2D orthographic mode." alt="" coords="243,5,369,47"/>
 <area shape="rect" href="class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
 </map>
 </div>
@@ -545,6 +970,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>End scissor mode. </p>
+
 </div>
 </div>
 <a id="a6f710cf1c0ecfba366bc0bc498eb8e55" name="a6f710cf1c0ecfba366bc0bc498eb8e55"></a>
@@ -569,6 +996,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>End custom shader drawing (use default shader) </p>
 
 </div>
 </div>
@@ -595,6 +1024,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Ends drawing to render texture. </p>
+
 </div>
 </div>
 <a id="ab723c4980343ca71327402256f6c4dde" name="ab723c4980343ca71327402256f6c4dde"></a>
@@ -620,11 +1051,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>End stereo rendering (requires VR simulator) </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>raylib-cpp/include/raylib/Core/<a class="el" href="_draw_helper_8hpp_source.html">DrawHelper.hpp</a></li>
-<li>raylib-cpp/src/raylib/Core/<a class="el" href="_draw_helper_8cpp.html">DrawHelper.cpp</a></li>
+<li>raylib-cpp/include/raylib/render/<a class="el" href="_draw_helper_8hpp_source.html">DrawHelper.hpp</a></li>
+<li>raylib-cpp/src/raylib/render/<a class="el" href="_draw_helper_8cpp.html">DrawHelper.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

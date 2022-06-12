@@ -1,0 +1,7 @@
+<map id="raylib::RlColor::getGreen" name="raylib::RlColor::getGreen">
+<area shape="rect" id="node1" title="Get the green value." alt="" coords="223,111,381,138"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_draw2_d_helper.html#ad0e670b8f04248e8f838b4603a83f309" title="Draw lines sequence." alt="" coords="19,5,161,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_draw2_d_helper.html#a53a0ff43f97d2780f881988ea10fc2e4" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="19,71,161,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_draw2_d_helper.html#aec37a3e2fba86c90662386720efd78ba" title="Draw a triangle strip defined by points." alt="" coords="19,136,161,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="5,202,175,229"/>
+</map>

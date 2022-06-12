@@ -74,48 +74,67 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Input-related functions: mouse.  
+ <a href="classraylib_1_1_mouse_helper.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_mouse_helper_8hpp_source.html">MouseHelper.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::MouseHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_mouse_helper__coll__graph.png" border="0" usemap="#araylib_1_1_mouse_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_mouse_helper_coll__map" id="araylib_1_1_mouse_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,188,273"/>
+<area shape="rect" title="Input&#45;related functions: mouse." alt="" coords="5,5,188,273"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af440ef98f6aa4eaf09ead519931209f1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#af440ef98f6aa4eaf09ead519931209f1">isMouseButtonPressed</a> (int button)</td></tr>
-<tr class="separator:af440ef98f6aa4eaf09ead519931209f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09cb028b3c192e9aa094a94cdea4dcd6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a09cb028b3c192e9aa094a94cdea4dcd6">isMouseButtonDown</a> (int button)</td></tr>
-<tr class="separator:a09cb028b3c192e9aa094a94cdea4dcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50516c68d58128c38d34fbf99f95266a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a50516c68d58128c38d34fbf99f95266a">isMouseButtonReleased</a> (int button)</td></tr>
-<tr class="separator:a50516c68d58128c38d34fbf99f95266a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74c635e59f94794bcde6f70b4a5742ab"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a74c635e59f94794bcde6f70b4a5742ab">isMouseButtonUp</a> (int button)</td></tr>
-<tr class="separator:a74c635e59f94794bcde6f70b4a5742ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c1f2ad4f6cbe66aa619b6208a6a92c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a83c1f2ad4f6cbe66aa619b6208a6a92c">isMouseButtonPressed</a> (const MouseButton &amp;button)</td></tr>
+<tr class="memdesc:a83c1f2ad4f6cbe66aa619b6208a6a92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mouse button has been pressed once.  <a href="classraylib_1_1_mouse_helper.html#a83c1f2ad4f6cbe66aa619b6208a6a92c">More...</a><br /></td></tr>
+<tr class="separator:a83c1f2ad4f6cbe66aa619b6208a6a92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64bdf913aff282cc3eea771b818d2f9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#ac64bdf913aff282cc3eea771b818d2f9">isMouseButtonDown</a> (const MouseButton &amp;button)</td></tr>
+<tr class="memdesc:ac64bdf913aff282cc3eea771b818d2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mouse button is being pressed.  <a href="classraylib_1_1_mouse_helper.html#ac64bdf913aff282cc3eea771b818d2f9">More...</a><br /></td></tr>
+<tr class="separator:ac64bdf913aff282cc3eea771b818d2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac5b2362efbf642c1880a553831a5b0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a7ac5b2362efbf642c1880a553831a5b0">isMouseButtonReleased</a> (const MouseButton &amp;button)</td></tr>
+<tr class="memdesc:a7ac5b2362efbf642c1880a553831a5b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mouse button has been released once.  <a href="classraylib_1_1_mouse_helper.html#a7ac5b2362efbf642c1880a553831a5b0">More...</a><br /></td></tr>
+<tr class="separator:a7ac5b2362efbf642c1880a553831a5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5bb03d693dc2e71740646fc87eb85e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a0b5bb03d693dc2e71740646fc87eb85e">isMouseButtonUp</a> (const MouseButton &amp;button)</td></tr>
+<tr class="memdesc:a0b5bb03d693dc2e71740646fc87eb85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mouse button is NOT being pressed.  <a href="classraylib_1_1_mouse_helper.html#a0b5bb03d693dc2e71740646fc87eb85e">More...</a><br /></td></tr>
+<tr class="separator:a0b5bb03d693dc2e71740646fc87eb85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e430c510c121c8a18f975ec315a80b8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a0e430c510c121c8a18f975ec315a80b8">getMouseX</a> ()</td></tr>
+<tr class="memdesc:a0e430c510c121c8a18f975ec315a80b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mouse X position.  <a href="classraylib_1_1_mouse_helper.html#a0e430c510c121c8a18f975ec315a80b8">More...</a><br /></td></tr>
 <tr class="separator:a0e430c510c121c8a18f975ec315a80b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a252046625a6a4d6803eb60d1ed3852b9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a252046625a6a4d6803eb60d1ed3852b9">getMouseY</a> ()</td></tr>
+<tr class="memdesc:a252046625a6a4d6803eb60d1ed3852b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mouse Y position.  <a href="classraylib_1_1_mouse_helper.html#a252046625a6a4d6803eb60d1ed3852b9">More...</a><br /></td></tr>
 <tr class="separator:a252046625a6a4d6803eb60d1ed3852b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a498d459af118174334984e9b174ea924"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a498d459af118174334984e9b174ea924">getMousePosition</a> ()</td></tr>
+<tr class="memdesc:a498d459af118174334984e9b174ea924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mouse position.  <a href="classraylib_1_1_mouse_helper.html#a498d459af118174334984e9b174ea924">More...</a><br /></td></tr>
 <tr class="separator:a498d459af118174334984e9b174ea924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3edd1954c4b6b39242d655fa61adf29c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a3edd1954c4b6b39242d655fa61adf29c">getMouseDelta</a> ()</td></tr>
+<tr class="memdesc:a3edd1954c4b6b39242d655fa61adf29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mouse delta between frames.  <a href="classraylib_1_1_mouse_helper.html#a3edd1954c4b6b39242d655fa61adf29c">More...</a><br /></td></tr>
 <tr class="separator:a3edd1954c4b6b39242d655fa61adf29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ea23f23e2d876e3dac37accb3b492e0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a8ea23f23e2d876e3dac37accb3b492e0">setMousePosition</a> (int x, int y)</td></tr>
+<tr class="memdesc:a8ea23f23e2d876e3dac37accb3b492e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mouse position XY.  <a href="classraylib_1_1_mouse_helper.html#a8ea23f23e2d876e3dac37accb3b492e0">More...</a><br /></td></tr>
 <tr class="separator:a8ea23f23e2d876e3dac37accb3b492e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c7cd868994142bb0d3302e492b9780d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a7c7cd868994142bb0d3302e492b9780d">setMouseOffset</a> (int offsetX, int offsetY)</td></tr>
+<tr class="memdesc:a7c7cd868994142bb0d3302e492b9780d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mouse offset.  <a href="classraylib_1_1_mouse_helper.html#a7c7cd868994142bb0d3302e492b9780d">More...</a><br /></td></tr>
 <tr class="separator:a7c7cd868994142bb0d3302e492b9780d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047da1fce40ba997142bc5e8306fa9c3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a047da1fce40ba997142bc5e8306fa9c3">setMouseScale</a> (float scaleX, float scaleY)</td></tr>
+<tr class="memdesc:a047da1fce40ba997142bc5e8306fa9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mouse scaling.  <a href="classraylib_1_1_mouse_helper.html#a047da1fce40ba997142bc5e8306fa9c3">More...</a><br /></td></tr>
 <tr class="separator:a047da1fce40ba997142bc5e8306fa9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d58deebd7319b0f15ac6faea52debf"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a23d58deebd7319b0f15ac6faea52debf">getMouseWheelMove</a> ()</td></tr>
+<tr class="memdesc:a23d58deebd7319b0f15ac6faea52debf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mouse wheel movement Y.  <a href="classraylib_1_1_mouse_helper.html#a23d58deebd7319b0f15ac6faea52debf">More...</a><br /></td></tr>
 <tr class="separator:a23d58deebd7319b0f15ac6faea52debf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d6cb4ece7dd4ff8e8c784238377a24c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a8d6cb4ece7dd4ff8e8c784238377a24c">setMouseCursor</a> (int cursor)</td></tr>
-<tr class="separator:a8d6cb4ece7dd4ff8e8c784238377a24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94372c3a77f93b3b2bf9173663e7571d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a94372c3a77f93b3b2bf9173663e7571d">setMouseCursor</a> (const MouseCursor &amp;cursor)</td></tr>
+<tr class="memdesc:a94372c3a77f93b3b2bf9173663e7571d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mouse cursor.  <a href="classraylib_1_1_mouse_helper.html#a94372c3a77f93b3b2bf9173663e7571d">More...</a><br /></td></tr>
+<tr class="separator:a94372c3a77f93b3b2bf9173663e7571d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75c5c6e4979c027a5a3a986532c54d1a"><td class="memItemLeft" align="right" valign="top">static Ray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_mouse_helper.html#a75c5c6e4979c027a5a3a986532c54d1a">getMouseRay</a> (<a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> mousePosition, Camera camera)</td></tr>
+<tr class="memdesc:a75c5c6e4979c027a5a3a986532c54d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a ray trace from mouse position.  <a href="classraylib_1_1_mouse_helper.html#a75c5c6e4979c027a5a3a986532c54d1a">More...</a><br /></td></tr>
 <tr class="separator:a75c5c6e4979c027a5a3a986532c54d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Input-related functions: mouse. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3edd1954c4b6b39242d655fa61adf29c" name="a3edd1954c4b6b39242d655fa61adf29c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3edd1954c4b6b39242d655fa61adf29c">&#9670;&nbsp;</a></span>getMouseDelta()</h2>
 
@@ -138,12 +157,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get mouse delta between frames. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mouse delta </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_mouse_helper_a3edd1954c4b6b39242d655fa61adf29c_cgraph.png" border="0" usemap="#aclassraylib_1_1_mouse_helper_a3edd1954c4b6b39242d655fa61adf29c_cgraph" alt=""/></div>
 <map name="aclassraylib_1_1_mouse_helper_a3edd1954c4b6b39242d655fa61adf29c_cgraph" id="aclassraylib_1_1_mouse_helper_a3edd1954c4b6b39242d655fa61adf29c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,140,47"/>
+<area shape="rect" title="Get mouse delta between frames." alt="" coords="5,5,140,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#a8cb9b9c972dc4b95ee1c1297542bba10" title=" " alt="" coords="188,5,323,47"/>
 </map>
 </div>
@@ -172,12 +194,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the mouse position. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mouse position </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_cgraph.png" border="0" usemap="#aclassraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_cgraph" alt=""/></div>
 <map name="aclassraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_cgraph" id="aclassraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,140,47"/>
+<area shape="rect" title="Get the mouse position." alt="" coords="5,5,140,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#a8cb9b9c972dc4b95ee1c1297542bba10" title=" " alt="" coords="188,5,323,47"/>
 </map>
 </div>
@@ -186,7 +211,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_icgraph.png" border="0" usemap="#aclassraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_icgraph" alt=""/></div>
 <map name="aclassraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_icgraph" id="aclassraylib_1_1_mouse_helper_a498d459af118174334984e9b174ea924_icgraph">
-<area shape="rect" title=" " alt="" coords="193,5,328,47"/>
+<area shape="rect" title="Get the mouse position." alt="" coords="193,5,328,47"/>
 <area shape="rect" href="class_game_engine_1_1_button.html#a49c379ba941ab46c3b886e6bdc302a62" title=" " alt="" coords="5,5,145,47"/>
 </map>
 </div>
@@ -226,12 +251,22 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get a ray trace from mouse position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mousePosition</td><td>the mouse position </td></tr>
+    <tr><td class="paramname">camera</td><td>the camera </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the ray trace </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_mouse_helper_a75c5c6e4979c027a5a3a986532c54d1a_cgraph.png" border="0" usemap="#aclassraylib_1_1_mouse_helper_a75c5c6e4979c027a5a3a986532c54d1a_cgraph" alt=""/></div>
 <map name="aclassraylib_1_1_mouse_helper_a75c5c6e4979c027a5a3a986532c54d1a_cgraph" id="aclassraylib_1_1_mouse_helper_a75c5c6e4979c027a5a3a986532c54d1a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,140,47"/>
+<area shape="rect" title="Get a ray trace from mouse position." alt="" coords="5,5,140,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="188,5,323,47"/>
 </map>
 </div>
@@ -261,6 +296,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Get mouse wheel movement Y. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mouse wheel movement Y </dd></dl>
+
 </div>
 </div>
 <a id="a0e430c510c121c8a18f975ec315a80b8" name="a0e430c510c121c8a18f975ec315a80b8"></a>
@@ -285,6 +323,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the mouse X position. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mouse X position </dd></dl>
 
 </div>
 </div>
@@ -311,10 +352,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Get the mouse Y position. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mouse Y position </dd></dl>
+
 </div>
 </div>
-<a id="a09cb028b3c192e9aa094a94cdea4dcd6" name="a09cb028b3c192e9aa094a94cdea4dcd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09cb028b3c192e9aa094a94cdea4dcd6">&#9670;&nbsp;</a></span>isMouseButtonDown()</h2>
+<a id="ac64bdf913aff282cc3eea771b818d2f9" name="ac64bdf913aff282cc3eea771b818d2f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64bdf913aff282cc3eea771b818d2f9">&#9670;&nbsp;</a></span>isMouseButtonDown()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +369,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::MouseHelper::isMouseButtonDown </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const MouseButton &amp;&#160;</td>
           <td class="paramname"><em>button</em></td><td>)</td>
           <td></td>
         </tr>
@@ -337,10 +381,28 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Check if a mouse button is being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the button to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the button is being pressed </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_mouse_helper_ac64bdf913aff282cc3eea771b818d2f9_icgraph.png" border="0" usemap="#aclassraylib_1_1_mouse_helper_ac64bdf913aff282cc3eea771b818d2f9_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_mouse_helper_ac64bdf913aff282cc3eea771b818d2f9_icgraph" id="aclassraylib_1_1_mouse_helper_ac64bdf913aff282cc3eea771b818d2f9_icgraph">
+<area shape="rect" title="Check if a mouse button is being pressed." alt="" coords="193,5,341,47"/>
+<area shape="rect" href="class_game_engine_1_1_button.html#a49c379ba941ab46c3b886e6bdc302a62" title=" " alt="" coords="5,5,145,47"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="af440ef98f6aa4eaf09ead519931209f1" name="af440ef98f6aa4eaf09ead519931209f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af440ef98f6aa4eaf09ead519931209f1">&#9670;&nbsp;</a></span>isMouseButtonPressed()</h2>
+<a id="a83c1f2ad4f6cbe66aa619b6208a6a92c" name="a83c1f2ad4f6cbe66aa619b6208a6a92c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83c1f2ad4f6cbe66aa619b6208a6a92c">&#9670;&nbsp;</a></span>isMouseButtonPressed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +413,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::MouseHelper::isMouseButtonPressed </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const MouseButton &amp;&#160;</td>
           <td class="paramname"><em>button</em></td><td>)</td>
           <td></td>
         </tr>
@@ -362,20 +424,20 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_mouse_helper_af440ef98f6aa4eaf09ead519931209f1_icgraph.png" border="0" usemap="#aclassraylib_1_1_mouse_helper_af440ef98f6aa4eaf09ead519931209f1_icgraph" alt=""/></div>
-<map name="aclassraylib_1_1_mouse_helper_af440ef98f6aa4eaf09ead519931209f1_icgraph" id="aclassraylib_1_1_mouse_helper_af440ef98f6aa4eaf09ead519931209f1_icgraph">
-<area shape="rect" title=" " alt="" coords="193,5,356,47"/>
-<area shape="rect" href="class_game_engine_1_1_button.html#a49c379ba941ab46c3b886e6bdc302a62" title=" " alt="" coords="5,5,145,47"/>
-</map>
-</div>
+
+<p>Check if a mouse button has been pressed once. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the button to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the button has been pressed once </dd></dl>
 
 </div>
 </div>
-<a id="a50516c68d58128c38d34fbf99f95266a" name="a50516c68d58128c38d34fbf99f95266a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50516c68d58128c38d34fbf99f95266a">&#9670;&nbsp;</a></span>isMouseButtonReleased()</h2>
+<a id="a7ac5b2362efbf642c1880a553831a5b0" name="a7ac5b2362efbf642c1880a553831a5b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac5b2362efbf642c1880a553831a5b0">&#9670;&nbsp;</a></span>isMouseButtonReleased()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,7 +448,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::MouseHelper::isMouseButtonReleased </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const MouseButton &amp;&#160;</td>
           <td class="paramname"><em>button</em></td><td>)</td>
           <td></td>
         </tr>
@@ -398,10 +460,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Check if a mouse button has been released once. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the button to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the button has been released once </dd></dl>
+
 </div>
 </div>
-<a id="a74c635e59f94794bcde6f70b4a5742ab" name="a74c635e59f94794bcde6f70b4a5742ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74c635e59f94794bcde6f70b4a5742ab">&#9670;&nbsp;</a></span>isMouseButtonUp()</h2>
+<a id="a0b5bb03d693dc2e71740646fc87eb85e" name="a0b5bb03d693dc2e71740646fc87eb85e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5bb03d693dc2e71740646fc87eb85e">&#9670;&nbsp;</a></span>isMouseButtonUp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,7 +483,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::MouseHelper::isMouseButtonUp </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const MouseButton &amp;&#160;</td>
           <td class="paramname"><em>button</em></td><td>)</td>
           <td></td>
         </tr>
@@ -424,10 +495,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Check if a mouse button is NOT being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the button to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the button is NOT being pressed </dd></dl>
+
 </div>
 </div>
-<a id="a8d6cb4ece7dd4ff8e8c784238377a24c" name="a8d6cb4ece7dd4ff8e8c784238377a24c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d6cb4ece7dd4ff8e8c784238377a24c">&#9670;&nbsp;</a></span>setMouseCursor()</h2>
+<a id="a94372c3a77f93b3b2bf9173663e7571d" name="a94372c3a77f93b3b2bf9173663e7571d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94372c3a77f93b3b2bf9173663e7571d">&#9670;&nbsp;</a></span>setMouseCursor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -438,7 +518,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void raylib::MouseHelper::setMouseCursor </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const MouseCursor &amp;&#160;</td>
           <td class="paramname"><em>cursor</em></td><td>)</td>
           <td></td>
         </tr>
@@ -449,6 +529,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set mouse cursor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td>the cursor to set </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -486,6 +574,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Set mouse offset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offsetX</td><td>the X offset </td></tr>
+    <tr><td class="paramname">offsetY</td><td>the Y offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a8ea23f23e2d876e3dac37accb3b492e0" name="a8ea23f23e2d876e3dac37accb3b492e0"></a>
@@ -522,6 +619,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Set mouse position XY. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the X position </td></tr>
+    <tr><td class="paramname">y</td><td>the Y position </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a047da1fce40ba997142bc5e8306fa9c3" name="a047da1fce40ba997142bc5e8306fa9c3"></a>
@@ -557,6 +663,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set mouse scaling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scaleX</td><td>the X scaling </td></tr>
+    <tr><td class="paramname">scaleY</td><td>the Y scaling </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

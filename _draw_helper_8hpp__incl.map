@@ -1,4 +1,10 @@
-<map id="raylib&#45;cpp/include/raylib/Core/DrawHelper.hpp" name="raylib&#45;cpp/include/raylib/Core/DrawHelper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,188,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="65,95,128,121"/>
+<map id="raylib&#45;cpp/include/raylib/render/DrawHelper.hpp" name="raylib&#45;cpp/include/raylib/render/DrawHelper.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="218,5,410,47"/>
+<area shape="rect" id="node2" href="$_math_8hpp.html" title=" " alt="" coords="62,95,171,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="224,319,287,345"/>
+<area shape="rect" id="node7" href="$_rl_color_8hpp.html" title=" " alt="" coords="236,169,392,196"/>
+<area shape="rect" id="node3" href="$_vector_8hpp.html" title=" " alt="" coords="41,244,192,271"/>
+<area shape="rect" id="node6" href="$_vector_helper_8hpp.html" title=" " alt="" coords="22,169,211,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="81,319,153,345"/>
+<area shape="rect" id="node8" title=" " alt="" coords="318,244,379,271"/>
 </map>

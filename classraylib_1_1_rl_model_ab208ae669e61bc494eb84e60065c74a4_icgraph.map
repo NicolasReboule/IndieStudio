@@ -1,5 +1,6 @@
 <map id="raylib::RlModel::getPosition" name="raylib::RlModel::getPosition">
-<area shape="rect" id="node1" title=" " alt="" coords="397,13,573,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="397,46,573,73"/>
 <area shape="rect" id="node2" href="$classraylib_1_1_model_helper.html#a4e6b1e133e22780ee28b90320d6a2983" title=" " alt="" coords="219,5,349,47"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_model_helper.html#a83cb0a155c1e2c7906a0ddccc2065ca3" title=" " alt="" coords="219,71,349,112"/>
 <area shape="rect" id="node3" href="$class_game_engine_1_1_static_body.html#a76747f7bbde2e5c1f543d9f893132c59" title=" " alt="" coords="5,5,171,47"/>
 </map>

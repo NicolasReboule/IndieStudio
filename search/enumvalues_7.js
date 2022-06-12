@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sides_0',['Sides',['../classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98ab25711dcd662ffa1ad34bacd73cdb691',1,'raylib::RlMeshBuilder']]],
-  ['size_1',['Size',['../classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a33109c71288cbdd04eec1afc4d0a58b4',1,'raylib::RlMeshBuilder']]],
-  ['slices_2',['Slices',['../classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98ac32a23184109ae1bc66362e573383ac4',1,'raylib::RlMeshBuilder']]]
+  ['left_0',['Left',['../classraylib_1_1_rl_image_builder.html#a83af25e753298a7cb98bfc0962c3fa1fafeca2578cd9bc0818486b1db4ee6b6b6',1,'raylib::RlImageBuilder']]],
+  ['length_1',['Length',['../classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98aa8308beb2b8333c3ed9df0b26fe16cba',1,'raylib::RlMeshBuilder']]]
 ];

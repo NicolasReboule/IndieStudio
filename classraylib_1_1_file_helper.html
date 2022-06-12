@@ -74,66 +74,78 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Files management functions.  
+ <a href="classraylib_1_1_file_helper.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_file_helper_8hpp_source.html">FileHelper.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::FileHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_file_helper__coll__graph.png" border="0" usemap="#araylib_1_1_file_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_file_helper_coll__map" id="araylib_1_1_file_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,183,391"/>
+<area shape="rect" title="Files management functions." alt="" coords="5,5,183,317"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4329c811595181429e99f886f9a619d3"><td class="memItemLeft" align="right" valign="top">static unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a4329c811595181429e99f886f9a619d3">loadFileData</a> (const std::string &amp;fileName, unsigned int *bytesRead)</td></tr>
-<tr class="separator:a4329c811595181429e99f886f9a619d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad40639e937fb46825c3483e15a87d35d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ad40639e937fb46825c3483e15a87d35d">unloadFileData</a> (unsigned char *data)</td></tr>
-<tr class="separator:ad40639e937fb46825c3483e15a87d35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac31f214beb96b5c000c694e74de97051"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ac31f214beb96b5c000c694e74de97051">saveFileData</a> (const std::string &amp;fileName, void *data, unsigned int bytesToWrite)</td></tr>
-<tr class="separator:ac31f214beb96b5c000c694e74de97051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83306731efe53be85d7956f297faec5"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#af83306731efe53be85d7956f297faec5">loadFileData</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:af83306731efe53be85d7956f297faec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load file data as byte array (read)  <a href="classraylib_1_1_file_helper.html#af83306731efe53be85d7956f297faec5">More...</a><br /></td></tr>
+<tr class="separator:af83306731efe53be85d7956f297faec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8337b963a0774c055acd07e8c9ccfff"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#af8337b963a0774c055acd07e8c9ccfff">loadFileText</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:af8337b963a0774c055acd07e8c9ccfff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load text data from file (read),.  <a href="classraylib_1_1_file_helper.html#af8337b963a0774c055acd07e8c9ccfff">More...</a><br /></td></tr>
 <tr class="separator:af8337b963a0774c055acd07e8c9ccfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ce2c324e8c252410727e175718dfa62"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a2ce2c324e8c252410727e175718dfa62">unloadFileText</a> (char *text)</td></tr>
-<tr class="separator:a2ce2c324e8c252410727e175718dfa62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a064806585edd3e1e93599eb8cefa070a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a064806585edd3e1e93599eb8cefa070a">saveFileText</a> (const std::string &amp;fileName, char *text)</td></tr>
-<tr class="separator:a064806585edd3e1e93599eb8cefa070a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16aca6ae1e0f5e22bf1a43ae89fa433"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ad16aca6ae1e0f5e22bf1a43ae89fa433">saveFileText</a> (const std::string &amp;fileName, const std::string &amp;text)</td></tr>
+<tr class="memdesc:ad16aca6ae1e0f5e22bf1a43ae89fa433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save text data to file (write)  <a href="classraylib_1_1_file_helper.html#ad16aca6ae1e0f5e22bf1a43ae89fa433">More...</a><br /></td></tr>
+<tr class="separator:ad16aca6ae1e0f5e22bf1a43ae89fa433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66fd3fc50e74fd8f942e10bc462e712"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#aa66fd3fc50e74fd8f942e10bc462e712">fileExists</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:aa66fd3fc50e74fd8f942e10bc462e712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if file exists.  <a href="classraylib_1_1_file_helper.html#aa66fd3fc50e74fd8f942e10bc462e712">More...</a><br /></td></tr>
 <tr class="separator:aa66fd3fc50e74fd8f942e10bc462e712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85027aa283ca4f2a287cc8353e5fce8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ab85027aa283ca4f2a287cc8353e5fce8">directoryExists</a> (const std::string &amp;dirPath)</td></tr>
+<tr class="memdesc:ab85027aa283ca4f2a287cc8353e5fce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if directory exists.  <a href="classraylib_1_1_file_helper.html#ab85027aa283ca4f2a287cc8353e5fce8">More...</a><br /></td></tr>
 <tr class="separator:ab85027aa283ca4f2a287cc8353e5fce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a58ca07860135d3ca2ef41848efa626"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a9a58ca07860135d3ca2ef41848efa626">isFileExtension</a> (const std::string &amp;fileName, const std::string &amp;ext)</td></tr>
+<tr class="memdesc:a9a58ca07860135d3ca2ef41848efa626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if file extension is valid.  <a href="classraylib_1_1_file_helper.html#a9a58ca07860135d3ca2ef41848efa626">More...</a><br /></td></tr>
 <tr class="separator:a9a58ca07860135d3ca2ef41848efa626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a363a28c5b5aaf774087670812e78bfbc"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a363a28c5b5aaf774087670812e78bfbc">getFileExtension</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a363a28c5b5aaf774087670812e78bfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extension.  <a href="classraylib_1_1_file_helper.html#a363a28c5b5aaf774087670812e78bfbc">More...</a><br /></td></tr>
 <tr class="separator:a363a28c5b5aaf774087670812e78bfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39f76a0e403a2ed26e5f971ae901f806"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a39f76a0e403a2ed26e5f971ae901f806">getFileName</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:a39f76a0e403a2ed26e5f971ae901f806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file name.  <a href="classraylib_1_1_file_helper.html#a39f76a0e403a2ed26e5f971ae901f806">More...</a><br /></td></tr>
 <tr class="separator:a39f76a0e403a2ed26e5f971ae901f806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58bcf1c0f6525eda6168c925c6085908"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a58bcf1c0f6525eda6168c925c6085908">getFileNameWithoutExt</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:a58bcf1c0f6525eda6168c925c6085908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file name without extension.  <a href="classraylib_1_1_file_helper.html#a58bcf1c0f6525eda6168c925c6085908">More...</a><br /></td></tr>
 <tr class="separator:a58bcf1c0f6525eda6168c925c6085908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a316b61f48569c199185ff827ce55c8f4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a316b61f48569c199185ff827ce55c8f4">getDirectoryPath</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:a316b61f48569c199185ff827ce55c8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get directory path.  <a href="classraylib_1_1_file_helper.html#a316b61f48569c199185ff827ce55c8f4">More...</a><br /></td></tr>
 <tr class="separator:a316b61f48569c199185ff827ce55c8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c40af4a7dcd232108d8f28643fb8e64"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a3c40af4a7dcd232108d8f28643fb8e64">getPrevDirectoryPath</a> (const std::string &amp;dirPath)</td></tr>
+<tr class="memdesc:a3c40af4a7dcd232108d8f28643fb8e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get previous directory path.  <a href="classraylib_1_1_file_helper.html#a3c40af4a7dcd232108d8f28643fb8e64">More...</a><br /></td></tr>
 <tr class="separator:a3c40af4a7dcd232108d8f28643fb8e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab55b4089088c4d668d925a432cb85a6a"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ab55b4089088c4d668d925a432cb85a6a">getWorkingDirectory</a> ()</td></tr>
+<tr class="memdesc:ab55b4089088c4d668d925a432cb85a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get working directory.  <a href="classraylib_1_1_file_helper.html#ab55b4089088c4d668d925a432cb85a6a">More...</a><br /></td></tr>
 <tr class="separator:ab55b4089088c4d668d925a432cb85a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaf592c2f4fc1c3006d1cbbfb94e5ba5"><td class="memItemLeft" align="right" valign="top">static char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#abaf592c2f4fc1c3006d1cbbfb94e5ba5">getDirectoryFiles</a> (const std::string &amp;dirPath, int *count)</td></tr>
-<tr class="separator:abaf592c2f4fc1c3006d1cbbfb94e5ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac96ab41f9a9e8a5b6bfaa8bd59a1c3c0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ac96ab41f9a9e8a5b6bfaa8bd59a1c3c0">clearDirectoryFiles</a> ()</td></tr>
-<tr class="separator:ac96ab41f9a9e8a5b6bfaa8bd59a1c3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8547a3880eb1483c70892543aa169e0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ad8547a3880eb1483c70892543aa169e0">changeDirectory</a> (const std::string &amp;dir)</td></tr>
-<tr class="separator:ad8547a3880eb1483c70892543aa169e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ff6502645f0fb9e0549e6eccdbfaaa"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#aa7ff6502645f0fb9e0549e6eccdbfaaa">getDirectoryFiles</a> (const std::string &amp;dirPath)</td></tr>
+<tr class="memdesc:aa7ff6502645f0fb9e0549e6eccdbfaaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all files in directory.  <a href="classraylib_1_1_file_helper.html#aa7ff6502645f0fb9e0549e6eccdbfaaa">More...</a><br /></td></tr>
+<tr class="separator:aa7ff6502645f0fb9e0549e6eccdbfaaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7095191f61c3f080bc7e902589499c07"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a7095191f61c3f080bc7e902589499c07">changeDirectory</a> (const std::string &amp;dir)</td></tr>
+<tr class="memdesc:a7095191f61c3f080bc7e902589499c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change working directory.  <a href="classraylib_1_1_file_helper.html#a7095191f61c3f080bc7e902589499c07">More...</a><br /></td></tr>
+<tr class="separator:a7095191f61c3f080bc7e902589499c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac291307bbde3aaa4af0713c23e0ef668"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#ac291307bbde3aaa4af0713c23e0ef668">isFileDropped</a> ()</td></tr>
+<tr class="memdesc:ac291307bbde3aaa4af0713c23e0ef668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a file has been dropped on the window.  <a href="classraylib_1_1_file_helper.html#ac291307bbde3aaa4af0713c23e0ef668">More...</a><br /></td></tr>
 <tr class="separator:ac291307bbde3aaa4af0713c23e0ef668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83d28598fd110c6e504a03a592c5c676"><td class="memItemLeft" align="right" valign="top">static char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a83d28598fd110c6e504a03a592c5c676">getDroppedFiles</a> (int *count)</td></tr>
-<tr class="separator:a83d28598fd110c6e504a03a592c5c676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b5f148833bb08554246a49fe77f213"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a48b5f148833bb08554246a49fe77f213">clearDroppedFiles</a> ()</td></tr>
-<tr class="separator:a48b5f148833bb08554246a49fe77f213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536bd330c3ac121726fda61680df27e3"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#a536bd330c3ac121726fda61680df27e3">getDroppedFiles</a> ()</td></tr>
+<tr class="memdesc:a536bd330c3ac121726fda61680df27e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get dropped files paths.  <a href="classraylib_1_1_file_helper.html#a536bd330c3ac121726fda61680df27e3">More...</a><br /></td></tr>
+<tr class="separator:a536bd330c3ac121726fda61680df27e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef936ef022dfbb5f64b2a67c06ee6e56"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_file_helper.html#aef936ef022dfbb5f64b2a67c06ee6e56">getFileModTime</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:aef936ef022dfbb5f64b2a67c06ee6e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file modification time (last write time)  <a href="classraylib_1_1_file_helper.html#aef936ef022dfbb5f64b2a67c06ee6e56">More...</a><br /></td></tr>
 <tr class="separator:aef936ef022dfbb5f64b2a67c06ee6e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad8547a3880eb1483c70892543aa169e0" name="ad8547a3880eb1483c70892543aa169e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8547a3880eb1483c70892543aa169e0">&#9670;&nbsp;</a></span>changeDirectory()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Files management functions. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7095191f61c3f080bc7e902589499c07" name="a7095191f61c3f080bc7e902589499c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7095191f61c3f080bc7e902589499c07">&#9670;&nbsp;</a></span>changeDirectory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +154,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool raylib::FileHelper::changeDirectory </td>
+          <td class="memname">void raylib::FileHelper::changeDirectory </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>dir</em></td><td>)</td>
@@ -156,55 +168,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ac96ab41f9a9e8a5b6bfaa8bd59a1c3c0" name="ac96ab41f9a9e8a5b6bfaa8bd59a1c3c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac96ab41f9a9e8a5b6bfaa8bd59a1c3c0">&#9670;&nbsp;</a></span>clearDirectoryFiles()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::FileHelper::clearDirectoryFiles </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a48b5f148833bb08554246a49fe77f213" name="a48b5f148833bb08554246a49fe77f213"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48b5f148833bb08554246a49fe77f213">&#9670;&nbsp;</a></span>clearDroppedFiles()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::FileHelper::clearDroppedFiles </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Change working directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>the directory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success </dd></dl>
 
 </div>
 </div>
@@ -232,6 +203,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if directory exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirPath</td><td>the directory path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if directory exists </dd></dl>
+
 </div>
 </div>
 <a id="aa66fd3fc50e74fd8f942e10bc462e712" name="aa66fd3fc50e74fd8f942e10bc462e712"></a>
@@ -258,10 +238,19 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if file exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if file exists </dd></dl>
+
 </div>
 </div>
-<a id="abaf592c2f4fc1c3006d1cbbfb94e5ba5" name="abaf592c2f4fc1c3006d1cbbfb94e5ba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abaf592c2f4fc1c3006d1cbbfb94e5ba5">&#9670;&nbsp;</a></span>getDirectoryFiles()</h2>
+<a id="aa7ff6502645f0fb9e0549e6eccdbfaaa" name="aa7ff6502645f0fb9e0549e6eccdbfaaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ff6502645f0fb9e0549e6eccdbfaaa">&#9670;&nbsp;</a></span>getDirectoryFiles()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,21 +259,11 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char ** raylib::FileHelper::getDirectoryFiles </td>
+          <td class="memname">std::vector&lt; std::string &gt; raylib::FileHelper::getDirectoryFiles </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>dirPath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>dirPath</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>count</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -293,6 +272,16 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get all files in directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirPath</td><td>the directory path </td></tr>
+    <tr><td class="paramname">count</td><td>the number of files </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the files </dd></dl>
 
 </div>
 </div>
@@ -320,10 +309,19 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get directory path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>the file path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the directory path </dd></dl>
+
 </div>
 </div>
-<a id="a83d28598fd110c6e504a03a592c5c676" name="a83d28598fd110c6e504a03a592c5c676"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83d28598fd110c6e504a03a592c5c676">&#9670;&nbsp;</a></span>getDroppedFiles()</h2>
+<a id="a536bd330c3ac121726fda61680df27e3" name="a536bd330c3ac121726fda61680df27e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536bd330c3ac121726fda61680df27e3">&#9670;&nbsp;</a></span>getDroppedFiles()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,10 +330,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char ** raylib::FileHelper::getDroppedFiles </td>
+          <td class="memname">std::vector&lt; std::string &gt; raylib::FileHelper::getDroppedFiles </td>
           <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>count</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -345,6 +342,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get dropped files paths. </p>
+<dl class="section return"><dt>Returns</dt><dd>the dropped files paths </dd></dl>
 
 </div>
 </div>
@@ -372,6 +372,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get file extension. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the file extension </dd></dl>
+
 </div>
 </div>
 <a id="aef936ef022dfbb5f64b2a67c06ee6e56" name="aef936ef022dfbb5f64b2a67c06ee6e56"></a>
@@ -397,6 +406,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get file modification time (last write time) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the file modification time </dd></dl>
 
 </div>
 </div>
@@ -424,6 +442,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get file name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>the file path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the file name </dd></dl>
+
 </div>
 </div>
 <a id="a58bcf1c0f6525eda6168c925c6085908" name="a58bcf1c0f6525eda6168c925c6085908"></a>
@@ -449,6 +476,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get file name without extension. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>the file path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the file name without extension </dd></dl>
 
 </div>
 </div>
@@ -476,6 +512,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get previous directory path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirPath</td><td>the directory path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the previous directory path </dd></dl>
+
 </div>
 </div>
 <a id="ab55b4089088c4d668d925a432cb85a6a" name="ab55b4089088c4d668d925a432cb85a6a"></a>
@@ -501,6 +546,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get working directory. </p>
+<dl class="section return"><dt>Returns</dt><dd>the working directory </dd></dl>
+
 </div>
 </div>
 <a id="ac291307bbde3aaa4af0713c23e0ef668" name="ac291307bbde3aaa4af0713c23e0ef668"></a>
@@ -525,6 +573,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if a file has been dropped on the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if a file has been dropped on the window </dd></dl>
 
 </div>
 </div>
@@ -562,10 +613,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if file extension is valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+    <tr><td class="paramname">ext</td><td>the extension </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if file extension is valid </dd></dl>
+
 </div>
 </div>
-<a id="a4329c811595181429e99f886f9a619d3" name="a4329c811595181429e99f886f9a619d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4329c811595181429e99f886f9a619d3">&#9670;&nbsp;</a></span>loadFileData()</h2>
+<a id="af83306731efe53be85d7956f297faec5" name="af83306731efe53be85d7956f297faec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83306731efe53be85d7956f297faec5">&#9670;&nbsp;</a></span>loadFileData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -574,21 +635,11 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char * raylib::FileHelper::loadFileData </td>
+          <td class="memname">std::vector&lt; unsigned char &gt; raylib::FileHelper::loadFileData </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">unsigned int *&#160;</td>
-          <td class="paramname"><em>bytesRead</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -597,6 +648,16 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Load file data as byte array (read) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+    <tr><td class="paramname">bytesRead</td><td>the number of bytes read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the byte array </dd></dl>
 
 </div>
 </div>
@@ -624,52 +685,19 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ac31f214beb96b5c000c694e74de97051" name="ac31f214beb96b5c000c694e74de97051"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac31f214beb96b5c000c694e74de97051">&#9670;&nbsp;</a></span>saveFileData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool raylib::FileHelper::saveFileData </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>bytesToWrite</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Load text data from file (read),. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the text data </dd></dl>
 
 </div>
 </div>
-<a id="a064806585edd3e1e93599eb8cefa070a" name="a064806585edd3e1e93599eb8cefa070a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a064806585edd3e1e93599eb8cefa070a">&#9670;&nbsp;</a></span>saveFileText()</h2>
+<a id="ad16aca6ae1e0f5e22bf1a43ae89fa433" name="ad16aca6ae1e0f5e22bf1a43ae89fa433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16aca6ae1e0f5e22bf1a43ae89fa433">&#9670;&nbsp;</a></span>saveFileText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,7 +714,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>text</em>&#160;</td>
         </tr>
         <tr>
@@ -702,57 +730,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ad40639e937fb46825c3483e15a87d35d" name="ad40639e937fb46825c3483e15a87d35d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad40639e937fb46825c3483e15a87d35d">&#9670;&nbsp;</a></span>unloadFileData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::FileHelper::unloadFileData </td>
-          <td>(</td>
-          <td class="paramtype">unsigned char *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2ce2c324e8c252410727e175718dfa62" name="a2ce2c324e8c252410727e175718dfa62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ce2c324e8c252410727e175718dfa62">&#9670;&nbsp;</a></span>unloadFileText()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::FileHelper::unloadFileText </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Save text data to file (write) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+    <tr><td class="paramname">text</td><td>the text data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success </dd></dl>
 
 </div>
 </div>

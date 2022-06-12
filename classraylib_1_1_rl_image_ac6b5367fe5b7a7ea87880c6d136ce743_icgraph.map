@@ -1,0 +1,14 @@
+<map id="raylib::RlImage::getImage" name="raylib::RlImage::getImage">
+<area shape="rect" id="node1" title="Get the image (const)" alt="" coords="264,339,431,366"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_image_draw_helper.html#a152f52f5827bb2b12ede3896a1caa16f" title="Clear image background with given color." alt="" coords="29,5,192,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_image_draw_helper.html#ab1cd2deefa8e5fd2a6dc8cfbb51bf241" title="Draw circle within an image." alt="" coords="29,71,192,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_image_draw_helper.html#a42f3a6139c679f9bed1c1f4ae58beb4c" title="Draw a source image within a destination image (tint applied to source)" alt="" coords="29,136,192,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_image_draw_helper.html#a0133ff4194b9cb5d5f21df82b837990f" title="Draw text (using default font) within an image (destination)" alt="" coords="29,201,192,243"/>
+<area shape="rect" id="node6" href="$classraylib_1_1_image_draw_helper.html#a82a648986a09f5702ddb90af14d237e0" title="Draw line within an image." alt="" coords="29,267,192,308"/>
+<area shape="rect" id="node7" href="$classraylib_1_1_image_draw_helper.html#af0cdee0722d98fe250f9c58024d916a6" title="Draw pixel within an image." alt="" coords="29,332,192,373"/>
+<area shape="rect" id="node8" href="$classraylib_1_1_image_draw_helper.html#a0593dab685815271f4ca3fcaaebd1f78" title="Draw rectangle within an image." alt="" coords="29,397,192,439"/>
+<area shape="rect" id="node9" href="$classraylib_1_1_image_draw_helper.html#a308bea0af38a4dc1730beddebae42642" title="Draw rectangle lines within an image." alt="" coords="29,463,192,504"/>
+<area shape="rect" id="node10" href="$classraylib_1_1_image_draw_helper.html#a9975380b1eb3a9bd80bd139fe0f9fe62" title="Draw rectangle within an image." alt="" coords="29,528,192,569"/>
+<area shape="rect" id="node11" href="$classraylib_1_1_rl_texture.html#a82e369fec0dd62e3176760258958b6f1" title=" " alt="" coords="51,593,170,635"/>
+<area shape="rect" id="node12" href="$classraylib_1_1_rl_window.html#ad0335356685677b6ef073e41e8e4d01c" title="Set icon for window (only PLATFORM_DESKTOP)" alt="" coords="5,659,216,686"/>
+</map>

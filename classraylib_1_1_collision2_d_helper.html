@@ -74,38 +74,54 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Basic shapes collision detection functions.  
+ <a href="classraylib_1_1_collision2_d_helper.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_collision2_d_helper_8hpp_source.html">Collision2DHelper.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::Collision2DHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_collision2_d_helper__coll__graph.png" border="0" usemap="#araylib_1_1_collision2_d_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_collision2_d_helper_coll__map" id="araylib_1_1_collision2_d_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,207,185"/>
+<area shape="rect" title="Basic shapes collision detection functions." alt="" coords="5,5,207,200"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2c1496f25e04bd52c0c608a26fc48881"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a2c1496f25e04bd52c0c608a26fc48881">checkCollisionRecs</a> (Rectangle rec1, Rectangle rec2)</td></tr>
-<tr class="separator:a2c1496f25e04bd52c0c608a26fc48881"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69996ba7b23d991081666b43e0082835"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a69996ba7b23d991081666b43e0082835">checkCollisionCircles</a> (<a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> center1, float radius1, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> center2, float radius2)</td></tr>
-<tr class="separator:a69996ba7b23d991081666b43e0082835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaa1bb01676768858a8c95ae059137c0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#adaa1bb01676768858a8c95ae059137c0">checkCollisionCircleRec</a> (<a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> center, float radius, Rectangle rec)</td></tr>
-<tr class="separator:adaa1bb01676768858a8c95ae059137c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb72456caa485dada1df0bf34cfc9db"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a0bb72456caa485dada1df0bf34cfc9db">checkCollisionPointRec</a> (<a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> point, Rectangle rec)</td></tr>
-<tr class="separator:a0bb72456caa485dada1df0bf34cfc9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa60d35ddadc2217c364007ad9839cea"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#aaa60d35ddadc2217c364007ad9839cea">checkCollisionPointCircle</a> (<a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> point, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> center, float radius)</td></tr>
-<tr class="separator:aaa60d35ddadc2217c364007ad9839cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a75eb4a858010ffa9dd760030e3e0c5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a6a75eb4a858010ffa9dd760030e3e0c5">checkCollisionPointTriangle</a> (<a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> point, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> p1, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> p2, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> p3)</td></tr>
-<tr class="separator:a6a75eb4a858010ffa9dd760030e3e0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad46f6a52e4a49948b3b1e5ba2361a237"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#ad46f6a52e4a49948b3b1e5ba2361a237">checkCollisionPointLine</a> (<a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> point, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> p1, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> p2, int threshold)</td></tr>
-<tr class="separator:ad46f6a52e4a49948b3b1e5ba2361a237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eac27e6eadd5cd2a7405cb5a9f96ef6"><td class="memItemLeft" align="right" valign="top">static Rectangle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a8eac27e6eadd5cd2a7405cb5a9f96ef6">getCollisionRec</a> (Rectangle rec1, Rectangle rec2)</td></tr>
-<tr class="separator:a8eac27e6eadd5cd2a7405cb5a9f96ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e98dc0ea453b44b436976b0a2663d76"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a9e98dc0ea453b44b436976b0a2663d76">checkCollisionRecs</a> (const Rectangle &amp;rec1, const Rectangle &amp;rec2)</td></tr>
+<tr class="memdesc:a9e98dc0ea453b44b436976b0a2663d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two rectangles are colliding.  <a href="classraylib_1_1_collision2_d_helper.html#a9e98dc0ea453b44b436976b0a2663d76">More...</a><br /></td></tr>
+<tr class="separator:a9e98dc0ea453b44b436976b0a2663d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb166ef2629c6a0fa3dc9a733fdaa5c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#aeb166ef2629c6a0fa3dc9a733fdaa5c2">checkCollisionCircles</a> (const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;center1, float radius1, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;center2, float radius2)</td></tr>
+<tr class="memdesc:aeb166ef2629c6a0fa3dc9a733fdaa5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two circles are colliding.  <a href="classraylib_1_1_collision2_d_helper.html#aeb166ef2629c6a0fa3dc9a733fdaa5c2">More...</a><br /></td></tr>
+<tr class="separator:aeb166ef2629c6a0fa3dc9a733fdaa5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113e84dfb4c80acea4f8fb16e6165d26"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a113e84dfb4c80acea4f8fb16e6165d26">checkCollisionCircleRec</a> (const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;center, float radius, const Rectangle &amp;rec)</td></tr>
+<tr class="memdesc:a113e84dfb4c80acea4f8fb16e6165d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a circle is colliding with a rectangle.  <a href="classraylib_1_1_collision2_d_helper.html#a113e84dfb4c80acea4f8fb16e6165d26">More...</a><br /></td></tr>
+<tr class="separator:a113e84dfb4c80acea4f8fb16e6165d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bad9012963fa0c736f6abf5e22a8141"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a2bad9012963fa0c736f6abf5e22a8141">checkCollisionPointRec</a> (const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;point, const Rectangle &amp;rec)</td></tr>
+<tr class="memdesc:a2bad9012963fa0c736f6abf5e22a8141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if point is inside rectangle.  <a href="classraylib_1_1_collision2_d_helper.html#a2bad9012963fa0c736f6abf5e22a8141">More...</a><br /></td></tr>
+<tr class="separator:a2bad9012963fa0c736f6abf5e22a8141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd08620d57e6325bd36732b46ca49fc3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#abd08620d57e6325bd36732b46ca49fc3">checkCollisionPointCircle</a> (const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;point, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;center, float radius)</td></tr>
+<tr class="memdesc:abd08620d57e6325bd36732b46ca49fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if point is inside circle.  <a href="classraylib_1_1_collision2_d_helper.html#abd08620d57e6325bd36732b46ca49fc3">More...</a><br /></td></tr>
+<tr class="separator:abd08620d57e6325bd36732b46ca49fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf412a2fe47c16beaddcfab56828b134"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#adf412a2fe47c16beaddcfab56828b134">checkCollisionPointTriangle</a> (const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;point, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;p1, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;p2, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;p3)</td></tr>
+<tr class="memdesc:adf412a2fe47c16beaddcfab56828b134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if point is inside a triangle.  <a href="classraylib_1_1_collision2_d_helper.html#adf412a2fe47c16beaddcfab56828b134">More...</a><br /></td></tr>
+<tr class="separator:adf412a2fe47c16beaddcfab56828b134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f6ffb1ee21e68de73f522183ad1fd4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#ac6f6ffb1ee21e68de73f522183ad1fd4">checkCollisionLines</a> (const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;startPos1, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;endPos1, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;startPos2, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;endPos2, <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;collisionPoint)</td></tr>
+<tr class="memdesc:ac6f6ffb1ee21e68de73f522183ad1fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the collision between two lines defined by two points each, returns collision point by reference.  <a href="classraylib_1_1_collision2_d_helper.html#ac6f6ffb1ee21e68de73f522183ad1fd4">More...</a><br /></td></tr>
+<tr class="separator:ac6f6ffb1ee21e68de73f522183ad1fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ae69e960ff2b696cb1a8e4f00d28dd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#a60ae69e960ff2b696cb1a8e4f00d28dd">checkCollisionPointLine</a> (const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;point, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;p1, const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;p2, int threshold)</td></tr>
+<tr class="memdesc:a60ae69e960ff2b696cb1a8e4f00d28dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold].  <a href="classraylib_1_1_collision2_d_helper.html#a60ae69e960ff2b696cb1a8e4f00d28dd">More...</a><br /></td></tr>
+<tr class="separator:a60ae69e960ff2b696cb1a8e4f00d28dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2224ec01b9199da198d06221ff1fda1"><td class="memItemLeft" align="right" valign="top">static Rectangle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_collision2_d_helper.html#aa2224ec01b9199da198d06221ff1fda1">getCollisionRec</a> (const Rectangle &amp;rec1, const Rectangle &amp;rec2)</td></tr>
+<tr class="memdesc:aa2224ec01b9199da198d06221ff1fda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get collision rectangle for two rectangles collision.  <a href="classraylib_1_1_collision2_d_helper.html#aa2224ec01b9199da198d06221ff1fda1">More...</a><br /></td></tr>
+<tr class="separator:aa2224ec01b9199da198d06221ff1fda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="adaa1bb01676768858a8c95ae059137c0" name="adaa1bb01676768858a8c95ae059137c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaa1bb01676768858a8c95ae059137c0">&#9670;&nbsp;</a></span>checkCollisionCircleRec()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Basic shapes collision detection functions. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a113e84dfb4c80acea4f8fb16e6165d26" name="a113e84dfb4c80acea4f8fb16e6165d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113e84dfb4c80acea4f8fb16e6165d26">&#9670;&nbsp;</a></span>checkCollisionCircleRec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,7 +132,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool raylib::Collision2DHelper::checkCollisionCircleRec </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>center</em>, </td>
         </tr>
         <tr>
@@ -128,7 +144,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramtype">const Rectangle &amp;&#160;</td>
           <td class="paramname"><em>rec</em>&#160;</td>
         </tr>
         <tr>
@@ -143,20 +159,31 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if a circle is colliding with a rectangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>the circle center </td></tr>
+    <tr><td class="paramname">radius</td><td>the circle radius </td></tr>
+    <tr><td class="paramname">rec</td><td>the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the circle is colliding with the rectangle, false otherwise </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_collision2_d_helper_adaa1bb01676768858a8c95ae059137c0_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_adaa1bb01676768858a8c95ae059137c0_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_collision2_d_helper_adaa1bb01676768858a8c95ae059137c0_cgraph" id="aclassraylib_1_1_collision2_d_helper_adaa1bb01676768858a8c95ae059137c0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,173,47"/>
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_a113e84dfb4c80acea4f8fb16e6165d26_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a113e84dfb4c80acea4f8fb16e6165d26_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_a113e84dfb4c80acea4f8fb16e6165d26_cgraph" id="aclassraylib_1_1_collision2_d_helper_a113e84dfb4c80acea4f8fb16e6165d26_cgraph">
+<area shape="rect" title="Check if a circle is colliding with a rectangle." alt="" coords="5,5,173,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="221,5,356,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a69996ba7b23d991081666b43e0082835" name="a69996ba7b23d991081666b43e0082835"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69996ba7b23d991081666b43e0082835">&#9670;&nbsp;</a></span>checkCollisionCircles()</h2>
+<a id="aeb166ef2629c6a0fa3dc9a733fdaa5c2" name="aeb166ef2629c6a0fa3dc9a733fdaa5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb166ef2629c6a0fa3dc9a733fdaa5c2">&#9670;&nbsp;</a></span>checkCollisionCircles()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +194,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::Collision2DHelper::checkCollisionCircles </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>center1</em>, </td>
         </tr>
         <tr>
@@ -179,7 +206,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>center2</em>, </td>
         </tr>
         <tr>
@@ -200,20 +227,109 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if two circles are colliding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center1</td><td>the first circle center </td></tr>
+    <tr><td class="paramname">radius1</td><td>the first circle radius </td></tr>
+    <tr><td class="paramname">center2</td><td>the second circle center </td></tr>
+    <tr><td class="paramname">radius2</td><td>the second circle radius </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the circles are colliding, false otherwise </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_collision2_d_helper_a69996ba7b23d991081666b43e0082835_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a69996ba7b23d991081666b43e0082835_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_collision2_d_helper_a69996ba7b23d991081666b43e0082835_cgraph" id="aclassraylib_1_1_collision2_d_helper_a69996ba7b23d991081666b43e0082835_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,167,47"/>
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_aeb166ef2629c6a0fa3dc9a733fdaa5c2_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_aeb166ef2629c6a0fa3dc9a733fdaa5c2_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_aeb166ef2629c6a0fa3dc9a733fdaa5c2_cgraph" id="aclassraylib_1_1_collision2_d_helper_aeb166ef2629c6a0fa3dc9a733fdaa5c2_cgraph">
+<area shape="rect" title="Check if two circles are colliding." alt="" coords="5,5,167,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="215,5,349,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aaa60d35ddadc2217c364007ad9839cea" name="aaa60d35ddadc2217c364007ad9839cea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa60d35ddadc2217c364007ad9839cea">&#9670;&nbsp;</a></span>checkCollisionPointCircle()</h2>
+<a id="ac6f6ffb1ee21e68de73f522183ad1fd4" name="ac6f6ffb1ee21e68de73f522183ad1fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6f6ffb1ee21e68de73f522183ad1fd4">&#9670;&nbsp;</a></span>checkCollisionLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Collision2DHelper::checkCollisionLines </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>startPos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>endPos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>startPos2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>endPos2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>collisionPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the collision between two lines defined by two points each, returns collision point by reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startPos1</td><td>the first line start position </td></tr>
+    <tr><td class="paramname">endPos1</td><td>the first line end position </td></tr>
+    <tr><td class="paramname">startPos2</td><td>the second line start position </td></tr>
+    <tr><td class="paramname">endPos2</td><td>the second line end position </td></tr>
+    <tr><td class="paramname">collisionPoint</td><td>the collision point (stored in it) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the lines are colliding, false otherwise </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_ac6f6ffb1ee21e68de73f522183ad1fd4_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_ac6f6ffb1ee21e68de73f522183ad1fd4_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_ac6f6ffb1ee21e68de73f522183ad1fd4_cgraph" id="aclassraylib_1_1_collision2_d_helper_ac6f6ffb1ee21e68de73f522183ad1fd4_cgraph">
+<area shape="rect" title="Check the collision between two lines defined by two points each, returns collision point by referenc..." alt="" coords="5,39,167,80"/>
+<area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="215,5,349,47"/>
+<area shape="rect" href="classraylib_1_1_vector_helper.html#a8cb9b9c972dc4b95ee1c1297542bba10" title=" " alt="" coords="215,71,349,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abd08620d57e6325bd36732b46ca49fc3" name="abd08620d57e6325bd36732b46ca49fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd08620d57e6325bd36732b46ca49fc3">&#9670;&nbsp;</a></span>checkCollisionPointCircle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,13 +340,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::Collision2DHelper::checkCollisionPointCircle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>center</em>, </td>
         </tr>
         <tr>
@@ -251,20 +367,31 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if point is inside circle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>the point </td></tr>
+    <tr><td class="paramname">center</td><td>the circle center </td></tr>
+    <tr><td class="paramname">radius</td><td>the circle radius </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the point is colliding with the circle, false otherwise </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_collision2_d_helper_aaa60d35ddadc2217c364007ad9839cea_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_aaa60d35ddadc2217c364007ad9839cea_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_collision2_d_helper_aaa60d35ddadc2217c364007ad9839cea_cgraph" id="aclassraylib_1_1_collision2_d_helper_aaa60d35ddadc2217c364007ad9839cea_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,180,47"/>
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_abd08620d57e6325bd36732b46ca49fc3_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_abd08620d57e6325bd36732b46ca49fc3_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_abd08620d57e6325bd36732b46ca49fc3_cgraph" id="aclassraylib_1_1_collision2_d_helper_abd08620d57e6325bd36732b46ca49fc3_cgraph">
+<area shape="rect" title="Check if point is inside circle." alt="" coords="5,5,180,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="228,5,363,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ad46f6a52e4a49948b3b1e5ba2361a237" name="ad46f6a52e4a49948b3b1e5ba2361a237"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad46f6a52e4a49948b3b1e5ba2361a237">&#9670;&nbsp;</a></span>checkCollisionPointLine()</h2>
+<a id="a60ae69e960ff2b696cb1a8e4f00d28dd" name="a60ae69e960ff2b696cb1a8e4f00d28dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ae69e960ff2b696cb1a8e4f00d28dd">&#9670;&nbsp;</a></span>checkCollisionPointLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,19 +402,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::Collision2DHelper::checkCollisionPointLine </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>p1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>p2</em>, </td>
         </tr>
         <tr>
@@ -308,20 +435,32 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold]. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>the point </td></tr>
+    <tr><td class="paramname">p1</td><td>the first line point </td></tr>
+    <tr><td class="paramname">p2</td><td>the second line point </td></tr>
+    <tr><td class="paramname">threshold</td><td>the margin in pixels </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the point is colliding with the line, false otherwise </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_collision2_d_helper_ad46f6a52e4a49948b3b1e5ba2361a237_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_ad46f6a52e4a49948b3b1e5ba2361a237_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_collision2_d_helper_ad46f6a52e4a49948b3b1e5ba2361a237_cgraph" id="aclassraylib_1_1_collision2_d_helper_ad46f6a52e4a49948b3b1e5ba2361a237_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,172,47"/>
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_a60ae69e960ff2b696cb1a8e4f00d28dd_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a60ae69e960ff2b696cb1a8e4f00d28dd_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_a60ae69e960ff2b696cb1a8e4f00d28dd_cgraph" id="aclassraylib_1_1_collision2_d_helper_a60ae69e960ff2b696cb1a8e4f00d28dd_cgraph">
+<area shape="rect" title="Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels..." alt="" coords="5,5,172,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="220,5,355,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a0bb72456caa485dada1df0bf34cfc9db" name="a0bb72456caa485dada1df0bf34cfc9db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bb72456caa485dada1df0bf34cfc9db">&#9670;&nbsp;</a></span>checkCollisionPointRec()</h2>
+<a id="a2bad9012963fa0c736f6abf5e22a8141" name="a2bad9012963fa0c736f6abf5e22a8141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bad9012963fa0c736f6abf5e22a8141">&#9670;&nbsp;</a></span>checkCollisionPointRec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,13 +471,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::Collision2DHelper::checkCollisionPointRec </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramtype">const Rectangle &amp;&#160;</td>
           <td class="paramname"><em>rec</em>&#160;</td>
         </tr>
         <tr>
@@ -353,29 +492,39 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if point is inside rectangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>the point </td></tr>
+    <tr><td class="paramname">rec</td><td>the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the point is colliding with the rectangle, false otherwise </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_cgraph" id="aclassraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,171,47"/>
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_cgraph" id="aclassraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_cgraph">
+<area shape="rect" title="Check if point is inside rectangle." alt="" coords="5,5,171,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="219,5,353,47"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_icgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_icgraph" alt=""/></div>
-<map name="aclassraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_icgraph" id="aclassraylib_1_1_collision2_d_helper_a0bb72456caa485dada1df0bf34cfc9db_icgraph">
-<area shape="rect" title=" " alt="" coords="193,5,359,47"/>
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_icgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_icgraph" id="aclassraylib_1_1_collision2_d_helper_a2bad9012963fa0c736f6abf5e22a8141_icgraph">
+<area shape="rect" title="Check if point is inside rectangle." alt="" coords="193,5,359,47"/>
 <area shape="rect" href="class_game_engine_1_1_button.html#a49c379ba941ab46c3b886e6bdc302a62" title=" " alt="" coords="5,5,145,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a6a75eb4a858010ffa9dd760030e3e0c5" name="a6a75eb4a858010ffa9dd760030e3e0c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a75eb4a858010ffa9dd760030e3e0c5">&#9670;&nbsp;</a></span>checkCollisionPointTriangle()</h2>
+<a id="adf412a2fe47c16beaddcfab56828b134" name="adf412a2fe47c16beaddcfab56828b134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf412a2fe47c16beaddcfab56828b134">&#9670;&nbsp;</a></span>checkCollisionPointTriangle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,25 +535,25 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::Collision2DHelper::checkCollisionPointTriangle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>p1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>p2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_vector_8hpp.html#ad2067788073b7f8af4b5272203f6cc5d">Vector2f</a> &amp;&#160;</td>
           <td class="paramname"><em>p3</em>&#160;</td>
         </tr>
         <tr>
@@ -419,20 +568,32 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if point is inside a triangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>the point </td></tr>
+    <tr><td class="paramname">p1</td><td>the first triangle point </td></tr>
+    <tr><td class="paramname">p2</td><td>the second triangle point </td></tr>
+    <tr><td class="paramname">p3</td><td>the third triangle point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the point is colliding with the triangle, false otherwise </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_collision2_d_helper_a6a75eb4a858010ffa9dd760030e3e0c5_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_a6a75eb4a858010ffa9dd760030e3e0c5_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_collision2_d_helper_a6a75eb4a858010ffa9dd760030e3e0c5_cgraph" id="aclassraylib_1_1_collision2_d_helper_a6a75eb4a858010ffa9dd760030e3e0c5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,193,47"/>
+<div class="center"><img src="classraylib_1_1_collision2_d_helper_adf412a2fe47c16beaddcfab56828b134_cgraph.png" border="0" usemap="#aclassraylib_1_1_collision2_d_helper_adf412a2fe47c16beaddcfab56828b134_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_collision2_d_helper_adf412a2fe47c16beaddcfab56828b134_cgraph" id="aclassraylib_1_1_collision2_d_helper_adf412a2fe47c16beaddcfab56828b134_cgraph">
+<area shape="rect" title="Check if point is inside a triangle." alt="" coords="5,5,193,47"/>
 <area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="241,5,376,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a2c1496f25e04bd52c0c608a26fc48881" name="a2c1496f25e04bd52c0c608a26fc48881"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c1496f25e04bd52c0c608a26fc48881">&#9670;&nbsp;</a></span>checkCollisionRecs()</h2>
+<a id="a9e98dc0ea453b44b436976b0a2663d76" name="a9e98dc0ea453b44b436976b0a2663d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e98dc0ea453b44b436976b0a2663d76">&#9670;&nbsp;</a></span>checkCollisionRecs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,13 +604,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool raylib::Collision2DHelper::checkCollisionRecs </td>
           <td>(</td>
-          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramtype">const Rectangle &amp;&#160;</td>
           <td class="paramname"><em>rec1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramtype">const Rectangle &amp;&#160;</td>
           <td class="paramname"><em>rec2</em>&#160;</td>
         </tr>
         <tr>
@@ -465,10 +626,20 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Check if two rectangles are colliding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rec1</td><td>the first rectangle </td></tr>
+    <tr><td class="paramname">rec2</td><td>the second rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the rectangles are colliding, false otherwise </dd></dl>
+
 </div>
 </div>
-<a id="a8eac27e6eadd5cd2a7405cb5a9f96ef6" name="a8eac27e6eadd5cd2a7405cb5a9f96ef6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eac27e6eadd5cd2a7405cb5a9f96ef6">&#9670;&nbsp;</a></span>getCollisionRec()</h2>
+<a id="aa2224ec01b9199da198d06221ff1fda1" name="aa2224ec01b9199da198d06221ff1fda1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2224ec01b9199da198d06221ff1fda1">&#9670;&nbsp;</a></span>getCollisionRec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,13 +650,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">Rectangle raylib::Collision2DHelper::getCollisionRec </td>
           <td>(</td>
-          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramtype">const Rectangle &amp;&#160;</td>
           <td class="paramname"><em>rec1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramtype">const Rectangle &amp;&#160;</td>
           <td class="paramname"><em>rec2</em>&#160;</td>
         </tr>
         <tr>
@@ -500,6 +671,16 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get collision rectangle for two rectangles collision. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rec1</td><td>the first rectangle </td></tr>
+    <tr><td class="paramname">rec2</td><td>the second rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the collision rectangle </dd></dl>
 
 </div>
 </div>

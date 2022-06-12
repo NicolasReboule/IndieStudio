@@ -1,0 +1,4 @@
+<map id="raylib::RlImage::colorTint" name="raylib::RlImage::colorTint">
+<area shape="rect" id="node1" title="Modify image color: tint." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="216,5,371,32"/>
+</map>
