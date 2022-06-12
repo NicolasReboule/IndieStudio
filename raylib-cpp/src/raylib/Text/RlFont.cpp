@@ -52,6 +52,7 @@ raylib::RlFont::~RlFont()
 {
     if (!this->_defaultFont)
         UnloadFont(this->_font);
+    RlLogger::log(RlLogger::LOG_DEBUG) << "RlFont destructor called" << std::endl;
 }
 
 bool raylib::RlFont::isDefaultFont() const

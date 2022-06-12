@@ -20,7 +20,7 @@ int main(int ac, char **av)
         .build();
     raylib::RlTexture texture(rlimage);
     //auto font = raylib::RlFont(50);
-    auto text = raylib::RlText("Hello World", "./assets/fonts/arial.ttf", 20, {100, 100});
+    auto text = raylib::RlText("Hello World", "./assets/fonts/arial.ttf", 20, {10, 30});
 
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();

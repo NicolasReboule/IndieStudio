@@ -26,7 +26,7 @@ namespace raylib {
          * @param position the position of the text
          * @param color the color of the text
          */
-        explicit RlText(const std::string &text, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
+        //explicit RlText(const std::string &text, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
 
         /**
          * @brief RlText constructor
@@ -35,7 +35,7 @@ namespace raylib {
          * @param position the position of the text
          * @param color the color of the text
          */
-        explicit RlText(const std::string &text, const RlFont &font, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
+        //explicit RlText(const std::string &text, const RlFont &font, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
 
         /**
          * @brief RlText constructor
@@ -56,7 +56,7 @@ namespace raylib {
          * @param postion the position of the text
          * @param color the color of the text
          */
-        explicit RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &postion = {0, 0}, const RlColor &color = RlColor::Black);
+        //explicit RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &postion = {0, 0}, const RlColor &color = RlColor::Black);
 
         /**
          * @brief RlText constructor
@@ -150,22 +150,15 @@ namespace raylib {
         float getWidth() const;
 
         /**
+         * @brief Get the text spacing
+         */
+        float getTextSpacing() const;
+
+        /**
          * @brief Get the size of the text with the loaded font
          * @return the size of the text
          */
         Vector2f getSize();
-
-        /**
-         * @brief Get the linked font (mutable)
-         * @return the font
-         */
-        RlFont &operator->();
-
-        /**
-         * @brief Get the linked font (immutable)
-         * @return the font
-         */
-        const RlFont &operator->() const;
 
     private:
         RlColor _color; /**< The text color */

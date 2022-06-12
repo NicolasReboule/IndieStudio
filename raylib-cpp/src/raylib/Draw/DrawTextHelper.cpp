@@ -49,15 +49,15 @@ void raylib::DrawTextHelper::drawText(const RlFont &font, int codepoint, const V
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text, const Vector2f &position, const RlColor &color)
 {
-    drawText(text.getFont(), text.getText(), position, (float) text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
+    drawText(text.getFont(), text.getText(), position, text.getHeight(), text.getFont().getTextSpacing(), color);
 }
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text, float posX, float posY, const RlColor &color)
 {
-    drawText(text.getFont(), text.getText(), {posX, posY}, (float) text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
+    drawText(text.getFont(), text.getText(), {posX, posY}, text.getHeight(), text.getFont().getTextSpacing(), color);
 }
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text)
 {
-    drawText(text.getFont(), text.getText(), text.getPosition(), (float) text.getFont().getFontSize(), text.getFont().getTextSpacing(), text.getColor());
+    drawText(text.getFont(), text.getText(), text.getPosition(), text.getHeight(), text.getFont().getTextSpacing(), text.getColor());
 }

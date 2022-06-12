@@ -30,6 +30,7 @@
 #include "raylib/Color/ColorHelper.hpp"
 #include "raylib/Core/CoreHelper.hpp"
 #include "raylib/Core/FileHelper.hpp"
+#include "raylib/Core/RlLogger.hpp"
 #include "raylib/Core/WorldHelper.hpp"
 #include "raylib/Draw/Draw2DHelper.hpp"
 #include "raylib/Draw/DrawHelper.hpp"

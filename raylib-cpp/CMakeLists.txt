@@ -84,5 +84,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
 
-        include/raylib/GlStateManager.hpp src/raylib/GlStateManager.cpp)
+        include/raylib/GlStateManager.hpp src/raylib/GlStateManager.cpp include/raylib/Core/RlLogger.hpp)
 target_link_libraries(${PROJECT_NAME} raylib)
