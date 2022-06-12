@@ -13,6 +13,23 @@ raylib::RlFont::RlFont() : _font()
     this->_fontSize = this->_font.baseSize;
     this->_defaultFont = true;
     this->_fontPath = "";
+    this->_textSpacing = 1;
+}
+
+raylib::RlFont::RlFont(const std::string &filename) : _font()
+{
+    this->_fontPath = filename;
+    this->_font = LoadFont(this->_fontPath.c_str());
+    this->_fontSize = this->_font.baseSize;
+    this->_textSpacing = 1;
+}
+
+raylib::RlFont::RlFont(const std::string &fontPath, const int &fontSize, int *fontChars, const int &glyphCount) : _font()
+{
+    this->_fontPath = fontPath;
+    this->_font = LoadFontEx(this->_fontPath.c_str(), fontSize, fontChars, glyphCount);
+    this->_fontSize = fontSize;
+    this->_textSpacing = 1;
 }
 
 raylib::RlFont::~RlFont()
@@ -21,23 +38,8 @@ raylib::RlFont::~RlFont()
         UnloadFont(this->_font);
 }
 
-raylib::RlFont::RlFont(const std::string &filename) : _font()
-{
-    this->_fontPath = filename;
-    this->_font = LoadFont(this->_fontPath.c_str());
-    this->_fontSize = this->_font.baseSize;
-}
 
 /*
-raylib::RlFont::RlFont(const Font &font, int fontSize, float textSpacing) : _font()
-{
-    this->_fontSize = fontSize;
-    this->_textSpacing = textSpacing;
-    this->_font = font;
-    this->_fontPath = "";
-    this->_defaultFont = false;
-}
-
 raylib::RlFont::RlFont(const std::string &fileName, int fontSize, float textSpacing) : _font()
 {
     this->_fontSize = fontSize;
@@ -114,3 +116,34 @@ const float &raylib::RlFont::getTextSpacing() const
     return this->_textSpacing;
 }
 */
+
+
+bool raylib::RlFont::isDefaultFont() const
+{
+    return _defaultFont;
+}
+
+const Font &raylib::RlFont::getFont() const
+{
+    return _font;
+}
+
+const std::string &raylib::RlFont::getFontPath() const
+{
+    return _fontPath;
+}
+
+int raylib::RlFont::getFontSize() const
+{
+    return _fontSize;
+}
+
+float raylib::RlFont::getTextSpacing() const
+{
+    return _textSpacing;
+}
+
+void raylib::RlFont::setTextSpacing(float textSpacing)
+{
+    _textSpacing = textSpacing;
+}

@@ -19,7 +19,7 @@ int main(int ac, char **av)
         .setLeft(raylib::RlColor::Blue).setRight(raylib::RlColor::Red)
         .build();
     raylib::RlTexture texture(rlimage);
-    auto font = raylib::RlFont("", 20);
+    auto font = raylib::RlFont(50);
     //auto text = raylib::RlText("Hello World", "./assets/fonts/arial.ttf", 20);
 
     while (window->isOpen()) {

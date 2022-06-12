@@ -141,11 +141,73 @@ namespace raylib {
      */
     class RlFont {
     public:
+        /**
+         * @brief Create a RlFont, using default parameters
+         */
         RlFont();
-        explicit RlFont(const std::string &filename);
 
+        /**
+         * @brief Create a RlFont, using a font path
+         * @param filename the font path
+         */
+        explicit RlFont(const std::string &fontPath);
 
+        /**
+         * @brief Create a RlFont, with custom font size
+         * @param fontSize the font size
+         */
+        explicit RlFont(const int &fontSize) : RlFont("", fontSize) {}
+
+        /**
+         * @brief Create a RlFont, using a font path and a font size
+         * @param fontPath the font path
+         * @param fontSize the font size
+         * @param fontChars the font characters
+         * @param glyphCount the glyph count
+         */
+        explicit RlFont(const std::string &fontPath, const int &fontSize = 10, int *fontChars = nullptr, const int &glyphCount = 0);
+
+        /**
+         * @brief Destroy the RlFont
+         */
         ~RlFont();
+
+        /**
+         * @brief Check if the font is the default font
+         * @return true if the font is the default font
+         */
+        bool isDefaultFont() const;
+
+        /**
+         * @brief Get the raylib font
+         * @return the raylib font
+         */
+        const Font &getFont() const;
+
+        /**
+         * @brief Get the font path
+         * @return the font path
+         */
+        const std::string &getFontPath() const;
+
+        /**
+         * @brief Get the font size
+         * @return the font size
+         */
+        int getFontSize() const;
+
+        /**
+         * @brief Get the text spacing
+         * @return the text spacing
+         */
+        float getTextSpacing() const;
+
+        /**
+         * @brief Set the text spacing
+         * @param textSpacing the new text spacing
+         */
+        void setTextSpacing(float textSpacing);
+
     private:
         bool _defaultFont = false; /**< If the default raylib font is used */
         Font _font; /**< The raylib font */

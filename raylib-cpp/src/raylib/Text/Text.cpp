@@ -22,7 +22,7 @@ raylib::RlText::RlText(const std::string &text, const raylib::RlFont &font, cons
 raylib::RlText::RlText(const std::string &text, const std::string &fontPath, float fontSize, const Vector2f &position, const RlColor &color): _color(color), _position(position)
 {
     this->_text = text;
-    this->_font = RlFont(fontPath, fontSize);
+    this->_font = RlFont(fontPath, (float) fontSize);
 }
 
 raylib::RlText::RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &position, const RlColor &color)
@@ -31,6 +31,7 @@ raylib::RlText::RlText(const std::string &text, const std::string &fontPath, int
     this->_text = text;
 }
 
+/*
 raylib::RlText::RlText(const std::string &text, const RlImage &image, const RlColor &key, int firstChar, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font(image, key, firstChar)
 {
@@ -42,6 +43,7 @@ raylib::RlText::RlText(const std::string &text, const std::string &fileType, con
 {
     this->_text = text;
 }
+*/
 
 void raylib::RlText::setText(const std::string &text)
 {

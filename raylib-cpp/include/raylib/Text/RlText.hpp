@@ -67,7 +67,7 @@ namespace raylib {
          * @param position the position of the text
          * @param color the color of the text
          */
-        explicit RlText(const std::string &text, const RlImage &image, const RlColor &key, int firstChar, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
+        //explicit RlText(const std::string &text, const RlImage &image, const RlColor &key, int firstChar, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
 
         /**
          * @brief RlText constructor
@@ -80,7 +80,7 @@ namespace raylib {
          * @param postion the position of the text
          * @param color the color of the text
          */
-        explicit RlText(const std::string &text, const std::string &fileType, const unsigned char *fileDate, int dataSize, int fontSize, int *fontChars, int , const Vector2f &postion = {0, 0}, const RlColor &color = RlColor::Black); //TODO: check for missing parameters
+        //explicit RlText(const std::string &text, const std::string &fileType, const unsigned char *fileDate, int dataSize, int fontSize, int *fontChars, int , const Vector2f &postion = {0, 0}, const RlColor &color = RlColor::Black); //TODO: check for missing parameters
 
         /**
          * @brief Set the text to use
