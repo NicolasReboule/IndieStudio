@@ -8,8 +8,8 @@
 #include "raylib/Image/RlImageBuilder.hpp"
 
 raylib::RlImageBuilder::RlImageBuilder()
-: _color(0, 0, 0, 0), _top(0, 0, 0, 0), _bottom(0, 0, 0, 0), _left(0, 0, 0, 0), _right(0, 0, 0, 0),
-  _inner(0, 0, 0, 0), _outer(0, 0, 0, 0), _col1(0, 0, 0, 0), _col2(0, 0, 0, 0)
+    : _color(0, 0, 0, 0), _top(0, 0, 0, 0), _bottom(0, 0, 0, 0), _left(0, 0, 0, 0), _right(0, 0, 0, 0),
+      _inner(0, 0, 0, 0), _outer(0, 0, 0, 0), _col1(0, 0, 0, 0), _col2(0, 0, 0, 0)
 {
     _flags = 0;
     _type = -1;
@@ -139,37 +139,29 @@ raylib::RlImageBuilder &raylib::RlImageBuilder::setChecksY(int checksY)
     _flags |= ChecksY;
     return *this;
 }
+
 raylib::RlImage raylib::RlImageBuilder::build()
 {
-    Image image;
     if (_type == -1)
         throw raylib::ex::BuilderException("Image type not set");
     if (_flags != _type)
         throw raylib::ex::BuilderException("Invalid arguments");
     switch (_type) {
-        case RlImageBuilder::ImageColor :
-            image = raylib::ImageGenerator::genImageColor(_width, _height, _color);
-            break;
-        case RlImageBuilder::ImageGradientV :
-            image = raylib::ImageGenerator::genImageGradientV(_width, _height, _top, _bottom);
-            break;
-        case RlImageBuilder::ImageGradientH :
-            image = raylib::ImageGenerator::genImageGradientH(_width, _height, _left, _right);
-            break;
-        case RlImageBuilder::ImageGradientRadial :
-            image = raylib::ImageGenerator::genImageGradientRadial(_width, _height, _density, _inner, _outer);
-            break;
-        case RlImageBuilder::ImageChecked :
-            image = raylib::ImageGenerator::genImageChecked(_width, _height, _checksX, _checksY, _col1, _col2);
-            break;
-        case RlImageBuilder::ImageWhiteNoise :
-            image = raylib::ImageGenerator::genImageWhiteNoise(_width, _height, _factor);
-            break;
-        case RlImageBuilder::ImageCellular :
-            image = raylib::ImageGenerator::genImageCellular(_width, _height, _titleSize);
-            break;
+        case RlImageBuilder::ImageColor:
+            return raylib::ImageGenerator::genImageColor(_width, _height, _color);
+        case RlImageBuilder::ImageGradientV:
+            return raylib::ImageGenerator::genImageGradientV(_width, _height, _top, _bottom);
+        case RlImageBuilder::ImageGradientH:
+            return raylib::ImageGenerator::genImageGradientH(_width, _height, _left, _right);
+        case RlImageBuilder::ImageGradientRadial:
+            return raylib::ImageGenerator::genImageGradientRadial(_width, _height, _density, _inner, _outer);
+        case RlImageBuilder::ImageChecked:
+            return raylib::ImageGenerator::genImageChecked(_width, _height, _checksX, _checksY, _col1, _col2);
+        case RlImageBuilder::ImageWhiteNoise:
+            return raylib::ImageGenerator::genImageWhiteNoise(_width, _height, _factor);
+        case RlImageBuilder::ImageCellular:
+            return raylib::ImageGenerator::genImageCellular(_width, _height, _titleSize);
         default:
             throw raylib::ex::BuilderException("Unknown Image pattern");
     }
-    return RlImage(image);
 }

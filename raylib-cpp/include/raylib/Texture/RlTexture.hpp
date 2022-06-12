@@ -18,7 +18,7 @@ namespace raylib {
         // RlTexture loading functions
         // NOTE: These functions require GPU access
         explicit RlTexture(const std::string &fileName);
-        explicit RlTexture(RlImage image);
+        explicit RlTexture(const RlImage &image);
         RlTexture(const RlTexture &texture);
         ~RlTexture();
         TextureCubemap loadTextureCubemap(Image image, int layout);                                        // Load cubemap from image, multiple image cubemap layouts supported

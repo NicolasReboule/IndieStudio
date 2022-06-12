@@ -15,7 +15,6 @@
 
 #include "Math.hpp"
 #include "raylib/2DObject/Collision2DHelper.hpp"
-#include "raylib/render/Draw2DHelper.hpp"
 #include "raylib/3DObject/Collision3DHelper.hpp"
 #include "raylib/3DObject/MeshGenerator.hpp"
 #include "raylib/3DObject/ModelHelper.hpp"
@@ -30,7 +29,6 @@
 #include "raylib/Camera/RlCamera.hpp"
 #include "raylib/Color/ColorHelper.hpp"
 #include "raylib/Core/CoreHelper.hpp"
-#include "raylib/render/DrawHelper.hpp"
 #include "raylib/Core/FileHelper.hpp"
 #include "raylib/Core/WorldHelper.hpp"
 #include "raylib/Image/RlImageBuilder.hpp"
@@ -39,13 +37,16 @@
 #include "raylib/Inputs/KeyboardHelper.hpp"
 #include "raylib/Inputs/MouseHelper.hpp"
 #include "raylib/Inputs/TouchHelper.hpp"
+#include "raylib/render/Draw2DHelper.hpp"
+#include "raylib/render/DrawHelper.hpp"
+#include "raylib/Image/ImageDrawHelper.hpp"
 #include "raylib/Shader/ShaderUtils.hpp"
 #include "raylib/Text/Text.hpp"
 #include "raylib/Text/TextHelper.hpp"
 #include "raylib/Texture/RlTexture.hpp"
 #include "raylib/Texture/TextureHelper.hpp"
-#include "raylib/Window/System.hpp"
 #include "raylib/Window/RlWindow.hpp"
+#include "raylib/Window/System.hpp"
 
 #include <iostream>
 

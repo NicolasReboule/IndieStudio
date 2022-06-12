@@ -13,7 +13,7 @@ raylib::RlTexture::RlTexture(const std::string &fileName) : _texture(), _texture
     this->_texture = LoadTexture(fileName.c_str());
 }
 
-raylib::RlTexture::RlTexture(RlImage image)
+raylib::RlTexture::RlTexture(const RlImage &image) : _texture(), _textureRec(), _textureCubemap(), _renderTexture()
 {
     _texturePath = "";
     this->_texture = LoadTextureFromImage(image.getImage());

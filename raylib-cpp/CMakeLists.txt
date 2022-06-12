@@ -42,6 +42,7 @@ add_library(${PROJECT_NAME}
         src/raylib/exception/BuilderException.cpp
         src/raylib/exception/RaylibException.cpp
         src/raylib/exception/WindowException.cpp
+        src/raylib/Image/ImageDrawHelper.cpp
         src/raylib/Image/ImageGenerator.cpp
         src/raylib/Image/ImageHelper.cpp
         src/raylib/Image/RlImage.cpp
