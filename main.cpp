@@ -19,14 +19,14 @@ int main(int ac, char **av)
         .setLeft(raylib::RlColor::Blue).setRight(raylib::RlColor::Red)
         .build();
     raylib::RlTexture texture(rlimage);
-    auto font = raylib::RlFont("./assets/fonts/ILoveSalmon.ttf", 50);
+    auto font = raylib::RlFont("", 20);
     //auto text = raylib::RlText("Hello World", "./assets/fonts/arial.ttf", 20);
 
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();
         raylib::DrawHelper::clearBackground(RlColor::White);
         raylib::DrawTextHelper::drawFps(10, 10);
-        raylib::DrawTextHelper::drawText(font, "Hello World", {10, 40});
+        raylib::DrawTextHelper::drawText(font, "azertyuiopqsdfghjklmwxcvbn", {10, 40});
         //raylib::DrawTextHelper::drawText(text, {10, 70});
         raylib::DrawHelper::beginMode3D(camera);
         raylib::Shape3DHelper::drawGrid(10, 1.0f);
