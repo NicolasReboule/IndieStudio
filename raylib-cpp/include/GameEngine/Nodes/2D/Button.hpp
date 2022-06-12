@@ -14,7 +14,7 @@ namespace GameEngine {
 
     class Button : public Node2D {
     public:
-        explicit Button(std::string name, const std::string& filename);
+        explicit Button(const std::string &name, const std::string &filename);
 
         ~Button() override = default;
 
@@ -35,6 +35,8 @@ namespace GameEngine {
         void setRotationDegrees(float rotationDegrees) override;
 
         virtual void pressed() = 0;
+
+        void ready() override;
 
     private:
         raylib::RlTexture _texture;

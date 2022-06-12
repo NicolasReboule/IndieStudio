@@ -100,6 +100,38 @@ void raylib::RlColor::alphaBlend(const RlColor &src, const RlColor &tint)
     ColorAlphaBlend(this->_color, src._color, tint._color);
 }
 
+void raylib::RlColor::setColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a)
+{
+    this->_color.r = r;
+    this->_color.g = g;
+    this->_color.b = b;
+    this->_color.a = a;
+}
+
+raylib::RlColor &raylib::RlColor::setRed(unsigned char r)
+{
+    this->_color.r = r;
+    return *this;
+}
+
+raylib::RlColor &raylib::RlColor::setGreen(unsigned char g)
+{
+    this->_color.g = g;
+    return *this;
+}
+
+raylib::RlColor &raylib::RlColor::setBlue(unsigned char b)
+{
+    this->_color.b = b;
+    return *this;
+}
+
+raylib::RlColor &raylib::RlColor::setAlpha(unsigned char a)
+{
+    this->_color.a = a;
+    return *this;
+}
+
 const Color &raylib::RlColor::getColor() const
 {
     return this->_color;
@@ -125,6 +157,11 @@ unsigned char raylib::RlColor::getAlpha() const
     return this->_color.a;
 }
 
+void raylib::RlColor::setColor(const Color &color)
+{
+    this->_color = color;
+}
+
 bool raylib::RlColor::operator==(const raylib::RlColor &other) const
 {
     return this->_color.r == other.getRed() && this->_color.g == other.getGreen()
@@ -136,10 +173,32 @@ bool raylib::RlColor::operator!=(const raylib::RlColor &rhs) const
     return !(rhs == *this);
 }
 
-void raylib::RlColor::setColor(unsigned int r, unsigned int g, unsigned int b, unsigned int a)
+raylib::RlColor &raylib::RlColor::operator-(unsigned char value)
 {
-    _color.r = r;
-    _color.g = g;
-    _color.b = b;
-    _color.a = a;
+    this->_color.r = this->_color.r - value < 0 ? 0 : this->_color.r - value;
+    this->_color.g = this->_color.g - value < 0 ? 0 : this->_color.g - value;
+    this->_color.b = this->_color.b - value < 0 ? 0 : this->_color.b - value;
+    this->_color.a = this->_color.a - value < 0 ? 0 : this->_color.a - value;
+    return *this;
+}
+
+RlColor &raylib::RlColor::operator+(unsigned char value)
+{
+    this->_color.r = this->_color.r + value > 255 ? 255 : this->_color.r + value;
+    this->_color.g = this->_color.g + value > 255 ? 255 : this->_color.g + value;
+    this->_color.b = this->_color.b + value > 255 ? 255 : this->_color.b + value;
+    this->_color.a = this->_color.a + value > 255 ? 255 : this->_color.a + value;
+    return *this;
+}
+
+RlColor &raylib::RlColor::operator-=(unsigned char value)
+{
+    *this - value;
+    return *this;
+}
+
+RlColor &raylib::RlColor::operator+=(unsigned char value)
+{
+    *this + value;
+    return *this;
 }

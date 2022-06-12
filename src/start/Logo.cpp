@@ -24,10 +24,10 @@ void Indie::Logo::bob()
 
 void Indie::Logo::update()
 {
-    this->setColor(this->getcolor().getRed() - 1, this->getcolor().getBlue() - 1, this->getcolor().getGreen() - 1, this->getcolor().getAlpha() - 1);
+    this->getColor() -= 1;
     auto sceneManager = GameEngine::SceneManager::getInstance();
 
-    if (this->getcolor().getAlpha() <= 0)
+    if (this->getColor().getAlpha() <= 0)
         sceneManager->deleteScene("start");
 
     /*if (raylib::KeyboardHelper::isKeyPressed(KEY_SPACE)) {

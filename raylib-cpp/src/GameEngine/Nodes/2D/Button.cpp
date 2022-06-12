@@ -8,8 +8,8 @@
 #include "GameEngine/Nodes/2D/Button.hpp"
 #include "raylib/Math/VectorHelper.hpp"
 
-GameEngine::Button::Button(const std::string& filename)
-    : _texture(filename), _position({0, 0}), _scale({1, 1}), _bounds(), _rectangle()
+GameEngine::Button::Button(const std::string &name, const std::string &filename) : GameEngine::Node2D(name),
+    _texture(filename), _position({0, 0}), _scale({1, 1}), _bounds(), _rectangle()
 {
     this->_rotationDegrees = 0;
 
@@ -23,6 +23,7 @@ GameEngine::Button::Button(const std::string& filename)
 
 void GameEngine::Button::ready()
 {
+
 }
 
 void GameEngine::Button::update()

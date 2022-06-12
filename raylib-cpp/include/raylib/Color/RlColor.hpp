@@ -112,6 +112,49 @@ namespace raylib {
         unsigned char getAlpha() const;
 
         /**
+         * @brief Set the rgba color
+         * @param r the red value
+         * @param g the green value
+         * @param b the blue value
+         * @param a the alpha value
+         */
+        void setColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a);
+
+        /**
+         * @brief Set the red value
+         * @param r the red value
+         * @return this
+         */
+        RlColor &setRed(unsigned char r);
+
+        /**
+         * @brief Set the green value
+         * @param g the green value
+         * @return this
+         */
+        RlColor &setGreen(unsigned char g);
+
+        /**
+         * @brief Set the blue value
+         * @param b the blue value
+         * @return this
+         */
+        RlColor &setBlue(unsigned char b);
+
+        /**
+         * @brief Set the alpha value
+         * @param a the alpha value
+         * @return this
+         */
+        RlColor &setAlpha(unsigned char a);
+
+        /**
+         * @brief Set the color from the raylib color
+         * @param color the raylib color
+         */
+        void setColor(const Color &color);
+
+        /**
          * @brief Check equality between two colors
          * @param other another color
          * @return true if the two color are equal, false otherwise
@@ -124,6 +167,35 @@ namespace raylib {
          * @return true if the two color are not equal, false otherwise
          */
         bool operator!=(const RlColor &rhs) const;
+
+        /**
+         * @brief Remove the value to all the color components
+         * @param value the value to remove
+         * @return this
+         */
+        RlColor &operator-(unsigned char value);
+
+        /**
+         * @brief Add the value to all the color components
+         * @param value the value to add
+         * @return this
+         */
+        RlColor &operator+(unsigned char value);
+
+        /**
+         * @brief Remove the value to all the color components
+         * @param value the value to remove
+         * @return this
+         */
+        RlColor &operator-=(unsigned char value);
+
+        /**
+         * @brief Add the value to all the color components
+         * @param value the value to add
+         * @return this
+         */
+        RlColor &operator+=(unsigned char value);
+
 
         static const RlColor LightGray;         /**< Light Gray */
         static const RlColor Gray;              /**< Gray */

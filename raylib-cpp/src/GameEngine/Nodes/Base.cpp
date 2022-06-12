@@ -7,14 +7,12 @@
 
 #include "GameEngine/Nodes/Base.hpp"
 
-#include <utility>
-
-GameEngine::Base::Base(std::string name)
+GameEngine::Base::Base(const std::string &name)
 {
-    this->_name = std::move(name);
+    this->_name = name;
 }
 
-std::string &GameEngine::Base::getName()
+const std::string &GameEngine::Base::getName() const
 {
     return this->_name;
 }

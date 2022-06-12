@@ -75,9 +75,12 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Audio/Fx.cpp
         src/GameEngine/Audio/Music.cpp
         src/GameEngine/Nodes/StaticBody.cpp
+        src/GameEngine/Nodes/Node.cpp
+        src/GameEngine/Nodes/Base.cpp
         src/GameEngine/SceneManager.cpp
         src/GameEngine/Scene.cpp
         src/GameEngine/MainScene.cpp
+        src/GameEngine/Nodes/2D/Node2D.cpp
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
 

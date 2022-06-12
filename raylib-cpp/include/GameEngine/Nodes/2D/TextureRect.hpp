@@ -14,7 +14,7 @@ namespace GameEngine {
 
     class TextureRect : public Node2D {
     public:
-        explicit TextureRect(std::string name, const std::string& filename, Vector2f position = {0, 0}, Vector2f scale = {1, 1}, float = 0, raylib::RlColor color = {255, 255, 255, 255});
+        explicit TextureRect(const std::string &name, const std::string &filename, Vector2f position = {0, 0}, Vector2f scale = {1, 1}, float = 0, const raylib::RlColor &color = RlColor::White);
 
         ~TextureRect() override = default;
 
@@ -38,7 +38,17 @@ namespace GameEngine {
 
         void setColor(unsigned int r,unsigned int g, unsigned int b, unsigned int a);
 
-        raylib::RlColor getcolor();
+        /**
+         * @brief Get the mutable color
+         * @return the mutable color
+         */
+        raylib::RlColor &getColor();
+
+        /**
+         * @brief Get the immutable color
+         * @return the immutable color
+         */
+        const raylib::RlColor &getColor() const;
 
     private:
         raylib::RlTexture _texture;

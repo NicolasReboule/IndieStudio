@@ -7,11 +7,10 @@
 
 
 #include "GameEngine/Nodes/2D/TextureRect.hpp"
-
 #include <utility>
 
-GameEngine::TextureRect::TextureRect(std::string name, const std::string& filename, Vector2f position, Vector2f scale, float degrees, raylib::RlColor color)
-    : Node2D(std::move(name)), _texture(filename), _color(color), _position(position), _scale(scale), _rotationDegrees(degrees)
+GameEngine::TextureRect::TextureRect(const std::string &name, const std::string& filename, Vector2f position, Vector2f scale, float degrees, const raylib::RlColor &color)
+    : Node2D(name), _texture(filename), _color(color), _position(position), _scale(scale), _rotationDegrees(degrees)
 {
 }
 
@@ -20,9 +19,9 @@ void GameEngine::TextureRect::draw()
     Rectangle rectangle;
     rectangle.x = 0;
     rectangle.y = 0;
-    rectangle.width = (float)this->_texture.getTexture().width;
-    rectangle.height = (float)this->_texture.getTexture().height;
-    raylib::TextureHelper::drawTextureRec(this->_texture.getTexture(), rectangle, this->_position, this->_color.getColor());
+    rectangle.width = (float) this->_texture.getWidth();
+    rectangle.height = (float) this->_texture.getHeight();
+    raylib::DrawTextureHelper::drawTextureRec(this->_texture, rectangle, this->_position, this->_color);
 }
 
 Vector2f GameEngine::TextureRect::getPosition()
@@ -68,7 +67,12 @@ void GameEngine::TextureRect::setColor(unsigned int r, unsigned int g, unsigned 
     this->_color.setColor(r, g, b, a);
 }
 
-raylib::RlColor GameEngine::TextureRect::getcolor()
+raylib::RlColor &GameEngine::TextureRect::getColor()
+{
+    return this->_color;
+}
+
+const raylib::RlColor &GameEngine::TextureRect::getColor() const
 {
     return this->_color;
 }
