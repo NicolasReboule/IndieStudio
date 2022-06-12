@@ -41,6 +41,7 @@ add_library(${PROJECT_NAME}
         src/raylib/Core/WorldHelper.cpp
         src/raylib/Draw/Draw2DHelper.cpp
         src/raylib/Draw/DrawHelper.cpp
+        src/raylib/Draw/DrawTextHelper.cpp
         src/raylib/Draw/DrawTextureHelper.cpp
         src/raylib/exception/BuilderException.cpp
         src/raylib/exception/InvalidArgumentException.cpp
