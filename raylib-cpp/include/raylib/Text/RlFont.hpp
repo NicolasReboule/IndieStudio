@@ -168,6 +168,14 @@ namespace raylib {
         explicit RlFont(const std::string &fontPath, const int &fontSize = 10, int *fontChars = nullptr, const int &glyphCount = 0);
 
         /**
+         * @brief Create a RlFont, using an iamge, key color and first character
+         * @param image the image
+         * @param key the key color
+         * @param firstChar the first character
+         */
+        explicit RlFont(const RlImage &image, const RlColor &key, const int &firstChar);
+
+        /**
          * @brief Destroy the RlFont
          */
         ~RlFont();
@@ -205,8 +213,9 @@ namespace raylib {
         /**
          * @brief Set the text spacing
          * @param textSpacing the new text spacing
+         * @return this
          */
-        void setTextSpacing(float textSpacing);
+        RlFont &setTextSpacing(float textSpacing);
 
     private:
         bool _defaultFont = false; /**< If the default raylib font is used */

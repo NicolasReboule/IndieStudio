@@ -32,6 +32,14 @@ raylib::RlFont::RlFont(const std::string &fontPath, const int &fontSize, int *fo
     this->_textSpacing = 1;
 }
 
+raylib::RlFont::RlFont(const raylib::RlImage &image, const RlColor &key, const int &firstChar) : _font()
+{
+    this->_fontPath = "";
+    this->_font = LoadFontFromImage(image.getImage(), key.getColor(), firstChar);
+    this->_fontSize = this->_font.baseSize;
+    this->_textSpacing = 1;
+}
+
 raylib::RlFont::~RlFont()
 {
     if (!this->_defaultFont)
@@ -75,46 +83,6 @@ raylib::RlFont::RlFont(const std::string &fileType, const unsigned char *fileDat
     this->_font = LoadFontFromMemory(fileType.c_str(), fileData, dataSize, fontSize, fontChars, glyphCount);
     this->_defaultFont = false;
 }
-
-void raylib::RlFont::setFontSize(int fontSize)
-{
-    this->_fontSize = fontSize;
-}
-
-void raylib::RlFont::setTextSpacing(float textSpacing)
-{
-    _textSpacing = textSpacing;
-}
-
-Font &raylib::RlFont::getFont()
-{
-    return this->_font;
-}
-
-const Font &raylib::RlFont::getFont() const
-{
-    return this->_font;
-}
-
-bool raylib::RlFont::isDefaultFont() const
-{
-    return this->_defaultFont;
-}
-
-const std::string &raylib::RlFont::getFontPath() const
-{
-    return this->_fontPath;
-}
-
-const int &raylib::RlFont::getFontSize() const
-{
-    return this->_fontSize;
-}
-
-const float &raylib::RlFont::getTextSpacing() const
-{
-    return this->_textSpacing;
-}
 */
 
 
@@ -143,7 +111,8 @@ float raylib::RlFont::getTextSpacing() const
     return _textSpacing;
 }
 
-void raylib::RlFont::setTextSpacing(float textSpacing)
+raylib::RlFont &raylib::RlFont::setTextSpacing(float textSpacing)
 {
     _textSpacing = textSpacing;
+    return *this;
 }
