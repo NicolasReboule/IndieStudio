@@ -10,7 +10,9 @@
 
 #include "raylib/Math.hpp"
 #include "raylib/Color/RlColor.hpp"
-#include "raylib.h"
+#include "raylib/Camera/RlCamera.hpp"
+#include "raylib/Texture/RlTexture.hpp"
+#include <raylib.h>
 
 namespace raylib {
     /**
@@ -22,7 +24,7 @@ namespace raylib {
          * @brief Set background color (framebuffer clear color)
          * @param color
          */
-        static void clearBackground(Color color);
+        static void clearBackground(const RlColor &color);
 
         /**
          * @brief Setup canvas (framebuffer) to start drawing
@@ -49,7 +51,7 @@ namespace raylib {
          * @brief Begin 3D mode with custom camera (3D)
          * @param camera to use
          */
-        static void beginMode3D(const Camera3D &camera);
+        static void beginMode3D(const RlCamera &camera);
 
         /**
          * @brief Ends 3D mode and returns to default 2D orthographic mode
@@ -129,7 +131,7 @@ namespace raylib {
          * @param size to use
          * @param tint to use
          */
-        static void drawBillboard(Camera camera, Texture2D texture, Vector3f position, float size, Color tint);
+        static void drawBillboard(const RlCamera &camera, const RlTexture &texture, const Vector3f &position, float size, const RlColor &tint);
 
         /**
          * @brief Draw a billboard texture defined by source
@@ -140,7 +142,8 @@ namespace raylib {
          * @param size to use
          * @param tint to use
          */
-        static void drawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3f position, Vector2f size, Color tint);
+        static void drawBillboardRec(const RlCamera &camera, const RlTexture &texture, const Rectangle &source,
+                                     const Vector3f &position, const Vector2f &size, const RlColor &tint);
 
         /**
          * @brief Draw a billboard texture defined by source and rotation
@@ -154,7 +157,9 @@ namespace raylib {
          * @param rotation to use
          * @param tint to use
          */
-        static void drawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3f position, Vector3f up, Vector2f size, Vector2f origin, float rotation, Color tint);
+        static void drawBillboardPro(const RlCamera &camera, const RlTexture &texture, const Rectangle &source,
+                                     const Vector3f &position, const Vector3f &up, const Vector2f &size,
+                                     const Vector2f &origin, float rotation, const RlColor &tint);
 
     };
 }

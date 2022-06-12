@@ -65,37 +65,67 @@ namespace raylib {
          * @brief Set GPU texture filter mode
          * @param filter the filter mode
          */
-        void setTextureFilter(const TextureFilter &filter);
+        void setFilter(const TextureFilter &filter);
 
         /**
          * @brief Set texture wrapping mode
          * @param wrap the wrapping mode
          */
-        void setTextureWrap(const TextureWrap &wrap);
+        void setWrap(const TextureWrap &wrap);
 
         /**
          * @brief Get the texture
          * @return the mutable raylib texture
          */
-        Texture2D &getTexture();
+        Texture2D &get();
 
         /**
          * @brief Get the texture
          * @return the immutable raylib texture
          */
-        const Texture2D &getTexture() const;
+        const Texture2D &get() const;
 
         /**
          * @brief Get the texture path
          * @return the texture path
          */
-        const std::string &getTexturePath() const;
+        const std::string &getPath() const;
 
         /**
          * @brief Get the texture rectangle
          * @return the texture rectangle
          */
         const Rectangle &getTextureRec() const;
+
+        /**
+         * @brief Get OpenGL texture ID
+         * @return the OpenGL texture ID
+         */
+        const unsigned int &getID() const;
+
+        /**
+         * @brief Get texture width
+         * @return the texture width
+         */
+        const int &getWidth() const;
+
+        /**
+         * @brief Get texture height
+         * @return the texture height
+         */
+        const int &getHeight() const;
+
+        /**
+         * @brief Get Mipmap levels, 1 by default
+         * @return the Mipmap levels
+         */
+        const int &getMipmaps() const;
+
+        /**
+         * @brief Get texture format
+         * @return Data format (PixelFormat type)
+         */
+        const int &getFormat() const;
 
     private:
         Texture2D _texture; /**< The raylib texture */

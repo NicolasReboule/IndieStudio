@@ -136,5 +136,5 @@ raylib::RlTexture *raylib::RlModel::operator->()
 
 void raylib::RlModel::setTextureMaterial()
 {
-    SetMaterialTexture(&_model.materials[0], MATERIAL_MAP_DIFFUSE, _texture.getTexture());
+    SetMaterialTexture(&_model.materials[0], MATERIAL_MAP_DIFFUSE, _texture.get());
 }

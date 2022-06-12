@@ -55,9 +55,9 @@ void GameEngine::SceneManager::drawAll(raylib::RlCamera camera)
     auto window = raylib::RlWindow::getInstance();
 
     raylib::DrawHelper::beginDrawing();
-    raylib::DrawHelper::clearBackground(WHITE);
+    raylib::DrawHelper::clearBackground(RlColor::White);
 
-    raylib::DrawHelper::beginMode3D(camera.get());
+    raylib::DrawHelper::beginMode3D(camera);
 
     //window->drawGrid(10, 1.0f);
 

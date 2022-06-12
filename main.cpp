@@ -22,13 +22,13 @@ int main(int ac, char **av)
 
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();
-        raylib::DrawHelper::clearBackground(WHITE);
+        raylib::DrawHelper::clearBackground(RlColor::White);
         raylib::TextHelper::drawFPS(10, 10);
-        raylib::DrawHelper::beginMode3D(camera.get());
+        raylib::DrawHelper::beginMode3D(camera);
         raylib::Shape3DHelper::drawGrid(10, 1.0f);
         raylib::Shape3DHelper::drawCube({0, 0, 0}, 2, 2, 2, RlColor::Red);
         raylib::DrawHelper::endMode3D();
-        raylib::TextureHelper::drawTexture(texture.getTexture(), 0, 0, RlColor::White);
+        //raylib::DrawTextureHelper::drawTexture(texture, 0, 0, RlColor::White);
         raylib::DrawHelper::endDrawing();
     }
     return (0);

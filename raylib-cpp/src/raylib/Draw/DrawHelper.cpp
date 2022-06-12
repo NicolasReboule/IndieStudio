@@ -5,11 +5,11 @@
 ** DrawHelper
 */
 
-#include "raylib/render/DrawHelper.hpp"
+#include "raylib/Draw/DrawHelper.hpp"
 
-void raylib::DrawHelper::clearBackground(Color color)
+void raylib::DrawHelper::clearBackground(const RlColor &color)
 {
-    ClearBackground(color);
+    ClearBackground(color.getColor());
 }
 
 void raylib::DrawHelper::beginDrawing()
@@ -32,9 +32,9 @@ void raylib::DrawHelper::endMode2D()
     EndMode2D();
 }
 
-void raylib::DrawHelper::beginMode3D(const Camera3D &camera)
+void raylib::DrawHelper::beginMode3D(const RlCamera &camera)
 {
-    BeginMode3D(camera);
+    BeginMode3D(camera.get());
 }
 
 void raylib::DrawHelper::endMode3D()
@@ -97,24 +97,24 @@ void raylib::DrawHelper::drawBoundingBox(const BoundingBox &box, const RlColor &
     DrawBoundingBox(box, color.getColor());
 }
 
-void raylib::DrawHelper::drawBillboard(Camera camera, Texture2D texture, Vector3f position, float size, Color tint)
+void raylib::DrawHelper::drawBillboard(const RlCamera &camera, const RlTexture &texture, const Vector3f &position, float size, const RlColor &tint)
 {
-    DrawBillboard(camera, texture, raylib::VectorHelper::toRaylibVector(position), size, tint);
+    Rectangle source = {0.0f, 0.0f, (float) texture.getWidth(), (float) texture.getHeight() };
+    drawBillboardRec(camera, texture, source, position, { size, size }, tint);
 }
 
-void raylib::DrawHelper::drawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3f position,
-                                          Vector2f size, Color tint)
+void raylib::DrawHelper::drawBillboardRec(const RlCamera &camera, const RlTexture &texture, const Rectangle &source, const Vector3f &position,
+                                          const Vector2f &size, const RlColor &tint)
 {
-    DrawBillboardRec(camera, texture, source, raylib::VectorHelper::toRaylibVector(position),
-                     raylib::VectorHelper::toRaylibVector(size), tint);
+    drawBillboardPro(camera, texture, source, position,  { 0.0f, 1.0f, 0.0f }, size, {0, 0}, 0.0f, tint);
 }
 
-void raylib::DrawHelper::drawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3f position,
-                                          Vector3f up, Vector2f size, Vector2f origin, float rotation, Color tint)
+void raylib::DrawHelper::drawBillboardPro(const RlCamera &camera, const RlTexture &texture, const Rectangle &source, const Vector3f &position,
+                                          const Vector3f &up, const Vector2f &size, const Vector2f &origin, float rotation, const RlColor &tint)
 {
-    DrawBillboardPro(camera, texture, source,
+    DrawBillboardPro(camera.get(), texture.get(), source,
                      raylib::VectorHelper::toRaylibVector(position),
                      raylib::VectorHelper::toRaylibVector(up),
                      raylib::VectorHelper::toRaylibVector(size),
-                     raylib::VectorHelper::toRaylibVector(origin), rotation, tint);
+                     raylib::VectorHelper::toRaylibVector(origin), rotation, tint.getColor());
 }

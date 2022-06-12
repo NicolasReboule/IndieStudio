@@ -12,6 +12,9 @@
 #include <raylib.h>
 
 namespace raylib {
+    /**
+     * @brief Helper for Camera
+     */
     class CameraHelper {
     public:
         /**

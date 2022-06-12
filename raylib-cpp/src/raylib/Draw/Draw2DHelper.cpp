@@ -5,16 +5,16 @@
 ** Draw2DHelper.cpp
 */
 
-#include "raylib/render/Draw2DHelper.hpp"
+#include "raylib/Draw/Draw2DHelper.hpp"
 
 Texture2D raylib::Draw2DHelper::_texShapes = { 1, 1, 1, 1, 7 };
 Rectangle raylib::Draw2DHelper::_texShapesRec = { 0, 0, 1, 1 };
 
 void raylib::Draw2DHelper::setShapesTexture(const RlTexture &texture, const Rectangle &source)
 {
-    _texShapes = texture.getTexture();
+    _texShapes = texture.get();
     _texShapesRec = source;
-    SetShapesTexture(texture.getTexture(), source);
+    SetShapesTexture(texture.get(), source);
 }
 
 void raylib::Draw2DHelper::drawPixel(int posX, int posY, const RlColor &color)

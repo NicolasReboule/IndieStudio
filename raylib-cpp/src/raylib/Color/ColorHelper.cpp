@@ -7,11 +7,6 @@
 
 #include "raylib/Color/ColorHelper.hpp"
 
-raylib::RlColor raylib::ColorHelper::fade(const RlColor &color, float alpha)
-{
-    return RlColor(Fade(color.getColor(), alpha));
-}
-
 raylib::RlColor raylib::ColorHelper::colorFromNormalized(const Vector4f &normalizedColor)
 {
     return RlColor(normalizedColor);

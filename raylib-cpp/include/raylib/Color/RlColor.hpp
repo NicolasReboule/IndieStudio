@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_RLCOLOR_HPP
 #define INDIESTUDIO_RLCOLOR_HPP
 
-#include "raylib/Math/Vector.hpp"
+#include "raylib/Math.hpp"
 #include <cstdint>
 #include <raylib.h>
 
@@ -43,6 +43,26 @@ namespace raylib {
         explicit RlColor(const Vector4f &normalizedColor);
 
         /**
+         * @brief Create a RlColor from HSV values, hue [0..360], saturation/value [0..1]
+         * @param hue to convert
+         * @param saturation to convert
+         * @param value to convert
+         */
+        explicit RlColor(float hue, float saturation, float value);
+
+        /**
+         * @brief Apply alpha to the color, alpha goes from 0.0f to 1.0f
+         * @param alpha to apply
+         */
+        void alpha(float alpha);
+
+        /**
+         * @brief Returns HSV values for a Color, hue [0..360], saturation/value [0..1]
+         * @return the HSV values for a Color
+         */
+        Vector3f toHSV();
+
+        /**
          * @brief Retrieve the color as a 32-bit unsigned integer (hexadecimal)
          * @return Color represented as a 32-bit unsigned integer (hexadecimal)
          */
@@ -53,6 +73,13 @@ namespace raylib {
          * @return the normalized color
          */
         Vector4f normalize() const;
+
+        /**
+         * @brief Blend src into this color with tint
+         * @param src the color to apply alpha to
+         * @param tint the color to apply
+         */
+        void alphaBlend(const RlColor &src, const RlColor &tint);
 
         /**
          * @brief Get the Raylib's Color

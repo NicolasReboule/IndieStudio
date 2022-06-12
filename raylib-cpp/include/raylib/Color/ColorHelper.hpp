@@ -19,14 +19,6 @@ namespace raylib {
     class ColorHelper {
     public:
         /**
-         * @brief Returns color with alpha applied, alpha goes from 0.0f to 1.0f
-         * @param color to apply alpha to
-         * @param alpha to apply
-         * @return the color with alpha applied
-         */
-        static RlColor fade(const RlColor &color, float alpha);
-
-        /**
          * @brief Returns RlColor from normalized values [0..1]
          * @param normalizedColor to convert
          * @return the RlColor from normalized values

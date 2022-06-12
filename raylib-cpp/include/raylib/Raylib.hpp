@@ -33,6 +33,7 @@
 #include "raylib/Core/WorldHelper.hpp"
 #include "raylib/Draw/Draw2DHelper.hpp"
 #include "raylib/Draw/DrawHelper.hpp"
+#include "raylib/Draw/DrawTextureHelper.hpp"
 #include "raylib/exception/Exceptions.hpp"
 #include "raylib/Image/ImageDrawHelper.hpp"
 #include "raylib/Image/RlImageBuilder.hpp"

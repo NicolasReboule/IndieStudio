@@ -49,12 +49,6 @@ namespace raylib {
             void setTarget(const Vector3f &target);
 
             /**
-             * @brief Set the camera mode
-             * @param mode the camera mode
-             */
-            void setMode(const CameraMode &mode);
-
-            /**
              * @brief Get the 3d camera
              * @return the 3d camera
              */

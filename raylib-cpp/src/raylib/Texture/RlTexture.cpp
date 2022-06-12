@@ -48,27 +48,27 @@ void raylib::RlTexture::genTextureMipmaps()
     GenTextureMipmaps(&this->_texture);
 }
 
-void raylib::RlTexture::setTextureFilter(const TextureFilter &filter)
+void raylib::RlTexture::setFilter(const TextureFilter &filter)
 {
     SetTextureFilter(this->_texture, filter);
 }
 
-void raylib::RlTexture::setTextureWrap(const TextureWrap &wrap)
+void raylib::RlTexture::setWrap(const TextureWrap &wrap)
 {
     SetTextureWrap(this->_texture, wrap);
 }
 
-Texture2D &raylib::RlTexture::getTexture()
+Texture2D &raylib::RlTexture::get()
 {
     return this->_texture;
 }
 
-const Texture2D &raylib::RlTexture::getTexture() const
+const Texture2D &raylib::RlTexture::get() const
 {
     return this->_texture;
 }
 
-const std::string &raylib::RlTexture::getTexturePath() const
+const std::string &raylib::RlTexture::getPath() const
 {
     return _texturePath;
 }
@@ -76,4 +76,29 @@ const std::string &raylib::RlTexture::getTexturePath() const
 const Rectangle &raylib::RlTexture::getTextureRec() const
 {
     return _textureRec;
+}
+
+const unsigned int &raylib::RlTexture::getID() const
+{
+    return this->_texture.id;
+}
+
+const int &raylib::RlTexture::getWidth() const
+{
+    return this->_texture.width;
+}
+
+const int &raylib::RlTexture::getHeight() const
+{
+    return this->_texture.height;
+}
+
+const int &raylib::RlTexture::getMipmaps() const
+{
+    return this->_texture.mipmaps;
+}
+
+const int &raylib::RlTexture::getFormat() const
+{
+    return this->_texture.format;
 }

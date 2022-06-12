@@ -64,6 +64,26 @@ raylib::RlColor::RlColor(const Vector4f &normalizedColor) : _color()
     this->_color.a = (unsigned char) (normalizedColor.w * 255);
 }
 
+raylib::RlColor::RlColor(float hue, float saturation, float value) : _color()
+{
+    this->_color = ColorFromHSV(hue, saturation, value);
+}
+
+void raylib::RlColor::alpha(float alpha)
+{
+    if (alpha < 0.0f)
+        alpha = 0.0f;
+    else if (alpha > 1.0f)
+        alpha = 1.0f;
+
+    this->_color.a = (unsigned char) (255.0f * alpha);
+}
+
+Vector3f raylib::RlColor::toHSV()
+{
+    return raylib::VectorHelper::toVectorf(ColorToHSV(this->_color));
+}
+
 std::uint32_t raylib::RlColor::toInteger() const
 {
     return (this->_color.r << 24) | (this->_color.g << 16) | (this->_color.b << 8) | this->_color.a;
@@ -73,6 +93,11 @@ Vector4f raylib::RlColor::normalize() const
 {
     return {(float) this->_color.r / 255.0f, (float) this->_color.g / 255.0f, (float) this->_color.b / 255.0f,
             (float) this->_color.a / 255.0f};
+}
+
+void raylib::RlColor::alphaBlend(const RlColor &src, const RlColor &tint)
+{
+    ColorAlphaBlend(this->_color, src._color, tint._color);
 }
 
 const Color &raylib::RlColor::getColor() const
