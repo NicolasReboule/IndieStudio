@@ -14,7 +14,7 @@
 namespace raylib {
     class Codepoint {
     public:
-        // Text codepoints management functions (unicode characters)
+        // RlText codepoints management functions (unicode characters)
         int *loadCodepoints(const std::string &text, int *count);                                              // Load all codepoints from a UTF-8 text string, codepoints count returned by parameter
         void unloadCodepoints(int *codepoints);                                                         // Unload codepoints data from memory
         int getCodepointCount(const std::string &text);                                                        // Get total number of codepoints in a UTF-8 encoded string

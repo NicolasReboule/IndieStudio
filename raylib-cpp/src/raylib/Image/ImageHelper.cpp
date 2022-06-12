@@ -47,3 +47,8 @@ raylib::RlImage raylib::ImageHelper::fromText(const raylib::RlFont &font, const 
 {
     return RlImage(ImageTextEx(font.getFont(), text.c_str(), fontSize, spacing, tint.getColor()));
 }
+
+raylib::RlImage raylib::ImageHelper::genImageFontAtlas(const GlyphInfo *chars, Rectangle **recs, int glyphCount, int fontSize, int padding, int packMethod)
+{
+    return raylib::RlImage(GenImageFontAtlas(chars, recs, glyphCount, fontSize, padding, packMethod));
+}

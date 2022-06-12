@@ -1,112 +1,99 @@
 /*
 ** EPITECH PROJECT, 2022
-** Text.cpp
+** RlText.cpp
 ** FileHelper description:
-** Text.cpp
+** RlText.cpp
 */
 
-#include "raylib/Text/Text.hpp"
+#include "raylib/Text/RlText.hpp"
 
-raylib::Text::Text(const std::string &text, Vector2f position, Color color)
+raylib::RlText::RlText(const std::string &text, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font()
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, Font font, Vector2f position, Color color)
+raylib::RlText::RlText(const std::string &text, const raylib::RlFont &font, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font(font)
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, const raylib::RlFont &font, Vector2f position, Color color)
-    : _color(color), _position(position), _font(font)
-{
-    this->_text = text;
-}
-
-raylib::Text::Text(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, Vector2f position, Color color)
+raylib::RlText::RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font(fontPath, fontSize, fontChars, glyphCount)
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const std::string &text, Image image, Color key, int firstChar, Vector2f position, Color color)
+raylib::RlText::RlText(const std::string &text, const RlImage &image, const RlColor &key, int firstChar, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font(image, key, firstChar)
 {
     this->_text = text;
 }
 
-raylib::Text::Text(const raylib::Text &text)
-    : _color(text.getColor()), _position(text.getPosition())
-{
-    this->_text = text._text;
-    this->_font = text._font;
-}
-
-raylib::Text::Text(const std::string &text, const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount,  Vector2f position, Color color)
+raylib::RlText::RlText(const std::string &text, const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font(fileType, fileData, dataSize, fontSize, fontChars, glyphCount)
 {
     this->_text = text;
 }
 
-void raylib::Text::setText(const std::string &text)
+void raylib::RlText::setText(const std::string &text)
 {
     this->_text = text;
 }
 
-void raylib::Text::setFont(const raylib::RlFont &font)
+void raylib::RlText::setFont(const raylib::RlFont &font)
 {
     this->_font = font;
 }
 
-void raylib::Text::setPosition(float x, float y)
+void raylib::RlText::setPosition(float x, float y)
 {
     _position.x = x;
     _position.y = y;
 }
 
-void raylib::Text::setPosition(Vector2f pos)
+void raylib::RlText::setPosition(const Vector2f &pos)
 {
     this->_position = pos;
 }
 
-void raylib::Text::setColor(Color color)
+void raylib::RlText::setColor(const RlColor &color)
 {
     this->_color = color;
 }
 
-const raylib::RlFont &raylib::Text::getFont() const
+const raylib::RlFont &raylib::RlText::getFont() const
 {
     return this->_font;
 }
 
-const std::string &raylib::Text::getText() const
+const std::string &raylib::RlText::getText() const
 {
     return this->_text;
 }
 
-const Vector2f &raylib::Text::getPosition() const
+const Vector2f &raylib::RlText::getPosition() const
 {
     return this->_position;
 }
 
-const Color &raylib::Text::getColor() const
+const RlColor &raylib::RlText::getColor() const
 {
     return this->_color;
 }
 
-float raylib::Text::getHeight() const
+float raylib::RlText::getHeight() const
 {
     return _font.getFontSize();
 }
 
-float raylib::Text::getWidth() const
+float raylib::RlText::getWidth() const
 {
     return (float) MeasureText(_text.c_str(), (int) _font.getFontSize());
 }
 
-raylib::RlFont *raylib::Text::operator->()
+raylib::RlFont *raylib::RlText::operator->()
 {
     return &_font;
 }

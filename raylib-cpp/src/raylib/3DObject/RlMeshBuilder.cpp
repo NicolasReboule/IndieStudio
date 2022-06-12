@@ -9,7 +9,7 @@
 
 // Mesh management functions
 //
-raylib::RlMeshBuilder::RlMeshBuilder() :  _heightmap(), _vec3fSize(0, 0, 0), _cubicmap(), _cubeSize(0, 0, 0)
+raylib::RlMeshBuilder::RlMeshBuilder() :  _heightmap({}), _vec3fSize(0, 0, 0), _cubicmap({}), _cubeSize(0, 0, 0)
 {
     _type = -1;
     _flags = 0;

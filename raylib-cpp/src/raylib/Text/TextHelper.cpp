@@ -7,12 +7,12 @@
 
 #include "raylib/Text/TextHelper.hpp"
 
-// Text drawing functions
+// RlText drawing functions
 
-void raylib::TextHelper::drawText(const raylib::Text &text)
+void raylib::TextHelper::drawText(const raylib::RlText &text)
 {
     DrawTextEx(text.getFont().getFont(), text.getText().c_str(),
-               raylib::VectorHelper::toRaylibVector(text.getPosition()), text.getFont().getFontSize(), text.getFont().getTextSpacing(), text.getColor());
+               raylib::VectorHelper::toRaylibVector(text.getPosition()), text.getFont().getFontSize(), text.getFont().getTextSpacing(), text.getColor().getColor());
 }
 
 void raylib::TextHelper::drawFPS(int posX, int posY)
@@ -44,7 +44,7 @@ void raylib::TextHelper::drawTextCodepoint(Font font, int codepoint, Vector2f po
                       raylib::VectorHelper::toRaylibVector(position), fontSize, tint);
 }
 
-// Text misc. functions
+// RlText misc. functions
 
 int raylib::TextHelper::measureText(const std::string &text, int fontSize)
 {

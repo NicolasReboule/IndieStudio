@@ -43,7 +43,7 @@
 #include "raylib/Inputs/MouseHelper.hpp"
 #include "raylib/Inputs/TouchHelper.hpp"
 #include "raylib/Shader/ShaderUtils.hpp"
-#include "raylib/Text/Text.hpp"
+#include "raylib/Text/RlText.hpp"
 #include "raylib/Text/TextHelper.hpp"
 #include "raylib/Texture/RlRenderTexture.hpp"
 #include "raylib/Texture/RlTexture.hpp"

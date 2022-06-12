@@ -89,6 +89,18 @@ namespace raylib {
          */
         static RlImage fromText(const RlFont &font, const std::string &text, float fontSize, float spacing, const RlColor &tint);
 
+        /**
+         * @brief Create an image from font (custom sprite font)
+         * @param chars the chars
+         * @param recs the recs
+         * @param glyphCount the glyph count
+         * @param fontSize the font size
+         * @param padding the padding
+         * @param packMethod the pack method
+         * @return the image
+         */
+        static RlImage genImageFontAtlas(const GlyphInfo *chars, Rectangle **recs, int glyphCount, int fontSize, int padding, int packMethod);
+
     };
 }
 
