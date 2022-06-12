@@ -148,6 +148,7 @@ namespace raylib {
 
         /**
          * @brief Create a RlFont, using a font path
+         * Load font from file into GPU memory (VRAM)
          * @param filename the font path
          */
         explicit RlFont(const std::string &fontPath);
@@ -160,20 +161,34 @@ namespace raylib {
 
         /**
          * @brief Create a RlFont, using a font path and a font size
+         * Load font from file with extended parameters
          * @param fontPath the font path
          * @param fontSize the font size
          * @param fontChars the font characters
          * @param glyphCount the glyph count
          */
-        explicit RlFont(const std::string &fontPath, const int &fontSize = 10, int *fontChars = nullptr, const int &glyphCount = 0);
+        explicit RlFont(const std::string &fontPath, const int &fontSize = 20, int *fontChars = nullptr, const int &glyphCount = 0);
 
         /**
          * @brief Create a RlFont, using an iamge, key color and first character
+         * Load font from Image (XNA style)
          * @param image the image
          * @param key the key color
          * @param firstChar the first character
          */
         explicit RlFont(const RlImage &image, const RlColor &key, const int &firstChar);
+
+        /**
+         * @brief Create a RlFont, using a file type and a file data
+         * Load font from memory buffer, fileType refers to extension: i.e. '.ttf'
+         * @param fileType the file type (ttf, otf)
+         * @param fileData the file data
+         * @param dataSize the data size
+         * @param fontSize the font size
+         * @param fontChars the font characters
+         * @param glyphCount the glyph count
+         */
+        explicit RlFont(const std::string &fileType, const unsigned char *fileData, int dataSize, const int &fontSize = 20, int *fontChars = nullptr, const int &glyphCount = 0);
 
         /**
          * @brief Destroy the RlFont
