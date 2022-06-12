@@ -9,13 +9,26 @@
 
 raylib::RlFont::RlFont() : _font()
 {
-    this->_fontSize = 10;
-    this->_textSpacing = 1;
     this->_font = GetFontDefault();
+    this->_fontSize = this->_font.baseSize;
     this->_defaultFont = true;
     this->_fontPath = "";
 }
 
+raylib::RlFont::~RlFont()
+{
+    if (!this->_defaultFont)
+        UnloadFont(this->_font);
+}
+
+raylib::RlFont::RlFont(const std::string &filename) : _font()
+{
+    this->_fontPath = filename;
+    this->_font = LoadFont(this->_fontPath.c_str());
+    this->_fontSize = this->_font.baseSize;
+}
+
+/*
 raylib::RlFont::RlFont(const Font &font, int fontSize, float textSpacing) : _font()
 {
     this->_fontSize = fontSize;
@@ -61,12 +74,6 @@ raylib::RlFont::RlFont(const std::string &fileType, const unsigned char *fileDat
     this->_defaultFont = false;
 }
 
-raylib::RlFont::~RlFont()
-{
-    if (!this->_defaultFont)
-        UnloadFont(this->_font);
-}
-
 void raylib::RlFont::setFontSize(int fontSize)
 {
     this->_fontSize = fontSize;
@@ -106,3 +113,4 @@ const float &raylib::RlFont::getTextSpacing() const
 {
     return this->_textSpacing;
 }
+*/

@@ -8,22 +8,22 @@
 #include "GameEngine/Nodes/2D/Button.hpp"
 #include "raylib/Math/VectorHelper.hpp"
 
-GameEngine::Button::Button(const std::string &name, const std::string &filename) : GameEngine::Node2D(name),
-    _texture(filename), _position({0, 0}), _scale({1, 1}), _bounds(), _rectangle()
+GameEngine::Button::Button(const std::string &name, const std::string &filename)
+    : GameEngine::Node2D(name), _texture(filename), _position({0, 0}), _scale({1, 1}),
+      _bounds(), _rectangle()
 {
     this->_rotationDegrees = 0;
 
     this->_action = false;
     this->_state = 0;
     this->_frameNum = 3;
-    this->_frameHeight = (float) this->_texture.get().height / (float)this->_frameNum;
-    this->_rectangle = {0, 0, (float) this->_texture.get().width, (float)this->_frameHeight};
+    this->_frameHeight = (float) this->_texture.get().height / (float) this->_frameNum;
+    this->_rectangle = {0, 0, (float) this->_texture.get().width, (float) this->_frameHeight};
     this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.get().width, this->_frameHeight};
 }
 
 void GameEngine::Button::ready()
 {
-
 }
 
 void GameEngine::Button::update()
@@ -47,7 +47,7 @@ void GameEngine::Button::update()
     if (this->_action)
         this->pressed();
 
-    this->_rectangle.y = (float)(this->_state) * this->_frameHeight;
+    this->_rectangle.y = (float) (this->_state) * this->_frameHeight;
 }
 
 void GameEngine::Button::draw()

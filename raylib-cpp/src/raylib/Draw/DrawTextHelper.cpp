@@ -30,18 +30,18 @@ void raylib::DrawTextHelper::drawTextEx(const RlFont &font, const std::string &t
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text, const Vector2f &position, const RlColor &color)
 {
-    drawTextEx(text.getFont(), text.getText(), position, text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
+    drawTextEx(text.getFont(), text.getText(), position, (float) text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
 }
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text, float posX, float posY, const RlColor &color)
 {
-    drawTextEx(text.getFont(), text.getText(), {posX, posY}, text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
+    drawTextEx(text.getFont(), text.getText(), {posX, posY}, (float) text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
 }
 
 void raylib::DrawTextHelper::drawText(const raylib::RlFont &font, const std::string &text, const Vector2f &position,
                                       const RlColor &color)
 {
-    drawTextEx(font, text, position, font.getFontSize(), font.getTextSpacing(), color);
+    drawTextEx(font, text, position, (float) font.getFontSize(), font.getTextSpacing(), color);
 }
 
 void raylib::DrawTextHelper::drawText(const RlFont &font, const std::string &text, const Vector2f &position,

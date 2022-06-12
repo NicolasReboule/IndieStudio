@@ -8,7 +8,7 @@
 #include "GameEngine/GameEngine.hpp"
 #include "GameEngine/Audio/Music.hpp"
 
-GameEngine::Audio::Music::Music(const std::string &fileName, int category) : ISound(fileName, category), RlMusic("../assets/sounds/" + fileName)
+GameEngine::Audio::Music::Music(const std::string &fileName, int category) : ISound(fileName, category), RlMusic("./assets/sounds/" + fileName)
 {
 
 }
