@@ -248,7 +248,7 @@ namespace raylib {
 
     private:
         Image _image; /**< The raylib image */
-        int _frameCount;/**< The frame count of the image */
+        int _frameCount; /**< The frame count of the image */
     };
 }
 

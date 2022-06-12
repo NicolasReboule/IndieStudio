@@ -57,13 +57,13 @@ namespace raylib {
         static void endMode3D();
 
         /**
-         * @brief Begin drawing to render texture
-         * @param target to draw to
+         * @brief Begin drawing to Draw texture
+         * @param target to Draw to
          */
         static void beginTextureMode(const RenderTexture2D &target);
 
         /**
-         * @brief Ends drawing to render texture
+         * @brief Ends drawing to Draw texture
          */
         static void endTextureMode();
 

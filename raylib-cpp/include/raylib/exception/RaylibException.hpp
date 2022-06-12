@@ -12,13 +12,26 @@
 #include <string>
 
 namespace raylib::ex {
+    /**
+     * @brief RaylibException class
+     */
     class RaylibException : public std::exception {
     public:
+        /**
+         * @brief RaylibException constructor
+         * @param msg the message of the exception
+         * @param prefix if prefix "[Raylib]" should be added to the message
+         */
         explicit RaylibException(const std::string &msg, bool prefix = true);
+
+        /**
+         * @brief What override
+         * @return the message of the exception
+         */
         const char *what() const noexcept override;
 
     private:
-        std::string _msg;
+        std::string _msg; /**< The message */
     };
 }
 

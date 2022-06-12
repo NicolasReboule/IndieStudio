@@ -24,7 +24,7 @@ namespace raylib {
         /**
          * @brief Set texture and rectangle to be used on shapes drawing
          * NOTE: It can be useful when using basic shapes and one single font,
-         * defining a font char white rectangle would allow drawing everything in a single draw call
+         * defining a font char white rectangle would allow drawing everything in a single Draw call
          * @param texture texture to be used
          * @param source texture rectangle to be used
          */
@@ -32,41 +32,41 @@ namespace raylib {
 
         /**
          * @brief Draw a pixel
-         * @param posX to draw at
-         * @param posY to draw at
+         * @param posX to Draw at
+         * @param posY to Draw at
          * @param color to use
          */
         static void drawPixel(int posX, int posY, const RlColor &color);
 
         /**
          * @brief Draw a pixel
-         * @param position to draw at
+         * @param position to Draw at
          * @param color to use
          */
         static void drawPixel(const Vector2f &position, const RlColor &color);
 
         /**
          * @brief Draw a line
-         * @param startPosX to draw from
-         * @param startPosY to draw from
-         * @param endPosX to draw to
-         * @param endPosY to draw to
+         * @param startPosX to Draw from
+         * @param startPosY to Draw from
+         * @param endPosX to Draw to
+         * @param endPosY to Draw to
          * @param color to use
          */
         static void drawLine(int startPosX, int startPosY, int endPosX, int endPosY, const RlColor &color);
 
         /**
          * @brief Draw a line
-         * @param startPos to draw from
-         * @param endPos to draw to
+         * @param startPos to Draw from
+         * @param endPos to Draw to
          * @param color to use
          */
         static void drawLine(const Vector2f &startPos, const Vector2f &endPos, const RlColor &color);
 
         /**
          * @brief Draw a line
-         * @param startPos to draw from
-         * @param endPos to draw to
+         * @param startPos to Draw from
+         * @param endPos to Draw to
          * @param thick to use
          * @param color to use
          */
@@ -74,8 +74,8 @@ namespace raylib {
 
         /**
          * @brief Draw a Line using cubic-bezier curves in-out
-         * @param startPos to draw from
-         * @param endPos to draw to
+         * @param startPos to Draw from
+         * @param endPos to Draw to
          * @param thick to use
          * @param color to use
          */
@@ -83,8 +83,8 @@ namespace raylib {
 
         /**
          * @brief Draw a line using quadratic bezier curves with a control point
-         * @param startPos to draw from
-         * @param endPos to draw to
+         * @param startPos to Draw from
+         * @param endPos to Draw to
          * @param controlPos to use
          * @param thick to use
          * @param color to use
@@ -93,8 +93,8 @@ namespace raylib {
 
         /**
          * @brief Draw a line using cubic bezier curves with 2 control points
-         * @param startPos to draw from
-         * @param endPos to draw to
+         * @param startPos to Draw from
+         * @param endPos to Draw to
          * @param startControlPos to use
          * @param endControlPos to use
          * @param thick to use
@@ -112,8 +112,8 @@ namespace raylib {
 
         /**
          * @brief Draw a color-filled circle
-         * @param centerX to draw at
-         * @param centerY to draw at
+         * @param centerX to Draw at
+         * @param centerY to Draw at
          * @param radius to use
          * @param color to use
          */
@@ -121,7 +121,7 @@ namespace raylib {
 
         /**
          * @brief Draw a piece of a circle
-         * @param center to draw at
+         * @param center to Draw at
          * @param radius to use
          * @param startAngle to use
          * @param endAngle to use
@@ -132,7 +132,7 @@ namespace raylib {
 
         /**
          * @brief Draw circle sector outline
-         * @param center to draw at
+         * @param center to Draw at
          * @param radius to use
          * @param startAngle to use
          * @param endAngle to use
@@ -143,8 +143,8 @@ namespace raylib {
 
         /**
          * @brief Draw a gradient-filled circle
-         * @param centerX to draw at
-         * @param centerY to draw at
+         * @param centerX to Draw at
+         * @param centerY to Draw at
          * @param radius to use
          * @param color1 to use
          * @param color2 to use
@@ -161,8 +161,8 @@ namespace raylib {
 
         /**
          * @brief Draw circle outline
-         * @param centerX to draw at
-         * @param centerY to draw at
+         * @param centerX to Draw at
+         * @param centerY to Draw at
          * @param radius to use
          * @param color to use
          */
@@ -170,8 +170,8 @@ namespace raylib {
 
         /**
          * @brief Draw ellipse
-         * @param centerX to draw at
-         * @param centerY to draw at
+         * @param centerX to Draw at
+         * @param centerY to Draw at
          * @param radiusH to use
          * @param radiusV to use
          * @param color to use
@@ -180,8 +180,8 @@ namespace raylib {
 
         /**
          * @brief Draw ellipse outline
-         * @param centerX to draw at
-         * @param centerY to draw at
+         * @param centerX to Draw at
+         * @param centerY to Draw at
          * @param radiusH to use
          * @param radiusV to use
          * @param color to use
@@ -190,7 +190,7 @@ namespace raylib {
 
         /**
          * @brief Draw a ring
-         * @param center to draw at
+         * @param center to Draw at
          * @param innerRadius to use
          * @param outerRadius to use
          * @param startAngle to use
@@ -202,7 +202,7 @@ namespace raylib {
 
         /**
          * @brief Draw a ring outline
-         * @param center to draw at
+         * @param center to Draw at
          * @param innerRadius to use
          * @param outerRadius to use
          * @param startAngle to use
@@ -214,8 +214,8 @@ namespace raylib {
 
         /**
          * @brief Draw a filled rectangle
-         * @param posX to draw at
-         * @param posY to draw at
+         * @param posX to Draw at
+         * @param posY to Draw at
          * @param width to use
          * @param height to use
          * @param color to use
@@ -224,7 +224,7 @@ namespace raylib {
 
         /**
          * @brief Draw a filled rectangle
-         * @param position to draw at
+         * @param position to Draw at
          * @param size to use
          * @param color to use
          */
@@ -232,14 +232,14 @@ namespace raylib {
 
         /**
          * @brief Draw a filled rectangle
-         * @param rec to draw
+         * @param rec to Draw
          * @param color to use
          */
         static void drawRectangle(const Rectangle &rec, const RlColor &color);
 
         /**
          * @brief Draw a filled rectangle
-         * @param rec to draw
+         * @param rec to Draw
          * @param origin to use
          * @param rotation to use
          * @param color to use
@@ -248,8 +248,8 @@ namespace raylib {
 
         /**
          * @brief Draw a vertical-gradient-filled rectangle
-         * @param posX to draw at
-         * @param posY to draw at
+         * @param posX to Draw at
+         * @param posY to Draw at
          * @param width to use
          * @param height to use
          * @param color1 to use
@@ -259,8 +259,8 @@ namespace raylib {
 
         /**
          * @brief Draw a horizontal-gradient-filled rectangle
-         * @param posX to draw at
-         * @param posY to draw at
+         * @param posX to Draw at
+         * @param posY to Draw at
          * @param width to use
          * @param height to use
          * @param color1 to use
@@ -270,8 +270,8 @@ namespace raylib {
 
         /**
          * @brief Draw a gradient-filled rectangle with custom vertex colors
-         * @param posX to draw at
-         * @param posY to draw at
+         * @param posX to Draw at
+         * @param posY to Draw at
          * @param width to use
          * @param height to use
          * @param color to use
@@ -280,8 +280,8 @@ namespace raylib {
 
         /**
          * @brief Draw rectangle outline
-         * @param posX to draw at
-         * @param posY to draw at
+         * @param posX to Draw at
+         * @param posY to Draw at
          * @param width to use
          * @param height to use
          * @param color to use
@@ -290,7 +290,7 @@ namespace raylib {
 
         /**
          * @brief Draw rectangle outline with extended parameters
-         * @param rec to draw
+         * @param rec to Draw
          * @param lineThick to use
          * @param color to use
          */
@@ -298,7 +298,7 @@ namespace raylib {
 
         /**
          * @brief Draw rectangle with rounded edges
-         * @param rec to draw
+         * @param rec to Draw
          * @param roundness to use
          * @param segments to use
          * @param color to use
@@ -307,7 +307,7 @@ namespace raylib {
 
         /**
          * @brief Draw rectangle with rounded edges outline
-         * @param rec to draw
+         * @param rec to Draw
          * @param roundness to use
          * @param segments to use
          * @param lineThick to use
@@ -317,18 +317,18 @@ namespace raylib {
 
         /**
          * @brief Draw a color-filled triangle (vertex in counter-clockwise order!)
-         * @param v1 to draw at
-         * @param v2 to draw at
-         * @param v3 to draw at
+         * @param v1 to Draw at
+         * @param v2 to Draw at
+         * @param v3 to Draw at
          * @param color to use
          */
         static void drawTriangle(const Vector2f &v1, const Vector2f &v2, const Vector2f &v3, const RlColor &color);
 
         /**
          * @brief Draw a triangle outline (vertex in counter-clockwise order!)
-         * @param v1 to draw at
-         * @param v2 to draw at
-         * @param v3 to draw at
+         * @param v1 to Draw at
+         * @param v2 to Draw at
+         * @param v3 to Draw at
          * @param color to use
          */
         static void drawTriangleLines(const Vector2f &v1, const Vector2f &v2, const Vector2f &v3, const RlColor &color);
@@ -336,21 +336,21 @@ namespace raylib {
         /**
          * @brief Draw a triangle fan defined by points (first vertex is the center, shared by all triangles)
          * By default, following vertex should be provided in counter-clockwise order
-         * @param points to draw
+         * @param points to Draw
          * @param color to use
          */
         static void drawTriangleFan(const std::vector<Vector2f> &points, const RlColor &color);
 
         /**
          * @brief Draw a triangle strip defined by points
-         * @param points to draw
+         * @param points to Draw
          * @param color to use
          */
         static void drawTriangleStrip(const std::vector<Vector2f> &points,  const RlColor &color);
 
         /**
          * @brief Draw a regular polygon (Vector version)
-         * @param center to draw at
+         * @param center to Draw at
          * @param sides to use
          * @param radius to use
          * @param rotation to use
@@ -360,7 +360,7 @@ namespace raylib {
 
         /**
          * @brief Draw a polygon outline of n sides
-         * @param center to draw at
+         * @param center to Draw at
          * @param sides to use
          * @param radius to use
          * @param rotation to use
@@ -370,7 +370,7 @@ namespace raylib {
 
         /**
          * @brief Draw a polygon outline of n sides with extended parameters
-         * @param center to draw at
+         * @param center to Draw at
          * @param sides to use
          * @param radius to use
          * @param rotation to use

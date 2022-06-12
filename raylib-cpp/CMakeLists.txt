@@ -39,7 +39,11 @@ add_library(${PROJECT_NAME}
         src/raylib/Core/CoreHelper.cpp
         src/raylib/Core/FileHelper.cpp
         src/raylib/Core/WorldHelper.cpp
+        src/raylib/Draw/Draw2DHelper.cpp
+        src/raylib/Draw/DrawHelper.cpp
+        src/raylib/Draw/DrawTextureHelper.cpp
         src/raylib/exception/BuilderException.cpp
+        src/raylib/exception/InvalidArgumentException.cpp
         src/raylib/exception/RaylibException.cpp
         src/raylib/exception/WindowException.cpp
         src/raylib/Image/ImageDrawHelper.cpp
@@ -54,16 +58,14 @@ add_library(${PROJECT_NAME}
         src/raylib/Inputs/TouchHelper.cpp
         src/raylib/Math/VectorHelper.cpp
         src/raylib/Random.cpp
-        src/raylib/render/Draw2DHelper.cpp
-        src/raylib/render/DrawHelper.cpp
         src/raylib/Shader/RlShader.cpp
         src/raylib/Shader/ShaderUtils.cpp
         src/raylib/Text/Codepoint.cpp
         src/raylib/Text/RlFont.cpp
         src/raylib/Text/Text.cpp
         src/raylib/Text/TextHelper.cpp
+        src/raylib/Texture/RlRenderTexture.cpp
         src/raylib/Texture/RlTexture.cpp
-        src/raylib/Texture/TextureHelper.cpp
         src/raylib/Window/RlWindow.cpp
         src/raylib/Window/System.cpp
 

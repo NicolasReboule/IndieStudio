@@ -47,7 +47,7 @@ void GameEngine::Scene::update()
 void GameEngine::Scene::draw()
 {
     /*for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
-        node->draw();*/
+        node->Draw();*/
 
     for (std::shared_ptr<GameEngine::Base> &node : this->_nodes) {
 
@@ -64,7 +64,7 @@ void GameEngine::Scene::draw()
 void GameEngine::Scene::draw2D()
 {
     /*for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
-        node->draw();*/
+        node->Draw();*/
 
     for (std::shared_ptr<GameEngine::Base> &node : this->_nodes) {
 
