@@ -28,17 +28,32 @@ void raylib::DrawTextHelper::drawTextEx(const RlFont &font, const std::string &t
     DrawTextEx(font.getFont(), text.c_str(), raylib::VectorHelper::toRaylibVector(position), fontSize, spacing, tint.getColor());
 }
 
-void raylib::DrawTextHelper::drawTextPro(const RlFont &font, const std::string &text, const Vector2f &position,
-                                         const Vector2f &origin, float rotation, float fontSize, float spacing,
-                                         const RlColor &tint)
+void raylib::DrawTextHelper::drawText(const raylib::RlText &text, const Vector2f &position, const RlColor &color)
+{
+    drawTextEx(text.getFont(), text.getText(), position, text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
+}
+
+void raylib::DrawTextHelper::drawText(const raylib::RlText &text, float posX, float posY, const RlColor &color)
+{
+    drawTextEx(text.getFont(), text.getText(), {posX, posY}, text.getFont().getFontSize(), text.getFont().getTextSpacing(), color);
+}
+
+void raylib::DrawTextHelper::drawText(const raylib::RlFont &font, const std::string &text, const Vector2f &position,
+                                      const RlColor &color)
+{
+    drawTextEx(font, text, position, font.getFontSize(), font.getTextSpacing(), color);
+}
+
+void raylib::DrawTextHelper::drawText(const RlFont &font, const std::string &text, const Vector2f &position,
+                                      const Vector2f &origin, float rotation, float fontSize, float spacing,
+                                      const RlColor &tint)
 {
     DrawTextPro(font.getFont(), text.c_str(), raylib::VectorHelper::toRaylibVector(position),
                 raylib::VectorHelper::toRaylibVector(origin), rotation, fontSize, spacing, tint.getColor());
 }
 
-void raylib::DrawTextHelper::drawTextCodepoint(const RlFont &font, int codepoint, const Vector2f &position, float fontSize,
-                                          const RlColor &tint)
+void raylib::DrawTextHelper::drawText(const RlFont &font, int codepoint, const Vector2f &position, float fontSize,
+                                      const RlColor &tint)
 {
     DrawTextCodepoint(font.getFont(), codepoint, raylib::VectorHelper::toRaylibVector(position), fontSize, tint.getColor());
 }
-

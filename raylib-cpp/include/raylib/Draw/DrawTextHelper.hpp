@@ -52,6 +52,32 @@ namespace raylib {
         static void drawTextEx(const RlFont &font, const std::string &text, const Vector2f &position, float fontSize, float spacing, const RlColor &tint);
 
         /**
+         * @brief Draw text using font and additional parameters
+         * @param text the text to draw
+         * @param position the position
+         * @param color the color
+         */
+        static void drawText(const RlText &text, const Vector2f &position, const RlColor &color = RlColor::Black);
+
+        /**
+         * @brief Draw text using font and additional parameters
+         * @param text the text to draw
+         * @param posX the x position
+         * @param posY the y position
+         * @param color the color
+         */
+        static void drawText(const RlText &text, float posX, float posY, const RlColor &color = RlColor::Black);
+
+        /**
+         * @brief Draw text using font and additional parameters
+         * @param font the font
+         * @param text the text to draw
+         * @param position the position
+         * @param color the color
+         */
+        static void drawText(const RlFont &font, const std::string &text, const Vector2f &position, const RlColor &color = RlColor::Black);
+
+        /**
          * @brief Draw text using Font and 'pro' parameters (rotation)
          * @param font the font
          * @param text the text to draw
@@ -62,7 +88,7 @@ namespace raylib {
          * @param spacing the spacing
          * @param tint the color
          */
-        static void drawTextPro(const RlFont &font, const std::string &text, const Vector2f &position, const Vector2f &origin, float rotation, float fontSize, float spacing, const RlColor &tint);
+        static void drawText(const RlFont &font, const std::string &text, const Vector2f &position, const Vector2f &origin, float rotation, float fontSize, float spacing, const RlColor &tint);
 
         /**
          * @brief Draw one character (codepoint)
@@ -72,7 +98,7 @@ namespace raylib {
          * @param fontSize the font size
          * @param tint the color
          */
-        static void drawTextCodepoint(const RlFont &font, int codepoint, const Vector2f &position, float fontSize, const RlColor &tint);
+        static void drawText(const RlFont &font, int codepoint, const Vector2f &position, float fontSize, const RlColor &tint);
     };
 }
 

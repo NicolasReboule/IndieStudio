@@ -29,7 +29,7 @@ namespace raylib {
          * @param fontSize the font size
          * @param textSpacing the text spacing
          */
-        explicit RlFont(const Font &font, float fontSize = 10, float textSpacing = 1);
+        explicit RlFont(const Font &font, int fontSize = 10, float textSpacing = 1);
 
         /**
          * @brief Create a RlFont, using a file path
@@ -37,7 +37,7 @@ namespace raylib {
          * @param fontSize the font size
          * @param textSpacing the text spacing
          */
-        explicit RlFont(const std::string &fileName, float fontSize = 10, float textSpacing = 1);
+        explicit RlFont(const std::string &fileName, int fontSize = 10, float textSpacing = 1);
 
         /**
          * @brief Create a RlFont, using a file path and a font size
@@ -48,7 +48,7 @@ namespace raylib {
          * @param realfontSize the real font size
          * @param textSpacing the text spacing
          */
-        explicit RlFont(const std::string &fileName, int fontSize, int *fontChars, int glyphCount, float realfontSize = 10, float textSpacing = 1);
+        explicit RlFont(const std::string &fileName, int fontSize, int *fontChars, int glyphCount, int realfontSize = 10, float textSpacing = 1);
 
         /**
          * @brief Create a RlFont, using a RlImage and a key color
@@ -58,7 +58,7 @@ namespace raylib {
          * @param fontSize the font size
          * @param textSpacing the text spacing
          */
-        explicit RlFont(const RlImage &image, const RlColor &key, int firstChar, float fontSize = 10, float textSpacing = 1);
+        explicit RlFont(const RlImage &image, const RlColor &key, int firstChar, int fontSize = 10, float textSpacing = 1);
 
         /**
          * @brief Create a RlFont, using a file type and a file data
@@ -71,7 +71,7 @@ namespace raylib {
          * @param realfontSize the real font size
          * @param textSpacing the text spacing
          */
-        explicit RlFont(const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, float realfontSize = 10, float textSpacing = 1);
+        explicit RlFont(const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, int realfontSize = 10, float textSpacing = 1);
 
         /**
          * @brief Destroy the RlFont
@@ -82,7 +82,7 @@ namespace raylib {
          * @brief Set the font size
          * @param fontSize the new font size
          */
-        void setFontSize(float fontSize);
+        void setFontSize(int fontSize);
 
         /**
          * @brief Set the text spacing
@@ -118,7 +118,7 @@ namespace raylib {
          * @brief Get the font size
          * @return the font size
          */
-        const float &getFontSize() const;
+        const int &getFontSize() const;
 
         /**
          * @brief Get the text spacing
@@ -130,7 +130,7 @@ namespace raylib {
         bool _defaultFont; /**< If the default raylib font is used */
         Font _font; /**< The raylib font */
         std::string _fontPath; /**< The font path */
-        float _fontSize; /**< The font size */
+        int _fontSize; /**< The font size */
         float _textSpacing; /**< The text spacing of the font */
     };
 }

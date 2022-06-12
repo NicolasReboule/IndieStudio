@@ -19,6 +19,12 @@ raylib::RlText::RlText(const std::string &text, const raylib::RlFont &font, cons
     this->_text = text;
 }
 
+raylib::RlText::RlText(const std::string &text, const std::string &fontPath, float fontSize, const Vector2f &position, const RlColor &color): _color(color), _position(position)
+{
+    this->_text = text;
+    this->_font = RlFont(fontPath, fontSize);
+}
+
 raylib::RlText::RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font(fontPath, fontSize, fontChars, glyphCount)
 {
@@ -85,15 +91,25 @@ const RlColor &raylib::RlText::getColor() const
 
 float raylib::RlText::getHeight() const
 {
-    return _font.getFontSize();
+    return this->_font.getFontSize();
 }
 
 float raylib::RlText::getWidth() const
 {
-    return (float) MeasureText(_text.c_str(), (int) _font.getFontSize());
+    return (float) TextHelper::measureText(this->_text, (int) this->getFont().getFontSize());
 }
 
-raylib::RlFont *raylib::RlText::operator->()
+Vector2f raylib::RlText::getSize()
 {
-    return &_font;
+    return TextHelper::measureText(_font, this->_text);
+}
+
+raylib::RlFont &raylib::RlText::operator->()
+{
+    return this->_font;
+}
+
+const raylib::RlFont &raylib::RlText::operator->() const
+{
+    return this->_font;
 }

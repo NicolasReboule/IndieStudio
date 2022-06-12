@@ -14,7 +14,7 @@ namespace Indie {
 
     class Logo : public GameEngine::TextureRect {
     public:
-        explicit Logo(std::string name, const std::string &filename);
+        explicit Logo(const std::string &name, const std::string &filename);
 
         ~Logo() override = default;
 
