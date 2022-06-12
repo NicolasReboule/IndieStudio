@@ -7,7 +7,7 @@
 
 #include "raylib/Text/Codepoint.hpp"
 
-// Text codepoints management functions (unicode characters)
+// RlText codepoints management functions (unicode characters)
 
 int *raylib::Codepoint::loadCodepoints(const std::string &text, int *count)
 {

@@ -9,7 +9,7 @@
 #define INDIESTUDIO_MESHGENERATOR_HPP
 
 #include <raylib.h>
-#include <raylib/Math.hpp>
+#include "raylib/Math.hpp"
 
 namespace raylib {
     class MeshGenerator {

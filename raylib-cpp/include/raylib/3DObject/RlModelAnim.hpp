@@ -8,8 +8,8 @@
 #ifndef INDIESTUDIO_RLMODELANIM_HPP
 #define INDIESTUDIO_RLMODELANIM_HPP
 
-#include "raylib.h"
 #include "RlModel.hpp"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

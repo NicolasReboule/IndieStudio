@@ -7,16 +7,25 @@
 
 #include "raylib/Texture/RlTexture.hpp"
 
-raylib::RlTexture::RlTexture(const std::string &fileName)
+raylib::RlTexture::RlTexture(const std::string &fileName) : _texture(), _textureRec()
 {
-    _texturePath = fileName;
+    this->_texturePath = fileName;
     this->_texture = LoadTexture(fileName.c_str());
+    this->_textureRec = {0, 0, (float) this->_texture.width, (float) this->_texture.height};
 }
 
-raylib::RlTexture::RlTexture(Image image)
+raylib::RlTexture::RlTexture(const RlImage &image) : _texture(), _textureRec()
 {
-    _texturePath = "";
-    this->_texture = LoadTextureFromImage(image);
+    this->_texturePath = "";
+    this->_texture = LoadTextureFromImage(image.getImage());
+    this->_textureRec = {0, 0, (float) this->_texture.width, (float) this->_texture.height};
+}
+
+raylib::RlTexture::RlTexture(const raylib::RlImage &image, const CubemapLayout &layout) : _texture(), _textureRec()
+{
+    this->_texturePath = "";
+    this->_texture = LoadTextureCubemap(image.getImage(), layout);
+    this->_textureRec = {0, 0, (float) this->_texture.width, (float) this->_texture.height};
 }
 
 raylib::RlTexture::~RlTexture()
@@ -24,89 +33,72 @@ raylib::RlTexture::~RlTexture()
     UnloadTexture(this->_texture);
 }
 
-raylib::RlTexture::RlTexture(const raylib::RlTexture &texture)
+void raylib::RlTexture::update(const void *pixels)
 {
-    *this = texture;
+    UpdateTexture(this->_texture, pixels);
 }
 
-// RlTexture loading functions
-
-TextureCubemap raylib::RlTexture::loadTextureCubemap(Image image, int layout)
+void raylib::RlTexture::updateRec(const Rectangle &rec, const void *pixels)
 {
-    this->_textureCubemap = LoadTextureCubemap(image, layout);
-    return this->_textureCubemap;
+    UpdateTextureRec(this->_texture, rec, pixels);
 }
 
-RenderTexture2D raylib::RlTexture::loadRenderTexture(int width, int height)
+void raylib::RlTexture::genTextureMipmaps()
 {
-    this->_renderTexture = LoadRenderTexture(width, height);
-    return this->_renderTexture;
+    GenTextureMipmaps(&this->_texture);
 }
 
-void raylib::RlTexture::unloadRenderTexture(RenderTexture2D target)
+void raylib::RlTexture::setFilter(const TextureFilter &filter)
 {
-    UnloadRenderTexture(target);
+    SetTextureFilter(this->_texture, filter);
 }
 
-void raylib::RlTexture::updateTexture(Texture2D texture, const void *pixels)
+void raylib::RlTexture::setWrap(const TextureWrap &wrap)
 {
-    UpdateTexture(texture, pixels);
+    SetTextureWrap(this->_texture, wrap);
 }
 
-void raylib::RlTexture::updateTextureRec(Texture2D texture, Rectangle rec, const void *pixels)
-{
-    this->_textureRec = rec;
-    UpdateTextureRec(texture, rec, pixels);
-}
-
-// RlTexture configuration functions
-
-void raylib::RlTexture::genTextureMipmaps(Texture2D *texture)
-{
-    GenTextureMipmaps(texture);
-}
-
-void raylib::RlTexture::setTextureFilter(Texture2D texture, int filter)
-{
-    SetTextureFilter(texture, filter);
-}
-
-void raylib::RlTexture::setTextureWrap(Texture2D texture, int wrap)
-{
-    SetTextureWrap(texture, wrap);
-}
-
-raylib::RlTexture &raylib::RlTexture::operator=(const raylib::RlTexture &texture)
-{
-    this->_texture = texture._texture;
-    this->_textureRec = texture._textureRec;
-    this->_textureCubemap = texture._textureCubemap;
-    this->_renderTexture = texture._renderTexture;
-    this->_texturePath = texture._texturePath;
-    return *this;
-}
-
-Texture2D raylib::RlTexture::getTexture() const
+Texture2D &raylib::RlTexture::get()
 {
     return this->_texture;
 }
 
-std::string raylib::RlTexture::getTexturePath() const
+const Texture2D &raylib::RlTexture::get() const
+{
+    return this->_texture;
+}
+
+const std::string &raylib::RlTexture::getPath() const
 {
     return _texturePath;
 }
 
-Rectangle raylib::RlTexture::getTextureRec() const
+const Rectangle &raylib::RlTexture::getTextureRec() const
 {
     return _textureRec;
 }
 
-TextureCubemap raylib::RlTexture::getTextureCubemap() const
+const unsigned int &raylib::RlTexture::getID() const
 {
-    return _textureCubemap;
+    return this->_texture.id;
 }
 
-RenderTexture2D raylib::RlTexture::getRenderTexture() const
+const int &raylib::RlTexture::getWidth() const
 {
-    return _renderTexture;
+    return this->_texture.width;
+}
+
+const int &raylib::RlTexture::getHeight() const
+{
+    return this->_texture.height;
+}
+
+const int &raylib::RlTexture::getMipmaps() const
+{
+    return this->_texture.mipmaps;
+}
+
+const int &raylib::RlTexture::getFormat() const
+{
+    return this->_texture.format;
 }

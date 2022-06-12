@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_NODE2D_HPP
 #define INDIESTUDIO_NODE2D_HPP
 
-#include "../Base.hpp"
+#include "GameEngine/Nodes/Base.hpp"
 
 namespace GameEngine {
 

@@ -9,7 +9,7 @@
 #define INDIESTUDIO_AUDIOMANAGER_HPP
 
 #include "raylib/Raylib.hpp"
-#include "Isound.hpp"
+#include "ISound.hpp"
 #include <vector>
 
 namespace GameEngine {
@@ -30,7 +30,7 @@ namespace GameEngine {
     private:
         static std::shared_ptr<AudioManager> _instance;
 
-        std::vector<std::unique_ptr<GameEngine::Isound>> _sounds;
+        std::vector<std::unique_ptr<GameEngine::ISound>> _sounds;
     };
 }
 

@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_RLWAVE_HPP
 #define INDIESTUDIO_RLWAVE_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

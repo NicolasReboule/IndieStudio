@@ -11,8 +11,15 @@
 #include "RaylibException.hpp"
 
 namespace raylib::ex {
+    /**
+     * @brief WindowException class
+     */
     class WindowException : public RaylibException {
     public:
+        /**
+         * @brief WindowException constructor
+         * @param msg the message of the exception
+         */
         explicit WindowException(const std::string &msg);
     };
 }

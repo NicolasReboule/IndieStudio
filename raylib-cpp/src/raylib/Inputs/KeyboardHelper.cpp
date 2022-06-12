@@ -7,8 +7,6 @@
 
 #include "raylib/Inputs/KeyboardHelper.hpp"
 
-// Input-related functions: keyboard
-
 bool raylib::KeyboardHelper::isKeyPressed(int key)
 {
     return IsKeyPressed(key);
@@ -44,3 +42,7 @@ int raylib::KeyboardHelper::getCharPressed()
     return GetCharPressed();
 }
 
+std::string raylib::KeyboardHelper::getKeyName(const int &key, const int &scancode)
+{
+    return glfwGetKeyName(key, scancode);
+}

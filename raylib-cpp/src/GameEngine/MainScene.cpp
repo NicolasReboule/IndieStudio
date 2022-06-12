@@ -13,10 +13,10 @@ GameEngine::MainScene::MainScene(std::string name, std::string sceneSource) : Sc
 
 void GameEngine::MainScene::sceneLauncher()
 {
-    /*auto body = std::make_shared<GameEngine::myStaticBody>("./assets/player.iqm", "./assets/blue.png");
+    /*std::shared_ptr<GameEngine::myStaticBody> body = std::make_shared<GameEngine::myStaticBody>("./assets/player.iqm", "./assets/blue.png");
     this->addNode(body);
 
-    auto button = std::make_shared<GameEngine::myButton>("./assets/gui/button.png");
-    this->addNode(button);
-    */
+    std::shared_ptr<GameEngine::myButton> button = std::make_shared<GameEngine::myButton>("./assets/gui/button.png");
+    this->addNode(button);*/
+
 }

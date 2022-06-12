@@ -7,8 +7,6 @@
 
 #include "raylib/Inputs/CursorHelper.hpp"
 
-// CursorHelper-related functions
-
 void raylib::CursorHelper::showCursor()
 {
     ShowCursor();

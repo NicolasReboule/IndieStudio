@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_RLAUDIOSTREAM_HPP
 #define INDIESTUDIO_RLAUDIOSTREAM_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

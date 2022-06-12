@@ -7,40 +7,37 @@
 
 #include "raylib/Image/ImageGenerator.hpp"
 
-
-// Image generation functions
-
-Image raylib::ImageGenerator::genImageColor(int width, int height, Color color)
+raylib::RlImage raylib::ImageGenerator::genImageColor(int width, int height, const RlColor &color)
 {
-    return GenImageColor(width, height, color);
+    return RlImage(GenImageColor(width, height, color.getColor()));
 }
 
-Image raylib::ImageGenerator::genImageGradientV(int width, int height, Color top, Color bottom)
+raylib::RlImage raylib::ImageGenerator::genImageGradientV(int width, int height, const RlColor &top, const RlColor &bottom)
 {
-    return GenImageGradientV(width, height, top, bottom);
+    return RlImage(GenImageGradientV(width, height, top.getColor(), bottom.getColor()));
 }
 
-Image raylib::ImageGenerator::genImageGradientH(int width, int height, Color left, Color right)
+raylib::RlImage raylib::ImageGenerator::genImageGradientH(int width, int height, const RlColor &left, const RlColor &right)
 {
-    return GenImageGradientH(width, height, left, right);
+    return RlImage(GenImageGradientH(width, height, left.getColor(), right.getColor()));
 }
 
-Image raylib::ImageGenerator::genImageGradientRadial(int width, int height, float density, Color inner, Color outer)
+raylib::RlImage raylib::ImageGenerator::genImageGradientRadial(int width, int height, float density, const RlColor &inner, const RlColor &outer)
 {
-    return GenImageGradientRadial(width, height, density, inner, outer);
+    return RlImage(GenImageGradientRadial(width, height, density, inner.getColor(), outer.getColor()));
 }
 
-Image raylib::ImageGenerator::genImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2)
+raylib::RlImage raylib::ImageGenerator::genImageChecked(int width, int height, int checksX, int checksY, const RlColor &col1, const RlColor &col2)
 {
-    return GenImageChecked(width, height, checksX, checksY, col1, col2);
+    return RlImage(GenImageChecked(width, height, checksX, checksY, col1.getColor(), col2.getColor()));
 }
 
-Image raylib::ImageGenerator::genImageWhiteNoise(int width, int height, float factor)
+raylib::RlImage raylib::ImageGenerator::genImageWhiteNoise(int width, int height, float factor)
 {
-    return GenImageWhiteNoise(width, height, factor);
+    return RlImage(GenImageWhiteNoise(width, height, factor));
 }
 
-Image raylib::ImageGenerator::genImageCellular(int width, int height, int tileSize)
+raylib::RlImage raylib::ImageGenerator::genImageCellular(int width, int height, int tileSize)
 {
-    return GenImageCellular(width, height, tileSize);
+    return RlImage(GenImageCellular(width, height, tileSize));
 }

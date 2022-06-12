@@ -6,21 +6,23 @@
 */
 
 #include "GameEngine/Nodes/2D/Button.hpp"
-
-#include <utility>
 #include "raylib/Math/VectorHelper.hpp"
 
-GameEngine::Button::Button(std::string name, const std::string& filename)
-    : Node2D(std::move(name)), _texture(filename), _position((Vector2f){0, 0}), _scale((Vector2f){1, 1})
+GameEngine::Button::Button(const std::string& filename)
+    : _texture(filename), _position({0, 0}), _scale({1, 1}), _bounds(), _rectangle()
 {
     this->_rotationDegrees = 0;
 
     this->_action = false;
     this->_state = 0;
     this->_frameNum = 3;
-    this->_frameHeight = (float)this->_texture.getTexture().height / (float)this->_frameNum;
-    this->_rectangle = (Rectangle){0, 0, (float)this->_texture.getTexture().width, (float)this->_frameHeight};
-    this->_bounds = (Rectangle){this->_position.x, this->_position.y, (float)this->_texture.getTexture().width, this->_frameHeight};
+    this->_frameHeight = (float) this->_texture.get().height / (float)this->_frameNum;
+    this->_rectangle = {0, 0, (float) this->_texture.get().width, (float)this->_frameHeight};
+    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.get().width, this->_frameHeight};
+}
+
+void GameEngine::Button::ready()
+{
 }
 
 void GameEngine::Button::update()
@@ -31,7 +33,7 @@ void GameEngine::Button::update()
         return;
     }
     if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::MouseHelper::getMousePosition(), this->_bounds)) {
-        if (raylib::MouseHelper::isMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+        if (raylib::MouseHelper::isMouseButtonDown(MOUSE_BUTTON_LEFT)) {
             this->_state = 2;
             this->_action = true;
         } else
@@ -49,7 +51,7 @@ void GameEngine::Button::update()
 
 void GameEngine::Button::draw()
 {
-    raylib::TextureHelper::drawTextureRec(this->_texture.getTexture(), this->_rectangle, this->_position, WHITE);
+    raylib::DrawTextureHelper::drawTextureRec(this->_texture, this->_rectangle, this->_position, RlColor::White);
 }
 
 Vector2f GameEngine::Button::getPosition()
@@ -81,4 +83,3 @@ void GameEngine::Button::setRotationDegrees(float rotationDegrees)
 {
     this->_rotationDegrees = rotationDegrees;
 }
-

@@ -8,42 +8,129 @@
 #ifndef INDIESTUDIO_RLTEXTURE_HPP
 #define INDIESTUDIO_RLTEXTURE_HPP
 
-#include "raylib.h"
+#include "raylib/Image/RlImage.hpp"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {
+    /**
+     * @brief RlTexture class
+     * NOTE: These functions require GPU access
+     */
     class RlTexture {
     public:
-        // RlTexture loading functions
-        // NOTE: These functions require GPU access
+        /**
+         * @brief Create a RlTexture from file
+         * @param fileName the file name of the texture
+         */
         explicit RlTexture(const std::string &fileName);
-        explicit RlTexture(Image image);
-        RlTexture(const RlTexture &texture);
+
+        /**
+         * @brief Create a RlTexture from image
+         * @param image the image of the texture
+         */
+        explicit RlTexture(const RlImage &image);
+
+        /**
+         * @brief Craete a RlTexture, cubemap from image, multiple image cubemap layouts supported
+         * @param image the image
+         * @param layout the layout
+         */
+        explicit RlTexture(const RlImage &image, const CubemapLayout &layout);
+
+        /**
+         * @brief RlTexture destructor
+         */
         ~RlTexture();
-        TextureCubemap loadTextureCubemap(Image image, int layout);                                        // Load cubemap from image, multiple image cubemap layouts supported
-        RenderTexture2D loadRenderTexture(int width, int height);                                          // Load texture for rendering (framebuffer)
-        void unloadRenderTexture(RenderTexture2D target);                                                  // Unload render texture from GPU memory (VRAM)
-        void updateTexture(Texture2D texture, const void *pixels);                                         // Update GPU texture with new data
-        void updateTextureRec(Texture2D texture, Rectangle rec, const void *pixels);                       // Update GPU texture rectangle with new data
 
-        // RlTexture configuration functions
-        void genTextureMipmaps(Texture2D *texture);                                                        // Generate GPU mipmaps for a texture
-        void setTextureFilter(Texture2D texture, int filter);                                              // Set texture scaling filter mode
-        void setTextureWrap(Texture2D texture, int wrap);                                                   // Set texture wrapping mode
+        /**
+         * @brief Update GPU texture with new data
+         * @param pixels the pixels
+         */
+        void update(const void *pixels);
 
-        Texture2D getTexture() const;
-        std::string getTexturePath() const;
-        Rectangle getTextureRec() const;
-        TextureCubemap getTextureCubemap() const;
-        RenderTexture2D getRenderTexture() const;
+        /**
+         * @brief Update GPU texture rectangle with new data
+         * @param rec the rectangle
+         * @param pixels the pixels
+         */
+        void updateRec(const Rectangle &rec, const void *pixels);
 
-        RlTexture &operator=(const RlTexture &texture);
+        /**
+         * @brief Generate mipmaps for GPU texture
+         */
+        void genTextureMipmaps();
+
+        /**
+         * @brief Set GPU texture filter mode
+         * @param filter the filter mode
+         */
+        void setFilter(const TextureFilter &filter);
+
+        /**
+         * @brief Set texture wrapping mode
+         * @param wrap the wrapping mode
+         */
+        void setWrap(const TextureWrap &wrap);
+
+        /**
+         * @brief Get the texture
+         * @return the mutable raylib texture
+         */
+        Texture2D &get();
+
+        /**
+         * @brief Get the texture
+         * @return the immutable raylib texture
+         */
+        const Texture2D &get() const;
+
+        /**
+         * @brief Get the texture path
+         * @return the texture path
+         */
+        const std::string &getPath() const;
+
+        /**
+         * @brief Get the texture rectangle
+         * @return the texture rectangle
+         */
+        const Rectangle &getTextureRec() const;
+
+        /**
+         * @brief Get OpenGL texture ID
+         * @return the OpenGL texture ID
+         */
+        const unsigned int &getID() const;
+
+        /**
+         * @brief Get texture width
+         * @return the texture width
+         */
+        const int &getWidth() const;
+
+        /**
+         * @brief Get texture height
+         * @return the texture height
+         */
+        const int &getHeight() const;
+
+        /**
+         * @brief Get Mipmap levels, 1 by default
+         * @return the Mipmap levels
+         */
+        const int &getMipmaps() const;
+
+        /**
+         * @brief Get texture format
+         * @return Data format (PixelFormat type)
+         */
+        const int &getFormat() const;
+
     private:
-        Texture2D _texture;
-        std::string _texturePath;
-        Rectangle _textureRec;
-        TextureCubemap _textureCubemap;
-        RenderTexture2D _renderTexture;
+        Texture2D _texture; /**< The raylib texture */
+        std::string _texturePath; /**< The filepath to the texture */
+        Rectangle _textureRec; /**< The texture rect */
     };
 }
 

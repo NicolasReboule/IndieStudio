@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_RLMATERIAL_HPP
 #define INDIESTUDIO_RLMATERIAL_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

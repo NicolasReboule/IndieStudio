@@ -1,27 +1,55 @@
 /*
 ** EPITECH PROJECT, 2022
-** IndieStudio
-** FileHelper description:
-** CursorHelper
+** CursorHelper.hpp
+** File description:
+** CursorHelper.hpp
 */
 
-#ifndef CURSOR_HPP_
-#define CURSOR_HPP_
+#ifndef INDIESTUDIO_CURSORHELPER_HPP
+#define INDIESTUDIO_CURSORHELPER_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 
 namespace raylib {
+    /**
+     * @brief Input-related functions: cursor
+     */
     class CursorHelper {
-        public:
-            // CursorHelper-related functions
-            static void showCursor();                                                  // Shows cursor
-            static void hideCursor();                                                  // Hides cursor
-            static bool isCursorHidden();                                              // Check if cursor is not visible
-            static void enableCursor();                                                // Enables cursor (unlock cursor)
-            static void disableCursor();                                               // Disables cursor (lock cursor)
-            static bool isCursorOnScreen();                                            // Check if cursor is on the screen
-        private:
+    public:
+
+        /**
+         * @brief Shows cursor.
+         */
+        static void showCursor();
+
+        /**
+         * @brief Hides cursor
+         */
+        static void hideCursor();
+
+        /**
+         * @brief Check if cursor is not visible
+         * @return true if cursor is not visible
+         */
+        static bool isCursorHidden();
+
+        /**
+         * @brief Enables cursor (unlock cursor)
+         */
+        static void enableCursor();
+
+        /**
+         * @brief Disables cursor (lock cursor)
+         */
+        static void disableCursor();
+
+        /**
+         * @brief Check if cursor is on the screen
+         * @return true if cursor is on the screen
+         */
+        static bool isCursorOnScreen();
+
     };
 }
 
-#endif /* !CURSOR_HPP_ */
+#endif //INDIESTUDIO_CURSORHELPER_HPP

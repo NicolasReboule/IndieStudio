@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_RLMESH_HPP
 #define INDIESTUDIO_RLMESH_HPP
 
-#include "raylib.h"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {

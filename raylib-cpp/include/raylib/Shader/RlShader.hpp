@@ -1,36 +1,95 @@
 /*
 ** EPITECH PROJECT, 2022
-** IndieStudio
-** FileHelper description:
-** Shader
+** RlShader.hpp
+** File description:
+** RlShader.hpp
 */
 
-#ifndef SHADER_HPP_
-#define SHADER_HPP_
+#ifndef INDIESTUDIO_RLSHADER_HPP
+#define INDIESTUDIO_RLSHADER_HPP
 
-#include "raylib.h"
+#include "raylib/Texture/RlTexture.hpp"
+#include <raylib.h>
 #include <string>
 
 namespace raylib {
-
+    /**
+     * @brief Shader management functions
+     * NOTE: Shader functionality is not available on OpenGL 1.1
+     */
     class RlShader {
-        public:
-            // Shader management functions
-            // NOTE: Shader functionality is not available on OpenGL 1.1
-            RlShader();
-            ~RlShader();
-            void load(const std::string &vsFileName, const std::string &fsFileName);      // Load shader from files and bind default locations
-            void loadFromMemory(const std::string &vsCode, const std::string &fsCode);    // Load shader from code strings and bind default locations
-            int getLocation(const std::string &uniformName);          // Get shader uniform location
-            int getLocationAttrib(const std::string &attribName);     // Get shader attribute location
-            void setValue(int locIndex, const void *value, int uniformType);               // Set shader uniform value
-            void setValueV(int locIndex, const void *value, int uniformType, int count);   // Set shader uniform value vector
-            void setValueMatrix(int locIndex, Matrix mat);         // Set shader uniform value (matrix 4x4)
-            const Shader &getShader() const;
-            void setValueTexture(int locIndex, Texture2D texture); // Set shader uniform value for texture (sampler2d)
-        private:
-            Shader _shader;
+    public:
+        RlShader();
+        ~RlShader();
+
+        /**
+         * @brief Load shader from files and bind default locations
+         * @param vsFileName to load
+         * @param fsFileName to load
+         */
+        void load(const std::string &vsFileName, const std::string &fsFileName);
+
+        /**
+         * @brief Load shader from code strings and bind default locations
+         * @param vsCode to load
+         * @param fsCode to load
+         */
+        void loadFromMemory(const std::string &vsCode, const std::string &fsCode);
+
+        /**
+         * @brief Get shader uniform location
+         * @param uniformName to get
+         * @return the location of the uniform
+         */
+        int getLocation(const std::string &uniformName);
+
+        /**
+         * @brief Get shader attribute location
+         * @param attribName to get
+         * @return the location of the attribute
+         */
+        int getLocationAttrib(const std::string &attribName);
+
+        /**
+         * @brief Set shader uniform value
+         * @param locIndex to set
+         * @param value to set
+         * @param uniformType to set
+         */
+        void setValue(int locIndex, const void *value, int uniformType);
+
+        /**
+         * @brief Set shader uniform value vector
+         * @param locIndex to set
+         * @param value to set
+         * @param uniformType to set
+         * @param count to set
+         */
+        void setValueV(int locIndex, const void *value, int uniformType, int count);
+
+        /**
+         * @brief Set shader uniform value (matrix 4x4)
+         * @param locIndex to set
+         * @param mat to set
+         */
+        void setValueMatrix(int locIndex, const Matrix &mat);
+
+        /**
+         * @brief Set shader uniform value for texture (sampler2d)
+         * @param locIndex to set
+         * @param texture to set
+         */
+        void setValueTexture(int locIndex, const RlTexture &texture);
+
+        /**
+         * @brief Get the raylib Shader's
+         * @return the raylib Shader
+         */
+        const Shader &getShader() const;
+
+    private:
+        Shader _shader; /**< The raylib shader's */
     };
 }
 
-#endif /* !SHADER_HPP_ */
+#endif //INDIESTUDIO_RLSHADER_HPP

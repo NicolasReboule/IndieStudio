@@ -35,14 +35,14 @@ RayCollision raylib::Collision3dHelper::getRayCollisionBox(Ray ray, BoundingBox 
     return GetRayCollisionBox(ray, box);
 }
 
-RayCollision raylib::Collision3dHelper::getRayCollisionModel(Ray ray, Model model)
+RayCollision raylib::Collision3dHelper::getRayCollisionModel(Ray ray, RlModel model)
 {
-    return GetRayCollisionModel(ray, model);
+    return GetRayCollisionModel(ray, model.getModel());
 }
 
-RayCollision raylib::Collision3dHelper::getRayCollisionMesh(Ray ray, Mesh mesh, Matrix transform)
+RayCollision raylib::Collision3dHelper::getRayCollisionMesh(Ray ray, RlMesh mesh, Matrix transform)
 {
-    return GetRayCollisionMesh(ray, mesh, transform);
+    return GetRayCollisionMesh(ray, mesh.getMesh(), transform);
 }
 
 RayCollision raylib::Collision3dHelper::getRayCollisionTriangle(Ray ray, Vector3f p1, Vector3f p2, Vector3f p3)

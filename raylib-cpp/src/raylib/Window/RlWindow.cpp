@@ -9,6 +9,10 @@
 
 std::shared_ptr<raylib::RlWindow> raylib::RlWindow::_instance;
 
+raylib::RlWindow::RlWindow() : _width(), _height(), _minWidth(), _minHeight()
+{
+}
+
 void raylib::RlWindow::createWindow(const std::string &title, int width, int height, int fps)
 {
     if (_isCreated)
@@ -79,7 +83,7 @@ bool raylib::RlWindow::isWindowResized()
     return IsWindowResized();
 }
 
-bool raylib::RlWindow::hasWindowState(unsigned int flag)
+bool raylib::RlWindow::hasWindowState(const ConfigFlags &flag)
 {
     return IsWindowState(flag);
 }
@@ -87,6 +91,11 @@ bool raylib::RlWindow::hasWindowState(unsigned int flag)
 void raylib::RlWindow::setWindowState(unsigned int flags)
 {
     SetWindowState(flags);
+}
+
+void raylib::RlWindow::setConfigFlags(unsigned int flags)
+{
+    SetConfigFlags(flags);
 }
 
 void raylib::RlWindow::clearWindowState(unsigned int flags)
@@ -114,9 +123,9 @@ void raylib::RlWindow::restoreWindow()
     RestoreWindow();
 }
 
-void raylib::RlWindow::setWindowIcon(Image image)
+void raylib::RlWindow::setWindowIcon(const RlImage &image)
 {
-    SetWindowIcon(image);
+    SetWindowIcon(image.getImage());
 }
 
 void raylib::RlWindow::setWindowTitle(const std::string &title)
@@ -147,4 +156,9 @@ void raylib::RlWindow::setWindowSize(int width, int height)
     this->_height = height;
     this->_width = width;
     SetWindowSize(width, height);
+}
+
+void raylib::RlWindow::takeScreenshot(const std::string &fileName)
+{
+    TakeScreenshot(fileName.c_str());
 }

@@ -8,25 +8,91 @@
 #ifndef INDIESTUDIO_COLORHELPER_HPP
 #define INDIESTUDIO_COLORHELPER_HPP
 
-#include "raylib.h"
+#include "raylib/Color/RlColor.hpp"
+#include "raylib/Math.hpp"
+#include <raylib.h>
 
 namespace raylib {
+    /**
+     * @brief Helper class for Color
+     */
     class ColorHelper {
     public:
-        // Color/pixel related functions
-        static Color fade(Color color, float alpha);                                                              // Returns color with alpha applied, alpha goes from 0.0f to 1.0f
-        static int colorToInt(Color color);                                                                       // Returns hexadecimal value for a Color
-        static Vector4 colorNormalize(Color color);                                                               // Returns Color normalized as float [0..1]
-        static Color colorFromNormalized(Vector4 normalized);                                                     // Returns Color from normalized values [0..1]
-        static Vector3 colorToHSV(Color color);                                                                   // Returns HSV values for a Color, hue [0..360], saturation/value [0..1]
-        static Color colorFromHSV(float hue, float saturation, float value);                                      // Returns a Color from HSV values, hue [0..360], saturation/value [0..1]
-        static Color colorAlpha(Color color, float alpha);                                                        // Returns color with alpha applied, alpha goes from 0.0f to 1.0f
-        static Color colorAlphaBlend(Color dst, Color src, Color tint);                                           // Returns src alpha-blended into dst color with tint
-        static Color getColor(unsigned int hexValue);                                                             // Get Color structure from hexadecimal value
-        static Color getPixelColor(void *srcPtr, int format);                                                     // Get Color from a source pixel pointer of certain format
-        static void setPixelColor(void *dstPtr, Color color, int format);                                         // Set color formatted into destination pixel pointer
-        static int getPixelDataSize(int width, int height, int format);                                           // Get pixel data size in bytes for certain format
-    private:
+        /**
+         * @brief Returns RlColor from normalized values [0..1]
+         * @param normalizedColor to convert
+         * @return the RlColor from normalized values
+         * @see RlColor(Vector4f)
+         */
+        static RlColor colorFromNormalized(const Vector4f &normalizedColor);
+
+        /**
+         * @brief Returns HSV values for a Color, hue [0..360], saturation/value [0..1]
+         * @param color to convert
+         * @return the HSV values for a Color
+         */
+        static Vector3f colorToHSV(const RlColor &color);
+
+        /**
+         * @brief Returns a RlColor from HSV values, hue [0..360], saturation/value [0..1]
+         * @param hue to convert
+         * @param saturation to convert
+         * @param value to convert
+         * @return the RlColor from HSV values
+         */
+        static RlColor colorFromHSV(float hue, float saturation, float value);
+
+        /**
+         * @brief Returns color with alpha applied, alpha goes from 0.0f to 1.0f
+         * @param color to apply alpha to
+         * @param alpha to apply
+         * @return the color with alpha applied
+         */
+        static RlColor colorAlpha(const RlColor &color, float alpha);
+
+        /**
+         * @brief Returns src alpha-blended into dst color with tint
+         * @param dst to blend into
+         * @param src to blend
+         * @param tint to blend with
+         * @return the src alpha-blended into dst color with tint
+         */
+        static RlColor colorAlphaBlend(const RlColor &dst, const RlColor &src, const RlColor &tint);
+
+        /**
+         * @brief Get RlColor structure from hexadecimal value
+         * @param hexValue to convert
+         * @return the RlColor structure from hexadecimal value
+         * @see RlColor(std::uint32_t)
+         */
+        static RlColor getColor(unsigned int hexValue);
+
+        /**
+         * @brief Get RlColor from a source pixel pointer of certain format
+         * @param srcPtr to convert
+         * @param format to convert
+         * @return the RlColor from a source pixel pointer of certain format
+         * @deprecated don't use this
+         */
+        static RlColor getPixelColor(void *srcPtr, int format);
+
+        /**
+         * @brief Set color formatted into destination pixel pointer
+         * @param dstPtr to set
+         * @param color to set
+         * @param format to set
+         * @deprecated don't use this
+         */
+        static void setPixelColor(void *dstPtr, const RlColor &color, int format);
+
+        /**
+         * @brief Get pixel data size in bytes for certain format
+         * @param width to get
+         * @param height to get
+         * @param format to get
+         * @return the pixel data size in bytes for certain format
+         */
+        static int getPixelDataSize(int width, int height, int format);
     };
 }
 
