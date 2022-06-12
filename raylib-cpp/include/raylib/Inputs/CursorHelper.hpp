@@ -12,7 +12,7 @@
 
 namespace raylib {
     /**
-     * @brief Helper class for cursor related functions
+     * @brief Input-related functions: cursor
      */
     class CursorHelper {
     public:

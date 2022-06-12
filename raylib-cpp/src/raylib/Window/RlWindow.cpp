@@ -9,6 +9,10 @@
 
 std::shared_ptr<raylib::RlWindow> raylib::RlWindow::_instance;
 
+raylib::RlWindow::RlWindow() : _width(), _height(), _minWidth(), _minHeight()
+{
+}
+
 void raylib::RlWindow::createWindow(const std::string &title, int width, int height, int fps)
 {
     if (_isCreated)
@@ -154,7 +158,7 @@ void raylib::RlWindow::setWindowSize(int width, int height)
     SetWindowSize(width, height);
 }
 
-void raylib::RlWindow::setTakeScreenShot(const std::string &fileName)
+void raylib::RlWindow::takeScreenshot(const std::string &fileName)
 {
     TakeScreenshot(fileName.c_str());
 }

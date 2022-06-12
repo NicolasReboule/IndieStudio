@@ -13,6 +13,9 @@
 #include <string>
 
 namespace raylib {
+    /**
+     * @brief The System class
+     */
     class System {
     public:
         /**
@@ -47,59 +50,59 @@ namespace raylib {
 
         /**
          * @brief Get specified monitor position
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor position
          */
-        static Vector2f getMonitorPosition(int monitor);
+        static Vector2f getMonitorPosition(int monitorIndex);
 
         /**
          * @brief Get specified monitor width (max available by monitor)
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor width
          */
-        static int getMonitorWidth(int monitor);
+        static int getMonitorWidth(int monitorIndex);
 
         /**
          * @brief Get specified monitor height (max available by monitor)
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor height
          */
-        static int getMonitorHeight(int monitor);
+        static int getMonitorHeight(int monitorIndex);
 
         /**
          * @brief Get specified monitor size
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor size
          */
-        static Vector2i getMonitorSize(int monitor);
+        static Vector2i getMonitorSize(int monitorIndex);
 
         /**
          * @brief Get specified monitor physical width in millimetres
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor physical width
          */
-        static int getMonitorPhysicalWidth(int monitor);
+        static int getMonitorPhysicalWidth(int monitorIndex);
 
         /**
          * @brief Get specified monitor physical height in millimetres
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor physical height
          */
-        static int getMonitorPhysicalHeight(int monitor);
+        static int getMonitorPhysicalHeight(int monitorIndex);
 
         /**
          * @brief Get specified monitor physical size
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor physical size
          */
-        static Vector2i getMonitorPhysicalSize(int monitor);
+        static Vector2i getMonitorPhysicalSize(int monitorIndex);
 
         /**
          * @brief Get specified monitor refresh rate
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor refresh rate
          */
-        static int getMonitorRefreshRate(int monitor);
+        static int getMonitorRefreshRate(int monitorIndex);
 
         /**
          * @brief Get window position XY on monitor
@@ -115,10 +118,10 @@ namespace raylib {
 
         /**
          * @brief Get the human-readable, UTF-8 encoded name of the primary monitor
-         * @param monitor the monitor index
+         * @param monitorIndex the monitor index
          * @return the monitor name
          */
-        static std::string getMonitorName(int monitor);
+        static std::string getMonitorName(int monitorIndex);
 
         /**
          * @brief Set clipboard text content

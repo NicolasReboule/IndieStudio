@@ -15,8 +15,14 @@
 #include "raylib/Image/ImageGenerator.hpp"
 
 namespace raylib {
+    /**
+     * @brief RlImageBuilder class
+     */
     class RlImageBuilder : public IBuilder<RlImage> {
-    public:
+    private:
+        /**
+         * @brief Enum for parameters
+         */
         enum ParameterName {
             Width = 1,
             Height = 2,
@@ -35,6 +41,11 @@ namespace raylib {
             Top = 16384,
             Bottom = 32768
         };
+
+    public:
+        /**
+         * @brief Type of image
+         */
         enum ImageType {
             ImageColor = Width | Height | Color,
             ImageGradientV = Width | Height | Top | Bottom,
@@ -47,18 +58,18 @@ namespace raylib {
 
         RlImageBuilder();
 
-        RlImageBuilder &setType(long type);
+        RlImageBuilder &setType(const ImageType &type);
         RlImageBuilder &setWidth(int width);
         RlImageBuilder &setHeight(int height);
-        RlImageBuilder &setColor(RlColor color);
-        RlImageBuilder &setTop(RlColor top);
-        RlImageBuilder &setBottom(RlColor bottom);
-        RlImageBuilder &setLeft(RlColor left);
-        RlImageBuilder &setRight(RlColor right);
-        RlImageBuilder &setInner(RlColor inner);
-        RlImageBuilder &setOuter(RlColor outer);
-        RlImageBuilder &setCol1(RlColor col1);
-        RlImageBuilder &setCol2(RlColor col2);
+        RlImageBuilder &setColor(const RlColor &color);
+        RlImageBuilder &setTop(const RlColor &top);
+        RlImageBuilder &setBottom(const RlColor &bottom);
+        RlImageBuilder &setLeft(const RlColor &left);
+        RlImageBuilder &setRight(const RlColor &right);
+        RlImageBuilder &setInner(const RlColor &inner);
+        RlImageBuilder &setOuter(const RlColor &outer);
+        RlImageBuilder &setCol1(const RlColor &col1);
+        RlImageBuilder &setCol2(const RlColor &col2);
         RlImageBuilder &setFactor(float factor);
         RlImageBuilder &setDensity(float density);
         RlImageBuilder &setTitleSize(int titleSize);
@@ -66,6 +77,7 @@ namespace raylib {
         RlImageBuilder &setChecksY(int checksY);
 
         RlImage build() override;
+
     private:
         long _flags;
         long _type;

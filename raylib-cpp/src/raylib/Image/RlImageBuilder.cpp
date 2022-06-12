@@ -22,7 +22,7 @@ raylib::RlImageBuilder::RlImageBuilder()
     _checksY = 0;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setType(long type)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setType(const ImageType &type)
 {
     _type = type;
     return *this;
@@ -42,63 +42,63 @@ raylib::RlImageBuilder &raylib::RlImageBuilder::setHeight(int height)
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setColor(raylib::RlColor color)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setColor(const raylib::RlColor &color)
 {
     _color = color;
     _flags |= Color;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setTop(raylib::RlColor top)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setTop(const raylib::RlColor &top)
 {
     _top = top;
     _flags |= Top;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setBottom(raylib::RlColor bottom)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setBottom(const raylib::RlColor &bottom)
 {
     _bottom = bottom;
     _flags |= Bottom;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setLeft(raylib::RlColor left)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setLeft(const raylib::RlColor &left)
 {
     _left = left;
     _flags |= Left;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setRight(raylib::RlColor right)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setRight(const raylib::RlColor &right)
 {
     _right = right;
     _flags |= Right;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setInner(raylib::RlColor inner)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setInner(const raylib::RlColor &inner)
 {
     _inner = inner;
     _flags |= Inner;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setOuter(raylib::RlColor outer)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setOuter(const raylib::RlColor &outer)
 {
     _outer = outer;
     _flags |= Outer;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setCol1(raylib::RlColor col1)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setCol1(const raylib::RlColor &col1)
 {
     _col1 = col1;
     _flags |= Col1;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setCol2(raylib::RlColor col2)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setCol2(const raylib::RlColor &col2)
 {
     _col2 = col2;
     _flags |= Col2;

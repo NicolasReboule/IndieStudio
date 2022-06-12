@@ -8,17 +8,23 @@
 #ifndef INDIESTUDIO_RLMESHBUILDER_HPP
 #define INDIESTUDIO_RLMESHBUILDER_HPP
 
-#include <string>
-#include <raylib.h>
 #include "MeshGenerator.hpp"
 #include "raylib/IBuilder.hpp"
 #include "raylib/exception/BuilderException.hpp"
+#include "raylib/Image/RlImage.hpp"
 #include "RlMesh.hpp"
+#include <string>
+#include <raylib.h>
 
 namespace raylib {
-
+    /**
+     * @brief RlMeshBuilder class
+     */
     class RlMeshBuilder : public IBuilder<RlMesh> {
-    public:
+    private:
+        /**
+         * @brief Enum for parameters
+         */
         enum ParameterName {
             Sides = 1,
             Radius = 2,
@@ -39,6 +45,10 @@ namespace raylib {
             HemisphereRings = 65536,
             KnotRadSeg = 131072
         };
+    public:
+        /**
+         * @brief Type of mesh
+         */
         enum MeshType {
             MeshPoly = Sides | Radius,
             MeshPlane = Width | Length | ResX | ResZ,
@@ -70,9 +80,9 @@ namespace raylib {
         RlMeshBuilder &setRadSeg(int radSeg);
         RlMeshBuilder &setKnotRadSeg(int radSeg);
         RlMeshBuilder &setSides(int sides);
-        RlMeshBuilder &setHeightmap(Image heightmap);
+        RlMeshBuilder &setHeightmap(const RlImage &heightmap);
         RlMeshBuilder &setVec3fSize(Vector3f size);
-        RlMeshBuilder &setCubicmap(Image cubicmap);
+        RlMeshBuilder &setCubicmap(const RlImage &cubicmap);
         RlMeshBuilder &setCubeSize(Vector3f cubeSize);
 
         RlMesh build() override;
@@ -90,9 +100,9 @@ namespace raylib {
         int _sides;
         float _size;
         long _type;
-        Image _heightmap;
+        RlImage _heightmap;
         Vector3f _vec3fSize;
-        Image _cubicmap;
+        RlImage _cubicmap;
         Vector3f _cubeSize;
     };
 }

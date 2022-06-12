@@ -109,7 +109,7 @@ raylib::RlMeshBuilder &raylib::RlMeshBuilder::setSides(int sides)
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setHeightmap(Image heightmap)
+raylib::RlMeshBuilder &raylib::RlMeshBuilder::setHeightmap(const RlImage &heightmap)
 {
     _heightmap = heightmap;
     _flags |= RlMeshBuilder::Heightmap;
@@ -123,7 +123,7 @@ raylib::RlMeshBuilder &raylib::RlMeshBuilder::setVec3fSize(Vector3f size)
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setCubicmap(Image cubicmap)
+raylib::RlMeshBuilder &raylib::RlMeshBuilder::setCubicmap(const RlImage &cubicmap)
 {
     _cubicmap = cubicmap;
     _flags |= RlMeshBuilder::Cubicmap;
@@ -182,13 +182,13 @@ raylib::RlMesh raylib::RlMeshBuilder::build()
             mesh = raylib::MeshGenerator::genMeshTorus(_radius, _size, _radSeg, _sides);
             break;
         case RlMeshBuilder::MeshHeightmap :
-            mesh = raylib::MeshGenerator::genMeshHeightmap(_heightmap, _vec3fSize);
+            mesh = raylib::MeshGenerator::genMeshHeightmap(_heightmap.getImage(), _vec3fSize);
             break;
         case RlMeshBuilder::MeshPoly :
             mesh = raylib::MeshGenerator::genMeshPoly(_sides, _radius);
             break;
         case RlMeshBuilder::MeshCubicmap :
-            mesh = raylib::MeshGenerator::genMeshCubicmap(_cubicmap, _cubeSize);
+            mesh = raylib::MeshGenerator::genMeshCubicmap(_cubicmap.getImage(), _cubeSize);
             break;
         default:
             throw (raylib::ex::BuilderException("Unknown Mesh pattern"));

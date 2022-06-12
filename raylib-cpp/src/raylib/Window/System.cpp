@@ -32,44 +32,44 @@ int raylib::System::getCurrentMonitor()
     return GetCurrentMonitor();
 }
 
-Vector2f raylib::System::getMonitorPosition(int monitor)
+Vector2f raylib::System::getMonitorPosition(int monitorIndex)
 {
-    return raylib::VectorHelper::toVectorf(GetMonitorPosition(monitor));
+    return raylib::VectorHelper::toVectorf(GetMonitorPosition(monitorIndex));
 }
 
-int raylib::System::getMonitorWidth(int monitor)
+int raylib::System::getMonitorWidth(int monitorIndex)
 {
-    return GetMonitorWidth(monitor);
+    return GetMonitorWidth(monitorIndex);
 }
 
-int raylib::System::getMonitorHeight(int monitor)
+int raylib::System::getMonitorHeight(int monitorIndex)
 {
-    return GetMonitorHeight(monitor);
+    return GetMonitorHeight(monitorIndex);
 }
 
-Vector2i raylib::System::getMonitorSize(int monitor)
+Vector2i raylib::System::getMonitorSize(int monitorIndex)
 {
-    return {getMonitorWidth(monitor), getMonitorHeight(monitor)};
+    return {getMonitorWidth(monitorIndex), getMonitorHeight(monitorIndex)};
 }
 
-int raylib::System::getMonitorPhysicalWidth(int monitor)
+int raylib::System::getMonitorPhysicalWidth(int monitorIndex)
 {
-    return GetMonitorPhysicalWidth(monitor);
+    return GetMonitorPhysicalWidth(monitorIndex);
 }
 
-int raylib::System::getMonitorPhysicalHeight(int monitor)
+int raylib::System::getMonitorPhysicalHeight(int monitorIndex)
 {
-    return GetMonitorPhysicalHeight(monitor);
+    return GetMonitorPhysicalHeight(monitorIndex);
 }
 
-Vector2i raylib::System::getMonitorPhysicalSize(int monitor)
+Vector2i raylib::System::getMonitorPhysicalSize(int monitorIndex)
 {
-    return {getMonitorPhysicalWidth(monitor), getMonitorPhysicalHeight(monitor)};
+    return {getMonitorPhysicalWidth(monitorIndex), getMonitorPhysicalHeight(monitorIndex)};
 }
 
-int raylib::System::getMonitorRefreshRate(int monitor)
+int raylib::System::getMonitorRefreshRate(int monitorIndex)
 {
-    return GetMonitorRefreshRate(monitor);
+    return GetMonitorRefreshRate(monitorIndex);
 }
 
 Vector2f raylib::System::getWindowPosition()
@@ -82,9 +82,9 @@ Vector2f raylib::System::getWindowScaleDPI()
     return raylib::VectorHelper::toVectorf(GetWindowScaleDPI());
 }
 
-std::string raylib::System::getMonitorName(int monitor)
+std::string raylib::System::getMonitorName(int monitorIndex)
 {
-    return GetMonitorName(monitor);
+    return GetMonitorName(monitorIndex);
 }
 
 void raylib::System::setClipboardText(const std::string &text)

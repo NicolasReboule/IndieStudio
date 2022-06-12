@@ -17,6 +17,9 @@
 #include <raylib.h>
 
 namespace raylib {
+    /**
+     * @brief Window class
+     */
     class RlWindow {
     public:
 
@@ -24,7 +27,7 @@ namespace raylib {
          * @deprecated Don't use this use RlWindow#getInstance
          * @see RlWindow#getInstanve RlWindow#createWindow
          */
-        RlWindow() = default;
+        RlWindow();
 
         /**
          * @brief Destroy the RlWindow
@@ -176,7 +179,7 @@ namespace raylib {
          * @brief Take a screenshot of the current window
          * @param fileName the file name to save the screenshot
          */
-        void setTakeScreenShot(const std::string &fileName);
+        void takeScreenshot(const std::string &fileName);
 
         inline const std::string &getTitle() const { return _title; };
         inline const int &getHeight() const { return _height; };
