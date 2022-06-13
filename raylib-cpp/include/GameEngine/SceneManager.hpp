@@ -25,7 +25,7 @@ namespace GameEngine {
 
         void deleteScene(const std::string &scene);
 
-        void makeLoop(raylib::RlCamera camera);
+        void makeLoop(raylib::RlCamera &camera);
 
         std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
 
@@ -33,7 +33,7 @@ namespace GameEngine {
 
         void update();
 
-        void drawAll(raylib::RlCamera camera);
+        void drawAll(raylib::RlCamera &camera);
         void draw();
         void draw2D();
 

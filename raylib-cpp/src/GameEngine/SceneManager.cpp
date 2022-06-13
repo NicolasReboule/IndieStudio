@@ -85,13 +85,14 @@ void GameEngine::SceneManager::update()
         }
 }
 
-void GameEngine::SceneManager::drawAll(raylib::RlCamera camera)
+void GameEngine::SceneManager::drawAll(raylib::RlCamera &camera)
 {
     auto window = raylib::RlWindow::getInstance();
 
     raylib::DrawHelper::beginDrawing();
     raylib::DrawHelper::clearBackground(RlColor::Gray);
 
+    camera.update();
     raylib::DrawHelper::beginMode3D(camera);
 
     raylib::Shape3DHelper::drawGrid(10, 1.0f);
@@ -126,7 +127,7 @@ void GameEngine::SceneManager::draw2D()
             scene->draw2D();
 }
 
-void GameEngine::SceneManager::makeLoop(raylib::RlCamera camera)
+void GameEngine::SceneManager::makeLoop(raylib::RlCamera &camera)
 {
     this->update();
     this->drawAll(camera);
