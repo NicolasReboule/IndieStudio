@@ -42,7 +42,7 @@ namespace raylib {
         * @param spacing the spacing between characters
         * @return the width of the text
         */
-        static Vector2f measureText(const RlFont &font, const std::string &text, float fontSize, float spacing);
+        static Vector2f measureText(const RlFont &font, const std::string &text, float fontSize, float spacing = 1);
 
         /**
          * @brief Get glyph index position in font for a codepoint (unicode character), fallback to '?' if not found

@@ -74,12 +74,6 @@ namespace raylib {
         ~RlFont();
 
         /**
-         * @brief Check if the font is the default font
-         * @return true if the font is the default font
-         */
-        bool isDefaultFont() const;
-
-        /**
          * @brief Get the raylib font
          * @return the raylib font
          */
@@ -97,25 +91,10 @@ namespace raylib {
          */
         int getFontSize() const;
 
-        /**
-         * @brief Get the text spacing
-         * @return the text spacing
-         */
-        float getTextSpacing() const;
-
-        /**
-         * @brief Set the text spacing
-         * @param textSpacing the new text spacing
-         * @return this
-         */
-        RlFont &setTextSpacing(float textSpacing);
-
     private:
-        bool _defaultFont = false; /**< If the default raylib font is used */
         Font _font; /**< The raylib font */
         std::string _fontPath; /**< The font path */
         int _fontSize; /**< The font size */
-        float _textSpacing; /**< The text spacing when drawn */
     };
 }
 

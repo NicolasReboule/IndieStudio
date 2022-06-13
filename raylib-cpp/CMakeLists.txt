@@ -47,6 +47,7 @@ add_library(${PROJECT_NAME}
         src/raylib/exception/InvalidArgumentException.cpp
         src/raylib/exception/RaylibException.cpp
         src/raylib/exception/WindowException.cpp
+        src/raylib/GlStateManager.cpp
         src/raylib/Image/ImageDrawHelper.cpp
         src/raylib/Image/ImageGenerator.cpp
         src/raylib/Image/ImageHelper.cpp
@@ -63,7 +64,7 @@ add_library(${PROJECT_NAME}
         src/raylib/Shader/ShaderUtils.cpp
         src/raylib/Text/Codepoint.cpp
         src/raylib/Text/RlFont.cpp
-        src/raylib/Text/Text.cpp
+        src/raylib/Text/RlText.cpp
         src/raylib/Text/TextHelper.cpp
         src/raylib/Texture/RlRenderTexture.cpp
         src/raylib/Texture/RlTexture.cpp
@@ -84,5 +85,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
 
-        include/raylib/GlStateManager.hpp src/raylib/GlStateManager.cpp include/raylib/Core/RlLogger.hpp)
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

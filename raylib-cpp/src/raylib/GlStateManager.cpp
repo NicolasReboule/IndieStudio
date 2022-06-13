@@ -27,6 +27,11 @@ void raylib::GlStateManager::rotate(const Vector3f &rotation)
     rlRotatef(rotation.x, 1.0f, 0.0f, 0.0f);
 }
 
+void raylib::GlStateManager::scale(const Vector3f &scale)
+{
+    rlScalef(scale.x, scale.y, scale.z);
+}
+
 void raylib::GlStateManager::color(const RlColor &color)
 {
     rlColor4ub(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());

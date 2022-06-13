@@ -11,16 +11,16 @@ int main(int ac, char **av)
 {
     auto window = raylib::RlWindow::getInstance();
 
-    window->createWindow("Bomberman", 1280, 720, 60);
+    window->createWindow("Bomberman", 1280, 720, 120);
     raylib::RlCamera camera;
-    raylib::RlImageBuilder imageBuilder;
     raylib::RlImage rlimage = raylib::RlImageBuilder().setType(raylib::RlImageBuilder::ImageGradientH)
         .setWidth(1000).setHeight(1000)
         .setLeft(raylib::RlColor::Blue).setRight(raylib::RlColor::Red)
         .build();
     raylib::RlTexture texture(rlimage);
-    //auto font = raylib::RlFont(50);
-    auto text = raylib::RlText("Hello World", "./assets/fonts/arial.ttf", 20, {10, 30});
+    auto font = std::make_shared<raylib::RlFont>("assets/fonts/arial.ttf", 50);
+    auto text = raylib::RlText("Hello World", font, {10, 30});
+    text.setFontSize(50);
 
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();

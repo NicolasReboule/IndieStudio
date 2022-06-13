@@ -43,6 +43,12 @@ namespace raylib {
         static void rotate(const Vector3f &rotation);
 
         /**
+         * @brief Scale the opengl matrix
+         * @param scale the scale to apply
+         */
+        static void scale(const Vector3f &scale);
+
+        /**
          * @brief Set the color
          * @param color the color to set
          */
@@ -161,5 +167,7 @@ namespace raylib {
 
     };
 }
+
+using GlStateManager = raylib::GlStateManager;
 
 #endif //INDIESTUDIO_GLSTATEMANAGER_HPP

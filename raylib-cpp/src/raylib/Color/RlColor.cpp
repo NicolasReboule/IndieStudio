@@ -202,3 +202,10 @@ RlColor &raylib::RlColor::operator+=(unsigned char value)
     *this + value;
     return *this;
 }
+
+std::ostream &operator<<(std::ostream &os, const RlColor &color)
+{
+    os << "RlColor(" << (int) color.getRed() << ", " << (int) color.getGreen() << ", " << (int) color.getBlue()
+       << ", " << (int) color.getAlpha() << ")";
+    return os;
+}

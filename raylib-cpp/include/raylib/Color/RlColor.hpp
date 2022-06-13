@@ -232,4 +232,6 @@ namespace raylib {
 
 using RlColor = raylib::RlColor;
 
+std::ostream &operator<<(std::ostream &os, const RlColor &color);
+
 #endif //INDIESTUDIO_RLCOLOR_HPP

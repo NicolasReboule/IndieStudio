@@ -13,6 +13,7 @@
 #include "TextHelper.hpp"
 #include <raylib.h>
 #include <string>
+#include <memory>
 
 namespace raylib {
     /**
@@ -26,7 +27,7 @@ namespace raylib {
          * @param position the position of the text
          * @param color the color of the text
          */
-        //explicit RlText(const std::string &text, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
+        explicit RlText(const std::string &text, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
 
         /**
          * @brief RlText constructor
@@ -35,7 +36,7 @@ namespace raylib {
          * @param position the position of the text
          * @param color the color of the text
          */
-        //explicit RlText(const std::string &text, const RlFont &font, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
+        explicit RlText(const std::string &text, std::shared_ptr<RlFont> &font, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
 
         /**
          * @brief RlText constructor
@@ -92,7 +93,7 @@ namespace raylib {
          * @brief Set the font to use
          * @param font the font to use
          */
-        void setFont(const RlFont &font);
+        void setFont(const std::shared_ptr<RlFont> &font);
 
         /**
          * @brief Set the position of the text
@@ -138,12 +139,6 @@ namespace raylib {
         const RlColor &getColor() const;
 
         /**
-         * @brief Get the font size
-         * @return the height of the text
-         */
-        float getHeight() const;
-
-        /**
          * @brief Get the width of the text with the loaded font
          * @return the width of the text
          */
@@ -160,11 +155,31 @@ namespace raylib {
          */
         Vector2f getSize();
 
+        /**
+         * @brief Set the text spacing
+         * @param textSpacing
+         */
+        void setTextSpacing(float textSpacing);
+
+        /**
+         * @brief Get the height of the text with the loaded font
+         * @return the height of the text
+         */
+        float getFontSize() const;
+
+        /**
+         * @brief Set the font size
+         * @param fontSize the font size
+         */
+        void setFontSize(float fontSize);
+
     private:
         RlColor _color; /**< The text color */
         Vector2f _position; /**< The text position */
         std::string _text; /**< The text */
-        RlFont _font; /**< The text font */
+        std::shared_ptr<RlFont> _font; /**< The text font */
+        float _textSpacing; /**< The text spacing */
+        float _fontSize; /**< The text font size */
     };
 }
 #endif //INDIESTUDIO_RLTEXT_HPP

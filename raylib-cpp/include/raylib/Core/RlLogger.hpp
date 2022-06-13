@@ -39,7 +39,7 @@ namespace raylib {
         static std::ostream &log(const enum LogLevel &logLevel)
         {
             std::ostream &os = std::cout;
-            os << "[RaylibCPP]" << "[";
+            os << "[RaylibCPP][" << __TIMESTAMP__ << "][";
             switch (logLevel) {
                 case raylib::RlLogger::LogLevel::LOG_TRACE: os << "TRACE"; break;
                 case raylib::RlLogger::LogLevel::LOG_DEBUG: os << "DEBUG"; break;

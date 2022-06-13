@@ -14,7 +14,7 @@ int raylib::TextHelper::measureText(const std::string &text, int fontSize)
 
 Vector2f raylib::TextHelper::measureText(const raylib::RlFont &font, const std::string &text)
 {
-    return measureText(font, text, font.getFontSize(), font.getTextSpacing());
+    return measureText(font, text, (float) font.getFontSize());
 }
 
 Vector2f raylib::TextHelper::measureText(const RlFont &font, const std::string &text, float fontSize, float spacing)

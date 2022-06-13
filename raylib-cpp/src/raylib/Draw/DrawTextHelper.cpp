@@ -30,7 +30,7 @@ void raylib::DrawTextHelper::drawText(const RlFont &font, const std::string &tex
 
 void raylib::DrawTextHelper::drawText(const raylib::RlFont &font, const std::string &text, const Vector2f &position, const RlColor &color)
 {
-    drawText(font, text, position, (float) font.getFontSize(), font.getTextSpacing(), color);
+    drawText(font, text, position, (float) font.getFontSize(), 1, color);
 }
 
 void raylib::DrawTextHelper::drawText(const RlFont &font, const std::string &text, const Vector2f &position,
@@ -49,15 +49,15 @@ void raylib::DrawTextHelper::drawText(const RlFont &font, int codepoint, const V
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text, const Vector2f &position, const RlColor &color)
 {
-    drawText(text.getFont(), text.getText(), position, text.getHeight(), text.getFont().getTextSpacing(), color);
+    drawText(text.getFont(), text.getText(), position, text.getFontSize(), text.getTextSpacing(), color);
 }
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text, float posX, float posY, const RlColor &color)
 {
-    drawText(text.getFont(), text.getText(), {posX, posY}, text.getHeight(), text.getFont().getTextSpacing(), color);
+    drawText(text.getFont(), text.getText(), {posX, posY}, text.getFontSize(), text.getTextSpacing(), color);
 }
 
 void raylib::DrawTextHelper::drawText(const raylib::RlText &text)
 {
-    drawText(text.getFont(), text.getText(), text.getPosition(), text.getHeight(), text.getFont().getTextSpacing(), text.getColor());
+    drawText(text.getFont(), text.getText(), text.getPosition(), text.getFontSize(), text.getTextSpacing(), text.getColor());
 }

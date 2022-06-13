@@ -7,23 +7,29 @@
 
 #include "raylib/Text/RlText.hpp"
 
-/*raylib::RlText::RlText(const std::string &text, const Vector2f &position, const RlColor &color)
+raylib::RlText::RlText(const std::string &text, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font()
 {
     this->_text = text;
+    this->_fontSize = (float) _font->getFontSize();
+    this->_textSpacing = 1;
 }
 
-raylib::RlText::RlText(const std::string &text, const raylib::RlFont &font, const Vector2f &position, const RlColor &color)
+raylib::RlText::RlText(const std::string &text, std::shared_ptr<raylib::RlFont> &font, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position), _font(font)
 {
     this->_text = text;
-}*/
+    this->_fontSize = (float) _font->getFontSize();
+    this->_textSpacing = 1;
+}
 
 raylib::RlText::RlText(const std::string &text, const std::string &fontPath, float fontSize, const Vector2f &position, const RlColor &color)
     : _color(color), _position(position)
 {
     this->_text = text;
-    this->_font = (RlFont(fontPath, (int) fontSize));
+    this->_font = std::make_shared<RlFont>(fontPath, (int) fontSize);
+    this->_fontSize = fontSize;
+    this->_textSpacing = 1;
 }
 
 /*raylib::RlText::RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &position, const RlColor &color)
@@ -51,7 +57,7 @@ void raylib::RlText::setText(const std::string &text)
     this->_text = text;
 }
 
-void raylib::RlText::setFont(const raylib::RlFont &font)
+void raylib::RlText::setFont(const std::shared_ptr<raylib::RlFont> &font)
 {
     this->_font = font;
 }
@@ -74,7 +80,7 @@ void raylib::RlText::setColor(const RlColor &color)
 
 const raylib::RlFont &raylib::RlText::getFont() const
 {
-    return this->_font;
+    return *this->_font;
 }
 
 const std::string &raylib::RlText::getText() const
@@ -92,11 +98,6 @@ const RlColor &raylib::RlText::getColor() const
     return this->_color;
 }
 
-float raylib::RlText::getHeight() const
-{
-    return (float) this->_font.getFontSize();
-}
-
 float raylib::RlText::getWidth() const
 {
     return (float) TextHelper::measureText(this->_text, (int) this->getFont().getFontSize());
@@ -104,22 +105,25 @@ float raylib::RlText::getWidth() const
 
 float raylib::RlText::getTextSpacing() const
 {
-    return (float) this->_font.getTextSpacing();
+    return this->_textSpacing;
+}
+
+void raylib::RlText::setTextSpacing(float textSpacing)
+{
+    this->_textSpacing = textSpacing;
+}
+
+float raylib::RlText::getFontSize() const
+{
+    return this->_fontSize;
+}
+
+void raylib::RlText::setFontSize(float fontSize)
+{
+    this->_fontSize = fontSize;
 }
 
 Vector2f raylib::RlText::getSize()
 {
-    return TextHelper::measureText(_font, this->_text);
+    return TextHelper::measureText(*_font, this->_text);
 }
-
-/*
-raylib::RlFont &raylib::RlText::operator->()
-{
-    return this->_font;
-}
-
-const raylib::RlFont &raylib::RlText::operator->() const
-{
-    return this->_font;
-}
-*/
