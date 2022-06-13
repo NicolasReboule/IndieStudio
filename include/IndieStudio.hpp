@@ -13,4 +13,8 @@
 #include "start/StartScene.hpp"
 #include "start/Logo.hpp"
 
+#include "mainMenu/MainMenuScene.hpp"
+
+#include "game/GameScene.hpp"
+
 #endif //INDIESTUDIO_INDIESTUDIO_HPP

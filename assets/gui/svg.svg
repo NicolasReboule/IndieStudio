@@ -7,7 +7,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
    sodipodi:docname="svg.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,21 +24,33 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.40819345"
-     inkscape:cx="-5460.6461"
-     inkscape:cy="-110.24185"
+     inkscape:zoom="0.28863636"
+     inkscape:cx="-2508.3465"
+     inkscape:cy="-3520.0001"
      inkscape:window-width="1920"
      inkscape:window-height="1007"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs2" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#4d4d4d;stroke:none;stroke-width:2.965"
+       id="rect353"
+       width="338.66666"
+       height="190.5"
+       x="-775.22168"
+       y="-948.4848"
+       inkscape:export-filename="/home/frenetikk/0-Tek2/2-Projets/INDIE-STUDIO/Alwyn repo/IndieStudio/assets/gui/splashart.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <rect
        style="fill:#4d4d4d;stroke:none;stroke-width:2.965"
        id="rect866"
@@ -155,5 +167,141 @@
          style="stroke-width:0.264583"
          x="-1545.8257"
          y="5.6186805">THE GAME</tspan></text>
+    <rect
+       style="fill:#4d4d4d;stroke:none;stroke-width:2.965"
+       id="rect183"
+       width="338.66666"
+       height="190.5"
+       x="-782.37408"
+       y="-666.63928"
+       inkscape:export-filename="/home/frenetikk/0-Tek2/2-Projets/INDIE-STUDIO/Alwyn repo/IndieStudio/assets/gui/splashart.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ff0000;stroke:none;stroke-width:2.965"
+       id="rect209"
+       width="169.3335"
+       height="31.75"
+       x="-782.37439"
+       y="-666.63928"
+       inkscape:export-filename="button_play.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.3266px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-732.74066"
+       y="-642.27777"
+       id="text265"><tspan
+         sodipodi:role="line"
+         id="tspan263"
+         style="stroke-width:0.264583"
+         x="-732.74066"
+         y="-642.27777">PLAY</tspan></text>
+    <rect
+       style="fill:#ff2a2a;stroke:none;stroke-width:2.965"
+       id="rect279"
+       width="169.3335"
+       height="31.75"
+       x="-782.37439"
+       y="-634.88928"
+       inkscape:export-filename="button_play.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.3266px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-732.74066"
+       y="-610.52777"
+       id="text283"><tspan
+         sodipodi:role="line"
+         id="tspan281"
+         style="stroke-width:0.264583"
+         x="-732.74066"
+         y="-610.52777">PLAY</tspan></text>
+    <rect
+       style="fill:#aa0000;stroke:none;stroke-width:2.965"
+       id="rect285"
+       width="169.3335"
+       height="31.75"
+       x="-782.37408"
+       y="-603.13928"
+       inkscape:export-filename="button_play.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.3266px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-732.74036"
+       y="-578.77777"
+       id="text289"><tspan
+         sodipodi:role="line"
+         id="tspan287"
+         style="stroke-width:0.264583"
+         x="-732.74036"
+         y="-578.77777">PLAY</tspan></text>
+    <rect
+       style="fill:#ff6600;stroke:none;stroke-width:2.965"
+       id="rect335"
+       width="169.3335"
+       height="31.75"
+       x="-775.22168"
+       y="-948.4848"
+       inkscape:export-filename="quit.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.3266px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-725.58795"
+       y="-924.12329"
+       id="text339"><tspan
+         sodipodi:role="line"
+         id="tspan337"
+         style="stroke-width:0.264583"
+         x="-725.58795"
+         y="-924.12329">QUIT</tspan></text>
+    <rect
+       style="fill:#ff7f2a;stroke:none;stroke-width:2.965"
+       id="rect341"
+       width="169.3335"
+       height="31.75"
+       x="-775.22168"
+       y="-916.7348"
+       inkscape:export-filename="button_play.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.3266px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-725.58795"
+       y="-892.37329"
+       id="text345"><tspan
+         sodipodi:role="line"
+         id="tspan343"
+         style="stroke-width:0.264583"
+         x="-725.58795"
+         y="-892.37329">QUIT</tspan></text>
+    <rect
+       style="fill:#aa4400;stroke:none;stroke-width:2.965"
+       id="rect347"
+       width="169.3335"
+       height="31.75"
+       x="-775.22137"
+       y="-884.9848"
+       inkscape:export-filename="button_play.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.3266px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-725.58765"
+       y="-860.62329"
+       id="text351"><tspan
+         sodipodi:role="line"
+         id="tspan349"
+         style="stroke-width:0.264583"
+         x="-725.58765"
+         y="-860.62329">QUIT</tspan></text>
   </g>
 </svg>

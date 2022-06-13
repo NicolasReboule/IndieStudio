@@ -9,12 +9,14 @@
 #define INDIESTUDIO_STATICBODY_HPP
 
 #include "Node.hpp"
+#include "raylib/3DObject/RlMeshBuilder.hpp"
 
 namespace GameEngine {
 
     class StaticBody : public Node {
     public:
-        StaticBody(std::string name, const std::string &modelPath, const std::string &texturePath);
+        StaticBody(const std::string &name, const std::string &modelPath, const std::string &texturePath);
+        StaticBody(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath);
 
         ~StaticBody() override = default;
 
@@ -29,6 +31,12 @@ namespace GameEngine {
         void setPosition(Vector3f pos) override;
         void setRotationDegrees(float degrees) override;
         void setScale(Vector3f newScale) override;
+
+        raylib::RlModel *operator->();
+
+        void setColor(raylib::RlColor color);
+
+        const BoundingBox &getBoundingBox() const;
 
     protected:
         raylib::RlModel _model;

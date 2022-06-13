@@ -23,4 +23,6 @@
 
 #include "GameEngine/Nodes/2D/TextureRect.hpp"
 
+#include "GameEngine/Nodes/KinematicBody.hpp"
+
 #endif //INDIESTUDIO_GAMEENGINE_HPP

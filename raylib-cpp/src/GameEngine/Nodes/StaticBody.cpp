@@ -7,10 +7,14 @@
 
 #include "GameEngine/Nodes/StaticBody.hpp"
 
-#include <utility>
+GameEngine::StaticBody::StaticBody(const std::string &name, const std::string &modelPath, const std::string &texturePath)
+    : Node(name), _model(modelPath, texturePath), _position({0, 0, 0}), _scale({1, 1, 1})
+{
+    this->_rotationDegrees = 0;
+}
 
-GameEngine::StaticBody::StaticBody(std::string name, const std::string &modelPath, const std::string &texturePath)
-    : Node(std::move(name)), _model(modelPath, texturePath), _position((Vector3f){0, 0, 0}), _scale((Vector3f){1, 1, 1})
+GameEngine::StaticBody::StaticBody(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath)
+    : Node(name), _model(type, texturepath), _position({0, 0, 0}), _scale({1, 1, 1})
 {
     this->_rotationDegrees = 0;
 }
@@ -46,7 +50,7 @@ Vector3f GameEngine::StaticBody::getSCale()
 void GameEngine::StaticBody::setPosition(Vector3f pos)
 {
     this->_position = pos;
-    //this->_model.setPosition(this->_position.x, this->_position.y, this->_position.z);
+    this->_model.setPosition(this->_position);
 }
 
 void GameEngine::StaticBody::setRotationDegrees(float degrees)
@@ -59,4 +63,25 @@ void GameEngine::StaticBody::setScale(Vector3f newScale)
     this->_scale = newScale;
 }
 
+void GameEngine::StaticBody::setColor(raylib::RlColor color)
+{
+    this->_model.setColor(color.getColor());
+}
 
+raylib::RlModel *GameEngine::StaticBody::operator->()
+{
+    return &this->_model;
+}
+
+const BoundingBox &GameEngine::StaticBody::getBoundingBox() const
+{
+    return this->_model.getBoundingBox();
+}
+
+/*
+void GameEngine::StaticBody::collisionBox()
+{
+    std::cout << "(" << this->_model.getBoundingBox().max.x << "," << this->_model.getBoundingBox().max.y << "," << this->_model.getBoundingBox().max.x << ")" << std::endl;
+}
+
+*/

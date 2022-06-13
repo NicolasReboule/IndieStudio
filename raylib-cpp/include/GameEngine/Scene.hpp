@@ -25,6 +25,8 @@ namespace GameEngine {
 
         std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
 
+        std::vector<std::shared_ptr<GameEngine::Base>> getAllNode();
+
         std::string getName();
 
         std::string getSceneSource();

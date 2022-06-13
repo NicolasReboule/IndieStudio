@@ -84,5 +84,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
 
-        )
+        src/GameEngine/Nodes/KinematicBody.cpp include/GameEngine/Nodes/KinematicBody.hpp)
 target_link_libraries(${PROJECT_NAME} raylib)

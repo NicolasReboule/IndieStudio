@@ -13,13 +13,19 @@
 #include "raylib/Math.hpp"
 #include <raylib.h>
 #include <string>
+#include "raylib/3DObject/RlMeshBuilder.hpp"
 
 namespace raylib {
     class RlModel {
     public:
-        explicit RlModel(const std::string &fileName, const std::string &texturePath = "",Vector3f position = {0, 0,  0}, Vector3f scale = {1,1,  1}, Color color = GRAY, Vector3f rotationAxis = {0,0,0}, float rotationAngle = 0);
-        explicit RlModel(Mesh mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1,1,  1}, Color color = GRAY, Vector3f rotationAxis = {0,0,0}, float rotationAngle = 0);
-        explicit RlModel(const RlMesh &mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = GRAY, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
+        explicit RlModel(const std::string &fileName, const std::string &texturePath = "",Vector3f position = {0, 0,  0}, Vector3f scale = {1,1,  1}, Color color = WHITE, Vector3f rotationAxis = {0,0,0}, float rotationAngle = 0);
+        explicit RlModel(Mesh mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1,1,  1}, Color color = WHITE, Vector3f rotationAxis = {0,0,0}, float rotationAngle = 0);
+        explicit RlModel(const RlMesh &mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = WHITE, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
+
+        explicit RlModel(const RlMeshBuilder::MeshType &type, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = WHITE, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
+
+
+
         ~RlModel();
 
         void setPosition(Vector3f position);

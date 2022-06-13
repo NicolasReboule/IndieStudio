@@ -32,8 +32,12 @@ namespace GameEngine {
 
         const std::string &getName() const;
 
+        const std::string &getGroup() const;
+
+        void setGroup(const std::string &group);
     private:
         std::string _name;
+        std::string _group;
     };
 }
 

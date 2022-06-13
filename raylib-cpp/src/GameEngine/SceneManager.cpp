@@ -63,6 +63,13 @@ std::shared_ptr<GameEngine::Base> GameEngine::SceneManager::getNode(const std::s
     return nullptr;
 }
 
+std::vector<std::shared_ptr<GameEngine::Base>> GameEngine::SceneManager::getAllNodes()
+{
+    for (const auto &item: this->_scenes)
+        if (item->getSceneSource() == this->_actualScene)
+            return item->getAllNode();
+    return {};
+}
 
 void GameEngine::SceneManager::update()
 {
@@ -83,11 +90,11 @@ void GameEngine::SceneManager::drawAll(raylib::RlCamera camera)
     auto window = raylib::RlWindow::getInstance();
 
     raylib::DrawHelper::beginDrawing();
-    raylib::DrawHelper::clearBackground(RlColor::White);
+    raylib::DrawHelper::clearBackground(RlColor::Gray);
 
     raylib::DrawHelper::beginMode3D(camera);
 
-    //window->drawGrid(10, 1.0f);
+    raylib::Shape3DHelper::drawGrid(10, 1.0f);
 
     this->draw();
 
@@ -124,3 +131,5 @@ void GameEngine::SceneManager::makeLoop(raylib::RlCamera camera)
     this->update();
     this->drawAll(camera);
 }
+
+

@@ -29,6 +29,8 @@ namespace GameEngine {
 
         std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
 
+        std::vector<std::shared_ptr<GameEngine::Base>> getAllNodes();
+
         void update();
 
         void drawAll(raylib::RlCamera camera);

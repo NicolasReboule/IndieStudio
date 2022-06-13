@@ -41,4 +41,6 @@ void Indie::StartScene::updateScene(float delta)
     else
         if (game.getColor().getAlpha() > 0)
             game.setColor(game.getColor().getRed(), game.getColor().getBlue(), game.getColor().getGreen(), game.getColor().getAlpha() - 1 * delta);
+        else
+            sceneManager->changeScene("mainMenu");
 }

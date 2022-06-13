@@ -16,3 +16,13 @@ const std::string &GameEngine::Base::getName() const
 {
     return this->_name;
 }
+
+const std::string &GameEngine::Base::getGroup() const
+{
+    return this->_group;
+}
+
+void GameEngine::Base::setGroup(const std::string &group)
+{
+    this->_group = group;
+}

@@ -31,8 +31,33 @@ raylib::RlModel::RlModel(const raylib::RlMesh &mesh, const std::string &textureP
         setTextureMaterial();
 }
 
+raylib::RlModel::RlModel(const RlMeshBuilder::MeshType &type, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
+:  _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+{
+
+
+    if (type == RlMeshBuilder::MeshCube) {
+            raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+            this->_model = LoadModelFromMesh(mesh.getMesh());
+    }
+    else {
+        raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+        this->_model = LoadModelFromMesh(mesh.getMesh());
+    }
+
+    raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+    this->_model = LoadModelFromMesh(mesh.getMesh());
+
+    this->_boundingBox = GetModelBoundingBox(_model);
+
+    if (!texturePath.empty())
+        setTextureMaterial();
+}
+
+
 raylib::RlModel::~RlModel()
 {
+    std::cout << "~RlModel()" << std::endl;
     UnloadModel(this->_model);
 }
 
@@ -40,7 +65,18 @@ raylib::RlModel::~RlModel()
 
 void raylib::RlModel::setPosition(Vector3f position)
 {
-    _position = position;
+    this->_position = position;
+
+
+    this->_boundingBox = GetModelBoundingBox(this->_model);
+
+    this->_boundingBox.min.x += this->_position.x;
+    this->_boundingBox.min.y += this->_position.y;
+    this->_boundingBox.min.z += this->_position.z;
+
+    this->_boundingBox.max.x += this->_position.x;
+    this->_boundingBox.max.y += this->_position.y;
+    this->_boundingBox.max.z += this->_position.z;
 }
 
 void raylib::RlModel::setPosition(float x, float y, float z)
@@ -48,6 +84,16 @@ void raylib::RlModel::setPosition(float x, float y, float z)
     _position.x = x;
     _position.y = y;
     _position.z = z;
+
+    this->_boundingBox = GetModelBoundingBox(this->_model);
+
+    this->_boundingBox.min.x += this->_position.x;
+    this->_boundingBox.min.y += this->_position.y;
+    this->_boundingBox.min.z += this->_position.z;
+
+    this->_boundingBox.max.x += this->_position.x;
+    this->_boundingBox.max.y += this->_position.y;
+    this->_boundingBox.max.z += this->_position.z;
 }
 
 void raylib::RlModel::setScale(float x, float y, float z)
@@ -138,3 +184,4 @@ void raylib::RlModel::setTextureMaterial()
 {
     SetMaterialTexture(&_model.materials[0], MATERIAL_MAP_DIFFUSE, _texture.get());
 }
+

@@ -81,3 +81,8 @@ std::shared_ptr<GameEngine::Base> GameEngine::Scene::getNode(const std::string &
         }
     return nullptr;
 }
+
+std::vector<std::shared_ptr<GameEngine::Base>> GameEngine::Scene::getAllNode()
+{
+    return this->_nodes;
+}

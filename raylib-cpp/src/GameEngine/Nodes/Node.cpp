@@ -7,6 +7,6 @@
 
 #include "GameEngine/Nodes/Node.hpp"
 
-GameEngine::Node::Node(std::string name) : Base(std::move(name))
+GameEngine::Node::Node(const std::string &name) : Base(name)
 {
 }

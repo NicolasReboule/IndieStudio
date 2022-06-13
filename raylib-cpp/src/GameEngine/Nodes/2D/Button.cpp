@@ -34,7 +34,7 @@ void GameEngine::Button::update(float delta)
         return;
     }
     if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::MouseHelper::getMousePosition(), this->_bounds)) {
-        if (raylib::MouseHelper::isMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+        if (raylib::MouseHelper::isMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             this->_state = 2;
             this->_action = true;
         } else
@@ -63,6 +63,8 @@ Vector2f GameEngine::Button::getPosition()
 void GameEngine::Button::setPosition(Vector2f position)
 {
     this->_position = position;
+    this->_rectangle = {0, 0, (float) this->_texture.get().width, (float)this->_frameHeight};
+    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.get().width, this->_frameHeight};
 }
 
 Vector2f GameEngine::Button::getScale()
