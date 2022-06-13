@@ -13,6 +13,7 @@ raylib::RlText::RlText(const std::string &text, const Vector2f &position, const 
     this->_text = text;
     this->_fontSize = (float) _font->getFontSize();
     this->_textSpacing = 1;
+    this->_rotation = 0;
 }
 
 raylib::RlText::RlText(const std::string &text, std::shared_ptr<raylib::RlFont> &font, const Vector2f &position, const RlColor &color)
@@ -21,6 +22,7 @@ raylib::RlText::RlText(const std::string &text, std::shared_ptr<raylib::RlFont> 
     this->_text = text;
     this->_fontSize = (float) _font->getFontSize();
     this->_textSpacing = 1;
+    this->_rotation = 0;
 }
 
 raylib::RlText::RlText(const std::string &text, const std::string &fontPath, float fontSize, const Vector2f &position, const RlColor &color)
@@ -30,27 +32,8 @@ raylib::RlText::RlText(const std::string &text, const std::string &fontPath, flo
     this->_font = std::make_shared<RlFont>(fontPath, (int) fontSize);
     this->_fontSize = fontSize;
     this->_textSpacing = 1;
+    this->_rotation = 0;
 }
-
-/*raylib::RlText::RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &position, const RlColor &color)
-    : _color(color), _position(position), _font(fontPath, fontSize, fontChars, glyphCount)
-{
-    this->_text = text;
-}
-
-
-raylib::RlText::RlText(const std::string &text, const RlImage &image, const RlColor &key, int firstChar, const Vector2f &position, const RlColor &color)
-    : _color(color), _position(position), _font(image, key, firstChar)
-{
-    this->_text = text;
-}
-
-raylib::RlText::RlText(const std::string &text, const std::string &fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, const Vector2f &position, const RlColor &color)
-    : _color(color), _position(position), _font(fileType, fileData, dataSize, fontSize, fontChars, glyphCount)
-{
-    this->_text = text;
-}
-*/
 
 void raylib::RlText::setText(const std::string &text)
 {
@@ -78,9 +61,9 @@ void raylib::RlText::setColor(const RlColor &color)
     this->_color = color;
 }
 
-const raylib::RlFont &raylib::RlText::getFont() const
+const std::shared_ptr<raylib::RlFont> &raylib::RlText::getFont() const
 {
-    return *this->_font;
+    return this->_font;
 }
 
 const std::string &raylib::RlText::getText() const
@@ -121,6 +104,26 @@ float raylib::RlText::getFontSize() const
 void raylib::RlText::setFontSize(float fontSize)
 {
     this->_fontSize = fontSize;
+}
+
+float raylib::RlText::getRotation() const
+{
+    return this->_rotation;
+}
+
+void raylib::RlText::setRotation(float rotation)
+{
+    this->_rotation = rotation;
+}
+
+const Vector2f &raylib::RlText::getOrigin() const
+{
+    return this->_origin;
+}
+
+void raylib::RlText::setOrigin(const Vector2f &origin)
+{
+    this->_origin = origin;
 }
 
 Vector2f raylib::RlText::getSize() const

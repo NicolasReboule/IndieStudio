@@ -13,7 +13,7 @@
 
 namespace raylib {
     /**
-     * @brief
+     * @brief RlCameraBuilder class
      */
     class RlCameraBuilder : public IBuilder<RlCamera> {
     public:

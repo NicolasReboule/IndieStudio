@@ -5,6 +5,7 @@
 ** Camera
 */
 
+#include <iomanip>
 #include "raylib/Camera/RlCamera.hpp"
 #include "raylib/Camera/CameraHelper.hpp"
 
@@ -133,7 +134,7 @@ std::ostream &operator<<(std::ostream &os, const CameraProjection &cameraProject
 
 std::ostream &operator<<(std::ostream &os, const raylib::RlCamera &camera)
 {
-    const Vector3f &pos = camera.getConstructedPosition();
+    /*const Vector3f &pos = camera.getConstructedPosition();
     const Vector3f &target = camera.getConstructedTarget();
     const Vector3f &up = camera.getConstructedUp();
 
@@ -144,9 +145,9 @@ std::ostream &operator<<(std::ostream &os, const raylib::RlCamera &camera)
         << "Fov: " << camera.getConstructedFovy() << " "
         << "Projection: " << camera.getConstructedProjection() << " "
         << "Mode: " << camera.getConstructedCameraMode() << std::endl;
-
+*/
     const Camera3D &camera3D = camera.get();
-    os << "Actual Camera3d "
+    os << "Camera3d "
         << "Position: (" << camera3D.position.x << ", " << camera3D.position.y << ", " << camera3D.position.z << ") "
         << "Target: (" << camera3D.target.x << ", " << camera3D.target.y << ", " << camera3D.target.z << ") "  << " "
         << "Up Vector: (" << camera3D.up.x << ", " << camera3D.up.y << ", " << camera3D.up.z << ") "  << " "

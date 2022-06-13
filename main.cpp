@@ -20,13 +20,17 @@ int main(int ac, char **av)
     raylib::RlTexture texture(rlimage);
     auto font = std::make_shared<raylib::RlFont>(20);
     auto text = raylib::RlText("Hello World", font, {10, 30});
+    text.setRotation(45);
+
     std::cout << camera << std::endl;
+
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();
         raylib::DrawHelper::clearBackground(RlColor::White);
-        raylib::DrawTextHelper::drawFps(10, 10);
-        //raylib::DrawTextHelper::drawText(font, "azertyuiopqsdfghjklmwxcvbn", {10, 40});
-        raylib::DrawTextHelper::drawText(text);
+        raylib::DrawTextHelper::drawFps(10, 10, 30);
+        raylib::DrawTextHelper::drawText("azertyuiopqsdfghjklmwxcvbn", *font, {10, 40});
+        //raylib::DrawTextHelper::drawText(text);
+        raylib::DrawTextHelper::drawCenteredText("Bomberman", *font, {(float) window->getWidth() / 2.0f, 20}, 30, RlColor::Red);
         camera.update();
         if (raylib::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();

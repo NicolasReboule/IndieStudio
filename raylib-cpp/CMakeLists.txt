@@ -34,6 +34,7 @@ add_library(${PROJECT_NAME}
         src/raylib/Audio/WaveHelper.cpp
         src/raylib/Camera/CameraHelper.cpp
         src/raylib/Camera/RlCamera.cpp
+        src/raylib/Camera/RlCameraBuilder.cpp
         src/raylib/Color/ColorHelper.cpp
         src/raylib/Color/RlColor.cpp
         src/raylib/Core/CoreHelper.cpp
@@ -85,5 +86,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
 
-        include/raylib/Camera/RlCameraBuilder.hpp src/raylib/Camera/RlCameraBuilder.cpp)
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

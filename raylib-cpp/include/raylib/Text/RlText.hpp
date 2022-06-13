@@ -22,7 +22,7 @@ namespace raylib {
     class RlText {
     public:
         /**
-         * @brief RlText constructor
+         * @brief RlText constructor (default font used)
          * @param text the text to use
          * @param position the position of the text
          * @param color the color of the text
@@ -46,42 +46,6 @@ namespace raylib {
          * @param color the color of the text
          */
         explicit RlText(const std::string &text, const std::string &fontPath, float fontSize = 20, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
-
-        /**
-         * @brief RlText constructor
-         * @param text the text to use
-         * @param fontPath the path to the font to use
-         * @param fontSize the font size
-         * @param fontChars the characters to use
-         * @param glyphCount the number of characters to use
-         * @param postion the position of the text
-         * @param color the color of the text
-         */
-        //explicit RlText(const std::string &text, const std::string &fontPath, int fontSize, int *fontChars, int glyphCount, const Vector2f &postion = {0, 0}, const RlColor &color = RlColor::Black);
-
-        /**
-         * @brief RlText constructor
-         * @param text the text to use
-         * @param image the image to use
-         * @param key the key of the image to use
-         * @param firstChar the first character to use
-         * @param position the position of the text
-         * @param color the color of the text
-         */
-        //explicit RlText(const std::string &text, const RlImage &image, const RlColor &key, int firstChar, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
-
-        /**
-         * @brief RlText constructor
-         * @param text the text to use
-         * @param fileType the file type of the image to use
-         * @param fileDate the file date of the image to use
-         * @param dataSize the data size of the image to use
-         * @param fontSize the font size
-         * @param fontChars the characters to use
-         * @param postion the position of the text
-         * @param color the color of the text
-         */
-        //explicit RlText(const std::string &text, const std::string &fileType, const unsigned char *fileDate, int dataSize, int fontSize, int *fontChars, int , const Vector2f &postion = {0, 0}, const RlColor &color = RlColor::Black); //TODO: check for missing parameters
 
         /**
          * @brief Set the text to use
@@ -124,7 +88,7 @@ namespace raylib {
          * @brief Get the font
          * @return the font
          */
-        const RlFont &getFont() const;
+        const std::shared_ptr<RlFont> &getFont() const;
 
         /**
          * @brief Get the position of the text
@@ -175,6 +139,30 @@ namespace raylib {
          */
         void setFontSize(float fontSize);
 
+        /**
+         * @brief Set the text rotation
+         * @param rotation the text rotation
+         */
+        void setRotation(float rotation);
+
+        /**
+         * @brief Get the text rotation
+         * @return the text rotation
+         */
+        float getRotation() const;
+
+        /**
+         * @brief Get the text origin
+         * @return the text origin
+         */
+        const Vector2f &getOrigin() const;
+
+        /**
+         * @brief Set the text origin
+         * @param origin the text origin
+         */
+        void setOrigin(const Vector2f &origin);
+
     private:
         RlColor _color; /**< The text color */
         Vector2f _position; /**< The text position */
@@ -182,6 +170,8 @@ namespace raylib {
         std::shared_ptr<RlFont> _font; /**< The text font */
         float _textSpacing; /**< The text spacing */
         float _fontSize; /**< The text font size */
+        float _rotation; /**< The text rotation */
+        Vector2f _origin; /**< The text origin */
     };
 }
 #endif //INDIESTUDIO_RLTEXT_HPP
