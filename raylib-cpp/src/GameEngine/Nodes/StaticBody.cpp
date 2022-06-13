@@ -19,7 +19,7 @@ void GameEngine::StaticBody::ready()
 {
 }
 
-void GameEngine::StaticBody::update()
+void GameEngine::StaticBody::update(float delta)
 {
 }
 

@@ -14,7 +14,7 @@
 namespace GameEngine::Audio {
         class Music : public ISound, public raylib::RlMusic {
         public:
-            Music(const std::string &fileName, int category);
+            Music(const std::string &fileName, SoundCategory category);
         };
     }
 

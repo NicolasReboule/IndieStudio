@@ -38,17 +38,14 @@ void GameEngine::Scene::ready()
         node->ready();
 }
 
-void GameEngine::Scene::update()
+void GameEngine::Scene::update(float delta)
 {
     for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
-        node->update();
+        node->update(delta);
 }
 
 void GameEngine::Scene::draw()
 {
-    /*for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
-        node->Draw();*/
-
     for (std::shared_ptr<GameEngine::Base> &node : this->_nodes) {
 
         try {
@@ -63,9 +60,6 @@ void GameEngine::Scene::draw()
 
 void GameEngine::Scene::draw2D()
 {
-    /*for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
-        node->Draw();*/
-
     for (std::shared_ptr<GameEngine::Base> &node : this->_nodes) {
 
         try {
@@ -82,7 +76,7 @@ std::shared_ptr<GameEngine::Base> GameEngine::Scene::getNode(const std::string &
 {
     for (const auto &item: this->_nodes)
         if (item->getName() == name) {
-            std::cout << item->getName() << std::endl;
+            //std::cout << item->getName() << std::endl;
             return item;
         }
     return nullptr;

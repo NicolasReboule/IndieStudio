@@ -18,7 +18,7 @@ namespace GameEngine {
 
         ~StaticBody() override = default;
 
-        void update() override;
+        void update(float delta) override;
         void ready() override;
         void draw() override;
 

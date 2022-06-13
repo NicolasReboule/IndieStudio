@@ -58,7 +58,7 @@ void GameEngine::TextureRect::ready()
 {
 }
 
-void GameEngine::TextureRect::update()
+void GameEngine::TextureRect::update(float delta)
 {
 }
 

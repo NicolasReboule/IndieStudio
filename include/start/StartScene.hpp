@@ -17,6 +17,8 @@ namespace Indie {
         explicit StartScene(std::string name = "start", std::string sceneSource = "start");
         ~StartScene() override = default;
 
+        void updateScene(float delta) override;
+
         void sceneLauncher() override;
     };
 }

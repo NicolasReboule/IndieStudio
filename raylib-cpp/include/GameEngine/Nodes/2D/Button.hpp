@@ -18,7 +18,7 @@ namespace GameEngine {
 
         ~Button() override = default;
 
-        void update() override;
+        void update(float delta) override;
 
         void draw() override;
 

@@ -30,9 +30,11 @@ namespace GameEngine {
         std::string getSceneSource();
 
         void ready();
-        void update();
+        void update(float delta);
         void draw();
         void draw2D();
+
+        virtual void updateScene(float delta) = 0;
 
     private:
         std::string _sceneSource;

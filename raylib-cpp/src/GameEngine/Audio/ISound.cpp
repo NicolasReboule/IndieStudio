@@ -7,13 +7,13 @@
 
 #include "GameEngine/Audio/ISound.hpp"
 
-GameEngine::ISound::ISound(std::string fileName, int category)
+GameEngine::ISound::ISound(std::string fileName, SoundCategory category)
 {
     this->_category = category;
     this->_name = std::move(fileName);
 }
 
-int GameEngine::ISound::getCategory() const
+SoundCategory GameEngine::ISound::getCategory() const
 {
     return this->_category;
 }

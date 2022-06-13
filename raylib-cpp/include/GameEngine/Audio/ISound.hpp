@@ -18,15 +18,15 @@ enum SoundCategory{
 namespace GameEngine {
     class ISound {
     public:
-        explicit ISound(std::string fileName, int category);
+        explicit ISound(std::string fileName, SoundCategory category);
         virtual ~ISound() = default;
 
-        int getCategory() const;
+        SoundCategory getCategory() const;
         std::string getName();
 
     private:
         std::string _name;
-        int _category;
+        SoundCategory _category;
     };
 }
 

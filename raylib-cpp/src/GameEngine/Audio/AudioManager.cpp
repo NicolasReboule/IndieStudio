@@ -6,6 +6,7 @@
 */
 
 #include "GameEngine/GameEngine.hpp"
+#include "GameEngine/Audio/AudioManager.hpp"
 
 std::shared_ptr<GameEngine::AudioManager> GameEngine::AudioManager::_instance;
 
@@ -16,15 +17,18 @@ std::shared_ptr<GameEngine::AudioManager> &GameEngine::AudioManager::getInstance
     return _instance;
 }
 
-void GameEngine::AudioManager::addSound(const std::string &fileName, int category)
+void GameEngine::AudioManager::addSound(const std::string &fileName, SoundCategory category)
 {
-    if (category == FX) {
+
+    auto sound = std::make_unique<GameEngine::Audio::Fx>(fileName, category);
+    this->_sounds.push_back(std::move(sound));
+ /*   if (category == FX) {
         auto sound = std::make_unique<GameEngine::Audio::Fx>(fileName, category);
         this->_sounds.push_back(std::move(sound));
     } else {
         auto sound = std::make_unique<GameEngine::Audio::Music>(fileName, category);
         this->_sounds.push_back(std::move(sound));
-    }
+    }*/
 }
 
 void GameEngine::AudioManager::deleteSound(const std::string &fileName)
@@ -44,6 +48,14 @@ void GameEngine::AudioManager::playSound(const std::string &fileName)
 {
     for(auto &sound: this->_sounds) {
         if (sound->getName() == fileName){
+            auto &audio = dynamic_cast<GameEngine::Audio::Fx &>(*sound);
+            audio.play();
+            return;
+        }
+    }
+
+/*    for(auto &sound: this->_sounds) {
+        if (sound->getName() == fileName){
             if (sound->getCategory() == FX) {
                 auto &audio = dynamic_cast<GameEngine::Audio::Fx &>(*sound);
                 audio.play();
@@ -51,6 +63,16 @@ void GameEngine::AudioManager::playSound(const std::string &fileName)
                 auto &audio = dynamic_cast<GameEngine::Audio::Music &>(*sound);
                 audio.play();
             }
+        }
+    }*/
+}
+
+void GameEngine::AudioManager::setVolume(float volume, SoundCategory category)
+{
+    for(auto &sound: this->_sounds) {
+        if (sound->getCategory() == category){
+            auto &audio = dynamic_cast<GameEngine::Audio::Fx &>(*sound);
+            audio.setVolume(volume);
         }
     }
 }

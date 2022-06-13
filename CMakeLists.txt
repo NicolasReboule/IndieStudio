@@ -16,7 +16,7 @@ include_directories(include raylib-cpp/include/) # Add the good includes
 add_executable(${BINARY_NAME}
         main.cpp
         src/start/StartScene.cpp
-        include/start/Logo.hpp src/start/Logo.cpp)
+        include/start/Logo.hpp src/start/Logo.cpp src/mainMenu/MainMenu.cpp include/mainMenu/MainMenu.hpp include/mainMenu/ButtonStart.hpp)
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 

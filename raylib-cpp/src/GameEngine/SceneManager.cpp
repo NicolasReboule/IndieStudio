@@ -56,12 +56,10 @@ std::shared_ptr<GameEngine::Base> GameEngine::SceneManager::getNode(const std::s
     for (const auto &item: this->_scenes)
         if (item->getSceneSource() == this->_actualScene) {
             std::shared_ptr<GameEngine::Base> temp;
-            if ((temp = item->getNode(name)) == nullptr) {
-                continue;
-            }
-            else
+            if ((temp = item->getNode(name)) != nullptr)
                 return temp;
         }
+
     return nullptr;
 }
 
@@ -71,9 +69,13 @@ void GameEngine::SceneManager::update()
     if (this->_actualScene == "empty")
         return;
 
+    float delta = raylib::CoreHelper::getFrameTime();
+
     for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
-        if (scene->getSceneSource() == this->_actualScene)
-            scene->update();
+        if (scene->getSceneSource() == this->_actualScene) {
+            scene->updateScene(delta);
+            scene->update(delta);
+        }
 }
 
 void GameEngine::SceneManager::drawAll(raylib::RlCamera camera)

@@ -18,13 +18,9 @@ namespace Indie {
 
         ~Logo() override = default;
 
-        void bob();
-
         void ready() override;
 
-        void update() override;
-
-
+        void update(float delta) override;
     };
 }
 

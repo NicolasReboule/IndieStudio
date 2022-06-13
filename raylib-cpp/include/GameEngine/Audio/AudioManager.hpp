@@ -21,11 +21,13 @@ namespace GameEngine {
 
         static std::shared_ptr<AudioManager> &getInstance();
 
-        void addSound(const std::string &fileName, int category);
+        void addSound(const std::string &fileName, SoundCategory category);
 
         void playSound(const std::string &fileName);
 
         void deleteSound(const std::string &fileName);
+
+        void setVolume(float volume, SoundCategory category);
 
     private:
         static std::shared_ptr<AudioManager> _instance;

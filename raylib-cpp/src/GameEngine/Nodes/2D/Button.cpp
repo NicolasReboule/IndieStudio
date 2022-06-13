@@ -26,7 +26,7 @@ void GameEngine::Button::ready()
 
 }
 
-void GameEngine::Button::update()
+void GameEngine::Button::update(float delta)
 {
     if (this->_action) {
         this->_action = false;
