@@ -1,3 +1,3 @@
 <map id="raylib::RlTexture" name="raylib::RlTexture">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,332"/>
+<area shape="rect" id="node1" title="RlTexture class NOTE: These functions require GPU access." alt="" coords="5,5,164,332"/>
 </map>

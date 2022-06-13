@@ -1,0 +1,4 @@
+<map id="raylib::DrawTextHelper::drawText" name="raylib::DrawTextHelper::drawText">
+<area shape="rect" id="node1" title="Draw text using font and additional parameters." alt="" coords="5,5,156,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_font.html#ab003195676abf66ccbcc47eeda366dee" title="Get the font size." alt="" coords="204,13,375,39"/>
+</map>

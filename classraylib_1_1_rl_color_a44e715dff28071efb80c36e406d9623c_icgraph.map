@@ -1,7 +1,10 @@
 <map id="raylib::RlColor::getAlpha" name="raylib::RlColor::getAlpha">
-<area shape="rect" id="node1" title="Get the alpha value." alt="" coords="223,111,380,138"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_draw2_d_helper.html#ad0e670b8f04248e8f838b4603a83f309" title="Draw lines sequence." alt="" coords="19,5,161,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_draw2_d_helper.html#a53a0ff43f97d2780f881988ea10fc2e4" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="19,71,161,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_draw2_d_helper.html#aec37a3e2fba86c90662386720efd78ba" title="Draw a triangle strip defined by points." alt="" coords="19,136,161,177"/>
-<area shape="rect" id="node5" href="$classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="5,202,175,229"/>
+<area shape="rect" id="node1" title="Get the alpha value." alt="" coords="223,209,380,235"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_gl_state_manager.html#a3632514698e8bdb40ded5dc2edfb723e" title="Set the color." alt="" coords="14,5,166,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_draw2_d_helper.html#ad0e670b8f04248e8f838b4603a83f309" title="Draw lines sequence." alt="" coords="19,71,161,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_draw_texture_helper.html#aef02fe62a5805352efbde042fc14e5f8" title="Draw a textured polygon." alt="" coords="5,136,175,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_draw2_d_helper.html#a53a0ff43f97d2780f881988ea10fc2e4" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="19,201,161,243"/>
+<area shape="rect" id="node6" href="$classraylib_1_1_draw2_d_helper.html#aec37a3e2fba86c90662386720efd78ba" title="Draw a triangle strip defined by points." alt="" coords="19,267,161,308"/>
+<area shape="rect" id="node7" href="$_rl_color_8cpp.html#ac508f551b38a174ab6fb60bbc88541bf" title=" " alt="" coords="47,333,133,359"/>
+<area shape="rect" id="node8" href="$classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="5,383,175,410"/>
 </map>

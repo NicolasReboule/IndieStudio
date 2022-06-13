@@ -1,4 +1,4 @@
 <map id="raylib::RlCamera::RlCamera" name="raylib::RlCamera::RlCamera">
 <area shape="rect" id="node1" title="Construct a new RlCamera object." alt="" coords="5,13,184,39"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="232,5,367,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="232,5,367,47"/>
 </map>

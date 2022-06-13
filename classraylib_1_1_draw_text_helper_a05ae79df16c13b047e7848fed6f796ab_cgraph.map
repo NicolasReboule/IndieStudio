@@ -1,0 +1,7 @@
+<map id="raylib::DrawTextHelper::drawText" name="raylib::DrawTextHelper::drawText">
+<area shape="rect" id="node1" title="Draw text using RlText and additional parameters." alt="" coords="5,74,156,115"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_text.html#a87b629df863b3d7c60908452847317c5" title="Get the font." alt="" coords="227,5,372,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_text.html#ab13d4abc3e15198be6589fd54eceeb0e" title="Get the height of the text with the loaded font." alt="" coords="214,56,385,83"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_text.html#a97f9ef96c584ee1171d4eb4d088bc53f" title="Get the text." alt="" coords="227,107,371,133"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_rl_text.html#ab5b13013ee5ad1e0dfb0c342686ddffe" title="Get the text spacing." alt="" coords="204,157,395,184"/>
+</map>

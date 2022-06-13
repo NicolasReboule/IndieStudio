@@ -9,11 +9,10 @@ var searchData=
   ['wavehelper_2ehpp_6',['WaveHelper.hpp',['../_wave_helper_8hpp.html',1,'']]],
   ['what_7',['what',['../classraylib_1_1ex_1_1_raylib_exception.html#a2985f7569b9c55f25278528b552291f1',1,'raylib::ex::RaylibException']]],
   ['white_8',['White',['../classraylib_1_1_rl_color.html#a035328b5af51c01764776f525a213eea',1,'raylib::RlColor']]],
-  ['width_9',['Width',['../classraylib_1_1_rl_image_builder.html#a83af25e753298a7cb98bfc0962c3fa1fabb77ac0ff42054df36f4c39554db7abf',1,'raylib::RlImageBuilder::Width()'],['../classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a1475000b07d210c5e4490ef1b06ad461',1,'raylib::RlMeshBuilder::Width()']]],
-  ['windowexception_10',['WindowException',['../classraylib_1_1ex_1_1_window_exception.html',1,'raylib::ex::WindowException'],['../classraylib_1_1ex_1_1_window_exception.html#a3d9320feb325e8e568ae73be0c829412',1,'raylib::ex::WindowException::WindowException()']]],
-  ['windowexception_2ecpp_11',['WindowException.cpp',['../_window_exception_8cpp.html',1,'']]],
-  ['windowexception_2ehpp_12',['WindowException.hpp',['../_window_exception_8hpp.html',1,'']]],
-  ['worldhelper_13',['WorldHelper',['../classraylib_1_1_world_helper.html',1,'raylib']]],
-  ['worldhelper_2ecpp_14',['WorldHelper.cpp',['../_world_helper_8cpp.html',1,'']]],
-  ['worldhelper_2ehpp_15',['WorldHelper.hpp',['../_world_helper_8hpp.html',1,'']]]
+  ['windowexception_9',['WindowException',['../classraylib_1_1ex_1_1_window_exception.html',1,'raylib::ex::WindowException'],['../classraylib_1_1ex_1_1_window_exception.html#a3d9320feb325e8e568ae73be0c829412',1,'raylib::ex::WindowException::WindowException()']]],
+  ['windowexception_2ecpp_10',['WindowException.cpp',['../_window_exception_8cpp.html',1,'']]],
+  ['windowexception_2ehpp_11',['WindowException.hpp',['../_window_exception_8hpp.html',1,'']]],
+  ['worldhelper_12',['WorldHelper',['../classraylib_1_1_world_helper.html',1,'raylib']]],
+  ['worldhelper_2ecpp_13',['WorldHelper.cpp',['../_world_helper_8cpp.html',1,'']]],
+  ['worldhelper_2ehpp_14',['WorldHelper.hpp',['../_world_helper_8hpp.html',1,'']]]
 ];

@@ -1,0 +1,5 @@
+<map id="raylib::DrawHelper::drawBillboard" name="raylib::DrawHelper::drawBillboard">
+<area shape="rect" id="node1" title="Draw a billboard texture." alt="" coords="5,39,132,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_texture.html#ab833980426c57b983c34650e632ca432" title="Get texture height." alt="" coords="180,5,299,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_texture.html#aa77e4a87f261ca7fb1d566c97a15ee9a" title="Get texture width." alt="" coords="180,71,299,112"/>
+</map>

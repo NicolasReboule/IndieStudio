@@ -1,0 +1,5 @@
+<map id="raylib::RlFont::getFontSize" name="raylib::RlFont::getFontSize">
+<area shape="rect" id="node1" title="Get the font size." alt="" coords="204,46,375,73"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_draw_text_helper.html#ab800b03944857881ab81dfd802b10f81" title="Draw text using font and additional parameters." alt="" coords="5,5,156,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_text_helper.html#a518145f0d9f55e657dc4a3cf3a96ead8" title="Measure string width for custom font." alt="" coords="20,71,141,112"/>
+</map>

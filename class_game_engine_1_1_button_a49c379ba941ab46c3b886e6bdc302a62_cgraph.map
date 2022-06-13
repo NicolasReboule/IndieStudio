@@ -3,6 +3,6 @@
 <area shape="rect" id="node2" href="$classraylib_1_1_collision2_d_helper.html#a2bad9012963fa0c736f6abf5e22a8141" title="Check if point is inside rectangle." alt="" coords="193,5,359,47"/>
 <area shape="rect" id="node4" href="$classraylib_1_1_mouse_helper.html#a498d459af118174334984e9b174ea924" title="Get the mouse position." alt="" coords="209,71,343,112"/>
 <area shape="rect" id="node6" href="$classraylib_1_1_mouse_helper.html#ac64bdf913aff282cc3eea771b818d2f9" title="Check if a mouse button is being pressed." alt="" coords="202,136,350,177"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="407,5,541,47"/>
-<area shape="rect" id="node5" href="$classraylib_1_1_vector_helper.html#a8cb9b9c972dc4b95ee1c1297542bba10" title=" " alt="" coords="407,71,541,112"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="407,5,541,47"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_vector_helper.html#a90b0bf4a19c18db480f26d697bd2c2fe" title="Convert a raylib vector to a Vector2f." alt="" coords="407,71,541,112"/>
 </map>

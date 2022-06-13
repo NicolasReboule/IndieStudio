@@ -83,7 +83,7 @@ Collaboration diagram for raylib::ImageHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_image_helper__coll__graph.png" border="0" usemap="#araylib_1_1_image_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_image_helper_coll__map" id="araylib_1_1_image_helper_coll__map">
-<area shape="rect" title="Helper class for image manipulation NOTE: Image software&#45;rendering functions (CPU)" alt="" coords="5,5,147,185"/>
+<area shape="rect" title="Helper class for image manipulation NOTE: Image software&#45;rendering functions (CPU)" alt="" coords="5,5,160,200"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -113,6 +113,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a93e9ae4b0c2198194891f066cc8d1e30"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_image_helper.html#a93e9ae4b0c2198194891f066cc8d1e30">fromText</a> (const <a class="el" href="classraylib_1_1_rl_font.html">RlFont</a> &amp;font, const std::string &amp;text, float fontSize, float spacing, const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;tint)</td></tr>
 <tr class="memdesc:a93e9ae4b0c2198194891f066cc8d1e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an image from text (custom sprite font)  <a href="classraylib_1_1_image_helper.html#a93e9ae4b0c2198194891f066cc8d1e30">More...</a><br /></td></tr>
 <tr class="separator:a93e9ae4b0c2198194891f066cc8d1e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9885e9f9913ff55e723b996509eac0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_image_helper.html#a8c9885e9f9913ff55e723b996509eac0">genImageFontAtlas</a> (const GlyphInfo *chars, Rectangle **recs, int glyphCount, int fontSize, int padding, int packMethod)</td></tr>
+<tr class="memdesc:a8c9885e9f9913ff55e723b996509eac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an image from font (custom sprite font)  <a href="classraylib_1_1_image_helper.html#a8c9885e9f9913ff55e723b996509eac0">More...</a><br /></td></tr>
+<tr class="separator:a8c9885e9f9913ff55e723b996509eac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Helper class for image manipulation NOTE: Image software-rendering functions (CPU) </p>
@@ -188,7 +191,7 @@ Here is the call graph for this function:</div>
 <map name="aclassraylib_1_1_image_helper_a93e9ae4b0c2198194891f066cc8d1e30_cgraph" id="aclassraylib_1_1_image_helper_a93e9ae4b0c2198194891f066cc8d1e30_cgraph">
 <area shape="rect" title="Create an image from text (custom sprite font)" alt="" coords="5,23,137,65"/>
 <area shape="rect" href="classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="185,5,340,32"/>
-<area shape="rect" href="classraylib_1_1_rl_font.html#a283c2d6c7b2082d598cd416ad01b1182" title=" " alt="" coords="189,56,336,83"/>
+<area shape="rect" href="classraylib_1_1_rl_font.html#af11828f1c3a912fd8b1707a56279074d" title="Get the raylib font." alt="" coords="189,56,336,83"/>
 </map>
 </div>
 
@@ -253,6 +256,80 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="185,13,340,39"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a8c9885e9f9913ff55e723b996509eac0" name="a8c9885e9f9913ff55e723b996509eac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9885e9f9913ff55e723b996509eac0">&#9670;&nbsp;</a></span>genImageFontAtlas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_rl_image.html">raylib::RlImage</a> raylib::ImageHelper::genImageFontAtlas </td>
+          <td>(</td>
+          <td class="paramtype">const GlyphInfo *&#160;</td>
+          <td class="paramname"><em>chars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle **&#160;</td>
+          <td class="paramname"><em>recs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glyphCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fontSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>padding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>packMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an image from font (custom sprite font) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chars</td><td>the chars </td></tr>
+    <tr><td class="paramname">recs</td><td>the recs </td></tr>
+    <tr><td class="paramname">glyphCount</td><td>the glyph count </td></tr>
+    <tr><td class="paramname">fontSize</td><td>the font size </td></tr>
+    <tr><td class="paramname">padding</td><td>the padding </td></tr>
+    <tr><td class="paramname">packMethod</td><td>the pack method </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the image </dd></dl>
 
 </div>
 </div>

@@ -1,0 +1,4 @@
+<map id="raylib::TextHelper::measureText" name="raylib::TextHelper::measureText">
+<area shape="rect" id="node1" title="Measure string width for custom font." alt="" coords="5,5,127,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_font.html#ab003195676abf66ccbcc47eeda366dee" title="Get the font size." alt="" coords="175,13,345,39"/>
+</map>

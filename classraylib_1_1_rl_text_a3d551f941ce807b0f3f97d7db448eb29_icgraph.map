@@ -1,0 +1,4 @@
+<map id="raylib::RlText::getColor" name="raylib::RlText::getColor">
+<area shape="rect" id="node1" title="Get the color of the text." alt="" coords="204,13,353,39"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_draw_text_helper.html#a1359fdf9278cfcdbca51f25db8ba718c" title="Draw text using RlText values." alt="" coords="5,5,156,47"/>
+</map>

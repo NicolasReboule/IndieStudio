@@ -1,0 +1,4 @@
+<map id="raylib::RlText::getFont" name="raylib::RlText::getFont">
+<area shape="rect" id="node1" title="Get the font." alt="" coords="204,13,349,39"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_draw_text_helper.html#a05ae79df16c13b047e7848fed6f796ab" title="Draw text using RlText and additional parameters." alt="" coords="5,5,156,47"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="raylib::VectorHelper::toVectorf" name="raylib::VectorHelper::toVectorf">
+<area shape="rect" id="node1" title="Convert a raylib vector to a Vector2f." alt="" coords="413,496,548,537"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_collision2_d_helper.html#ac6f6ffb1ee21e68de73f522183ad1fd4" title="Check the collision between two lines defined by two points each, returns collision point by referenc..." alt="" coords="199,5,360,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_color_helper.html#af53c62c1a3022c3ec08482a9d3b803d8" title="Returns HSV values for a Color, hue [0..360], saturation/value [0..1]." alt="" coords="216,71,343,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_touch_helper.html#a84ef6642b3ed7e8d92f71309f37f7f49" title="Get gesture drag vector." alt="" coords="201,136,358,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_touch_helper.html#af99e061ecc668a0140f879031560e2df" title="Get gesture pinch delta." alt="" coords="198,201,361,243"/>
+<area shape="rect" id="node6" href="$classraylib_1_1_system.html#a8895d9de62cfcbca6943a1fcd225b2e4" title="Get specified monitor position." alt="" coords="195,267,364,308"/>
+<area shape="rect" id="node7" href="$classraylib_1_1_mouse_helper.html#a3edd1954c4b6b39242d655fa61adf29c" title="Get mouse delta between frames." alt="" coords="212,332,347,373"/>
+<area shape="rect" id="node8" href="$classraylib_1_1_mouse_helper.html#a498d459af118174334984e9b174ea924" title="Get the mouse position." alt="" coords="212,397,347,439"/>
+<area shape="rect" id="node10" href="$classraylib_1_1_world_helper.html#a40433ea23e9658b95cdacd703eee0508" title="Get the world space position for a 2d camera screen space position." alt="" coords="204,463,355,504"/>
+<area shape="rect" id="node11" href="$classraylib_1_1_touch_helper.html#a214d056b6074343cdb6b20d06c0179fd" title="Get touch position XY for a touch point index (relative to screen size)" alt="" coords="213,528,345,569"/>
+<area shape="rect" id="node12" href="$classraylib_1_1_system.html#ac3773145b7209a265e287bf6eca80dc8" title="Get window position XY on monitor." alt="" coords="193,593,365,635"/>
+<area shape="rect" id="node13" href="$classraylib_1_1_system.html#abc39a3087dd480ac4360f1c43ad9eba4" title="Get window scale DPI factor." alt="" coords="193,659,365,700"/>
+<area shape="rect" id="node14" href="$classraylib_1_1_world_helper.html#a630eff662a04e4e4ea9e1292b1b21a20" title="Get the screen space position for a 3d world space position." alt="" coords="212,724,347,765"/>
+<area shape="rect" id="node15" href="$classraylib_1_1_world_helper.html#ade092d1dc5d40c966242bfaa9c7a4384" title="Get the screen space position for a 2d camera world space position." alt="" coords="204,789,355,831"/>
+<area shape="rect" id="node16" href="$classraylib_1_1_world_helper.html#aff44a45b06f8c612e5be45fdeb8b9047" title="Get size position for a 3d world space position." alt="" coords="205,855,354,896"/>
+<area shape="rect" id="node17" href="$classraylib_1_1_text_helper.html#a3e0759c662123c5d3ad07d6325176240" title="Measure string width for custom font." alt="" coords="219,920,340,961"/>
+<area shape="rect" id="node18" href="$classraylib_1_1_rl_color.html#a6c98dcc90e87113696d0d8933525d1be" title="Returns HSV values for a Color, hue [0..360], saturation/value [0..1]." alt="" coords="207,986,352,1013"/>
+<area shape="rect" id="node9" href="$class_game_engine_1_1_button.html#a49c379ba941ab46c3b886e6bdc302a62" title=" " alt="" coords="5,397,145,439"/>
+</map>

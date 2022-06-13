@@ -1,5 +1,5 @@
 <map id="raylib::ColorHelper::colorToHSV" name="raylib::ColorHelper::colorToHSV">
 <area shape="rect" id="node1" title="Returns HSV values for a Color, hue [0..360], saturation/value [0..1]." alt="" coords="5,27,132,69"/>
 <area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="180,5,335,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#a8cb9b9c972dc4b95ee1c1297542bba10" title=" " alt="" coords="190,57,325,98"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#a90b0bf4a19c18db480f26d697bd2c2fe" title="Convert a raylib vector to a Vector2f." alt="" coords="190,57,325,98"/>
 </map>

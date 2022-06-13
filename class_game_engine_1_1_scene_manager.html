@@ -81,7 +81,7 @@ Collaboration diagram for GameEngine::SceneManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_engine_1_1_scene_manager__coll__graph.png" border="0" usemap="#a_game_engine_1_1_scene_manager_coll__map" alt="Collaboration graph"/></div>
 <map name="a_game_engine_1_1_scene_manager_coll__map" id="a_game_engine_1_1_scene_manager_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,195,200"/>
+<area shape="rect" title=" " alt="" coords="5,5,195,244"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -91,10 +91,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa598387bda30388762c648c5d1d792fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02f6ebe0d419ae0f1af453dbe1eb3174"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#a02f6ebe0d419ae0f1af453dbe1eb3174">~SceneManager</a> ()=default</td></tr>
 <tr class="separator:a02f6ebe0d419ae0f1af453dbe1eb3174"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2840bf96571e131707fa87f26fe0a829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#a2840bf96571e131707fa87f26fe0a829">changeScene</a> (const std::string &amp;newScene)</td></tr>
-<tr class="separator:a2840bf96571e131707fa87f26fe0a829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a4323c9224561838f71e4a3c4cbe63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#ad8a4323c9224561838f71e4a3c4cbe63">changeScene</a> (const std::string &amp;scene)</td></tr>
+<tr class="separator:ad8a4323c9224561838f71e4a3c4cbe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0457698e0beb0b8b3ccc15a1bfa1526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#ae0457698e0beb0b8b3ccc15a1bfa1526">addScene</a> (const std::shared_ptr&lt; <a class="el" href="class_game_engine_1_1_scene.html">GameEngine::Scene</a> &gt; &amp;scene)</td></tr>
 <tr class="separator:ae0457698e0beb0b8b3ccc15a1bfa1526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36db27f8af89c703e23819f5e2c0bcf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#a36db27f8af89c703e23819f5e2c0bcf6">deleteScene</a> (const std::string &amp;scene)</td></tr>
+<tr class="separator:a36db27f8af89c703e23819f5e2c0bcf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb439d08f0c541d2e9307e3d920b1d46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#abb439d08f0c541d2e9307e3d920b1d46">makeLoop</a> (<a class="el" href="classraylib_1_1_rl_camera.html">raylib::RlCamera</a> camera)</td></tr>
+<tr class="separator:abb439d08f0c541d2e9307e3d920b1d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c76ca78b2507c5a72538c1ce36c7c5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_game_engine_1_1_base.html">GameEngine::Base</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#a67c76ca78b2507c5a72538c1ce36c7c5">getNode</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a67c76ca78b2507c5a72538c1ce36c7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad48093e2ddf3b30a4db088c9958870c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#ad48093e2ddf3b30a4db088c9958870c1">update</a> ()</td></tr>
 <tr class="separator:ad48093e2ddf3b30a4db088c9958870c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25782204989bff31992f622733bc4220"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220">drawAll</a> (<a class="el" href="classraylib_1_1_rl_camera.html">raylib::RlCamera</a> camera)</td></tr>
@@ -179,8 +185,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2840bf96571e131707fa87f26fe0a829" name="a2840bf96571e131707fa87f26fe0a829"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2840bf96571e131707fa87f26fe0a829">&#9670;&nbsp;</a></span>changeScene()</h2>
+<a id="ad8a4323c9224561838f71e4a3c4cbe63" name="ad8a4323c9224561838f71e4a3c4cbe63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a4323c9224561838f71e4a3c4cbe63">&#9670;&nbsp;</a></span>changeScene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +195,25 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">void GameEngine::SceneManager::changeScene </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>newScene</em></td><td>)</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36db27f8af89c703e23819f5e2c0bcf6" name="a36db27f8af89c703e23819f5e2c0bcf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36db27f8af89c703e23819f5e2c0bcf6">&#9670;&nbsp;</a></span>deleteScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::SceneManager::deleteScene </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -251,14 +275,15 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_engine_1_1_scene_manager_a25782204989bff31992f622733bc4220_cgraph.png" border="0" usemap="#aclass_game_engine_1_1_scene_manager_a25782204989bff31992f622733bc4220_cgraph" alt=""/></div>
 <map name="aclass_game_engine_1_1_scene_manager_a25782204989bff31992f622733bc4220_cgraph" id="aclass_game_engine_1_1_scene_manager_a25782204989bff31992f622733bc4220_cgraph">
-<area shape="rect" title=" " alt="" coords="5,201,195,243"/>
+<area shape="rect" title=" " alt="" coords="5,169,195,211"/>
 <area shape="rect" href="classraylib_1_1_draw_helper.html#a8fbcb61d594a80294767d198573d5d43" title="Setup canvas (framebuffer) to start drawing." alt="" coords="275,5,401,47"/>
-<area shape="rect" href="classraylib_1_1_draw_helper.html#a6bb3580ad5bfc5249719f8a1b6e6cf34" title="Begin 3D mode with custom camera (3D)" alt="" coords="275,71,401,112"/>
-<area shape="rect" href="classraylib_1_1_draw_helper.html#af375164c108b3abbb67619f80653061e" title="Set background color (framebuffer clear color)" alt="" coords="275,136,401,177"/>
+<area shape="rect" href="classraylib_1_1_draw_helper.html#a82d269f2ef4c715adf42c7d5606d26d6" title="Begin 3D mode with custom camera (3D)" alt="" coords="275,71,401,112"/>
+<area shape="rect" href="classraylib_1_1_draw_helper.html#aafee6a78b4a40af61eae8cd325ab1bc2" title="Set background color (framebuffer clear color)" alt="" coords="275,136,401,177"/>
 <area shape="rect" href="classraylib_1_1_draw_helper.html#abdaef2c6dbd9f1a847a716c8e1c6cd4c" title="End canvas drawing and swap buffers (double buffering)" alt="" coords="275,201,401,243"/>
 <area shape="rect" href="classraylib_1_1_draw_helper.html#a4789bdb5518fcf1f039e138258276232" title="Ends 3D mode and returns to default 2D orthographic mode." alt="" coords="275,267,401,308"/>
-<area shape="rect" href="classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="269,333,407,359"/>
-<area shape="rect" href="classraylib_1_1_rl_window.html#affcaa5e736423a95f7dfde72b652eec9" title=" " alt="" coords="243,383,433,410"/>
+<area shape="rect" href="classraylib_1_1_rl_window.html#affcaa5e736423a95f7dfde72b652eec9" title=" " alt="" coords="243,333,433,359"/>
+<area shape="rect" href="classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="489,78,628,105"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="481,143,636,170"/>
 </map>
 </div>
 
@@ -285,6 +310,42 @@ Here is the call graph for this function:</div>
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67c76ca78b2507c5a72538c1ce36c7c5" name="a67c76ca78b2507c5a72538c1ce36c7c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c76ca78b2507c5a72538c1ce36c7c5">&#9670;&nbsp;</a></span>getNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_game_engine_1_1_base.html">GameEngine::Base</a> &gt; GameEngine::SceneManager::getNode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb439d08f0c541d2e9307e3d920b1d46" name="abb439d08f0c541d2e9307e3d920b1d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb439d08f0c541d2e9307e3d920b1d46">&#9670;&nbsp;</a></span>makeLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::SceneManager::makeLoop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_rl_camera.html">raylib::RlCamera</a>&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>

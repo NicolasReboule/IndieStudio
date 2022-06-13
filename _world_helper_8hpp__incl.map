@@ -1,9 +1,9 @@
 <map id="raylib&#45;cpp/include/raylib/Core/WorldHelper.hpp" name="raylib&#45;cpp/include/raylib/Core/WorldHelper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="141,5,328,47"/>
-<area shape="rect" id="node2" href="$_rl_camera_8hpp.html" title=" " alt="" coords="76,95,262,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="192,393,255,420"/>
-<area shape="rect" id="node3" href="$_math_8hpp.html" title=" " alt="" coords="62,169,172,196"/>
-<area shape="rect" id="node4" href="$_vector_8hpp.html" title=" " alt="" coords="10,319,160,345"/>
-<area shape="rect" id="node7" href="$_vector_helper_8hpp.html" title=" " alt="" coords="22,244,212,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="49,393,121,420"/>
+<area shape="rect" id="node1" title=" " alt="" coords="170,5,357,47"/>
+<area shape="rect" id="node2" href="$_rl_camera_8hpp.html" title=" " alt="" coords="105,95,291,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="247,319,309,345"/>
+<area shape="rect" id="node3" href="$_math_8hpp.html" title=" " alt="" coords="91,169,201,196"/>
+<area shape="rect" id="node4" href="$_vector_8hpp.html" title=" " alt="" coords="5,319,156,345"/>
+<area shape="rect" id="node6" href="$_vector_helper_8hpp.html" title=" " alt="" coords="51,244,241,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="45,393,117,420"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="raylib::TextHelper::getGlyphAtlasRec" name="raylib::TextHelper::getGlyphAtlasRec">
+<area shape="rect" id="node1" title="Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to &#39;?..." alt="" coords="5,5,137,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_font.html#af11828f1c3a912fd8b1707a56279074d" title="Get the raylib font." alt="" coords="185,13,332,39"/>
+</map>

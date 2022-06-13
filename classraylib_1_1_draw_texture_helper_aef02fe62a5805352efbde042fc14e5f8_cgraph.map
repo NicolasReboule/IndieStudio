@@ -1,0 +1,8 @@
+<map id="raylib::DrawTextureHelper::drawTexturePoly" name="raylib::DrawTextureHelper::drawTexturePoly">
+<area shape="rect" id="node1" title="Draw a textured polygon." alt="" coords="5,99,175,141"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_texture.html#a251ba675de3e15d6eabdab746c82aed0" title="Get the texture." alt="" coords="233,5,371,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_color.html#a44e715dff28071efb80c36e406d9623c" title="Get the alpha value." alt="" coords="223,56,381,83"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#ae179088e49f67a1d1ea8fa79bf9c6452" title="Get the blue value." alt="" coords="227,107,377,133"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_rl_color.html#a4d75d7942d1624641283eb836cac3d3e" title="Get the green value." alt="" coords="223,157,381,184"/>
+<area shape="rect" id="node6" href="$classraylib_1_1_rl_color.html#add7bc62493866b7239f55bacaef681b6" title="Get the red value." alt="" coords="229,208,375,235"/>
+</map>

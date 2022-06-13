@@ -80,7 +80,7 @@ Collaboration diagram for GameEngine::Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_engine_1_1_scene__coll__graph.png" border="0" usemap="#a_game_engine_1_1_scene_coll__map" alt="Collaboration graph"/></div>
 <map name="a_game_engine_1_1_scene_coll__map" id="a_game_engine_1_1_scene_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,144,215"/>
+<area shape="rect" title=" " alt="" coords="5,5,144,229"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -88,12 +88,14 @@ Collaboration diagram for GameEngine::Scene:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a83754eb2dc80641d25ace1d31e9e071d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#a83754eb2dc80641d25ace1d31e9e071d">Scene</a> (std::string name=&quot;empty&quot;, std::string sceneSource=&quot;empty&quot;)</td></tr>
 <tr class="separator:a83754eb2dc80641d25ace1d31e9e071d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cd476554133d69d35ea9cf17ee1701c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#a1cd476554133d69d35ea9cf17ee1701c">~Scene</a> ()=default</td></tr>
-<tr class="separator:a1cd476554133d69d35ea9cf17ee1701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c8f0eedb152a7e7f6fc76e04b00084"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#ab2c8f0eedb152a7e7f6fc76e04b00084">~Scene</a> ()=default</td></tr>
+<tr class="separator:ab2c8f0eedb152a7e7f6fc76e04b00084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeecb672e2f8f558d485623fd15036664"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#aeecb672e2f8f558d485623fd15036664">sceneLauncher</a> ()=0</td></tr>
 <tr class="separator:aeecb672e2f8f558d485623fd15036664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50d854e87dd6a3dc7fc707f9fbb2d6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#a50d854e87dd6a3dc7fc707f9fbb2d6e4">addNode</a> (const std::shared_ptr&lt; <a class="el" href="class_game_engine_1_1_base.html">GameEngine::Base</a> &gt; &amp;node)</td></tr>
 <tr class="separator:a50d854e87dd6a3dc7fc707f9fbb2d6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b37ed2be9b1420909591b5682fc73c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_game_engine_1_1_base.html">GameEngine::Base</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#a00b37ed2be9b1420909591b5682fc73c">getNode</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a00b37ed2be9b1420909591b5682fc73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf79a85eb00f6cbd76ad1834c0b0b96e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#aaf79a85eb00f6cbd76ad1834c0b0b96e">getName</a> ()</td></tr>
 <tr class="separator:aaf79a85eb00f6cbd76ad1834c0b0b96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb766fd713d94366c4437aa605521ac7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_scene.html#adb766fd713d94366c4437aa605521ac7">getSceneSource</a> ()</td></tr>
@@ -113,6 +115,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GameEngine::Scene::Scene </td>
@@ -132,12 +137,17 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1cd476554133d69d35ea9cf17ee1701c" name="a1cd476554133d69d35ea9cf17ee1701c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cd476554133d69d35ea9cf17ee1701c">&#9670;&nbsp;</a></span>~Scene()</h2>
+<a id="ab2c8f0eedb152a7e7f6fc76e04b00084" name="ab2c8f0eedb152a7e7f6fc76e04b00084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c8f0eedb152a7e7f6fc76e04b00084">&#9670;&nbsp;</a></span>~Scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +156,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GameEngine::Scene::~Scene </td>
+          <td class="memname">virtual GameEngine::Scene::~Scene </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -154,7 +164,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -242,6 +252,24 @@ Here is the call graph for this function:</div>
           <td class="memname">std::string GameEngine::Scene::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00b37ed2be9b1420909591b5682fc73c" name="a00b37ed2be9b1420909591b5682fc73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b37ed2be9b1420909591b5682fc73c">&#9670;&nbsp;</a></span>getNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_game_engine_1_1_base.html">GameEngine::Base</a> &gt; GameEngine::Scene::getNode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

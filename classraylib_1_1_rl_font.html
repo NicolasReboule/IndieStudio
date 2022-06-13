@@ -74,58 +74,57 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Font class.  
+ <a href="classraylib_1_1_rl_font.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_rl_font_8hpp_source.html">RlFont.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::RlFont:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_rl_font__coll__graph.png" border="0" usemap="#araylib_1_1_rl_font_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_rl_font_coll__map" id="araylib_1_1_rl_font_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,160,332"/>
+<area shape="rect" title="Font class." alt="" coords="5,5,117,215"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8378cf4a885a268d996d8333315d3547"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a8378cf4a885a268d996d8333315d3547">RlFont</a> ()</td></tr>
+<tr class="memdesc:a8378cf4a885a268d996d8333315d3547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using default parameters.  <a href="classraylib_1_1_rl_font.html#a8378cf4a885a268d996d8333315d3547">More...</a><br /></td></tr>
 <tr class="separator:a8378cf4a885a268d996d8333315d3547"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4bff443c89f03fef5c4185cf946111a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#ab4bff443c89f03fef5c4185cf946111a">RlFont</a> (Font font, float fontSize=10, float textSpacing=1)</td></tr>
-<tr class="separator:ab4bff443c89f03fef5c4185cf946111a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcf4c6d7ffb2681f03f7376fef53fcf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#adcf4c6d7ffb2681f03f7376fef53fcf0">RlFont</a> (const <a class="el" href="classraylib_1_1_rl_font.html">RlFont</a> &amp;font)</td></tr>
-<tr class="separator:adcf4c6d7ffb2681f03f7376fef53fcf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9537f209b9f320b148aa42972377ab92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a9537f209b9f320b148aa42972377ab92">RlFont</a> (const std::string &amp;fileName, float fontSize=10, float textSpacing=1)</td></tr>
-<tr class="separator:a9537f209b9f320b148aa42972377ab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab225ee99ef36d9e7dd3556d238bb57a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#ab225ee99ef36d9e7dd3556d238bb57a9">RlFont</a> (const std::string &amp;fileName, int fontSize, int *fontChars, int glyphCount, float realfontSize=10, float textSpacing=1)</td></tr>
-<tr class="separator:ab225ee99ef36d9e7dd3556d238bb57a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099f3206b98d884578a038035db21a6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a099f3206b98d884578a038035db21a6c">RlFont</a> (Image image, Color key, int firstChar, float fontSize=10, float textSpacing=1)</td></tr>
-<tr class="separator:a099f3206b98d884578a038035db21a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6649cd1261fda382d33d0dd276fe0de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#af6649cd1261fda382d33d0dd276fe0de">RlFont</a> (const std::string &amp;fileType, const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, float realfontSize=10, float textSpacing=1)</td></tr>
-<tr class="separator:af6649cd1261fda382d33d0dd276fe0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55073a2395ca9046471994b63112b86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#ac55073a2395ca9046471994b63112b86">RlFont</a> (const std::string &amp;fontPath)</td></tr>
+<tr class="memdesc:ac55073a2395ca9046471994b63112b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using a font path Load font from file into GPU memory (VRAM)  <a href="classraylib_1_1_rl_font.html#ac55073a2395ca9046471994b63112b86">More...</a><br /></td></tr>
+<tr class="separator:ac55073a2395ca9046471994b63112b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f8dac80ebf783e3b801cbe241521a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a86f8dac80ebf783e3b801cbe241521a2">RlFont</a> (const int &amp;fontSize)</td></tr>
+<tr class="memdesc:a86f8dac80ebf783e3b801cbe241521a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, with custom font size.  <a href="classraylib_1_1_rl_font.html#a86f8dac80ebf783e3b801cbe241521a2">More...</a><br /></td></tr>
+<tr class="separator:a86f8dac80ebf783e3b801cbe241521a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada29bb3f3459b61ae08566d36f9f38cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#ada29bb3f3459b61ae08566d36f9f38cd">RlFont</a> (const std::string &amp;fontPath, const int &amp;fontSize=20, int *fontChars=nullptr, const int &amp;glyphCount=0)</td></tr>
+<tr class="memdesc:ada29bb3f3459b61ae08566d36f9f38cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using a font path and a font size Load font from file with extended parameters.  <a href="classraylib_1_1_rl_font.html#ada29bb3f3459b61ae08566d36f9f38cd">More...</a><br /></td></tr>
+<tr class="separator:ada29bb3f3459b61ae08566d36f9f38cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c375df755ab444d7362999ad33c6181"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a7c375df755ab444d7362999ad33c6181">RlFont</a> (const <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a> &amp;image, const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;key, const int &amp;firstChar)</td></tr>
+<tr class="memdesc:a7c375df755ab444d7362999ad33c6181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using an iamge, key color and first character Load font from Image (XNA style)  <a href="classraylib_1_1_rl_font.html#a7c375df755ab444d7362999ad33c6181">More...</a><br /></td></tr>
+<tr class="separator:a7c375df755ab444d7362999ad33c6181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575570d0e135ce0b31aa946ccd08d649"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a575570d0e135ce0b31aa946ccd08d649">RlFont</a> (const std::string &amp;fileType, const unsigned char *fileData, int dataSize, const int &amp;fontSize=20, int *fontChars=nullptr, const int &amp;glyphCount=0)</td></tr>
+<tr class="memdesc:a575570d0e135ce0b31aa946ccd08d649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using a file type and a file data Load font from memory buffer, fileType refers to extension: i.e. '.ttf'.  <a href="classraylib_1_1_rl_font.html#a575570d0e135ce0b31aa946ccd08d649">More...</a><br /></td></tr>
+<tr class="separator:a575570d0e135ce0b31aa946ccd08d649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c29c250004ce4a30f43a95d58f7f0cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a4c29c250004ce4a30f43a95d58f7f0cf">~RlFont</a> ()</td></tr>
+<tr class="memdesc:a4c29c250004ce4a30f43a95d58f7f0cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>.  <a href="classraylib_1_1_rl_font.html#a4c29c250004ce4a30f43a95d58f7f0cf">More...</a><br /></td></tr>
 <tr class="separator:a4c29c250004ce4a30f43a95d58f7f0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80bc0328f4549c32e73c54d600772e78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_font.html">RlFont</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a80bc0328f4549c32e73c54d600772e78">operator=</a> (const <a class="el" href="classraylib_1_1_rl_font.html">RlFont</a> &amp;font)</td></tr>
-<tr class="separator:a80bc0328f4549c32e73c54d600772e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5575a072a1ae7dea8d9580ecd8603671"><td class="memItemLeft" align="right" valign="top">GlyphInfo *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a5575a072a1ae7dea8d9580ecd8603671">loadFontData</a> (const unsigned char *fileData, int dataSize, int fontSize, int *fontChars, int glyphCount, int type)</td></tr>
-<tr class="separator:a5575a072a1ae7dea8d9580ecd8603671"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17cfb2bf8639b4a1017fd5d378f38e48"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a17cfb2bf8639b4a1017fd5d378f38e48">genImageFontAtlas</a> (const GlyphInfo *chars, Rectangle **recs, int glyphCount, int fontSize, int padding, int packMethod)</td></tr>
-<tr class="separator:a17cfb2bf8639b4a1017fd5d378f38e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3709be9dcbf0ac2be9b52471c2ba2ab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a3709be9dcbf0ac2be9b52471c2ba2ab5">unloadFontData</a> (GlyphInfo *chars, int glyphCount)</td></tr>
-<tr class="separator:a3709be9dcbf0ac2be9b52471c2ba2ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae87f9e330c08e3454040860690f936f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#ae87f9e330c08e3454040860690f936f9">setFontSize</a> (float fontSize)</td></tr>
-<tr class="separator:ae87f9e330c08e3454040860690f936f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2a7d9fb873da5ea6ad4d1671fa1cd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#ae2a7d9fb873da5ea6ad4d1671fa1cd09">setTextSpacing</a> (float textSpacing)</td></tr>
-<tr class="separator:ae2a7d9fb873da5ea6ad4d1671fa1cd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a283c2d6c7b2082d598cd416ad01b1182"><td class="memItemLeft" align="right" valign="top">Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a283c2d6c7b2082d598cd416ad01b1182">getFont</a> () const</td></tr>
-<tr class="separator:a283c2d6c7b2082d598cd416ad01b1182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2fbe54a4c4fc563db35ef66602816aa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#af2fbe54a4c4fc563db35ef66602816aa">getFontPath</a> () const</td></tr>
-<tr class="separator:af2fbe54a4c4fc563db35ef66602816aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3118bcec085ee9c202f657a4cf400146"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a3118bcec085ee9c202f657a4cf400146">getFontSize</a> () const</td></tr>
-<tr class="separator:a3118bcec085ee9c202f657a4cf400146"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46c26028dbf3b4b1b115818a7c7b87eb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#a46c26028dbf3b4b1b115818a7c7b87eb">getTextSpacing</a> () const</td></tr>
-<tr class="separator:a46c26028dbf3b4b1b115818a7c7b87eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11828f1c3a912fd8b1707a56279074d"><td class="memItemLeft" align="right" valign="top">const Font &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#af11828f1c3a912fd8b1707a56279074d">getFont</a> () const</td></tr>
+<tr class="memdesc:af11828f1c3a912fd8b1707a56279074d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the raylib font.  <a href="classraylib_1_1_rl_font.html#af11828f1c3a912fd8b1707a56279074d">More...</a><br /></td></tr>
+<tr class="separator:af11828f1c3a912fd8b1707a56279074d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8be5c896146329bef7b5a23bf39025"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#add8be5c896146329bef7b5a23bf39025">getFontPath</a> () const</td></tr>
+<tr class="memdesc:add8be5c896146329bef7b5a23bf39025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the font path.  <a href="classraylib_1_1_rl_font.html#add8be5c896146329bef7b5a23bf39025">More...</a><br /></td></tr>
+<tr class="separator:add8be5c896146329bef7b5a23bf39025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab003195676abf66ccbcc47eeda366dee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_font.html#ab003195676abf66ccbcc47eeda366dee">getFontSize</a> () const</td></tr>
+<tr class="memdesc:ab003195676abf66ccbcc47eeda366dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the font size.  <a href="classraylib_1_1_rl_font.html#ab003195676abf66ccbcc47eeda366dee">More...</a><br /></td></tr>
+<tr class="separator:ab003195676abf66ccbcc47eeda366dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Font class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8378cf4a885a268d996d8333315d3547" name="a8378cf4a885a268d996d8333315d3547"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8378cf4a885a268d996d8333315d3547">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8378cf4a885a268d996d8333315d3547">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,78 +138,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ab4bff443c89f03fef5c4185cf946111a" name="ab4bff443c89f03fef5c4185cf946111a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4bff443c89f03fef5c4185cf946111a">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[2/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">raylib::RlFont::RlFont </td>
-          <td>(</td>
-          <td class="paramtype">Font&#160;</td>
-          <td class="paramname"><em>font</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fontSize</em> = <code>10</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>textSpacing</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using default parameters. </p>
 
 </div>
 </div>
-<a id="adcf4c6d7ffb2681f03f7376fef53fcf0" name="adcf4c6d7ffb2681f03f7376fef53fcf0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcf4c6d7ffb2681f03f7376fef53fcf0">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[3/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">raylib::RlFont::RlFont </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_font.html">RlFont</a> &amp;&#160;</td>
-          <td class="paramname"><em>font</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9537f209b9f320b148aa42972377ab92" name="a9537f209b9f320b148aa42972377ab92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9537f209b9f320b148aa42972377ab92">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[4/7]</span></h2>
+<a id="ac55073a2395ca9046471994b63112b86" name="ac55073a2395ca9046471994b63112b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55073a2395ca9046471994b63112b86">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,24 +155,8 @@ Public Member Functions</h2></td></tr>
           <td class="memname">raylib::RlFont::RlFont </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>fontPath</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fontSize</em> = <code>10</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>textSpacing</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -249,10 +166,52 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using a font path Load font from file into GPU memory (VRAM) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>the font path </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ab225ee99ef36d9e7dd3556d238bb57a9" name="ab225ee99ef36d9e7dd3556d238bb57a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab225ee99ef36d9e7dd3556d238bb57a9">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[5/7]</span></h2>
+<a id="a86f8dac80ebf783e3b801cbe241521a2" name="a86f8dac80ebf783e3b801cbe241521a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f8dac80ebf783e3b801cbe241521a2">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::RlFont::RlFont </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>fontSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, with custom font size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontSize</td><td>the font size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada29bb3f3459b61ae08566d36f9f38cd" name="ada29bb3f3459b61ae08566d36f9f38cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada29bb3f3459b61ae08566d36f9f38cd">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,37 +223,25 @@ Public Member Functions</h2></td></tr>
           <td class="memname">raylib::RlFont::RlFont </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em>, </td>
+          <td class="paramname"><em>fontPath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fontSize</em>, </td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>fontSize</em> = <code>20</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>fontChars</em>, </td>
+          <td class="paramname"><em>fontChars</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glyphCount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>realfontSize</em> = <code>10</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>textSpacing</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>glyphCount</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -309,10 +256,21 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using a font path and a font size Load font from file with extended parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontPath</td><td>the font path </td></tr>
+    <tr><td class="paramname">fontSize</td><td>the font size </td></tr>
+    <tr><td class="paramname">fontChars</td><td>the font characters </td></tr>
+    <tr><td class="paramname">glyphCount</td><td>the glyph count </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a099f3206b98d884578a038035db21a6c" name="a099f3206b98d884578a038035db21a6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a099f3206b98d884578a038035db21a6c">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[6/7]</span></h2>
+<a id="a7c375df755ab444d7362999ad33c6181" name="a7c375df755ab444d7362999ad33c6181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c375df755ab444d7362999ad33c6181">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,32 +281,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">raylib::RlFont::RlFont </td>
           <td>(</td>
-          <td class="paramtype">Image&#160;</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a> &amp;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Color&#160;</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_color.html">RlColor</a> &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>firstChar</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fontSize</em> = <code>10</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>textSpacing</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>firstChar</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -363,10 +309,30 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using an iamge, key color and first character Load font from Image (XNA style) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>the image </td></tr>
+    <tr><td class="paramname">key</td><td>the key color </td></tr>
+    <tr><td class="paramname">firstChar</td><td>the first character </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_font_a7c375df755ab444d7362999ad33c6181_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_font_a7c375df755ab444d7362999ad33c6181_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_font_a7c375df755ab444d7362999ad33c6181_cgraph" id="aclassraylib_1_1_rl_font_a7c375df755ab444d7362999ad33c6181_cgraph">
+<area shape="rect" title="Create a RlFont, using an iamge, key color and first character Load font from Image (XNA style)" alt="" coords="5,31,145,57"/>
+<area shape="rect" href="classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="199,5,354,32"/>
+<area shape="rect" href="classraylib_1_1_rl_image.html#ac6b5367fe5b7a7ea87880c6d136ce743" title="Get the image (const)" alt="" coords="193,56,360,83"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="af6649cd1261fda382d33d0dd276fe0de" name="af6649cd1261fda382d33d0dd276fe0de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6649cd1261fda382d33d0dd276fe0de">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[7/7]</span></h2>
+<a id="a575570d0e135ce0b31aa946ccd08d649" name="a575570d0e135ce0b31aa946ccd08d649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575570d0e135ce0b31aa946ccd08d649">&#9670;&nbsp;</a></span>RlFont() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,32 +361,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fontSize</em>, </td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>fontSize</em> = <code>20</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>fontChars</em>, </td>
+          <td class="paramname"><em>fontChars</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glyphCount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>realfontSize</em> = <code>10</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>textSpacing</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>glyphCount</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -434,6 +388,19 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Create a <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>, using a file type and a file data Load font from memory buffer, fileType refers to extension: i.e. '.ttf'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileType</td><td>the file type (ttf, otf) </td></tr>
+    <tr><td class="paramname">fileData</td><td>the file data </td></tr>
+    <tr><td class="paramname">dataSize</td><td>the data size </td></tr>
+    <tr><td class="paramname">fontSize</td><td>the font size </td></tr>
+    <tr><td class="paramname">fontChars</td><td>the font characters </td></tr>
+    <tr><td class="paramname">glyphCount</td><td>the glyph count </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -452,321 +419,93 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destroy the <a class="el" href="classraylib_1_1_rl_font.html" title="Font class.">RlFont</a>. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a17cfb2bf8639b4a1017fd5d378f38e48" name="a17cfb2bf8639b4a1017fd5d378f38e48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17cfb2bf8639b4a1017fd5d378f38e48">&#9670;&nbsp;</a></span>genImageFontAtlas()</h2>
+<a id="af11828f1c3a912fd8b1707a56279074d" name="af11828f1c3a912fd8b1707a56279074d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11828f1c3a912fd8b1707a56279074d">&#9670;&nbsp;</a></span>getFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Image raylib::RlFont::genImageFontAtlas </td>
-          <td>(</td>
-          <td class="paramtype">const GlyphInfo *&#160;</td>
-          <td class="paramname"><em>chars</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Rectangle **&#160;</td>
-          <td class="paramname"><em>recs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glyphCount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fontSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>padding</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>packMethod</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a283c2d6c7b2082d598cd416ad01b1182" name="a283c2d6c7b2082d598cd416ad01b1182"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a283c2d6c7b2082d598cd416ad01b1182">&#9670;&nbsp;</a></span>getFont()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Font raylib::RlFont::getFont </td>
+          <td class="memname">const Font &amp; raylib::RlFont::getFont </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Get the raylib font. </p>
+<dl class="section return"><dt>Returns</dt><dd>the raylib font </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_rl_font_a283c2d6c7b2082d598cd416ad01b1182_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_font_a283c2d6c7b2082d598cd416ad01b1182_icgraph" alt=""/></div>
-<map name="aclassraylib_1_1_rl_font_a283c2d6c7b2082d598cd416ad01b1182_icgraph" id="aclassraylib_1_1_rl_font_a283c2d6c7b2082d598cd416ad01b1182_icgraph">
-<area shape="rect" title=" " alt="" coords="216,78,363,105"/>
+<div class="center"><img src="classraylib_1_1_rl_font_af11828f1c3a912fd8b1707a56279074d_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_font_af11828f1c3a912fd8b1707a56279074d_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_font_af11828f1c3a912fd8b1707a56279074d_icgraph" id="aclassraylib_1_1_rl_font_af11828f1c3a912fd8b1707a56279074d_icgraph">
+<area shape="rect" title="Get the raylib font." alt="" coords="216,209,363,235"/>
 <area shape="rect" href="classraylib_1_1_image_draw_helper.html#ad2da82d25c8c0ef7d9d04b9caa391b0d" title="Draw text (custom sprite font) within an image (destination)" alt="" coords="5,5,168,47"/>
-<area shape="rect" href="classraylib_1_1_text_helper.html#abd8f8653c816f8dd885187581da32d14" title=" " alt="" coords="26,71,147,112"/>
+<area shape="rect" href="classraylib_1_1_draw_text_helper.html#ad99c4008b3143f0fd9225a73295c8200" title="Draw text using font and additional parameters." alt="" coords="11,71,162,112"/>
 <area shape="rect" href="classraylib_1_1_image_helper.html#a93e9ae4b0c2198194891f066cc8d1e30" title="Create an image from text (custom sprite font)" alt="" coords="21,136,153,177"/>
+<area shape="rect" href="classraylib_1_1_text_helper.html#abc6dbe0975c17ff8ede31240aff7dc17" title="Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to &#39;?..." alt="" coords="21,201,153,243"/>
+<area shape="rect" href="classraylib_1_1_text_helper.html#ada95b41d60634e9d8a068d87377a276b" title="Get glyph index position in font for a codepoint (unicode character), fallback to &#39;?..." alt="" coords="26,267,147,308"/>
+<area shape="rect" href="classraylib_1_1_text_helper.html#ae923752711d59563f9481d4e87b95065" title="Get glyph font info data for a codepoint (unicode character), fallback to &#39;?&#39; if not found." alt="" coords="26,332,147,373"/>
+<area shape="rect" href="classraylib_1_1_text_helper.html#a3e0759c662123c5d3ad07d6325176240" title="Measure string width for custom font." alt="" coords="26,397,147,439"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="af2fbe54a4c4fc563db35ef66602816aa" name="af2fbe54a4c4fc563db35ef66602816aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2fbe54a4c4fc563db35ef66602816aa">&#9670;&nbsp;</a></span>getFontPath()</h2>
+<a id="add8be5c896146329bef7b5a23bf39025" name="add8be5c896146329bef7b5a23bf39025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8be5c896146329bef7b5a23bf39025">&#9670;&nbsp;</a></span>getFontPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string raylib::RlFont::getFontPath </td>
+          <td class="memname">const std::string &amp; raylib::RlFont::getFontPath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Get the font path. </p>
+<dl class="section return"><dt>Returns</dt><dd>the font path </dd></dl>
 
 </div>
 </div>
-<a id="a3118bcec085ee9c202f657a4cf400146" name="a3118bcec085ee9c202f657a4cf400146"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3118bcec085ee9c202f657a4cf400146">&#9670;&nbsp;</a></span>getFontSize()</h2>
+<a id="ab003195676abf66ccbcc47eeda366dee" name="ab003195676abf66ccbcc47eeda366dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab003195676abf66ccbcc47eeda366dee">&#9670;&nbsp;</a></span>getFontSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float raylib::RlFont::getFontSize </td>
+          <td class="memname">int raylib::RlFont::getFontSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Get the font size. </p>
+<dl class="section return"><dt>Returns</dt><dd>the font size </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_rl_font_a3118bcec085ee9c202f657a4cf400146_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_font_a3118bcec085ee9c202f657a4cf400146_icgraph" alt=""/></div>
-<map name="aclassraylib_1_1_rl_font_a3118bcec085ee9c202f657a4cf400146_icgraph" id="aclassraylib_1_1_rl_font_a3118bcec085ee9c202f657a4cf400146_icgraph">
-<area shape="rect" title=" " alt="" coords="175,13,345,39"/>
-<area shape="rect" href="classraylib_1_1_text_helper.html#abd8f8653c816f8dd885187581da32d14" title=" " alt="" coords="5,5,127,47"/>
+<div class="center"><img src="classraylib_1_1_rl_font_ab003195676abf66ccbcc47eeda366dee_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_font_ab003195676abf66ccbcc47eeda366dee_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_font_ab003195676abf66ccbcc47eeda366dee_icgraph" id="aclassraylib_1_1_rl_font_ab003195676abf66ccbcc47eeda366dee_icgraph">
+<area shape="rect" title="Get the font size." alt="" coords="204,46,375,73"/>
+<area shape="rect" href="classraylib_1_1_draw_text_helper.html#ab800b03944857881ab81dfd802b10f81" title="Draw text using font and additional parameters." alt="" coords="5,5,156,47"/>
+<area shape="rect" href="classraylib_1_1_text_helper.html#a518145f0d9f55e657dc4a3cf3a96ead8" title="Measure string width for custom font." alt="" coords="20,71,141,112"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a46c26028dbf3b4b1b115818a7c7b87eb" name="a46c26028dbf3b4b1b115818a7c7b87eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46c26028dbf3b4b1b115818a7c7b87eb">&#9670;&nbsp;</a></span>getTextSpacing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float raylib::RlFont::getTextSpacing </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_rl_font_a46c26028dbf3b4b1b115818a7c7b87eb_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_font_a46c26028dbf3b4b1b115818a7c7b87eb_icgraph" alt=""/></div>
-<map name="aclassraylib_1_1_rl_font_a46c26028dbf3b4b1b115818a7c7b87eb_icgraph" id="aclassraylib_1_1_rl_font_a46c26028dbf3b4b1b115818a7c7b87eb_icgraph">
-<area shape="rect" title=" " alt="" coords="175,13,367,39"/>
-<area shape="rect" href="classraylib_1_1_text_helper.html#abd8f8653c816f8dd885187581da32d14" title=" " alt="" coords="5,5,127,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a5575a072a1ae7dea8d9580ecd8603671" name="a5575a072a1ae7dea8d9580ecd8603671"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5575a072a1ae7dea8d9580ecd8603671">&#9670;&nbsp;</a></span>loadFontData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GlyphInfo * raylib::RlFont::loadFontData </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned char *&#160;</td>
-          <td class="paramname"><em>fileData</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dataSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fontSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>fontChars</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glyphCount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a80bc0328f4549c32e73c54d600772e78" name="a80bc0328f4549c32e73c54d600772e78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80bc0328f4549c32e73c54d600772e78">&#9670;&nbsp;</a></span>operator=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classraylib_1_1_rl_font.html">raylib::RlFont</a> &amp; raylib::RlFont::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_font.html">RlFont</a> &amp;&#160;</td>
-          <td class="paramname"><em>font</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae87f9e330c08e3454040860690f936f9" name="ae87f9e330c08e3454040860690f936f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae87f9e330c08e3454040860690f936f9">&#9670;&nbsp;</a></span>setFontSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::RlFont::setFontSize </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fontSize</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae2a7d9fb873da5ea6ad4d1671fa1cd09" name="ae2a7d9fb873da5ea6ad4d1671fa1cd09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2a7d9fb873da5ea6ad4d1671fa1cd09">&#9670;&nbsp;</a></span>setTextSpacing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::RlFont::setTextSpacing </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>textSpacing</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3709be9dcbf0ac2be9b52471c2ba2ab5" name="a3709be9dcbf0ac2be9b52471c2ba2ab5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3709be9dcbf0ac2be9b52471c2ba2ab5">&#9670;&nbsp;</a></span>unloadFontData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void raylib::RlFont::unloadFontData </td>
-          <td>(</td>
-          <td class="paramtype">GlyphInfo *&#160;</td>
-          <td class="paramname"><em>chars</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glyphCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,7 +1,9 @@
 <map id="raylib::RlCamera::get" name="raylib::RlCamera::get">
-<area shape="rect" id="node1" title="Get the 3d camera." alt="" coords="243,111,381,138"/>
-<area shape="rect" id="node2" href="$class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_world_helper.html#abe4f3a48ce6bd5df45d330f9a4b8e390" title="Get the screen space position for a 3d world space position." alt="" coords="33,71,167,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_world_helper.html#ae6aa4e573c51e933d46926bda82781b4" title="Get size position for a 3d world space position." alt="" coords="25,136,175,177"/>
-<area shape="rect" id="node5" href="$classraylib_1_1_camera_helper.html#a600187094c169a84cc5f41027f1cd56c" title="Set camera mode (global camera)" alt="" coords="29,201,171,243"/>
+<area shape="rect" id="node1" title="Get the 3d camera." alt="" coords="440,143,579,170"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_draw_helper.html#a82d269f2ef4c715adf42c7d5606d26d6" title="Begin 3D mode with custom camera (3D)" alt="" coords="254,5,381,47"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_draw_helper.html#ac1929beba2425c13d80a2b3ae6b4d146" title="Draw a billboard texture defined by source and rotation." alt="" coords="254,71,381,112"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_world_helper.html#a630eff662a04e4e4ea9e1292b1b21a20" title="Get the screen space position for a 3d world space position." alt="" coords="250,136,385,177"/>
+<area shape="rect" id="node6" href="$classraylib_1_1_world_helper.html#aff44a45b06f8c612e5be45fdeb8b9047" title="Get size position for a 3d world space position." alt="" coords="243,201,392,243"/>
+<area shape="rect" id="node7" href="$classraylib_1_1_camera_helper.html#a600187094c169a84cc5f41027f1cd56c" title="Set camera mode (global camera)" alt="" coords="247,267,388,308"/>
+<area shape="rect" id="node3" href="$class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
 </map>

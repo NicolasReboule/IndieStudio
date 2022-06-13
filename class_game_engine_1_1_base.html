@@ -80,14 +80,14 @@ Collaboration diagram for GameEngine::Base:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_engine_1_1_base__coll__graph.png" border="0" usemap="#a_game_engine_1_1_base_coll__map" alt="Collaboration graph"/></div>
 <map name="a_game_engine_1_1_base_coll__map" id="a_game_engine_1_1_base_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,160,185"/>
+<area shape="rect" title=" " alt="" coords="5,5,160,200"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1161c190baa929e6ac8365fbe68cc284"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_base.html#a1161c190baa929e6ac8365fbe68cc284">Base</a> ()=default</td></tr>
-<tr class="separator:a1161c190baa929e6ac8365fbe68cc284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a606f595b455725cc4144ae39b6e5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_base.html#a35a606f595b455725cc4144ae39b6e5a">Base</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a35a606f595b455725cc4144ae39b6e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a419d30d97aa400c692697a49b4b750df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_base.html#a419d30d97aa400c692697a49b4b750df">Base</a> (const <a class="el" href="class_game_engine_1_1_base.html">Base</a> &amp;)=default</td></tr>
 <tr class="separator:a419d30d97aa400c692697a49b4b750df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af16093050397dc6b14034d82ee418586"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_base.html#af16093050397dc6b14034d82ee418586">~Base</a> ()=default</td></tr>
@@ -102,10 +102,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adb6c2828f74fff7c07682a960a85cdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa82859de9b35f18ebc375ac78f7005d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_base.html#aa82859de9b35f18ebc375ac78f7005d2">setRotationDegrees</a> (float degrees)=0</td></tr>
 <tr class="separator:aa82859de9b35f18ebc375ac78f7005d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030336f69331c880576fce331ac9dee5"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine_1_1_base.html#a030336f69331c880576fce331ac9dee5">getName</a> () const</td></tr>
+<tr class="separator:a030336f69331c880576fce331ac9dee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1161c190baa929e6ac8365fbe68cc284" name="a1161c190baa929e6ac8365fbe68cc284"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1161c190baa929e6ac8365fbe68cc284">&#9670;&nbsp;</a></span>Base() <span class="overload">[1/2]</span></h2>
+<a id="a35a606f595b455725cc4144ae39b6e5a" name="a35a606f595b455725cc4144ae39b6e5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a606f595b455725cc4144ae39b6e5a">&#9670;&nbsp;</a></span>Base() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,13 +118,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">GameEngine::Base::Base </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -204,7 +207,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#ae9ac174f995345dff53bb0dc8d44216b">GameEngine::Button</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a76747f7bbde2e5c1f543d9f893132c59">GameEngine::StaticBody</a>.</p>
+<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#ae9ac174f995345dff53bb0dc8d44216b">GameEngine::Button</a>, <a class="el" href="class_game_engine_1_1_texture_rect.html#a89bb8bc19175100fe9e534633a197221">GameEngine::TextureRect</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a76747f7bbde2e5c1f543d9f893132c59">GameEngine::StaticBody</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -215,6 +218,23 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_game_engine_1_1_scene.html#aebff21d9bb0e5edd27163b3c26f47508" title=" " alt="" coords="19,57,165,98"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a030336f69331c880576fce331ac9dee5" name="a030336f69331c880576fce331ac9dee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a030336f69331c880576fce331ac9dee5">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; GameEngine::Base::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -241,7 +261,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#a2435cb8ad7a62a0a705ed7d160437083">GameEngine::Button</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a71c6fc3ebd66af3e4ac37fcd1c97c196">GameEngine::StaticBody</a>.</p>
+<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#a2435cb8ad7a62a0a705ed7d160437083">GameEngine::Button</a>, <a class="el" href="class_game_engine_1_1_texture_rect.html#a4116246d1097bbb13ef908c4b4ffb664">GameEngine::TextureRect</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a71c6fc3ebd66af3e4ac37fcd1c97c196">GameEngine::StaticBody</a>.</p>
 
 </div>
 </div>
@@ -268,7 +288,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#a6586fec73a5f0d1e908b8a0380f48141">GameEngine::Button</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a10c59bd4ba42dc02d8b1bdd7045ca84a">GameEngine::StaticBody</a>.</p>
+<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#a6586fec73a5f0d1e908b8a0380f48141">GameEngine::Button</a>, <a class="el" href="class_game_engine_1_1_texture_rect.html#a78cba1cd4284eb1d187dbfffd5bd629e">GameEngine::TextureRect</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a10c59bd4ba42dc02d8b1bdd7045ca84a">GameEngine::StaticBody</a>.</p>
 
 </div>
 </div>
@@ -296,7 +316,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_game_engine_1_1_static_body.html#a33fa3f75b93aebe71b5ef49dd0c78fb5">GameEngine::StaticBody</a>, and <a class="el" href="class_game_engine_1_1_button.html#a37eb8b5663199942c3f2ac070da32973">GameEngine::Button</a>.</p>
+<p>Implemented in <a class="el" href="class_game_engine_1_1_static_body.html#a33fa3f75b93aebe71b5ef49dd0c78fb5">GameEngine::StaticBody</a>, <a class="el" href="class_game_engine_1_1_button.html#a37eb8b5663199942c3f2ac070da32973">GameEngine::Button</a>, and <a class="el" href="class_game_engine_1_1_texture_rect.html#a6d12563863acdc9e763cff37fac3914c">GameEngine::TextureRect</a>.</p>
 
 </div>
 </div>
@@ -323,12 +343,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#a49c379ba941ab46c3b886e6bdc302a62">GameEngine::Button</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a4e7fbd4774c69c86b94c7ee9050aa1e3">GameEngine::StaticBody</a>.</p>
+<p>Implemented in <a class="el" href="class_game_engine_1_1_button.html#a49c379ba941ab46c3b886e6bdc302a62">GameEngine::Button</a>, <a class="el" href="class_game_engine_1_1_texture_rect.html#ae1c77ba22483b4c2ed6d59fa86834fb7">GameEngine::TextureRect</a>, and <a class="el" href="class_game_engine_1_1_static_body.html#a4e7fbd4774c69c86b94c7ee9050aa1e3">GameEngine::StaticBody</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>raylib-cpp/include/GameEngine/Nodes/<a class="el" href="_base_8hpp_source.html">Base.hpp</a></li>
+<li>raylib-cpp/src/GameEngine/Nodes/<a class="el" href="_base_8cpp.html">Base.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

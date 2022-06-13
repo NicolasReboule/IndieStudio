@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['meshtype_0',['MeshType',['../classraylib_1_1_rl_mesh_builder.html#a08d335bd51c7ecb102cfc9229660be3c',1,'raylib::RlMeshBuilder']]]
+  ['loglevel_0',['LogLevel',['../classraylib_1_1_rl_logger.html#ac7746c9755b70043cdc5ea216d77d60f',1,'raylib::RlLogger']]]
 ];

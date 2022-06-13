@@ -1,0 +1,5 @@
+<map id="raylib::RlFont::RlFont" name="raylib::RlFont::RlFont">
+<area shape="rect" id="node1" title="Create a RlFont, using an iamge, key color and first character Load font from Image (XNA style)" alt="" coords="5,31,145,57"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="199,5,354,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_image.html#ac6b5367fe5b7a7ea87880c6d136ce743" title="Get the image (const)" alt="" coords="193,56,360,83"/>
+</map>

@@ -75,13 +75,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classraylib_1_1_rl_mesh_builder.html" title="RlMeshBuilder class.">RlMeshBuilder</a> class.  
+ <a href="classraylib_1_1_rl_mesh_builder.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_rl_mesh_builder_8hpp_source.html">RlMeshBuilder.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for raylib::RlMeshBuilder:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_rl_mesh_builder__coll__graph.png" border="0" usemap="#araylib_1_1_rl_mesh_builder_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_rl_mesh_builder_coll__map" id="araylib_1_1_rl_mesh_builder_coll__map">
-<area shape="rect" title=" " alt="" coords="8,272,171,643"/>
+<area shape="rect" title="RlMeshBuilder class." alt="" coords="8,272,171,643"/>
 <area shape="rect" href="classraylib_1_1_i_builder.html" title=" " alt="" coords="5,145,173,223"/>
 <area shape="rect" href="classraylib_1_1_i_builder.html" title="Interface for all the builder." alt="" coords="23,5,155,83"/>
 </map>
@@ -89,32 +92,6 @@ Collaboration diagram for raylib::RlMeshBuilder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a75d118db00a1bd8805d12b1242a49d98"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98">ParameterName</a> { <br />
-&#160;&#160;<a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98ab25711dcd662ffa1ad34bacd73cdb691">Sides</a> = 1
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a0a8a9a004a852f922d245007ddba0b5e">Radius</a> = 2
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a1475000b07d210c5e4490ef1b06ad461">Width</a> = 4
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98aa8308beb2b8333c3ed9df0b26fe16cba">Length</a> = 8
-, <br />
-&#160;&#160;<a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98ad5e1afd9bf3634faee3339f50a04a17d">Height</a> = 16
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a009c9a469b039c5eea9d3b31bc973694">ResX</a> = 32
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98afa5661b2c11eb651f045e3ef1514aa1b">ResZ</a> = 64
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98af3ab137c7a450ac4be2dccba23ccfb26">Rings</a> = 128
-, <br />
-&#160;&#160;<a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98ac32a23184109ae1bc66362e573383ac4">Slices</a> = 256
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a33109c71288cbdd04eec1afc4d0a58b4">Size</a> = 512
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a53ce6dd3b0282fd9cea50fa2e9e787b4">RadSeg</a> = 1024
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a7550e69da8c536487fcb61cfcedab041">Heightmap</a> = 2048
-, <br />
-&#160;&#160;<a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98aaf65a30bdbfb4dcc634bb53d6835948e">Vec3fSize</a> = 4096
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98aa8b25e91813b55dd5ab23f79f68ddf7b">Cubicmap</a> = 8192
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a03e8759014ee89efa13ba88043be9ead">CubeSize</a> = 16384
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98ae184c55320b48db8e4a716a40f8ad07e">ConeSlices</a> = 32768
-, <br />
-&#160;&#160;<a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98ad1b12caf6cb14fdb7470b71ff5000110">HemisphereRings</a> = 65536
-, <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98a87da7550d9c42cde027e65eff85d2ebb">KnotRadSeg</a> = 131072
-<br />
- }</td></tr>
-<tr class="separator:a75d118db00a1bd8805d12b1242a49d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d335bd51c7ecb102cfc9229660be3c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#a08d335bd51c7ecb102cfc9229660be3c">MeshType</a> { <br />
 &#160;&#160;<a class="el" href="classraylib_1_1_rl_mesh_builder.html#a08d335bd51c7ecb102cfc9229660be3ca1b6ae79162f9326e2696e709b2a2347f">MeshPoly</a> = Sides | Radius
 , <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a08d335bd51c7ecb102cfc9229660be3ca00b8a1b2afac36b57ba3b87a298dc730">MeshPlane</a> = Width | Length | ResX | ResZ
@@ -131,6 +108,7 @@ Public Types</h2></td></tr>
 , <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a08d335bd51c7ecb102cfc9229660be3ca1556647e36e7b7d8456d997ee63a5f04">MeshCubicmap</a> = Cubicmap | CubeSize
 <br />
  }</td></tr>
+<tr class="memdesc:a08d335bd51c7ecb102cfc9229660be3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mesh.  <a href="classraylib_1_1_rl_mesh_builder.html#a08d335bd51c7ecb102cfc9229660be3c">More...</a><br /></td></tr>
 <tr class="separator:a08d335bd51c7ecb102cfc9229660be3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -167,19 +145,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5eac6c94d677519b6799fe17a7f7f65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11339b0fe36071df434b5ebcf73d2a7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">RlMeshBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#a11339b0fe36071df434b5ebcf73d2a7f">setSides</a> (int sides)</td></tr>
 <tr class="separator:a11339b0fe36071df434b5ebcf73d2a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a200b5db942bf6a5c6b53d4955e2e2da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">RlMeshBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#a200b5db942bf6a5c6b53d4955e2e2da0">setHeightmap</a> (Image heightmap)</td></tr>
-<tr class="separator:a200b5db942bf6a5c6b53d4955e2e2da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2fcfa941ae470287a789d28e9ea7c51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">RlMeshBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#ac2fcfa941ae470287a789d28e9ea7c51">setHeightmap</a> (const <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a> &amp;heightmap)</td></tr>
+<tr class="separator:ac2fcfa941ae470287a789d28e9ea7c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac97aa5a58dca1703085a9d4dc1565663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">RlMeshBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#ac97aa5a58dca1703085a9d4dc1565663">setVec3fSize</a> (<a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> size)</td></tr>
 <tr class="separator:ac97aa5a58dca1703085a9d4dc1565663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0102fb05ba610d8a83d488688fe6ff6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">RlMeshBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#ae0102fb05ba610d8a83d488688fe6ff6">setCubicmap</a> (Image cubicmap)</td></tr>
-<tr class="separator:ae0102fb05ba610d8a83d488688fe6ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4267aade787804e82ec61283bb8eac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">RlMeshBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#adc4267aade787804e82ec61283bb8eac">setCubicmap</a> (const <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a> &amp;cubicmap)</td></tr>
+<tr class="separator:adc4267aade787804e82ec61283bb8eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1e12dffe68aa3130c3a88671013055d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">RlMeshBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#aa1e12dffe68aa3130c3a88671013055d">setCubeSize</a> (<a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> cubeSize)</td></tr>
 <tr class="separator:aa1e12dffe68aa3130c3a88671013055d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d9bba4b19d43e677464fe293f7a6b1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_rl_mesh.html">RlMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_mesh_builder.html#a7d9bba4b19d43e677464fe293f7a6b1a">build</a> () override</td></tr>
 <tr class="memdesc:a7d9bba4b19d43e677464fe293f7a6b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will return an instance of the templated parameter.  <a href="classraylib_1_1_rl_mesh_builder.html#a7d9bba4b19d43e677464fe293f7a6b1a">More...</a><br /></td></tr>
 <tr class="separator:a7d9bba4b19d43e677464fe293f7a6b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p ><a class="el" href="classraylib_1_1_rl_mesh_builder.html" title="RlMeshBuilder class.">RlMeshBuilder</a> class. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a08d335bd51c7ecb102cfc9229660be3c" name="a08d335bd51c7ecb102cfc9229660be3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08d335bd51c7ecb102cfc9229660be3c">&#9670;&nbsp;</a></span>MeshType</h2>
 
@@ -191,6 +171,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Type of mesh. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a08d335bd51c7ecb102cfc9229660be3ca1b6ae79162f9326e2696e709b2a2347f" name="a08d335bd51c7ecb102cfc9229660be3ca1b6ae79162f9326e2696e709b2a2347f"></a>MeshPoly&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a08d335bd51c7ecb102cfc9229660be3ca00b8a1b2afac36b57ba3b87a298dc730" name="a08d335bd51c7ecb102cfc9229660be3ca00b8a1b2afac36b57ba3b87a298dc730"></a>MeshPlane&#160;</td><td class="fielddoc"></td></tr>
@@ -203,40 +185,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a08d335bd51c7ecb102cfc9229660be3cab909fe7b918bc5c9beae90df3ba4be77" name="a08d335bd51c7ecb102cfc9229660be3cab909fe7b918bc5c9beae90df3ba4be77"></a>MeshKnot&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a08d335bd51c7ecb102cfc9229660be3ca7865af81b3dbe52777702cb6ffa2c0df" name="a08d335bd51c7ecb102cfc9229660be3ca7865af81b3dbe52777702cb6ffa2c0df"></a>MeshHeightmap&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a08d335bd51c7ecb102cfc9229660be3ca1556647e36e7b7d8456d997ee63a5f04" name="a08d335bd51c7ecb102cfc9229660be3ca1556647e36e7b7d8456d997ee63a5f04"></a>MeshCubicmap&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a75d118db00a1bd8805d12b1242a49d98" name="a75d118db00a1bd8805d12b1242a49d98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75d118db00a1bd8805d12b1242a49d98">&#9670;&nbsp;</a></span>ParameterName</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classraylib_1_1_rl_mesh_builder.html#a75d118db00a1bd8805d12b1242a49d98">raylib::RlMeshBuilder::ParameterName</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98ab25711dcd662ffa1ad34bacd73cdb691" name="a75d118db00a1bd8805d12b1242a49d98ab25711dcd662ffa1ad34bacd73cdb691"></a>Sides&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a0a8a9a004a852f922d245007ddba0b5e" name="a75d118db00a1bd8805d12b1242a49d98a0a8a9a004a852f922d245007ddba0b5e"></a>Radius&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a1475000b07d210c5e4490ef1b06ad461" name="a75d118db00a1bd8805d12b1242a49d98a1475000b07d210c5e4490ef1b06ad461"></a>Width&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98aa8308beb2b8333c3ed9df0b26fe16cba" name="a75d118db00a1bd8805d12b1242a49d98aa8308beb2b8333c3ed9df0b26fe16cba"></a>Length&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98ad5e1afd9bf3634faee3339f50a04a17d" name="a75d118db00a1bd8805d12b1242a49d98ad5e1afd9bf3634faee3339f50a04a17d"></a>Height&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a009c9a469b039c5eea9d3b31bc973694" name="a75d118db00a1bd8805d12b1242a49d98a009c9a469b039c5eea9d3b31bc973694"></a>ResX&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98afa5661b2c11eb651f045e3ef1514aa1b" name="a75d118db00a1bd8805d12b1242a49d98afa5661b2c11eb651f045e3ef1514aa1b"></a>ResZ&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98af3ab137c7a450ac4be2dccba23ccfb26" name="a75d118db00a1bd8805d12b1242a49d98af3ab137c7a450ac4be2dccba23ccfb26"></a>Rings&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98ac32a23184109ae1bc66362e573383ac4" name="a75d118db00a1bd8805d12b1242a49d98ac32a23184109ae1bc66362e573383ac4"></a>Slices&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a33109c71288cbdd04eec1afc4d0a58b4" name="a75d118db00a1bd8805d12b1242a49d98a33109c71288cbdd04eec1afc4d0a58b4"></a>Size&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a53ce6dd3b0282fd9cea50fa2e9e787b4" name="a75d118db00a1bd8805d12b1242a49d98a53ce6dd3b0282fd9cea50fa2e9e787b4"></a>RadSeg&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a7550e69da8c536487fcb61cfcedab041" name="a75d118db00a1bd8805d12b1242a49d98a7550e69da8c536487fcb61cfcedab041"></a>Heightmap&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98aaf65a30bdbfb4dcc634bb53d6835948e" name="a75d118db00a1bd8805d12b1242a49d98aaf65a30bdbfb4dcc634bb53d6835948e"></a>Vec3fSize&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98aa8b25e91813b55dd5ab23f79f68ddf7b" name="a75d118db00a1bd8805d12b1242a49d98aa8b25e91813b55dd5ab23f79f68ddf7b"></a>Cubicmap&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a03e8759014ee89efa13ba88043be9ead" name="a75d118db00a1bd8805d12b1242a49d98a03e8759014ee89efa13ba88043be9ead"></a>CubeSize&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98ae184c55320b48db8e4a716a40f8ad07e" name="a75d118db00a1bd8805d12b1242a49d98ae184c55320b48db8e4a716a40f8ad07e"></a>ConeSlices&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98ad1b12caf6cb14fdb7470b71ff5000110" name="a75d118db00a1bd8805d12b1242a49d98ad1b12caf6cb14fdb7470b71ff5000110"></a>HemisphereRings&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a75d118db00a1bd8805d12b1242a49d98a87da7550d9c42cde027e65eff85d2ebb" name="a75d118db00a1bd8805d12b1242a49d98a87da7550d9c42cde027e65eff85d2ebb"></a>KnotRadSeg&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -308,7 +256,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classraylib_1_1_mesh_generator.html#a81fe93fcee8f1b4bf4fc2d9aeac2a417" title=" " alt="" coords="196,332,343,373"/>
 <area shape="rect" href="classraylib_1_1_mesh_generator.html#ad9c58099f27f28d4d47aae6148134509" title=" " alt="" coords="196,397,343,439"/>
 <area shape="rect" href="classraylib_1_1_mesh_generator.html#a091a37aa52e82a3b5c063a07ca2f1cc0" title=" " alt="" coords="196,463,343,504"/>
-<area shape="rect" href="classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="391,136,525,177"/>
+<area shape="rect" href="classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="391,136,525,177"/>
 </map>
 </div>
 
@@ -350,8 +298,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae0102fb05ba610d8a83d488688fe6ff6" name="ae0102fb05ba610d8a83d488688fe6ff6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0102fb05ba610d8a83d488688fe6ff6">&#9670;&nbsp;</a></span>setCubicmap()</h2>
+<a id="adc4267aade787804e82ec61283bb8eac" name="adc4267aade787804e82ec61283bb8eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4267aade787804e82ec61283bb8eac">&#9670;&nbsp;</a></span>setCubicmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -359,7 +307,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">raylib::RlMeshBuilder</a> &amp; raylib::RlMeshBuilder::setCubicmap </td>
           <td>(</td>
-          <td class="paramtype">Image&#160;</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a> &amp;&#160;</td>
           <td class="paramname"><em>cubicmap</em></td><td>)</td>
           <td></td>
         </tr>
@@ -386,8 +334,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a200b5db942bf6a5c6b53d4955e2e2da0" name="a200b5db942bf6a5c6b53d4955e2e2da0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a200b5db942bf6a5c6b53d4955e2e2da0">&#9670;&nbsp;</a></span>setHeightmap()</h2>
+<a id="ac2fcfa941ae470287a789d28e9ea7c51" name="ac2fcfa941ae470287a789d28e9ea7c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fcfa941ae470287a789d28e9ea7c51">&#9670;&nbsp;</a></span>setHeightmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,7 +343,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="classraylib_1_1_rl_mesh_builder.html">raylib::RlMeshBuilder</a> &amp; raylib::RlMeshBuilder::setHeightmap </td>
           <td>(</td>
-          <td class="paramtype">Image&#160;</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_rl_image.html">RlImage</a> &amp;&#160;</td>
           <td class="paramname"><em>heightmap</em></td><td>)</td>
           <td></td>
         </tr>

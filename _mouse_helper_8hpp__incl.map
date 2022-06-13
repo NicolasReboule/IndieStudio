@@ -1,8 +1,8 @@
 <map id="raylib&#45;cpp/include/raylib/Inputs/MouseHelper.hpp" name="raylib&#45;cpp/include/raylib/Inputs/MouseHelper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="119,5,320,47"/>
-<area shape="rect" id="node2" href="$_math_8hpp.html" title=" " alt="" coords="99,95,209,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="163,319,225,345"/>
+<area shape="rect" id="node1" title=" " alt="" coords="111,5,312,47"/>
+<area shape="rect" id="node2" href="$_math_8hpp.html" title=" " alt="" coords="91,95,201,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="180,244,243,271"/>
 <area shape="rect" id="node3" href="$_vector_8hpp.html" title=" " alt="" coords="5,244,156,271"/>
-<area shape="rect" id="node6" href="$_vector_helper_8hpp.html" title=" " alt="" coords="59,169,249,196"/>
+<area shape="rect" id="node5" href="$_vector_helper_8hpp.html" title=" " alt="" coords="51,169,241,196"/>
 <area shape="rect" id="node4" title=" " alt="" coords="45,319,117,345"/>
 </map>

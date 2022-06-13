@@ -1,4 +1,4 @@
 <map id="raylib::RlCamera::setPosition" name="raylib::RlCamera::setPosition">
 <area shape="rect" id="node1" title="Set the position of the camera." alt="" coords="5,13,192,39"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#afabaa41cd5e458fa29ef57a6219f9146" title=" " alt="" coords="240,5,375,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="240,5,375,47"/>
 </map>
