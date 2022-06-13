@@ -10,7 +10,7 @@
 
 #include <string>
 #include <iostream>
-#include <boost/log/trivial.hpp>
+#include <fstream>
 
 namespace raylib {
     /**
@@ -18,6 +18,16 @@ namespace raylib {
      */
     class RlLogger {
     public:
+        class LoggerError : public std::exception {
+        public:
+            explicit LoggerError(const std::string &msg) : _msg(msg) {}
+
+            const char *what() const noexcept override { return _msg.c_str(); }
+
+        private:
+            std::string _msg;
+        };
+
         enum LogLevel {
             LOG_TRACE = 0,
             LOG_DEBUG,
@@ -30,15 +40,23 @@ namespace raylib {
         /**
          * @brief RlLogger constructor
          */
-        RlLogger() = default;
+        explicit RlLogger(const std::string &path)
+        {
+            this->_path = path;
+            this->_file.open(path, std::ios::out | std::ios::trunc);
+            if (!this->_file.is_open())
+                throw LoggerError("Can't open file");
+        }
 
         /**
          * @brief log function
          * @param logLevel the log level
          */
-        static std::ostream &log(const enum LogLevel &logLevel)
+        std::ostream &log(const enum LogLevel &logLevel)
         {
-            std::ostream &os = std::cout;
+            if (!this->_file.is_open())
+                return std::cout;
+            std::ostream &os = this->_file;
             os << "[RaylibCPP][" << __TIMESTAMP__ << "][";
             switch (logLevel) {
                 case raylib::RlLogger::LogLevel::LOG_TRACE: os << "TRACE"; break;
@@ -52,6 +70,9 @@ namespace raylib {
             return os;
         }
 
+    private:
+        std::string _path;
+        std::ofstream _file;
     };
 }
 #endif //INDIESTUDIO_RLLOGGER_HPP

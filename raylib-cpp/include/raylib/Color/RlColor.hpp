@@ -13,6 +13,9 @@
 #include <raylib.h>
 
 namespace raylib {
+    /**
+     * @brief Color class
+     */
     class RlColor {
     public:
         /**

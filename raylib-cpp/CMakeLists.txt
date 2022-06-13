@@ -85,5 +85,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
 
-        )
+        include/raylib/Camera/RlCameraBuilder.hpp src/raylib/Camera/RlCameraBuilder.cpp)
 target_link_libraries(${PROJECT_NAME} raylib)

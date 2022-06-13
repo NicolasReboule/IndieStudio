@@ -32,6 +32,7 @@
 #include "Audio/WaveHelper.hpp"
 #include "Camera/CameraHelper.hpp"
 #include "Camera/RlCamera.hpp"
+#include "Camera/RlCameraBuilder.hpp"
 #include "Color/ColorHelper.hpp"
 #include "Color/RlColor.hpp"
 #include "Core/CoreHelper.hpp"

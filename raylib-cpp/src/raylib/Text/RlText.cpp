@@ -100,7 +100,7 @@ const RlColor &raylib::RlText::getColor() const
 
 float raylib::RlText::getWidth() const
 {
-    return (float) TextHelper::measureText(this->_text, (int) this->getFont().getFontSize());
+    return this->getSize().x;
 }
 
 float raylib::RlText::getTextSpacing() const
@@ -123,7 +123,7 @@ void raylib::RlText::setFontSize(float fontSize)
     this->_fontSize = fontSize;
 }
 
-Vector2f raylib::RlText::getSize()
+Vector2f raylib::RlText::getSize() const
 {
-    return TextHelper::measureText(*_font, this->_text);
+    return TextHelper::measureText(*_font, this->_text, this->_fontSize, this->_textSpacing);
 }

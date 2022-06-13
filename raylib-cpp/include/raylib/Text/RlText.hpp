@@ -45,7 +45,7 @@ namespace raylib {
          * @param position the position of the text
          * @param color the color of the text
          */
-        explicit RlText(const std::string &text, const std::string &fontPath, float fontSize = 10, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
+        explicit RlText(const std::string &text, const std::string &fontPath, float fontSize = 20, const Vector2f &position = {0, 0}, const RlColor &color = RlColor::Black);
 
         /**
          * @brief RlText constructor
@@ -141,6 +141,7 @@ namespace raylib {
         /**
          * @brief Get the width of the text with the loaded font
          * @return the width of the text
+         * @deprecated Use RlText#getSize() instead
          */
         float getWidth() const;
 
@@ -153,7 +154,7 @@ namespace raylib {
          * @brief Get the size of the text with the loaded font
          * @return the size of the text
          */
-        Vector2f getSize();
+        Vector2f getSize() const;
 
         /**
          * @brief Set the text spacing
@@ -170,6 +171,7 @@ namespace raylib {
         /**
          * @brief Set the font size
          * @param fontSize the font size
+         * @attention Use this only if you know what you are doing (aka using the default font)
          */
         void setFontSize(float fontSize);
 
