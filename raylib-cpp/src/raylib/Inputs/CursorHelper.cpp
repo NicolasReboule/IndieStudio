@@ -7,32 +7,32 @@
 
 #include "raylib/Inputs/CursorHelper.hpp"
 
-void raylib::CursorHelper::showCursor()
+void raylib::input::CursorHelper::showCursor()
 {
     ShowCursor();
 }
 
-void raylib::CursorHelper::hideCursor()
+void raylib::input::CursorHelper::hideCursor()
 {
     HideCursor();
 }
 
-bool raylib::CursorHelper::isCursorHidden()
+bool raylib::input::CursorHelper::isCursorHidden()
 {
     return IsCursorHidden();
 }
 
-void raylib::CursorHelper::enableCursor()
+void raylib::input::CursorHelper::enableCursor()
 {
     EnableCursor();
 }
 
-void raylib::CursorHelper::disableCursor()
+void raylib::input::CursorHelper::disableCursor()
 {
     DisableCursor();
 }
 
-bool raylib::CursorHelper::isCursorOnScreen()
+bool raylib::input::CursorHelper::isCursorOnScreen()
 {
     return IsCursorOnScreen();
 }

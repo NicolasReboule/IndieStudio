@@ -10,25 +10,24 @@
 int main(int ac, char **av)
 {
     auto window = raylib::RlWindow::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 60);
+    window->createWindow("Bomberman", 1280, 720, 120);
     raylib::RlCamera camera = raylib::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
     raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
-    raylib::RlModelAnim anim(model.getModel(), "../assets/player.iqm", 4);
-    int frame = 0;
+    raylib::RlModelAnim anim(model.getModel(), "../assets/player.iqm");
+    std::cout << anim.getCount() << std::endl;
     unsigned int i = 0;
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();
         raylib::DrawHelper::clearBackground(RlColor::White);
         raylib::DrawTextHelper::drawFps(10, 10, 30);
         camera.update();
-        if (raylib::KeyboardHelper::isKeyDown(KEY_RIGHT))
+        if (raylib::input::KeyboardHelper::isKeyDown(KEY_RIGHT))
             i++;
-        if (i > 4)
+        if (i > anim.getCount())
             i = 0;
-        if (raylib::KeyboardHelper::isKeyDown(KEY_SPACE)) {
+        if (raylib::input::KeyboardHelper::isKeyDown(KEY_SPACE))
             anim.update(i);
-        }
-        if (raylib::KeyboardHelper::isKeyPressed(KEY_R))
+        if (raylib::input::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();
         raylib::DrawHelper::beginMode3D(camera);
         raylib::Shape3DHelper::drawGrid(10, 1.0f);

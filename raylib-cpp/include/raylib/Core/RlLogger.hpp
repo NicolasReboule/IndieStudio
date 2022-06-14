@@ -18,14 +18,25 @@ namespace raylib {
      */
     class RlLogger {
     public:
+        /**
+         * @brief Error constructor
+         */
         class LoggerError : public std::exception {
         public:
+            /**
+             * @brief Error constructor
+             * @param msg the error message
+             */
             explicit LoggerError(const std::string &msg) : _msg(msg) {}
 
+            /**
+             * @brief Get the error message
+             * @return the error message
+             */
             const char *what() const noexcept override { return _msg.c_str(); }
 
         private:
-            std::string _msg;
+            std::string _msg; /**< the error message */
         };
 
         enum LogLevel {

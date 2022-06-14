@@ -9,9 +9,10 @@
 #define INDIESTUDIO_MOUSEHELPER_HPP
 
 #include "raylib/Math.hpp"
+#include "raylib/Camera/RlCamera.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::input {
     /**
      * @brief Input-related functions: mouse
      */
@@ -109,7 +110,7 @@ namespace raylib {
          * @param camera the camera
          * @return the ray trace
          */
-        static Ray getMouseRay(Vector2f mousePosition,Camera camera);
+        static Ray getMouseRay(const Vector2f &mousePosition, const RlCamera &camera);
     };
 }
 

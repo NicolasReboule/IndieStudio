@@ -7,42 +7,42 @@
 
 #include "raylib/Inputs/KeyboardHelper.hpp"
 
-bool raylib::KeyboardHelper::isKeyPressed(int key)
+bool raylib::input::KeyboardHelper::isKeyPressed(const int &key)
 {
     return IsKeyPressed(key);
 }
 
-bool raylib::KeyboardHelper::isKeyDown(int key)
+bool raylib::input::KeyboardHelper::isKeyDown(const int &key)
 {
     return IsKeyDown(key);
 }
 
-bool raylib::KeyboardHelper::isKeyReleased(int key)
+bool raylib::input::KeyboardHelper::isKeyReleased(const int &key)
 {
     return IsKeyReleased(key);
 }
 
-bool raylib::KeyboardHelper::isKeyUp(int key)
+bool raylib::input::KeyboardHelper::isKeyUp(const int &key)
 {
     return IsKeyUp(key);
 }
 
-void raylib::KeyboardHelper::setExitKey(int key)
+void raylib::input::KeyboardHelper::setExitKey(const int &key)
 {
     SetExitKey(key);
 }
 
-int raylib::KeyboardHelper::getKeyPressed()
+int raylib::input::KeyboardHelper::getKeyPressed()
 {
     return GetKeyPressed();
 }
 
-int raylib::KeyboardHelper::getCharPressed()
+int raylib::input::KeyboardHelper::getCharPressed()
 {
     return GetCharPressed();
 }
 
-std::string raylib::KeyboardHelper::getKeyName(const int &key, const int &scancode)
+std::string raylib::input::KeyboardHelper::getKeyName(const int &key, const int &scancode)
 {
     return glfwGetKeyName(key, scancode);
 }

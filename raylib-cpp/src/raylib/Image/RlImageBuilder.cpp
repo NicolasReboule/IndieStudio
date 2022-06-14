@@ -28,14 +28,14 @@ raylib::RlImageBuilder &raylib::RlImageBuilder::setType(const ImageType &type)
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setWidth(int width)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setWidth(const int &width)
 {
     _width = width;
     _flags |= Width;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setHeight(int height)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setHeight(const int &height)
 {
     _height = height;
     _flags |= Height;
@@ -105,35 +105,35 @@ raylib::RlImageBuilder &raylib::RlImageBuilder::setCol2(const raylib::RlColor &c
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setFactor(float factor)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setFactor(const float &factor)
 {
     _factor = factor;
     _flags |= Factor;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setDensity(float density)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setDensity(const float &density)
 {
     _density = density;
     _flags |= Density;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setTitleSize(int titleSize)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setTitleSize(const int &titleSize)
 {
     _titleSize = titleSize;
     _flags |= TitleSize;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setChecksX(int checksX)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setChecksX(const int &checksX)
 {
     _checksX = checksX;
     _flags |= ChecksX;
     return *this;
 }
 
-raylib::RlImageBuilder &raylib::RlImageBuilder::setChecksY(int checksY)
+raylib::RlImageBuilder &raylib::RlImageBuilder::setChecksY(const int &checksY)
 {
     _checksY = checksY;
     _flags |= ChecksY;

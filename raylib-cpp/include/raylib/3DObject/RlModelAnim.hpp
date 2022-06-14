@@ -15,24 +15,26 @@
 namespace raylib {
     class RlModelAnim {
     public:
-        // Model animations loading/unloading functions
-        explicit RlModelAnim(Model model, const std::string &fileName, unsigned int count);
+        // Model _animations loading/unloading functions
+        explicit RlModelAnim(Model model, const std::string &fileName);
         ~RlModelAnim();
 
         void update(unsigned int anim);
         void unload(unsigned int anim);
         bool animationIsValid(unsigned int anim);
 
-   /*     ModelAnimation *loadModelAnimations(const std::string &fileName, unsigned int *animCount);                // Load model animations from file
-        void updateModelAnimation(Model model, ModelAnimation anim, int frame);                            // Update model animation pose
-        void unloadModelAnimation(ModelAnimation anim);                                                    // Unload animation data
-        void unloadModelAnimations(ModelAnimation* anim, unsigned int count);                        // Unload animation array data
-        bool isModelAnimationValid(Model model, ModelAnimation anim);   */                                   // Check model animation skeleton match
+        unsigned int getCount() const;
+
+        /*     ModelAnimation *loadModelAnimations(const std::string &fileName, unsigned int *animCount);                // Load _model _animations from file
+             void updateModelAnimation(Model _model, ModelAnimation anim, int frame);                            // Update _model animation pose
+             void unloadModelAnimation(ModelAnimation anim);                                                    // Unload animation data
+             void unloadModelAnimations(ModelAnimation* anim, unsigned int _count);                        // Unload animation array data
+             bool isModelAnimationValid(Model _model, ModelAnimation anim);   */                                   // Check _model animation skeleton match
     private:
-        Model model;
-        ModelAnimation *animations;
-        unsigned int count;
-        int frameCount;
+        Model _model;
+        ModelAnimation *_animations;
+        unsigned int _count;
+        int _frameCount;
     };
 }
 

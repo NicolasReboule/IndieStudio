@@ -11,7 +11,7 @@
 #include "raylib/Math.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::input {
     /**
      * @brief Input-related functions: touch
      */
@@ -35,18 +35,18 @@ namespace raylib {
          * @param index touch point index
          * @return touch position XY
          */
-        static Vector2f getTouchPosition(int index);
+        static Vector2f getTouchPosition(const int &index);
 
         /**
          * @brief Get touch point identifier for given index
          * @param index touch point index
          * @return touch point identifier
          */
-        static int getTouchPointId(int index);
+        static int getTouchPointId(const int &index);
 
         /**
          * @brief Get number of touch points
-         * @return touch point count
+         * @return touch point _count
          */
         static int getTouchPointCount();
 
@@ -54,14 +54,14 @@ namespace raylib {
          * @brief Enable a set of gestures using flags
          * @param flags touch gesture flags
          */
-        static void setGesturesEnabled(unsigned int flags);
+        static void setGesturesEnabled(const unsigned int &flags);
 
         /**
          * @brief Check if a gesture have been detected
          * @param gesture touch gesture
          * @return true if gesture have been detected
          */
-        static bool isGestureDetected(int gesture);
+        static bool isGestureDetected(const int &gesture);
 
         /**
          * @brief Get latest detected gesture

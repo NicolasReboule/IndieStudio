@@ -12,7 +12,7 @@
 #include <string>
 #include <GLFW/glfw3.h>
 
-namespace raylib {
+namespace raylib::input {
     /**
      * @brief Input-related functions: keyboard
      */
@@ -23,34 +23,34 @@ namespace raylib {
          * @param key the key to check
          * @return true if the key is pressed
          */
-        static bool isKeyPressed(int key);
+        static bool isKeyPressed(const int &key);
 
         /**
          * @brief Check if a key is being pressed
          * @param key the key to check
          * @return true if the key is being pressed
          */
-        static bool isKeyDown(int key);
+        static bool isKeyDown(const int &key);
 
         /**
          * @brief Check if a key has been released once
          * @param key the key to check
          * @return true if the key is released
          */
-        static bool isKeyReleased(int key);
+        static bool isKeyReleased(const int &key);
 
         /**
          * @brief Check if a key is NOT being pressed
          * @param key the key to check
          * @return true if the key is NOT being pressed
          */
-        static bool isKeyUp(int key);
+        static bool isKeyUp(const int &key);
 
         /**
          * @brief Set a custom key to exit program (default is ESC)
          * @param key the key to set
          */
-        static void setExitKey(int key);
+        static void setExitKey(const int &key);
 
         /**
          * @brief Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty

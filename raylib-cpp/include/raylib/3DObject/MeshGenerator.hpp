@@ -125,7 +125,6 @@ namespace raylib {
          * @return Mesh of the cubicmap
          */
         static RlMesh genMeshCubicmap(Image cubicmap, Vector3f cubeSize);
-    private:
     };
 }
 

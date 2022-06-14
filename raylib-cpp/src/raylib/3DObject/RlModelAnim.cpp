@@ -8,47 +8,50 @@
 #include "raylib/3DObject/RlModelAnim.hpp"
 #include "raylib/3DObject/RlModel.hpp"
 
-// Model animations loading/unloading functions
+// Model _animations loading/unloading functions
 
-raylib::RlModelAnim::RlModelAnim(Model model, const std::string &fileName, unsigned int count)
+raylib::RlModelAnim::RlModelAnim(Model model, const std::string &fileName) : _model()
 {
-    this->animations = LoadModelAnimations(fileName.c_str(), &count);
-    this->model = model;
-    this->count = count;
-    this->frameCount = 0;
+    this->_count = 0;
+    this->_animations = LoadModelAnimations(fileName.c_str(), &this->_count);
+    this->_model = model;
+    this->_frameCount = 0;
 }
 
 raylib::RlModelAnim::~RlModelAnim()
 {
-    UnloadModelAnimations(this->animations, this->count);
+    UnloadModelAnimations(this->_animations, this->_count);
 }
 
 void raylib::RlModelAnim::update(unsigned int anim)
 {
-    if (anim < this->count) {
-        UpdateModelAnimation(this->model, this->animations[anim],
-                             this->frameCount);
-        this->frameCount++;
+    if (anim < this->_count) {
+        UpdateModelAnimation(this->_model, this->_animations[anim],
+                             this->_frameCount);
+        this->_frameCount++;
     }
 }
 
 void raylib::RlModelAnim::unload(unsigned int anim)
 {
-    if (anim < this->count) {
-        UnloadModelAnimation(this->animations[anim]);
-        this->count -= 1;
+    if (anim < this->_count) {
+        UnloadModelAnimation(this->_animations[anim]);
+        this->_count -= 1;
     }
 }
 
 bool raylib::RlModelAnim::animationIsValid(unsigned int anim)
 {
-    if (anim < this->count)
-        return IsModelAnimationValid(this->model, this->animations[anim]);
+    if (anim < this->_count)
+        return IsModelAnimationValid(this->_model, this->_animations[anim]);
     else
         return false;
 }
 
-
+unsigned int raylib::RlModelAnim::getCount() const
+{
+    return _count;
+}
 
 /*
 ModelAnimation *raylib::RlModelAnim::loadModelAnimations(const std::string &fileName, unsigned int *animCount)
@@ -56,9 +59,9 @@ ModelAnimation *raylib::RlModelAnim::loadModelAnimations(const std::string &file
     return LoadModelAnimations(fileName.c_str(), animCount);
 }
 
-void raylib::RlModelAnim::updateModelAnimation(Model model, ModelAnimation anim, int frame)
+void raylib::RlModelAnim::updateModelAnimation(Model _model, ModelAnimation anim, int frame)
 {
-    UpdateModelAnimation(model, anim, frame);
+    UpdateModelAnimation(_model, anim, frame);
 }
 
 void raylib::RlModelAnim::unloadModelAnimation(ModelAnimation anim)
@@ -66,13 +69,13 @@ void raylib::RlModelAnim::unloadModelAnimation(ModelAnimation anim)
     UnloadModelAnimation(anim);
 }
 
-void raylib::RlModelAnim::unloadModelAnimations(ModelAnimation *animations, unsigned int count)
+void raylib::RlModelAnim::unloadModelAnimations(ModelAnimation *_animations, unsigned int _count)
 {
-    UnloadModelAnimations(animations, count);
+    UnloadModelAnimations(_animations, _count);
 }
 
-bool raylib::RlModelAnim::isModelAnimationValid(Model model, ModelAnimation anim)
+bool raylib::RlModelAnim::isModelAnimationValid(Model _model, ModelAnimation anim)
 {
-    return IsModelAnimationValid(model, anim);
+    return IsModelAnimationValid(_model, anim);
 }
 */

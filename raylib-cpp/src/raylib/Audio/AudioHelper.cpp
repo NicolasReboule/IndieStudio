@@ -7,14 +7,12 @@
 
 #include "raylib/Audio/AudioHelper.hpp"
 
-// AudioHelper device management functions
-
-raylib::AudioHelper::AudioHelper()
+void raylib::AudioHelper::initAudioDevice()
 {
     InitAudioDevice();
 }
 
-raylib::AudioHelper::~AudioHelper()
+void raylib::AudioHelper::closeAudioDevice()
 {
     CloseAudioDevice();
 }

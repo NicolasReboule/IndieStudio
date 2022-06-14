@@ -26,7 +26,7 @@ namespace raylib {
          * @param color the color
          * @return the image
          */
-        static RlImage genImageColor(int width, int height, const RlColor &color);
+        static RlImage genImageColor(const int &width, const int &height, const RlColor &color);
 
         /**
          * @brief Generate image: vertical gradient
@@ -36,7 +36,7 @@ namespace raylib {
          * @param bottom the bottom color
          * @return the image
          */
-        static RlImage genImageGradientV(int width, int height, const RlColor &top, const RlColor &bottom);
+        static RlImage genImageGradientV(const int &width, const int &height, const RlColor &top, const RlColor &bottom);
 
         /**
          * @brief Generate image: horizontal gradient
@@ -46,7 +46,7 @@ namespace raylib {
          * @param right the right color
          * @return the image
          */
-        static RlImage genImageGradientH(int width, int height, const RlColor &left, const RlColor &right);
+        static RlImage genImageGradientH(const int &width, const int &height, const RlColor &left, const RlColor &right);
 
         /**
          * @brief Generate image: radial gradient
@@ -57,7 +57,7 @@ namespace raylib {
          * @param outer the outer color
          * @return the image
          */
-        static RlImage genImageGradientRadial(int width, int height, float density, const RlColor &inner, const RlColor &outer);
+        static RlImage genImageGradientRadial(const int &width, const int &height, float density, const RlColor &inner, const RlColor &outer);
 
         /**
          * @brief Generate image: checked
@@ -69,7 +69,7 @@ namespace raylib {
          * @param col2 the col 2
          * @return the image
          */
-        static RlImage genImageChecked(int width, int height, int checksX, int checksY, const RlColor &col1, const RlColor &col2);
+        static RlImage genImageChecked(const int &width, const int &height, const int &checksX, const int &checksY, const RlColor &col1, const RlColor &col2);
 
         /**
          * @brief Generate image: white noise
@@ -78,7 +78,7 @@ namespace raylib {
          * @param factor the factor
          * @return the image
          */
-        static RlImage genImageWhiteNoise(int width, int height, float factor);
+        static RlImage genImageWhiteNoise(const int &width, const int &height, float factor);
 
         /**
          * @brief Generate image: cellular algorithm. Bigger tileSize means bigger cells
@@ -87,7 +87,7 @@ namespace raylib {
          * @param tileSize the tile size
          * @return the image
          */
-        static RlImage genImageCellular(int width, int height, int tileSize);
+        static RlImage genImageCellular(const int &width, const int &height, const int &tileSize);
     };
 }
 

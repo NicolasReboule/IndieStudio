@@ -7,52 +7,52 @@
 
 #include "raylib/Inputs/GamepadHelper.hpp"
 
-bool raylib::GamepadHelper::isGamepadAvailable(int gamepad)
+bool raylib::input::GamepadHelper::isGamepadAvailable(const int &gamepad)
 {
     return IsGamepadAvailable(gamepad);
 }
 
-std::string raylib::GamepadHelper::getGamepadName(int gamepad)
+std::string raylib::input::GamepadHelper::getGamepadName(const int &gamepad)
 {
     return GetGamepadName(gamepad);
 }
 
-bool raylib::GamepadHelper::isGamepadButtonPressed(int gamepad, int button)
+bool raylib::input::GamepadHelper::isGamepadButtonPressed(const int &gamepad, const int &button)
 {
     return IsGamepadButtonPressed(gamepad, button);
 }
 
-bool raylib::GamepadHelper::isGamepadButtonDown(int gamepad, int button)
+bool raylib::input::GamepadHelper::isGamepadButtonDown(const int &gamepad, const int &button)
 {
     return IsGamepadButtonDown(gamepad, button);
 }
 
-bool raylib::GamepadHelper::isGamepadButtonReleased(int gamepad, int button)
+bool raylib::input::GamepadHelper::isGamepadButtonReleased(const int &gamepad, const int &button)
 {
     return IsGamepadButtonReleased(gamepad, button);
 }
 
-bool raylib::GamepadHelper::isGamepadButtonUp(int gamepad, int button)
+bool raylib::input::GamepadHelper::isGamepadButtonUp(const int &gamepad, const int &button)
 {
     return IsGamepadButtonUp(gamepad, button);
 }
 
-int raylib::GamepadHelper::getGamepadButtonPressed()
+int raylib::input::GamepadHelper::getGamepadButtonPressed()
 {
     return GetGamepadButtonPressed();
 }
 
-int raylib::GamepadHelper::getGamepadAxisCount(int gamepad)
+int raylib::input::GamepadHelper::getGamepadAxisCount(const int &gamepad)
 {
     return GetGamepadAxisCount(gamepad);
 }
 
-float raylib::GamepadHelper::getGamepadAxisMovement(int gamepad, int axis)
+float raylib::input::GamepadHelper::getGamepadAxisMovement(const int &gamepad, const int &axis)
 {
     return GetGamepadAxisMovement(gamepad, axis);
 }
 
-int raylib::GamepadHelper::setGamepadMappings(const std::string &mappings)
+int raylib::input::GamepadHelper::setGamepadMappings(const std::string &mappings)
 {
     return SetGamepadMappings(mappings.c_str());
 }
