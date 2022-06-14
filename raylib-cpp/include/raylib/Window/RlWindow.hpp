@@ -16,7 +16,7 @@
 #include <memory>
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::window {
     /**
      * @brief Window class
      */
@@ -140,7 +140,7 @@ namespace raylib {
          * @brief Set icon for window (only PLATFORM_DESKTOP)
          * @param image the image to set as icon
          */
-        void setWindowIcon(const RlImage &image);
+        void setWindowIcon(const image::RlImage &image);
 
         /**
          * @brief Set title for window (only PLATFORM_DESKTOP)

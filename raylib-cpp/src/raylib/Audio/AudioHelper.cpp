@@ -26,4 +26,3 @@ void raylib::AudioHelper::setMasterVolume(float volume)
 {
     SetMasterVolume(volume);
 }
-

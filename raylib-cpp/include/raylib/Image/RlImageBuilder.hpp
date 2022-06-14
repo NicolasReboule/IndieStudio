@@ -14,7 +14,7 @@
 #include "raylib/exception/BuilderException.hpp"
 #include "raylib/Image/ImageGenerator.hpp"
 
-namespace raylib {
+namespace raylib::image {
     /**
      * @brief RlImageBuilder class
      */

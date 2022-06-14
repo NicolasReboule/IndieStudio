@@ -12,7 +12,7 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::window {
     /**
      * @brief The System class
      */

@@ -9,7 +9,7 @@
 
 int main(int ac, char **av)
 {
-    auto window = raylib::RlWindow::getInstance();
+    auto window = raylib::window::RlWindow::getInstance();
     window->createWindow("Bomberman", 1280, 720, 120);
     raylib::RlCamera camera = raylib::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
     raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
@@ -31,7 +31,7 @@ int main(int ac, char **av)
             camera.reset();
         raylib::DrawHelper::beginMode3D(camera);
         raylib::Shape3DHelper::drawGrid(10, 1.0f);
-        DrawModelEx(model.getModel(), {0.0f, 0.0f, 0.0f}, {0, 1, 0}, 90.0f, {1.0f, 1.0f, 1.0f}, WHITE);
+        DrawModelEx(model.getModel(), {0.0f, 0.0f, 0.0f}, {0, 1, 0}, 90.0f, {0.8f, 0.8f, 0.8f}, WHITE);
         raylib::DrawHelper::endMode3D();
         raylib::DrawHelper::endDrawing();
     }

@@ -28,7 +28,7 @@ raylib::RlFont::RlFont(const std::string &fontPath, const int &fontSize, int *fo
     this->_fontSize = fontSize;
 }
 
-raylib::RlFont::RlFont(const raylib::RlImage &image, const RlColor &key, const int &firstChar) : _font()
+raylib::RlFont::RlFont(const raylib::image::RlImage &image, const RlColor &key, const int &firstChar) : _font()
 {
     this->_fontPath = "";
     this->_font = LoadFontFromImage(image.getImage(), key.getColor(), firstChar);

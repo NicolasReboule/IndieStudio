@@ -194,7 +194,7 @@ namespace raylib {
          * @return this
          * @see raylib::RlMeshBuilder::MeshType
          */
-        RlMeshBuilder &setHeightmap(const RlImage &heightmap);
+        RlMeshBuilder &setHeightmap(const image::RlImage &heightmap);
 
         /**
          * @brief Set the size
@@ -210,7 +210,7 @@ namespace raylib {
          * @return this
          * @see raylib::RlMeshBuilder::MeshType
          */
-        RlMeshBuilder &setCubicmap(const RlImage &cubicmap);
+        RlMeshBuilder &setCubicmap(const image::RlImage &cubicmap);
 
         /**
          * @brief Set the size
@@ -240,9 +240,9 @@ namespace raylib {
         int _sides; /**< Number of sides */
         float _size; /**< Size of the torus/knot */
         long _type; /**< Type of the mesh */
-        RlImage _heightmap; /**< Heightmap */
+        image::RlImage _heightmap; /**< Heightmap */
         Vector3f _vec3fSize; /**< Size of the heightmap */
-        RlImage _cubicmap; /**< Cubicmap */
+        image::RlImage _cubicmap; /**< Cubicmap */
         Vector3f _cubeSize; /**< Size of the cubicmap */
     };
 }

@@ -15,7 +15,7 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::image {
     /**
      * @brief Helper class for image manipulation
      * NOTE: Image software-rendering functions (CPU)

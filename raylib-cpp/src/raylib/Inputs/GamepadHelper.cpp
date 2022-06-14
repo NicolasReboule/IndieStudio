@@ -7,6 +7,7 @@
 
 #include "raylib/Inputs/GamepadHelper.hpp"
 
+//TODO: change this, for the event, need to save gamepad id, and register a gamepad handler
 bool raylib::input::GamepadHelper::isGamepadAvailable(const int &gamepad)
 {
     return IsGamepadAvailable(gamepad);

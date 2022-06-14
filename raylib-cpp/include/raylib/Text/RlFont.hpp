@@ -55,7 +55,7 @@ namespace raylib {
          * @param key the key color
          * @param firstChar the first character
          */
-        explicit RlFont(const RlImage &image, const RlColor &key, const int &firstChar);
+        explicit RlFont(const image::RlImage &image, const RlColor &key, const int &firstChar);
 
         /**
          * @brief Create a RlFont, using a file type and a file data

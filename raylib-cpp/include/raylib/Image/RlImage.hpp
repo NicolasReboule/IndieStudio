@@ -13,7 +13,7 @@
 #include <vector>
 #include <string>
 
-namespace raylib {
+namespace raylib::image {
     /**
      * @brief Image class
      */

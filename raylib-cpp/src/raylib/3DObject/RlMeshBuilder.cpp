@@ -107,7 +107,7 @@ raylib::RlMeshBuilder &raylib::RlMeshBuilder::setSides(const int &sides)
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setHeightmap(const RlImage &heightmap)
+raylib::RlMeshBuilder &raylib::RlMeshBuilder::setHeightmap(const raylib::image::RlImage &heightmap)
 {
     _heightmap = heightmap;
     _flags |= RlMeshBuilder::Heightmap;
@@ -121,7 +121,7 @@ raylib::RlMeshBuilder &raylib::RlMeshBuilder::setVec3fSize(const Vector3f &size)
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setCubicmap(const RlImage &cubicmap)
+raylib::RlMeshBuilder &raylib::RlMeshBuilder::setCubicmap(const raylib::image::RlImage &cubicmap)
 {
     _cubicmap = cubicmap;
     _flags |= RlMeshBuilder::Cubicmap;

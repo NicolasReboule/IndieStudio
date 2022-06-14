@@ -32,6 +32,7 @@ void raylib::input::KeyboardHelper::setExitKey(const int &key)
     SetExitKey(key);
 }
 
+//TODO: Potential change to a std::vector of keys
 int raylib::input::KeyboardHelper::getKeyPressed()
 {
     return GetKeyPressed();
