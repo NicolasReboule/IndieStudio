@@ -40,9 +40,12 @@ namespace GameEngine {
 
         void setBoundingBox(BoundingBox &boundingBox);
 
+        bool &getIsCollsionEnable();
+
     protected:
         raylib::RlModel _model;
 
+        bool _collisionEnable;
         Vector3f _position;
         Vector3f _scale;
         float _rotationDegrees;

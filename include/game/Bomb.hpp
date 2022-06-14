@@ -17,6 +17,8 @@ namespace Indie {
         Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~Bomb() override = default;
 
+        void ready() override;
+
         void update(float delta) override;
     private:
         float _timer;

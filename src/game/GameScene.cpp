@@ -7,10 +7,10 @@
 
 #include "game/GameScene.hpp"
 #include "game/Wall.hpp"
+#include "game/WallDestroyable.hpp"
 #include "game/Player.hpp"
-#include "game/Bomb.hpp"
 
-Indie::GameScene::GameScene(std::string name, std::string sceneSource) : Scene(name, sceneSource)
+Indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
 }
 
@@ -62,13 +62,58 @@ void Indie::GameScene::sceneLauncher()
     }
 
 
+    index = 0;
+    //destroyable walls
+    for (int i = 1;  i < 3; i ++, index++) {
+        auto wallDestroyable = std::make_shared<Indie::WallDestroyable>("wallDestoyable" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/blackston.png");
+        wallDestroyable->setPosition({-3.5f + i * 2.0f, 0.5, -2.5f});
+        this->addNode(wallDestroyable);
+    }
+    for (int i = 0;  i < 4; i ++, index++) {
+        auto wallDestroyable = std::make_shared<Indie::WallDestroyable>("wallDestoyable" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/blackston.png");
+        wallDestroyable->setPosition({-3.5f + i * 2.0f, 0.5, -0.5f});
+        this->addNode(wallDestroyable);
+    }
+    for (int i = 1;  i < 3; i ++, index++) {
+        auto wallDestroyable = std::make_shared<Indie::WallDestroyable>("wallDestoyable" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/blackston.png");
+        wallDestroyable->setPosition({-3.5f + i * 2.0f, 0.5, 1.5f});
+        this->addNode(wallDestroyable);
+    }
+
+
+
+    for (int i = 2;  i < 5; i ++, index++) {
+        auto wallDestroyable = std::make_shared<Indie::WallDestroyable>("wallDestoyable" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/blackston.png");
+        wallDestroyable->setPosition({-3.5f + i * 1.0f, 0.5, -3.5f});
+        this->addNode(wallDestroyable);
+    }
+
+    for (int i = 0;  i < 7; i ++, index++) {
+        auto wallDestroyable = std::make_shared<Indie::WallDestroyable>("wallDestoyable" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/blackston.png");
+        wallDestroyable->setPosition({-3.5f + i * 1.0f, 0.5, -1.5f});
+        this->addNode(wallDestroyable);
+    }
+
+    for (int i = 0;  i < 7; i ++, index++) {
+        auto wallDestroyable = std::make_shared<Indie::WallDestroyable>("wallDestoyable" + std::to_string(index),raylib::RlMeshBuilder::MeshCube,"./assets/blackston.png");
+        wallDestroyable->setPosition({-3.5f + i * 1.0f, 0.5, 0.5f});
+        this->addNode(wallDestroyable);
+    }
+
+    for (int i = 2;  i < 5; i ++, index++) {
+        auto wallDestroyable = std::make_shared<Indie::WallDestroyable>("wallDestoyable" + std::to_string(index),raylib::RlMeshBuilder::MeshCube,"./assets/blackston.png");
+        wallDestroyable->setPosition({-3.5f + i * 1.0f, 0.5, 2.5f});
+        this->addNode(wallDestroyable);
+    }
 
 
 
 
-    auto bomb = std::make_shared<Indie::Bomb>("bomb", raylib::RlMeshBuilder::MeshSphere, "./assets/guytex.png");
+
+
+    /*auto bomb = std::make_shared<Indie::Bomb>("bomb", raylib::RlMeshBuilder::MeshSphere, "./assets/guytex.png");
     bomb->setPosition({-2.5f, 0.5, -3.5f});
-    this->addNode(bomb);
+    this->addNode(bomb);*/
 
     auto player = std::make_shared<Indie::Player>("player", "./assets/player.iqm", "./assets/blue.png");
     BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};

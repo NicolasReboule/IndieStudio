@@ -10,11 +10,12 @@
 
 #include "GameEngine/GameEngine.hpp"
 
+
 namespace Indie {
 
     class GameScene : public GameEngine::Scene {
     public:
-        explicit GameScene(std::string name = "game", std::string sceneSource = "game");
+        explicit GameScene(const std::string &name = "game", const std::string &sceneSource = "game");
         ~GameScene() override = default;
         void updateScene(float delta) override;
 

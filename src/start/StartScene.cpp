@@ -7,6 +7,7 @@
 
 #include <IndieStudio.hpp>
 #include "start/StartScene.hpp"
+#include "start/Logo.hpp"
 
 Indie::StartScene::StartScene(std::string name, std::string sceneSource) : Scene(std::move(name), std::move(sceneSource))
 {

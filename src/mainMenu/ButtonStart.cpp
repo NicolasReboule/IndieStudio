@@ -19,7 +19,7 @@ void Indie::ButtonPlay::pressed()
 {
     auto sceneManager = GameEngine::SceneManager::getInstance();
 
-    sceneManager->changeScene("game");
+    sceneManager->changeScene("chooseNumberPlayer");
 
     std::cout << "change scene to game" << std::endl;
 }

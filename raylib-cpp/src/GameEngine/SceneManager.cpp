@@ -82,6 +82,8 @@ void GameEngine::SceneManager::update()
             scene->updateScene(delta);
             scene->update(delta);
         }
+
+    this->deleteNodeInLst();
 }
 
 void GameEngine::SceneManager::drawAll(raylib::RlCamera &camera)
@@ -135,15 +137,26 @@ void GameEngine::SceneManager::makeLoop(raylib::RlCamera &camera)
 void GameEngine::SceneManager::addNode(const std::shared_ptr<GameEngine::Base> &node)
 {
     for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
-        if (scene->getSceneSource() == this->_actualScene)
+        if (scene->getSceneSource() == this->_actualScene) {
             scene->addNode(node);
+            node->ready();
+            return;
+        }
+
+}
+
+void GameEngine::SceneManager::deleteNodeInLst()
+{
+    for (const auto &nodeName: this->_nodesToDelete) {
+        for (std::shared_ptr<GameEngine::Scene> &scene: this->_scenes)
+            if (scene->getSceneSource() == this->_actualScene)
+                scene->deleteNode(nodeName);
+    }
+
+    this->_nodesToDelete.clear();
 }
 
 void GameEngine::SceneManager::deleteNode(const std::string &name)
 {
-    for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
-        if (scene->getSceneSource() == this->_actualScene) {
-            scene->deleteNode(name);
-            return;
-        }
+    this->_nodesToDelete.push_back(name);
 }

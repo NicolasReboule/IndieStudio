@@ -11,12 +11,14 @@ GameEngine::StaticBody::StaticBody(const std::string &name, const std::string &m
     : Node(name), _model(modelPath, texturePath), _position({0, 0, 0}), _scale({1, 1, 1})
 {
     this->_rotationDegrees = 0;
+    this->_collisionEnable = true;
 }
 
 GameEngine::StaticBody::StaticBody(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath)
     : Node(name), _model(type, texturepath), _position({0, 0, 0}), _scale({1, 1, 1})
 {
     this->_rotationDegrees = 0;
+    this->_collisionEnable = true;
 }
 
 void GameEngine::StaticBody::ready()
@@ -84,6 +86,11 @@ const BoundingBox &GameEngine::StaticBody::getBoundingBox() const
 void GameEngine::StaticBody::setBoundingBox(BoundingBox &boundingBox)
 {
     this->_model.setBoundingBox(boundingBox);
+}
+
+bool &GameEngine::StaticBody::getIsCollsionEnable()
+{
+    return this->_collisionEnable;
 }
 
 /*

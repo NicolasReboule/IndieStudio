@@ -40,9 +40,8 @@ void GameEngine::Scene::ready()
 
 void GameEngine::Scene::update(float delta)
 {
-   // for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
-   for (auto it = this->_nodes.begin(); it != this->_nodes.end(); it++)
-       (*it)->update(delta);
+   for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
+       node->update(delta);
 }
 
 void GameEngine::Scene::draw()
@@ -100,7 +99,11 @@ void GameEngine::Scene::deleteNode(const std::string &name)
         }*/
 
     auto erased = std::erase_if(this->_nodes, [&name](const auto &node) {
-        return node->getName() == name;
+        if (node->getName() == name) {
+            std::cout << node->getName() << " : was deleted." << std::endl;
+            return true;
+        };
+        return false;
     });
     std::cout << "Erased: " << erased  << std::endl;
 

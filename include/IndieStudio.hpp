@@ -11,10 +11,11 @@
 #include "GameEngine/GameEngine.hpp"
 
 #include "start/StartScene.hpp"
-#include "start/Logo.hpp"
 
 #include "mainMenu/MainMenuScene.hpp"
 
 #include "game/GameScene.hpp"
+
+#include "chooseNumberPlayer/ChooseNumberPlayerScene.hpp"
 
 #endif //INDIESTUDIO_INDIESTUDIO_HPP

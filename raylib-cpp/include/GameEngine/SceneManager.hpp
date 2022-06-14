@@ -9,8 +9,10 @@
 #define INDIESTUDIO_SCENEMANAGER_HPP
 
 #include "raylib/Raylib.hpp"
+#include "global/Global.hpp"
 #include "Scene.hpp"
 #include <vector>
+
 
 namespace GameEngine {
 
@@ -43,9 +45,14 @@ namespace GameEngine {
 
         static std::shared_ptr<GameEngine::SceneManager> &getInstance();
 
+        Indie::Global _global;
+
     private:
+        void deleteNodeInLst();
+
         static std::shared_ptr<SceneManager> _instance;
 
+        std::vector<std::string> _nodesToDelete;
         std::string _actualScene;
         std::vector<std::shared_ptr<GameEngine::Scene>> _scenes;
     };

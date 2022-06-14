@@ -33,14 +33,13 @@ void GameEngine::KinematicBody::moveAndCollide(Vector3f position)
 
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
-            auto &wall = dynamic_cast<GameEngine::StaticBody &>(*node);
-            if (wall.getName() != this->getName() && raylib::Collision3dHelper::checkCollisionBoxes(temp, wall.getBoundingBox())) {
-                std::cout << "collide !!!!!! with :" << wall.getName() << std::endl;
-                std::cout << position.x << "," << position.y << std::endl;
-                std::cout << wall.getPosition().x << "," << wall.getPosition().y << std::endl;
-                //std::cout << "(" << wall.getBoundingBox().min.x << "," << wall.getBoundingBox().min.y << "," << wall.getBoundingBox().min.x << ")" << std::endl;
-                //std::cout << "(" << wall.getBoundingBox().max.x << "," << wall.getBoundingBox().max.y << "," << wall.getBoundingBox().max.x << ")" << std::endl;
-
+            auto &staticBody = dynamic_cast<GameEngine::StaticBody &>(*node);
+            if (staticBody.getName() != this->getName() && staticBody.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
+                std::cout << "collide !!!!!! with :" << staticBody.getName() << " ,collision enable : " << staticBody.getIsCollsionEnable() << std::endl;
+                //std::cout << position.x << "," << position.y << std::endl;
+                //std::cout << staticBody.getPosition().x << "," << staticBody.getPosition().y << std::endl;
+                //std::cout << "(" << staticBody.getBoundingBox().min.x << "," << staticBody.getBoundingBox().min.y << "," << staticBody.getBoundingBox().min.x << ")" << std::endl;
+                //std::cout << "(" << staticBody.getBoundingBox().max.x << "," << staticBody.getBoundingBox().max.y << "," << staticBody.getBoundingBox().max.x << ")" << std::endl;
                 return;
             }
         }
