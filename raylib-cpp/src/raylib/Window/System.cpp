@@ -7,92 +7,92 @@
 
 #include "raylib/Window/System.hpp"
 
-int raylib::System::getScreenWidth()
+int raylib::window::System::getScreenWidth()
 {
     return GetScreenWidth();
 }
 
-int raylib::System::getScreenHeight()
+int raylib::window::System::getScreenHeight()
 {
     return GetScreenHeight();
 }
 
-Vector2i raylib::System::getScreenSize()
+Vector2i raylib::window::System::getScreenSize()
 {
     return {getScreenWidth(), getScreenHeight()};
 }
 
-int raylib::System::getMonitorCount()
+int raylib::window::System::getMonitorCount()
 {
     return GetMonitorCount();
 }
 
-int raylib::System::getCurrentMonitor()
+int raylib::window::System::getCurrentMonitor()
 {
     return GetCurrentMonitor();
 }
 
-Vector2f raylib::System::getMonitorPosition(int monitorIndex)
+Vector2f raylib::window::System::getMonitorPosition(int monitorIndex)
 {
     return raylib::VectorHelper::toVectorf(GetMonitorPosition(monitorIndex));
 }
 
-int raylib::System::getMonitorWidth(int monitorIndex)
+int raylib::window::System::getMonitorWidth(int monitorIndex)
 {
     return GetMonitorWidth(monitorIndex);
 }
 
-int raylib::System::getMonitorHeight(int monitorIndex)
+int raylib::window::System::getMonitorHeight(int monitorIndex)
 {
     return GetMonitorHeight(monitorIndex);
 }
 
-Vector2i raylib::System::getMonitorSize(int monitorIndex)
+Vector2i raylib::window::System::getMonitorSize(int monitorIndex)
 {
     return {getMonitorWidth(monitorIndex), getMonitorHeight(monitorIndex)};
 }
 
-int raylib::System::getMonitorPhysicalWidth(int monitorIndex)
+int raylib::window::System::getMonitorPhysicalWidth(int monitorIndex)
 {
     return GetMonitorPhysicalWidth(monitorIndex);
 }
 
-int raylib::System::getMonitorPhysicalHeight(int monitorIndex)
+int raylib::window::System::getMonitorPhysicalHeight(int monitorIndex)
 {
     return GetMonitorPhysicalHeight(monitorIndex);
 }
 
-Vector2i raylib::System::getMonitorPhysicalSize(int monitorIndex)
+Vector2i raylib::window::System::getMonitorPhysicalSize(int monitorIndex)
 {
     return {getMonitorPhysicalWidth(monitorIndex), getMonitorPhysicalHeight(monitorIndex)};
 }
 
-int raylib::System::getMonitorRefreshRate(int monitorIndex)
+int raylib::window::System::getMonitorRefreshRate(int monitorIndex)
 {
     return GetMonitorRefreshRate(monitorIndex);
 }
 
-Vector2f raylib::System::getWindowPosition()
+Vector2f raylib::window::System::getWindowPosition()
 {
     return raylib::VectorHelper::toVectorf(GetWindowPosition());
 }
 
-Vector2f raylib::System::getWindowScaleDPI()
+Vector2f raylib::window::System::getWindowScaleDPI()
 {
     return raylib::VectorHelper::toVectorf(GetWindowScaleDPI());
 }
 
-std::string raylib::System::getMonitorName(int monitorIndex)
+std::string raylib::window::System::getMonitorName(int monitorIndex)
 {
     return GetMonitorName(monitorIndex);
 }
 
-void raylib::System::setClipboardText(const std::string &text)
+void raylib::window::System::setClipboardText(const std::string &text)
 {
     SetClipboardText(text.c_str());
 }
 
-std::string raylib::System::getClipboardText()
+std::string raylib::window::System::getClipboardText()
 {
     return GetClipboardText();
 }

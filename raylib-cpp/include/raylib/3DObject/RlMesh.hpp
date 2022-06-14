@@ -19,7 +19,7 @@ namespace raylib {
          * @param mesh the mesh to use
          * @attention Don't use this, use the RlMeshBuilder instead
          */
-        explicit RlMesh(Mesh &mesh);
+        explicit RlMesh(const Mesh &mesh);
 
     public:
         const Mesh &getMesh() const;

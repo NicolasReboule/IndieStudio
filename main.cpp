@@ -6,17 +6,15 @@
 */
 
 #include "IndieStudio.hpp"
-#include "raylib/Camera/CameraHelper.hpp"
 
 int main(int ac, char **av)
 {
-    auto window = raylib::RlWindow::getInstance();
+    auto window = raylib::window::RlWindow::getInstance();
     auto audioManager = GameEngine::AudioManager::getInstance();
     auto sceneManager = GameEngine::SceneManager::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 60);
+    window->createWindow("Bomberman", 1280, 720, 120);
 
-    raylib::RlCamera camera;
-    raylib::CameraHelper::setCameraMode(camera, CAMERA_FREE);
+    raylib::RlCamera camera = raylib::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
 
     auto startScene = std::make_shared<Indie::StartScene>();
     sceneManager->addScene(startScene);

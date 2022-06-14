@@ -34,6 +34,7 @@ add_library(${PROJECT_NAME}
         src/raylib/Audio/WaveHelper.cpp
         src/raylib/Camera/CameraHelper.cpp
         src/raylib/Camera/RlCamera.cpp
+        src/raylib/Camera/RlCameraBuilder.cpp
         src/raylib/Color/ColorHelper.cpp
         src/raylib/Color/RlColor.cpp
         src/raylib/Core/CoreHelper.cpp
@@ -47,6 +48,7 @@ add_library(${PROJECT_NAME}
         src/raylib/exception/InvalidArgumentException.cpp
         src/raylib/exception/RaylibException.cpp
         src/raylib/exception/WindowException.cpp
+        src/raylib/GlStateManager.cpp
         src/raylib/Image/ImageDrawHelper.cpp
         src/raylib/Image/ImageGenerator.cpp
         src/raylib/Image/ImageHelper.cpp
@@ -61,9 +63,10 @@ add_library(${PROJECT_NAME}
         src/raylib/Random.cpp
         src/raylib/Shader/RlShader.cpp
         src/raylib/Shader/ShaderUtils.cpp
-        src/raylib/Text/Codepoint.cpp
+        src/raylib/Text/TextCodepoint.cpp
         src/raylib/Text/RlFont.cpp
-        src/raylib/Text/Text.cpp
+        src/raylib/Text/RlText.cpp
+        src/raylib/Text/RlTextBuilder.cpp
         src/raylib/Text/TextHelper.cpp
         src/raylib/Texture/RlRenderTexture.cpp
         src/raylib/Texture/RlTexture.cpp
@@ -83,6 +86,6 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Node2D.cpp
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
-
-        src/GameEngine/Nodes/KinematicBody.cpp include/GameEngine/Nodes/KinematicBody.hpp)
+        src/GameEngine/Nodes/KinematicBody.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

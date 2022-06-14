@@ -12,18 +12,35 @@
 #include <string>
 
 namespace raylib {
-
-class AudioHelper {
+    /**
+     * @brief AudioHelper device management functions
+     */
+    class AudioHelper {
     public:
+        /**
+         * @brief Initialize audio device and context
+         */
+        static void initAudioDevice();
 
-        AudioHelper();
-        ~AudioHelper();
-        // AudioHelper device management functions
-        //void initAudioDevice();                                                     // Initialize audio device and context
-        //void closeAudioDevice();                                                    // Close the audio device and context
-        bool isAudioDeviceReady();                                                  // Check if audio device has been initialized successfully
-        void setMasterVolume(float volume);                                             // Set master volume (listener)
+        /**
+         * @brief Close the audio device and context
+         */
+        static void closeAudioDevice();
+
+        /**
+         * @brief Check if audio device has been initialized successfully
+         * @return true if audio device has been initialized successfully
+         */
+        static bool isAudioDeviceReady();
+
+        /**
+         * @brief Set master volume (listener)
+         * @param volume the volume to set
+         */
+        static void setMasterVolume(float volume);
+
     private:
+        static bool _audioDeviceReady;
     };
 }
 

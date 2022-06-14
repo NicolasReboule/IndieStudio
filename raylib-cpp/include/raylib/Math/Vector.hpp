@@ -9,7 +9,6 @@
 #define INDIESTUDIO_VECTOR_HPP
 
 #include <iostream>
-#include <raylib.h>
 
 namespace raylib {
     /**
@@ -20,6 +19,12 @@ namespace raylib {
     struct Vector2 final {
         T x;
         T y;
+
+        /**
+         * @brief Default constructor
+         * @attention Don't use this, this will result on undefined behavior
+         */
+        Vector2() = default;
 
         /**
          * @brief Create a Vector2
@@ -62,6 +67,12 @@ namespace raylib {
         T z;
 
         /**
+         * @brief Default constructor
+         * @attention Don't use this, this will result on undefined behavior
+         */
+        Vector3() = default;
+
+        /**
          * @brief Create a Vector3
          * @param x the x value
          * @param y the y value
@@ -102,6 +113,12 @@ namespace raylib {
         T y;
         T z;
         T w;
+
+        /**
+         * @brief Default constructor
+         * @attention Don't use this, this will result on undefined behavior
+         */
+        Vector4() = default;
 
         /**
          * @brief Create a Vector4

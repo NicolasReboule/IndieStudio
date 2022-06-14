@@ -29,14 +29,14 @@ namespace raylib {
          * @brief Create a RlTexture from image
          * @param image the image of the texture
          */
-        explicit RlTexture(const RlImage &image);
+        explicit RlTexture(const image::RlImage &image);
 
         /**
          * @brief Craete a RlTexture, cubemap from image, multiple image cubemap layouts supported
          * @param image the image
          * @param layout the layout
          */
-        explicit RlTexture(const RlImage &image, const CubemapLayout &layout);
+        explicit RlTexture(const image::RlImage &image, const CubemapLayout &layout);
 
         /**
          * @brief RlTexture destructor

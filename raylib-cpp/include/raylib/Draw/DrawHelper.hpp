@@ -116,6 +116,7 @@ namespace raylib {
          */
         static void endVrStereoMode();
 
+        //TODO: change location of this
         /**
          * @brief Draw bounding box (wires)
          * @param box to use

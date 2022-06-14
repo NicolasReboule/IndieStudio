@@ -88,7 +88,7 @@ void GameEngine::SceneManager::update()
 
 void GameEngine::SceneManager::drawAll(raylib::RlCamera &camera)
 {
-    auto window = raylib::RlWindow::getInstance();
+    auto window = raylib::window::RlWindow::getInstance();
 
     raylib::DrawHelper::beginDrawing();
     raylib::DrawHelper::clearBackground(RlColor::DarkBrown);

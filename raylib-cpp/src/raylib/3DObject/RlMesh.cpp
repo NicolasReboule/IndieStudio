@@ -7,7 +7,7 @@
 
 #include "raylib/3DObject/RlMesh.hpp"
 
-raylib::RlMesh::RlMesh(Mesh &mesh)
+raylib::RlMesh::RlMesh(const Mesh &mesh)
 {
     this->_mesh = mesh;
 }

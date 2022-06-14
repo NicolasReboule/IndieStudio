@@ -7,67 +7,67 @@
 
 #include "raylib/Inputs/TouchHelper.hpp"
 
-int raylib::TouchHelper::getTouchX()
+int raylib::input::TouchHelper::getTouchX()
 {
     return GetTouchX();
 }
 
-int raylib::TouchHelper::getTouchY()
+int raylib::input::TouchHelper::getTouchY()
 {
     return GetTouchY();
 }
 
-Vector2f raylib::TouchHelper::getTouchPosition(int index)
+Vector2f raylib::input::TouchHelper::getTouchPosition(const int &index)
 {
     return raylib::VectorHelper::toVectorf(GetTouchPosition(index));
 }
 
-int raylib::TouchHelper::getTouchPointId(int index)
+int raylib::input::TouchHelper::getTouchPointId(const int &index)
 {
     return GetTouchPointId(index);
 }
 
-int raylib::TouchHelper::getTouchPointCount()
+int raylib::input::TouchHelper::getTouchPointCount()
 {
     return GetTouchPointCount();
 }
 
-void raylib::TouchHelper::setGesturesEnabled(unsigned int flags)
+void raylib::input::TouchHelper::setGesturesEnabled(const unsigned int &flags)
 {
     SetGesturesEnabled(flags);
 }
 
-bool raylib::TouchHelper::isGestureDetected(int gesture)
+bool raylib::input::TouchHelper::isGestureDetected(const int &gesture)
 {
     return IsGestureDetected(gesture);
 }
 
-int raylib::TouchHelper::getGestureDetected()
+int raylib::input::TouchHelper::getGestureDetected()
 {
     return GetGestureDetected();
 }
 
-float raylib::TouchHelper::getGestureHoldDuration()
+float raylib::input::TouchHelper::getGestureHoldDuration()
 {
     return GetGestureHoldDuration();
 }
 
-Vector2f raylib::TouchHelper::getGestureDragVector()
+Vector2f raylib::input::TouchHelper::getGestureDragVector()
 {
     return raylib::VectorHelper::toVectorf(GetGestureDragVector());
 }
 
-float raylib::TouchHelper::getGestureDragAngle()
+float raylib::input::TouchHelper::getGestureDragAngle()
 {
     return GetGestureDragAngle();
 }
 
-Vector2f raylib::TouchHelper::getGesturePinchVector()
+Vector2f raylib::input::TouchHelper::getGesturePinchVector()
 {
     return raylib::VectorHelper::toVectorf(GetGesturePinchVector());
 }
 
-float raylib::TouchHelper::getGesturePinchAngle()
+float raylib::input::TouchHelper::getGesturePinchAngle()
 {
     return GetGesturePinchAngle();
 }

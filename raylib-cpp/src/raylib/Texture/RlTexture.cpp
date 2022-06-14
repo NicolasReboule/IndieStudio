@@ -14,14 +14,14 @@ raylib::RlTexture::RlTexture(const std::string &fileName) : _texture(), _texture
     this->_textureRec = {0, 0, (float) this->_texture.width, (float) this->_texture.height};
 }
 
-raylib::RlTexture::RlTexture(const RlImage &image) : _texture(), _textureRec()
+raylib::RlTexture::RlTexture(const raylib::image::RlImage &image) : _texture(), _textureRec()
 {
     this->_texturePath = "";
     this->_texture = LoadTextureFromImage(image.getImage());
     this->_textureRec = {0, 0, (float) this->_texture.width, (float) this->_texture.height};
 }
 
-raylib::RlTexture::RlTexture(const raylib::RlImage &image, const CubemapLayout &layout) : _texture(), _textureRec()
+raylib::RlTexture::RlTexture(const raylib::image::RlImage &image, const CubemapLayout &layout) : _texture(), _textureRec()
 {
     this->_texturePath = "";
     this->_texture = LoadTextureCubemap(image.getImage(), layout);

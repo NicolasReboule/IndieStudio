@@ -33,8 +33,8 @@ void GameEngine::Button::update(float delta)
         this->_state = 0;
         return;
     }
-    if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::MouseHelper::getMousePosition(), this->_bounds)) {
-        if (raylib::MouseHelper::isMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+    if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::input::MouseHelper::getMousePosition(), this->_bounds)) {
+        if (raylib::input::MouseHelper::isMouseButtonDown(MOUSE_BUTTON_LEFT)) {
             this->_state = 2;
             this->_action = true;
         } else
@@ -47,7 +47,7 @@ void GameEngine::Button::update(float delta)
     if (this->_action)
         this->pressed();
 
-    this->_rectangle.y = (float)(this->_state) * this->_frameHeight;
+    this->_rectangle.y = (float) (this->_state) * this->_frameHeight;
 }
 
 void GameEngine::Button::draw()

@@ -14,12 +14,32 @@
 namespace raylib {
     class ModelHelper {
     public:
-        // Model drawing functions
-        static void drawModel(const RlModel &model);                            // DrawHelper a model (with texture if set)
+
+        /**
+         * @brief Draw a model
+         * @param model to draw
+         */
+        static void drawModel(const RlModel &model);
+
+        /**
+         * @brief Draw a model wires
+         * @param model to draw
+         */
         static void drawModelWires(const RlModel &model); // DrawHelper a model wires (with texture if set) with extended parameters
 
-        static void unloadModelKeepMeshes(Model model);                                                           // Unload model (but not meshes) from memory (RAM and/or VRAM)
+        /**
+         * @brief Unload a model but keep the model's mesh
+         * @warning RlModel already unload it's model
+         * @param model to unload
+         */
+        static void unloadModelKeepMeshes(Model model);
 
+        /**
+         * @brief Get the BoundingBox of a model
+         * @warning The BoundingBox is not updated if the model is updated after the call of this function
+         * @param model to get the BoundingBox from
+         * @return the BoundingBox of the model
+         */
         static BoundingBox getModelBoundingBox(Model model);                                                      // Compute model bounding box limits (considers all meshes)
 
     private:

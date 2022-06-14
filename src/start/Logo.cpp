@@ -7,9 +7,7 @@
 
 #include "start/Logo.hpp"
 
-#include <utility>
-
-Indie::Logo::Logo(std::string name, const std::string &filename) : TextureRect(std::move(name), filename)
+Indie::Logo::Logo(const std::string &name, const std::string &filename) : TextureRect(name, filename)
 {
 }
 
