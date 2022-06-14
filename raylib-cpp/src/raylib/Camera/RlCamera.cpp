@@ -25,6 +25,7 @@ const float &fovy, const CameraProjection &projection, const CameraMode &mode)
 void raylib::RlCamera::update()
 {
     UpdateCamera(&this->_camera);
+    //TODO: handle custom movement keys
 }
 
 void raylib::RlCamera::reset()

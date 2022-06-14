@@ -59,7 +59,7 @@
 #include "Random.hpp"
 #include "Shader/RlShader.hpp"
 #include "Shader/ShaderUtils.hpp"
-#include "Text/Codepoint.hpp"
+#include "Text/TextCodepoint.hpp"
 #include "Text/RlFont.hpp"
 #include "Text/RlText.hpp"
 #include "Text/TextHelper.hpp"

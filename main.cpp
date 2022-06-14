@@ -24,6 +24,12 @@ int main(int ac, char **av)
 
     std::cout << camera << std::endl;
 
+    auto mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setLength(1.0).setWidth(1.0).setHeight(1.0).build();
+    auto model = raylib::RlModel(mesh, "assets/textures/block/polished_blackstone_bricks.png");
+    model.setPosition({5, 4, 3});
+    model.setRotationAxis({1, 0, 0});
+    model.setRotationAngle(180);
+
     while (window->isOpen()) {
         raylib::DrawHelper::beginDrawing();
         raylib::DrawHelper::clearBackground(RlColor::White);
@@ -35,6 +41,7 @@ int main(int ac, char **av)
         if (raylib::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();
         raylib::DrawHelper::beginMode3D(camera);
+        raylib::ModelHelper::drawModel(model);
         raylib::Shape3DHelper::drawGrid(10, 1.0f);
         raylib::Shape3DHelper::drawCube({0, 0, 0}, 2, 2, 2, RlColor::Red);
         raylib::DrawHelper::endMode3D();

@@ -63,7 +63,7 @@ add_library(${PROJECT_NAME}
         src/raylib/Random.cpp
         src/raylib/Shader/RlShader.cpp
         src/raylib/Shader/ShaderUtils.cpp
-        src/raylib/Text/Codepoint.cpp
+        src/raylib/Text/TextCodepoint.cpp
         src/raylib/Text/RlFont.cpp
         src/raylib/Text/RlText.cpp
         src/raylib/Text/TextHelper.cpp
