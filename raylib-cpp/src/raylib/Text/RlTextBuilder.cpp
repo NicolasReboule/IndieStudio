@@ -7,30 +7,11 @@
 
 #include "raylib/Text/RlTextBuilder.hpp"
 
-raylib::RlTextBuilder::RlTextBuilder() : _text(), _position(0, 0), _font(), _color(BLACK), _origin(0, 0)
+raylib::RlTextBuilder::RlTextBuilder() : _text(), _position(0, 0), _font(), _color(RlColor::Black), _origin(0, 0)
 {
-    _fontSize = 10;
-    _textSpacing = 1;
-    _rotation = 0;
-}
-
-raylib::RlText raylib::RlTextBuilder::build()
-{
-    if (!_isTextSet)
-        throw raylib::ex::BuilderException("Text is not set");
-    RlText text(_text, _position, _color);
-    text.setRotation(_rotation);
-    text.setOrigin(_origin);
-    if (!_isFontSizeSet && _isFontSet && _fontPath.empty())
-        text.setFontSize((float) _font->getFontSize());
-    else
-        text.setFontSize(_fontSize);
-    text.setTextSpacing(_textSpacing);
-    if (_fontPath.empty() && _isFontSet)
-        text.setFont(_font);
-    else if (_isFontSet)
-        text.setFont(std::make_shared<RlFont>(_fontPath, (int) _fontSize));
-    return text;
+    this->_fontSize = 10;
+    this->_textSpacing = 1;
+    this->_rotation = 0;
 }
 
 raylib::RlTextBuilder &raylib::RlTextBuilder::setText(const std::string &text)
@@ -48,7 +29,7 @@ raylib::RlTextBuilder &raylib::RlTextBuilder::setPosition(const Vector2f &positi
 
 raylib::RlTextBuilder &raylib::RlTextBuilder::setFont(const std::shared_ptr<RlFont> &font)
 {
-    if (_isFontSet)
+    if (_isFontSet || _isFontPathSet)
         throw raylib::ex::BuilderException("Font already set");
     _isFontSet = true;
     _font = font;
@@ -61,20 +42,20 @@ raylib::RlTextBuilder &raylib::RlTextBuilder::setColor(const RlColor &color)
     return *this;
 }
 
-raylib::RlTextBuilder &raylib::RlTextBuilder::setFontSize(float fontSize)
+raylib::RlTextBuilder &raylib::RlTextBuilder::setFontSize(const float &fontSize)
 {
     _isFontSizeSet = true;
     _fontSize = fontSize;
     return *this;
 }
 
-raylib::RlTextBuilder &raylib::RlTextBuilder::setSpacing(float spacing)
+raylib::RlTextBuilder &raylib::RlTextBuilder::setSpacing(const float &spacing)
 {
     _textSpacing = spacing;
     return *this;
 }
 
-raylib::RlTextBuilder &raylib::RlTextBuilder::setRotation(float rotation)
+raylib::RlTextBuilder &raylib::RlTextBuilder::setRotation(const float &rotation)
 {
     _rotation = rotation;
     return *this;
@@ -90,7 +71,34 @@ raylib::RlTextBuilder &raylib::RlTextBuilder::setFontPath(const std::string &fon
 {
     if (_isFontSet)
         throw raylib::ex::BuilderException("Font already set");
-    _isFontSet = true;
+    _isFontPathSet = true;
     _fontPath = fontPath;
     return *this;
+}
+
+raylib::RlText raylib::RlTextBuilder::build()
+{
+    if (!_isTextSet)
+        throw raylib::ex::BuilderException("Text is not set");
+    if (_isFontPathSet) {
+        RlText text = RlText(_text, _fontPath, _fontSize, _position, _color);
+        text.setTextSpacing(_textSpacing);
+        text.setRotation(_rotation);
+        text.setOrigin(_origin);
+        return text;
+    }
+    if (_isFontSet) {
+        RlText text = RlText(_text, _font, _position, _color);
+        text.setTextSpacing(_textSpacing);
+        text.setRotation(_rotation);
+        text.setOrigin(_origin);
+        return text;
+    }
+
+    RlText text = RlText(_text, _position, _color);
+    text.setFontSize(_fontSize);
+    text.setTextSpacing(_textSpacing);
+    text.setRotation(_rotation);
+    text.setOrigin(_origin);
+    return text;
 }
