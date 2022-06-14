@@ -12,6 +12,7 @@
 #include "raylib/Core/RlLogger.hpp"
 #include <raylib.h>
 #include <string>
+#include <memory>
 
 namespace raylib {
     /**
@@ -90,6 +91,12 @@ namespace raylib {
          * @return the font size
          */
         int getFontSize() const;
+
+        /**
+         * @brief Get the default font (FontSize: 20)
+         * @return the default font
+         */
+        static std::shared_ptr<RlFont> getDefaultFont();
 
     private:
         Font _font; /**< The raylib font */

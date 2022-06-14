@@ -61,3 +61,8 @@ int raylib::RlFont::getFontSize() const
 {
     return _fontSize;
 }
+
+std::shared_ptr<raylib::RlFont> raylib::RlFont::getDefaultFont()
+{
+    return std::make_shared<RlFont>();
+}

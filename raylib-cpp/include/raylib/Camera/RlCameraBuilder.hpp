@@ -59,7 +59,7 @@ namespace raylib {
 
         /**
          * @brief Set the camera mode
-         * @param cameraMode
+         * @param cameraMode the camera mode
          * @return the CameraBuilder object
          */
         RlCameraBuilder &setCameraMode(CameraMode cameraMode);

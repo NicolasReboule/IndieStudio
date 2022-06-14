@@ -17,17 +17,15 @@ void raylib::RlWindow::createWindow(const std::string &title, int width, int hei
 {
     if (_isCreated)
         throw raylib::ex::WindowException("RlWindow already created");
-    else {
-        this->_title = title;
-        this->_width = width;
-        this->_height = height;
-        this->_minWidth = 0;
-        this->_minHeight = 0;
-        InitWindow(this->_width, this->_height, this->_title.c_str());
-        raylib::CoreHelper::setFramerateLimit(fps);
-        this->_isCreated = true;
-        std::cout << "RlWindow created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
-    }
+    this->_title = title;
+    this->_width = width;
+    this->_height = height;
+    this->_minWidth = 0;
+    this->_minHeight = 0;
+    InitWindow(this->_width, this->_height, this->_title.c_str());
+    raylib::CoreHelper::setFramerateLimit(fps);
+    this->_isCreated = true;
+    std::cout << "RlWindow created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
 }
 
 raylib::RlWindow::~RlWindow()

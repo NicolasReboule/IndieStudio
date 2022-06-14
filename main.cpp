@@ -18,10 +18,9 @@ int main(int ac, char **av)
         .setLeft(raylib::RlColor::Blue).setRight(raylib::RlColor::Red)
         .build();
     raylib::RlTexture texture(rlimage);
-    auto font = std::make_shared<raylib::RlFont>(20);
-    auto text = raylib::RlText("Hello World", font, {10, 30});
-    text.setRotation(45);
-
+    auto font = std::make_shared<raylib::RlFont>("../assets/fonts/arial.ttf" , 100);
+    raylib::RlTextBuilder builder;
+    auto text = builder.setText("LOL").setPosition({50, 100}).setFont(font).setColor(RlColor::Gold).build();
     std::cout << camera << std::endl;
 
     auto mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setLength(1.0).setWidth(1.0).setHeight(1.0).build();
@@ -35,7 +34,7 @@ int main(int ac, char **av)
         raylib::DrawHelper::clearBackground(RlColor::White);
         raylib::DrawTextHelper::drawFps(10, 10, 30);
         raylib::DrawTextHelper::drawText("azertyuiopqsdfghjklmwxcvbn", *font, {10, 40});
-        //raylib::DrawTextHelper::drawText(text);
+        raylib::DrawTextHelper::drawText(text);
         raylib::DrawTextHelper::drawCenteredText("Bomberman", *font, {(float) window->getWidth() / 2.0f, 20}, 30, RlColor::Red);
         camera.update();
         if (raylib::KeyboardHelper::isKeyPressed(KEY_R))

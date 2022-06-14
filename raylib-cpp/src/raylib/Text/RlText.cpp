@@ -8,16 +8,17 @@
 #include "raylib/Text/RlText.hpp"
 
 raylib::RlText::RlText(const std::string &text, const Vector2f &position, const RlColor &color)
-    : _color(color), _position(position), _font()
+    : _color(color), _position(position), _origin(0 , 0)
 {
     this->_text = text;
+    this->_font = RlFont::getDefaultFont();
     this->_fontSize = (float) _font->getFontSize();
     this->_textSpacing = 1;
     this->_rotation = 0;
 }
 
 raylib::RlText::RlText(const std::string &text, std::shared_ptr<raylib::RlFont> &font, const Vector2f &position, const RlColor &color)
-    : _color(color), _position(position), _font(font)
+    : _color(color), _position(position), _font(font), _origin(0 , 0)
 {
     this->_text = text;
     this->_fontSize = (float) _font->getFontSize();
@@ -26,7 +27,7 @@ raylib::RlText::RlText(const std::string &text, std::shared_ptr<raylib::RlFont> 
 }
 
 raylib::RlText::RlText(const std::string &text, const std::string &fontPath, float fontSize, const Vector2f &position, const RlColor &color)
-    : _color(color), _position(position)
+    : _color(color), _position(position), _origin(0 , 0)
 {
     this->_text = text;
     this->_font = std::make_shared<RlFont>(fontPath, (int) fontSize);
