@@ -18,6 +18,6 @@ void Indie::Button3p::ready()
 void Indie::Button3p::pressed()
 {
     auto sceneManager = GameEngine::SceneManager::getInstance();
-    sceneManager->_global.setNumberPlayers(3);
+    //sceneManager->_global.setNumberPlayers(3);
     sceneManager->changeScene("game");
 }

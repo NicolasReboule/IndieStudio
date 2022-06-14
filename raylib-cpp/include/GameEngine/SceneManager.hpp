@@ -9,7 +9,6 @@
 #define INDIESTUDIO_SCENEMANAGER_HPP
 
 #include "raylib/Raylib.hpp"
-#include "global/Global.hpp"
 #include "Scene.hpp"
 #include <vector>
 
@@ -44,8 +43,6 @@ namespace GameEngine {
         void draw2D();
 
         static std::shared_ptr<GameEngine::SceneManager> &getInstance();
-
-        Indie::Global _global;
 
     private:
         void deleteNodeInLst();

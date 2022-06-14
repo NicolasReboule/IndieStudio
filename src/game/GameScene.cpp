@@ -20,23 +20,23 @@ void Indie::GameScene::sceneLauncher()
 
     //border walls
     for (int i = 0;  i < 7; i++, index++) {
-        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/Brick.png");
+        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
         wall->setPosition({-4.5f, 0.5, -3.5f + i * 1.0f});
         this->addNode(wall);
     }
     for (int i = 0;  i < 7; i++, index++) {
-        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/Brick.png");
+        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
         wall->setPosition({3.5f, 0.5, -3.5f + i * 1.0f});
         this->addNode(wall);
     }
 
     for (int i = 0;  i < 7; i++, index++) {
-        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/Brick.png");
+        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
         wall->setPosition({-3.5f + i * 1.0f, 0.5, -4.5f });
         this->addNode(wall);
     }
     for (int i = 0;  i < 7; i++, index++) {
-        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/Brick.png");
+        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
         wall->setPosition({-3.5f + i * 1.0f, 0.5, 3.5f });
         this->addNode(wall);
     }
@@ -46,17 +46,17 @@ void Indie::GameScene::sceneLauncher()
 
     //in walls
     for (int i = 0;  i < 3; i ++, index++) {
-        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/Brick.png");
+        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
         wall->setPosition({-2.5f + i * 2.0f, 0.5, -2.5f});
         this->addNode(wall);
     }
     for (int i = 0;  i < 3; i++, index++) {
-        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/Brick.png");
+        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
         wall->setPosition({-2.5f + i * 2.0f, 0.5, -0.5f});
         this->addNode(wall);
     }
     for (int i = 0;  i < 3; i++, index++) {
-        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/Brick.png");
+        auto wall = std::make_shared<Indie::Wall>("wall" + std::to_string(index), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
         wall->setPosition({-2.5f + i * 2.0f, 0.5, 1.5f});
         this->addNode(wall);
     }
