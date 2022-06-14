@@ -167,29 +167,21 @@ raylib::RlMesh raylib::RlMeshBuilder::build()
         throw raylib::ex::BuilderException("Invalid arguments");
     switch (_type) {
         case RlMeshBuilder::MeshCube :
-            mesh = raylib::MeshGenerator::genMeshCube(_width, _height, _length);
-            break;
+            return raylib::MeshGenerator::genMeshCube(_width, _height, _length);
         case RlMeshBuilder::MeshCylinder :
-            mesh = raylib::MeshGenerator::genMeshCylinder(_radius, _height, _slices);
-            break;
+            return raylib::MeshGenerator::genMeshCylinder(_radius, _height, _slices);
         case RlMeshBuilder::MeshSphere :
-            mesh = raylib::MeshGenerator::genMeshSphere(_radius, _rings, _slices);
-            break;
+            return raylib::MeshGenerator::genMeshSphere(_radius, _rings, _slices);
         case RlMeshBuilder::MeshPlane :
-            mesh = raylib::MeshGenerator::genMeshPlane(_width, _length, _resX, _resZ);
-            break;
+            return raylib::MeshGenerator::genMeshPlane(_width, _length, _resX, _resZ);
         case RlMeshBuilder::MeshTorus :
-            mesh = raylib::MeshGenerator::genMeshTorus(_radius, _size, _radSeg, _sides);
-            break;
+            return raylib::MeshGenerator::genMeshTorus(_radius, _size, _radSeg, _sides);
         case RlMeshBuilder::MeshHeightmap :
-            mesh = raylib::MeshGenerator::genMeshHeightmap(_heightmap.getImage(), _vec3fSize);
-            break;
+            return raylib::MeshGenerator::genMeshHeightmap(_heightmap.getImage(), _vec3fSize);
         case RlMeshBuilder::MeshPoly :
-            mesh = raylib::MeshGenerator::genMeshPoly(_sides, _radius);
-            break;
+            return raylib::MeshGenerator::genMeshPoly(_sides, _radius);
         case RlMeshBuilder::MeshCubicmap :
-            mesh = raylib::MeshGenerator::genMeshCubicmap(_cubicmap.getImage(), _cubeSize);
-            break;
+            return raylib::MeshGenerator::genMeshCubicmap(_cubicmap.getImage(), _cubeSize);
         default:
             throw (raylib::ex::BuilderException("Unknown Mesh pattern"));
     }
