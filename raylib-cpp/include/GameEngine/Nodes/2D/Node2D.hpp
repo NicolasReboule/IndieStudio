@@ -27,6 +27,8 @@ namespace GameEngine {
         virtual Vector2f getScale() = 0;
 
         virtual void setScale(Vector2f newScale) = 0;
+
+        virtual void setRotationDegrees(float degrees) = 0;
     };
 }
 

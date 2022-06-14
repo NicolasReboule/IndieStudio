@@ -7,7 +7,6 @@
 
 #include "GameEngine/SceneManager.hpp"
 
-
 std::shared_ptr<GameEngine::SceneManager> GameEngine::SceneManager::_instance;
 
 std::shared_ptr<GameEngine::SceneManager> &GameEngine::SceneManager::getInstance()
@@ -90,7 +89,7 @@ void GameEngine::SceneManager::drawAll(raylib::RlCamera &camera)
     auto window = raylib::RlWindow::getInstance();
 
     raylib::DrawHelper::beginDrawing();
-    raylib::DrawHelper::clearBackground(RlColor::Gray);
+    raylib::DrawHelper::clearBackground(RlColor::DarkBrown);
 
     camera.update();
     raylib::DrawHelper::beginMode3D(camera);
@@ -133,4 +132,18 @@ void GameEngine::SceneManager::makeLoop(raylib::RlCamera &camera)
     this->drawAll(camera);
 }
 
+void GameEngine::SceneManager::addNode(const std::shared_ptr<GameEngine::Base> &node)
+{
+    for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
+        if (scene->getSceneSource() == this->_actualScene)
+            scene->addNode(node);
+}
 
+void GameEngine::SceneManager::deleteNode(const std::string &name)
+{
+    for (std::shared_ptr<GameEngine::Scene> &scene : this->_scenes)
+        if (scene->getSceneSource() == this->_actualScene) {
+            scene->deleteNode(name);
+            return;
+        }
+}

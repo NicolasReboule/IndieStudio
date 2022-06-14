@@ -28,6 +28,7 @@ namespace raylib {
 
         ~RlModel();
 
+        void setBoundingBox(const BoundingBox &boundingBox);
         void setPosition(Vector3f position);
         void setPosition(float x, float y, float z);
         void setScale(Vector3f scale);
@@ -60,6 +61,7 @@ namespace raylib {
         Vector3f _rotationAxis;
         float _rotationAngle;
         BoundingBox _boundingBox;
+        BoundingBox _startBoundingBox;
     };
 }
 

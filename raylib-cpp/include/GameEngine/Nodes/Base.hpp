@@ -28,8 +28,6 @@ namespace GameEngine {
 
         virtual float getRotationDegrees() = 0;
 
-        virtual void setRotationDegrees(float degrees) = 0;
-
         const std::string &getName() const;
 
         const std::string &getGroup() const;

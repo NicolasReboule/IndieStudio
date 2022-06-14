@@ -29,6 +29,10 @@ namespace GameEngine {
 
         std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
 
+        void addNode(const std::shared_ptr<GameEngine::Base> &node);
+
+        void deleteNode(const std::string &name);
+
         std::vector<std::shared_ptr<GameEngine::Base>> getAllNodes();
 
         void update();

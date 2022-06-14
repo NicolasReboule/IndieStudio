@@ -53,14 +53,17 @@ void GameEngine::StaticBody::setPosition(Vector3f pos)
     this->_model.setPosition(this->_position);
 }
 
-void GameEngine::StaticBody::setRotationDegrees(float degrees)
+void GameEngine::StaticBody::setRotationDegrees(float degrees, Vector3f rotationAxis)
 {
     this->_rotationDegrees = degrees;
+    this->_model.setRotationAxis(rotationAxis);
+    this->_model.setRotationAngle(degrees);
 }
 
 void GameEngine::StaticBody::setScale(Vector3f newScale)
 {
     this->_scale = newScale;
+    this->_model.setScale(newScale);
 }
 
 void GameEngine::StaticBody::setColor(raylib::RlColor color)
@@ -76,6 +79,11 @@ raylib::RlModel *GameEngine::StaticBody::operator->()
 const BoundingBox &GameEngine::StaticBody::getBoundingBox() const
 {
     return this->_model.getBoundingBox();
+}
+
+void GameEngine::StaticBody::setBoundingBox(BoundingBox &boundingBox)
+{
+    this->_model.setBoundingBox(boundingBox);
 }
 
 /*

@@ -6,6 +6,7 @@
 */
 
 #include "raylib/3DObject/ModelHelper.hpp"
+#include "raylib/Draw/DrawHelper.hpp"
 
 // Model drawing functions
 
@@ -15,6 +16,7 @@ void raylib::ModelHelper::drawModel(const raylib::RlModel &model)
                 raylib::VectorHelper::toRaylibVector(model.getPosition()),
                 raylib::VectorHelper::toRaylibVector(model.getRotationAxis()), model.getRotationAngle(),
                 raylib::VectorHelper::toRaylibVector(model.getScale()), model.getColor());
+    raylib::DrawHelper::drawBoundingBox(model.getBoundingBox(), RlColor::Red);
 }
 
 void raylib::ModelHelper::drawModelWires(const raylib::RlModel &model)

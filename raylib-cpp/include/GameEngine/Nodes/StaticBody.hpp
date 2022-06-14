@@ -29,7 +29,7 @@ namespace GameEngine {
         Vector3f getSCale() override;
 
         void setPosition(Vector3f pos) override;
-        void setRotationDegrees(float degrees) override;
+        void setRotationDegrees(float degrees, Vector3f rotationAxis) override;
         void setScale(Vector3f newScale) override;
 
         raylib::RlModel *operator->();
@@ -37,6 +37,8 @@ namespace GameEngine {
         void setColor(raylib::RlColor color);
 
         const BoundingBox &getBoundingBox() const;
+
+        void setBoundingBox(BoundingBox &boundingBox);
 
     protected:
         raylib::RlModel _model;

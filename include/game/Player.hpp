@@ -12,13 +12,13 @@
 
 namespace Indie {
 
-    class PLayer : public GameEngine::KinematicBody {
+    class Player : public GameEngine::KinematicBody {
     public:
-        PLayer(const std::string &name, const std::string &modelPath, const std::string &texturePath);
-        PLayer(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
-        ~PLayer() override = default;
+        Player(const std::string &name, const std::string &modelPath, const std::string &texturePath);
+        Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        ~Player() override = default;
 
-        void update(float delta) override;
+        void update(float delta) final;
 
         void ready() override;
 

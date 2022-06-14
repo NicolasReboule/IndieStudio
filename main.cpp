@@ -27,7 +27,7 @@ int main(int ac, char **av)
     auto gameMenuScene = std::make_shared<Indie::GameScene>();
     sceneManager->addScene(gameMenuScene);
 
-    sceneManager->changeScene("mainMenu");
+    sceneManager->changeScene("start");
 
     while (window->isOpen())
         sceneManager->makeLoop(camera);
