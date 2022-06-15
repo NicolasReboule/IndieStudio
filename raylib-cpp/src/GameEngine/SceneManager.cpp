@@ -43,11 +43,18 @@ void GameEngine::SceneManager::changeScene(const std::string &scene)
     if (this->_actualScene == "empty")
         return;
 
-    for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes)
+    for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes) {
         if (sceneItem->getSceneSource() == this->_actualScene) {
-            sceneItem->sceneLauncher();
+            if (sceneItem->isLaunched() == false) {
+                sceneItem->sceneLauncher();
+                sceneItem->setLaunched();
+                std::cout << "launch succes" << std::endl;
+            }
+            std::cout << "launch succes luuuuuuuuuul" << std::endl;
+            sceneItem->readyScene();
             sceneItem->ready();
         }
+    }
 }
 
 std::shared_ptr<GameEngine::Base> GameEngine::SceneManager::getNode(const std::string& name)

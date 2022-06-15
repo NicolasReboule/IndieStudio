@@ -22,6 +22,8 @@ namespace Indie {
         void updateScene(float delta) override;
 
         void sceneLauncher() override;
+
+        void readyScene() override;
     };
 }
 

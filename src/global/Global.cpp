@@ -5,14 +5,26 @@
 ** Global.cpp
 */
 
+
 #include "global/Global.hpp"
 
-void Indie::Global::setNumberPlayers(int numberPlayers)
+Indie::Global::Global(const std::string &name) : Base(name)
 {
-    this->_numberPlayers = numberPlayers;
 }
 
-int &Indie::Global::getNumberPlayers()
+void Indie::Global::ready()
 {
-    return this->_numberPlayers;
+}
+
+void Indie::Global::update(float delta)
+{
+}
+
+void Indie::Global::draw()
+{
+}
+
+float Indie::Global::getRotationDegrees()
+{
+    return 0;
 }

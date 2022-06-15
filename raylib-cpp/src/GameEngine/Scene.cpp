@@ -75,10 +75,8 @@ void GameEngine::Scene::draw2D()
 std::shared_ptr<GameEngine::Base> GameEngine::Scene::getNode(const std::string &name)
 {
     for (const auto &item: this->_nodes)
-        if (item->getName() == name) {
-            //std::cout << item->getName() << std::endl;
+        if (item->getName() == name)
             return item;
-        }
     return nullptr;
 }
 
@@ -89,15 +87,6 @@ std::vector<std::shared_ptr<GameEngine::Base>> GameEngine::Scene::getAllNode()
 
 void GameEngine::Scene::deleteNode(const std::string &name)
 {
-    /*this->_nodes.clear();
-    return;*/
-    /*for (auto it = this->_nodes.begin(); it != this->_nodes.end(); it++)
-        if ((*it)->getName() == name) {
-            std::cout << (*it)->getName() << " : was deleted." << std::endl;
-            this->_nodes.erase(it);
-            return;
-        }*/
-
     auto erased = std::erase_if(this->_nodes, [&name](const auto &node) {
         if (node->getName() == name) {
             std::cout << node->getName() << " : was deleted." << std::endl;
@@ -106,5 +95,14 @@ void GameEngine::Scene::deleteNode(const std::string &name)
         return false;
     });
     std::cout << "Erased: " << erased  << std::endl;
+}
 
+bool &GameEngine::Scene::isLaunched()
+{
+    return this->_isLaunched;
+}
+
+void GameEngine::Scene::setLaunched()
+{
+    this->_isLaunched = true;
 }

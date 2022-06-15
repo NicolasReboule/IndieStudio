@@ -21,7 +21,16 @@ void Indie::StartScene::sceneLauncher()
     auto gameScreen = std::make_shared<Indie::Logo>("logo", "./assets/gui/logo.png");
     this->addNode(gameScreen);
 
-    studioScreen->setColor(studioScreen->getColor().getRed(), studioScreen->getColor().getGreen(), studioScreen->getColor().getBlue(), 0);
+
+}
+
+void Indie::StartScene::readyScene()
+{
+    auto sceneManager = GameEngine::SceneManager::getInstance();
+
+    auto &studioScreen = dynamic_cast<Indie::Logo &>(*sceneManager->getNode("buttonPlay"));
+
+    studioScreen.setColor(studioScreen.getColor().getRed(), studioScreen.getColor().getGreen(), studioScreen.getColor().getBlue(), 0);
 }
 
 void Indie::StartScene::updateScene(float delta)

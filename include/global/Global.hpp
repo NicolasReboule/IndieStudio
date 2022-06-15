@@ -12,18 +12,19 @@
 
 namespace Indie {
 
-    class Global {
-    public:
-        explicit Global() = default;
+    class Global : public GameEngine::Base {
+        public:
+        explicit Global(const std::string &name);
 
-        ~Global() = default;
+        void ready() override;
 
-        void setNumberPlayers(int numberPlayers);
+        void update(float delta) override;
 
-        int &getNumberPlayers();
+        void draw() override;
 
-    private:
-        int _numberPlayers;
+        float getRotationDegrees() override;
+
+        ~Global() override = default;
     };
 }
 

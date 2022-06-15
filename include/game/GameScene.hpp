@@ -19,6 +19,8 @@ namespace Indie {
         ~GameScene() override = default;
         void updateScene(float delta) override;
 
+        void readyScene() override;
+
         void sceneLauncher() override;
     };
 }

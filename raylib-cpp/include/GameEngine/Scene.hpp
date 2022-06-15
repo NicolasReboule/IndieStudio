@@ -40,7 +40,14 @@ namespace GameEngine {
 
         virtual void updateScene(float delta) = 0;
 
+        virtual void readyScene() = 0;
+
+        void setLaunched();
+
+        bool &isLaunched();
+
     private:
+        bool _isLaunched = false;
         std::string _sceneSource;
         std::string _name;
         std::vector<std::shared_ptr<GameEngine::Base>> _nodes;

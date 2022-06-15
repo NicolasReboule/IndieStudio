@@ -23,8 +23,18 @@ void Indie::MainMenuScene::sceneLauncher()
     this->addNode(buttonQuit);
 
 
-    buttonPlay->setPosition({100, 100});
-    buttonQuit->setPosition({100, 300});
+
+}
+
+void Indie::MainMenuScene::readyScene()
+{
+    auto sceneManager = GameEngine::SceneManager::getInstance();
+
+    auto &buttonPlay = dynamic_cast<Indie::ButtonPlay &>(*sceneManager->getNode("buttonPlay"));
+    auto &buttonQuit = dynamic_cast<Indie::ButtonQuit &>(*sceneManager->getNode("buttonQuit"));
+
+    buttonPlay.setPosition({100, 100});
+    buttonQuit.setPosition({100, 300});
 }
 
 
@@ -32,3 +42,5 @@ void Indie::MainMenuScene::updateScene(float delta)
 {
 
 }
+
+

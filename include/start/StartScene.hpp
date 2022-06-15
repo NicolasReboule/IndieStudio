@@ -10,6 +10,7 @@
 
 #include <GameEngine/GameEngine.hpp>
 
+
 namespace Indie {
 
     class StartScene : public GameEngine::Scene {
@@ -20,6 +21,8 @@ namespace Indie {
         void updateScene(float delta) override;
 
         void sceneLauncher() override;
+
+        void readyScene() override;
     };
 }
 
