@@ -58,9 +58,12 @@ void Indie::Player::update(float delta)
     }
 
     auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto random = raylib::Random();
 
     if (raylib::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
-        auto bomb = std::make_shared<Indie::Bomb>("bomb1", raylib::RlMeshBuilder::MeshSphere, "./assets/guytex.png");
+        auto bomb = std::make_shared<Indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)), "assets/bomb.obj");
+        (*bomb)->setRotationAxis({1, 0, 0});
+        (*bomb)->setRotationAngle(-90);
         int x = this->_position.x;
         int z = this->_position.z;
         float convertx = x;

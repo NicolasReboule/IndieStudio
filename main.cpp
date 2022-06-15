@@ -12,7 +12,7 @@ int main(int ac, char **av)
     auto window = raylib::window::RlWindow::getInstance();
     auto audioManager = GameEngine::AudioManager::getInstance();
     auto sceneManager = GameEngine::SceneManager::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 120);
+    window->createWindow("Bomberman", 1280, 720, 30);
 
     raylib::RlCamera camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
 
@@ -30,8 +30,10 @@ int main(int ac, char **av)
 
     sceneManager->changeScene("chooseNumberPlayer");
 
-    while (window->isOpen())
+    while (window->isOpen()) {
         sceneManager->makeLoop(camera);
+       //std::cout << camera << std::endl;
+    }
     return (0);
 }
 

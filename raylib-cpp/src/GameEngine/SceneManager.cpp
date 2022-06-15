@@ -101,6 +101,8 @@ void GameEngine::SceneManager::drawAll(raylib::RlCamera &camera)
     raylib::DrawHelper::clearBackground(RlColor::DarkBrown);
     raylib::DrawTextHelper::drawFps(10, 10, 30);
 
+    if (raylib::input::KeyboardHelper::isKeyPressed(KEY_R))
+        camera.reset();
     camera.update();
     raylib::DrawHelper::beginMode3D(camera);
 

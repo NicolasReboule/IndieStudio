@@ -15,6 +15,11 @@ Indie::Bomb::Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType
 
 }
 
+Indie::Bomb::Bomb(const std::string &name, const std::string &objPath) : StaticBody(name, objPath, "")
+{
+    this->_timer = 1;
+}
+
 void Indie::Bomb::ready()
 {
     this->_collisionEnable = false;
