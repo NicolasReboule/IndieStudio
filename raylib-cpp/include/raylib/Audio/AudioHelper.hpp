@@ -40,7 +40,7 @@ namespace raylib {
         static void setMasterVolume(float volume);
 
     private:
-        static bool _audioDeviceReady;
+        static bool _audioDeviceInit; /**< If audio device has been initialized */
     };
 }
 

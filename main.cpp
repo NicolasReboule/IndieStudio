@@ -6,6 +6,7 @@
 */
 
 #include "IndieStudio.hpp"
+#include <boost/json/src.hpp>
 
 /*
 int main(int ac, char **av)
@@ -40,10 +41,10 @@ int main(int ac, char **av)
 int main(int ac, char **av)
 {
     auto window = raylib::window::RlWindow::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 120);
+    window->createWindow("Bomberman", 1280, 720, 30);
     raylib::RlCamera camera = raylib::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
-    raylib::RlModel model("../assets/player.iqm", "../assets/blue.png");
-    raylib::RlModelAnim anim(model.getModel(), "../assets/player.iqm");
+    raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
+    raylib::RlModelAnim anim(model.getModel(), "./assets/player.iqm");
     std::cout << anim.getCount() << std::endl;
     unsigned int i = 0;
     while (window->isOpen()) {
@@ -51,6 +52,8 @@ int main(int ac, char **av)
         raylib::DrawHelper::clearBackground(RlColor::White);
         raylib::DrawTextHelper::drawFps(10, 10, 30);
         camera.update();
+       /* std::cout << raylib::input::GamepadHelper::getGamepadName(0) << std::endl;
+        std::cout << raylib::input::GamepadHelper::getGamepadName(1) << std::endl;*/
         if (raylib::input::KeyboardHelper::isKeyDown(KEY_RIGHT))
             i++;
         if (i > anim.getCount())

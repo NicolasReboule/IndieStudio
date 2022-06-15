@@ -15,7 +15,10 @@ bool raylib::input::GamepadHelper::isGamepadAvailable(const int &gamepad)
 
 std::string raylib::input::GamepadHelper::getGamepadName(const int &gamepad)
 {
-    return GetGamepadName(gamepad);
+    const char *name = GetGamepadName(gamepad);
+    if (name == nullptr)
+        return "Unknown";
+    return name;
 }
 
 bool raylib::input::GamepadHelper::isGamepadButtonPressed(const int &gamepad, const int &button)

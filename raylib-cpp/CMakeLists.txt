@@ -3,12 +3,10 @@ project(raylib-cpp)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
-
-if (UNIX)
-    set(CMAKE_CXX_FLAGS "-W -Wall -Wextra") #TODO: remove this line
-endif (UNIX)
+set(CMAKE_CXX_FLAGS_RELEASE "-W -Wall -Wextra") #TODO: remove this line
 
 find_package(raylib REQUIRED)
+find_package(BoostJson REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
@@ -88,4 +86,4 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/KinematicBody.cpp
         )
-target_link_libraries(${PROJECT_NAME} raylib)
+target_link_libraries(${PROJECT_NAME} raylib BoostJson)
