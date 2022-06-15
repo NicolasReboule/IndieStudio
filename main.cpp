@@ -6,7 +6,7 @@
 */
 
 #include "IndieStudio.hpp"
-#include <boost/json/src.hpp>
+//#include <boost/json/src.hpp>
 
 /*
 int main(int ac, char **av)
@@ -41,7 +41,7 @@ int main(int ac, char **av)
 int main(int ac, char **av)
 {
     auto window = raylib::window::RlWindow::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 30);
+    window->createWindow("Bomberman", 1280, 720, 0);
     raylib::RlCamera camera = raylib::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
     raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
     raylib::RlModelAnim anim(model.getModel(), "./assets/player.iqm");
@@ -63,7 +63,7 @@ int main(int ac, char **av)
         if (raylib::input::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();
         raylib::DrawHelper::beginMode3D(camera);
-        raylib::Shape3DHelper::drawGrid(10, 1.0f);
+        raylib::Shape3DHelper::drawGrid({9, 9}, 1.0f);
         DrawModelEx(model.getModel(), {0.0f, 0.0f, 0.0f}, {0, 1, 0}, 90.0f, {0.8f, 0.8f, 0.8f}, WHITE);
         raylib::DrawHelper::endMode3D();
         raylib::DrawHelper::endDrawing();

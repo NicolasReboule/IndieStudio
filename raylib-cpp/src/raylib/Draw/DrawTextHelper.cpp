@@ -89,6 +89,11 @@ void raylib::DrawTextHelper::drawCenteredText(const std::string &text, const ray
     drawText(text, font, {posX, position.y}, fontSize, color, spacing); //NOTE: potential use of origin
 }
 
+void raylib::DrawTextHelper::drawCenteredText(const raylib::RlText &text)
+{
+    drawCenteredText(text.getText(), *text.getFont(), text.getPosition(), text.getFontSize(), text.getColor(), text.getTextSpacing());
+}
+
 void raylib::DrawTextHelper::drawTextUsingCodepoint(const RlFont &font, const int &codepoint, const Vector2f &position, float fontSize, const RlColor &tint)
 {
     ::Vector2 pos = raylib::VectorHelper::toRaylibVector(position);

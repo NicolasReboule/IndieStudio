@@ -143,6 +143,12 @@ namespace raylib {
         static void drawCenteredText(const std::string &text, const RlFont &font, const Vector2f &position, const float &fontSize, const RlColor &color = RlColor::Black, const float &spacing = 1);
 
         /**
+         * @brief Draw a text centered to the position of the text
+         * @param text the text to draw
+         */
+        static void drawCenteredText(const RlText &text);
+
+        /**
          * @brief Draw one character (codepoint)
          * @param font the font
          * @param codepoint the codepoint

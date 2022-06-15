@@ -6,7 +6,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
 set(CMAKE_CXX_FLAGS_RELEASE "-W -Wall -Wextra") #TODO: remove this line
 
 find_package(raylib REQUIRED)
-find_package(BoostJson REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(${PROJECT_NAME}
@@ -85,5 +84,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/KinematicBody.cpp
-        )
-target_link_libraries(${PROJECT_NAME} raylib BoostJson)
+        include/GameEngine/exception/MapParserException.hpp include/GameEngine/exception/GameEngineException.hpp src/GameEngine/exception/GameEngineException.cpp src/GameEngine/exception/MapParserException.cpp)
+target_link_libraries(${PROJECT_NAME} raylib)

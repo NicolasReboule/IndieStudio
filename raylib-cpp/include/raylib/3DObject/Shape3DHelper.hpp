@@ -11,6 +11,7 @@
 #include "raylib/Math.hpp"
 #include "raylib/Color/RlColor.hpp"
 #include <raylib.h>
+#include <rlgl.h>
 
 namespace raylib {
     class Shape3DHelper {
@@ -37,7 +38,13 @@ namespace raylib {
         static void drawPlane(Vector3f centerPos, Vector2f size, RlColor color);                                      // DrawHelper a plane XZ
         static void drawRay(Ray ray, RlColor color);                                                                // DrawHelper a ray line
         static void drawGrid(int slices, float spacing);                                                          // DrawHelper a grid (centered at (0, 0, 0))
-    private:
+
+        /**
+         * @brief Draw a grid of size (width/height) with some spacing, centered on (0, 0, 0)
+         * @param size the size of the grid (width & height)
+         * @param spacing the spacing between each rect
+         */
+        static void drawGrid(const Vector2i &size, const float &spacing);
     };
 }
 
