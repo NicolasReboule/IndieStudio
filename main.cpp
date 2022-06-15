@@ -12,7 +12,7 @@ int main(int ac, char **av)
     auto window = raylib::window::RlWindow::getInstance();
     auto audioManager = gameengine::AudioManager::getInstance();
     auto sceneManager = gameengine::SceneManager::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 0);
+    window->createWindow("Bomberman", 1280, 720, 30);
 
     raylib::RlCamera camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
 

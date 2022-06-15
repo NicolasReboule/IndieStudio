@@ -77,26 +77,11 @@ void indie::Player::spawnBomb()
         (*bomb)->setRotationAxis({1, 0, 0});
         (*bomb)->setRotationAngle(-90);
 
-        int x = this->_position.x;
-        int z = this->_position.z;
-        float convertx = x;
-        float convertz = z;
-        if (this->_position.x > 0)
-            convertx += 0;
-        else
-            convertx -= 1;
-
-        if (this->_position.z > 0)
-            convertz += 0;
-        else
-            convertz -= 1;
-
         BoundingBox box = {{-0.5, 0, -0.5},{0.4,  1, 0.4}};
         bomb->setBoundingBox(box);
-        Vector3f pos = {convertx, 0.5, convertz};
         bomb->setScale({0.9, 0.9, 0.9});
 
-        bomb->setPosition(pos);
+        bomb->setPosition({std::round(this->_position.x), 0.5, std::round(this->_position.z)});
         sceneManager->addNode(bomb);
     }
 }
