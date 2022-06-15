@@ -22,6 +22,8 @@ namespace Indie {
         void readyScene() override;
 
         void sceneLauncher() override;
+
+        void displayWinner(const std::string &name);
     };
 }
 

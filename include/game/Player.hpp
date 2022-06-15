@@ -22,6 +22,8 @@ namespace Indie {
 
         void ready() override;
 
+        void spawnBomb();
+
     private:
         int _numpadId;
 

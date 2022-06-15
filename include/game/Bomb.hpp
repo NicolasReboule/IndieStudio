@@ -21,10 +21,15 @@ namespace Indie {
         void ready() override;
 
         void update(float delta) override;
+
+        void handleHallDestroyableCollision();
+
+        void spawnMagma();
+
+        void enableCollision();
     private:
         float _timer;
     };
-
 
 }
 

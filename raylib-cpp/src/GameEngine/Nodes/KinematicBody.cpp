@@ -35,7 +35,7 @@ void GameEngine::KinematicBody::moveAndCollide(Vector3f position)
         try {
             auto &staticBody = dynamic_cast<GameEngine::StaticBody &>(*node);
             if (staticBody.getName() != this->getName() && staticBody.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
-                std::cout << "collide !!!!!! with :" << staticBody.getName() << " ,collision enable : " << staticBody.getIsCollsionEnable() << std::endl;
+                std::cout << this->getName() << "  : collide !!!!!! with : " << staticBody.getName() << " ,collision enable : " << staticBody.getIsCollsionEnable() << std::endl;
                 //std::cout << position.x << "," << position.y << std::endl;
                 //std::cout << staticBody.getPosition().x << "," << staticBody.getPosition().y << std::endl;
                 //std::cout << "(" << staticBody.getBoundingBox().min.x << "," << staticBody.getBoundingBox().min.y << "," << staticBody.getBoundingBox().min.x << ")" << std::endl;

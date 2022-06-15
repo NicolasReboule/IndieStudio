@@ -6,6 +6,8 @@
 */
 
 #include "game/Bomb.hpp"
+#include "game/Magma.hpp"
+
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
@@ -27,122 +29,102 @@ void Indie::Bomb::ready()
 
 void Indie::Bomb::update(float delta)
 {
-    std::cout << this->_collisionEnable << std::endl;
-
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
     this->_timer -= delta;
 
-    if (this->_collisionEnable == false) {
-        bool temp = true;
-        for (const auto &node: sceneManager->getAllNodes()) {
-            try {
-                auto &player = dynamic_cast<Indie::Player &>(*node);
-                if (player.getIsCollsionEnable() &&
-                    raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
-                    temp = false;
-                    break;
-                }
-            }
-            catch (const std::bad_cast &e) {
-                continue;
+    if (this->_collisionEnable == false)
+        this->enableCollision();
+
+    if (this->_timer <= 0)
+        this->handleHallDestroyableCollision();
+}
+
+void Indie::Bomb::handleHallDestroyableCollision()
+{
+    auto &sceneManager = GameEngine::SceneManager::getInstance();
+
+    BoundingBox temp0 = this->getBoundingBox();
+    BoundingBox temp1 = temp0;
+    temp1.min.x += 1.0f;
+    temp1.max.x += 1.0f;
+    BoundingBox temp2 = temp0;
+    temp2.min.x -= 1.0f;
+    temp2.max.x -= 1.0f;
+    BoundingBox temp3 = temp0;
+    temp3.min.z += 1.0f;
+    temp3.max.z += 1.0f;
+    BoundingBox temp4 = temp0;
+    temp4.min.z -= 1.0f;
+    temp4.max.z -= 1.0f;
+
+
+    for (const auto &node: sceneManager->getAllNodes()) {
+        try {
+            auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*node);
+            if (wallDestroyable.getIsCollsionEnable() && (
+                raylib::Collision3dHelper::checkCollisionBoxes(temp1, wallDestroyable.getBoundingBox()) ||
+                raylib::Collision3dHelper::checkCollisionBoxes(temp2, wallDestroyable.getBoundingBox()) ||
+                raylib::Collision3dHelper::checkCollisionBoxes(temp3, wallDestroyable.getBoundingBox()) ||
+                raylib::Collision3dHelper::checkCollisionBoxes(temp4, wallDestroyable.getBoundingBox())
+                )) {
+                sceneManager->deleteNode(node->getName());
             }
         }
-
-        this->_collisionEnable = temp;
+        catch (const std::bad_cast &e) {
+            continue;
+        }
     }
 
-    /*BoundingBox temp = {{
-                            this->getBoundingBox().min.x,
-                            this->getBoundingBox().min.y,
-                            this->getBoundingBox().min.z,
-                        }, {
-                            this->getBoundingBox().max.x,
-                            this->getBoundingBox().max.y,
-                            this->getBoundingBox().max.z,
-                        }};*/
+    this->spawnMagma();
 
-    BoundingBox temp = this->getBoundingBox();
+    sceneManager->deleteNode(this->getName());
+}
 
-    if (this->_timer <= 0) {
-        for (const auto &node: sceneManager->getAllNodes()) {
-            try {
-                auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*node);
-                if (wallDestroyable.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(temp, wallDestroyable.getBoundingBox())) {
-                    sceneManager->deleteNode(node->getName());
-                }
-            }
-            catch (const std::bad_cast &e) {
-                continue;
+void Indie::Bomb::enableCollision()
+{
+    auto &sceneManager = GameEngine::SceneManager::getInstance();
+
+
+    bool temp = true;
+    for (const auto &node: sceneManager->getAllNodes()) {
+        try {
+            auto &player = dynamic_cast<Indie::Player &>(*node);
+            if (player.getIsCollsionEnable() &&
+                raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
+                temp = false;
+                break;
             }
         }
-
-        temp.min.x += 1.0f;
-        temp.max.x += 1.0f;
-
-        for (const auto &node: sceneManager->getAllNodes()) {
-            try {
-                auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*node);
-                if (wallDestroyable.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(temp, wallDestroyable.getBoundingBox())) {
-                    sceneManager->deleteNode(node->getName());
-                }
-            }
-            catch (const std::bad_cast &e) {
-                continue;
-            }
+        catch (const std::bad_cast &e) {
+            continue;
         }
-
-        temp.min.x -= 2.0f;
-        temp.max.x -= 2.0f;
-
-        for (const auto &node: sceneManager->getAllNodes()) {
-            try {
-                auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*node);
-                if (wallDestroyable.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(temp, wallDestroyable.getBoundingBox())) {
-                    sceneManager->deleteNode(node->getName());
-                }
-            }
-            catch (const std::bad_cast &e) {
-                continue;
-            }
-        }
-
-        temp.min.x += 1.0f;
-        temp.max.x += 1.0f;
-        temp.min.z += 1.0f;
-        temp.max.z += 1.0f;
-
-        for (const auto &node: sceneManager->getAllNodes()) {
-            try {
-                auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*node);
-                if (wallDestroyable.getIsCollsionEnable() &&
-                    raylib::Collision3dHelper::checkCollisionBoxes(temp, wallDestroyable.getBoundingBox())) {
-                    sceneManager->deleteNode(node->getName());
-                }
-            }
-            catch (const std::bad_cast &e) {
-                continue;
-            }
-        }
-
-        temp.min.z -= 2.0f;
-        temp.max.z -= 2.0f;
-
-        for (const auto &node: sceneManager->getAllNodes()) {
-            try {
-                auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*node);
-                if (wallDestroyable.getIsCollsionEnable() &&
-                    raylib::Collision3dHelper::checkCollisionBoxes(temp, wallDestroyable.getBoundingBox())) {
-                    sceneManager->deleteNode(node->getName());
-                }
-            }
-            catch (const std::bad_cast &e) {
-                continue;
-            }
-        }
-
-        sceneManager->deleteNode(this->getName());
     }
 
+    this->_collisionEnable = temp;
+
+}
+
+void Indie::Bomb::spawnMagma()
+{
+    auto &sceneManager = GameEngine::SceneManager::getInstance();
+
+    auto random = raylib::Random();
+    auto magma0 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma1 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma2 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma3 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma4 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+
+    magma0->setPosition({this->_position.x, this->_position.y, this->_position.z});
+    magma1->setPosition({this->_position.x + 1.0f, this->_position.y, this->_position.z});
+    magma2->setPosition({this->_position.x - 1.0f, this->_position.y, this->_position.z});
+    magma3->setPosition({this->_position.x, this->_position.y, this->_position.z + 1.0f});
+    magma4->setPosition({this->_position.x, this->_position.y, this->_position.z - 1.0f});
+
+    sceneManager->addNode(magma0);
+    sceneManager->addNode(magma1);
+    sceneManager->addNode(magma2);
+    sceneManager->addNode(magma3);
+    sceneManager->addNode(magma4);
 }
 
 

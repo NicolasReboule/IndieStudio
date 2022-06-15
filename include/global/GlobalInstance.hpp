@@ -19,6 +19,8 @@ namespace Indie {
         static std::shared_ptr<Indie::GlobalInstance> &getInstance();
 
         int _numberPlayers;
+        int _playersAlive;
+
     private:
         static std::shared_ptr<GlobalInstance> _instance;
     };
