@@ -6,6 +6,7 @@
 */
 
 #include "chooseNumberPlayer/Button3p.hpp"
+#include "global/GlobalInstance.hpp"
 
 Indie::Button3p::Button3p(const std::string &name, const std::string &filename) : Button(name, filename)
 {
@@ -18,6 +19,7 @@ void Indie::Button3p::ready()
 void Indie::Button3p::pressed()
 {
     auto sceneManager = GameEngine::SceneManager::getInstance();
-    //sceneManager->_global.setNumberPlayers(3);
+    auto &globalInstnace = Indie::GlobalInstance::getInstance();
+    globalInstnace->_numberPlayers = 2;
     sceneManager->changeScene("game");
 }

@@ -9,6 +9,7 @@
 #include "game/Wall.hpp"
 #include "game/WallDestroyable.hpp"
 #include "game/Player.hpp"
+#include "global/GlobalInstance.hpp"
 
 Indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
@@ -93,18 +94,12 @@ void Indie::GameScene::sceneLauncher()
     }
 
 
+    auto &globalInstance = Indie::GlobalInstance::getInstance();
+    for (int i = 0; i < globalInstance->_numberPlayers; i++) {
+        auto player = std::make_shared<Indie::Player>("player" + std::to_string(i), "./assets/player.iqm", "./assets/blue.png", i);
+        this->addNode(player);
+    }
 
-
-    auto player = std::make_shared<Indie::Player>("player", "./assets/player.iqm", "./assets/blue.png");
-    this->addNode(player);
-}
-
-void Indie::GameScene::updateScene(float delta)
-{
-    auto sceneManager = GameEngine::SceneManager::getInstance();
-
-    //std::cout << "min:" << "(" << player->getBoundingBox().min.x << "," << player->getBoundingBox().min.y << "," << player->getBoundingBox().min.x << ")" << std::endl;
-    //std::cout << "max:" << "(" << player->getBoundingBox().max.x << "," << player->getBoundingBox().max.y << "," << player->getBoundingBox().max.x << ")" << std::endl;
 }
 
 void Indie::GameScene::readyScene()
@@ -188,9 +183,39 @@ void Indie::GameScene::readyScene()
         wallDestroyable.setPosition({-3.5f + i * 1.0f, 0.5, 2.5f});
     }
 
-    auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
-    BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
-    player.setBoundingBox(box);
-    player.setScale({0.8, 0.8, 0.8});
-    player.setPosition({-3.5f, 0, -3.5f});
+    auto &globalInstance = Indie::GlobalInstance::getInstance();
+    if (globalInstance->_numberPlayers > 0) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({-3.5f, 0, -3.5f});
+    }
+    if (globalInstance->_numberPlayers > 1) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({3.5f, 0, 3.5f});
+    }
+    if (globalInstance->_numberPlayers > 2) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({-3.5f, 0, 3.5f});
+    }
+    if (globalInstance->_numberPlayers > 3) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({3.5f, 0, -3.5f});
+    }
 }
+
+
+void Indie::GameScene::updateScene(float delta)
+{
+}
+

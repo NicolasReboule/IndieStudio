@@ -8,12 +8,14 @@
 #include "game/Player.hpp"
 #include "game/Bomb.hpp"
 
-Indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath) : GameEngine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+Indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : GameEngine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
+    this->_numpadId = numpadId;
 }
 
-Indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath) : GameEngine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+Indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : GameEngine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
+    this->_numpadId = numpadId;
 }
 
 void Indie::Player::ready()
@@ -23,31 +25,31 @@ void Indie::Player::ready()
 void Indie::Player::update(float delta)
 {
     const float speed = 5.0f * delta;
-    float gamepadX = raylib::input::GamepadHelper::getGamepadAxisMovement(0, GAMEPAD_AXIS_LEFT_X);
-    float gamepadY = raylib::input::GamepadHelper::getGamepadAxisMovement(0, GAMEPAD_AXIS_LEFT_Y);
+    float gamepadX = raylib::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_X);
+    float gamepadY = raylib::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_Y);
 
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_RIGHT) || raylib::input::GamepadHelper::isGamepadButtonDown(0, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)
+    if (raylib::input::KeyboardHelper::isKeyDown(KEY_RIGHT) || raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)
     || gamepadX > 0) {
         Vector3f newPosition =   {this->_position.x + speed, this->_position.y, this->_position.z};
         this->setRotationDegrees(180, {0, 1, 0});
         this->moveAndCollide(newPosition);
         this->_anim.update(0);
     }
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_LEFT) || raylib::input::GamepadHelper::isGamepadButtonDown(0, GAMEPAD_BUTTON_LEFT_FACE_LEFT)
+    if (raylib::input::KeyboardHelper::isKeyDown(KEY_LEFT) || raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_LEFT)
     || gamepadX < 0) {
         Vector3f newPosition =   {this->_position.x - speed, this->_position.y, this->_position.z};
         this->setRotationDegrees(0, {0, 1, 0});
         this->moveAndCollide(newPosition);
         this->_anim.update(0);
     }
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_UP) || raylib::input::GamepadHelper::isGamepadButtonDown(0, GAMEPAD_BUTTON_LEFT_FACE_UP)
+    if (raylib::input::KeyboardHelper::isKeyDown(KEY_UP) || raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_UP)
     || gamepadY < 0) {
         Vector3f newPosition =   {this->_position.x, this->_position.y, this->_position.z - speed};
         this->setRotationDegrees(270, {0, 1, 0});
         this->moveAndCollide(newPosition);
         this->_anim.update(0);
     }
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_DOWN) || raylib::input::GamepadHelper::isGamepadButtonDown(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)
+    if (raylib::input::KeyboardHelper::isKeyDown(KEY_DOWN) || raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_DOWN)
     || gamepadY > 0) {
         Vector3f newPosition =   {this->_position.x, this->_position.y, this->_position.z + speed};
         this->setRotationDegrees(90, {0, 1, 0});
@@ -57,7 +59,7 @@ void Indie::Player::update(float delta)
 
     auto sceneManager = GameEngine::SceneManager::getInstance();
 
-    if (raylib::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+    if (raylib::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
         auto bomb = std::make_shared<Indie::Bomb>("bomb1", raylib::RlMeshBuilder::MeshSphere, "./assets/guytex.png");
         int x = this->_position.x;
         int z = this->_position.z;

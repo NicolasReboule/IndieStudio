@@ -18,6 +18,6 @@
 
 #include "chooseNumberPlayer/ChooseNumberPlayerScene.hpp"
 
-#include "global/GlobalScene.hpp"
+#include "global/GlobalInstance.hpp"
 
 #endif //INDIESTUDIO_INDIESTUDIO_HPP
