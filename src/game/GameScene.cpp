@@ -185,32 +185,32 @@ void Indie::GameScene::readyScene()
 
     auto &globalInstance = Indie::GlobalInstance::getInstance();
     if (globalInstance->_numberPlayers > 0) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player0"));
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
         player.setPosition({-3.5f, 0, -3.5f});
     }
     if (globalInstance->_numberPlayers > 1) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player1"));
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({3.5f, 0, 3.5f});
+        player.setPosition({2.5f, 0, 2.5f});
     }
     if (globalInstance->_numberPlayers > 2) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player2"));
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({-3.5f, 0, 3.5f});
+        player.setPosition({-3.5f, 0, 2.5f});
     }
     if (globalInstance->_numberPlayers > 3) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player"));
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player3"));
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({3.5f, 0, -3.5f});
+        player.setPosition({2.5f, 0, -3.5f});
     }
 }
 
