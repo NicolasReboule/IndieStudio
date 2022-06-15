@@ -43,13 +43,34 @@ void Indie::ChooseNumberPlayerScene::readyScene()
     auto &button4p = dynamic_cast<Indie::Button4p &>(*sceneManager->getNode("button4p"));
 
 
-    button1p.setPosition({000, 100});
-    button2p.setPosition({300, 100});
-    button3p.setPosition({600, 100});
-    button4p.setPosition({900, 100});
+    button1p.setPosition({030, 200});
+    button2p.setPosition({330, 200});
+    button3p.setPosition({630, 200});
+    button4p.setPosition({930, 200});
 
+  /*  button1p.setEnable(false);
+    button2p.setEnable(false);
+    button3p.setEnable(false);
+    button4p.setEnable(false);*/
 }
 
 void Indie::ChooseNumberPlayerScene::updateScene(float delta)
 {
+   /* auto sceneManager = GameEngine::SceneManager::getInstance();
+
+    auto &button1p = dynamic_cast<Indie::Button1p &>(*sceneManager->getNode("button1p"));
+    auto &button2p = dynamic_cast<Indie::Button2p &>(*sceneManager->getNode("button2p"));
+    auto &button3p = dynamic_cast<Indie::Button3p &>(*sceneManager->getNode("button3p"));
+    auto &button4p = dynamic_cast<Indie::Button4p &>(*sceneManager->getNode("button4p"));
+
+    this->_timer -= delta;
+
+    if (this->_isStart == false && this->_timer <= 0)  {
+        button1p.setEnable(true);
+        button2p.setEnable(true);
+        button3p.setEnable(true);
+        button4p.setEnable(true);
+        this->_isStart = true;
+    }*/
+
 }

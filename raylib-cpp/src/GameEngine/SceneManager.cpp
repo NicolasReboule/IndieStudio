@@ -32,29 +32,50 @@ void GameEngine::SceneManager::deleteScene(const std::string &scene)
     this->_scenes.erase(this->_scenes.begin() + i);
 }
 
-void GameEngine::SceneManager::changeScene(const std::string &scene)
+void GameEngine::SceneManager::changeSceneInWaiting()
 {
-    for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes)
-        if (sceneItem->getSceneSource() == scene) {
-            this->_actualScene = sceneItem->getName();
-            break;
-        }
-
-    if (this->_actualScene == "empty")
+    if (this->_waitingScene == "empty" || this->_waitingScene.empty())
         return;
 
+    std::cout << "change scen to : " << this->_waitingScene << std::endl;
+
+    if (!this->_actualScene.empty())
+        for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes) {
+            if (sceneItem->getSceneSource() == this->_actualScene) {
+                sceneItem->destroy();
+                break;
+            }
+        }
+
     for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes) {
+        if (sceneItem->getSceneSource() == this->_waitingScene) {
+            this->_actualScene = sceneItem->getName();
+            sceneItem->sceneLauncher();
+            sceneItem->readyScene();
+            sceneItem->ready();
+            break;
+        }
+    }
+
+    this->_waitingScene.clear();
+
+    //SEPARATE LAUNCHER AND READY
+
+    /*for (std::shared_ptr<GameEngine::Scene> &sceneItem : this->_scenes) {
         if (sceneItem->getSceneSource() == this->_actualScene) {
             if (sceneItem->isLaunched() == false) {
                 sceneItem->sceneLauncher();
                 sceneItem->setLaunched();
-                std::cout << "launch succes" << std::endl;
             }
-            std::cout << "launch succes luuuuuuuuuul" << std::endl;
             sceneItem->readyScene();
             sceneItem->ready();
         }
-    }
+    }*/
+}
+
+void GameEngine::SceneManager::changeScene(const std::string &scene)
+{
+   this->_waitingScene = scene;
 }
 
 std::shared_ptr<GameEngine::Base> GameEngine::SceneManager::getNode(const std::string& name)
@@ -91,6 +112,7 @@ void GameEngine::SceneManager::update()
         }
 
     this->deleteNodeInLst();
+    this->changeSceneInWaiting();
 }
 
 void GameEngine::SceneManager::drawAll(raylib::RlCamera &camera)

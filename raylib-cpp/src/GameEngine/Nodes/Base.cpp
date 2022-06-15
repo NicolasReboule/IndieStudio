@@ -26,3 +26,13 @@ void GameEngine::Base::setGroup(const std::string &group)
 {
     this->_group = group;
 }
+
+bool GameEngine::Base::isHiding() const
+{
+    return this->_hiding;
+}
+
+void GameEngine::Base::setHiding(bool value)
+{
+    this->_hiding = value;
+}

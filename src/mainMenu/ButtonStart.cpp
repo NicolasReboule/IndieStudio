@@ -21,5 +21,4 @@ void Indie::ButtonPlay::pressed()
 
     sceneManager->changeScene("chooseNumberPlayer");
 
-    std::cout << "change scene to game" << std::endl;
 }

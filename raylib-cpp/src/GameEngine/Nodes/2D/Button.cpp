@@ -28,26 +28,29 @@ void GameEngine::Button::ready()
 
 void GameEngine::Button::update(float delta)
 {
-    if (this->_action) {
-        this->_action = false;
-        this->_state = 0;
-        return;
-    }
-    if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::input::MouseHelper::getMousePosition(), this->_bounds)) {
-        if (raylib::input::MouseHelper::isMouseButtonDown(MOUSE_BUTTON_LEFT)) {
-            this->_state = 2;
-            this->_action = true;
+    if (this->_isEnable) {
+        if (this->_action) {
+            this->_action = false;
+            this->_state = 0;
+            return;
+        }
+        if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::input::MouseHelper::getMousePosition(),
+                                                              this->_bounds)) {
+            if (raylib::input::MouseHelper::isMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+                this->_state = 2;
+                this->_action = true;
+            } else
+                this->_state = 1;
+
+            //if (raylib::MouseHelper::isMouseButtonReleased(MOUSE_BUTTON_LEFT))
         } else
-            this->_state = 1;
+            this->_state = 0;
 
-        //if (raylib::MouseHelper::isMouseButtonReleased(MOUSE_BUTTON_LEFT))
-    } else
-        this->_state = 0;
+        if (this->_action)
+            this->pressed();
 
-    if (this->_action)
-        this->pressed();
-
-    this->_rectangle.y = (float) (this->_state) * this->_frameHeight;
+        this->_rectangle.y = (float) (this->_state) * this->_frameHeight;
+    }
 }
 
 void GameEngine::Button::draw()
@@ -85,4 +88,14 @@ float GameEngine::Button::getRotationDegrees()
 void GameEngine::Button::setRotationDegrees(float rotationDegrees)
 {
     this->_rotationDegrees = rotationDegrees;
+}
+
+bool GameEngine::Button::getIsEnable()
+{
+    return this->_isEnable;
+}
+
+void GameEngine::Button::setEnable(bool value)
+{
+    this->_isEnable = value;
 }

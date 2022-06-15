@@ -42,6 +42,8 @@ namespace GameEngine {
 
         virtual void readyScene() = 0;
 
+        void destroy();
+
         void setLaunched();
 
         bool &isLaunched();

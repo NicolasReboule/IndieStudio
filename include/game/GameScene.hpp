@@ -23,6 +23,8 @@ namespace Indie {
 
         void sceneLauncher() override;
 
+        void initWallsPosition();
+
         void displayWinner(const std::string &name);
     };
 }

@@ -38,8 +38,14 @@ namespace GameEngine {
 
         void ready() override;
 
+        void setEnable(bool value);
+
+        bool getIsEnable();
+
     private:
         raylib::RlTexture _texture;
+
+        bool _isEnable = true;
 
         Vector2f _position;
         Vector2f _scale;

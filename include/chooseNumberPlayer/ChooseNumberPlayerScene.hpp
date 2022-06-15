@@ -21,6 +21,9 @@ namespace Indie {
         void readyScene() override;
 
         void sceneLauncher() override;
+    private:
+        float _timer;
+        bool _isStart;
     };
 }
 

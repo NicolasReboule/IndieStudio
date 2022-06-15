@@ -41,7 +41,8 @@ void GameEngine::Scene::ready()
 void GameEngine::Scene::update(float delta)
 {
    for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
-       node->update(delta);
+       if (node->isHiding() == false)
+           node->update(delta);
 }
 
 void GameEngine::Scene::draw()
@@ -50,7 +51,8 @@ void GameEngine::Scene::draw()
 
         try {
             auto &item = dynamic_cast<GameEngine::Node &>(*node);
-            item.draw();
+            if (item.isHiding() == false)
+                item.draw();
         }
         catch (const std::bad_cast &e) {
             continue;
@@ -64,7 +66,8 @@ void GameEngine::Scene::draw2D()
 
         try {
             auto &item = dynamic_cast<GameEngine::Node2D &>(*node);
-            item.draw();
+            if (item.isHiding() == false)
+                item.draw();
         }
         catch (const std::bad_cast &e) {
             continue;
@@ -105,4 +108,9 @@ bool &GameEngine::Scene::isLaunched()
 void GameEngine::Scene::setLaunched()
 {
     this->_isLaunched = true;
+}
+
+void GameEngine::Scene::destroy()
+{
+    this->_nodes.clear();
 }

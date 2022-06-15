@@ -33,7 +33,12 @@ namespace GameEngine {
         const std::string &getGroup() const;
 
         void setGroup(const std::string &group);
+
+        bool isHiding() const;
+
+        void setHiding(bool value);
     private:
+        bool _hiding = false;
         std::string _name;
         std::string _group;
     };

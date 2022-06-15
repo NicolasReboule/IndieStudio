@@ -16,7 +16,26 @@ include_directories(include raylib-cpp/include/) # Add the good includes
 add_executable(${BINARY_NAME}
         main.cpp
         src/start/StartScene.cpp
-        include/start/Logo.hpp src/start/Logo.cpp src/mainMenu/MainMenuScene.cpp include/mainMenu/MainMenuScene.hpp include/mainMenu/ButtonPlay.hpp src/mainMenu/ButtonStart.cpp src/mainMenu/ButtonQuit.cpp src/game/GameScene.cpp include/game/GameScene.hpp src/game/Wall.cpp include/game/Wall.hpp src/game/Player.cpp include/game/Player.hpp src/game/Bomb.cpp include/game/Bomb.hpp src/game/WallDestroyable.cpp include/game/WallDestroyable.hpp src/chooseNumberPlayer/ChooseNumberPlayerScene.cpp include/chooseNumberPlayer/ChooseNumberPlayerScene.hpp src/chooseNumberPlayer/Button1p.cpp include/chooseNumberPlayer/Button1p.hpp src/chooseNumberPlayer/Button2p.cpp include/chooseNumberPlayer/Button2p.hpp src/chooseNumberPlayer/Button3p.cpp include/chooseNumberPlayer/Button3p.hpp src/chooseNumberPlayer/Button4p.cpp include/chooseNumberPlayer/Button4p.hpp src/global/GlobalScene.cpp include/global/GlobalScene.hpp src/global/Global.cpp include/global/Global.hpp src/global/GlobalInstance.cpp include/global/GlobalInstance.hpp src/game/Magma.cpp src/game/Magma.hpp)
+        src/start/Logo.cpp
+        src/mainMenu/MainMenuScene.cpp
+        src/mainMenu/ButtonStart.cpp
+        src/mainMenu/ButtonQuit.cpp
+        src/game/GameScene.cpp
+        src/game/Wall.cpp
+        src/game/Player.cpp
+        src/game/Bomb.cpp
+        src/game/WallDestroyable.cpp
+        src/chooseNumberPlayer/ChooseNumberPlayerScene.cpp
+        src/chooseNumberPlayer/Button1p.cpp
+        src/chooseNumberPlayer/Button2p.cpp
+        src/chooseNumberPlayer/Button3p.cpp
+        src/chooseNumberPlayer/Button4p.cpp
+        src/global/GlobalScene.cpp
+        src/global/Global.cpp
+        src/global/GlobalInstance.cpp
+        src/game/Magma.cpp
+        src/game/ButtonMainMenu.cpp
+        )
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 

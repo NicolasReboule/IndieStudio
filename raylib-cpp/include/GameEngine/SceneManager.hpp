@@ -22,6 +22,8 @@ namespace GameEngine {
 
         void changeScene(const std::string &scene);
 
+
+
         void addScene(const std::shared_ptr<GameEngine::Scene> &scene);
 
         void deleteScene(const std::string &scene);
@@ -47,9 +49,12 @@ namespace GameEngine {
     private:
         void deleteNodeInLst();
 
+        void changeSceneInWaiting();
+
         static std::shared_ptr<SceneManager> _instance;
 
         std::vector<std::string> _nodesToDelete;
+        std::string _waitingScene;
         std::string _actualScene;
         std::vector<std::shared_ptr<GameEngine::Scene>> _scenes;
     };

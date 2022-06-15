@@ -10,6 +10,8 @@
 #include "game/WallDestroyable.hpp"
 #include "game/Player.hpp"
 #include "global/GlobalInstance.hpp"
+#include "game/ButtonMainMenu.hpp"
+#include "mainMenu/ButtonQuit.hpp"
 
 Indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
@@ -100,6 +102,9 @@ void Indie::GameScene::sceneLauncher()
         this->addNode(player);
     }
 
+    auto buttonMainMenu = std::make_shared<Indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button.png");
+    this->addNode(buttonMainMenu);
+
 }
 
 void Indie::GameScene::readyScene()
@@ -108,6 +113,98 @@ void Indie::GameScene::readyScene()
     auto sceneManager = GameEngine::SceneManager::getInstance();
     auto &globalInstance = Indie::GlobalInstance::getInstance();
 
+    this->initWallsPosition();
+
+    if (globalInstance->_numberPlayers > 0) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player0"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({-3.5f, 0, -3.5f});
+        globalInstance->_playersAlive = 1;
+    }
+    if (globalInstance->_numberPlayers > 1) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player1"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({2.5f, 0, 2.5f});
+        globalInstance->_playersAlive = 2;
+    }
+    if (globalInstance->_numberPlayers > 2) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player2"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({-3.5f, 0, 2.5f});
+        globalInstance->_playersAlive = 3;
+    }
+    if (globalInstance->_numberPlayers > 3) {
+        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player3"));
+        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+        player.setBoundingBox(box);
+        player.setScale({0.8, 0.8, 0.8});
+        player.setPosition({2.5f, 0, -3.5f});
+        globalInstance->_playersAlive = 4;
+    }
+
+
+    auto &buttonMainMenu = dynamic_cast<Indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+    buttonMainMenu.setHiding(true);
+    buttonMainMenu.setPosition({100, 100});
+}
+
+
+void Indie::GameScene::updateScene(float delta)
+{
+    auto &globalInstance = Indie::GlobalInstance::getInstance();
+    auto &sceneManager = GameEngine::SceneManager::getInstance();
+
+
+    if (globalInstance->_playersAlive <= 1) {
+
+        try {
+            auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player0"));
+            this->displayWinner(player.getName());
+        }
+        catch (const std::bad_cast &e) {
+            try {
+                auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player1"));
+                this->displayWinner(player.getName());
+            }
+            catch (const std::bad_cast &e) {
+                try {
+                    auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player2"));
+                    this->displayWinner(player.getName());
+                }
+                catch (const std::bad_cast &e) {
+                    try {
+                        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player0"));
+                        this->displayWinner(player.getName());
+                    }
+                    catch (const std::bad_cast &e) {
+                        this->displayWinner("CROSSKILL BAND DE CONS");
+                    }
+                }
+            }
+        }
+    }
+}
+
+void Indie::GameScene::displayWinner(const std::string &name)
+{
+    auto text = raylib::RlTextBuilder().setText(name + " WWWIIIINNNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
+    raylib::DrawTextHelper::drawText(text);
+
+    auto &sceneManager = GameEngine::SceneManager::getInstance();
+
+    auto &buttonMainMenu = dynamic_cast<Indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+    buttonMainMenu.setHiding(false);
+}
+
+void Indie::GameScene::initWallsPosition()
+{
+    auto &sceneManager = GameEngine::SceneManager::getInstance();
 
     int index = 0;
 
@@ -184,82 +281,5 @@ void Indie::GameScene::readyScene()
         auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*sceneManager->getNode("wallDestroyable" + std::to_string(index)));
         wallDestroyable.setPosition({-3.5f + i * 1.0f, 0.5, 2.5f});
     }
-
-
-    if (globalInstance->_numberPlayers > 0) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player0"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
-        player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({-3.5f, 0, -3.5f});
-        globalInstance->_playersAlive = 1;
-    }
-    if (globalInstance->_numberPlayers > 1) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player1"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
-        player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({2.5f, 0, 2.5f});
-        globalInstance->_playersAlive = 2;
-    }
-    if (globalInstance->_numberPlayers > 2) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player2"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
-        player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({-3.5f, 0, 2.5f});
-        globalInstance->_playersAlive = 3;
-    }
-    if (globalInstance->_numberPlayers > 3) {
-        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player3"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
-        player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({2.5f, 0, -3.5f});
-        globalInstance->_playersAlive = 4;
-    }
-}
-
-
-void Indie::GameScene::updateScene(float delta)
-{
-    auto &globalInstance = Indie::GlobalInstance::getInstance();
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
-
-
-    if (globalInstance->_playersAlive <= 1) {
-
-        try {
-            auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player0"));
-            this->displayWinner(player.getName());
-        }
-        catch (const std::bad_cast &e) {
-            try {
-                auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player1"));
-                this->displayWinner(player.getName());
-            }
-            catch (const std::bad_cast &e) {
-                try {
-                    auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player2"));
-                    this->displayWinner(player.getName());
-                }
-                catch (const std::bad_cast &e) {
-                    try {
-                        auto &player = dynamic_cast<Indie::Player &>(*sceneManager->getNode("player0"));
-                        this->displayWinner(player.getName());
-                    }
-                    catch (const std::bad_cast &e) {
-                        this->displayWinner("CROSSKILL BAND DE CONS");
-                    }
-                }
-            }
-        }
-    }
-}
-
-void Indie::GameScene::displayWinner(const std::string &name)
-{
-    auto text = raylib::RlTextBuilder().setText(name + " WWWIIIINNNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
-    raylib::DrawTextHelper::drawText(text);
 }
 
