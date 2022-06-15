@@ -7,10 +7,10 @@
 
 #include "GameEngine/MainScene.hpp"
 
-GameEngine::MainScene::MainScene(std::string name, std::string sceneSource) : Scene(std::move(name), std::move(sceneSource))
+gameengine::MainScene::MainScene(std::string name, std::string sceneSource) : Scene(std::move(name), std::move(sceneSource))
 {
 }
 
-void GameEngine::MainScene::sceneLauncher()
+void gameengine::MainScene::sceneLauncher()
 {
 }

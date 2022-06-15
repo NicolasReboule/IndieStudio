@@ -11,7 +11,7 @@
 #include "Node.hpp"
 #include "raylib/3DObject/RlMeshBuilder.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class StaticBody : public Node {
     public:

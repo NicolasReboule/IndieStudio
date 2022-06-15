@@ -40,7 +40,7 @@ void Indie::Bomb::update(float delta)
 
 void Indie::Bomb::handleHallDestroyableCollision()
 {
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
     BoundingBox temp0 = this->getBoundingBox();
     BoundingBox temp1 = temp0;
@@ -81,7 +81,7 @@ void Indie::Bomb::handleHallDestroyableCollision()
 
 void Indie::Bomb::enableCollision()
 {
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
 
     bool temp = true;
@@ -105,7 +105,7 @@ void Indie::Bomb::enableCollision()
 
 void Indie::Bomb::spawnMagma()
 {
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
     auto random = raylib::Random();
     auto magma0 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");

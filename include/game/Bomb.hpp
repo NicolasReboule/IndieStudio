@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class Bomb : public GameEngine::StaticBody {
+    class Bomb : public gameengine::StaticBody {
     public:
         Bomb(const std::string &name, const std::string &objPath);
         Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);

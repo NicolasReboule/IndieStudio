@@ -28,7 +28,7 @@ void Indie::Magma::ready()
 
 void Indie::Magma::update(float delta)
 {
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
     this->_timer -= delta;
     this->handlePlayerCollision();
@@ -38,7 +38,7 @@ void Indie::Magma::update(float delta)
 
 void Indie::Magma::handlePlayerCollision()
 {
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = Indie::GlobalInstance::getInstance();
 
     for (const auto &node: sceneManager->getAllNodes()) {

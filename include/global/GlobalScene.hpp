@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class GlobalScene : public GameEngine::Scene {
+    class GlobalScene : public gameengine::Scene {
     public:
         GlobalScene(const std::string &name = "global", const std::string &filename = "start");
 

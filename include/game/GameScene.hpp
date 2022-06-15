@@ -13,7 +13,7 @@
 
 namespace Indie {
 
-    class GameScene : public GameEngine::Scene {
+    class GameScene : public gameengine::Scene {
     public:
         explicit GameScene(const std::string &name = "game", const std::string &sceneSource = "game");
         ~GameScene() override = default;

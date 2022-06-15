@@ -8,7 +8,7 @@
 #include "global/GlobalScene.hpp"
 #include "global/Global.hpp"
 
-Indie::GlobalScene::GlobalScene(const std::string &name, const std::string &filename) : GameEngine::Scene(name, filename)
+Indie::GlobalScene::GlobalScene(const std::string &name, const std::string &filename) : gameengine::Scene(name, filename)
 {
     auto global = std::make_shared<Indie::Global>("global");
     this->addNode(global);

@@ -11,46 +11,46 @@
 
 #include <utility>
 
-GameEngine::Scene::Scene(std::string name, std::string sceneSource)
+gameengine::Scene::Scene(std::string name, std::string sceneSource)
 {
     this->_name = std::move(name);
     this->_sceneSource = std::move(sceneSource);
 }
 
-void GameEngine::Scene::addNode(const std::shared_ptr<GameEngine::Base> &node)
+void gameengine::Scene::addNode(const std::shared_ptr<gameengine::Base> &node)
 {
     this->_nodes.push_back(node);
 }
 
-std::string GameEngine::Scene::getName()
+std::string gameengine::Scene::getName()
 {
     return this->_name;
 }
 
-std::string GameEngine::Scene::getSceneSource()
+std::string gameengine::Scene::getSceneSource()
 {
     return this->_sceneSource;
 }
 
-void GameEngine::Scene::ready()
+void gameengine::Scene::ready()
 {
-    for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
+    for (std::shared_ptr<gameengine::Base> &node : this->_nodes)
         node->ready();
 }
 
-void GameEngine::Scene::update(float delta)
+void gameengine::Scene::update(float delta)
 {
-   for (std::shared_ptr<GameEngine::Base> &node : this->_nodes)
+   for (std::shared_ptr<gameengine::Base> &node : this->_nodes)
        if (node->isHiding() == false)
            node->update(delta);
 }
 
-void GameEngine::Scene::draw()
+void gameengine::Scene::draw()
 {
-    for (std::shared_ptr<GameEngine::Base> &node : this->_nodes) {
+    for (std::shared_ptr<gameengine::Base> &node : this->_nodes) {
 
         try {
-            auto &item = dynamic_cast<GameEngine::Node &>(*node);
+            auto &item = dynamic_cast<gameengine::Node &>(*node);
             if (item.isHiding() == false)
                 item.draw();
         }
@@ -60,12 +60,12 @@ void GameEngine::Scene::draw()
     }
 }
 
-void GameEngine::Scene::draw2D()
+void gameengine::Scene::draw2D()
 {
-    for (std::shared_ptr<GameEngine::Base> &node : this->_nodes) {
+    for (std::shared_ptr<gameengine::Base> &node : this->_nodes) {
 
         try {
-            auto &item = dynamic_cast<GameEngine::Node2D &>(*node);
+            auto &item = dynamic_cast<gameengine::Node2D &>(*node);
             if (item.isHiding() == false)
                 item.draw();
         }
@@ -75,7 +75,7 @@ void GameEngine::Scene::draw2D()
     }
 }
 
-std::shared_ptr<GameEngine::Base> GameEngine::Scene::getNode(const std::string &name)
+std::shared_ptr<gameengine::Base> gameengine::Scene::getNode(const std::string &name)
 {
     for (const auto &item: this->_nodes)
         if (item->getName() == name)
@@ -83,12 +83,12 @@ std::shared_ptr<GameEngine::Base> GameEngine::Scene::getNode(const std::string &
     return nullptr;
 }
 
-std::vector<std::shared_ptr<GameEngine::Base>> GameEngine::Scene::getAllNode()
+std::vector<std::shared_ptr<gameengine::Base>> gameengine::Scene::getAllNode()
 {
     return this->_nodes;
 }
 
-void GameEngine::Scene::deleteNode(const std::string &name)
+void gameengine::Scene::deleteNode(const std::string &name)
 {
     auto erased = std::erase_if(this->_nodes, [&name](const auto &node) {
         if (node->getName() == name) {
@@ -100,17 +100,17 @@ void GameEngine::Scene::deleteNode(const std::string &name)
     std::cout << "Erased: " << erased  << std::endl;
 }
 
-bool &GameEngine::Scene::isLaunched()
+bool &gameengine::Scene::isLaunched()
 {
     return this->_isLaunched;
 }
 
-void GameEngine::Scene::setLaunched()
+void gameengine::Scene::setLaunched()
 {
     this->_isLaunched = true;
 }
 
-void GameEngine::Scene::destroy()
+void gameengine::Scene::destroy()
 {
     this->_nodes.clear();
 }

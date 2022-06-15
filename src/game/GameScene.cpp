@@ -110,7 +110,7 @@ void Indie::GameScene::sceneLauncher()
 void Indie::GameScene::readyScene()
 {
 
-    auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = Indie::GlobalInstance::getInstance();
 
     this->initWallsPosition();
@@ -158,7 +158,7 @@ void Indie::GameScene::readyScene()
 void Indie::GameScene::updateScene(float delta)
 {
     auto &globalInstance = Indie::GlobalInstance::getInstance();
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
 
     if (globalInstance->_playersAlive <= 1) {
@@ -196,7 +196,7 @@ void Indie::GameScene::displayWinner(const std::string &name)
     auto text = raylib::RlTextBuilder().setText(name + " WWWIIIINNNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
     raylib::DrawTextHelper::drawText(text);
 
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
     auto &buttonMainMenu = dynamic_cast<Indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
     buttonMainMenu.setHiding(false);
@@ -204,7 +204,7 @@ void Indie::GameScene::displayWinner(const std::string &name)
 
 void Indie::GameScene::initWallsPosition()
 {
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
     int index = 0;
 

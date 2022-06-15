@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class ButtonMainMenu : public GameEngine::Button {
+    class ButtonMainMenu : public gameengine::Button {
     public:
         explicit ButtonMainMenu(const std::string &name, const std::string &filename);
 

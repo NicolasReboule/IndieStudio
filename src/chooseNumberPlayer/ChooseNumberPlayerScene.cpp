@@ -35,7 +35,7 @@ void Indie::ChooseNumberPlayerScene::sceneLauncher()
 
 void Indie::ChooseNumberPlayerScene::readyScene()
 {
-    auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto sceneManager = gameengine::SceneManager::getInstance();
 
     auto &button1p = dynamic_cast<Indie::Button1p &>(*sceneManager->getNode("button1p"));
     auto &button2p = dynamic_cast<Indie::Button2p &>(*sceneManager->getNode("button2p"));
@@ -56,7 +56,7 @@ void Indie::ChooseNumberPlayerScene::readyScene()
 
 void Indie::ChooseNumberPlayerScene::updateScene(float delta)
 {
-   /* auto sceneManager = GameEngine::SceneManager::getInstance();
+   /* auto sceneManager = gameengine::SceneManager::getInstance();
 
     auto &button1p = dynamic_cast<Indie::Button1p &>(*sceneManager->getNode("button1p"));
     auto &button2p = dynamic_cast<Indie::Button2p &>(*sceneManager->getNode("button2p"));

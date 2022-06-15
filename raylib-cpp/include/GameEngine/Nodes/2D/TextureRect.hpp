@@ -10,7 +10,7 @@
 
 #include "Node2D.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class TextureRect : public Node2D {
     public:

@@ -10,7 +10,7 @@
 
 #include "Node2D.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class Button : public Node2D {
     public:

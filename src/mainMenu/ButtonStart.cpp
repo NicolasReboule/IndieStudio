@@ -17,7 +17,7 @@ void Indie::ButtonPlay::ready()
 
 void Indie::ButtonPlay::pressed()
 {
-    auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto sceneManager = gameengine::SceneManager::getInstance();
 
     sceneManager->changeScene("chooseNumberPlayer");
 

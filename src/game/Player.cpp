@@ -8,12 +8,12 @@
 #include "game/Player.hpp"
 #include "game/Bomb.hpp"
 
-Indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : GameEngine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+Indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
 }
 
-Indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : GameEngine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+Indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
 }
@@ -69,7 +69,7 @@ void Indie::Player::update(float delta)
 
 void Indie::Player::spawnBomb()
 {
-    auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto sceneManager = gameengine::SceneManager::getInstance();
 
     if (raylib::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
         auto random = raylib::Random();

@@ -10,7 +10,7 @@
 
 #include "GameEngine/Nodes/StaticBody.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class KinematicBody : public StaticBody{
     public:

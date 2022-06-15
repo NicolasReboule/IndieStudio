@@ -15,7 +15,7 @@ enum SoundCategory{
     FX
 };
 
-namespace GameEngine {
+namespace gameengine {
     class ISound {
     public:
         explicit ISound(std::string fileName, SoundCategory category);

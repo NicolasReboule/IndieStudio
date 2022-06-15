@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class Global : public GameEngine::Base {
+    class Global : public gameengine::Base {
         public:
         explicit Global(const std::string &name);
 

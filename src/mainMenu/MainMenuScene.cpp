@@ -28,7 +28,7 @@ void Indie::MainMenuScene::sceneLauncher()
 
 void Indie::MainMenuScene::readyScene()
 {
-    auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto sceneManager = gameengine::SceneManager::getInstance();
 
     auto &buttonPlay = dynamic_cast<Indie::ButtonPlay &>(*sceneManager->getNode("buttonPlay"));
     auto &buttonQuit = dynamic_cast<Indie::ButtonQuit &>(*sceneManager->getNode("buttonQuit"));

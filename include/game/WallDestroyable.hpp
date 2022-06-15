@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class WallDestroyable : public GameEngine::StaticBody {
+    class WallDestroyable : public gameengine::StaticBody {
     public:
         WallDestroyable(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~WallDestroyable() override = default;

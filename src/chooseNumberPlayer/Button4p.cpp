@@ -19,7 +19,7 @@ void Indie::Button4p::ready()
 
 void Indie::Button4p::pressed()
 {
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstnace = Indie::GlobalInstance::getInstance();
     globalInstnace->_numberPlayers = 4;
     sceneManager->changeScene("game");

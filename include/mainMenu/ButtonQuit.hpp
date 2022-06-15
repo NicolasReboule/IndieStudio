@@ -11,7 +11,7 @@
 
 namespace Indie {
 
-    class ButtonQuit : public GameEngine::Button {
+    class ButtonQuit : public gameengine::Button {
     public:
         explicit ButtonQuit(const std::string &name, const std::string &filename);
 

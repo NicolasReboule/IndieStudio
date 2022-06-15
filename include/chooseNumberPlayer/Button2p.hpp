@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class Button2p : public GameEngine::Button {
+    class Button2p : public gameengine::Button {
     public:
         explicit Button2p(const std::string &name, const std::string &filename);
 

@@ -10,7 +10,7 @@
 
 #include "GameEngine.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class MainScene : public Scene {
     public:

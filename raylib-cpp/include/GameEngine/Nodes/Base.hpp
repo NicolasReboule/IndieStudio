@@ -10,7 +10,7 @@
 
 #include "raylib/Raylib.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class Base {
     public:

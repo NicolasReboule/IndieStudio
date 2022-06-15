@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class Magma : public GameEngine::StaticBody {
+    class Magma : public gameengine::StaticBody {
     public:
         Magma(const std::string &name, const std::string &objPath);
         Magma(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);

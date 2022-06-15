@@ -17,7 +17,7 @@ void Indie::ButtonMainMenu::ready()
 
 void Indie::ButtonMainMenu::pressed()
 {
-    auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto sceneManager = gameengine::SceneManager::getInstance();
 
     sceneManager->changeScene("mainMenu");
 }

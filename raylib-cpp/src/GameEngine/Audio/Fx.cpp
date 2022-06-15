@@ -7,6 +7,6 @@
 
 #include "GameEngine/Audio/Fx.hpp"
 
-GameEngine::Audio::Fx::Fx(const std::string &fileName, SoundCategory category) : ISound(fileName, category), RlSound("./assets/sounds/" + fileName)
+gameengine::Audio::Fx::Fx(const std::string &fileName, SoundCategory category) : ISound(fileName, category), RlSound("./assets/sounds/" + fileName)
 {
 }
