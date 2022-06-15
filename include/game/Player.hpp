@@ -23,6 +23,7 @@ namespace Indie {
         void ready() override;
 
     private:
+        raylib::RlModelAnim _anim;
     };
 }
 

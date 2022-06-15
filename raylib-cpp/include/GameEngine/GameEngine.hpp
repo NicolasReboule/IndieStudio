@@ -25,4 +25,6 @@
 
 #include "GameEngine/Nodes/KinematicBody.hpp"
 
+#include <raylib/Raylib.hpp>
+
 #endif //INDIESTUDIO_GAMEENGINE_HPP

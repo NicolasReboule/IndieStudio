@@ -92,6 +92,7 @@ void GameEngine::SceneManager::drawAll(raylib::RlCamera &camera)
 
     raylib::DrawHelper::beginDrawing();
     raylib::DrawHelper::clearBackground(RlColor::DarkBrown);
+    raylib::DrawTextHelper::drawFps(10, 10, 30);
 
     camera.update();
     raylib::DrawHelper::beginMode3D(camera);
