@@ -45,6 +45,14 @@ namespace raylib {
          * @param spacing the spacing between each rect
          */
         static void drawGrid(const Vector2i &size, const float &spacing);
+
+        /**
+         * @brief Draw a grid of size (width/height) with some spacing, centered on position
+         * @param size the size of the grid (width & height)
+         * @param position the position of the grid
+         * @param spacing the spacing between each rect
+         */
+        static void drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing);
     };
 }
 

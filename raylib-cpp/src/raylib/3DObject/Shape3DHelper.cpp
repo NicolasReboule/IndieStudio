@@ -137,11 +137,16 @@ void raylib::Shape3DHelper::drawGrid(int slices, float spacing)
 
 void raylib::Shape3DHelper::drawGrid(const Vector2i &size, const float &spacing)
 {
+    drawGrid(size, {0, 0, 0}, spacing);
+}
+
+void raylib::Shape3DHelper::drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing)
+{
     rlBegin(RL_LINES);
     rlCheckRenderBatchLimit((size.x + size.y + 2) * 4);
 
     float halfSizeX = (float) size.x * 0.5f;
-    float halfSizeY = (float) size.y * 0.5f;
+    float halfSizeZ = (float) size.y * 0.5f;
 
     rlColor3f(0.5f, 0.5f, 0.5f);
     rlColor3f(0.5f, 0.5f, 0.5f);
@@ -149,13 +154,13 @@ void raylib::Shape3DHelper::drawGrid(const Vector2i &size, const float &spacing)
     rlColor3f(0.5f, 0.5f, 0.5f);
 
     for (int i = 0; i <= size.x; i++) {
-        rlVertex3f((float) i * spacing - halfSizeX, 0.0f, halfSizeY);
-        rlVertex3f((float) i * spacing - halfSizeX, 0.0f, -halfSizeY);
+        rlVertex3f((float) i * spacing - halfSizeX + position.x, position.y, halfSizeZ + position.z);
+        rlVertex3f((float) i * spacing - halfSizeX + position.x, position.y, -halfSizeZ + position.z);
     }
 
     for (int i = 0; i <= size.y; i++) {
-        rlVertex3f(-halfSizeX, 0.0f, (float) i * spacing - halfSizeY);
-        rlVertex3f(halfSizeX, 0.0f, (float) i * spacing - halfSizeY);
+        rlVertex3f(-halfSizeX + position.x, position.y, (float) i * spacing - halfSizeZ + position.z);
+        rlVertex3f(halfSizeX + position.x, position.y, (float) i * spacing - halfSizeZ + position.z);
     }
 
     rlEnd();

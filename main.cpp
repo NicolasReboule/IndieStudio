@@ -63,7 +63,8 @@ int main(int ac, char **av)
         if (raylib::input::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();
         raylib::DrawHelper::beginMode3D(camera);
-        raylib::Shape3DHelper::drawGrid({9, 9}, 1.0f);
+        raylib::Shape3DHelper::drawGrid({9, 9}, {1, 0, 1}, 1.0f);
+        raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 50, 0}, RlColor::Red);
         DrawModelEx(model.getModel(), {0.0f, 0.0f, 0.0f}, {0, 1, 0}, 90.0f, {0.8f, 0.8f, 0.8f}, WHITE);
         raylib::DrawHelper::endMode3D();
         raylib::DrawHelper::endDrawing();
