@@ -5,9 +5,7 @@ set(CMAKE_CXX_STANDARD 20) # Standard version to use of C++
 set(BINARY_NAME "bomberman") # Binary name
 set(ASSETS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/assets/") # Directory containing resources
 
-if (UNIX)
-    set(CMAKE_CXX_FLAGS "-W -Wall -Wextra")  #TODO: remove this line
-endif (UNIX)
+set(CMAKE_CXX_FLAGS "-W -Wall -Wextra")  #TODO: remove this line
 
 add_subdirectory(raylib-cpp/) # Depend on raylib-cpp
 

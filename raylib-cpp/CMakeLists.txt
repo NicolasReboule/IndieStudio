@@ -3,7 +3,7 @@ project(raylib-cpp)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
-set(CMAKE_CXX_FLAGS_RELEASE  "-W -Wall -Wextra") #TODO: remove this line
+set(CMAKE_CXX_FLAGS_RELEASE "-W -Wall -Wextra") #TODO: remove this line
 
 find_package(raylib REQUIRED)
 
@@ -84,5 +84,6 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/KinematicBody.cpp
-        )
+        src/GameEngine/exception/GameEngineException.cpp
+        src/GameEngine/exception/MapParserException.cpp)
 target_link_libraries(${PROJECT_NAME} raylib)

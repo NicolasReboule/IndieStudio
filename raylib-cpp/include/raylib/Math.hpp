@@ -10,5 +10,6 @@
 
 #include "raylib/Math/Vector.hpp"
 #include "raylib/Math/VectorHelper.hpp"
+#include <cmath>
 
 #endif //INDIESTUDIO_MATH_HPP
