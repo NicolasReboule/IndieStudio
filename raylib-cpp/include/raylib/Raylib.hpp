@@ -37,7 +37,6 @@
 #include "Color/RlColor.hpp"
 #include "Core/CoreHelper.hpp"
 #include "Core/FileHelper.hpp"
-#include "Core/RlLogger.hpp"
 #include "Core/WorldHelper.hpp"
 #include "Draw/Draw2DHelper.hpp"
 #include "Draw/DrawHelper.hpp"
@@ -59,15 +58,16 @@
 #include "Random.hpp"
 #include "Shader/RlShader.hpp"
 #include "Shader/ShaderUtils.hpp"
-#include "Text/TextCodepoint.hpp"
 #include "Text/RlFont.hpp"
 #include "Text/RlText.hpp"
 #include "Text/RlTextBuilder.hpp"
+#include "Text/TextCodepoint.hpp"
 #include "Text/TextHelper.hpp"
 #include "Texture/RlRenderTexture.hpp"
 #include "Texture/RlTexture.hpp"
 #include "Window/RlWindow.hpp"
 #include "Window/System.hpp"
+
 #include <iostream>
 
 #endif //INDIESTUDIO_RAYLIB_HPP

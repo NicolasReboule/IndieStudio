@@ -38,10 +38,10 @@ namespace raylib {
 
         /**
          * @brief Set the camera up vector (rotation over its axis)
-         * @param up the up vector
+         * @param lookingPoint the up vector
          * @return the CameraBuilder object
          */
-        RlCameraBuilder &setUp(const Vector3f &up);
+        RlCameraBuilder &setLookingPoint(const Vector3f &lookingPoint);
 
         /**
          * @brief Set the camera field of view
@@ -73,7 +73,7 @@ namespace raylib {
     private:
         Vector3f _position; /**< The position of the camera */
         Vector3f _target; /**< The target of the camera */
-        Vector3f _up; /**< Camera up vector (rotation over its axis) */
+        Vector3f _lookingPoint; /**< Camera up vector (rotation over its axis) */
         float _fovy; /**< The field of view of the camera */
         CameraProjection _projection; /**< The projection type of the camera */
         CameraMode _cameraMode; /**< The camera mode */

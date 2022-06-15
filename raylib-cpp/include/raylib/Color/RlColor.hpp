@@ -94,25 +94,25 @@ namespace raylib {
          * @brief Get the red value
          * @return the red value
          */
-        unsigned char getRed() const;
+        const unsigned char &getRed() const;
 
         /**
          * @brief Get the green value
          * @return the green value
          */
-        unsigned char getGreen() const;
+        const unsigned char &getGreen() const;
 
         /**
          * @brief Get the blue value
          * @return the blue value
          */
-        unsigned char getBlue() const;
+        const unsigned char &getBlue() const;
 
         /**
          * @brief Get the alpha value
          * @return the alpha value
          */
-        unsigned char getAlpha() const;
+        const unsigned char &getAlpha() const;
 
         /**
          * @brief Set the rgba color

@@ -380,8 +380,8 @@ namespace raylib {
         static void drawPolyLines(const Vector2f &center, int sides, float radius, float rotation, float lineThick, const RlColor &color);
 
     private:
-        static Texture2D _texShapes;
-        static Rectangle _texShapesRec;
+        static Texture2D _texShapes; /**< Texture used on shapes drawing (usually a white pixel) */
+        static Rectangle _texShapesRec; /**< Texture source rectangle used on shapes drawing */
     };
 }
 
