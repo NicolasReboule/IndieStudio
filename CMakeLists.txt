@@ -33,6 +33,8 @@ add_executable(${BINARY_NAME}
         src/global/GlobalInstance.cpp
         src/game/Magma.cpp
         src/game/ButtonMainMenu.cpp
+        src/game/ButtonQuitx05.cpp
+        src/game/ButtonResume.cpp
         )
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable

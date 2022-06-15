@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** ButtonQuit.cpp
+** ButtonQuitx05.cpp
 ** File description:
-** ButtonQuit.cpp
+** ButtonQuitx05.cpp
 */
 
 #include "mainMenu/ButtonQuit.hpp"

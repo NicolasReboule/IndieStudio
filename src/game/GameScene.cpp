@@ -11,7 +11,8 @@
 #include "game/Player.hpp"
 #include "global/GlobalInstance.hpp"
 #include "game/ButtonMainMenu.hpp"
-#include "mainMenu/ButtonQuit.hpp"
+#include "game/ButtonQuitx05.hpp"
+#include "game/ButtonResume.hpp"
 
 indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource), _mapSizeMax({60, 45}), _mapSize({0, 0})
 {
@@ -80,8 +81,14 @@ void indie::GameScene::sceneLauncher()
         this->addNode(player);
     }
 
-    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button.png");
+    auto buttonResume = std::make_shared<indie::ButtonResume>("buttonResume", "./assets/gui/button_resume_x05.png");
+    this->addNode(buttonResume);
+
+    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button_main_menu_x05.png");
     this->addNode(buttonMainMenu);
+
+    auto buttonQuit = std::make_shared<indie::ButtonQuitx05>("buttonQuit", "./assets/gui/button_quit_x05.png");
+    this->addNode(buttonQuit);
 
 }
 
@@ -125,9 +132,19 @@ void indie::GameScene::readyScene()
     }
 
 
+    auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
+    buttonResume.setHiding(true);
+    buttonResume.setPosition({50, 200});
+
     auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
     buttonMainMenu.setHiding(true);
-    buttonMainMenu.setPosition({100, 100});
+    buttonMainMenu.setPosition({50, 300});
+
+    auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
+    buttonQuit.setHiding(true);
+    buttonQuit.setPosition({50, 400});
+
+
 }
 
 
@@ -168,12 +185,14 @@ void indie::GameScene::updateScene(float delta)
 
 void indie::GameScene::displayWinner(const std::string &name)
 {
-    auto text = raylib::RlTextBuilder().setText(name + " WWWIIIINNNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
+    auto text = raylib::RlTextBuilder().setText(name + "   WINNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
     raylib::DrawTextHelper::drawText(text);
 
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
     auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+    auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
     buttonMainMenu.setHiding(false);
+    buttonQuit.setHiding(false);
 }
 

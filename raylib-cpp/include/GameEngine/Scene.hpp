@@ -48,7 +48,12 @@ namespace gameengine {
 
         bool &isLaunched();
 
+        void setPaused(bool value);
+
+        bool getPaused() const;
+
     private:
+        bool _isPaused;
         bool _isLaunched = false;
         std::string _sceneSource;
         std::string _name;

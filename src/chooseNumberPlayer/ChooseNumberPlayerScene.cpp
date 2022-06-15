@@ -44,9 +44,9 @@ void indie::ChooseNumberPlayerScene::readyScene()
 
 
     button1p.setPosition({030, 200});
-    button2p.setPosition({330, 200});
+    button2p.setPosition({330, 400});
     button3p.setPosition({630, 200});
-    button4p.setPosition({930, 200});
+    button4p.setPosition({930, 400});
 
   /*  button1p.setEnable(false);
     button2p.setEnable(false);

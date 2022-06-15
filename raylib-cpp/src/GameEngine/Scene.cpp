@@ -41,8 +41,16 @@ void gameengine::Scene::ready()
 void gameengine::Scene::update(float delta)
 {
    for (std::shared_ptr<gameengine::Base> &node : this->_nodes)
-       if (node->isHiding() == false)
-           node->update(delta);
+       if (node->isHiding() == false) {
+           try {
+               auto &node3D = dynamic_cast<gameengine::Node &>(*node);
+               if (this->_isPaused == false)
+                   node3D.update(delta);
+           }
+           catch (const std::bad_cast &e) {
+               node->update(delta);
+           }
+       }
 }
 
 void gameengine::Scene::draw()
@@ -113,4 +121,14 @@ void gameengine::Scene::setLaunched()
 void gameengine::Scene::destroy()
 {
     this->_nodes.clear();
+}
+
+void gameengine::Scene::setPaused(bool value)
+{
+    this->_isPaused = value;
+}
+
+bool gameengine::Scene::getPaused() const
+{
+    return this->_isPaused;
 }

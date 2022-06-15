@@ -7,6 +7,9 @@
 
 #include "game/Player.hpp"
 #include "game/Bomb.hpp"
+#include "game/ButtonMainMenu.hpp"
+#include "game/ButtonQuitx05.hpp"
+#include "game/ButtonResume.hpp"
 
 indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
@@ -62,6 +65,22 @@ void indie::Player::update(float delta)
         Vector3f newPosition = {this->_position.x + speed * direction.x, this->_position.y + speed * direction.y,
                                 this->_position.z + speed * direction.z};
         this->moveAndCollide(newPosition);
+    }
+
+
+    auto sceneManager = gameengine::SceneManager::getInstance();
+
+    if (raylib::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
+
+        std::cout << "start pressed" << std::endl;
+        auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
+        auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+        auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
+
+        buttonResume.setHiding(false);
+        buttonMainMenu.setHiding(false);
+        buttonQuit.setHiding(false);
+        sceneManager->setPaused(true);
     }
 
     this->spawnBomb();

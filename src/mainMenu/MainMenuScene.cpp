@@ -10,6 +10,7 @@
 #include "mainMenu/ButtonPlay.hpp"
 #include "mainMenu/ButtonQuit.hpp"
 
+
 indie::MainMenuScene::MainMenuScene(std::string name, std::string sceneSource) : Scene(name, sceneSource)
 {
 }

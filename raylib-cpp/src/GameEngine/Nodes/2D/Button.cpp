@@ -77,6 +77,7 @@ Vector2f gameengine::Button::getScale()
 
 void gameengine::Button::setScale(Vector2f scale)
 {
+
     this->_scale = scale;
 }
 

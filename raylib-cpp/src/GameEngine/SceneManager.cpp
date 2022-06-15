@@ -53,6 +53,7 @@ void gameengine::SceneManager::changeSceneInWaiting()
             sceneItem->sceneLauncher();
             sceneItem->readyScene();
             sceneItem->ready();
+            sceneItem->setPaused(false);
             break;
         }
     }
@@ -193,4 +194,18 @@ void gameengine::SceneManager::deleteNodeInLst()
 void gameengine::SceneManager::deleteNode(const std::string &name)
 {
     this->_nodesToDelete.push_back(name);
+}
+
+void gameengine::SceneManager::setPaused(bool value)
+{
+    for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
+        if (scene->getSceneSource() == this->_actualScene)
+            scene->setPaused(value);
+}
+
+bool gameengine::SceneManager::getPaused()
+{
+    for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
+        if (scene->getSceneSource() == this->_actualScene)
+            return scene->getPaused();
 }

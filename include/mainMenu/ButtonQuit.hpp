@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** ButtonQuit.hpp
+** ButtonQuitx05.hpp
 ** File description:
-** ButtonQuit.hpp
+** ButtonQuitx05.hpp
 */
 
 #pragma once

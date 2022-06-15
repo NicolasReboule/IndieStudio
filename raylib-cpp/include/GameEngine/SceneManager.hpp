@@ -46,6 +46,10 @@ namespace gameengine {
 
         static std::shared_ptr<gameengine::SceneManager> &getInstance();
 
+        void setPaused(bool value);
+
+        bool getPaused();
+
     private:
         void deleteNodeInLst();
 
