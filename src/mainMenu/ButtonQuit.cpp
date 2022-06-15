@@ -7,15 +7,15 @@
 
 #include "mainMenu/ButtonQuit.hpp"
 
-Indie::ButtonQuit::ButtonQuit(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonQuit::ButtonQuit(const std::string &name, const std::string &filename) : Button(name, filename)
 {
 }
 
-void Indie::ButtonQuit::ready()
+void indie::ButtonQuit::ready()
 {
 }
 
-void Indie::ButtonQuit::pressed()
+void indie::ButtonQuit::pressed()
 {
     std::cout << "Quit game" << std::endl;
 }

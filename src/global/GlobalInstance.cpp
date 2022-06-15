@@ -7,11 +7,11 @@
 
 #include "global/GlobalInstance.hpp"
 
-std::shared_ptr<Indie::GlobalInstance> Indie::GlobalInstance::_instance;
+std::shared_ptr<indie::GlobalInstance> indie::GlobalInstance::_instance;
 
-std::shared_ptr<Indie::GlobalInstance> &Indie::GlobalInstance::getInstance()
+std::shared_ptr<indie::GlobalInstance> &indie::GlobalInstance::getInstance()
 {
     if (!_instance)
-        _instance = std::make_shared<Indie::GlobalInstance>();
+        _instance = std::make_shared<indie::GlobalInstance>();
     return _instance;
 }

@@ -7,15 +7,15 @@
 
 #include "mainMenu/ButtonPlay.hpp"
 
-Indie::ButtonPlay::ButtonPlay(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonPlay::ButtonPlay(const std::string &name, const std::string &filename) : Button(name, filename)
 {
 }
 
-void Indie::ButtonPlay::ready()
+void indie::ButtonPlay::ready()
 {
 }
 
-void Indie::ButtonPlay::pressed()
+void indie::ButtonPlay::pressed()
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
 

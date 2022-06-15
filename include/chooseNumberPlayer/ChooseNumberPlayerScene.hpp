@@ -10,7 +10,7 @@
 
 #include "GameEngine/GameEngine.hpp"
 
-namespace Indie {
+namespace indie {
 
     class ChooseNumberPlayerScene : public gameengine::Scene {
     public:

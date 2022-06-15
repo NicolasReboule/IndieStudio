@@ -11,7 +11,7 @@
 #include <GameEngine/GameEngine.hpp>
 
 
-namespace Indie {
+namespace indie {
 
     class StartScene : public gameengine::Scene {
     public:

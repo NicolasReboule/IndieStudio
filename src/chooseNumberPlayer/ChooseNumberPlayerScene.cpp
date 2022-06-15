@@ -14,33 +14,33 @@
 #include "mainMenu/ButtonPlay.hpp"
 #include "mainMenu/ButtonQuit.hpp"
 
-Indie::ChooseNumberPlayerScene::ChooseNumberPlayerScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
+indie::ChooseNumberPlayerScene::ChooseNumberPlayerScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
 }
 
-void Indie::ChooseNumberPlayerScene::sceneLauncher()
+void indie::ChooseNumberPlayerScene::sceneLauncher()
 {
-    auto button1p = std::make_shared<Indie::Button1p>("button1p", "./assets/gui/button_1p.png");
+    auto button1p = std::make_shared<indie::Button1p>("button1p", "./assets/gui/button_1p.png");
     this->addNode(button1p);
 
-    auto button2p = std::make_shared<Indie::Button2p>("button2p", "./assets/gui/button_2p.png");
+    auto button2p = std::make_shared<indie::Button2p>("button2p", "./assets/gui/button_2p.png");
     this->addNode(button2p);
 
-    auto button3p = std::make_shared<Indie::Button3p>("button3p", "./assets/gui/button_3p.png");
+    auto button3p = std::make_shared<indie::Button3p>("button3p", "./assets/gui/button_3p.png");
     this->addNode(button3p);
 
-    auto button4p = std::make_shared<Indie::Button4p>("button4p", "./assets/gui/button_4p.png");
+    auto button4p = std::make_shared<indie::Button4p>("button4p", "./assets/gui/button_4p.png");
     this->addNode(button4p);
 }
 
-void Indie::ChooseNumberPlayerScene::readyScene()
+void indie::ChooseNumberPlayerScene::readyScene()
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
 
-    auto &button1p = dynamic_cast<Indie::Button1p &>(*sceneManager->getNode("button1p"));
-    auto &button2p = dynamic_cast<Indie::Button2p &>(*sceneManager->getNode("button2p"));
-    auto &button3p = dynamic_cast<Indie::Button3p &>(*sceneManager->getNode("button3p"));
-    auto &button4p = dynamic_cast<Indie::Button4p &>(*sceneManager->getNode("button4p"));
+    auto &button1p = dynamic_cast<indie::Button1p &>(*sceneManager->getNode("button1p"));
+    auto &button2p = dynamic_cast<indie::Button2p &>(*sceneManager->getNode("button2p"));
+    auto &button3p = dynamic_cast<indie::Button3p &>(*sceneManager->getNode("button3p"));
+    auto &button4p = dynamic_cast<indie::Button4p &>(*sceneManager->getNode("button4p"));
 
 
     button1p.setPosition({030, 200});
@@ -54,14 +54,14 @@ void Indie::ChooseNumberPlayerScene::readyScene()
     button4p.setEnable(false);*/
 }
 
-void Indie::ChooseNumberPlayerScene::updateScene(float delta)
+void indie::ChooseNumberPlayerScene::updateScene(float delta)
 {
    /* auto sceneManager = gameengine::SceneManager::getInstance();
 
-    auto &button1p = dynamic_cast<Indie::Button1p &>(*sceneManager->getNode("button1p"));
-    auto &button2p = dynamic_cast<Indie::Button2p &>(*sceneManager->getNode("button2p"));
-    auto &button3p = dynamic_cast<Indie::Button3p &>(*sceneManager->getNode("button3p"));
-    auto &button4p = dynamic_cast<Indie::Button4p &>(*sceneManager->getNode("button4p"));
+    auto &button1p = dynamic_cast<indie::Button1p &>(*sceneManager->getNode("button1p"));
+    auto &button2p = dynamic_cast<indie::Button2p &>(*sceneManager->getNode("button2p"));
+    auto &button3p = dynamic_cast<indie::Button3p &>(*sceneManager->getNode("button3p"));
+    auto &button4p = dynamic_cast<indie::Button4p &>(*sceneManager->getNode("button4p"));
 
     this->_timer -= delta;
 

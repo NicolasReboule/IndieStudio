@@ -9,18 +9,18 @@
 #include "chooseNumberPlayer/Button4p.hpp"
 #include "global/GlobalInstance.hpp"
 
-Indie::Button4p::Button4p(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::Button4p::Button4p(const std::string &name, const std::string &filename) : Button(name, filename)
 {
 }
 
-void Indie::Button4p::ready()
+void indie::Button4p::ready()
 {
 }
 
-void Indie::Button4p::pressed()
+void indie::Button4p::pressed()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
-    auto &globalInstnace = Indie::GlobalInstance::getInstance();
+    auto &globalInstnace = indie::GlobalInstance::getInstance();
     globalInstnace->_numberPlayers = 4;
     sceneManager->changeScene("game");
 }

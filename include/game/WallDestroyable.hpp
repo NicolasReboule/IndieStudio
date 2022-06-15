@@ -10,7 +10,7 @@
 
 #include "GameEngine/GameEngine.hpp"
 
-namespace Indie {
+namespace indie {
 
     class WallDestroyable : public gameengine::StaticBody {
     public:

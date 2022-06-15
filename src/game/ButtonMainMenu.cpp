@@ -7,15 +7,15 @@
 
 #include "game/ButtonMainMenu.hpp"
 
-Indie::ButtonMainMenu::ButtonMainMenu(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonMainMenu::ButtonMainMenu(const std::string &name, const std::string &filename) : Button(name, filename)
 {
 }
 
-void Indie::ButtonMainMenu::ready()
+void indie::ButtonMainMenu::ready()
 {
 }
 
-void Indie::ButtonMainMenu::pressed()
+void indie::ButtonMainMenu::pressed()
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
 

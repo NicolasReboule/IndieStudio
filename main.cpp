@@ -12,20 +12,20 @@ int main(int ac, char **av)
     auto window = raylib::window::RlWindow::getInstance();
     auto audioManager = gameengine::AudioManager::getInstance();
     auto sceneManager = gameengine::SceneManager::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 120);
+    window->createWindow("Bomberman", 1280, 720, 0);
 
     raylib::RlCamera camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
 
-    auto startScene = std::make_shared<Indie::StartScene>();
+    auto startScene = std::make_shared<indie::StartScene>();
     sceneManager->addScene(startScene);
 
-    auto mainMenuScene = std::make_shared<Indie::MainMenuScene>();
+    auto mainMenuScene = std::make_shared<indie::MainMenuScene>();
     sceneManager->addScene(mainMenuScene);
 
-    auto chooseNumberPlayerScene = std::make_shared<Indie::ChooseNumberPlayerScene>();
+    auto chooseNumberPlayerScene = std::make_shared<indie::ChooseNumberPlayerScene>();
     sceneManager->addScene(chooseNumberPlayerScene);
 
-    auto gameMenuScene = std::make_shared<Indie::GameScene>();
+    auto gameMenuScene = std::make_shared<indie::GameScene>();
     sceneManager->addScene(gameMenuScene);
 
     sceneManager->changeScene("chooseNumberPlayer");

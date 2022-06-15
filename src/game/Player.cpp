@@ -8,21 +8,21 @@
 #include "game/Player.hpp"
 #include "game/Bomb.hpp"
 
-Indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
 }
 
-Indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
 }
 
-void Indie::Player::ready()
+void indie::Player::ready()
 {
 }
 
-void Indie::Player::update(float delta)
+void indie::Player::update(float delta)
 {
     const float speed = 5.0f * delta;
     Vector3f direction = {0, 0, 0};
@@ -56,7 +56,7 @@ void Indie::Player::update(float delta)
     }
     if (direction.x == 0 && direction.z == 0) {
         //this->_numpadId = this->_numpadId;
-        this->_anim.update(1);
+        //this->_anim.update(1);
     } else {
         this->_anim.update(0);
         Vector3f newPosition = {this->_position.x + speed * direction.x, this->_position.y + speed * direction.y,
@@ -67,13 +67,13 @@ void Indie::Player::update(float delta)
     this->spawnBomb();
 }
 
-void Indie::Player::spawnBomb()
+void indie::Player::spawnBomb()
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
 
     if (raylib::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
         auto random = raylib::Random();
-        auto bomb = std::make_shared<Indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)), "assets/bomb.obj");
+        auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)), "assets/bomb.obj");
         (*bomb)->setRotationAxis({1, 0, 0});
         (*bomb)->setRotationAngle(-90);
 
@@ -82,13 +82,14 @@ void Indie::Player::spawnBomb()
         float convertx = x;
         float convertz = z;
         if (this->_position.x > 0)
-            convertx += 0.5;
+            convertx += 0;
         else
-            convertx -= 0.5;
+            convertx -= 1;
+
         if (this->_position.z > 0)
-            convertz += 0.5;
+            convertz += 0;
         else
-            convertz -= 0.5;
+            convertz -= 1;
 
         BoundingBox box = {{-0.5, 0, -0.5},{0.4,  1, 0.4}};
         bomb->setBoundingBox(box);
@@ -99,5 +100,3 @@ void Indie::Player::spawnBomb()
         sceneManager->addNode(bomb);
     }
 }
-
-

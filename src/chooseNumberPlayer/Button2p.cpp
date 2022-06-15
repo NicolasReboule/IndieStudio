@@ -8,18 +8,18 @@
 #include "chooseNumberPlayer/Button2p.hpp"
 #include "global/GlobalInstance.hpp"
 
-Indie::Button2p::Button2p(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::Button2p::Button2p(const std::string &name, const std::string &filename) : Button(name, filename)
 {
 }
 
-void Indie::Button2p::ready()
+void indie::Button2p::ready()
 {
 }
 
-void Indie::Button2p::pressed()
+void indie::Button2p::pressed()
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
-    auto &globalInstnace = Indie::GlobalInstance::getInstance();
+    auto &globalInstnace = indie::GlobalInstance::getInstance();
     globalInstnace->_numberPlayers = 2;
     sceneManager->changeScene("game");
 }

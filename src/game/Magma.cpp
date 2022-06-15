@@ -9,24 +9,24 @@
 #include "game/Player.hpp"
 #include "global/GlobalInstance.hpp"
 
-Indie::Magma::Magma(const std::string &name, const std::string &objPath) : StaticBody(name, objPath, "")
+indie::Magma::Magma(const std::string &name, const std::string &objPath) : StaticBody(name, objPath, "")
 {
     this->_timer = 1;
     this->_collisionEnable = false;
 }
 
-Indie::Magma::Magma(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
+indie::Magma::Magma(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
 {
     this->_timer = 1;
     this->_collisionEnable = false;
 }
 
-void Indie::Magma::ready()
+void indie::Magma::ready()
 {
 
 }
 
-void Indie::Magma::update(float delta)
+void indie::Magma::update(float delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
@@ -36,14 +36,14 @@ void Indie::Magma::update(float delta)
         sceneManager->deleteNode(this->getName());
 }
 
-void Indie::Magma::handlePlayerCollision()
+void indie::Magma::handlePlayerCollision()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
-    auto &globalInstance = Indie::GlobalInstance::getInstance();
+    auto &globalInstance = indie::GlobalInstance::getInstance();
 
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
-            auto &wallDestroyable = dynamic_cast<Indie::Player &>(*node);
+            auto &wallDestroyable = dynamic_cast<indie::Player &>(*node);
             if (wallDestroyable.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), wallDestroyable.getBoundingBox())) {
                 sceneManager->deleteNode(node->getName());
                 globalInstance->_playersAlive -= 1;

@@ -7,14 +7,14 @@
 
 #include "start/Logo.hpp"
 
-Indie::Logo::Logo(const std::string &name, const std::string &filename) : TextureRect(name, filename)
+indie::Logo::Logo(const std::string &name, const std::string &filename) : TextureRect(name, filename)
 {
 }
 
-void Indie::Logo::ready()
+void indie::Logo::ready()
 {
 }
 
-void Indie::Logo::update(float delta)
+void indie::Logo::update(float delta)
 {
 }

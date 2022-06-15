@@ -8,23 +8,23 @@
 
 #include "global/Global.hpp"
 
-Indie::Global::Global(const std::string &name) : Base(name)
+indie::Global::Global(const std::string &name) : Base(name)
 {
 }
 
-void Indie::Global::ready()
+void indie::Global::ready()
 {
 }
 
-void Indie::Global::update(float delta)
+void indie::Global::update(float delta)
 {
 }
 
-void Indie::Global::draw()
+void indie::Global::draw()
 {
 }
 
-float Indie::Global::getRotationDegrees()
+float indie::Global::getRotationDegrees()
 {
     return 0;
 }

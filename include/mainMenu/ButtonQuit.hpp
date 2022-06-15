@@ -9,7 +9,7 @@
 
 #include "GameEngine/GameEngine.hpp"
 
-namespace Indie {
+namespace indie {
 
     class ButtonQuit : public gameengine::Button {
     public:

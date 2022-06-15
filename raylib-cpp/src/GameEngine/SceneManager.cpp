@@ -128,9 +128,11 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
     camera.update();
     raylib::DrawHelper::beginMode3D(camera);
 
-    raylib::Shape3DHelper::drawGrid(10, 1.0f);
+    //TODO: find a way to graw a grid with the map size
+    raylib::Shape3DHelper::drawGrid({9, 9}, 1.0f);
 
     this->draw();
+    raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red);
 
     raylib::DrawHelper::endMode3D();
 

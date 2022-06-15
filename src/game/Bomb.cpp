@@ -11,34 +11,33 @@
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
-Indie::Bomb::Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
-{
-    this->_timer = 1;
-
-}
-
-Indie::Bomb::Bomb(const std::string &name, const std::string &objPath) : StaticBody(name, objPath, "")
+indie::Bomb::Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
 {
     this->_timer = 1;
 }
 
-void Indie::Bomb::ready()
+indie::Bomb::Bomb(const std::string &name, const std::string &objPath) : StaticBody(name, objPath, "")
+{
+    this->_timer = 1;
+}
+
+void indie::Bomb::ready()
 {
     this->_collisionEnable = false;
 }
 
-void Indie::Bomb::update(float delta)
+void indie::Bomb::update(float delta)
 {
     this->_timer -= delta;
 
-    if (this->_collisionEnable == false)
+    if (!this->_collisionEnable)
         this->enableCollision();
 
     if (this->_timer <= 0)
         this->handleHallDestroyableCollision();
 }
 
-void Indie::Bomb::handleHallDestroyableCollision()
+void indie::Bomb::handleHallDestroyableCollision()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
@@ -59,7 +58,7 @@ void Indie::Bomb::handleHallDestroyableCollision()
 
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
-            auto &wallDestroyable = dynamic_cast<Indie::WallDestroyable &>(*node);
+            auto &wallDestroyable = dynamic_cast<indie::WallDestroyable &>(*node);
             if (wallDestroyable.getIsCollsionEnable() && (
                 raylib::Collision3dHelper::checkCollisionBoxes(temp1, wallDestroyable.getBoundingBox()) ||
                 raylib::Collision3dHelper::checkCollisionBoxes(temp2, wallDestroyable.getBoundingBox()) ||
@@ -79,7 +78,7 @@ void Indie::Bomb::handleHallDestroyableCollision()
     sceneManager->deleteNode(this->getName());
 }
 
-void Indie::Bomb::enableCollision()
+void indie::Bomb::enableCollision()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
@@ -87,7 +86,7 @@ void Indie::Bomb::enableCollision()
     bool temp = true;
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
-            auto &player = dynamic_cast<Indie::Player &>(*node);
+            auto &player = dynamic_cast<indie::Player &>(*node);
             if (player.getIsCollsionEnable() &&
                 raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
                 temp = false;
@@ -103,16 +102,16 @@ void Indie::Bomb::enableCollision()
 
 }
 
-void Indie::Bomb::spawnMagma()
+void indie::Bomb::spawnMagma()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
     auto random = raylib::Random();
-    auto magma0 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma1 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma2 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma3 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma4 = std::make_shared<Indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma0 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma1 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma2 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma3 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma4 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
 
     magma0->setPosition({this->_position.x, this->_position.y, this->_position.z});
     magma1->setPosition({this->_position.x + 1.0f, this->_position.y, this->_position.z});

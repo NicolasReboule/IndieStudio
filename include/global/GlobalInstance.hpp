@@ -10,13 +10,13 @@
 
 #include "GameEngine/GameEngine.hpp"
 
-namespace Indie {
+namespace indie {
 
     class GlobalInstance {
     public:
         GlobalInstance() = default;
         ~GlobalInstance() = default;
-        static std::shared_ptr<Indie::GlobalInstance> &getInstance();
+        static std::shared_ptr<indie::GlobalInstance> &getInstance();
 
         int _numberPlayers;
         int _playersAlive;
