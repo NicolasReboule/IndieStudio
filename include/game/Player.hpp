@@ -25,6 +25,7 @@ namespace indie {
         void spawnBomb();
 
     private:
+        float _timerAnim;
         int _numpadId;
 
         raylib::RlModelAnim _anim;

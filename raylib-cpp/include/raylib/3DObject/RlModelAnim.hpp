@@ -25,6 +25,8 @@ namespace raylib {
 
         unsigned int getCount() const;
 
+        void incrementFrameCount(int value);
+
         /*     ModelAnimation *loadModelAnimations(const std::string &fileName, unsigned int *animCount);                // Load _model _animations from file
              void updateModelAnimation(Model _model, ModelAnimation anim, int frame);                            // Update _model animation pose
              void unloadModelAnimation(ModelAnimation anim);                                                    // Unload animation data

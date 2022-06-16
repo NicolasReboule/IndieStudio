@@ -14,11 +14,13 @@
 indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
+    this->_timerAnim = 1.0;
 }
 
 indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
+    this->_timerAnim = 1.0;
 }
 
 void indie::Player::ready()
@@ -27,6 +29,7 @@ void indie::Player::ready()
 
 void indie::Player::update(float delta)
 {
+    this->_timerAnim -= delta;
     const float speed = 5.0f * delta;
     Vector3f direction = {0, 0, 0};
     float gamepadX = raylib::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_X);
@@ -58,10 +61,15 @@ void indie::Player::update(float delta)
         this->setRotationDegrees(90, {0, 1, 0});
     }
     if (direction.x == 0 && direction.z == 0) {
-        //this->_numpadId = this->_numpadId;
-        //this->_anim.update(1);
+        if (this->_timerAnim <= 0) {
+            this->_anim.update(1);
+        }
     } else {
-        this->_anim.update(0);
+        if (this->_timerAnim <= 0) {
+            this->_anim.update(0);
+        }
+        this->_anim.incrementFrameCount(1);
+
         Vector3f newPosition = {this->_position.x + speed * direction.x, this->_position.y + speed * direction.y,
                                 this->_position.z + speed * direction.z};
         this->moveAndCollide(newPosition);
@@ -84,6 +92,9 @@ void indie::Player::update(float delta)
     }
 
     this->spawnBomb();
+
+    if (this->_timerAnim <= 0)
+        this->_timerAnim = 0.09;
 }
 
 void indie::Player::spawnBomb()
