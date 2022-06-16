@@ -26,8 +26,10 @@ raylib::RlModelAnim::~RlModelAnim()
 void raylib::RlModelAnim::update(unsigned int anim)
 {
     if (anim < this->_count) {
-        UpdateModelAnimation(this->_model, this->_animations[anim],this->_frameCount);
         this->_frameCount++;
+        UpdateModelAnimation(this->_model, this->_animations[anim],this->_frameCount);
+        if (this->_frameCount >= this->_animations[anim].frameCount)
+            this->_frameCount = 0;
     }
 }
 
