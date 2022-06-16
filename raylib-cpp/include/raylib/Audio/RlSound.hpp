@@ -11,10 +11,10 @@
 #include <raylib.h>
 #include <string>
 
-namespace  raylib {
+namespace raylib::audio {
     class RlSound {
         public:
-
+            explicit RlSound(const Sound &sound);
             RlSound(const std::string &fileName);// Load sound from file
             RlSound(Wave wave);// Load sound from wave
             ~RlSound();// Unload sound
@@ -32,8 +32,8 @@ namespace  raylib {
             float getVolume() const;
             void setPitch(float pitch);
     private:
-        Sound sound;
-        float volume;
+        Sound _sound;
+        float _volume;
     };
 }
 

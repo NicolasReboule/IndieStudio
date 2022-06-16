@@ -31,7 +31,6 @@ add_library(${PROJECT_NAME}
         src/raylib/Audio/RlSound.cpp
         src/raylib/Audio/RlSound.cpp
         src/raylib/Audio/RlWave.cpp
-        src/raylib/Audio/WaveHelper.cpp
         src/raylib/Camera/CameraHelper.cpp
         src/raylib/Camera/RlCamera.cpp
         src/raylib/Camera/RlCameraBuilder.cpp

@@ -55,6 +55,9 @@ int main(int ac, char **av)
     raylib::RlModelAnim anim(model, "./assets/player.iqm");
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
 
+    raylib::audio::RlWave wave("./assets/sounds/sound.wav");
+    std::vector samples = wave.getSamples();
+
     std::cout << anim.getCount() << std::endl;
     int i = 0;
     while (window->isOpen()) {

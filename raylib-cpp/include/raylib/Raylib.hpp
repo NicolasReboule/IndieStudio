@@ -30,7 +30,6 @@
 #include "Audio/RlMusic.hpp"
 #include "Audio/RlSound.hpp"
 #include "Audio/RlWave.hpp"
-#include "Audio/WaveHelper.hpp"
 #include "Camera/CameraHelper.hpp"
 #include "Camera/RlCamera.hpp"
 #include "Camera/RlCameraBuilder.hpp"

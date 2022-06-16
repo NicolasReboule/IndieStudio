@@ -7,80 +7,84 @@
 
 #include "raylib/Audio/RlSound.hpp"
 
-raylib::RlSound::RlSound(Wave wave)
+raylib::audio::RlSound::RlSound(const Sound &sound) : _sound(sound)
 {
-    this->sound = LoadSoundFromWave(wave);
-    this->volume = 100;
 }
 
-raylib::RlSound::RlSound(const std::string &fileName)
+raylib::audio::RlSound::RlSound(Wave wave)
 {
-    this->sound = LoadSound(fileName.c_str());
-    this->volume = 100;
+    this->_sound = LoadSoundFromWave(wave);
+    this->_volume = 100;
 }
 
-raylib::RlSound::~RlSound()
+raylib::audio::RlSound::RlSound(const std::string &fileName)
 {
-    UnloadSound(this->sound);
+    this->_sound = LoadSound(fileName.c_str());
+    this->_volume = 100;
 }
 
-void raylib::RlSound::update(const void *data, int samplesCount)
+raylib::audio::RlSound::~RlSound()
 {
-    UpdateSound(this->sound, data, samplesCount);
+    UnloadSound(this->_sound);
 }
 
-void raylib::RlSound::play()
+void raylib::audio::RlSound::update(const void *data, int samplesCount)
 {
-    PlaySound(this->sound);
+    UpdateSound(this->_sound, data, samplesCount);
 }
 
-void raylib::RlSound::stop()
+void raylib::audio::RlSound::play()
 {
-    StopSound(this->sound);
+    PlaySound(this->_sound);
 }
 
-void raylib::RlSound::pause()
+void raylib::audio::RlSound::stop()
 {
-    PauseSound(this->sound);
+    StopSound(this->_sound);
 }
 
-void raylib::RlSound::resume()
+void raylib::audio::RlSound::pause()
 {
-    ResumeSound(this->sound);
+    PauseSound(this->_sound);
 }
 
-void raylib::RlSound::playMulti()
+void raylib::audio::RlSound::resume()
 {
-    PlaySoundMulti(this->sound);
+    ResumeSound(this->_sound);
 }
 
-void raylib::RlSound::stopMulti()
+void raylib::audio::RlSound::playMulti()
+{
+    PlaySoundMulti(this->_sound);
+}
+
+void raylib::audio::RlSound::stopMulti()
 {
     StopSoundMulti();
 }
 
-int raylib::RlSound::getPlayings()
+int raylib::audio::RlSound::getPlayings()
 {
     return GetSoundsPlaying();
 }
 
-bool raylib::RlSound::isPlaying()
+bool raylib::audio::RlSound::isPlaying()
 {
-    return IsSoundPlaying(this->sound);
+    return IsSoundPlaying(this->_sound);
 }
 
-void raylib::RlSound::setVolume(float volumeSound)
+void raylib::audio::RlSound::setVolume(float volumeSound)
 {
-    this->volume = volumeSound;
-    SetSoundVolume(this->sound, this->volume);
+    this->_volume = volumeSound;
+    SetSoundVolume(this->_sound, this->_volume);
 }
 
-float raylib::RlSound::getVolume() const
+float raylib::audio::RlSound::getVolume() const
 {
-    return this->volume;
+    return this->_volume;
 }
 
-void raylib::RlSound::setPitch(float pitch)
+void raylib::audio::RlSound::setPitch(float pitch)
 {
-    SetSoundPitch(this->sound, pitch);
+    SetSoundPitch(this->_sound, pitch);
 }
