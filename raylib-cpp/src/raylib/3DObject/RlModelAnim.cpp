@@ -51,7 +51,7 @@ unsigned int raylib::RlModelAnim::getCount() const
     return _count;
 }
 
-void raylib::RlModelAnim::incrementFrameCount(int value)
+void raylib::RlModelAnim::incrementFrameCount(const int &value)
 {
     this->_frameCount += value;
 }

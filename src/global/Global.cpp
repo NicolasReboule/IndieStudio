@@ -8,7 +8,7 @@
 
 #include "global/Global.hpp"
 
-indie::Global::Global(const std::string &name) : Base(name)
+indie::Global::Global(const std::string &name) : AbstractBase(name)
 {
 }
 

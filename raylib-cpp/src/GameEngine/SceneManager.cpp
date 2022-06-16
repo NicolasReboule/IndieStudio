@@ -79,11 +79,11 @@ void gameengine::SceneManager::changeScene(const std::string &scene)
    this->_waitingScene = scene;
 }
 
-std::shared_ptr<gameengine::Base> gameengine::SceneManager::getNode(const std::string& name)
+std::shared_ptr<gameengine::AbstractBase> gameengine::SceneManager::getNode(const std::string& name)
 {
     for (const auto &item: this->_scenes)
         if (item->getSceneSource() == this->_actualScene) {
-            std::shared_ptr<gameengine::Base> temp;
+            std::shared_ptr<gameengine::AbstractBase> temp;
             if ((temp = item->getNode(name)) != nullptr)
                 return temp;
         }
@@ -91,7 +91,7 @@ std::shared_ptr<gameengine::Base> gameengine::SceneManager::getNode(const std::s
     return nullptr;
 }
 
-std::vector<std::shared_ptr<gameengine::Base>> gameengine::SceneManager::getAllNodes()
+std::vector<std::shared_ptr<gameengine::AbstractBase>> gameengine::SceneManager::getAllNodes()
 {
     for (const auto &item: this->_scenes)
         if (item->getSceneSource() == this->_actualScene)
@@ -129,11 +129,8 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
     camera.update();
     raylib::helper::draw::DrawHelper::beginMode3D(camera);
 
-    //TODO: find a way to graw a grid with the map size
-    raylib::Shape3DHelper::drawGrid({9, 9}, 1.0f);
-
     this->draw();
-    raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red);
+    raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red); //TODO: remove this
 
     raylib::helper::draw::DrawHelper::endMode3D();
 
@@ -169,7 +166,7 @@ void gameengine::SceneManager::makeLoop(raylib::RlCamera &camera)
     this->drawAll(camera);
 }
 
-void gameengine::SceneManager::addNode(const std::shared_ptr<gameengine::Base> &node)
+void gameengine::SceneManager::addNode(const std::shared_ptr<gameengine::AbstractBase> &node)
 {
     for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
         if (scene->getSceneSource() == this->_actualScene) {

@@ -26,7 +26,7 @@ indie::GameScene::GameScene(const std::string &name, const std::string &sceneSou
 void indie::GameScene::addWall(const Vector3f &position)
 {
     static int id = 0;
-    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), raylib::RlMeshBuilder::MeshCube, "./assets/bricks.png");
+    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube, "./assets/bricks.png");
     wall->setPosition(position);
     this->addNode(wall);
 }
@@ -34,7 +34,7 @@ void indie::GameScene::addWall(const Vector3f &position)
 void indie::GameScene::addBreakableWall(const Vector3f &position)
 {
     static int id = 0;
-    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::RlMeshBuilder::MeshCube,"./assets/blackston.png");
+    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube,"./assets/blackston.png");
     breakable->setPosition(position);
     this->addNode(breakable);
 }
@@ -99,11 +99,14 @@ void indie::GameScene::sceneLauncher()
     auto buttonQuit = std::make_shared<indie::ButtonQuitx05>("buttonQuit", "./assets/gui/button_quit_x05.png");
     this->addNode(buttonQuit);
 
+    Vector2i size = {(int) this->_mapSize.x, (int) this->_mapSize.y};
+    Vector3f position = {size.x % 2 == 0 ? -0.5f : 0, 0, size.y % 2 == 0 ? -0.5f : 0};
+    auto grid = std::make_shared<gameengine::component::GridComponent>(size, position, 1.0f, RlColor::Black, std::string("grid"));
+    this->addNode(grid);
 }
 
 void indie::GameScene::readyScene()
 {
-
     auto sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
@@ -112,7 +115,7 @@ void indie::GameScene::readyScene()
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({-3, 0, -3});
+        player.setPosition({-5, 0, -6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 1;
     }
     if (globalInstance->_numberPlayers > 1) {
@@ -120,7 +123,7 @@ void indie::GameScene::readyScene()
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({3, 0, 3});
+        player.setPosition({5, 0, 6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 2;
     }
     if (globalInstance->_numberPlayers > 2) {
@@ -128,7 +131,7 @@ void indie::GameScene::readyScene()
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({-3, 0, 3});
+        player.setPosition({-5, 0, 6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 3;
     }
     if (globalInstance->_numberPlayers > 3) {
@@ -136,7 +139,7 @@ void indie::GameScene::readyScene()
         BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
         player.setScale({0.8, 0.8, 0.8});
-        player.setPosition({3, 0, -3});
+        player.setPosition({5, 0, -6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 4;
     }
 

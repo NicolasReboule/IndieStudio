@@ -18,7 +18,7 @@ indie::Magma::Magma(const std::string &name, const std::string &objPath, const s
     this->_playerOwner = playerOwner;
 }
 
-indie::Magma::Magma(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
+indie::Magma::Magma(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
 {
     this->_timer = 1;
     this->_collisionEnable = false;

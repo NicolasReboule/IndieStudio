@@ -78,7 +78,7 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Audio/Music.cpp
         src/GameEngine/Nodes/StaticBody.cpp
         src/GameEngine/Nodes/Node.cpp
-        src/GameEngine/Nodes/Base.cpp
+        src/GameEngine/Nodes/AbstractBase.cpp
         src/GameEngine/SceneManager.cpp
         src/GameEngine/Scene.cpp
         src/GameEngine/MainScene.cpp
@@ -89,5 +89,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/exception/GameEngineException.cpp
         src/GameEngine/exception/MapParserException.cpp
         src/raylib/3DObject/RlAnimation.cpp
-        )
+        src/GameEngine/Component/GridComponent.cpp)
 target_link_libraries(${PROJECT_NAME} raylib)

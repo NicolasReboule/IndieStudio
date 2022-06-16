@@ -26,7 +26,7 @@ namespace gameengine {
 
         Vector3f getPosition() override;
         float getRotationDegrees() override;
-        Vector3f getSCale() override;
+        Vector3f getScale() override;
 
         void setPosition(Vector3f pos) override;
         void setRotationDegrees(float degrees, Vector3f rotationAxis) override;

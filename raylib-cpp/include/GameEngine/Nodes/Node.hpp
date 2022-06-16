@@ -8,11 +8,11 @@
 #ifndef INDIESTUDIO_NODE_HPP
 #define INDIESTUDIO_NODE_HPP
 
-#include "Base.hpp"
+#include "AbstractBase.hpp"
 
 namespace gameengine {
 
-    class Node : public Base {
+    class Node : public AbstractBase {
     public:
         explicit Node(const std::string &name);
 
@@ -24,7 +24,7 @@ namespace gameengine {
 
         virtual void setPosition(Vector3f pos) = 0;
 
-        virtual Vector3f getSCale() = 0;
+        virtual Vector3f getScale() = 0;
 
         virtual void setScale(Vector3f newScale) = 0;
 

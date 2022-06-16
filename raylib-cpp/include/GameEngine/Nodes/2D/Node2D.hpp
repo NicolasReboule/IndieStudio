@@ -8,11 +8,11 @@
 #ifndef INDIESTUDIO_NODE2D_HPP
 #define INDIESTUDIO_NODE2D_HPP
 
-#include "GameEngine/Nodes/Base.hpp"
+#include "GameEngine/Nodes/AbstractBase.hpp"
 
 namespace gameengine {
 
-    class Node2D : public Base {
+    class Node2D : public AbstractBase {
     public:
         explicit Node2D(const std::string &name);
 

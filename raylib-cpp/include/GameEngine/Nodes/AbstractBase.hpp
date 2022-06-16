@@ -1,24 +1,24 @@
 /*
 ** EPITECH PROJECT, 2022
-** Base.hpp
+** AbstractBase.hpp
 ** File description:
-** Base.hpp
+** AbstractBase.hpp
 */
 
-#ifndef INDIESTUDIO_BASE_HPP
-#define INDIESTUDIO_BASE_HPP
+#ifndef INDIESTUDIO_ABSTRACTBASE_HPP
+#define INDIESTUDIO_ABSTRACTBASE_HPP
 
-#include "raylib/Raylib.hpp"
+#include <raylib/Raylib.hpp>
 
 namespace gameengine {
 
-    class Base {
+    class AbstractBase {
     public:
-        explicit Base(const std::string &name);
+        explicit AbstractBase(const std::string &name);
 
-        Base(const Base &) = default;
+        AbstractBase(const AbstractBase &) = default;
 
-        virtual ~Base() = default;
+        virtual ~AbstractBase() = default;
 
         virtual void ready() = 0;
 
@@ -44,4 +44,4 @@ namespace gameengine {
     };
 }
 
-#endif //INDIESTUDIO_BASE_HPP
+#endif //INDIESTUDIO_ABSTRACTBASE_HPP

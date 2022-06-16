@@ -14,13 +14,13 @@
 #include "game/Magma.hpp"
 #include "game/BonusRange.hpp"
 
-/*indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+/*indie::Player::Player(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
     this->_timerAnim = 0.5;
 }*/
 
-indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
+indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim(this->_model, "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
     this->_timerAnim = 0.5;
@@ -150,7 +150,7 @@ void indie::Player::handleInput()
         this->moveAndCollide(newPosition);
     }
 
-    if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN))
+    if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN))
         this->spawnBomb();
 
 

@@ -47,7 +47,7 @@ raylib::RlModel::RlModel(const builder::RlMeshBuilder::MeshType &type, const std
         this->_model = LoadModelFromMesh(mesh.getMesh());
     }
 
-    //raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+    //raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
     //this->_model = LoadModelFromMesh(mesh.getMesh());
 
     this->_startBoundingBox = GetModelBoundingBox(_model);

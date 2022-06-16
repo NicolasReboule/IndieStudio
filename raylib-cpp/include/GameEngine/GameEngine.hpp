@@ -15,6 +15,8 @@
 
 #include "SceneManager.hpp"
 
+#include "GameEngine/Component/GridComponent.hpp"
+
 #include "GameEngine/Nodes/Node.hpp"
 #include "GameEngine/Nodes/StaticBody.hpp"
 

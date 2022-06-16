@@ -24,7 +24,7 @@ void indie::WinningScene::sceneLauncher()
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &window = raylib::window::RlWindow::getInstance();
 
-    raylib::RlCamera camera = raylib::RlCameraBuilder().setCameraMode(CAMERA_FREE).setPosition({0, 0, 0}).setTarget({0, 0, 0}).setLookingPoint({0, 5, 0}).build();
+    raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setCameraMode(CAMERA_FREE).setPosition({0, 0, 0}).setTarget({0, 0, 0}).setLookingPoint({0, 5, 0}).build();
     window->setCamera(camera);
 
   /*  if (globalInstance->_playerWinner == "player0") {

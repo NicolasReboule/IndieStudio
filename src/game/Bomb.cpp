@@ -72,7 +72,7 @@ void indie::Bomb::spawnMagma()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
 
-    auto magma0 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto magma0 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
     magma0->setPosition({this->_position.x, this->_position.y, this->_position.z});
     sceneManager->addNode(magma0);
 
@@ -113,7 +113,7 @@ void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
                     if (wallDestroyable.getPosition() == pos) {
                         wallDestroyable.spawnBonus();
                         sceneManager->deleteNode(node->getName());
-                        auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+                        auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
                         magma->setPosition(pos);
                         sceneManager->addNode(magma);
                         return;
@@ -125,7 +125,7 @@ void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
             }
         }
         if (loop) {
-            auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+            auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
             magma->setPosition(pos);
             sceneManager->addNode(magma);
         } else

@@ -8,7 +8,7 @@
 
 #include "game/BonusRange.hpp"
 
-indie::BonusRange::BonusRange(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
+indie::BonusRange::BonusRange(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
 {
     this->_collisionEnable = false;
 }

@@ -16,7 +16,7 @@ gameengine::Scene::Scene(std::string name, std::string sceneSource)
     this->_sceneSource = std::move(sceneSource);
 }
 
-void gameengine::Scene::addNode(const std::shared_ptr<gameengine::Base> &node)
+void gameengine::Scene::addNode(const std::shared_ptr<gameengine::AbstractBase> &node)
 {
     this->_nodes.push_back(node);
 }
@@ -33,13 +33,13 @@ std::string gameengine::Scene::getSceneSource()
 
 void gameengine::Scene::ready()
 {
-    for (std::shared_ptr<gameengine::Base> &node : this->_nodes)
+    for (std::shared_ptr<gameengine::AbstractBase> &node : this->_nodes)
         node->ready();
 }
 
 void gameengine::Scene::update(float delta)
 {
-   for (std::shared_ptr<gameengine::Base> &node : this->_nodes)
+   for (std::shared_ptr<gameengine::AbstractBase> &node : this->_nodes)
        if (node->isHiding() == false) {
            try {
                auto &node3D = dynamic_cast<gameengine::Node &>(*node);
@@ -54,7 +54,7 @@ void gameengine::Scene::update(float delta)
 
 void gameengine::Scene::draw()
 {
-    for (std::shared_ptr<gameengine::Base> &node : this->_nodes) {
+    for (std::shared_ptr<gameengine::AbstractBase> &node : this->_nodes) {
 
         try {
             auto &item = dynamic_cast<gameengine::Node &>(*node);
@@ -69,7 +69,7 @@ void gameengine::Scene::draw()
 
 void gameengine::Scene::draw2D()
 {
-    for (std::shared_ptr<gameengine::Base> &node : this->_nodes) {
+    for (std::shared_ptr<gameengine::AbstractBase> &node : this->_nodes) {
 
         try {
             auto &item = dynamic_cast<gameengine::Node2D &>(*node);
@@ -82,7 +82,7 @@ void gameengine::Scene::draw2D()
     }
 }
 
-std::shared_ptr<gameengine::Base> gameengine::Scene::getNode(const std::string &name)
+std::shared_ptr<gameengine::AbstractBase> gameengine::Scene::getNode(const std::string &name)
 {
     for (const auto &item: this->_nodes)
         if (item->getName() == name)
@@ -90,7 +90,7 @@ std::shared_ptr<gameengine::Base> gameengine::Scene::getNode(const std::string &
     return nullptr;
 }
 
-std::vector<std::shared_ptr<gameengine::Base>> gameengine::Scene::getAllNode()
+std::vector<std::shared_ptr<gameengine::AbstractBase>> gameengine::Scene::getAllNode()
 {
     return this->_nodes;
 }

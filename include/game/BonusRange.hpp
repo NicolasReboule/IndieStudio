@@ -15,7 +15,7 @@ namespace indie {
     class BonusRange : public gameengine::StaticBody {
     public:
         //Magma(const std::string &name, const std::string &objPath, const std::string &playerOwner);
-        BonusRange(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        BonusRange(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~BonusRange() override = default;
 
         void ready() override;

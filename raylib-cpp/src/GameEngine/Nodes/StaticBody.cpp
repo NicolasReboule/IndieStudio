@@ -44,7 +44,7 @@ float gameengine::StaticBody::getRotationDegrees()
     return this->_rotationDegrees;
 }
 
-Vector3f gameengine::StaticBody::getSCale()
+Vector3f gameengine::StaticBody::getScale()
 {
     return this->_scale;
 }

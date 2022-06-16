@@ -21,7 +21,7 @@ namespace indie {
 
 
         Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId);
-        //Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId);
+        //Player(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId);
         ~Player() override = default;
 
         void update(float delta) final;

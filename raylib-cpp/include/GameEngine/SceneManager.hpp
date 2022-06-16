@@ -22,23 +22,21 @@ namespace gameengine {
 
         void changeScene(const std::string &scene);
 
-
-
         void addScene(const std::shared_ptr<gameengine::Scene> &scene);
 
         void deleteScene(const std::string &scene);
 
         void makeLoop(raylib::RlCamera &camera);
 
-        std::shared_ptr<gameengine::Base> getNode(const std::string& name);
+        std::shared_ptr<gameengine::AbstractBase> getNode(const std::string& name);
 
-        void addNode(const std::shared_ptr<gameengine::Base> &node);
+        void addNode(const std::shared_ptr<gameengine::AbstractBase> &node);
 
         void deleteNode(const std::string &name);
 
         void deleteNodeInclude(const std::string &Includename);
 
-        std::vector<std::shared_ptr<gameengine::Base>> getAllNodes();
+        std::vector<std::shared_ptr<gameengine::AbstractBase>> getAllNodes();
 
         void update();
 

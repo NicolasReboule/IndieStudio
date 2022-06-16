@@ -9,7 +9,7 @@
 #ifndef INDIESTUDIO_SCENE_HPP
 #define INDIESTUDIO_SCENE_HPP
 
-#include "GameEngine/Nodes/Base.hpp"
+#include "GameEngine/Nodes/AbstractBase.hpp"
 #include <vector>
 
 namespace gameengine {
@@ -21,15 +21,15 @@ namespace gameengine {
 
         virtual void sceneLauncher() = 0;
 
-        void addNode(const std::shared_ptr<gameengine::Base> &node);
+        void addNode(const std::shared_ptr<gameengine::AbstractBase> &node);
 
         void deleteNode(const std::string& name);
 
         void deleteNodeIncludes(const std::string& includeName);
 
-        std::shared_ptr<gameengine::Base> getNode(const std::string& name);
+        std::shared_ptr<gameengine::AbstractBase> getNode(const std::string& name);
 
-        std::vector<std::shared_ptr<gameengine::Base>> getAllNode();
+        std::vector<std::shared_ptr<gameengine::AbstractBase>> getAllNode();
 
         std::string getName();
 
@@ -59,7 +59,7 @@ namespace gameengine {
         bool _isLaunched = false;
         std::string _sceneSource;
         std::string _name;
-        std::vector<std::shared_ptr<gameengine::Base>> _nodes;
+        std::vector<std::shared_ptr<gameengine::AbstractBase>> _nodes;
     };
 }
 
