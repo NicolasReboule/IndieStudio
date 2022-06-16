@@ -10,6 +10,8 @@
 #include "game/ButtonMainMenu.hpp"
 #include "game/ButtonQuitx05.hpp"
 #include "game/ButtonResume.hpp"
+#include "global/GlobalInstance.hpp"
+#include "game/Magma.hpp"
 
 indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
@@ -92,6 +94,22 @@ void indie::Player::update(float delta)
     }
 
     this->spawnBomb();
+
+    auto &globalInstance = indie::GlobalInstance::getInstance();
+
+    for (const auto &node: sceneManager->getAllNodes()) {
+        try {
+            auto &magma = dynamic_cast<indie::Magma &>(*node);
+            if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
+                std::cout << "pou" << std::endl;
+                sceneManager->deleteNode(this->getName());
+                globalInstance->_playersAlive -= 1;
+            }
+        }
+        catch (const std::bad_cast &e) {
+            continue;
+        }
+    }
 
     if (this->_timerAnim <= 0)
         this->_timerAnim = 0.09;

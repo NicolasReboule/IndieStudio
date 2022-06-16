@@ -38,20 +38,5 @@ void indie::Magma::update(float delta)
 
 void indie::Magma::handlePlayerCollision()
 {
-    auto &sceneManager = gameengine::SceneManager::getInstance();
-    auto &globalInstance = indie::GlobalInstance::getInstance();
 
-    for (const auto &node: sceneManager->getAllNodes()) {
-        try {
-            auto &wallDestroyable = dynamic_cast<indie::Player &>(*node);
-            if (wallDestroyable.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), wallDestroyable.getBoundingBox())) {
-                sceneManager->deleteNode(node->getName());
-                globalInstance->_playersAlive -= 1;
-            }
-
-        }
-        catch (const std::bad_cast &e) {
-            continue;
-        }
-    }
 }
