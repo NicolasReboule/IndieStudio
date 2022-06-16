@@ -80,9 +80,11 @@ namespace gameengine::map {
         void parse() {
             this->_file.open(this->_fileName);
             if (!this->_file.is_open())
-                throw gameengine::ex::MapParserException("File not found");
-            if (this->_file.rdbuf()->in_avail() == 0)
-                throw gameengine::ex::MapParserException("File is empty");
+                throw gameengine::ex::MapParserException("File " + this->_fileName + " not found");
+            std::size_t size = this->_file.rdbuf()->pubseekoff(0, std::ifstream::end, std::ifstream::in);
+            this->_file.rdbuf()->pubseekpos (0, std::ifstream::in);
+            if (size == 0)
+                throw gameengine::ex::MapParserException("File " + this->_fileName + " is empty");
             this->parseMap();
         }
 
