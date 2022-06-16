@@ -36,7 +36,7 @@ namespace raylib {
         /**
          * @brief Empty constructor who doesn't initialize the camera
          */
-        RlCamera() : _camera(), _position(), _target(), _lookingPoint(), _mode(), _fovy(0), _projection(), _cameraMode() {}
+        RlCamera() : _camera(), _mode(), _position(), _target(), _lookingPoint(), _fovy(0), _projection(), _cameraMode() {}
 
         /**
          * @brief Construct a new RlCamera object

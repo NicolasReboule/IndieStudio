@@ -13,7 +13,7 @@
 #include <vector>
 
 namespace gameengine {
-    class AudioManager : public raylib::AudioDeviceHelper {
+    class AudioManager : public raylib::helper::AudioDeviceHelper {
     public:
         AudioManager() = default;
 

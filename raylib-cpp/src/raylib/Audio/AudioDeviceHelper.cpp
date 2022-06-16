@@ -7,22 +7,22 @@
 
 #include "raylib/Audio/AudioDeviceHelper.hpp"
 
-void raylib::AudioDeviceHelper::initAudioDevice()
+void raylib::helper::AudioDeviceHelper::initAudioDevice()
 {
     InitAudioDevice();
 }
 
-void raylib::AudioDeviceHelper::closeAudioDevice()
+void raylib::helper::AudioDeviceHelper::closeAudioDevice()
 {
     CloseAudioDevice();
 }
 
-bool raylib::AudioDeviceHelper::isAudioDeviceReady()
+bool raylib::helper::AudioDeviceHelper::isAudioDeviceReady()
 {
     return IsAudioDeviceReady();
 }
 
-void raylib::AudioDeviceHelper::setMasterVolume(float volume)
+void raylib::helper::AudioDeviceHelper::setMasterVolume(float volume)
 {
     SetMasterVolume(volume);
 }

@@ -43,7 +43,7 @@ int main(int ac, char **av)
 int main(int ac, char **av)
 {
     auto window = raylib::window::RlWindow::getInstance();
-    window->createWindow("Bomberman", 1280, 720, 60);
+    window->createWindow("Bomberman", 1280, 720, 0);
     raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
     raylib::RlAnimation animation;
     try {
@@ -59,7 +59,7 @@ int main(int ac, char **av)
     std::vector samples = wave.getSamples();
 
     std::cout << anim.getCount() << std::endl;
-    int i = 0;
+    uint i = 0;
     while (window->isOpen()) {
         raylib::helper::draw::DrawHelper::beginDrawing();
         raylib::helper::draw::DrawHelper::clearBackground(RlColor::White);

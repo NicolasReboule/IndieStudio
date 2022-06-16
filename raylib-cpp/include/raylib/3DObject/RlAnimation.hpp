@@ -38,7 +38,7 @@ namespace raylib {
         /**
          * @brief Default constructor
          */
-        RlAnimation() : _frame(0), _isLoaded(false) {}
+        RlAnimation() : _isLoaded(false), _frame(0) {}
 
         /**
          * @brief Construct a new RlAnimation object
