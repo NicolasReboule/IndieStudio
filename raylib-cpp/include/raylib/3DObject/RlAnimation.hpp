@@ -24,7 +24,7 @@ namespace raylib {
          * @param animationDir the animation dir path
          * @param extension the extension of animation files
          */
-        RlAnimation(const std::string &animationDir,  const std::string &extension);
+        explicit RlAnimation(const std::string &animationDir,  const std::string &extension);
 
         /**
          * @brief Destroy the RlAnimation object
@@ -43,13 +43,21 @@ namespace raylib {
         const std::vector<Model> &getAnimationModels() const;
 
         /**
+         * @brief Get the number of frames of the animation
+         * It's just a call to getAnimationModels().size()
+         * @return the number of frames
+         */
+        std::size_t getAnimationsSize() const;
+
+        /**
          * @brief Get the frame
          * @return the frame
          */
         const unsigned int &getFrame() const;
+
     private:
-        std::vector<Model> _animationModels;
-        unsigned int _frame;
+        std::vector<Model> _animationModels; /** All the models for the animation */
+        unsigned int _frame; /** The frame index of the current model */
     };
 }
 #endif //INDIESTUDIO_RLANIMATION_HPP
