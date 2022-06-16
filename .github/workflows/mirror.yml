@@ -2,7 +2,7 @@ name: To Epitech Github
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, dev, gameEngine ]
   
   workflow_dispatch:
 
