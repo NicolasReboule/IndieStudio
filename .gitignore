@@ -17,11 +17,11 @@ out/
 Cmake*
 CMake*
 !CMakeLists.txt
-cmake-build-debug/
-cmake-build-debug-coverage/
+cmake-build-*/
 build/
 doc/
 bomberman
+*.exe
 *.sln
 *.vcxproj
 *.vcxproj.filters
