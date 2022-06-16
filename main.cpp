@@ -13,9 +13,7 @@ int main(int ac, char **av)
     auto audioManager = gameengine::AudioManager::getInstance();
     auto sceneManager = gameengine::SceneManager::getInstance();
     window->createWindow("Bomberman", 1280, 720, 60);
-
-    //raylib::RlCamera camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
-    //window->_camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
+    window->setCamera(raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build());
 
     auto startScene = std::make_shared<indie::StartScene>();
     sceneManager->addScene(startScene);

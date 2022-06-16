@@ -220,4 +220,5 @@ bool gameengine::SceneManager::getPaused()
     for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
         if (scene->getSceneSource() == this->_actualScene)
             return scene->getPaused();
+    return false;
 }

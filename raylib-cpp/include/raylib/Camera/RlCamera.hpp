@@ -18,6 +18,11 @@ namespace raylib {
     class RlCamera {
     public:
         /**
+         * @brief Empty constructor who doesn't initialize the camera
+         */
+        RlCamera() : _camera(), _position(), _target(), _lookingPoint(), _mode(), _fovy(0), _projection(), _cameraMode() {}
+
+        /**
          * @brief Construct a new RlCamera object
          * @param position the position of the camera
          * @param target the target of the camera (Camera looking at point)
@@ -25,10 +30,12 @@ namespace raylib {
          * @param fovy the fovy of the camera (Camera field-of-view Y)
          * @param projection the projection of the camera @see CameraProjection
          * @param mode the mode of the camera @see CameraMode
+         * @attention Don't use this use the RlCameraBuilder instead (please)
+         * @see RlCameraBuilder
          */
-        explicit RlCamera(const Vector3f &position = {0, 10, 10},
-                          const Vector3f &target = {0, 0, 0},
-                          const Vector3f &lookingPoint = {0, 1, 0},
+        explicit RlCamera(const Vector3f &position,
+                          const Vector3f &target,
+                          const Vector3f &lookingPoint,
                           const float &fovy = 45,
                           const CameraProjection &projection = CAMERA_PERSPECTIVE,
                           const CameraMode &cameraMode = CAMERA_FREE);

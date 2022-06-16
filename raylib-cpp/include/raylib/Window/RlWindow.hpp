@@ -12,7 +12,6 @@
 #include "raylib/Core/CoreHelper.hpp"
 #include "raylib/Image/RlImage.hpp"
 #include "raylib/Camera/RlCamera.hpp"
-#include "raylib/Camera/RlCameraBuilder.hpp"
 #include <string>
 #include <iostream>
 #include <memory>
@@ -225,7 +224,23 @@ namespace raylib::window {
          */
         const bool &isIsCreated() const;
 
+        /**
+         * @brief Get the window mutable RlCamera
+         * @return the window mutable RlCamera
+         */
         raylib::RlCamera &getCamera();
+
+        /**
+         * @brief Get the window immutable RlCamera
+         * @return the window immutable RlCamera
+         */
+        const raylib::RlCamera &getCamera() const;
+
+        /**
+         * @brief Set the window RlCamera
+         * @param camera the window RlCamera
+         */
+        void setCamera(const RlCamera &camera);
 
     private:
         static std::shared_ptr<RlWindow> _instance; /**< The singleton instance of the RlWindow */
@@ -237,7 +252,7 @@ namespace raylib::window {
         int _minHeight; /**< The minimum height of the window */
         bool _isCreated = false; /**< If the window is created */
 
-        raylib::RlCamera _camera;
+        raylib::RlCamera _camera; /**< The camera */
     };
 }
 
