@@ -14,7 +14,7 @@ namespace indie {
 
     class Bomb : public gameengine::StaticBody {
     public:
-        Bomb(const std::string &name, const std::string &objPath);
+        Bomb(const std::string &name, const std::string &objPath, int range, const std::string &playerOwner);
         Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~Bomb() override = default;
 
@@ -22,13 +22,15 @@ namespace indie {
 
         void update(float delta) override;
 
-        void handleHallDestroyableCollision();
-
         void spawnMagma();
+
+        void addMagma(Vector3f position, Vector3f addI);
 
         void enableCollision();
     private:
+        std::string _playerOwner;
         float _timer;
+        int _range;
     };
 
 }

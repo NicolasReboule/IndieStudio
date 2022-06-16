@@ -25,6 +25,8 @@ namespace gameengine {
 
         void deleteNode(const std::string& name);
 
+        void deleteNodeIncludes(const std::string& includeName);
+
         std::shared_ptr<gameengine::Base> getNode(const std::string& name);
 
         std::vector<std::shared_ptr<gameengine::Base>> getAllNode();

@@ -108,6 +108,18 @@ void gameengine::Scene::deleteNode(const std::string &name)
     std::cout << "Erased: " << erased  << std::endl;
 }
 
+void gameengine::Scene::deleteNodeIncludes(const std::string &includeName)
+{
+    auto erased = std::erase_if(this->_nodes, [&includeName](const auto &node) {
+        if (node->getName().find(includeName) != std::string::npos) {
+            std::cout << node->getName() << " : was deleted." << std::endl;
+            return true;
+        };
+        return false;
+    });
+    std::cout << "Erased: " << erased  << std::endl;
+}
+
 bool &gameengine::Scene::isLaunched()
 {
     return this->_isLaunched;

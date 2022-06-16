@@ -153,34 +153,46 @@ void indie::GameScene::updateScene(float delta)
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
-    if (globalInstance->_playersAlive <= 1) {
+    if (globalInstance->_playersAlive == 1) {
+
+        auto &player0 = dynamic_cast<indie::Player &>(*sceneManager->getNode("player0"));
+        if (player0.getState() == Player::ALIVE) {
+            this->displayWinner(player0.getName());
+            return;
+        }
 
         try {
-            auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player0"));
-            this->displayWinner(player.getName());
+            auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player1"));
+            if (player.getState() == Player::ALIVE) {
+                this->displayWinner(player.getName());
+                return;
+            }
         }
         catch (const std::bad_cast &e) {
-            try {
-                auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player1"));
+            ;
+        }
+        try {
+            auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player2"));
+            if (player.getState() == Player::ALIVE) {
                 this->displayWinner(player.getName());
-            }
-            catch (const std::bad_cast &e) {
-                try {
-                    auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player2"));
-                    this->displayWinner(player.getName());
-                }
-                catch (const std::bad_cast &e) {
-                    try {
-                        auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player0"));
-                        this->displayWinner(player.getName());
-                    }
-                    catch (const std::bad_cast &e) {
-                        this->displayWinner("CROSSKILL BAND DE CONS");
-                    }
-                }
+                return;
             }
         }
-    }
+        catch (const std::bad_cast &e) {
+            ;
+        }
+        try {
+            auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player3"));
+            if (player.getState() == Player::ALIVE) {
+                this->displayWinner(player.getName());
+                return;
+            }
+        }
+        catch (const std::bad_cast &e) {
+            ;
+        }
+    } else if (globalInstance->_playersAlive <= 0)
+        this->displayWinner("SHHEEESSH");
 }
 
 void indie::GameScene::displayWinner(const std::string &name)

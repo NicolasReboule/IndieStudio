@@ -36,6 +36,8 @@ namespace gameengine {
 
         void deleteNode(const std::string &name);
 
+        void deleteNodeInclude(const std::string &Includename);
+
         std::vector<std::shared_ptr<gameengine::Base>> getAllNodes();
 
         void update();
@@ -58,6 +60,7 @@ namespace gameengine {
         static std::shared_ptr<SceneManager> _instance;
 
         std::vector<std::string> _nodesToDelete;
+        std::vector<std::string> _nodesToDeleteIncludes;
         std::string _waitingScene;
         std::string _actualScene;
         std::vector<std::shared_ptr<gameengine::Scene>> _scenes;

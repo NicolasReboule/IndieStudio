@@ -8,6 +8,7 @@
 #include "game/Bomb.hpp"
 #include "game/Magma.hpp"
 
+#include "game/Wall.hpp"
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
@@ -16,9 +17,11 @@ indie::Bomb::Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType
     this->_timer = 1;
 }
 
-indie::Bomb::Bomb(const std::string &name, const std::string &objPath) : StaticBody(name, objPath, "")
+indie::Bomb::Bomb(const std::string &name, const std::string &objPath, int range, const std::string &playerOwner) : StaticBody(name, objPath, "")
 {
+    this->_range = range;
     this->_timer = 1;
+    this->_playerOwner = playerOwner;
 }
 
 void indie::Bomb::ready()
@@ -28,54 +31,17 @@ void indie::Bomb::ready()
 
 void indie::Bomb::update(float delta)
 {
+    auto &sceneManager = gameengine::SceneManager::getInstance();
+
     this->_timer -= delta;
 
     if (!this->_collisionEnable)
         this->enableCollision();
 
-    if (this->_timer <= 0)
-        this->handleHallDestroyableCollision();
-}
-
-void indie::Bomb::handleHallDestroyableCollision()
-{
-    auto &sceneManager = gameengine::SceneManager::getInstance();
-
-    BoundingBox temp0 = this->getBoundingBox();
-    BoundingBox temp1 = temp0;
-    temp1.min.x += 1.0f;
-    temp1.max.x += 1.0f;
-    BoundingBox temp2 = temp0;
-    temp2.min.x -= 1.0f;
-    temp2.max.x -= 1.0f;
-    BoundingBox temp3 = temp0;
-    temp3.min.z += 1.0f;
-    temp3.max.z += 1.0f;
-    BoundingBox temp4 = temp0;
-    temp4.min.z -= 1.0f;
-    temp4.max.z -= 1.0f;
-
-
-    for (const auto &node: sceneManager->getAllNodes()) {
-        try {
-            auto &wallDestroyable = dynamic_cast<indie::WallDestroyable &>(*node);
-            if (wallDestroyable.getIsCollsionEnable() && (
-                raylib::Collision3dHelper::checkCollisionBoxes(temp1, wallDestroyable.getBoundingBox()) ||
-                raylib::Collision3dHelper::checkCollisionBoxes(temp2, wallDestroyable.getBoundingBox()) ||
-                raylib::Collision3dHelper::checkCollisionBoxes(temp3, wallDestroyable.getBoundingBox()) ||
-                raylib::Collision3dHelper::checkCollisionBoxes(temp4, wallDestroyable.getBoundingBox())
-                )) {
-                sceneManager->deleteNode(node->getName());
-            }
-        }
-        catch (const std::bad_cast &e) {
-            continue;
-        }
+    if (this->_timer <= 0) {
+        this->spawnMagma();
+        sceneManager->deleteNode(this->getName());
     }
-
-    this->spawnMagma();
-
-    sceneManager->deleteNode(this->getName());
 }
 
 void indie::Bomb::enableCollision()
@@ -105,25 +71,61 @@ void indie::Bomb::enableCollision()
 void indie::Bomb::spawnMagma()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
-
     auto random = raylib::Random();
+
     auto magma0 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma1 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma2 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma3 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    auto magma4 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-
     magma0->setPosition({this->_position.x, this->_position.y, this->_position.z});
-    magma1->setPosition({this->_position.x + 1.0f, this->_position.y, this->_position.z});
-    magma2->setPosition({this->_position.x - 1.0f, this->_position.y, this->_position.z});
-    magma3->setPosition({this->_position.x, this->_position.y, this->_position.z + 1.0f});
-    magma4->setPosition({this->_position.x, this->_position.y, this->_position.z - 1.0f});
-
     sceneManager->addNode(magma0);
-    sceneManager->addNode(magma1);
-    sceneManager->addNode(magma2);
-    sceneManager->addNode(magma3);
-    sceneManager->addNode(magma4);
+
+    Vector3f position = {this->_position.x + 1, this->_position.y, this->_position.z};
+    Vector3f addI = {1, 0, 0};
+    this->addMagma(position, addI);
+    position = {this->_position.x - 1, this->_position.y, this->_position.z};
+    addI = {-1, 0, 0};
+    this->addMagma(position, addI);
+    position = {this->_position.x, this->_position.y, this->_position.z + 1};
+    addI = {0, 0, 1};
+    this->addMagma(position, addI);
+    position = {this->_position.x, this->_position.y, this->_position.z - 1};
+    addI = {0, 0, -1};
+    this->addMagma(position, addI);
 }
 
+void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
+{
+    auto &sceneManager = gameengine::SceneManager::getInstance();
+    auto random = raylib::Random();
 
+    for (int i = 0; i < this->_range; i++) {
+        bool loop = true;
+        Vector3f pos = {position.x + addI.x * (float)i, position.y + addI.y * (float)i, position.z + addI.z * (float)i};
+        for (const auto &node: sceneManager->getAllNodes()) {
+            try {
+                auto &wall = dynamic_cast<indie::Wall &>(*node);
+                std::cout << wall->getPosition() << ":::" << this->_position << std::endl;
+                if (wall.getPosition() == pos) {
+                    loop = false;
+                    break;
+                }
+            }
+            catch (const std::bad_cast &e) {
+                try {
+                    auto &wallDestroyable = dynamic_cast<indie::WallDestroyable &>(*node);
+                    if (wallDestroyable.getPosition() == pos) {
+                        sceneManager->deleteNode(node->getName());
+                        break;
+                    }
+                }
+                catch (const std::bad_cast &e) {
+                    continue;
+                }
+            }
+        }
+        if (loop) {
+            auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+            magma->setPosition(pos);
+            sceneManager->addNode(magma);
+        } else
+            break;
+    }
+}

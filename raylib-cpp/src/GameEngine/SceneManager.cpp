@@ -182,18 +182,30 @@ void gameengine::SceneManager::addNode(const std::shared_ptr<gameengine::Base> &
 
 void gameengine::SceneManager::deleteNodeInLst()
 {
-    for (const auto &nodeName: this->_nodesToDelete) {
+    for (const auto &nodeName: this->_nodesToDelete)
         for (std::shared_ptr<gameengine::Scene> &scene: this->_scenes)
             if (scene->getSceneSource() == this->_actualScene)
                 scene->deleteNode(nodeName);
-    }
 
+
+    for (const auto &nodeNameInclude: this->_nodesToDeleteIncludes)
+        for (std::shared_ptr<gameengine::Scene> &scene: this->_scenes)
+            if (scene->getSceneSource() == this->_actualScene)
+                scene->deleteNodeIncludes(nodeNameInclude);
+
+
+    this->_nodesToDeleteIncludes.clear();
     this->_nodesToDelete.clear();
 }
 
 void gameengine::SceneManager::deleteNode(const std::string &name)
 {
     this->_nodesToDelete.push_back(name);
+}
+
+void gameengine::SceneManager::deleteNodeInclude(const std::string &IncludeName)
+{
+    this->_nodesToDeleteIncludes.push_back(IncludeName);
 }
 
 void gameengine::SceneManager::setPaused(bool value)
