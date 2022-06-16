@@ -85,6 +85,17 @@ std::vector<std::string> raylib::FileHelper::getDirectoryFiles(const std::string
     return files;
 }
 
+std::vector<std::string> raylib::FileHelper::getDirectoryFiles(const std::string &dirPath, const std::function<bool(const std::string &)> &filterFunction)
+{
+    if (filterFunction == nullptr)
+        return getDirectoryFiles(dirPath);
+    std::vector<std::string> files;
+    for (auto &p : std::filesystem::directory_iterator(dirPath))
+        if (filterFunction(p.path().string()))
+            files.push_back(p.path().string());
+    return files;
+}
+
 void raylib::FileHelper::changeDirectory(const std::string &dir)
 {
     std::filesystem::current_path(dir);
@@ -106,7 +117,7 @@ std::vector<std::string> raylib::FileHelper::getDroppedFiles()
     return droppedFiles;
 }
 
-long raylib::FileHelper::getFileModTime(const std::string &fileName)
+long long raylib::FileHelper::getFileModTime(const std::string &fileName)
 {
     return std::filesystem::last_write_time(fileName).time_since_epoch().count();
 }

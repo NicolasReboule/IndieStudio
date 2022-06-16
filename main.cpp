@@ -57,7 +57,7 @@ int main(int ac, char **av)
             i++;
         if (i > anim.getCount())
             i = 0;
-        if (raylib::input::KeyboardHelper::isKeyDown(KEY_SPACE))
+        if (raylib::input::KeyboardHelper::isKeyDown(KEY_SPACE) || (raylib::input::GamepadHelper::isGamepadAvailable(0) && raylib::input::GamepadHelper::isGamepadButtonDown(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)))
             anim.update(i);
         if (raylib::input::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();
