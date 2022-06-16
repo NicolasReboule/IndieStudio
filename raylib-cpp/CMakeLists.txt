@@ -84,5 +84,6 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/KinematicBody.cpp
-        include/GameEngine/exception/MapParserException.hpp include/GameEngine/exception/GameEngineException.hpp src/GameEngine/exception/GameEngineException.cpp src/GameEngine/exception/MapParserException.cpp)
+        src/GameEngine/exception/GameEngineException.cpp
+        src/GameEngine/exception/MapParserException.cpp)
 target_link_libraries(${PROJECT_NAME} raylib)
