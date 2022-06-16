@@ -31,20 +31,26 @@ void gameengine::KinematicBody::moveAndCollide(Vector3f position)
         this->getBoundingBox().max.z + position.z - this->_position.z,
     }};
 
-    for (const auto &node: sceneManager->getAllNodes()) {
-        try {
-            auto &staticBody = dynamic_cast<gameengine::StaticBody &>(*node);
-            if (staticBody.getName() != this->getName() && staticBody.getIsCollsionEnable() && raylib::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
-                std::cout << this->getName() << "  : collide !!!!!! with : " << staticBody.getName() << " ,collision enable : " << staticBody.getIsCollsionEnable() << std::endl;
-                //std::cout << position.x << "," << position.y << std::endl;
-                //std::cout << staticBody.getPosition().x << "," << staticBody.getPosition().y << std::endl;
-                //std::cout << "(" << staticBody.getBoundingBox().min.x << "," << staticBody.getBoundingBox().min.y << "," << staticBody.getBoundingBox().min.x << ")" << std::endl;
-                //std::cout << "(" << staticBody.getBoundingBox().max.x << "," << staticBody.getBoundingBox().max.y << "," << staticBody.getBoundingBox().max.x << ")" << std::endl;
-                return;
+    if (this->_collisionEnable) {
+        for (const auto &node: sceneManager->getAllNodes()) {
+            try {
+                auto &staticBody = dynamic_cast<gameengine::StaticBody &>(*node);
+                if (staticBody.getName() != this->getName() && staticBody.getIsCollsionEnable() &&
+                    raylib::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
+                   /* std::cout << this->getName() << "  : collide !!!!!! with : " << staticBody.getName()
+                              << " ,collision enable : " << staticBody.getIsCollsionEnable() << std::endl;*/
+
+
+                    //std::cout << position.x << "," << position.y << std::endl;
+                    //std::cout << staticBody.getPosition().x << "," << staticBody.getPosition().y << std::endl;
+                    //std::cout << "(" << staticBody.getBoundingBox().min.x << "," << staticBody.getBoundingBox().min.y << "," << staticBody.getBoundingBox().min.x << ")" << std::endl;
+                    //std::cout << "(" << staticBody.getBoundingBox().max.x << "," << staticBody.getBoundingBox().max.y << "," << staticBody.getBoundingBox().max.x << ")" << std::endl;
+                    return;
+                }
             }
-        }
-        catch (const std::bad_cast &e) {
-            continue;
+            catch (const std::bad_cast &e) {
+                continue;
+            }
         }
     }
 

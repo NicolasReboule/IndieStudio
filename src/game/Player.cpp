@@ -12,6 +12,7 @@
 #include "game/ButtonResume.hpp"
 #include "global/GlobalInstance.hpp"
 #include "game/Magma.hpp"
+#include "game/BonusRange.hpp"
 
 /*indie::Player::Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
@@ -78,14 +79,25 @@ void indie::Player::checkCollisions()
             try {
                 auto &magma = dynamic_cast<indie::Magma &>(*node);
                 if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
-                    std::cout << "pou" << std::endl;
                     this->playerDead();
                     globalInstance->_playersAlive -= 1;
                     return;
                 }
             }
             catch (const std::bad_cast &e) {
-                continue;
+               ;
+            }
+            try {
+                auto &bonusRange = dynamic_cast<indie::BonusRange &>(*node);
+                if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonusRange.getBoundingBox())) {
+                    std::cout << "bonusrange" << std::endl;
+                    this->_range += 1;
+                    sceneManager->deleteNode(node->getName());
+                    return;
+                }
+            }
+            catch (const std::bad_cast &e) {
+                ;
             }
         }
 }
@@ -125,7 +137,7 @@ void indie::Player::handleInput()
     }
     if (direction.x == 0 && direction.z == 0) {
         if (this->_timerAnim <= 0) {
-            this->_anim.update(1);
+            this->_anim.update(5);
         }
     } else {
         if (this->_timerAnim <= 0) {

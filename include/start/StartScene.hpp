@@ -10,7 +10,6 @@
 
 #include <GameEngine/GameEngine.hpp>
 
-
 namespace indie {
 
     class StartScene : public gameengine::Scene {

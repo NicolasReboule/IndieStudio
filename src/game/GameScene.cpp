@@ -77,7 +77,16 @@ void indie::GameScene::sceneLauncher()
 
     auto &globalInstance = indie::GlobalInstance::getInstance();
     for (int i = 0; i < globalInstance->_numberPlayers; i++) {
-        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), "./assets/player.iqm", "./assets/blue.png", i);
+        std::string color;
+        if (i == 0)
+           color  = "blue";
+        else if (i == 1)
+            color  = "red";
+        else if (i == 2)
+            color  = "green";
+        else
+            color  = "yellow";
+        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), "./assets/player.iqm", "./assets/" + color + ".png", i);
         this->addNode(player);
     }
 

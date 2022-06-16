@@ -37,7 +37,7 @@ add_executable(${BINARY_NAME}
         src/game/ButtonMainMenu.cpp
         src/game/ButtonQuitx05.cpp
         src/game/ButtonResume.cpp
-        )
+        src/game/BonusRange.cpp src/winning/WinningScene.cpp src/winning/WinningScene.hpp)
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 

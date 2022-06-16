@@ -11,6 +11,8 @@
 #include "raylib/exception/WindowException.hpp"
 #include "raylib/Core/CoreHelper.hpp"
 #include "raylib/Image/RlImage.hpp"
+#include "raylib/Camera/RlCamera.hpp"
+#include "raylib/Camera/RlCameraBuilder.hpp"
 #include <string>
 #include <iostream>
 #include <memory>
@@ -223,6 +225,8 @@ namespace raylib::window {
          */
         const bool &isIsCreated() const;
 
+        raylib::RlCamera &getCamera();
+
     private:
         static std::shared_ptr<RlWindow> _instance; /**< The singleton instance of the RlWindow */
 
@@ -232,6 +236,8 @@ namespace raylib::window {
         int _minWidth; /**< The minimum width of the window */
         int _minHeight; /**< The minimum height of the window */
         bool _isCreated = false; /**< If the window is created */
+
+        raylib::RlCamera _camera;
     };
 }
 

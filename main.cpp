@@ -14,7 +14,8 @@ int main(int ac, char **av)
     auto sceneManager = gameengine::SceneManager::getInstance();
     window->createWindow("Bomberman", 1280, 720, 60);
 
-    raylib::RlCamera camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
+    //raylib::RlCamera camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
+    //window->_camera = raylib::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
 
     auto startScene = std::make_shared<indie::StartScene>();
     sceneManager->addScene(startScene);
@@ -31,7 +32,8 @@ int main(int ac, char **av)
     sceneManager->changeScene("chooseNumberPlayer");
 
     while (window->isOpen()) {
-        sceneManager->makeLoop(camera);
+        //sceneManager->makeLoop(camera);
+        sceneManager->makeLoop(window->getCamera());
        //std::cout << camera << std::endl;
     }
     return (0);

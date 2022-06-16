@@ -16,6 +16,8 @@ namespace indie {
     public:
         WallDestroyable(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~WallDestroyable() override = default;
+
+        void spawnBonus();
     private:
     };
 }

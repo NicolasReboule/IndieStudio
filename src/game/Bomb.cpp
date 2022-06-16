@@ -112,8 +112,12 @@ void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
                 try {
                     auto &wallDestroyable = dynamic_cast<indie::WallDestroyable &>(*node);
                     if (wallDestroyable.getPosition() == pos) {
+                        wallDestroyable.spawnBonus();
                         sceneManager->deleteNode(node->getName());
-                        break;
+                        auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+                        magma->setPosition(pos);
+                        sceneManager->addNode(magma);
+                        return;
                     }
                 }
                 catch (const std::bad_cast &e) {
