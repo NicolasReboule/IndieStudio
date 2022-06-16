@@ -31,19 +31,19 @@ raylib::RlModel::RlModel(const raylib::RlMesh &mesh, const std::string &textureP
         setTextureMaterial();
 }
 
-raylib::RlModel::RlModel(const RlMeshBuilder::MeshType &type, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
+raylib::RlModel::RlModel(const builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 :  _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
-    if (type == RlMeshBuilder::MeshCube) {
-        raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+    if (type == builder::RlMeshBuilder::MeshCube) {
+        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
         this->_model = LoadModelFromMesh(mesh.getMesh());
     }
-    else if (type == RlMeshBuilder::MeshSphere) {
-        raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshSphere).setRadius(0.5f).setRings(10).setSlices(10).build();
+    else if (type == builder::RlMeshBuilder::MeshSphere) {
+        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshSphere).setRadius(0.5f).setRings(10).setSlices(10).build();
         this->_model = LoadModelFromMesh(mesh.getMesh());
     }
     else {
-        raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
         this->_model = LoadModelFromMesh(mesh.getMesh());
     }
 
@@ -59,7 +59,6 @@ raylib::RlModel::RlModel(const RlMeshBuilder::MeshType &type, const std::string 
 
 raylib::RlModel::~RlModel()
 {
-    std::cout << "~RlModel()" << std::endl;
     UnloadModel(this->_model);
 }
 
@@ -187,17 +186,17 @@ const BoundingBox &raylib::RlModel::getBoundingBox() const
     return this->_boundingBox;
 }
 
-void raylib::RlModel::setTexture(const raylib::RlTexture &texture)
+void raylib::RlModel::setTexture(const raylib::texture::RlTexture &texture)
 {
     _texture = texture;
 }
 
-const raylib::RlTexture &raylib::RlModel::getTexture() const
+const raylib::texture::RlTexture &raylib::RlModel::getTexture() const
 {
     return _texture;
 }
 
-raylib::RlTexture *raylib::RlModel::operator->()
+raylib::texture::RlTexture *raylib::RlModel::operator->()
 {
     return &_texture;
 }

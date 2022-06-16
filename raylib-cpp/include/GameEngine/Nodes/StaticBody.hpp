@@ -11,12 +11,12 @@
 #include "Node.hpp"
 #include "raylib/3DObject/RlMeshBuilder.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class StaticBody : public Node {
     public:
         StaticBody(const std::string &name, const std::string &modelPath, const std::string &texturePath);
-        StaticBody(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath);
+        StaticBody(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath);
 
         ~StaticBody() override = default;
 

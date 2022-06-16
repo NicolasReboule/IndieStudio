@@ -26,9 +26,9 @@ void Indie::StartScene::sceneLauncher()
 
 void Indie::StartScene::updateScene(float delta)
 {
-    auto sceneManager = GameEngine::SceneManager::getInstance();
+    auto sceneManager = gameengine::SceneManager::getInstance();
 
-    //std::shared_ptr<GameEngine::Base> base = sceneManager->getNode("logo");
+    //std::shared_ptr<gameengine::Base> base = sceneManager->getNode("logo");
     auto &logo = dynamic_cast<Indie::Logo &>(*sceneManager->getNode("logo"));
     auto &game = dynamic_cast<Indie::Logo &>(*sceneManager->getNode("splashart"));
 

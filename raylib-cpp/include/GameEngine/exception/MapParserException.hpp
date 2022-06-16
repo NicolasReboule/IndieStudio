@@ -12,7 +12,7 @@
 
 namespace gameengine::ex {
     /**
-     * @brief Exception thrown by the Parser
+     * @brief Exception thrown by the MapParser
      */
     class MapParserException : public GameEngineException {
     public:

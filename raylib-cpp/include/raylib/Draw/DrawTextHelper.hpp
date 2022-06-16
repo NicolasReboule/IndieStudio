@@ -11,9 +11,9 @@
 #include "raylib/Text/RlText.hpp"
 #include "raylib/Math.hpp"
 
-namespace raylib {
+namespace raylib::helper::draw {
     /**
-     * @brief DrawTextHelper class
+     * @brief Helper class for drawing text
      */
     class DrawTextHelper {
     public:
@@ -71,7 +71,7 @@ namespace raylib {
          * @param position the position
          * @param color the color
          */
-        static void drawText(const std::string &text, const RlFont &font, const Vector2f &position, const RlColor &color = RlColor::Black);
+        static void drawText(const std::string &text, const raylib::text::RlFont &font, const Vector2f &position, const RlColor &color = RlColor::Black);
 
         /**
          * @brief Draw text using font and additional parameters
@@ -82,7 +82,7 @@ namespace raylib {
          * @param spacing the spacing
          * @param tint the color
          */
-        static void drawText(const std::string &text, const RlFont &font, const Vector2f &position, const float &fontSize, const RlColor &tint = RlColor::Black, const float &spacing = 1);
+        static void drawText(const std::string &text, const raylib::text::RlFont &font, const Vector2f &position, const float &fontSize, const RlColor &tint = RlColor::Black, const float &spacing = 1);
 
         /**
          * @brief Draw text using font and additional parameters
@@ -94,7 +94,7 @@ namespace raylib {
          * @param tint the color
          * @param spacing the spacing
          */
-        static void drawText(const std::string &text, const RlFont &font, const Vector2f &position, const float &rotation, const float &fontSize, const RlColor &tint = RlColor::Black, const float &spacing = 1);
+        static void drawText(const std::string &text, const raylib::text::RlFont &font, const Vector2f &position, const float &rotation, const float &fontSize, const RlColor &tint = RlColor::Black, const float &spacing = 1);
 
         /**
          * @brief Draw text using font and additional parameters
@@ -106,7 +106,7 @@ namespace raylib {
          * @param tint the color
          * @param spacing the spacing
          */
-        static void drawText(const std::string &text, const RlFont &font, const Vector2f &position, const Vector2f &origin, const float &fontSize, const RlColor &tint = RlColor::Black, const float &spacing = 1);
+        static void drawText(const std::string &text, const raylib::text::RlFont &font, const Vector2f &position, const Vector2f &origin, const float &fontSize, const RlColor &tint = RlColor::Black, const float &spacing = 1);
 
         /**
          * @brief Draw text using Font and 'pro' parameters (rotation)
@@ -119,7 +119,7 @@ namespace raylib {
          * @param spacing the spacing
          * @param tint the color
          */
-        static void drawText(const std::string &text, const RlFont &font, const Vector2f &position, const Vector2f &origin, const float &rotation, const float &fontSize = 20, const RlColor &tint = RlColor::Black, const float &spacing = 1);
+        static void drawText(const std::string &text, const raylib::text::RlFont &font, const Vector2f &position, const Vector2f &origin, const float &rotation, const float &fontSize = 20, const RlColor &tint = RlColor::Black, const float &spacing = 1);
 
         /**
          * @brief Draw a text centered to the position
@@ -129,7 +129,7 @@ namespace raylib {
          * @param color the color
          * @param spacing the spacing
          */
-        static void drawCenteredText(const std::string &text, const RlFont &font, const Vector2f &position, const RlColor &color = RlColor::Black, const float &spacing = 1);
+        static void drawCenteredText(const std::string &text, const raylib::text::RlFont &font, const Vector2f &position, const RlColor &color = RlColor::Black, const float &spacing = 1);
 
         /**
          * @brief Draw a text centered to the position
@@ -140,13 +140,13 @@ namespace raylib {
          * @param color the color
          * @param spacing the spacing
          */
-        static void drawCenteredText(const std::string &text, const RlFont &font, const Vector2f &position, const float &fontSize, const RlColor &color = RlColor::Black, const float &spacing = 1);
+        static void drawCenteredText(const std::string &text, const raylib::text::RlFont &font, const Vector2f &position, const float &fontSize, const RlColor &color = RlColor::Black, const float &spacing = 1);
 
         /**
          * @brief Draw a text centered to the position of the text
          * @param text the text to draw
          */
-        static void drawCenteredText(const RlText &text);
+        static void drawCenteredText(const raylib::text::RlText &text);
 
         /**
          * @brief Draw one character (codepoint)
@@ -156,7 +156,7 @@ namespace raylib {
          * @param fontSize the font size
          * @param tint the color
          */
-        static void drawTextUsingCodepoint(const RlFont &font, const int &codepoint, const Vector2f &position, float fontSize, const RlColor &tint);
+        static void drawTextUsingCodepoint(const raylib::text::RlFont &font, const int &codepoint, const Vector2f &position, float fontSize, const RlColor &tint);
 
         /**
          * @brief Draw text using RlText and additional parameters
@@ -164,7 +164,7 @@ namespace raylib {
          * @param position the position
          * @param color the color
          */
-        static void drawText(const RlText &text, const Vector2f &position, const RlColor &color = RlColor::Black);
+        static void drawText(const raylib::text::RlText &text, const Vector2f &position, const RlColor &color = RlColor::Black);
 
         /**
          * @brief Draw text using RlText and additional parameters
@@ -173,13 +173,13 @@ namespace raylib {
          * @param posY the y position
          * @param color the color
          */
-        static void drawText(const RlText &text, const float &posX, const float &posY, const RlColor &color = RlColor::Black);
+        static void drawText(const raylib::text::RlText &text, const float &posX, const float &posY, const RlColor &color = RlColor::Black);
 
         /**
          * @brief Draw text using RlText values
          * @param text the text to draw
          */
-        static void drawText(const RlText &text);
+        static void drawText(const raylib::text::RlText &text);
     };
 }
 

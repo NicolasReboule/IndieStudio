@@ -9,7 +9,7 @@
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
-Indie::Bomb::Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
+Indie::Bomb::Bomb(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
 {
     this->_timer = 1;
 
@@ -24,7 +24,7 @@ void Indie::Bomb::update(float delta)
 {
     std::cout << this->_collisionEnable << std::endl;
 
-    auto &sceneManager = GameEngine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
     this->_timer -= delta;
 
     if (this->_collisionEnable == false) {

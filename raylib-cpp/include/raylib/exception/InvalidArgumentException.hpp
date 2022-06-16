@@ -12,7 +12,7 @@
 
 namespace raylib::ex {
     /**
-     * @brief InvalidArgumentException class
+     * @brief Exception thrown when an invalid argument is passed to a function
      */
     class InvalidArgumentException : public RaylibException {
     public:

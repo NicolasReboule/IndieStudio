@@ -10,7 +10,7 @@
 
 #include "Node2D.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class Button : public Node2D {
     public:
@@ -39,7 +39,7 @@ namespace GameEngine {
         void ready() override;
 
     private:
-        raylib::RlTexture _texture;
+        raylib::texture::RlTexture _texture;
 
         Vector2f _position;
         Vector2f _scale;

@@ -7,94 +7,94 @@
 
 #include "GameEngine/Nodes/StaticBody.hpp"
 
-GameEngine::StaticBody::StaticBody(const std::string &name, const std::string &modelPath, const std::string &texturePath)
+gameengine::StaticBody::StaticBody(const std::string &name, const std::string &modelPath, const std::string &texturePath)
     : Node(name), _model(modelPath, texturePath), _position({0, 0, 0}), _scale({1, 1, 1})
 {
     this->_rotationDegrees = 0;
     this->_collisionEnable = true;
 }
 
-GameEngine::StaticBody::StaticBody(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath)
+gameengine::StaticBody::StaticBody(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath)
     : Node(name), _model(type, texturepath), _position({0, 0, 0}), _scale({1, 1, 1})
 {
     this->_rotationDegrees = 0;
     this->_collisionEnable = true;
 }
 
-void GameEngine::StaticBody::ready()
+void gameengine::StaticBody::ready()
 {
 }
 
-void GameEngine::StaticBody::update(float delta)
+void gameengine::StaticBody::update(float delta)
 {
 }
 
-void GameEngine::StaticBody::draw()
+void gameengine::StaticBody::draw()
 {
     raylib::ModelHelper::drawModel(this->_model);
 }
 
-Vector3f GameEngine::StaticBody::getPosition()
+Vector3f gameengine::StaticBody::getPosition()
 {
     return this->_position;
 }
 
-float GameEngine::StaticBody::getRotationDegrees()
+float gameengine::StaticBody::getRotationDegrees()
 {
     return this->_rotationDegrees;
 }
 
-Vector3f GameEngine::StaticBody::getSCale()
+Vector3f gameengine::StaticBody::getSCale()
 {
     return this->_scale;
 }
 
-void GameEngine::StaticBody::setPosition(Vector3f pos)
+void gameengine::StaticBody::setPosition(Vector3f pos)
 {
     this->_position = pos;
     this->_model.setPosition(this->_position);
 }
 
-void GameEngine::StaticBody::setRotationDegrees(float degrees, Vector3f rotationAxis)
+void gameengine::StaticBody::setRotationDegrees(float degrees, Vector3f rotationAxis)
 {
     this->_rotationDegrees = degrees;
     this->_model.setRotationAxis(rotationAxis);
     this->_model.setRotationAngle(degrees);
 }
 
-void GameEngine::StaticBody::setScale(Vector3f newScale)
+void gameengine::StaticBody::setScale(Vector3f newScale)
 {
     this->_scale = newScale;
     this->_model.setScale(newScale);
 }
 
-void GameEngine::StaticBody::setColor(raylib::RlColor color)
+void gameengine::StaticBody::setColor(raylib::RlColor color)
 {
     this->_model.setColor(color.getColor());
 }
 
-raylib::RlModel *GameEngine::StaticBody::operator->()
+raylib::RlModel *gameengine::StaticBody::operator->()
 {
     return &this->_model;
 }
 
-const BoundingBox &GameEngine::StaticBody::getBoundingBox() const
+const BoundingBox &gameengine::StaticBody::getBoundingBox() const
 {
     return this->_model.getBoundingBox();
 }
 
-void GameEngine::StaticBody::setBoundingBox(BoundingBox &boundingBox)
+void gameengine::StaticBody::setBoundingBox(BoundingBox &boundingBox)
 {
     this->_model.setBoundingBox(boundingBox);
 }
 
-bool &GameEngine::StaticBody::getIsCollsionEnable()
+bool &gameengine::StaticBody::getIsCollsionEnable()
 {
     return this->_collisionEnable;
 }
 
 /*
-void GameEngine::StaticBody::collisionBox()
+void gameengine::StaticBody::collisionBox()
 {
     std::cout << "(" << this->_model.getBoundingBox().max.x << "," << this->_model.getBoundingBox().max.y << "," << this->_model.getBoundingBox().max.x << ")" << std::endl;
 }

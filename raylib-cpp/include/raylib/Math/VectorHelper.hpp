@@ -11,9 +11,9 @@
 #include "Vector.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::helper {
     /**
-     * @brief VectorHelper class
+     * @brief Helper class for converting raylib Vectors to raylib-cpp Vector and vice-versa
      */
     class VectorHelper {
     public:

@@ -12,7 +12,7 @@
 #include <string>
 #include <vector>
 
-namespace raylib {
+namespace raylib::text {
     /**
      * @brief RlText codepoints management functions (unicode characters)
      */

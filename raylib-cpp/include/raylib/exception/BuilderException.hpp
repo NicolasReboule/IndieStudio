@@ -12,7 +12,7 @@
 
 namespace raylib::ex {
     /**
-     * @brief BuilderException class
+     * @brief Exception thrown when a builder failed to build
      */
     class BuilderException : public RaylibException {
     public:

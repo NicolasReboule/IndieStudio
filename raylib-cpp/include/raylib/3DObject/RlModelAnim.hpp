@@ -26,6 +26,11 @@ namespace raylib {
         explicit RlModelAnim(const RlModel &model, const std::string &fileName);
 
         /**
+         * @brief Unload the model animation
+         */
+        ~RlModelAnim();
+
+        /**
          * @brief Update the animation
          * @param animIndex the index of the animation to update
          */
@@ -53,6 +58,7 @@ namespace raylib {
     private:
         const RlModel &_model; /**< A reference to the model to animate */
         std::vector<ModelAnimation> _animations; /**< A vector containing all the iqm animations */
+        ModelAnimation *_anims; /**< A pointer to the raylib iqm animations */
         unsigned int _count; /**< The number of animations loaded from the iqm */
         int _frameCount; /**< The actual frame index of the current animation */
     };

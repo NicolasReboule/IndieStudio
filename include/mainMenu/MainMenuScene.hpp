@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class MainMenuScene : public GameEngine::Scene {
+    class MainMenuScene : public gameengine::Scene {
     public:
 
         explicit MainMenuScene(std::string name = "mainMenu", std::string sceneSource = "mainMenu");

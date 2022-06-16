@@ -10,7 +10,7 @@
 
 #include "Node2D.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class TextureRect : public Node2D {
     public:
@@ -51,7 +51,7 @@ namespace GameEngine {
         const raylib::RlColor &getColor() const;
 
     private:
-        raylib::RlTexture _texture;
+        raylib::texture::RlTexture _texture;
         raylib::RlColor _color;
 
         Vector2f _position;

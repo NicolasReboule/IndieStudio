@@ -10,12 +10,12 @@
 
 #include "raylib/Raylib.hpp"
 
-enum SoundCategory{
+enum SoundCategory {
     MUSIC,
     FX
 };
 
-namespace GameEngine {
+namespace gameengine {
     class ISound {
     public:
         explicit ISound(std::string fileName, SoundCategory category);

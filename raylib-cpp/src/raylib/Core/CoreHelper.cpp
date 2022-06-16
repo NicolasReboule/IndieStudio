@@ -9,41 +9,41 @@
 
 // VR stereo config functions for VR simulator
 
-VrStereoConfig raylib::CoreHelper::loadVrStereoConfig(const VrDeviceInfo &device)
+VrStereoConfig raylib::helper::CoreHelper::loadVrStereoConfig(const VrDeviceInfo &device)
 {
     return LoadVrStereoConfig(device);
 }
 
-void raylib::CoreHelper::unloadVrStereoConfig(const VrStereoConfig &config)
+void raylib::helper::CoreHelper::unloadVrStereoConfig(const VrStereoConfig &config)
 {
     UnloadVrStereoConfig(config);
 }
 
 // Timing-related functions
 
-void raylib::CoreHelper::setFramerateLimit(int fps)
+void raylib::helper::CoreHelper::setFramerateLimit(int fps)
 {
     SetTargetFPS(fps);
 }
 
-int raylib::CoreHelper::getFPS()
+int raylib::helper::CoreHelper::getFPS()
 {
     return GetFPS();
 }
 
-float raylib::CoreHelper::getFrameTime()
+float raylib::helper::CoreHelper::getFrameTime()
 {
     return GetFrameTime();
 }
 
-double raylib::CoreHelper::getTime()
+double raylib::helper::CoreHelper::getTime()
 {
     return GetTime();
 }
 
 // Misc.
 
-void raylib::CoreHelper::openURL(const std::string &url)
+void raylib::helper::CoreHelper::openURL(const std::string &url)
 {
     OpenURL(url.c_str());
 }

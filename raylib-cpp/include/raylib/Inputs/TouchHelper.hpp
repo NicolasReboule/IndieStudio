@@ -11,9 +11,9 @@
 #include "raylib/Math.hpp"
 #include <raylib.h>
 
-namespace raylib::input {
+namespace raylib::helper::input {
     /**
-     * @brief Input-related functions: touch
+     * @brief Helper class for Input-related functions: touch
      */
     class TouchHelper {
     public:

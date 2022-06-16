@@ -31,14 +31,14 @@ namespace raylib {
     }
 
     /**
-     * @brief Animation class
+     * @brief Animation class using multiple models
      */
     class RlAnimation {
     public:
         /**
          * @brief Default constructor
          */
-        RlAnimation() : _frame(0) {}
+        RlAnimation() : _frame(0), _isLoaded(false) {}
 
         /**
          * @brief Construct a new RlAnimation object

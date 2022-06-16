@@ -14,7 +14,7 @@
 
 namespace raylib::shader {
     /**
-     * @brief Shader management functions
+     * @brief The encapsultation of the raylib Shader
      * NOTE: Shader functionality is not available on OpenGL 1.1
      */
     class RlShader {
@@ -86,7 +86,7 @@ namespace raylib::shader {
          * @param locIndex to set
          * @param texture to set
          */
-        void setValueTexture(int locIndex, const RlTexture &texture);
+        void setValueTexture(int locIndex, const texture::RlTexture &texture);
 
         /**
          * @brief Get the raylib Shader's

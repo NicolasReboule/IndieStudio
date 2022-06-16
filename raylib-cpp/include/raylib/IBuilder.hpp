@@ -8,7 +8,7 @@
 #ifndef INDIESTUDIO_IBUILDER_HPP
 #define INDIESTUDIO_IBUILDER_HPP
 
-namespace raylib {
+namespace raylib::builder {
     /**
      * @brief Interface for all the builder
      * @tparam T the class to build

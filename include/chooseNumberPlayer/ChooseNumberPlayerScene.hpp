@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class ChooseNumberPlayerScene : public GameEngine::Scene {
+    class ChooseNumberPlayerScene : public gameengine::Scene {
     public:
         explicit ChooseNumberPlayerScene(const std::string &name = "chooseNumberPlayer", const std::string &sceneSource = "chooseNumberPlayer");
         ~ChooseNumberPlayerScene() override = default;

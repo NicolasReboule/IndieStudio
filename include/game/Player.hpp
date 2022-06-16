@@ -12,10 +12,10 @@
 
 namespace Indie {
 
-    class Player : public GameEngine::KinematicBody {
+    class Player : public gameengine::KinematicBody {
     public:
         Player(const std::string &name, const std::string &modelPath, const std::string &texturePath);
-        Player(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        Player(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~Player() override = default;
 
         void update(float delta) final;

@@ -152,7 +152,7 @@ namespace raylib::image {
          * @param spacing the spacing between letters
          * @param tint the color to use
          */
-        static void drawImageText(image::RlImage &dst, const RlFont &font, const std::string &text, const Vector2f &position, float fontSize, float spacing, const RlColor &tint);
+        static void drawImageText(image::RlImage &dst, const raylib::text::RlFont &font, const std::string &text, const Vector2f &position, float fontSize, float spacing, const RlColor &tint);
     };
 }
 

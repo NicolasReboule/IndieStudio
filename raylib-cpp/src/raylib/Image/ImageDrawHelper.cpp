@@ -72,7 +72,7 @@ void raylib::image::ImageDrawHelper::drawImageText(RlImage &dst, const std::stri
     ImageDrawText(&dst.getImage(), text.c_str(), posX, posY, fontSize, color.getColor());
 }
 
-void raylib::image::ImageDrawHelper::drawImageText(RlImage &dst, const RlFont &font, const std::string &text, const Vector2f &position, float fontSize, float spacing, const RlColor &tint)
+void raylib::image::ImageDrawHelper::drawImageText(RlImage &dst, const raylib::text::RlFont &font, const std::string &text, const Vector2f &position, float fontSize, float spacing, const RlColor &tint)
 {
-    ImageDrawTextEx(&dst.getImage(), font.getFont(), text.c_str(), raylib::VectorHelper::toRaylibVector(position), fontSize, spacing, tint.getColor());
+    ImageDrawTextEx(&dst.getImage(), font.getFont(), text.c_str(), raylib::helper::VectorHelper::toRaylibVector(position), fontSize, spacing, tint.getColor());
 }

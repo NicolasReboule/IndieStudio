@@ -13,7 +13,7 @@
 #include <vector>
 
 
-namespace GameEngine {
+namespace gameengine {
 
     class SceneManager {
     public:
@@ -22,19 +22,19 @@ namespace GameEngine {
 
         void changeScene(const std::string &scene);
 
-        void addScene(const std::shared_ptr<GameEngine::Scene> &scene);
+        void addScene(const std::shared_ptr<gameengine::Scene> &scene);
 
         void deleteScene(const std::string &scene);
 
         void makeLoop(raylib::RlCamera &camera);
 
-        std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
+        std::shared_ptr<gameengine::Base> getNode(const std::string& name);
 
-        void addNode(const std::shared_ptr<GameEngine::Base> &node);
+        void addNode(const std::shared_ptr<gameengine::Base> &node);
 
         void deleteNode(const std::string &name);
 
-        std::vector<std::shared_ptr<GameEngine::Base>> getAllNodes();
+        std::vector<std::shared_ptr<gameengine::Base>> getAllNodes();
 
         void update();
 
@@ -42,7 +42,7 @@ namespace GameEngine {
         void draw();
         void draw2D();
 
-        static std::shared_ptr<GameEngine::SceneManager> &getInstance();
+        static std::shared_ptr<gameengine::SceneManager> &getInstance();
 
     private:
         void deleteNodeInLst();
@@ -51,7 +51,7 @@ namespace GameEngine {
 
         std::vector<std::string> _nodesToDelete;
         std::string _actualScene;
-        std::vector<std::shared_ptr<GameEngine::Scene>> _scenes;
+        std::vector<std::shared_ptr<gameengine::Scene>> _scenes;
     };
 }
 

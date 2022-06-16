@@ -11,9 +11,9 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::texture {
     /**
-     * @brief RlRenderTexture class
+     * @brief Encapsulation of the raylib RenderTexture2D
      */
     class RlRenderTexture {
     public:

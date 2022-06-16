@@ -16,9 +16,9 @@
 #include <concepts>
 #include <functional>
 
-namespace raylib {
+namespace raylib::helper {
     /**
-     * @brief Files management functions
+     * @brief Helper class for files
      */
     class FileHelper {
     public:

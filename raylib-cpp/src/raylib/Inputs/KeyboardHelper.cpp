@@ -7,42 +7,42 @@
 
 #include "raylib/Inputs/KeyboardHelper.hpp"
 
-bool raylib::input::KeyboardHelper::isKeyPressed(const KeyboardKey &key)
+bool raylib::helper::input::KeyboardHelper::isKeyPressed(const KeyboardKey &key)
 {
     return IsKeyPressed(key);
 }
 
-bool raylib::input::KeyboardHelper::isKeyDown(const KeyboardKey &key)
+bool raylib::helper::input::KeyboardHelper::isKeyDown(const KeyboardKey &key)
 {
     return IsKeyDown(key);
 }
 
-bool raylib::input::KeyboardHelper::isKeyReleased(const KeyboardKey &key)
+bool raylib::helper::input::KeyboardHelper::isKeyReleased(const KeyboardKey &key)
 {
     return IsKeyReleased(key);
 }
 
-bool raylib::input::KeyboardHelper::isKeyUp(const KeyboardKey &key)
+bool raylib::helper::input::KeyboardHelper::isKeyUp(const KeyboardKey &key)
 {
     return IsKeyUp(key);
 }
 
-void raylib::input::KeyboardHelper::setExitKey(const KeyboardKey &key)
+void raylib::helper::input::KeyboardHelper::setExitKey(const KeyboardKey &key)
 {
     SetExitKey(key);
 }
 
-int raylib::input::KeyboardHelper::getKeyPressed()
+int raylib::helper::input::KeyboardHelper::getKeyPressed()
 {
     return GetKeyPressed();
 }
 
-int raylib::input::KeyboardHelper::getCharPressed()
+int raylib::helper::input::KeyboardHelper::getCharPressed()
 {
     return GetCharPressed();
 }
 
-std::vector<KeyboardKey> raylib::input::KeyboardHelper::getPressedKeys()
+std::vector<KeyboardKey> raylib::helper::input::KeyboardHelper::getPressedKeys()
 {
     std::vector<KeyboardKey> pressedKeys;
     do {
@@ -51,7 +51,7 @@ std::vector<KeyboardKey> raylib::input::KeyboardHelper::getPressedKeys()
     return pressedKeys;
 }
 
-std::vector<int> raylib::input::KeyboardHelper::getPressedChars()
+std::vector<int> raylib::helper::input::KeyboardHelper::getPressedChars()
 {
     std::vector<int> pressedChars;
     do {
@@ -60,7 +60,7 @@ std::vector<int> raylib::input::KeyboardHelper::getPressedChars()
     return pressedChars;
 }
 
-std::string raylib::input::KeyboardHelper::getKeyName(const int &key, const int &scancode)
+std::string raylib::helper::input::KeyboardHelper::getKeyName(const int &key, const int &scancode)
 {
     return glfwGetKeyName(key, scancode);
 }

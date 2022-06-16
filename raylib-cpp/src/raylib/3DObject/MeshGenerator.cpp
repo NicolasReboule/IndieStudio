@@ -54,10 +54,10 @@ raylib::RlMesh raylib::MeshGenerator::genMeshKnot(float radius, float size, int 
 
 raylib::RlMesh raylib::MeshGenerator::genMeshHeightmap(Image heightmap, Vector3f size)
 {
-    return RlMesh(GenMeshHeightmap(heightmap, raylib::VectorHelper::toRaylibVector(size)));
+    return RlMesh(GenMeshHeightmap(heightmap, raylib::helper::VectorHelper::toRaylibVector(size)));
 }
 
 raylib::RlMesh raylib::MeshGenerator::genMeshCubicmap(Image cubicmap, Vector3f cubeSize)
 {
-    return RlMesh(GenMeshCubicmap(cubicmap, raylib::VectorHelper::toRaylibVector(cubeSize)));
+    return RlMesh(GenMeshCubicmap(cubicmap, raylib::helper::VectorHelper::toRaylibVector(cubeSize)));
 }

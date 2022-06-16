@@ -12,9 +12,9 @@
 #include <string>
 #include <GLFW/glfw3.h>
 
-namespace raylib::input {
+namespace raylib::helper::input {
     /**
-     * @brief Input-related functions: gamepads
+     * @brief Helper class for Input-related functions: gamepads
      */
     class GamepadHelper {
     public:

@@ -7,6 +7,6 @@
 
 #include "GameEngine/Nodes/Node.hpp"
 
-GameEngine::Node::Node(const std::string &name) : Base(name)
+gameengine::Node::Node(const std::string &name) : Base(name)
 {
 }

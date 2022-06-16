@@ -13,9 +13,9 @@
 #include <string>
 #include <memory>
 
-namespace raylib {
+namespace raylib::text {
     /**
-     * @brief Font class
+     * @brief Encapsulation of the raylib font
      */
     class RlFont {
     public:

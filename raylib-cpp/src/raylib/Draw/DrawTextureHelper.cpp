@@ -7,57 +7,55 @@
 
 #include "raylib/Draw/DrawTextureHelper.hpp"
 
-void raylib::DrawTextureHelper::drawTexture(const raylib::RlTexture &texture, int posX, int posY, const RlColor &tint)
+void raylib::helper::draw::DrawTextureHelper::drawTexture(const raylib::texture::RlTexture &texture, int posX, int posY, const RlColor &tint)
 {
     DrawTexture(texture.get(), posX, posY, tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTexture(const raylib::RlTexture &texture, const Vector2f &position, const RlColor &tint)
+void raylib::helper::draw::DrawTextureHelper::drawTexture(const raylib::texture::RlTexture &texture, const Vector2f &position, const RlColor &tint)
 {
     DrawTexture(texture.get(), (int) position.x, (int) position.y, tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTexture(const raylib::RlTexture &texture, const Vector2f &position, float rotation,
-                                            float scale, const RlColor &tint)
+void raylib::helper::draw::DrawTextureHelper::drawTexture(const raylib::texture::RlTexture &texture, const Vector2f &position, float rotation, float scale, const RlColor &tint)
 {
-    DrawTextureEx(texture.get(), raylib::VectorHelper::toRaylibVector(position), rotation, scale, tint.getColor());
+    DrawTextureEx(texture.get(), raylib::helper::VectorHelper::toRaylibVector(position), rotation, scale, tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTextureRec(const raylib::RlTexture &texture, const Rectangle &source,
+void raylib::helper::draw::DrawTextureHelper::drawTextureRec(const raylib::texture::RlTexture &texture, const Rectangle &source,
                                                const Vector2f &position, const RlColor &tint)
 {
-    DrawTextureRec(texture.get(), source, raylib::VectorHelper::toRaylibVector(position), tint.getColor());
+    DrawTextureRec(texture.get(), source, raylib::helper::VectorHelper::toRaylibVector(position), tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTextureQuad(const raylib::RlTexture &texture, const Vector2f &tiling,
+void raylib::helper::draw::DrawTextureHelper::drawTextureQuad(const raylib::texture::RlTexture &texture, const Vector2f &tiling,
                                                 const Vector2f &offset, const Rectangle &quad, const RlColor &tint)
 {
-    DrawTextureQuad(texture.get(), raylib::VectorHelper::toRaylibVector(tiling), raylib::VectorHelper::toRaylibVector(offset), quad, tint.getColor());
+    DrawTextureQuad(texture.get(), raylib::helper::VectorHelper::toRaylibVector(tiling),
+                    raylib::helper::VectorHelper::toRaylibVector(offset), quad, tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTextureTiled(const raylib::RlTexture &texture, const Rectangle &source,
+void raylib::helper::draw::DrawTextureHelper::drawTextureTiled(const raylib::texture::RlTexture &texture, const Rectangle &source,
                                                  const Rectangle &dest, const Vector2f &origin, float rotation,
                                                  float scale, const RlColor &tint)
 {
-    DrawTextureTiled(texture.get(), source, dest, raylib::VectorHelper::toRaylibVector(origin), rotation, scale, tint.getColor());
+    DrawTextureTiled(texture.get(), source, dest, raylib::helper::VectorHelper::toRaylibVector(origin), rotation, scale, tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTexture(const raylib::RlTexture &texture, const Rectangle &source, const Rectangle &dest,
+void raylib::helper::draw::DrawTextureHelper::drawTexture(const raylib::texture::RlTexture &texture, const Rectangle &source, const Rectangle &dest,
                                        const Vector2f &origin, float rotation, const RlColor &tint)
 {
-    DrawTexturePro(texture.get(), source, dest, raylib::VectorHelper::toRaylibVector(origin), rotation, tint.getColor());
+    DrawTexturePro(texture.get(), source, dest, raylib::helper::VectorHelper::toRaylibVector(origin), rotation, tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTextureNPatch(const raylib::RlTexture &texture, const NPatchInfo &nPatchInfo,
-                                                  const Rectangle &dest, const Vector2f &origin, float rotation,
-                                                  const RlColor &tint)
+void raylib::helper::draw::DrawTextureHelper::drawTextureNPatch(const raylib::texture::RlTexture &texture, const NPatchInfo &nPatchInfo,
+                                                  const Rectangle &dest, const Vector2f &origin, float rotation, const RlColor &tint)
 {
-    DrawTextureNPatch(texture.get(), nPatchInfo, dest, raylib::VectorHelper::toRaylibVector(origin), rotation, tint.getColor());
+    DrawTextureNPatch(texture.get(), nPatchInfo, dest, raylib::helper::VectorHelper::toRaylibVector(origin), rotation, tint.getColor());
 }
 
-void raylib::DrawTextureHelper::drawTexturePoly(const raylib::RlTexture &texture, const Vector2f &center,
-                                                const std::vector<Vector2f> &points, std::vector<Vector2f> &texcoords,
-                                                const RlColor &tint)
+void raylib::helper::draw::DrawTextureHelper::drawTexturePoly(const raylib::texture::RlTexture &texture, const Vector2f &center,
+                                                const std::vector<Vector2f> &points, std::vector<Vector2f> &texcoords, const RlColor &tint)
 {
     if (points.size() != texcoords.size())
         throw raylib::ex::InvalidArgumentException("DrawTextureHelper: points and texcoords must have the same size");

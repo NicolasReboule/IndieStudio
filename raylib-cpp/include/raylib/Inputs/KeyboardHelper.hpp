@@ -13,9 +13,9 @@
 #include <GLFW/glfw3.h>
 #include <vector>
 
-namespace raylib::input {
+namespace raylib::helper::input {
     /**
-     * @brief Input-related functions: keyboard
+     * @brief Helper class for Input-related functions: keyboard
      */
     class KeyboardHelper {
     public:

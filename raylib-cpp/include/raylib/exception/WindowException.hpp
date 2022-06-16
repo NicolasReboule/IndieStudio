@@ -12,7 +12,7 @@
 
 namespace raylib::ex {
     /**
-     * @brief WindowException class
+     * @brief Exception thrown in the RlWindow class
      */
     class WindowException : public RaylibException {
     public:

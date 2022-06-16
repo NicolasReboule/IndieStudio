@@ -9,14 +9,35 @@
 #define CAMERA_HPP_
 
 #include "raylib/Math.hpp"
+#include "raylib/exception/RaylibException.hpp"
 #include <raylib.h>
 
 namespace raylib {
+
+    namespace ex {
+        /**
+         * @brief Exception thrown when the camera creation fails
+         */
+        class CameraException : public RaylibException {
+        public:
+            /**
+             * @brief Construct a new CameraException object
+             * @param message the message
+             */
+            explicit CameraException(const std::string &message) : RaylibException("[RlCamera] " + message) {}
+        };
+    }
+
     /**
-     * @brief Camera class
+     * @brief Encapsulation of the raylib Camera3D
      */
     class RlCamera {
     public:
+        /**
+         * @brief Empty constructor who doesn't initialize the camera
+         */
+        RlCamera() : _camera(), _position(), _target(), _lookingPoint(), _mode(), _fovy(0), _projection(), _cameraMode() {}
+
         /**
          * @brief Construct a new RlCamera object
          * @param position the position of the camera
@@ -25,10 +46,13 @@ namespace raylib {
          * @param fovy the fovy of the camera (Camera field-of-view Y)
          * @param projection the projection of the camera @see CameraProjection
          * @param mode the mode of the camera @see CameraMode
+         * @attention Don't use this use the RlCameraBuilder instead (please)
+         * @see RlCameraBuilder
+         * @throws CameraException
          */
-        explicit RlCamera(const Vector3f &position = {0, 10, 10},
-                          const Vector3f &target = {0, 0, 0},
-                          const Vector3f &lookingPoint = {0, 1, 0},
+        explicit RlCamera(const Vector3f &position,
+                          const Vector3f &target,
+                          const Vector3f &lookingPoint,
                           const float &fovy = 45,
                           const CameraProjection &projection = CAMERA_PERSPECTIVE,
                           const CameraMode &cameraMode = CAMERA_FREE);

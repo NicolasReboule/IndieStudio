@@ -7,22 +7,22 @@
 
 #include "GameEngine/Nodes/Base.hpp"
 
-GameEngine::Base::Base(const std::string &name)
+gameengine::Base::Base(const std::string &name)
 {
     this->_name = name;
 }
 
-const std::string &GameEngine::Base::getName() const
+const std::string &gameengine::Base::getName() const
 {
     return this->_name;
 }
 
-const std::string &GameEngine::Base::getGroup() const
+const std::string &gameengine::Base::getGroup() const
 {
     return this->_group;
 }
 
-void GameEngine::Base::setGroup(const std::string &group)
+void gameengine::Base::setGroup(const std::string &group)
 {
     this->_group = group;
 }

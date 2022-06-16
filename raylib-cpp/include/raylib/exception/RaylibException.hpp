@@ -13,7 +13,7 @@
 
 namespace raylib::ex {
     /**
-     * @brief RaylibException class
+     * @brief All exceptions of the raylib-cpp library will inherit from this class
      */
     class RaylibException : public std::exception {
     public:

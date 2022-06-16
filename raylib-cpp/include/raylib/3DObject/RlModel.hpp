@@ -22,7 +22,7 @@ namespace raylib {
         explicit RlModel(const Mesh &mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1,1,  1}, Color color = WHITE, Vector3f rotationAxis = {0,0,0}, float rotationAngle = 0);
         explicit RlModel(const RlMesh &mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = WHITE, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
 
-        explicit RlModel(const RlMeshBuilder::MeshType &type, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = WHITE, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
+        explicit RlModel(const builder::RlMeshBuilder::MeshType &type, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = WHITE, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
 
 
 
@@ -37,7 +37,7 @@ namespace raylib {
         void setRotationAxis(Vector3f rotationAxis);
         void setRotationAxis(float x, float y, float z);
         void setRotationAngle(float rotationAngle);
-        void setTexture(const RlTexture &texture);
+        void setTexture(const texture::RlTexture &texture);
 
         void setTextureMaterial();
 
@@ -47,14 +47,14 @@ namespace raylib {
         const Color &getColor() const;
         const Vector3f &getRotationAxis() const;
         const float &getRotationAngle() const;
-        const RlTexture &getTexture() const;
+        const texture::RlTexture &getTexture() const;
 
         const BoundingBox &getBoundingBox() const;
 
-        RlTexture *operator->();
+        texture::RlTexture *operator->();
     private:
         Model _model;
-        RlTexture _texture;
+        texture::RlTexture _texture;
         Vector3f _position;
         Color _color;
         Vector3f _scale;

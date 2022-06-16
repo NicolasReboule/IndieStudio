@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class Logo : public GameEngine::TextureRect {
+    class Logo : public gameengine::TextureRect {
     public:
         explicit Logo(const std::string &name, const std::string &filename);
 

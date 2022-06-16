@@ -53,7 +53,7 @@ void raylib::shader::RlShader::setValueMatrix(int locIndex, const Matrix &mat)
     SetShaderValueMatrix(this->_shader, locIndex, mat);
 }
 
-void raylib::shader::RlShader::setValueTexture(int locIndex, const RlTexture &texture)
+void raylib::shader::RlShader::setValueTexture(int locIndex, const texture::RlTexture &texture)
 {
     SetShaderValueTexture(this->_shader, locIndex, texture.get());
 }

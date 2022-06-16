@@ -12,7 +12,7 @@
 
 namespace Indie {
 
-    class StartScene : public GameEngine::Scene {
+    class StartScene : public gameengine::Scene {
     public:
         explicit StartScene(std::string name = "start", std::string sceneSource = "start");
         ~StartScene() override = default;

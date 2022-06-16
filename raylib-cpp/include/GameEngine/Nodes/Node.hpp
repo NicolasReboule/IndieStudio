@@ -10,7 +10,7 @@
 
 #include "Base.hpp"
 
-namespace GameEngine {
+namespace gameengine {
 
     class Node : public Base {
     public:

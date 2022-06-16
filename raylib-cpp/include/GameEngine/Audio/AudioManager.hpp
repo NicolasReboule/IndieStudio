@@ -12,7 +12,7 @@
 #include "ISound.hpp"
 #include <vector>
 
-namespace GameEngine {
+namespace gameengine {
     class AudioManager : public raylib::AudioDeviceHelper {
     public:
         AudioManager() = default;
@@ -32,7 +32,7 @@ namespace GameEngine {
     private:
         static std::shared_ptr<AudioManager> _instance;
 
-        std::vector<std::unique_ptr<GameEngine::ISound>> _sounds;
+        std::vector<std::unique_ptr<gameengine::ISound>> _sounds;
     };
 }
 

@@ -16,9 +16,9 @@
 #include <string>
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::builder {
     /**
-     * @brief RlMeshBuilder class
+     * @brief Builder to create a RlMesh easily
      */
     class RlMeshBuilder : public IBuilder<RlMesh> {
     private:

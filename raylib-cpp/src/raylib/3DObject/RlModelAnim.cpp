@@ -10,11 +10,15 @@
 raylib::RlModelAnim::RlModelAnim(const RlModel &model, const std::string &fileName) : _model(model)
 {
     this->_count = 0;
-    ModelAnimation *anims = LoadModelAnimations(fileName.c_str(), &this->_count);
+    _anims = LoadModelAnimations(fileName.c_str(), &this->_count);
     for (unsigned int i = 0; i < this->_count; i++)
-        this->_animations.push_back(anims[i]);
-    UnloadModelAnimations(anims, this->_count);
+        this->_animations.emplace_back(_anims[i]);
     this->_frameCount = 0;
+}
+
+raylib::RlModelAnim::~RlModelAnim()
+{
+    UnloadModelAnimations(_anims, this->_count);
 }
 
 void raylib::RlModelAnim::update(const unsigned int &animIndex)

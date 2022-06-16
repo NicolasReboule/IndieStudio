@@ -10,9 +10,9 @@
 
 #include <raylib.h>
 
-namespace raylib::input {
+namespace raylib::helper::input {
     /**
-     * @brief Input-related functions: cursor
+     * @brief Helper class for Input-related functions: cursor
      */
     class CursorHelper {
     public:

@@ -12,9 +12,9 @@
 #include "raylib/Camera/RlCamera.hpp"
 #include <raylib.h>
 
-namespace raylib::input {
+namespace raylib::helper::input {
     /**
-     * @brief Input-related functions: mouse
+     * @brief Helper class for Input-related functions: mouse
      */
     class MouseHelper {
     public:

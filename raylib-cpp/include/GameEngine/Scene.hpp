@@ -12,7 +12,7 @@
 #include "GameEngine/Nodes/Base.hpp"
 #include <vector>
 
-namespace GameEngine {
+namespace gameengine {
 
     class Scene {
     public:
@@ -21,13 +21,13 @@ namespace GameEngine {
 
         virtual void sceneLauncher() = 0;
 
-        void addNode(const std::shared_ptr<GameEngine::Base> &node);
+        void addNode(const std::shared_ptr<gameengine::Base> &node);
 
         void deleteNode(const std::string& name);
 
-        std::shared_ptr<GameEngine::Base> getNode(const std::string& name);
+        std::shared_ptr<gameengine::Base> getNode(const std::string& name);
 
-        std::vector<std::shared_ptr<GameEngine::Base>> getAllNode();
+        std::vector<std::shared_ptr<gameengine::Base>> getAllNode();
 
         std::string getName();
 
@@ -43,7 +43,7 @@ namespace GameEngine {
     private:
         std::string _sceneSource;
         std::string _name;
-        std::vector<std::shared_ptr<GameEngine::Base>> _nodes;
+        std::vector<std::shared_ptr<gameengine::Base>> _nodes;
     };
 }
 
