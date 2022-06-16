@@ -16,6 +16,7 @@ namespace raylib {
     /**
      * @brief Shader management functions
      * NOTE: Shader functionality is not available on OpenGL 1.1
+     * TODO: Refactor this
      */
     class RlShader {
     public:

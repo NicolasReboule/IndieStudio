@@ -3,7 +3,10 @@ project(raylib-cpp)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
-set(CMAKE_CXX_FLAGS_RELEASE "-W -Wall -Wextra") #TODO: remove this line
+
+if (UNIX)
+    set(CMAKE_CXX_FLAGS_RELEASE "-W -Wall -Wextra") #TODO: remove this line
+endif(UNIX)
 
 find_package(raylib REQUIRED)
 
@@ -21,7 +24,7 @@ add_library(${PROJECT_NAME}
         src/raylib/3DObject/RlModel.cpp
         src/raylib/3DObject/RlModelAnim.cpp
         src/raylib/3DObject/Shape3DHelper.cpp
-        src/raylib/Audio/AudioHelper.cpp
+        src/raylib/Audio/AudioDeviceHelper.cpp
         src/raylib/Audio/RlAudioStream.cpp
         src/raylib/Audio/RlMusic.cpp
         src/raylib/Audio/RlMusic.cpp

@@ -137,22 +137,22 @@ const Color &raylib::RlColor::getColor() const
     return this->_color;
 }
 
-unsigned char raylib::RlColor::getRed() const
+const unsigned char &raylib::RlColor::getRed() const
 {
     return this->_color.r;
 }
 
-unsigned char raylib::RlColor::getGreen() const
+const unsigned char &raylib::RlColor::getGreen() const
 {
     return this->_color.g;
 }
 
-unsigned char raylib::RlColor::getBlue() const
+const unsigned char &raylib::RlColor::getBlue() const
 {
     return this->_color.b;
 }
 
-unsigned char raylib::RlColor::getAlpha() const
+const unsigned char &raylib::RlColor::getAlpha() const
 {
     return this->_color.a;
 }

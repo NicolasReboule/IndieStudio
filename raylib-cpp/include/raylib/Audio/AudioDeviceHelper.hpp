@@ -1,21 +1,21 @@
 /*
 ** EPITECH PROJECT, 2022
-** AudioHelper.hpp
+** AudioDeviceHelper.hpp
 ** FileHelper description:
-** AudioHelper.hpp
+** AudioDeviceHelper.hpp
 */
 
-#ifndef INDIESTUDIO_AUDIOHELPER_HPP
-#define INDIESTUDIO_AUDIOHELPER_HPP
+#ifndef INDIESTUDIO_AUDIODEVICEHELPER_HPP
+#define INDIESTUDIO_AUDIODEVICEHELPER_HPP
 
 #include <raylib.h>
 #include <string>
 
 namespace raylib {
     /**
-     * @brief AudioHelper device management functions
+     * @brief AudioDeviceHelper device management functions
      */
-    class AudioHelper {
+    class AudioDeviceHelper {
     public:
         /**
          * @brief Initialize audio device and context
@@ -44,4 +44,4 @@ namespace raylib {
     };
 }
 
-#endif //INDIESTUDIO_AUDIOHELPER_HPP
+#endif //INDIESTUDIO_AUDIODEVICEHELPER_HPP

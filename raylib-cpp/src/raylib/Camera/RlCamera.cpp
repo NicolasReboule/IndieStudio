@@ -9,13 +9,13 @@
 #include "raylib/Camera/RlCamera.hpp"
 #include "raylib/Camera/CameraHelper.hpp"
 
-raylib::RlCamera::RlCamera(const Vector3f &position, const Vector3f &target, const Vector3f &up,
+raylib::RlCamera::RlCamera(const Vector3f &position, const Vector3f &target, const Vector3f &lookingPoint,
 const float &fovy, const CameraProjection &projection, const CameraMode &mode)
-    : _camera(), _position(position), _target(target), _up(up), _fovy(fovy), _projection(projection), _cameraMode(mode)
+    : _camera(), _position(position), _target(target), _lookingPoint(lookingPoint), _fovy(fovy), _projection(projection), _cameraMode(mode)
 {
     this->_camera.position = {position.x, position.y, position.z};
     this->_camera.target = {target.x, target.y, target.z};
-    this->_camera.up = {up.x, up.y, up.z};
+    this->_camera.up = {lookingPoint.x, lookingPoint.y, lookingPoint.z};
     this->_camera.fovy = fovy;
     this->_camera.projection = projection;
     this->_mode = mode;
@@ -32,7 +32,7 @@ void raylib::RlCamera::reset()
 {
     this->_camera.position = raylib::VectorHelper::toRaylibVector(this->_position);
     this->_camera.target = raylib::VectorHelper::toRaylibVector(this->_target);
-    this->_camera.up = raylib::VectorHelper::toRaylibVector(this->_up);
+    this->_camera.up = raylib::VectorHelper::toRaylibVector(this->_lookingPoint);
     this->_camera.fovy = this->_fovy;
     this->_camera.projection = this->_projection;
     this->_mode = this->_cameraMode;
@@ -90,22 +90,22 @@ const Vector3f &raylib::RlCamera::getConstructedTarget() const
     return _target;
 }
 
-const Vector3f &raylib::RlCamera::getConstructedUp() const
+const Vector3f &raylib::RlCamera::getConstructedLookingPoint() const
 {
-    return _up;
+    return _lookingPoint;
 }
 
-float raylib::RlCamera::getConstructedFovy() const
+const float &raylib::RlCamera::getConstructedFovy() const
 {
     return _fovy;
 }
 
-CameraProjection raylib::RlCamera::getConstructedProjection() const
+const CameraProjection &raylib::RlCamera::getConstructedProjection() const
 {
     return _projection;
 }
 
-CameraMode raylib::RlCamera::getConstructedCameraMode() const
+const CameraMode &raylib::RlCamera::getConstructedCameraMode() const
 {
     return _cameraMode;
 }
@@ -137,7 +137,7 @@ std::ostream &operator<<(std::ostream &os, const raylib::RlCamera &camera)
 {
     /*const Vector3f &pos = camera.getConstructedPosition();
     const Vector3f &target = camera.getConstructedTarget();
-    const Vector3f &up = camera.getConstructedUp();
+    const Vector3f &up = camera.getConstructedLookingPoint();
 
     os << "Camera3D Constructed: "
         << "Position: (" << pos.x << ", " << pos.y << ", " << pos.z << ") "
@@ -151,7 +151,7 @@ std::ostream &operator<<(std::ostream &os, const raylib::RlCamera &camera)
     os << "Camera3d "
         << "Position: (" << camera3D.position.x << ", " << camera3D.position.y << ", " << camera3D.position.z << ") "
         << "Target: (" << camera3D.target.x << ", " << camera3D.target.y << ", " << camera3D.target.z << ") "  << " "
-        << "Up Vector: (" << camera3D.up.x << ", " << camera3D.up.y << ", " << camera3D.up.z << ") "  << " "
+        << "LookingPoint : (" << camera3D.up.x << ", " << camera3D.up.y << ", " << camera3D.up.z << ") "  << " "
         << "Fov: " << camera3D.fovy << " "
         << "Projection: " << (const CameraProjection &) camera3D.projection << " "
         << "Mode: " << camera.getMode();

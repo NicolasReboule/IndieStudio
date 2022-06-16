@@ -9,7 +9,6 @@
 #define INDIESTUDIO_RLFONT_HPP
 
 #include "raylib/Image/RlImage.hpp"
-#include "raylib/Core/RlLogger.hpp"
 #include <raylib.h>
 #include <string>
 #include <memory>

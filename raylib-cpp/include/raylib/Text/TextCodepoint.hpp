@@ -25,21 +25,16 @@ namespace raylib {
         explicit TextCodepoint(const std::string &text);
 
         /**
-         * @brief Destroy the RlText codepoints
-         */
-        ~TextCodepoint();
-
-        /**
          * @brief Get the codepoints
          * @return the codepoints
          */
-        const int *getCodepoints() const;
+        const std::vector<int> &getCodepoints() const;
 
         /**
          * @brief Get total number of codepoints in a UTF-8 encoded string
          * @return the codepoints count
          */
-        const int &getCodepointsCount() const;
+        int getCodepointsCount() const;
 
         /**
          * @brief Encode one codepoint into UTF-8 byte (array length returned as parameter)
@@ -54,11 +49,10 @@ namespace raylib {
          * @param length the length of the codepoints (in bytes)
          * @return the UTF-8 text string
          */
-        std::string textCodepointsToUTF8(const int &bytesLength);
+        std::string toUTF8String(const int &bytesLength);
 
     private:
-        int *_codepoints;
-        int _codepointsCount;
+        std::vector<int> _codepoints; /**< The codepoints */
     };
 }
 #endif //INDIESTUDIO_TEXTCODEPOINT_HPP

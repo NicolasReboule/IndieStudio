@@ -7,7 +7,7 @@
 
 #include "raylib/Camera/RlCameraBuilder.hpp"
 
-raylib::RlCameraBuilder::RlCameraBuilder() : _position({0, 10, 10}), _target({0, 0, 0}), _up({0, 1, 0})
+raylib::RlCameraBuilder::RlCameraBuilder() : _position({0, 10, 10}), _target({0, 0, 0}), _lookingPoint({0, 1, 0})
 {
     this->_fovy = 45.0f;
     this->_projection = CAMERA_PERSPECTIVE;
@@ -26,9 +26,9 @@ raylib::RlCameraBuilder &raylib::RlCameraBuilder::setTarget(const Vector3f &targ
     return *this;
 }
 
-raylib::RlCameraBuilder &raylib::RlCameraBuilder::setUp(const Vector3f &up)
+raylib::RlCameraBuilder &raylib::RlCameraBuilder::setLookingPoint(const Vector3f &lookingPoint)
 {
-    _up = up;
+    _lookingPoint = lookingPoint;
     return *this;
 }
 
@@ -52,5 +52,5 @@ raylib::RlCameraBuilder &raylib::RlCameraBuilder::setCameraMode(CameraMode camer
 
 raylib::RlCamera raylib::RlCameraBuilder::build() noexcept
 {
-    return RlCamera(this->_position, this->_target, this->_up, this->_fovy, this->_projection, this->_cameraMode);
+    return RlCamera(this->_position, this->_target, this->_lookingPoint, this->_fovy, this->_projection, this->_cameraMode);
 }

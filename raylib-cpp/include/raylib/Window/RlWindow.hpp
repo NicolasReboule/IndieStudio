@@ -44,6 +44,12 @@ namespace raylib::window {
         void createWindow(const std::string &title, int width, int height, int fps = 60);
 
         /**
+         * @brief Get the singleton instance of the RlWindow
+         * @return the singleton instance of the RlWindow
+         */
+        static std::shared_ptr<RlWindow> &getInstance();
+
+        /**
          * @brief Check if the window is open
          * @return true if the window is open, false if close icon has been pressed
          */
@@ -181,23 +187,51 @@ namespace raylib::window {
          */
         void takeScreenshot(const std::string &fileName);
 
-        inline const std::string &getTitle() const { return _title; };
-        inline const int &getHeight() const { return _height; };
-        inline const int &getWidth() const { return _width; };
-        inline const int &getMinHeight() const { return _minHeight; };
-        inline const int &getMinWidth() const { return _minWidth; };
+        /**
+         * @brief Get the window title
+         * @return the window title
+         */
+        const std::string &getTitle() const;
 
-        static std::shared_ptr<RlWindow> &getInstance();
+        /**
+         * @brief Get the window width
+         * @return the window width
+         */
+        const int &getWidth() const;
+
+        /**
+         * @brief Get the window height
+         * @return the window height
+         */
+        const int &getHeight() const;
+
+        /**
+         * @brief Get the window minimum width
+         * @return the window minimum width
+         */
+        const int &getMinWidth() const;
+
+        /**
+         * @brief Get the window minimum height
+         * @return the window minimum height
+         */
+        const int &getMinHeight() const;
+
+        /**
+         * @brief Check if the window is created
+         * @return true if the window is created, false otherwise
+         */
+        const bool &isIsCreated() const;
 
     private:
-        static std::shared_ptr<RlWindow> _instance;
+        static std::shared_ptr<RlWindow> _instance; /**< The singleton instance of the RlWindow */
 
-        std::string _title;
-        int _width;
-        int _height;
-        int _minWidth;
-        int _minHeight;
-        bool _isCreated = false;
+        std::string _title; /**< The title of the window */
+        int _width; /**< The width of the window */
+        int _height; /**< The height of the window */
+        int _minWidth; /**< The minimum width of the window */
+        int _minHeight; /**< The minimum height of the window */
+        bool _isCreated = false; /**< If the window is created */
     };
 }
 

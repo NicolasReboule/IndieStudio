@@ -73,7 +73,7 @@ namespace raylib {
          * @brief Begin custom shader drawing
          * @param shader to use
          */
-        static void beginShaderMode(const Shader &shader);
+        static void beginShaderMode(const Shader &shader); //TODO: change this to RlShader
 
         /**
          * @brief End custom shader drawing (use default shader)
@@ -109,7 +109,7 @@ namespace raylib {
          * @brief Begin stereo rendering (requires VR simulator)
          * @param config to use
          */
-        static void beginVrStereoMode(VrStereoConfig config);
+        static void beginVrStereoMode(const VrStereoConfig &config);
 
         /**
          * @brief End stereo rendering (requires VR simulator)

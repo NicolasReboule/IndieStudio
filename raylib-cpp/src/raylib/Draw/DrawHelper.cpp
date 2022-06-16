@@ -82,7 +82,7 @@ void raylib::DrawHelper::endScissorMode()
     EndScissorMode();
 }
 
-void raylib::DrawHelper::beginVrStereoMode(VrStereoConfig config)
+void raylib::DrawHelper::beginVrStereoMode(const VrStereoConfig &config)
 {
     BeginVrStereoMode(config);
 }

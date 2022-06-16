@@ -54,7 +54,7 @@ namespace raylib {
          * @param rec the rectangle
          * @param pixels the pixels
          */
-        void updateRec(const Rectangle &rec, const void *pixels);
+        void updateRect(const Rectangle &rec, const void *pixels);
 
         /**
          * @brief Generate mipmaps for GPU texture

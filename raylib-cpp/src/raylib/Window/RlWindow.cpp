@@ -160,3 +160,33 @@ void raylib::window::RlWindow::takeScreenshot(const std::string &fileName)
 {
     TakeScreenshot(fileName.c_str());
 }
+
+const std::string &raylib::window::RlWindow::getTitle() const
+{
+    return this->_title;
+}
+
+const int &raylib::window::RlWindow::getWidth() const
+{
+    return this->_width;
+}
+
+const int &raylib::window::RlWindow::getHeight() const
+{
+    return this->_height;
+}
+
+const int &raylib::window::RlWindow::getMinWidth() const
+{
+    return this->_minWidth;
+}
+
+const int &raylib::window::RlWindow::getMinHeight() const
+{
+    return this->_minHeight;
+}
+
+const bool &raylib::window::RlWindow::isIsCreated() const
+{
+    return this->_isCreated;
+}

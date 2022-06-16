@@ -38,7 +38,7 @@ void raylib::RlTexture::update(const void *pixels)
     UpdateTexture(this->_texture, pixels);
 }
 
-void raylib::RlTexture::updateRec(const Rectangle &rec, const void *pixels)
+void raylib::RlTexture::updateRect(const Rectangle &rec, const void *pixels)
 {
     UpdateTextureRec(this->_texture, rec, pixels);
 }

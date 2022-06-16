@@ -93,19 +93,19 @@ namespace raylib {
         RlTextBuilder &setFontPath(const std::string &fontPath);
 
     private:
-        bool _isTextSet = false;
-        bool _isFontSet = false;
-        bool _isFontPathSet = false;
-        bool _isFontSizeSet = false;
-        std::string _text;
-        std::string _fontPath;
-        Vector2f _position;
-        std::shared_ptr<RlFont> _font;
-        RlColor _color;
-        float _fontSize;
-        float _textSpacing;
-        float _rotation;
-        Vector2f _origin;
+        bool _isTextSet = false; /**< If the text has been set */
+        bool _isFontSet = false; /**< If the font has been set */
+        bool _isFontPathSet = false; /**< If the font path has been set */
+        bool _isFontSizeSet = false; /**< If the font size has been set */
+        std::string _text; /**< The text */
+        std::string _fontPath; /**< The font path */
+        Vector2f _position; /**< The position */
+        std::shared_ptr<RlFont> _font; /**< The font */
+        RlColor _color; /**< The color */
+        float _fontSize; /**< The font size */
+        float _textSpacing; /**< The text spacing */
+        float _rotation; /**< The rotation */
+        Vector2f _origin; /**< The origin */
     };
 }
 #endif //INDIESTUDIO_RLTEXTBUILDER_HPP
