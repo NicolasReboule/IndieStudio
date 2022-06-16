@@ -21,6 +21,8 @@ namespace indie {
         int _numberPlayers;
         int _playersAlive;
 
+        std::string _playerWinner;
+
     private:
         static std::shared_ptr<GlobalInstance> _instance;
     };

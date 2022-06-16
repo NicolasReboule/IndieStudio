@@ -34,7 +34,7 @@ void indie::Player::ready()
 
 void indie::Player::update(float delta)
 {
-    auto sceneManager = gameengine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
     this->_speed = 5.0f * delta;
@@ -50,7 +50,7 @@ void indie::Player::update(float delta)
 void indie::Player::spawnBomb()
 {
 
-    auto sceneManager = gameengine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
 
     if (this->_state == ALIVE) {
@@ -71,7 +71,7 @@ void indie::Player::spawnBomb()
 
 void indie::Player::checkCollisions()
 {
-    auto sceneManager = gameengine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
     if (this->_state == ALIVE)
@@ -104,7 +104,7 @@ void indie::Player::checkCollisions()
 
 void indie::Player::handleInput()
 {
-    auto sceneManager = gameengine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
 
     Vector3f direction = {0, 0, 0};
     float gamepadX = raylib::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_X);

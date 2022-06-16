@@ -20,4 +20,6 @@
 
 #include "global/GlobalInstance.hpp"
 
+#include "winning/WinningScene.hpp"
+
 #endif //INDIESTUDIO_INDIESTUDIO_HPP

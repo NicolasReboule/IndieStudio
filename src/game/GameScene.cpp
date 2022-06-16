@@ -209,11 +209,15 @@ void indie::GameScene::displayWinner(const std::string &name)
     auto text = raylib::RlTextBuilder().setText(name + "   WINNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
     raylib::DrawTextHelper::drawText(text);
 
+    auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
     auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
     auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
     buttonMainMenu.setHiding(false);
     buttonQuit.setHiding(false);
+
+    globalInstance->_playerWinner = name;
+    //sceneManager->changeScene("winning");
 }
 

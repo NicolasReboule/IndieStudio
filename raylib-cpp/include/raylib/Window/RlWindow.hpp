@@ -228,6 +228,7 @@ namespace raylib::window {
          * @brief Get the window mutable RlCamera
          * @return the window mutable RlCamera
          */
+
         raylib::RlCamera &getCamera();
 
         /**

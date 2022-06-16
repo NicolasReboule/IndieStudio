@@ -24,10 +24,13 @@ int main(int ac, char **av)
     auto chooseNumberPlayerScene = std::make_shared<indie::ChooseNumberPlayerScene>();
     sceneManager->addScene(chooseNumberPlayerScene);
 
-    auto gameMenuScene = std::make_shared<indie::GameScene>();
-    sceneManager->addScene(gameMenuScene);
+    auto gameScene = std::make_shared<indie::GameScene>();
+    sceneManager->addScene(gameScene);
 
-    sceneManager->changeScene("chooseNumberPlayer");
+    auto winningScene = std::make_shared<indie::WinningScene>();
+    sceneManager->addScene(winningScene);
+
+    sceneManager->changeScene("winning");
 
     while (window->isOpen()) {
         //sceneManager->makeLoop(camera);

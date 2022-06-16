@@ -9,7 +9,7 @@
 
 std::shared_ptr<raylib::window::RlWindow> raylib::window::RlWindow::_instance;
 
-raylib::window::RlWindow::RlWindow() : _width(), _height(), _minWidth(), _minHeight(), _camera()
+raylib::window::RlWindow::RlWindow() : _width(), _height(), _minWidth(), _minHeight()
 {
 }
 
@@ -191,11 +191,6 @@ const bool &raylib::window::RlWindow::isIsCreated() const
     return this->_isCreated;
 }
 
-raylib::RlCamera &raylib::window::RlWindow::getCamera()
-{
-    return this->_camera;
-}
-
 const raylib::RlCamera &raylib::window::RlWindow::getCamera() const
 {
     return this->_camera;
@@ -204,4 +199,9 @@ const raylib::RlCamera &raylib::window::RlWindow::getCamera() const
 void raylib::window::RlWindow::setCamera(const raylib::RlCamera &camera)
 {
     this->_camera = camera;
+}
+
+raylib::RlCamera &raylib::window::RlWindow::getCamera()
+{
+    return this->_camera;
 }
