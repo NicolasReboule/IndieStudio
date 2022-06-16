@@ -19,14 +19,14 @@
 
 namespace raylib::window {
     /**
-     * @brief Window class
+     * @brief Encapsulation of the raylib functions to create a Window
      */
     class RlWindow {
     public:
 
         /**
          * @deprecated Don't use this use RlWindow#getInstance
-         * @see RlWindow#getInstanve RlWindow#createWindow
+         * @see RlWindow#getInstance RlWindow#createWindow
          */
         RlWindow();
 
@@ -228,7 +228,6 @@ namespace raylib::window {
          * @brief Get the window mutable RlCamera
          * @return the window mutable RlCamera
          */
-
         raylib::RlCamera &getCamera();
 
         /**
@@ -243,6 +242,7 @@ namespace raylib::window {
          */
         void setCamera(const RlCamera &camera);
 
+
     private:
         static std::shared_ptr<RlWindow> _instance; /**< The singleton instance of the RlWindow */
 
@@ -253,7 +253,7 @@ namespace raylib::window {
         int _minHeight; /**< The minimum height of the window */
         bool _isCreated = false; /**< If the window is created */
 
-        raylib::RlCamera _camera; /**< The camera */
+        raylib::RlCamera _camera; /**< The window camera */
     };
 }
 

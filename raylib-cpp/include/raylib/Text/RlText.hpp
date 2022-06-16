@@ -15,9 +15,9 @@
 #include <string>
 #include <memory>
 
-namespace raylib {
+namespace raylib::text {
     /**
-     * @brief RlText class
+     * @brief Encapsulation of the raylib text
      */
     class RlText {
     public:

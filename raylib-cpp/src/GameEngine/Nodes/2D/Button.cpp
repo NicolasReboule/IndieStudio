@@ -34,9 +34,8 @@ void gameengine::Button::update(float delta)
             this->_state = 0;
             return;
         }
-        if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::input::MouseHelper::getMousePosition(),
-                                                              this->_bounds)) {
-            if (raylib::input::MouseHelper::isMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+        if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::helper::input::MouseHelper::getMousePosition(), this->_bounds)) {
+            if (raylib::helper::input::MouseHelper::isMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                 this->_state = 2;
                 this->_action = true;
             } else
@@ -55,7 +54,7 @@ void gameengine::Button::update(float delta)
 
 void gameengine::Button::draw()
 {
-    raylib::DrawTextureHelper::drawTextureRec(this->_texture, this->_rectangle, this->_position, RlColor::White);
+    raylib::helper::draw::DrawTextureHelper::drawTextureRec(this->_texture, this->_rectangle, this->_position, RlColor::White);
 }
 
 Vector2f gameengine::Button::getPosition()

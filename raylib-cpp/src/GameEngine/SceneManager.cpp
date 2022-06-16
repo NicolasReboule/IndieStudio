@@ -104,7 +104,7 @@ void gameengine::SceneManager::update()
     if (this->_actualScene == "empty")
         return;
 
-    float delta = raylib::CoreHelper::getFrameTime();
+    float delta = raylib::helper::CoreHelper::getFrameTime();
 
     for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
         if (scene->getSceneSource() == this->_actualScene) {
@@ -120,14 +120,14 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
 {
     auto window = raylib::window::RlWindow::getInstance();
 
-    raylib::DrawHelper::beginDrawing();
-    raylib::DrawHelper::clearBackground(RlColor::DarkBrown);
-    raylib::DrawTextHelper::drawFps(10, 10, 30);
+    raylib::helper::draw::DrawHelper::beginDrawing();
+    raylib::helper::draw::DrawHelper::clearBackground(RlColor::DarkBrown);
+    raylib::helper::draw::DrawTextHelper::drawFps(10, 10, 30);
 
-    if (raylib::input::KeyboardHelper::isKeyPressed(KEY_R))
+    if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
         camera.reset();
     camera.update();
-    raylib::DrawHelper::beginMode3D(camera);
+    raylib::helper::draw::DrawHelper::beginMode3D(camera);
 
     //TODO: find a way to graw a grid with the map size
     raylib::Shape3DHelper::drawGrid({9, 9}, 1.0f);
@@ -135,11 +135,11 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
     this->draw();
     raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red);
 
-    raylib::DrawHelper::endMode3D();
+    raylib::helper::draw::DrawHelper::endMode3D();
 
     this->draw2D();
 
-    raylib::DrawHelper::endDrawing();
+    raylib::helper::draw::DrawHelper::endDrawing();
 }
 
 

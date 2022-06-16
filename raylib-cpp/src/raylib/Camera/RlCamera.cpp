@@ -5,9 +5,9 @@
 ** Camera
 */
 
-#include <iomanip>
 #include "raylib/Camera/RlCamera.hpp"
 #include "raylib/Camera/CameraHelper.hpp"
+#include "raylib/Window/RlWindow.hpp"
 
 raylib::RlCamera::RlCamera(const Vector3f &position, const Vector3f &target, const Vector3f &lookingPoint,
 const float &fovy, const CameraProjection &projection, const CameraMode &mode)
@@ -19,7 +19,10 @@ const float &fovy, const CameraProjection &projection, const CameraMode &mode)
     this->_camera.fovy = fovy;
     this->_camera.projection = projection;
     this->_mode = mode;
-    raylib::CameraHelper::setCameraMode(*this, this->_mode);
+    auto &window = raylib::window::RlWindow::getInstance();
+    if (!window->isIsCreated())
+        throw ex::CameraException("The window has not been created yet, can't set the camera mode. Please create the window first.");
+    raylib::helper::CameraHelper::setCameraMode(*this, this->_mode);
 }
 
 void raylib::RlCamera::update()
@@ -30,13 +33,13 @@ void raylib::RlCamera::update()
 
 void raylib::RlCamera::reset()
 {
-    this->_camera.position = raylib::VectorHelper::toRaylibVector(this->_position);
-    this->_camera.target = raylib::VectorHelper::toRaylibVector(this->_target);
-    this->_camera.up = raylib::VectorHelper::toRaylibVector(this->_lookingPoint);
+    this->_camera.position = raylib::helper::VectorHelper::toRaylibVector(this->_position);
+    this->_camera.target = raylib::helper::VectorHelper::toRaylibVector(this->_target);
+    this->_camera.up = raylib::helper::VectorHelper::toRaylibVector(this->_lookingPoint);
     this->_camera.fovy = this->_fovy;
     this->_camera.projection = this->_projection;
     this->_mode = this->_cameraMode;
-    raylib::CameraHelper::setCameraMode(*this, this->_mode);
+    raylib::helper::CameraHelper::setCameraMode(*this, this->_mode);
 }
 
 void raylib::RlCamera::setPosition(const Vector3f &position)
@@ -62,7 +65,7 @@ void raylib::RlCamera::setFov(const float &fovy)
 void raylib::RlCamera::setCameraMode(const CameraMode &mode)
 {
     this->_mode = mode;
-    raylib::CameraHelper::setCameraMode(*this, this->_mode);
+    raylib::helper::CameraHelper::setCameraMode(*this, this->_mode);
 }
 
 const Camera3D &raylib::RlCamera::get() const

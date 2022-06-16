@@ -12,11 +12,11 @@
 #include "raylib/IBuilder.hpp"
 #include "raylib/exception/BuilderException.hpp"
 
-namespace raylib {
+namespace raylib::builder {
     /**
-     * @brief RlTextBuilder class
+     * @brief Builder to create a RlText easily
      */
-    class RlTextBuilder : public IBuilder<RlText> {
+    class RlTextBuilder : public IBuilder<raylib::text::RlText> {
     public:
         /**
         * @brief Construct a new TextBuilder object
@@ -27,7 +27,7 @@ namespace raylib {
          * @brief Build the RlText
          * @return the RlText
          */
-        RlText build() override;
+        raylib::text::RlText build() override;
 
         /**
          * @brief Set the text
@@ -48,7 +48,7 @@ namespace raylib {
          * @param font the font
          * @return the TextBuilder object
          */
-        RlTextBuilder &setFont(const std::shared_ptr<RlFont> &font);
+        RlTextBuilder &setFont(const std::shared_ptr<raylib::text::RlFont> &font);
 
         /**
          * @brief Set the color
@@ -100,7 +100,7 @@ namespace raylib {
         std::string _text; /**< The text */
         std::string _fontPath; /**< The font path */
         Vector2f _position; /**< The position */
-        std::shared_ptr<RlFont> _font; /**< The font */
+        std::shared_ptr<raylib::text::RlFont> _font; /**< The font */
         RlColor _color; /**< The color */
         float _fontSize; /**< The font size */
         float _textSpacing; /**< The text spacing */

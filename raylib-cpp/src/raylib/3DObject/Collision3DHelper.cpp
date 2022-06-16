@@ -12,7 +12,7 @@
 
 bool raylib::Collision3dHelper::checkCollisionSpheres(Vector3f center1, float radius1, Vector3f center2, float radius2)
 {
-    return CheckCollisionSpheres(raylib::VectorHelper::toRaylibVector(center1), radius1, raylib::VectorHelper::toRaylibVector(center2), radius2);
+    return CheckCollisionSpheres(raylib::helper::VectorHelper::toRaylibVector(center1), radius1, raylib::helper::VectorHelper::toRaylibVector(center2), radius2);
 }
 
 bool raylib::Collision3dHelper::checkCollisionBoxes(BoundingBox box1, BoundingBox box2)
@@ -22,12 +22,12 @@ bool raylib::Collision3dHelper::checkCollisionBoxes(BoundingBox box1, BoundingBo
 
 bool raylib::Collision3dHelper::checkCollisionBoxSphere(BoundingBox box, Vector3f center, float radius)
 {
-    return CheckCollisionBoxSphere(box, raylib::VectorHelper::toRaylibVector(center), radius);
+    return CheckCollisionBoxSphere(box, raylib::helper::VectorHelper::toRaylibVector(center), radius);
 }
 
 RayCollision raylib::Collision3dHelper::getRayCollisionSphere(Ray ray, Vector3f center, float radius)
 {
-    return GetRayCollisionSphere(ray, raylib::VectorHelper::toRaylibVector(center), radius);
+    return GetRayCollisionSphere(ray, raylib::helper::VectorHelper::toRaylibVector(center), radius);
 }
 
 RayCollision raylib::Collision3dHelper::getRayCollisionBox(Ray ray, BoundingBox box)
@@ -47,11 +47,11 @@ RayCollision raylib::Collision3dHelper::getRayCollisionMesh(Ray ray, RlMesh mesh
 
 RayCollision raylib::Collision3dHelper::getRayCollisionTriangle(Ray ray, Vector3f p1, Vector3f p2, Vector3f p3)
 {
-    return GetRayCollisionTriangle(ray, raylib::VectorHelper::toRaylibVector(p1), raylib::VectorHelper::toRaylibVector(p2), raylib::VectorHelper::toRaylibVector(p3));
+    return GetRayCollisionTriangle(ray, raylib::helper::VectorHelper::toRaylibVector(p1), raylib::helper::VectorHelper::toRaylibVector(p2), raylib::helper::VectorHelper::toRaylibVector(p3));
 }
 
 RayCollision raylib::Collision3dHelper::getRayCollisionQuad(Ray ray, Vector3f p1, Vector3f p2, Vector3f p3, Vector3f p4)
 {
-    return GetRayCollisionQuad(ray, raylib::VectorHelper::toRaylibVector(p1), raylib::VectorHelper::toRaylibVector(p2),
-                               raylib::VectorHelper::toRaylibVector(p3), raylib::VectorHelper::toRaylibVector(p4));
+    return GetRayCollisionQuad(ray, raylib::helper::VectorHelper::toRaylibVector(p1), raylib::helper::VectorHelper::toRaylibVector(p2),
+                               raylib::helper::VectorHelper::toRaylibVector(p3), raylib::helper::VectorHelper::toRaylibVector(p4));
 }

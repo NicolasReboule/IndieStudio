@@ -14,7 +14,7 @@
 
 namespace raylib {
     /**
-     * @brief Color class
+     * @brief Encapsulation of the raylib Color
      */
     class RlColor {
     public:

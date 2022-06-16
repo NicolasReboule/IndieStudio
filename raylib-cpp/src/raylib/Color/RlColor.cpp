@@ -81,7 +81,7 @@ void raylib::RlColor::alpha(float alpha)
 
 Vector3f raylib::RlColor::toHSV()
 {
-    return raylib::VectorHelper::toVectorf(ColorToHSV(this->_color));
+    return raylib::helper::VectorHelper::toVectorf(ColorToHSV(this->_color));
 }
 
 std::uint32_t raylib::RlColor::toInteger() const

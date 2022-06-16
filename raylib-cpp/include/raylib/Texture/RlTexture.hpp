@@ -12,9 +12,9 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::texture {
     /**
-     * @brief RlTexture class
+     * @brief Encapsulation of the raylib texture
      * NOTE: These functions require GPU access
      */
     class RlTexture {

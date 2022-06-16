@@ -11,9 +11,9 @@
 #include "raylib/IBuilder.hpp"
 #include "raylib/Camera/RlCamera.hpp"
 
-namespace raylib {
+namespace raylib::builder {
     /**
-     * @brief RlCameraBuilder class
+     * @brief Builder to create a RlCamera easily
      */
     class RlCameraBuilder : public IBuilder<RlCamera> {
     public:

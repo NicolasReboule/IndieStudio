@@ -12,28 +12,34 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::shader {
     /**
-     * @brief Shader management functions
+     * @brief The encapsultation of the raylib Shader
      * NOTE: Shader functionality is not available on OpenGL 1.1
-     * TODO: Refactor this
      */
     class RlShader {
     public:
+        /**
+         * @brief Construct a new RlShader object
+         */
         RlShader();
+
+        /**
+         * @brief Destroy the RlShader object
+         */
         ~RlShader();
 
         /**
-         * @brief Load shader from files and bind default locations
-         * @param vsFileName to load
-         * @param fsFileName to load
+         * @brief Load a shader from a file
+         * @param vsFileName the vertex shader file name
+         * @param fsFileName the fragment shader file name
          */
         void load(const std::string &vsFileName, const std::string &fsFileName);
 
         /**
-         * @brief Load shader from code strings and bind default locations
-         * @param vsCode to load
-         * @param fsCode to load
+         * @brief Load a shader from code strings
+         * @param vsCode the vertex shader code
+         * @param fsCode the fragment shader code
          */
         void loadFromMemory(const std::string &vsCode, const std::string &fsCode);
 
@@ -80,7 +86,7 @@ namespace raylib {
          * @param locIndex to set
          * @param texture to set
          */
-        void setValueTexture(int locIndex, const RlTexture &texture);
+        void setValueTexture(int locIndex, const texture::RlTexture &texture);
 
         /**
          * @brief Get the raylib Shader's

@@ -7,12 +7,11 @@
 
 #include "game/Bomb.hpp"
 #include "game/Magma.hpp"
-
 #include "game/Wall.hpp"
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
-indie::Bomb::Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
+indie::Bomb::Bomb(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
 {
     this->_timer = 1;
 }

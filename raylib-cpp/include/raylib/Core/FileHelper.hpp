@@ -13,10 +13,12 @@
 #include <fstream>
 #include <vector>
 #include <filesystem>
+#include <concepts>
+#include <functional>
 
-namespace raylib {
+namespace raylib::helper {
     /**
-     * @brief Files management functions
+     * @brief Helper class for files
      */
     class FileHelper {
     public:
@@ -115,6 +117,15 @@ namespace raylib {
         static std::vector<std::string> getDirectoryFiles(const std::string &dirPath);
 
         /**
+         * @brief Get all files in directory with a filter
+         * @param dirPath the directory path
+         * @param filterFunction the filter function to apply (true to keep file)
+         * If null, all files are kept
+         * @return the files
+         */
+        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath, const std::function<bool(const std::string &fileName)> &filterFunction);
+
+        /**
          * @brief Change working directory
          * @param dir the directory
          * @return true on success
@@ -138,7 +149,7 @@ namespace raylib {
          * @param fileName the file name
          * @return the file modification time
          */
-        static long getFileModTime(const std::string &fileName);
+        static long long getFileModTime(const std::string &fileName);
 
     };
 }

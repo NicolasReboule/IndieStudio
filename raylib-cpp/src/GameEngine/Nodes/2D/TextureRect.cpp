@@ -21,7 +21,7 @@ void gameengine::TextureRect::draw()
     rectangle.y = 0;
     rectangle.width = (float) this->_texture.getWidth();
     rectangle.height = (float) this->_texture.getHeight();
-    raylib::DrawTextureHelper::drawTextureRec(this->_texture, rectangle, this->_position, this->_color);
+    raylib::helper::draw::DrawTextureHelper::drawTextureRec(this->_texture, rectangle, this->_position, this->_color);
 }
 
 Vector2f gameengine::TextureRect::getPosition()

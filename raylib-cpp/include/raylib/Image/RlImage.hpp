@@ -15,7 +15,7 @@
 
 namespace raylib::image {
     /**
-     * @brief Image class
+     * @brief The encapsultation of the raylib Image
      */
     class RlImage {
     public:

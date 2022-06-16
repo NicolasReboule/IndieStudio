@@ -14,7 +14,7 @@
 
 namespace raylib::window {
     /**
-     * @brief The System class
+     * @brief Some basic information about the system (screen, monitors, clipboard, ...)
      */
     class System {
     public:

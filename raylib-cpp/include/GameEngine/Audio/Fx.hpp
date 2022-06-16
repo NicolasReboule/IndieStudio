@@ -11,7 +11,7 @@
 #include "raylib/Raylib.hpp"
 #include "ISound.hpp"
 
-namespace gameengine::Audio {
+namespace gameengine::audio {
     class Fx : public ISound, public raylib::RlSound {
         public:
             Fx(const std::string &fileName, SoundCategory category);

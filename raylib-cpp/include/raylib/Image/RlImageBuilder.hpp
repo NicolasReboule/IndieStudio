@@ -14,11 +14,11 @@
 #include "raylib/exception/BuilderException.hpp"
 #include "raylib/Image/ImageGenerator.hpp"
 
-namespace raylib::image {
+namespace raylib::builder {
     /**
-     * @brief RlImageBuilder class
+     * @brief Builder to create a RlImage easily
      */
-    class RlImageBuilder : public IBuilder<RlImage> {
+    class RlImageBuilder : public IBuilder<raylib::image::RlImage> {
     private:
         /**
          * @brief Enum for parameters
@@ -184,7 +184,7 @@ namespace raylib::image {
          * @brief Build the RlImage object
          * @return the RlImage object
          */
-        RlImage build() override;
+        raylib::image::RlImage build() override;
 
     private:
         long _flags; /**< The flags for the builder, to check the parameters set */

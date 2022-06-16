@@ -9,7 +9,7 @@
 #include "GameEngine/Nodes/KinematicBody.hpp"
 #include "GameEngine/SceneManager.hpp"
 
-gameengine::KinematicBody::KinematicBody(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
+gameengine::KinematicBody::KinematicBody(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
 {
 }
 

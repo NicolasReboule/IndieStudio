@@ -7,7 +7,7 @@
 
 #include "raylib/3DObject/RlMeshBuilder.hpp"
 
-raylib::RlMeshBuilder::RlMeshBuilder() : _heightmap({}), _vec3fSize(0, 0, 0), _cubicmap({}), _cubeSize(0, 0, 0)
+raylib::builder::RlMeshBuilder::RlMeshBuilder() : _heightmap({}), _vec3fSize(0, 0, 0), _cubicmap({}), _cubeSize(0, 0, 0)
 {
     _type = -1;
     _flags = 0;
@@ -24,139 +24,139 @@ raylib::RlMeshBuilder::RlMeshBuilder() : _heightmap({}), _vec3fSize(0, 0, 0), _c
     _size = 0;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setMeshType(const raylib::RlMeshBuilder::MeshType &meshType)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setMeshType(const raylib::builder::RlMeshBuilder::MeshType &meshType)
 {
     _type = meshType;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setRadius(const float &radius)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setRadius(const float &radius)
 {
     _radius = radius;
     _flags |= RlMeshBuilder::Radius;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setWidth(const float &width)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setWidth(const float &width)
 {
     _width = width;
     _flags |= RlMeshBuilder::Width;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setLength(const float &length)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setLength(const float &length)
 {
     _length = length;
     _flags |= RlMeshBuilder::Length;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setHeight(const float &height)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setHeight(const float &height)
 {
     _height = height;
     _flags |= RlMeshBuilder::Height;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setResX(const int &resX)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setResX(const int &resX)
 {
     _resX = resX;
     _flags |= RlMeshBuilder::ResX;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setResZ(const int &resZ)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setResZ(const int &resZ)
 {
     _resZ = resZ;
     _flags |= RlMeshBuilder::ResZ;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setRings(const int &rings)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setRings(const int &rings)
 {
     _rings = rings;
     _flags |= RlMeshBuilder::Rings;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setSlices(const int &slices)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setSlices(const int &slices)
 {
     _slices = slices;
     _flags |= RlMeshBuilder::Slices;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setSize(const float &size)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setSize(const float &size)
 {
     _size = size;
     _flags |= RlMeshBuilder::Size;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setRadSeg(const int &radSeg)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setRadSeg(const int &radSeg)
 {
     _radSeg = radSeg;
     _flags |= RlMeshBuilder::RadSeg;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setSides(const int &sides)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setSides(const int &sides)
 {
     _sides = sides;
     _flags |= RlMeshBuilder::Sides;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setHeightmap(const raylib::image::RlImage &heightmap)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setHeightmap(const raylib::image::RlImage &heightmap)
 {
     _heightmap = heightmap;
     _flags |= RlMeshBuilder::Heightmap;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setVec3fSize(const Vector3f &size)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setVec3fSize(const Vector3f &size)
 {
     _vec3fSize = size;
     _flags |= RlMeshBuilder::Size;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setCubicmap(const raylib::image::RlImage &cubicmap)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setCubicmap(const raylib::image::RlImage &cubicmap)
 {
     _cubicmap = cubicmap;
     _flags |= RlMeshBuilder::Cubicmap;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setCubeSize(const Vector3f &cubeSize)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setCubeSize(const Vector3f &cubeSize)
 {
     _cubeSize = cubeSize;
     _flags |= RlMeshBuilder::CubeSize;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setHemisphereRings(const int &rings)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setHemisphereRings(const int &rings)
 {
     _rings = rings;
     _flags |= RlMeshBuilder::HemisphereRings;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setConeSlices(const int &slices)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setConeSlices(const int &slices)
 {
     _slices = slices;
     _flags |= RlMeshBuilder::ConeSlices;
     return *this;
 }
 
-raylib::RlMeshBuilder &raylib::RlMeshBuilder::setKnotRadSeg(const int &radSeg)
+raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setKnotRadSeg(const int &radSeg)
 {
     _radSeg = radSeg;
     _flags |= RlMeshBuilder::KnotRadSeg;
     return *this;
 }
 
-raylib::RlMesh raylib::RlMeshBuilder::build()
+raylib::RlMesh raylib::builder::RlMeshBuilder::build()
 {
     if (_type == -1)
         throw raylib::ex::BuilderException("Mesh type not set");

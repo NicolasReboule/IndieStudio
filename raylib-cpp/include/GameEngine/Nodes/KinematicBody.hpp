@@ -14,7 +14,7 @@ namespace gameengine {
 
     class KinematicBody : public StaticBody{
     public:
-        KinematicBody(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        KinematicBody(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         KinematicBody(const std::string &name, const std::string &modelPath, const std::string &texturePath);
         ~KinematicBody() override = default;
 

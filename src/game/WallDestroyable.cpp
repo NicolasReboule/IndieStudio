@@ -9,7 +9,7 @@
 #include "game/WallDestroyable.hpp"
 #include "game/BonusRange.hpp"
 
-indie::WallDestroyable::WallDestroyable(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
+indie::WallDestroyable::WallDestroyable(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
 {
 }
 
@@ -20,7 +20,7 @@ void indie::WallDestroyable::spawnBonus()
     auto random = raylib::Random();
     int rand = random.generate(0, 1);
     if (rand == 0) {
-        auto bonusRange = std::make_shared<indie::BonusRange>("bonusRange" + std::to_string(random.generate(0, 99999)), raylib::RlMeshBuilder::MeshType::MeshCube, "assets/tnt.png");
+        auto bonusRange = std::make_shared<indie::BonusRange>("bonusRange" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/tnt.png");
         bonusRange->setPosition(this->_position);
         sceneManager->addNode(bonusRange);
     }

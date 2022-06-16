@@ -43,7 +43,7 @@ namespace gameengine {
         bool getIsEnable();
 
     private:
-        raylib::RlTexture _texture;
+        raylib::texture::RlTexture _texture;
 
         bool _isEnable = true;
 

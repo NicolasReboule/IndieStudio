@@ -11,7 +11,7 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::helper {
     /**
      * @brief Helper class for raylib core functions
      */

@@ -9,9 +9,25 @@
 #define CAMERA_HPP_
 
 #include "raylib/Math.hpp"
+#include "raylib/exception/RaylibException.hpp"
 #include <raylib.h>
 
 namespace raylib {
+
+    namespace ex {
+        /**
+         * @brief Exception thrown when the camera creation fails
+         */
+        class CameraException : public RaylibException {
+        public:
+            /**
+             * @brief Construct a new CameraException object
+             * @param message the message
+             */
+            explicit CameraException(const std::string &message) : RaylibException("[RlCamera] " + message) {}
+        };
+    }
+
     /**
      * @brief Camera class
      */
@@ -32,6 +48,7 @@ namespace raylib {
          * @param mode the mode of the camera @see CameraMode
          * @attention Don't use this use the RlCameraBuilder instead (please)
          * @see RlCameraBuilder
+         * @throws CameraException
          */
         explicit RlCamera(const Vector3f &position,
                           const Vector3f &target,

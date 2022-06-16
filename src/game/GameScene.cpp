@@ -206,8 +206,8 @@ void indie::GameScene::updateScene(float delta)
 
 void indie::GameScene::displayWinner(const std::string &name)
 {
-    auto text = raylib::RlTextBuilder().setText(name + "   WINNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
-    raylib::DrawTextHelper::drawText(text);
+    auto text = raylib::builder::RlTextBuilder().setText(name + "   WINNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
+    raylib::helper::draw::DrawTextHelper::drawText(text);
 
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();

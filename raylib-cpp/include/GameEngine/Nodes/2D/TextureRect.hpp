@@ -51,7 +51,7 @@ namespace gameengine {
         const raylib::RlColor &getColor() const;
 
     private:
-        raylib::RlTexture _texture;
+        raylib::texture::RlTexture _texture;
         raylib::RlColor _color;
 
         Vector2f _position;

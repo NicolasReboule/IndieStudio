@@ -11,7 +11,7 @@
 #include "raylib/Camera/RlCamera.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::helper {
     /**
      * @brief Helper class for world-related functions.
      */

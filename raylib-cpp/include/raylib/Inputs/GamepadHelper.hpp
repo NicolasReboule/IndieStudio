@@ -12,9 +12,9 @@
 #include <string>
 #include <GLFW/glfw3.h>
 
-namespace raylib::input {
+namespace raylib::helper::input {
     /**
-     * @brief Input-related functions: gamepads
+     * @brief Helper class for Input-related functions: gamepads
      */
     class GamepadHelper {
     public:
@@ -39,7 +39,7 @@ namespace raylib::input {
          * @param button the button to check
          * @return true if the button is pressed
          */
-        static bool isGamepadButtonPressed(const int &gamepad, const int &button);
+        static bool isGamepadButtonPressed(const int &gamepad, const GamepadButton &button);
 
         /**
          * @brief Check if a gamepad button is down
@@ -47,7 +47,7 @@ namespace raylib::input {
          * @param button the button to check
          * @return true if the button is down
          */
-        static bool isGamepadButtonDown(const int &gamepad, const int &button);
+        static bool isGamepadButtonDown(const int &gamepad, const GamepadButton &button);
 
         /**
          * @brief Check if a gamepad button is released (once)
@@ -55,7 +55,7 @@ namespace raylib::input {
          * @param button the button to check
          * @return true if the button is released
          */
-        static bool isGamepadButtonReleased(const int &gamepad, const int &button);
+        static bool isGamepadButtonReleased(const int &gamepad, const GamepadButton &button);
 
         /**
          * @brief Check if a gamepad button is NOT being pressed
@@ -63,7 +63,7 @@ namespace raylib::input {
          * @param button the button to check
          * @return true if the button is NOT being pressed
          */
-        static bool isGamepadButtonUp(const int &gamepad, const int &button);
+        static bool isGamepadButtonUp(const int &gamepad, const GamepadButton &button);
 
         /**
          * @brief Get the last pressed gamepad button
@@ -84,7 +84,7 @@ namespace raylib::input {
          * @param axis the axis to get the movement from
          * @return the axis movement value
          */
-        static float getGamepadAxisMovement(const int &gamepad, const int &axis);
+        static float getGamepadAxisMovement(const int &gamepad, const GamepadAxis &axis);
 
         /**
          * @brief Set internal gamepad mappings (SDL_GameControllerDB)

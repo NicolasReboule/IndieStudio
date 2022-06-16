@@ -10,7 +10,7 @@
 
 #include "raylib/Raylib.hpp"
 
-enum SoundCategory{
+enum SoundCategory {
     MUSIC,
     FX
 };

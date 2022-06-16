@@ -7,72 +7,72 @@
 
 #include "raylib/Inputs/MouseHelper.hpp"
 
-bool raylib::input::MouseHelper::isMouseButtonPressed(const MouseButton &button)
+bool raylib::helper::input::MouseHelper::isMouseButtonPressed(const MouseButton &button)
 {
     return IsMouseButtonPressed(button);
 }
 
-bool raylib::input::MouseHelper::isMouseButtonDown(const MouseButton &button)
+bool raylib::helper::input::MouseHelper::isMouseButtonDown(const MouseButton &button)
 {
     return IsMouseButtonDown(button);
 }
 
-bool raylib::input::MouseHelper::isMouseButtonReleased(const MouseButton &button)
+bool raylib::helper::input::MouseHelper::isMouseButtonReleased(const MouseButton &button)
 {
     return IsMouseButtonReleased(button);
 }
 
-bool raylib::input::MouseHelper::isMouseButtonUp(const MouseButton &button)
+bool raylib::helper::input::MouseHelper::isMouseButtonUp(const MouseButton &button)
 {
     return IsMouseButtonUp(button);
 }
 
-int raylib::input::MouseHelper::getMouseX()
+int raylib::helper::input::MouseHelper::getMouseX()
 {
     return GetMouseX();
 }
 
-int raylib::input::MouseHelper::getMouseY()
+int raylib::helper::input::MouseHelper::getMouseY()
 {
     return GetMouseY();
 }
 
-Vector2f raylib::input::MouseHelper::getMousePosition()
+Vector2f raylib::helper::input::MouseHelper::getMousePosition()
 {
-    return raylib::VectorHelper::toVectorf(GetMousePosition());
+    return raylib::helper::VectorHelper::toVectorf(GetMousePosition());
 }
 
-Vector2f raylib::input::MouseHelper::getMouseDelta()
+Vector2f raylib::helper::input::MouseHelper::getMouseDelta()
 {
-    return raylib::VectorHelper::toVectorf(GetMouseDelta());
+    return raylib::helper::VectorHelper::toVectorf(GetMouseDelta());
 }
 
-void raylib::input::MouseHelper::setMousePosition(int x, int y)
+void raylib::helper::input::MouseHelper::setMousePosition(int x, int y)
 {
     SetMousePosition(x, y);
 }
 
-void raylib::input::MouseHelper::setMouseOffset(int offsetX, int offsetY)
+void raylib::helper::input::MouseHelper::setMouseOffset(int offsetX, int offsetY)
 {
     SetMouseOffset(offsetX, offsetY);
 }
 
-void raylib::input::MouseHelper::setMouseScale(float scaleX, float scaleY)
+void raylib::helper::input::MouseHelper::setMouseScale(float scaleX, float scaleY)
 {
     SetMouseScale(scaleX, scaleY);
 }
 
-float raylib::input::MouseHelper::getMouseWheelMove()
+float raylib::helper::input::MouseHelper::getMouseWheelMove()
 {
     return GetMouseWheelMove();
 }
 
-void raylib::input::MouseHelper::setMouseCursor(const MouseCursor &cursor)
+void raylib::helper::input::MouseHelper::setMouseCursor(const MouseCursor &cursor)
 {
     SetMouseCursor(cursor);
 }
 
-Ray raylib::input::MouseHelper::getMouseRay(const Vector2f &mousePosition, const RlCamera &camera)
+Ray raylib::helper::input::MouseHelper::getMouseRay(const Vector2f &mousePosition, const RlCamera &camera)
 {
-    return GetMouseRay(raylib::VectorHelper::toRaylibVector(mousePosition), camera.get());
+    return GetMouseRay(raylib::helper::VectorHelper::toRaylibVector(mousePosition), camera.get());
 }

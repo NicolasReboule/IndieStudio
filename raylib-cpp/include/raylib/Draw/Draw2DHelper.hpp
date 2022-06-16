@@ -15,9 +15,9 @@
 #include <rlgl.h>
 #include <vector>
 
-namespace raylib {
+namespace raylib::helper::draw {
     /**
-     * @brief Helper class for drawing.
+     * @brief Helper class for drawing 2d shapes
      */
     class Draw2DHelper {
     public:
@@ -28,7 +28,7 @@ namespace raylib {
          * @param texture texture to be used
          * @param source texture rectangle to be used
          */
-        static void setShapesTexture(const RlTexture &texture, const Rectangle &source);
+        static void setShapesTexture(const texture::RlTexture &texture, const Rectangle &source);
 
         /**
          * @brief Draw a pixel

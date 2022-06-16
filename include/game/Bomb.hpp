@@ -15,7 +15,7 @@ namespace indie {
     class Bomb : public gameengine::StaticBody {
     public:
         Bomb(const std::string &name, const std::string &objPath, int range, const std::string &playerOwner);
-        Bomb(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        Bomb(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~Bomb() override = default;
 
         void ready() override;

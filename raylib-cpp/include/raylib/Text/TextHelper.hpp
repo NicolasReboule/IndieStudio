@@ -12,9 +12,9 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::helper {
     /**
-     * @brief TextHelper class
+     * @brief Helper class for Text
      */
     class TextHelper {
     public:
@@ -32,7 +32,7 @@ namespace raylib {
          * @param text the text to measure
          * @return the width of the text
          */
-        static Vector2f measureText(const RlFont &font, const std::string &text);
+        static Vector2f measureText(const raylib::text::RlFont &font, const std::string &text);
 
         /**
         * @brief Measure string width for custom font
@@ -42,7 +42,7 @@ namespace raylib {
         * @param spacing the spacing between characters
         * @return the width of the text
         */
-        static Vector2f measureText(const RlFont &font, const std::string &text, float fontSize, float spacing = 1);
+        static Vector2f measureText(const raylib::text::RlFont &font, const std::string &text, float fontSize, float spacing = 1);
 
         /**
          * @brief Get glyph index position in font for a codepoint (unicode character), fallback to '?' if not found
@@ -50,7 +50,7 @@ namespace raylib {
          * @param codepoint the codepoint to get the index for
          * @return the index of the codepoint
          */
-        static int getGlyphIndex(const RlFont &font, int codepoint);
+        static int getGlyphIndex(const raylib::text::RlFont &font, int codepoint);
 
         /**
          * @brief Get glyph font info data for a codepoint (unicode character), fallback to '?' if not found
@@ -58,7 +58,7 @@ namespace raylib {
          * @param codepoint the codepoint to get the info for
          * @return the info of the codepoint
          */
-        static GlyphInfo getGlyphInfo(const RlFont &font, int codepoint);
+        static GlyphInfo getGlyphInfo(const raylib::text::RlFont &font, int codepoint);
 
         /**
          * @brief Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to '?' if not found
@@ -66,7 +66,7 @@ namespace raylib {
          * @param codepoint the codepoint to get the rectangle for
          * @return the rectangle of the codepoint
          */
-        static Rectangle getGlyphAtlasRec(const RlFont &font, int codepoint);
+        static Rectangle getGlyphAtlasRec(const raylib::text::RlFont &font, int codepoint);
     };
 }
 

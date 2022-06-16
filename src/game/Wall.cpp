@@ -7,6 +7,6 @@
 
 #include "game/Wall.hpp"
 
-indie::Wall::Wall(const std::string &name, const raylib::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
+indie::Wall::Wall(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
 {
 }

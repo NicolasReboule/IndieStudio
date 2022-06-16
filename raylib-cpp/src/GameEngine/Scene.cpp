@@ -8,7 +8,6 @@
 #include "GameEngine/Scene.hpp"
 #include "GameEngine/Nodes/Node.hpp"
 #include "GameEngine/Nodes/2D/Node2D.hpp"
-
 #include <utility>
 
 gameengine::Scene::Scene(std::string name, std::string sceneSource)

@@ -62,7 +62,6 @@ add_library(${PROJECT_NAME}
         src/raylib/Math/VectorHelper.cpp
         src/raylib/Random.cpp
         src/raylib/Shader/RlShader.cpp
-        src/raylib/Shader/ShaderUtils.cpp
         src/raylib/Text/TextCodepoint.cpp
         src/raylib/Text/RlFont.cpp
         src/raylib/Text/RlText.cpp
@@ -88,5 +87,7 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/KinematicBody.cpp
         src/GameEngine/exception/GameEngineException.cpp
-        src/GameEngine/exception/MapParserException.cpp)
+        src/GameEngine/exception/MapParserException.cpp
+        src/raylib/3DObject/RlAnimation.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

@@ -107,30 +107,30 @@ void indie::Player::handleInput()
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
     Vector3f direction = {0, 0, 0};
-    float gamepadX = raylib::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_X);
-    float gamepadY = raylib::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_Y);
+    float gamepadX = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_X);
+    float gamepadY = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_Y);
     float deadZone = 0.75f;
 
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_RIGHT) ||
-        raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)
+    if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_RIGHT) ||
+        raylib::helper::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)
         || gamepadX > deadZone) {
         direction.x = 1;
         this->setRotationDegrees(180, {0, 1, 0});
     }
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_LEFT) ||
-        raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_LEFT)
+    if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_LEFT) ||
+        raylib::helper::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_LEFT)
         || gamepadX < -deadZone) {
         direction.x = -1;
         this->setRotationDegrees(0, {0, 1, 0});
     }
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_UP) ||
-        raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_UP)
+    if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_UP) ||
+        raylib::helper::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_UP)
         || gamepadY < -deadZone) {
         direction.z = -1;
         this->setRotationDegrees(270, {0, 1, 0});
     }
-    if (raylib::input::KeyboardHelper::isKeyDown(KEY_DOWN) ||
-        raylib::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_DOWN)
+    if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_DOWN) ||
+        raylib::helper::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_DOWN)
         || gamepadY > deadZone) {
         direction.z = 1;
         this->setRotationDegrees(90, {0, 1, 0});
@@ -150,11 +150,11 @@ void indie::Player::handleInput()
         this->moveAndCollide(newPosition);
     }
 
-    if (raylib::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN))
+    if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) || raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_DOWN))
         this->spawnBomb();
 
 
-    if (raylib::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
 
         auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
         auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));

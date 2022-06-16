@@ -14,9 +14,9 @@
 #include "raylib/Texture/RlTexture.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::helper::draw {
     /**
-     * @brief Helper class for drawing.
+     * @brief Helper class for drawing
      */
     class DrawHelper {
     public:
@@ -132,7 +132,7 @@ namespace raylib {
          * @param size to use
          * @param tint to use
          */
-        static void drawBillboard(const RlCamera &camera, const RlTexture &texture, const Vector3f &position, float size, const RlColor &tint);
+        static void drawBillboard(const RlCamera &camera, const texture::RlTexture &texture, const Vector3f &position, float size, const RlColor &tint);
 
         /**
          * @brief Draw a billboard texture defined by source
@@ -143,7 +143,7 @@ namespace raylib {
          * @param size to use
          * @param tint to use
          */
-        static void drawBillboardRec(const RlCamera &camera, const RlTexture &texture, const Rectangle &source,
+        static void drawBillboardRec(const RlCamera &camera, const texture::RlTexture &texture, const Rectangle &source,
                                      const Vector3f &position, const Vector2f &size, const RlColor &tint);
 
         /**
@@ -158,7 +158,7 @@ namespace raylib {
          * @param rotation to use
          * @param tint to use
          */
-        static void drawBillboardPro(const RlCamera &camera, const RlTexture &texture, const Rectangle &source,
+        static void drawBillboardPro(const RlCamera &camera, const texture::RlTexture &texture, const Rectangle &source,
                                      const Vector3f &position, const Vector3f &up, const Vector2f &size,
                                      const Vector2f &origin, float rotation, const RlColor &tint);
 

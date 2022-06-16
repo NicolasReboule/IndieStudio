@@ -23,7 +23,7 @@ void raylib::window::RlWindow::createWindow(const std::string &title, int width,
     this->_minWidth = 0;
     this->_minHeight = 0;
     InitWindow(this->_width, this->_height, this->_title.c_str());
-    raylib::CoreHelper::setFramerateLimit(fps);
+    raylib::helper::CoreHelper::setFramerateLimit(fps);
     this->_isCreated = true;
     std::cout << "RlWindow created (" << this->_width << "x" << this->_height << "): " << this->_title << std::endl;
 }
@@ -191,6 +191,11 @@ const bool &raylib::window::RlWindow::isIsCreated() const
     return this->_isCreated;
 }
 
+raylib::RlCamera &raylib::window::RlWindow::getCamera()
+{
+    return this->_camera;
+}
+
 const raylib::RlCamera &raylib::window::RlWindow::getCamera() const
 {
     return this->_camera;
@@ -199,9 +204,4 @@ const raylib::RlCamera &raylib::window::RlWindow::getCamera() const
 void raylib::window::RlWindow::setCamera(const raylib::RlCamera &camera)
 {
     this->_camera = camera;
-}
-
-raylib::RlCamera &raylib::window::RlWindow::getCamera()
-{
-    return this->_camera;
 }
