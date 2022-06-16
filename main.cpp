@@ -7,7 +7,6 @@
 
 #include "IndieStudio.hpp"
 
-/*
 int main(int ac, char **av)
 {
     auto window = raylib::window::RlWindow::getInstance();
@@ -38,8 +37,8 @@ int main(int ac, char **av)
     return (0);
 }
 
-*/
 
+/*
 int main(int ac, char **av)
 {
     auto window = raylib::window::RlWindow::getInstance();
@@ -88,3 +87,4 @@ int main(int ac, char **av)
 
     return (0);
 }
+*/
