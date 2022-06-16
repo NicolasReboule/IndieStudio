@@ -8,21 +8,43 @@
 #ifndef INDIESTUDIO_RLANIMATION_HPP
 #define INDIESTUDIO_RLANIMATION_HPP
 
+#include "raylib/Core/FileHelper.hpp"
+#include "raylib/exception/RaylibException.hpp"
 #include <string>
 #include <vector>
-#include "raylib/Core/FileHelper.hpp"
 #include <raylib.h>
 
 namespace raylib {
+
+    namespace ex {
+        /**
+         * @brief Exception thrown when an animation is not found
+         */
+        class RlAnimationException : public RaylibException {
+        public:
+            /**
+             * @brief Construct a new RlAnimationException object
+             * @param message the message
+             */
+            explicit RlAnimationException(const std::string &message) : RaylibException("[RlAnimation] " + message) {}
+        };
+    }
+
     /**
      * @brief Animation class
      */
     class RlAnimation {
     public:
         /**
+         * @brief Default constructor
+         */
+        RlAnimation() : _frame(0) {}
+
+        /**
          * @brief Construct a new RlAnimation object
          * @param animationDir the animation dir path
          * @param extension the extension of animation files
+         * @throws RlAnimationException if the animation dir is not found
          */
         explicit RlAnimation(const std::string &animationDir,  const std::string &extension);
 
@@ -55,7 +77,14 @@ namespace raylib {
          */
         const unsigned int &getFrame() const;
 
+        /**
+         * @brief Check if the animations has been loaded
+         * @return true if the animations has been loaded
+         */
+        const bool &isLoaded() const;
+
     private:
+        bool _isLoaded; /**< If the animations has been laoded*/
         std::vector<Model> _animationModels; /** All the models for the animation */
         unsigned int _frame; /** The frame index of the current model */
     };

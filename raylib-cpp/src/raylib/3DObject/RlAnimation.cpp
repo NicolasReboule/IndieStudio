@@ -7,14 +7,17 @@
 
 #include "raylib/3DObject/RlAnimation.hpp"
 
-raylib::RlAnimation::RlAnimation(const std::string &animationDir, const std::string &extension): _frame(0)
+raylib::RlAnimation::RlAnimation(const std::string &animationDir, const std::string &extension): _frame(0), _isLoaded(false)
 {
+    if (!FileHelper::directoryExists(animationDir))
+        throw ex::RlAnimationException("Animation dir: " + animationDir + " not found");
     std::vector<std::string> modelsNames = FileHelper::getDirectoryFiles(animationDir, [&extension](const std::string &fileName) {
         return FileHelper::isFileExtension(fileName, extension);
     });
     std::sort(modelsNames.begin(), modelsNames.end());
     for (const auto &item : modelsNames)
         this->_animationModels.push_back(LoadModel(item.c_str()));
+    this->_isLoaded = true;
 }
 
 raylib::RlAnimation::~RlAnimation()
@@ -45,4 +48,9 @@ std::size_t raylib::RlAnimation::getAnimationsSize() const
 const unsigned int &raylib::RlAnimation::getFrame() const
 {
     return this->_frame;
+}
+
+const bool &raylib::RlAnimation::isLoaded() const
+{
+    return this->_isLoaded;
 }

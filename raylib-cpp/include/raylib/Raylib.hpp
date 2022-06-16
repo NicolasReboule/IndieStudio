@@ -57,7 +57,6 @@
 #include "Math.hpp"
 #include "Random.hpp"
 #include "Shader/RlShader.hpp"
-#include "Shader/ShaderUtils.hpp"
 #include "Text/RlFont.hpp"
 #include "Text/RlText.hpp"
 #include "Text/RlTextBuilder.hpp"

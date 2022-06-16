@@ -18,26 +18,43 @@ namespace raylib {
      */
     class RlModelAnim {
     public:
+        /**
+         * @brief Create a new RlModelAnimation (support only iqm)
+         * @param model the model to animate
+         * @param fileName the file name of the animation
+         */
         explicit RlModelAnim(const RlModel &model, const std::string &fileName);
-        ~RlModelAnim();
 
+        /**
+         * @brief Update the animation
+         * @param animIndex the index of the animation to update
+         */
         void update(const unsigned int &animIndex);
+
+        /**
+         * @brief Draw the animation
+         * @param animIndex the index of the animation to draw
+         */
         void unload(const unsigned int &animIndex);
 
-        bool animationIsValid(unsigned int animIndex);
+        /**
+         * @brief Check if the animation index is a valid index. Check model animation skeleton match
+         * @param animIndex the index to check
+         * @return true if the index is valid
+         */
+        bool animationIndexIsValid(const unsigned int &animIndex);
 
+        /**
+         * @brief Get the number of animation
+         * @return the number of animation
+         */
         unsigned int getCount() const;
 
-        /*     ModelAnimation *loadModelAnimations(const std::string &fileName, unsigned int *animCount);                // Load _model _animations from file
-             void updateModelAnimation(Model _model, ModelAnimation anim, int frame);                            // Update _model animation pose
-             void unloadModelAnimation(ModelAnimation anim);                                                    // Unload animation data
-             void unloadModelAnimations(ModelAnimation* anim, unsigned int _count);                        // Unload animation array data
-             bool isModelAnimationValid(Model _model, ModelAnimation anim);   */                                   // Check _model animation skeleton match
     private:
-        RlModel &_model;
-        std::vector<ModelAnimation> _animations;
-        unsigned int _count;
-        int _frameCount;
+        const RlModel &_model; /**< A reference to the model to animate */
+        std::vector<ModelAnimation> _animations; /**< A vector containing all the iqm animations */
+        unsigned int _count; /**< The number of animations loaded from the iqm */
+        int _frameCount; /**< The actual frame index of the current animation */
     };
 }
 

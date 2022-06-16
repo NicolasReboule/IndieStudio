@@ -21,22 +21,22 @@ std::string raylib::input::GamepadHelper::getGamepadName(const int &gamepad)
     return name;
 }
 
-bool raylib::input::GamepadHelper::isGamepadButtonPressed(const int &gamepad, const int &button)
+bool raylib::input::GamepadHelper::isGamepadButtonPressed(const int &gamepad, const GamepadButton &button)
 {
     return IsGamepadButtonPressed(gamepad, button);
 }
 
-bool raylib::input::GamepadHelper::isGamepadButtonDown(const int &gamepad, const int &button)
+bool raylib::input::GamepadHelper::isGamepadButtonDown(const int &gamepad, const GamepadButton &button)
 {
     return IsGamepadButtonDown(gamepad, button);
 }
 
-bool raylib::input::GamepadHelper::isGamepadButtonReleased(const int &gamepad, const int &button)
+bool raylib::input::GamepadHelper::isGamepadButtonReleased(const int &gamepad, const GamepadButton &button)
 {
     return IsGamepadButtonReleased(gamepad, button);
 }
 
-bool raylib::input::GamepadHelper::isGamepadButtonUp(const int &gamepad, const int &button)
+bool raylib::input::GamepadHelper::isGamepadButtonUp(const int &gamepad, const GamepadButton &button)
 {
     return IsGamepadButtonUp(gamepad, button);
 }
@@ -51,7 +51,7 @@ int raylib::input::GamepadHelper::getGamepadAxisCount(const int &gamepad)
     return GetGamepadAxisCount(gamepad);
 }
 
-float raylib::input::GamepadHelper::getGamepadAxisMovement(const int &gamepad, const int &axis)
+float raylib::input::GamepadHelper::getGamepadAxisMovement(const int &gamepad, const GamepadAxis &axis)
 {
     return GetGamepadAxisMovement(gamepad, axis);
 }
