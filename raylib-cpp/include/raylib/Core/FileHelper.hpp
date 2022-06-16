@@ -14,6 +14,7 @@
 #include <vector>
 #include <filesystem>
 #include <concepts>
+#include <functional>
 
 namespace raylib {
     /**

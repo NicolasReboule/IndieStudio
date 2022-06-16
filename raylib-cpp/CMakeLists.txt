@@ -22,7 +22,6 @@ add_library(${PROJECT_NAME}
         src/raylib/3DObject/RlMesh.cpp
         src/raylib/3DObject/RlMeshBuilder.cpp
         src/raylib/3DObject/RlModel.cpp
-        src/raylib/3DObject/RlModelAnim.cpp
         src/raylib/3DObject/Shape3DHelper.cpp
         src/raylib/Audio/AudioDeviceHelper.cpp
         src/raylib/Audio/RlAudioStream.cpp
@@ -88,5 +87,7 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/KinematicBody.cpp
         src/GameEngine/exception/GameEngineException.cpp
-        src/GameEngine/exception/MapParserException.cpp)
+        src/GameEngine/exception/MapParserException.cpp
+        src/raylib/3DObject/RlAnimation.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

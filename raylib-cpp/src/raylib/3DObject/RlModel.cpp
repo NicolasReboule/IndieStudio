@@ -15,14 +15,14 @@ raylib::RlModel::RlModel(const std::string &fileName, const std::string &texture
         setTextureMaterial();
 }
 
-raylib::RlModel::RlModel(Mesh mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
+raylib::RlModel::RlModel(const Mesh &mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 : _model(LoadModelFromMesh(mesh)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
     this->_startBoundingBox = GetModelBoundingBox(_model);
     if (!texturePath.empty())
         setTextureMaterial();
 }
-//
+
 raylib::RlModel::RlModel(const raylib::RlMesh &mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 : _model(LoadModelFromMesh(mesh.getMesh())), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
@@ -34,8 +34,6 @@ raylib::RlModel::RlModel(const raylib::RlMesh &mesh, const std::string &textureP
 raylib::RlModel::RlModel(const RlMeshBuilder::MeshType &type, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
 :  _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
 {
-
-
     if (type == RlMeshBuilder::MeshCube) {
         raylib::RlMesh mesh = raylib::RlMeshBuilder().setMeshType(raylib::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
         this->_model = LoadModelFromMesh(mesh.getMesh());
