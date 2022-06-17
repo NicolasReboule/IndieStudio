@@ -45,7 +45,6 @@ namespace raylib::helper {
          */
         static BoundingBox getModelBoundingBox(Model model);                                                      // Compute model bounding box limits (considers all meshes)
 
-    private:
     };
 }
 

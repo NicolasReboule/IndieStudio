@@ -51,14 +51,15 @@ int main(int ac, char **av)
     } catch (raylib::ex::RlAnimationException &e) {
         std::cerr << e.what() << std::endl;
     }
-    raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
-    raylib::RlModelAnim anim(model, "./assets/player.iqm");
+    //raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
+    //raylib::RlModelAnim anim(model, "./assets/player.iqm");
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
     raylib::RlModel boost("./assets/boostSpeed.obj");
+    raylib::helper::AudioDeviceHelper::initAudioDevice();
     raylib::audio::RlWave wave("./assets/sounds/sound.wav");
     std::vector samples = wave.getSamples();
 
-    std::cout << anim.getCount() << std::endl;
+    //std::cout << anim.getCount() << std::endl;
     uint i = 0;
     while (window->isOpen()) {
         raylib::helper::draw::DrawHelper::beginDrawing();
@@ -75,11 +76,11 @@ int main(int ac, char **av)
         } else {
             if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_RIGHT))
                 i++;
-            if (i > anim.getCount())
+            /*if (i > anim.getCount())
                 i = 0;
             if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_SPACE))
                 anim.update(i);
-            DrawModelEx(model.getModel(), {0.0f, 0.0f, 0.0f}, {0, 1, 0}, 90.0f, {0.8f, 0.8f, 0.8f}, WHITE);
+            DrawModelEx(model.getModel(), {0.0f, 0.0f, 0.0f}, {0, 1, 0}, 90.0f, {0.8f, 0.8f, 0.8f}, WHITE);*/
         }
         if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();

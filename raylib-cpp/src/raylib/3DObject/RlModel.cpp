@@ -43,8 +43,8 @@ _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _startBoundingBox()
 
     this->_startBoundingBox = GetModelBoundingBox(_model);
 
-    if (!texturePath.empty())
-        setTextureMaterial();
+    /*if (!texturePath.empty())
+        setTextureMaterial();*/
 }
 
 

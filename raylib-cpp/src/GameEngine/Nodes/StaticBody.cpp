@@ -8,14 +8,14 @@
 #include "GameEngine/Nodes/StaticBody.hpp"
 
 gameengine::StaticBody::StaticBody(const std::string &name, const std::string &modelPath, const std::string &texturePath)
-    : Node(name), _model(modelPath, texturePath), _position({0, 0, 0}), _scale({1, 1, 1})
+    : Node(name), _model(modelPath), _position({0, 0, 0}), _scale({1, 1, 1})
 {
     this->_rotationDegrees = 0;
     this->_collisionEnable = true;
 }
 
 gameengine::StaticBody::StaticBody(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath)
-    : Node(name), _model(type, texturepath), _position({0, 0, 0}), _scale({1, 1, 1})
+    : Node(name), _model(type), _position({0, 0, 0}), _scale({1, 1, 1})
 {
     this->_rotationDegrees = 0;
     this->_collisionEnable = true;

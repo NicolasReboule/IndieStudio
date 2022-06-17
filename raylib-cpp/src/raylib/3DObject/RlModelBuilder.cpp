@@ -19,7 +19,7 @@ raylib::RlModel raylib::builder::RlModelBuilder::build()
         throw raylib::ex::BuilderException("Nor model path, nor mesh, nor type are set");
     if (_modelPath.empty()) {
         raylib::RlModel model(*_mesh);
-        model.setTexture(_texturePath);
+        //model.setTexture(_texturePath);
         model.setPosition(_position);
     } else if (_type != 0) {
         raylib::RlModel model((raylib::builder::RlMeshBuilder::MeshType) _type);
