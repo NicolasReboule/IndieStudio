@@ -36,6 +36,8 @@ namespace gameengine {
 
         void setColor(raylib::RlColor color);
 
+        Color getColor();
+
         const BoundingBox &getBoundingBox() const;
 
         void setBoundingBox(BoundingBox &boundingBox);

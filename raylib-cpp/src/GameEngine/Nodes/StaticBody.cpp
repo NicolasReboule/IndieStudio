@@ -73,6 +73,11 @@ void gameengine::StaticBody::setColor(raylib::RlColor color)
     this->_model.setColor(color.getColor());
 }
 
+Color gameengine::StaticBody::getColor()
+{
+    return this->_model.getColor();
+}
+
 raylib::RlModel *gameengine::StaticBody::operator->()
 {
     return &this->_model;

@@ -15,7 +15,7 @@
 #include "game/ButtonResume.hpp"
 #include "winning/ButtonRestart.hpp"
 
-indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource), _mapSizeMax({60, 45}), _mapSize({0, 0})
+indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource), _mapSizeMax({1000, 1000}), _mapSize({0, 0})
 {
     this->_mapSymbol = {
         {' ', MapType::NONE},
@@ -53,19 +53,34 @@ void indie::GameScene::addfloor(const Vector3f &position)
 void indie::GameScene::sceneLauncher()
 {
     auto &window = raylib::window::RlWindow::getInstance();
-    raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
-    window->setCamera(camera);
+    auto &globalInstance = indie::GlobalInstance::getInstance();
 
-    gameengine::map::MapParser<MapType> _mapParser("./assets/map/default.txt", this->_mapSymbol, this->_mapSizeMax);
+    std::string pathMap;
+
+    switch (globalInstance->_indexMap) {
+        case 1:
+            pathMap = "./assets/map/empty.txt";
+            break;
+        case 2:
+            pathMap = "./assets/map/cool.txt";
+            break;
+        default:
+            pathMap = "./assets/map/default.txt";
+            break;
+    }
+
+    gameengine::map::MapParser<MapType> _mapParser(pathMap, this->_mapSymbol, this->_mapSizeMax);
     try {
         _mapParser.parse();
     } catch (gameengine::ex::MapParserException &e) {
         std::cerr << "Error when parsing the map: " << e.what() << std::endl;
         std::exit(84);
     }
-
     //init map
     this->_mapSize = _mapParser.getSize();
+
+    raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({0, std::max(20.0f, std::max(this->_mapSize.x, this->_mapSize.y) * 0.725f) , 0}).setCameraMode(CAMERA_FREE).build();
+    window->setCamera(camera);
 
     float x = 0;
     float z = -std::floor(((float) this->_mapSize.y / 2.0f));
@@ -76,32 +91,34 @@ void indie::GameScene::sceneLauncher()
             switch (c) {
                 case MapType::UNKNOWN:
                 case MapType::NONE:
-                    this->addfloor({x, 0, z});
                     break;
                 case MapType::WALL:
                     this->addWall({x, 0.5, z});
-                    this->addfloor({x, 0, z});
                     break;
                 case MapType::BREAKABLE_WALL:
                     this->addBreakableWall({x, 0.5, z});
-                    this->addfloor({x, 0, z});
                     break;
             }
             x += 1;
         }
         z += 1;
     }
+    long zMiddle = std::floor(((float) this->_mapSize.y / 2.0f));
+    long xMiddle = std::floor(((float) this->_mapSize.x / 2.0f));
+    for (long zPos = -zMiddle; zPos <= zMiddle; zPos++)
+        for (long xPos = -xMiddle; xPos <= xMiddle; xPos++)
+            this->addfloor({(float) xPos, -0.05, (float) zPos});
 
 
-    auto &globalInstance = indie::GlobalInstance::getInstance();
+
     for (int i = 0; i < globalInstance->_numberPlayers; i++) {
         std::string color;
         if (i == 0)
-           color  = "blue";
+           color = "blue";
         else if (i == 1)
-            color  = "red";
+            color = "red";
         else if (i == 2)
-            color  = "green";
+            color = "green";
         else
             color  = "yellow";
         auto player = std::make_shared<indie::Player>("player" + std::to_string(i), "./assets/player.iqm", "./assets/" + color + ".png", i);
@@ -132,7 +149,9 @@ void indie::GameScene::readyScene()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
-    BoundingBox box = {{-0.3, 0, -0.3},{0.3,  2, 0.3}};
+    this->_winTimer = 3.0f;
+
+    BoundingBox box = {{-0.2, 0, -0.2},{0.2,  2, 0.2}};
     Vector3f scale = {0.8, 0.8, 0.8};
 
     if (globalInstance->_numberPlayers > 0) {
@@ -208,57 +227,75 @@ void indie::GameScene::updateScene(float delta)
 
     if (globalInstance->_playersAlive == 1) {
 
+        this->_winTimer -= delta;
+
         auto &player0 = dynamic_cast<indie::Player &>(*sceneManager->getNode("player0"));
-        if (player0.getState() == Player::ALIVE) {
+        if (player0.getState() == Player::ALIVE || player0.getState() == Player::GHOST) {
             this->displayWinner(player0.getName());
             return;
         }
 
         try {
             auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player1"));
-            if (player.getState() == Player::ALIVE) {
+            if (player.getState() == Player::ALIVE || player.getState() == Player::GHOST) {
                 this->displayWinner(player.getName());
                 return;
             }
         }
-        catch (const std::bad_cast &e) {
-            ;
-        }
+        catch (const std::bad_cast &e) {}
+
         try {
             auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player2"));
-            if (player.getState() == Player::ALIVE) {
+            if (player.getState() == Player::ALIVE || player.getState() == Player::GHOST) {
                 this->displayWinner(player.getName());
                 return;
             }
         }
-        catch (const std::bad_cast &e) {
-            ;
-        }
+        catch (const std::bad_cast &e) {}
+
         try {
             auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player3"));
-            if (player.getState() == Player::ALIVE) {
+            if (player.getState() == Player::ALIVE || player.getState() == Player::GHOST) {
                 this->displayWinner(player.getName());
                 return;
             }
         }
-        catch (const std::bad_cast &e) {
-            ;
-        }
-    } else if (globalInstance->_playersAlive <= 0)
+        catch (const std::bad_cast &e) {}
+
+    } else if (globalInstance->_playersAlive <= 0) {
+        this->_winTimer -= delta;
         this->displayWinner("SHHEEESSH");
+    }
 }
 
 void indie::GameScene::displayWinner(const std::string &name)
 {
-    auto text = raylib::builder::RlTextBuilder().setText(name + "   WINNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
-    raylib::helper::draw::DrawTextHelper::drawText(text);
-
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
+    try {
+        auto &WinnerText = dynamic_cast<gameengine::Label &>(*sceneManager->getNode("winnerText"));
+        WinnerText.setText(name + "   WINNN !!!!");
+        std::cout << "MACHIN!! " << std::endl;
+    }
+    catch (const std::bad_cast &e) {
+        auto WinnerText = std::make_shared<gameengine::Label>("winnerText");
+        WinnerText->setPosition({400, 0});
+        WinnerText->setColor(RlColor::Gold);
+        WinnerText->setScale({50, 50});
+        WinnerText->setText(name + "   WINNN !!!!");
+        this->addNode(WinnerText);
+        std::cout << "SUUUU!! " << std::endl;
+    }
 
-    globalInstance->_playerWinner = name;
-    sceneManager->changeScene("winning");
+
+    /*auto text = raylib::builder::RlTextBuilder().setText(name + "   WINNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
+    raylib::helper::draw::DrawTextHelper::drawText(text);*/
+
+    if (this->_winTimer <= 0) {
+        globalInstance->_playerWinner = name;
+        sceneManager->changeScene("winning");
+    }
 }
 
 

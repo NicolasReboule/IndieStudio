@@ -21,7 +21,7 @@ add_executable(${BINARY_NAME}
         src/chooseNumberPlayer/Button4p.cpp
         src/chooseNumberPlayer/ChooseNumberPlayerScene.cpp
         src/game/Bomb.cpp
-        src/game/BonusRange.cpp
+        src/game/Bonus.cpp
         src/game/ButtonMainMenu.cpp
         src/game/ButtonQuitx05.cpp
         src/game/ButtonResume.cpp
@@ -39,7 +39,10 @@ add_executable(${BINARY_NAME}
         src/start/Logo.cpp
         src/start/StartScene.cpp
         src/winning/WinningScene.cpp
-        src/winning/ButtonRestart.cpp src/winning/ButtonRestart.hpp)
+        src/winning/ButtonRestart.cpp
+        src/chooseMap/chooseMapScene.cpp
+        src/chooseNumberPlayer/ButtonLeft.cpp
+        src/chooseNumberPlayer/ButtonRight.cpp)
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 

@@ -23,6 +23,8 @@ namespace indie {
 
         std::string _playerWinner;
 
+        int _indexMap;
+
     private:
         static std::shared_ptr<GlobalInstance> _instance;
     };

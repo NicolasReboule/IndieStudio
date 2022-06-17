@@ -41,6 +41,8 @@ void indie::Bomb::update(float delta)
 
     if (this->_timer <= 0) {
         this->spawnMagma();
+        auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode(this->_playerOwner));
+        player.incrementBombStock(1);
         sceneManager->deleteNode(this->getName());
     }
 }
@@ -74,12 +76,11 @@ void indie::Bomb::spawnMagma()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
 
-    auto magma0 = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-    magma0->setPosition({this->_position.x, this->_position.y, this->_position.z});
-    sceneManager->addNode(magma0);
-
-    Vector3f position = {this->_position.x + 1, this->_position.y, this->_position.z};
-    Vector3f addI = {1, 0, 0};
+    Vector3f position = {this->_position.x, this->_position.y, this->_position.z};
+    Vector3f addI = {0, 0, 0};
+    this->addMagma(position, addI);
+    position = {this->_position.x + 1, this->_position.y, this->_position.z};
+    addI = {1, 0, 0};
     this->addMagma(position, addI);
     position = {this->_position.x - 1, this->_position.y, this->_position.z};
     addI = {-1, 0, 0};
@@ -90,6 +91,8 @@ void indie::Bomb::spawnMagma()
     position = {this->_position.x, this->_position.y, this->_position.z - 1};
     addI = {0, 0, -1};
     this->addMagma(position, addI);
+
+
 }
 
 void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
@@ -138,4 +141,9 @@ void indie::Bomb::instanceMagma(Vector3f pos)
     auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
     magma->setPosition(pos);
     sceneManager->addNode(magma);
+}
+
+void indie::Bomb::setPlayerOwner(const std::string &playerOwner)
+{
+    this->_playerOwner = playerOwner;
 }

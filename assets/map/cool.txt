@@ -1,0 +1,19 @@
+//' ' = Nothing
+//'B' = breakable
+//'#' = wall
+
+ ###########
+#  BBBBBBB  #
+# BBBBBBBBB #
+######B######
+#BBBBBBBBBBB#
+#BBBBBBBBBBB#
+#B####B####B#
+#BBBBBBBBBBB#
+#B####B####B#
+#BBBBBBBBBBB#
+#BBBBBBBBBBB#
+######B######
+# BBBBBBBBB #
+#  BBBBBBB  #
+ ###########

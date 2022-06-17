@@ -29,6 +29,8 @@ namespace indie {
         void instanceMagma(Vector3f pos);
 
         void enableCollision();
+
+        void setPlayerOwner(const std::string &playerOwner);
     private:
         std::string _playerOwner;
         float _timer;

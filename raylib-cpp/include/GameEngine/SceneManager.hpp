@@ -30,6 +30,8 @@ namespace gameengine {
 
         std::shared_ptr<gameengine::AbstractBase> getNode(const std::string& name);
 
+        std::shared_ptr<gameengine::Scene> &getCurrentScene();
+
         void addNode(const std::shared_ptr<gameengine::AbstractBase> &node);
 
         void deleteNode(const std::string &name);

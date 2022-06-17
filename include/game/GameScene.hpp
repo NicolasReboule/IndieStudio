@@ -39,6 +39,8 @@ namespace indie {
             BREAKABLE_WALL
         };
 
+        float _winTimer;
+
         Vector2u _mapSizeMax;
         Vector2u _mapSize;
         std::unordered_map<char, MapType> _mapSymbol;

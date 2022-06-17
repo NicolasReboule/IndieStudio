@@ -1,22 +1,23 @@
 /*
 ** EPITECH PROJECT, 2022
-** TextureRect.hpp
+** Label.hpp
 ** File description:
-** TextureRect.hpp
+** Label.hpp
 */
 
-#ifndef INDIESTUDIO_TEXTURERECT_HPP
-#define INDIESTUDIO_TEXTURERECT_HPP
+#ifndef INDIESTUDIO_LABEL_HPP
+#define INDIESTUDIO_LABEL_HPP
 
 #include "Node2D.hpp"
 
 namespace gameengine {
 
-    class TextureRect : public Node2D {
+    class Label : public Node2D {
     public:
-        explicit TextureRect(const std::string &name, const std::string &filename, Vector2f position = {0, 0}, Vector2f scale = {1, 1}, float degrees = 0, const raylib::RlColor &color = RlColor::White);
+        explicit Label(const std::string &name, Vector2f position = {0, 0}, Vector2f scale = {1, 1}, float degrees = 0,
+                       const raylib::RlColor &color = RlColor::White);
 
-        ~TextureRect() override = default;
+        ~Label() override = default;
 
         void ready() override;
 
@@ -36,7 +37,9 @@ namespace gameengine {
 
         void setRotationDegrees(float rotationDegrees) override;
 
-        void setColor(unsigned int r,unsigned int g, unsigned int b, unsigned int a);
+        void setColor(unsigned int r, unsigned int g, unsigned int b, unsigned int a);
+
+        void setColor(raylib::RlColor color);
 
         /**
          * @brief Get the mutable color
@@ -50,8 +53,11 @@ namespace gameengine {
          */
         const raylib::RlColor &getColor() const;
 
+        void setText(const std::string &text);
+
     private:
-        raylib::texture::RlTexture _texture;
+        std::string _text;
+        raylib::text::RlText _textComponent;
         raylib::RlColor _color;
 
         Vector2f _position;
@@ -60,4 +66,4 @@ namespace gameengine {
     };
 }
 
-#endif //INDIESTUDIO_TEXTURERECT_HPP
+#endif //INDIESTUDIO_LABEL_HPP

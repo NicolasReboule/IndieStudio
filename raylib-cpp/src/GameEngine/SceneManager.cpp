@@ -223,3 +223,11 @@ bool gameengine::SceneManager::getPaused()
             return scene->getPaused();
     return false;
 }
+
+std::shared_ptr<gameengine::Scene> &gameengine::SceneManager::getCurrentScene()
+{
+    for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
+        if (scene->getSceneSource() == this->_actualScene)
+            return scene;
+    return this->_scenes.front();
+}

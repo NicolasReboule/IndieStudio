@@ -18,7 +18,8 @@ namespace indie {
             DEAD = 0,
             ALIVE = 1,
             WINNER = 2,
-            LOOSER = 3
+            LOOSER = 3,
+            GHOST = 4
         };
 
 
@@ -42,11 +43,19 @@ namespace indie {
 
         void setState(State state);
 
+        void incrementBombStock(int bombStock);
+
+        void moveAndGhosting(Vector3f position);
+
     private:
+        float _tempSpeed;
+        float _speed;
         int _range;
+        int _bombStock;
+        float _timerGhost;
 
         State _state;
-        float _speed;
+
         float _timerAnim;
         int _numpadId;
 

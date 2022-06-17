@@ -12,8 +12,10 @@
 #include "game/ButtonResume.hpp"
 #include "global/GlobalInstance.hpp"
 #include "game/Magma.hpp"
-#include "game/BonusRange.hpp"
+#include "game/Bonus.hpp"
 #include "winning/ButtonRestart.hpp"
+#include "game/WallDestroyable.hpp"
+#include "game/Wall.hpp"
 
 /*indie::Player::Player(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
 {
@@ -24,13 +26,32 @@
 indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, const int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim(this->_model, "./assets/player.iqm")
 {
     this->_numpadId = numpadId;
-    this->_timerAnim = 0.5;
-    this->_range = 1;
     this->_state = ALIVE;
+    this->_timerAnim = 0.16;
+    this->_timerGhost = 0.16;
+
+    this->_range = 1;
+    this->_speed = 5;
+    this->_bombStock = 1;
 }
 
 void indie::Player::ready()
 {
+}
+
+indie::Player::State indie::Player::getState()
+{
+    return this->_state;
+}
+
+void indie::Player::setState(indie::Player::State state)
+{
+    this->_state = state;
+}
+
+void indie::Player::incrementBombStock(int bombStock)
+{
+    this->_bombStock += bombStock;
 }
 
 void indie::Player::update(float delta)
@@ -38,8 +59,9 @@ void indie::Player::update(float delta)
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
-    this->_speed = 5.0f * delta;
+    this->_tempSpeed = this->_speed * delta;
     this->_timerAnim -= delta;
+
 
 
     switch (this->_state) {
@@ -53,8 +75,29 @@ void indie::Player::update(float delta)
             break;
         case ALIVE:
             this->checkCollisions();
-        default:
             this->handleInput();
+            break;
+        case DEAD:
+            this->handleInput();
+            break;
+        case GHOST:
+            this->_timerGhost -= delta;
+            if (this->_timerGhost <= 0) {
+                if (this->getColor().a == 255) {
+                    Vector4f vector = {255, 255, 255, 200};
+                    raylib::RlColor color(vector);
+                    this->setColor(color);
+                } else {
+                    this->setColor(raylib::RlColor::White);
+                }
+                this->_timerGhost = 0.42;
+            }
+            this->checkCollisions();
+            this->handleInput();
+            break;
+        default:
+            break;
+
     }
 
     if (this->_timerAnim <= 0) {
@@ -77,9 +120,11 @@ void indie::Player::spawnBomb()
     BoundingBox box = {{-0.5, 0, -0.5},
                        {0.4,  1, 0.4}};
     bomb->setBoundingBox(box);
-    bomb->setScale({0.9, 0.9, 0.9});
+    //bomb->setScale({0.9, 0.9, 0.9});
 
     bomb->setPosition({std::round(this->_position.x), 0.5, std::round(this->_position.z)});
+
+    bomb->setPlayerOwner(this->getName());
     sceneManager->addNode(bomb);
 }
 
@@ -88,32 +133,47 @@ void indie::Player::checkCollisions()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
-    if (this->_state == ALIVE)
-        for (const auto &node: sceneManager->getAllNodes()) {
-            try {
-                auto &magma = dynamic_cast<indie::Magma &>(*node);
-                if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
-                    this->playerDead();
-                    globalInstance->_playersAlive -= 1;
-                    return;
-                }
-            }
-            catch (const std::bad_cast &e) {
-               ;
-            }
-            try {
-                auto &bonusRange = dynamic_cast<indie::BonusRange &>(*node);
-                if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonusRange.getBoundingBox())) {
-                    std::cout << "bonusrange" << std::endl;
-                    this->_range += 1;
-                    sceneManager->deleteNode(node->getName());
-                    return;
-                }
-            }
-            catch (const std::bad_cast &e) {
-                ;
+    for (const auto &node: sceneManager->getAllNodes()) {
+        try {
+            auto &magma = dynamic_cast<indie::Magma &>(*node);
+            if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
+                this->playerDead();
+                globalInstance->_playersAlive -= 1;
+                return;
             }
         }
+        catch (const std::bad_cast &e) { ;
+        }
+        try {
+            auto &bonus = dynamic_cast<indie::Bonus &>(*node);
+            if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonus.getBoundingBox())) {
+                switch (bonus.getBonusType()) {
+                    case Bonus::FIRE:
+                        std::cout << "bonus fire" << std::endl;
+                        this->_range += 1;
+                        sceneManager->deleteNode(node->getName());
+                        return;
+                    case Bonus::BOMB:
+                        std::cout << "bonus bomb" << std::endl;
+                        this->_bombStock += 1;
+                        sceneManager->deleteNode(node->getName());
+                        return;
+                        return;
+                    case Bonus::SPEED:
+                        std::cout << "bonus speed" << std::endl;
+                        this->_speed += 2;
+                        sceneManager->deleteNode(node->getName());
+                        return;
+                    case Bonus::GHOST:
+                        this->_state = GHOST;
+                        sceneManager->deleteNode(node->getName());
+                        return;
+                }
+            }
+        }
+        catch (const std::bad_cast &e) { ;
+        }
+    }
 }
 
 void indie::Player::handleInput()
@@ -123,7 +183,7 @@ void indie::Player::handleInput()
     Vector3f direction = {0, 0, 0};
     float gamepadX = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_X);
     float gamepadY = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(this->_numpadId, GAMEPAD_AXIS_LEFT_Y);
-    float deadZone = 0.75f;
+    float deadZone = 0.65f;
 
     if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_RIGHT) ||
         raylib::helper::input::GamepadHelper::isGamepadButtonDown(this->_numpadId, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)
@@ -156,16 +216,26 @@ void indie::Player::handleInput()
         if (this->_timerAnim <= 0)
             this->_anim.update(0);
 
-        Vector3f newPosition = {this->_position.x + this->_speed * direction.x, this->_position.y + this->_speed * direction.y,
-                                this->_position.z + this->_speed * direction.z};
-        this->moveAndCollide(newPosition);
+        Vector3f newPosition = {this->_position.x + this->_tempSpeed * direction.x, this->_position.y + this->_tempSpeed * direction.y,
+                                this->_position.z + this->_tempSpeed * direction.z};
+
+        if (this->_state == ALIVE) {
+            this->moveAndCollide(newPosition);
+        } else
+            this->moveAndGhosting(newPosition);
     }
 
-    if (this->_state == ALIVE) {
-        if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) ||
+    if (this->_state == ALIVE || this->_state == GHOST) {
+        if ((raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) ||
             raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId,
-                                                                         GAMEPAD_BUTTON_RIGHT_FACE_DOWN))
+                                                                         GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) && this->_bombStock > 0) {
             this->spawnBomb();
+            this->_bombStock -= 1;
+            if (this->_state == GHOST) {
+                this->_state = ALIVE;
+                this->setColor(raylib::RlColor::White);
+            }
+        }
     }
 
 
@@ -183,8 +253,38 @@ void indie::Player::handleInput()
         buttonQuit.setHiding(false);
         sceneManager->setPaused(true);
     }
+}
 
+void indie::Player::moveAndGhosting(Vector3f position)
+{
+    auto sceneManager = gameengine::SceneManager::getInstance();
 
+    BoundingBox temp = {{
+                            this->getBoundingBox().min.x + position.x - this->_position.x,
+                            this->getBoundingBox().min.y + position.y - this->_position.y,
+                            this->getBoundingBox().min.z + position.z - this->_position.z,
+                        }, {
+                            this->getBoundingBox().max.x + position.x - this->_position.x,
+                            this->getBoundingBox().max.y + position.y - this->_position.y,
+                            this->getBoundingBox().max.z + position.z - this->_position.z,
+                        }};
+
+    if (this->_collisionEnable) {
+        for (const auto &node: sceneManager->getAllNodes()) {
+            try {
+                auto &staticBody = dynamic_cast<indie::Wall &>(*node);
+                if (staticBody.getName() != this->getName() && staticBody.getIsCollsionEnable() &&
+                    raylib::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
+                    return;
+                }
+            }
+            catch (const std::bad_cast &e) {
+                continue;
+            }
+        }
+    }
+
+    this->setPosition(position);
 }
 
 void indie::Player::playerDead()
@@ -196,12 +296,3 @@ void indie::Player::playerDead()
     this->_collisionEnable = false;
 }
 
-indie::Player::State indie::Player::getState()
-{
-    return this->_state;
-}
-
-void indie::Player::setState(indie::Player::State state)
-{
-    this->_state = state;
-}

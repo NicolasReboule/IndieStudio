@@ -13,14 +13,14 @@
 
 indie::Magma::Magma(const std::string &name, const std::string &objPath, const std::string &playerOwner) : StaticBody(name, objPath, "")
 {
-    this->_timer = 1;
+    this->_timer = 0.5;
     this->_collisionEnable = false;
     this->_playerOwner = playerOwner;
 }
 
 indie::Magma::Magma(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
 {
-    this->_timer = 1;
+    this->_timer = 0.5;
     this->_collisionEnable = false;
 }
 
