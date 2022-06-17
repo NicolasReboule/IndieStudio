@@ -22,7 +22,9 @@ raylib::audio::RlSound::RlSound(const raylib::audio::RlWave &wave) : _sound(Load
 
 raylib::audio::RlSound::~RlSound()
 {
-    UnloadSound(this->_sound);
+    if (this->_sound.stream.buffer)
+        UnloadSound(this->_sound);
+    this->_sound.stream.buffer = nullptr;
 }
 
 void raylib::audio::RlSound::update(const void *data, const int &samplesCount)

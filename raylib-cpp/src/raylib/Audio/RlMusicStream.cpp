@@ -1,83 +1,83 @@
 /*
 ** EPITECH PROJECT, 2022
-** RlMusicStream.cpp
+** RlMusic.cpp
 ** FileHelper description:
-** RlMusicStream.cpp
+** RlMusic.cpp
 */
 
-#include "raylib/Audio/RlMusicStream.hpp"
+#include "raylib/Audio/RlMusic.hpp"
 
-raylib::audio::RlMusicStream::RlMusicStream(const std::string &fileName) : _music(LoadMusicStream(fileName.c_str())), _volume(100)
+raylib::audio::RlMusic::RlMusic(const std::string &fileName) : _music(LoadMusicStream(fileName.c_str())), _volume(100)
 {
 }
 
-raylib::audio::RlMusicStream::RlMusicStream(const std::string &fileType, unsigned char *data, const int &dataSize)
+raylib::audio::RlMusic::RlMusic(const std::string &fileType, unsigned char *data, const int &dataSize)
     : _music(LoadMusicStreamFromMemory(fileType.c_str(), data, dataSize)), _volume(100)
 {
 }
 
-raylib::audio::RlMusicStream::~RlMusicStream()
+raylib::audio::RlMusic::~RlMusic()
 {
     UnloadMusicStream(this->_music);
 }
 
-void raylib::audio::RlMusicStream::play()
+void raylib::audio::RlMusic::play()
 {
     PlayMusicStream(this->_music);
 }
 
-bool raylib::audio::RlMusicStream::isPlaying()
+bool raylib::audio::RlMusic::isPlaying()
 {
     return IsMusicStreamPlaying(this->_music);
 }
 
-void raylib::audio::RlMusicStream::update()
+void raylib::audio::RlMusic::update()
 {
     UpdateMusicStream(this->_music);
 }
 
-void raylib::audio::RlMusicStream::stop()
+void raylib::audio::RlMusic::stop()
 {
     StopMusicStream(this->_music);
 }
 
-void raylib::audio::RlMusicStream::pause()
+void raylib::audio::RlMusic::pause()
 {
     PauseMusicStream(this->_music);
 }
 
-void raylib::audio::RlMusicStream::resume()
+void raylib::audio::RlMusic::resume()
 {
     ResumeMusicStream(this->_music);
 }
 
-void raylib::audio::RlMusicStream::seek(const float &position)
+void raylib::audio::RlMusic::seek(const float &position)
 {
     SeekMusicStream(this->_music, position);
 }
 
-void raylib::audio::RlMusicStream::setVolume(const float &volumeSound)
+void raylib::audio::RlMusic::setVolume(const float &volumeSound)
 {
     this->_volume = volumeSound;
     SetMusicVolume(this->_music, _volume);
 }
 
-const float &raylib::audio::RlMusicStream::getVolume() const
+const float &raylib::audio::RlMusic::getVolume() const
 {
     return this->_volume;
 }
 
-void raylib::audio::RlMusicStream::setPitch(const float &pitch)
+void raylib::audio::RlMusic::setPitch(const float &pitch)
 {
     SetMusicPitch(this->_music, pitch);
 }
 
-float raylib::audio::RlMusicStream::getTimeLength()
+float raylib::audio::RlMusic::getTimeLength()
 {
     return GetMusicTimeLength(this->_music);
 }
 
-float raylib::audio::RlMusicStream::getTimePlayed()
+float raylib::audio::RlMusic::getTimePlayed()
 {
     return GetMusicTimePlayed(this->_music);
 }

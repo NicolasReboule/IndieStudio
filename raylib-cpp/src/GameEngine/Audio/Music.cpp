@@ -7,6 +7,6 @@
 
 #include "GameEngine/Audio/Music.hpp"
 
-gameengine::audio::Music::Music(const std::string &fileName, SoundCategory category) : ISound(fileName, category), RlMusicStream("./assets/sounds/" + fileName)
+gameengine::audio::Music::Music(const std::string &fileName, SoundCategory category) : ISound(fileName, category), RlMusic("./assets/sounds/" + fileName)
 {
 }

@@ -90,5 +90,5 @@ add_library(${PROJECT_NAME}
         src/raylib/3DObject/RlAnimation.cpp
         src/GameEngine/Component/GridComponent.cpp
         src/raylib/3DObject/RlModelBuilder.cpp
-        )
+        src/raylib/Draw/Draw3DHelper.cpp)
 target_link_libraries(${PROJECT_NAME} raylib)

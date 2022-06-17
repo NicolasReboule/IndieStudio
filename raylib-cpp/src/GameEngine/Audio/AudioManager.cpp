@@ -10,6 +10,16 @@
 
 std::shared_ptr<gameengine::AudioManager> gameengine::AudioManager::_instance;
 
+gameengine::AudioManager::AudioManager()
+{
+    raylib::helper::AudioHelper::initAudioDevice();
+}
+
+gameengine::AudioManager::~AudioManager()
+{
+    raylib::helper::AudioHelper::closeAudioDevice();
+}
+
 std::shared_ptr<gameengine::AudioManager> &gameengine::AudioManager::getInstance()
 {
     if (!_instance)
@@ -19,16 +29,13 @@ std::shared_ptr<gameengine::AudioManager> &gameengine::AudioManager::getInstance
 
 void gameengine::AudioManager::addSound(const std::string &fileName, SoundCategory category)
 {
-
-    auto sound = std::make_unique<gameengine::audio::Fx>(fileName, category);
-    this->_sounds.push_back(std::move(sound));
- /*   if (category == FX) {
-        auto sound = std::make_unique<gameengine::Audio::Fx>(fileName, category);
-        this->_sounds.push_back(std::move(sound));
+    if (category == FX) {
+        auto sound = std::make_unique<gameengine::audio::Fx>(fileName, category);
+        this->_sounds.emplace_back(std::move(sound));
     } else {
-        auto sound = std::make_unique<gameengine::Audio::Music>(fileName, category);
-        this->_sounds.push_back(std::move(sound));
-    }*/
+        auto sound = std::make_unique<gameengine::audio::Music>(fileName, category);
+        this->_sounds.emplace_back(std::move(sound));
+    }
 }
 
 void gameengine::AudioManager::deleteSound(const std::string &fileName)
@@ -48,23 +55,15 @@ void gameengine::AudioManager::playSound(const std::string &fileName)
 {
     for(auto &sound: this->_sounds) {
         if (sound->getName() == fileName){
-            auto &audio = dynamic_cast<gameengine::audio::Fx &>(*sound);
-            audio.play();
-            return;
-        }
-    }
-
-/*    for(auto &sound: this->_sounds) {
-        if (sound->getName() == fileName){
             if (sound->getCategory() == FX) {
                 auto &audio = dynamic_cast<gameengine::audio::Fx &>(*sound);
-                audio.play();
+                audio.playMulti();
             } else {
                 auto &audio = dynamic_cast<gameengine::audio::Music &>(*sound);
                 audio.play();
             }
         }
-    }*/
+    }
 }
 
 void gameengine::AudioManager::setVolume(float volume, SoundCategory category)

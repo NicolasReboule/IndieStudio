@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2022
-** RlMusicStream.hpp
+** RlMusic.hpp
 ** FileHelper description:
-** RlMusicStream.hpp
+** RlMusic.hpp
 */
 
-#ifndef INDIESTUDIO_RLMUSICSTREAM_HPP
-#define INDIESTUDIO_RLMUSICSTREAM_HPP
+#ifndef INDIESTUDIO_RLMUSIC_HPP
+#define INDIESTUDIO_RLMUSIC_HPP
 
 #include <raylib.h>
 #include <string>
@@ -15,26 +15,26 @@ namespace raylib::audio {
     /**
      * @brief Encapulation of the raylib Music
      */
-    class RlMusicStream {
+    class RlMusic {
     public:
         /**
-         * @brief Construct a new RlMusicStream object from a file
+         * @brief Construct a new RlMusic object from a file
          * @param fileName the file name
          */
-        explicit RlMusicStream(const std::string &fileName);
+        explicit RlMusic(const std::string &fileName);
 
         /**
-         * @brief Construct a new RlMusicStream object from data
+         * @brief Construct a new RlMusic object from data
          * @param fileType the file type
          * @param data the data
          * @param dataSize the data size
          */
-        explicit RlMusicStream(const std::string &fileType, unsigned char *data, const int &dataSize);
+        explicit RlMusic(const std::string &fileType, unsigned char *data, const int &dataSize);
 
         /**
-         * @brief Destroy the RlMusicStream object
+         * @brief Destroy the RlMusic object
          */
-        ~RlMusicStream();
+        ~RlMusic();
 
         /**
          * @brief Play the music stream
@@ -109,4 +109,4 @@ namespace raylib::audio {
     };
 }
 
-#endif //INDIESTUDIO_RLMUSICSTREAM_HPP
+#endif //INDIESTUDIO_RLMUSIC_HPP
