@@ -53,7 +53,7 @@ void gameengine::component::GridComponent::update(float delta)
 
 void gameengine::component::GridComponent::draw()
 {
-    raylib::helper::Shape3DHelper::drawGrid(this->_size, this->_position, this->_spacing, this->_tint);
+    raylib::helper::draw::Draw3DHelper::drawGrid(this->_size, this->_position, this->_spacing, this->_tint);
 }
 
 float gameengine::component::GridComponent::getRotationDegrees()

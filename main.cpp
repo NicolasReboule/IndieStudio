@@ -59,7 +59,7 @@ int main(int ac, char **av)
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
     raylib::RlModel boost("./assets/boostSpeed.obj");
     raylib::helper::AudioHelper::initAudioDevice();
-    raylib::audio::RlMusic music = raylib::audio::RlMusic("./assets/soundcpy.wav");
+    raylib::audio::RlMusic music = raylib::audio::RlMusic("./assets/sounds/soundcpy.wav");
 
     //std::cout << anim.getCount() << std::endl;
     unsigned int i = 0;
@@ -69,7 +69,7 @@ int main(int ac, char **av)
         raylib::helper::draw::DrawTextHelper::drawFps(10, 10, 30);
         camera.update();
         raylib::helper::draw::DrawHelper::beginMode3D(camera);
-        raylib::helper::Shape3DHelper::drawGrid({9, 9}, 1.0f);
+        raylib::helper::draw::Draw3DHelper::drawGrid({9, 9}, 1.0f);
         raylib::helper::ModelHelper::drawModel(boost);
 
         if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
