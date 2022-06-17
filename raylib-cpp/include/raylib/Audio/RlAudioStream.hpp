@@ -9,29 +9,86 @@
 #define INDIESTUDIO_RLAUDIOSTREAM_HPP
 
 #include <raylib.h>
-#include <string>
 
 namespace raylib {
+    /**
+     * @brief Encapsulation of the raylib AudioStream
+     */
     class RlAudioStream {
     public:
-        // AudioStream management functions
-        RlAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels); // Init audio stream (to stream raw audio pcm data)
-        ~RlAudioStream(); // Close audio stream and free memory
+        /**
+         * @brief Construct a new RlAudioStream object, Init audio stream (to stream raw audio pcm data)
+         * @param sampleRate the sample rate of the stream
+         * @param sampleSize the sample size of the stream
+         * @param channels the number of channels of the stream
+         */
+        explicit RlAudioStream(const unsigned int &sampleRate, const unsigned int &sampleSize, const unsigned int &channels);
 
-        void update(const void *data, int samplesCount); // Update audio stream buffers with data
-        bool isProcessed();                                // Check if any audio stream buffers requires refill
-        void play();                                       // Play audio stream
-        void pause();                                      // Pause audio stream
-        void resume();                                     // Resume audio stream
-        bool isPlaying();                                  // Check if audio stream is playing
-        void stop();                                       // Stop audio stream
-        void setVolume(float volume);                    // Set volume for audio stream (1.0 is max level)
-        float getVolume() const;
-        void setPitch(float pitch);                      // Set pitch for audio stream (1.0 is base level)
-        /*void setAudioStreamBufferSizeDefault(int size); */                                // Default size for new audio streams
+        /**
+         * @brief Destroy the RlAudioStream object
+         */
+        ~RlAudioStream();
+
+        /**
+         * @brief Update audio stream buffers with data
+         * @param data the data to update the stream with
+         * @param samplesCount the number of samples to update the stream with
+         */
+        void update(const void *data, const int &samplesCount);
+
+        /**
+         * @brief Check if any audio stream buffers requires refill
+         * @return true if the stream is processed
+         */
+        bool isProcessed();
+
+        /**
+         * @brief Play the audio stream
+         */
+        void play();
+
+        /**
+         * @brief Pause the audio stream
+         */
+        void pause();
+
+        /**
+         * @brief Resume the audio stream
+         */
+        void resume();
+
+        /**
+         * @brief Check if the audio stream is playing
+         * @return true if the stream is playing
+         */
+        bool isPlaying();
+
+        /**
+         * @brief Stop the audio stream
+         */
+        void stop();
+
+        /**
+         * @brief Set the volume of the audio stream (1.0 is max level)
+         * @param volume the volume to set the stream to
+         */
+        void setVolume(float volume);
+
+        /**
+         * @brief Get the volume of the audio stream
+         * @return the volume of the stream
+         */
+        const float &getVolume() const;
+
+        /**
+         * @brief Set the pitch of the audio stream (1.0 is base level)
+         * @param pitch the pitch to set the stream to
+         */
+        void setPitch(const float &pitch);
+
     private:
-        AudioStream stream;
-        float volume;
+        AudioStream _stream; /**< The raylib AudioStream */
+        float _volume; /**< The volume of the audiostream */
     };
 }
 

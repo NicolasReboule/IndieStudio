@@ -36,3 +36,8 @@ int raylib::helper::AudioHelper::getNumberOfSoundsPlaying()
 {
     return GetSoundsPlaying();
 }
+
+void raylib::helper::AudioHelper::setAudioStreamBufferSizeDefault(const int &size)
+{
+    SetAudioStreamBufferSizeDefault(size);
+}

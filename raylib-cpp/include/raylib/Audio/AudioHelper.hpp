@@ -50,6 +50,12 @@ namespace raylib::helper {
          */
         static int getNumberOfSoundsPlaying();
 
+        /**
+         * @brief Set the default size for new audio streams
+         * @param size the size to set
+         */
+        static void setAudioStreamBufferSizeDefault(const int &size);
+
     private:
         static bool _audioDeviceInit; /**< If audio device has been initialized */
     };
