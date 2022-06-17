@@ -13,7 +13,7 @@
 
 namespace raylib {
     /**
-     * @brief Mesh class
+     * @brief Encapsulation of the raylib Mesh
      */
     class RlMesh {
     public:
@@ -25,19 +25,19 @@ namespace raylib {
         explicit RlMesh(const Mesh &mesh);
 
         /**
+         * @brief Destroys the RlMesh
+         */
+        ~RlMesh();
+
+        /**
          * @brief Get the mesh
          * @return the mesh
          */
         const Mesh &getMesh() const;
 
-        /**
-         * @brief Set the mesh
-         * @param mesh the mesh to set
-         */
-        void setMesh(const Mesh &mesh);
 
     private:
-        Mesh _mesh;
+        Mesh _mesh; /**< The raylib mesh*/
     };
 }
 

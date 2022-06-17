@@ -7,17 +7,16 @@
 
 #include "raylib/3DObject/RlMesh.hpp"
 
-raylib::RlMesh::RlMesh(const Mesh &mesh)
+raylib::RlMesh::RlMesh(const Mesh &mesh) : _mesh(mesh)
 {
-    this->_mesh = mesh;
+}
+
+raylib::RlMesh::~RlMesh()
+{
+    UnloadMesh(this->_mesh);
 }
 
 const Mesh &raylib::RlMesh::getMesh() const
 {
-    return _mesh;
-}
-
-void raylib::RlMesh::setMesh(const Mesh &mesh)
-{
-    _mesh = mesh;
+    return this->_mesh;
 }

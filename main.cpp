@@ -48,12 +48,6 @@ int main(int ac, char **av)
     auto window = raylib::window::RlWindow::getInstance();
     window->createWindow("Bomberman", 1280, 720, 0);
     raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
-    std::shared_ptr<raylib::RlAnimation> animation;
-    try {
-        animation = std::make_shared<raylib::RlAnimation>("./assets/animation", "obj");
-    } catch (raylib::ex::RlAnimationException &e) {
-        std::cerr << e.what() << std::endl;
-    }
     //raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
     //raylib::RlModelAnim anim(model, "./assets/player.iqm");
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
