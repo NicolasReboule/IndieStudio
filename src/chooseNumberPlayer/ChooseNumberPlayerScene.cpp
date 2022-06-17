@@ -14,6 +14,8 @@
 #include "chooseNumberPlayer/ButtonLeft.hpp"
 #include "chooseNumberPlayer/ButtonRight.hpp"
 
+#include "game/ButtonMainMenu.hpp"
+
 #include "global/GlobalInstance.hpp"
 
 #include "start/Logo.hpp"
@@ -36,11 +38,15 @@ void indie::ChooseNumberPlayerScene::sceneLauncher()
     auto button4p = std::make_shared<indie::Button4p>("button4p", "./assets/gui/button_4p.png");
     this->addNode(button4p);
 
+
     auto buttonLeft = std::make_shared<indie::ButtonLeft>("buttonLeft", "./assets/gui/button_left.png");
     this->addNode(buttonLeft);
 
     auto buttonRight = std::make_shared<indie::ButtonRight>("buttonRight", "./assets/gui/button_right.png");
     this->addNode(buttonRight);
+
+    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button_main_menu_x05.png");
+    this->addNode(buttonMainMenu);
 
     auto mapDefault = std::make_shared<indie::Logo>("mapDefault", "./assets/gui/map/default.png");
     this->addNode(mapDefault);
@@ -64,6 +70,8 @@ void indie::ChooseNumberPlayerScene::readyScene()
     auto &button3p = dynamic_cast<indie::Button3p &>(*sceneManager->getNode("button3p"));
     auto &button4p = dynamic_cast<indie::Button4p &>(*sceneManager->getNode("button4p"));
 
+    auto &buttonmainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+
     auto &buttonLeft = dynamic_cast<indie::ButtonLeft &>(*sceneManager->getNode("buttonLeft"));
     auto &buttonRight = dynamic_cast<indie::ButtonRight &>(*sceneManager->getNode("buttonRight"));
 
@@ -76,6 +84,8 @@ void indie::ChooseNumberPlayerScene::readyScene()
     button2p.setPosition({320, 500});
     button3p.setPosition({640, 500});
     button4p.setPosition({960, 500});
+
+    buttonmainMenu.setPosition({10, 10});
 
     buttonLeft.setPosition({50, 200});
     buttonRight.setPosition({1150, 200});
