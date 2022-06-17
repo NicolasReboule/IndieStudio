@@ -10,7 +10,7 @@
 
 // Model drawing functions
 
-void raylib::ModelHelper::drawModel(const raylib::RlModel &model)
+void raylib::helper::ModelHelper::drawModel(const raylib::RlModel &model)
 {
     DrawModelEx(model.getModel(),
                 raylib::helper::VectorHelper::toRaylibVector(model.getPosition()),
@@ -19,7 +19,7 @@ void raylib::ModelHelper::drawModel(const raylib::RlModel &model)
     raylib::helper::draw::DrawHelper::drawBoundingBox(model.getBoundingBox(), RlColor::Red); //TODO: remove this
 }
 
-void raylib::ModelHelper::drawModelWires(const raylib::RlModel &model)
+void raylib::helper::ModelHelper::drawModelWires(const raylib::RlModel &model)
 {
     DrawModelWiresEx(model.getModel(),
                     raylib::helper::VectorHelper::toRaylibVector(model.getPosition()),
@@ -27,12 +27,12 @@ void raylib::ModelHelper::drawModelWires(const raylib::RlModel &model)
                     raylib::helper::VectorHelper::toRaylibVector(model.getScale()), model.getColor());
 }
 
-BoundingBox raylib::ModelHelper::getModelBoundingBox(Model model)
+BoundingBox raylib::helper::ModelHelper::getModelBoundingBox(Model model)
 {
     return GetModelBoundingBox(model);
 }
 
-void raylib::ModelHelper::unloadModelKeepMeshes(Model model)
+void raylib::helper::ModelHelper::unloadModelKeepMeshes(Model model)
 {
     UnloadModelKeepMeshes(model);
 }

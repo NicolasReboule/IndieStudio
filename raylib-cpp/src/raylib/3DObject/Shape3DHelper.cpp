@@ -9,143 +9,137 @@
 
 // Basic geometric 3D shapes drawing functions
 
-void raylib::Shape3DHelper::drawLine3D(Vector3f startPos, Vector3f endPos, RlColor color)
+void raylib::helper::Shape3DHelper::drawLine3D(Vector3f startPos, Vector3f endPos, RlColor color)
 {
     DrawLine3D(raylib::helper::VectorHelper::toRaylibVector(startPos), raylib::helper::VectorHelper::toRaylibVector(endPos),
                color.getColor());
 }
 
-void raylib::Shape3DHelper::drawPoint3D(Vector3f position, RlColor color)
+void raylib::helper::Shape3DHelper::drawPoint3D(Vector3f position, RlColor color)
 {
     DrawPoint3D(raylib::helper::VectorHelper::toRaylibVector(position), color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCircle3D(Vector3f center, float radius, Vector3f rotationAxis, float rotationAngle,
+void raylib::helper::Shape3DHelper::drawCircle3D(Vector3f center, float radius, Vector3f rotationAxis, float rotationAngle,
                                          RlColor color)
 {
     DrawCircle3D(raylib::helper::VectorHelper::toRaylibVector(center), radius,
                  raylib::helper::VectorHelper::toRaylibVector(rotationAxis), rotationAngle, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawTriangle3D(Vector3f v1, Vector3f v2, Vector3f v3, RlColor color)
+void raylib::helper::Shape3DHelper::drawTriangle3D(Vector3f v1, Vector3f v2, Vector3f v3, RlColor color)
 {
     DrawTriangle3D(raylib::helper::VectorHelper::toRaylibVector(v1), raylib::helper::VectorHelper::toRaylibVector(v2),
                    raylib::helper::VectorHelper::toRaylibVector(v3), color.getColor());
 }
 
-void raylib::Shape3DHelper::drawTriangleStrip3D(::Vector3 *points, int pointsCount, RlColor color)
+void raylib::helper::Shape3DHelper::drawTriangleStrip3D(::Vector3 *points, int pointsCount, RlColor color)
 {
     DrawTriangleStrip3D(points, pointsCount, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCube(Vector3f position, float width, float height, float length, RlColor color)
+void raylib::helper::Shape3DHelper::drawCube(Vector3f position, float width, float height, float length, RlColor color)
 {
     DrawCube(raylib::helper::VectorHelper::toRaylibVector(position), width, height, length, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCubeV(Vector3f position, Vector3f size, RlColor color)
+void raylib::helper::Shape3DHelper::drawCubeV(Vector3f position, Vector3f size, RlColor color)
 {
     DrawCubeV(raylib::helper::VectorHelper::toRaylibVector(position), raylib::helper::VectorHelper::toRaylibVector(size),
               color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCubeWires(Vector3f position, float width, float height, float length, RlColor color)
+void raylib::helper::Shape3DHelper::drawCubeWires(Vector3f position, float width, float height, float length, RlColor color)
 {
     DrawCubeWires(raylib::helper::VectorHelper::toRaylibVector(position), width, height, length, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCubeWiresV(Vector3f position, Vector3f size, RlColor color)
+void raylib::helper::Shape3DHelper::drawCubeWiresV(Vector3f position, Vector3f size, RlColor color)
 {
     DrawCubeWiresV(raylib::helper::VectorHelper::toRaylibVector(position), raylib::helper::VectorHelper::toRaylibVector(size),
                    color.getColor());
 }
 
 void
-raylib::Shape3DHelper::drawCubeTexture(Texture2D texture, Vector3f position, float width, float height, float length,
+raylib::helper::Shape3DHelper::drawCubeTexture(Texture2D texture, Vector3f position, float width, float height, float length,
                                        RlColor color)
 {
     DrawCubeTexture(texture, raylib::helper::VectorHelper::toRaylibVector(position), width, height, length, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCubeTextureRec(Texture2D texture, Rectangle source, Vector3f position, float width,
+void raylib::helper::Shape3DHelper::drawCubeTextureRec(Texture2D texture, Rectangle source, Vector3f position, float width,
                                                float height, float length, RlColor color)
 {
     DrawCubeTextureRec(texture, source, raylib::helper::VectorHelper::toRaylibVector(position), width, height, length,
                        color.getColor());
 }
 
-void raylib::Shape3DHelper::drawSphere(Vector3f centerPos, float radius, RlColor color)
+void raylib::helper::Shape3DHelper::drawSphere(Vector3f centerPos, float radius, RlColor color)
 {
     DrawSphere(raylib::helper::VectorHelper::toRaylibVector(centerPos), radius, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawSphereEx(Vector3f centerPos, float radius, int rings, int slices, RlColor color)
+void raylib::helper::Shape3DHelper::drawSphereEx(Vector3f centerPos, float radius, int rings, int slices, RlColor color)
 {
     DrawSphereEx(raylib::helper::VectorHelper::toRaylibVector(centerPos), radius, rings, slices, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawSphereWires(Vector3f centerPos, float radius, int rings, int slices, RlColor color)
+void raylib::helper::Shape3DHelper::drawSphereWires(Vector3f centerPos, float radius, int rings, int slices, RlColor color)
 {
     DrawSphereWires(raylib::helper::VectorHelper::toRaylibVector(centerPos), radius, rings, slices, color.getColor());
 }
 
-void
-raylib::Shape3DHelper::drawCylinder(Vector3f position, float radiusTop, float radiusBottom, float height, int slices,
-                                    RlColor color)
+void raylib::helper::Shape3DHelper::drawCylinder(Vector3f position, float radiusTop, float radiusBottom, float height, int slices, RlColor color)
 {
     DrawCylinder(raylib::helper::VectorHelper::toRaylibVector(position), radiusTop, radiusBottom, height, slices,
                  color.getColor());
 }
 
-void
-raylib::Shape3DHelper::drawCylinderEx(Vector3f startPos, Vector3f endPos, float startRadius, float endRadius, int sides,
-                                      RlColor color)
+void raylib::helper::Shape3DHelper::drawCylinderEx(Vector3f startPos, Vector3f endPos, float startRadius, float endRadius, int sides, RlColor color)
 {
     DrawCylinderEx(raylib::helper::VectorHelper::toRaylibVector(startPos), raylib::helper::VectorHelper::toRaylibVector(endPos),
                    startRadius, endRadius, sides, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCylinderWires(Vector3f position, float radiusTop, float radiusBottom, float height,
-                                              int slices, RlColor color)
+void raylib::helper::Shape3DHelper::drawCylinderWires(Vector3f position, float radiusTop, float radiusBottom, float height, int slices, RlColor color)
 {
     DrawCylinderWires(raylib::helper::VectorHelper::toRaylibVector(position), radiusTop, radiusBottom, height, slices,
                       color.getColor());
 }
 
-void raylib::Shape3DHelper::drawCylinderWiresEx(Vector3f startPos, Vector3f endPos, float startRadius, float endRadius,
-                                                int sides, RlColor color)
+void raylib::helper::Shape3DHelper::drawCylinderWiresEx(Vector3f startPos, Vector3f endPos, float startRadius, float endRadius, int sides, RlColor color)
 {
     DrawCylinderWiresEx(raylib::helper::VectorHelper::toRaylibVector(startPos), raylib::helper::VectorHelper::toRaylibVector(endPos),
                         startRadius, endRadius, sides, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawPlane(Vector3f centerPos, Vector2f size, RlColor color)
+void raylib::helper::Shape3DHelper::drawPlane(Vector3f centerPos, Vector2f size, RlColor color)
 {
     DrawPlane(raylib::helper::VectorHelper::toRaylibVector(centerPos), raylib::helper::VectorHelper::toRaylibVector(size),
               color.getColor());
 }
 
-void raylib::Shape3DHelper::drawRay(Ray ray, RlColor color)
+void raylib::helper::Shape3DHelper::drawRay(Ray ray, RlColor color)
 {
     DrawRay(ray, color.getColor());
 }
 
-void raylib::Shape3DHelper::drawGrid(int slices, float spacing)
+void raylib::helper::Shape3DHelper::drawGrid(int slices, float spacing)
 {
     DrawGrid(slices, spacing);
 }
 
-void raylib::Shape3DHelper::drawGrid(const Vector2i &size, const float &spacing)
+void raylib::helper::Shape3DHelper::drawGrid(const Vector2i &size, const float &spacing)
 {
     drawGrid(size, {0, 0, 0}, spacing);
 }
 
-void raylib::Shape3DHelper::drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing)
+void raylib::helper::Shape3DHelper::drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing)
 {
     drawGrid(size, position, spacing, RlColor::Black);
 }
 
-void raylib::Shape3DHelper::drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing, const RlColor &color)
+void raylib::helper::Shape3DHelper::drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing, const RlColor &color)
 {
     rlBegin(RL_LINES);
     rlCheckRenderBatchLimit((size.x + size.y + 2) * 4);

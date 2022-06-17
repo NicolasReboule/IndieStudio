@@ -130,7 +130,7 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
     raylib::helper::draw::DrawHelper::beginMode3D(camera);
 
     this->draw();
-    raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red); //TODO: remove this
+    raylib::helper::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red); //TODO: remove this
 
     raylib::helper::draw::DrawHelper::endMode3D();
 

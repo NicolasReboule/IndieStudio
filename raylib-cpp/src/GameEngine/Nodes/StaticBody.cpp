@@ -31,7 +31,7 @@ void gameengine::StaticBody::update(float delta)
 
 void gameengine::StaticBody::draw()
 {
-    raylib::ModelHelper::drawModel(this->_model);
+    raylib::helper::ModelHelper::drawModel(this->_model);
 }
 
 Vector3f gameengine::StaticBody::getPosition()

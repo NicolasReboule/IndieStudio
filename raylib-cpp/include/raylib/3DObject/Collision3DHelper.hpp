@@ -13,7 +13,10 @@
 #include "raylib/3DObject/RlMesh.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::helper {
+    /**
+     * @brief Helper for collisions
+     */
     class Collision3dHelper {
     public:
 

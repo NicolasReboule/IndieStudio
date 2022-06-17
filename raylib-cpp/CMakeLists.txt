@@ -88,5 +88,7 @@ add_library(${PROJECT_NAME}
         src/GameEngine/exception/GameEngineException.cpp
         src/GameEngine/exception/MapParserException.cpp
         src/raylib/3DObject/RlAnimation.cpp
-        src/GameEngine/Component/GridComponent.cpp)
+        src/GameEngine/Component/GridComponent.cpp
+        src/raylib/3DObject/RlModelBuilder.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

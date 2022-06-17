@@ -16,18 +16,16 @@
 #include "raylib/3DObject/RlMeshBuilder.hpp"
 
 namespace raylib {
+    /**
+     * @brief Model class
+     */
     class RlModel {
     public:
-        explicit RlModel(const std::string &fileName, const std::string &texturePath = "",Vector3f position = {0, 0,  0}, Vector3f scale = {1,1,  1}, Color color = WHITE, Vector3f rotationAxis = {0,0,0}, float rotationAngle = 0);
-        explicit RlModel(const Mesh &mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1,1,  1}, Color color = WHITE, Vector3f rotationAxis = {0,0,0}, float rotationAngle = 0);
-        explicit RlModel(const RlMesh &mesh, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = WHITE, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
-
-        explicit RlModel(const builder::RlMeshBuilder::MeshType &type, const std::string &texturePath = "", Vector3f position = {0, 0, 0}, Vector3f scale = {1, 1, 1}, Color color = WHITE, Vector3f rotationAxis = {0, 0, 0}, float rotationAngle = 0);
-
-
+        explicit RlModel(const std::string &fileName);
+        explicit RlModel(const RlMesh &mesh);
+        explicit RlModel(const builder::RlMeshBuilder::MeshType &type);
 
         ~RlModel();
-
         void setBoundingBox(const BoundingBox &boundingBox);
         void setPosition(Vector3f position);
         void setPosition(float x, float y, float z);

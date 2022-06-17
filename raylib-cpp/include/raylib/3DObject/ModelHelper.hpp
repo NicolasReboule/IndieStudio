@@ -11,7 +11,10 @@
 #include "RlModel.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::helper {
+    /**
+     * @brief Helper class for Model
+     */
     class ModelHelper {
     public:
 

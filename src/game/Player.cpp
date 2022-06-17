@@ -78,7 +78,7 @@ void indie::Player::checkCollisions()
         for (const auto &node: sceneManager->getAllNodes()) {
             try {
                 auto &magma = dynamic_cast<indie::Magma &>(*node);
-                if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
+                if (raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
                     this->playerDead();
                     globalInstance->_playersAlive -= 1;
                     return;
@@ -89,7 +89,7 @@ void indie::Player::checkCollisions()
             }
             try {
                 auto &bonusRange = dynamic_cast<indie::BonusRange &>(*node);
-                if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonusRange.getBoundingBox())) {
+                if (raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonusRange.getBoundingBox())) {
                     std::cout << "bonusrange" << std::endl;
                     this->_range += 1;
                     sceneManager->deleteNode(node->getName());

@@ -12,6 +12,9 @@
 #include <string>
 
 namespace raylib {
+    /**
+     * @brief Mesh class
+     */
     class RlMesh {
     public:
         /**

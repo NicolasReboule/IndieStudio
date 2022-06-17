@@ -45,16 +45,16 @@ int main(int ac, char **av)
     auto window = raylib::window::RlWindow::getInstance();
     window->createWindow("Bomberman", 1280, 720, 0);
     raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
-    raylib::RlAnimation animation;
+    std::shared_ptr<raylib::RlAnimation> animation;
     try {
-        animation = raylib::RlAnimation("./assets/animation", "obj");
+        animation = std::make_shared<raylib::RlAnimation>("./assets/animation", "obj");
     } catch (raylib::ex::RlAnimationException &e) {
         std::cerr << e.what() << std::endl;
     }
     raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
     raylib::RlModelAnim anim(model, "./assets/player.iqm");
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
-
+    raylib::RlModel boost("./assets/boostSpeed.obj");
     raylib::audio::RlWave wave("./assets/sounds/sound.wav");
     std::vector samples = wave.getSamples();
 
@@ -66,11 +66,12 @@ int main(int ac, char **av)
         raylib::helper::draw::DrawTextHelper::drawFps(10, 10, 30);
         camera.update();
         raylib::helper::draw::DrawHelper::beginMode3D(camera);
-        raylib::Shape3DHelper::drawGrid({9, 9}, 1.0f);
-        if (animation.isLoaded()) {
+        raylib::helper::Shape3DHelper::drawGrid({9, 9}, 1.0f);
+        raylib::helper::ModelHelper::drawModel(boost);
+        if (animation != nullptr && animation->isLoaded()) {
             if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_SPACE))
-                animation.update();
-            DrawModel(animation.getAnimationModels()[animation.getFrame()], {0.0f, 0.0f, 0.0f}, 1.0f, WHITE);
+                animation->update();
+            DrawModel(animation->getAnimationModels()[animation->getFrame()], {0.0f, 0.0f, 0.0f}, 1.0f, WHITE);
         } else {
             if (raylib::helper::input::KeyboardHelper::isKeyDown(KEY_RIGHT))
                 i++;
