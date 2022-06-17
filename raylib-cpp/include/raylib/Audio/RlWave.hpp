@@ -22,8 +22,12 @@ namespace raylib::audio {
         /**
          * @brief Default constructor
          */
-        RlWave() : _wave() {}
+        RlWave() : _wave(), _samplesPtr(nullptr) {}
 
+        /**
+         * @brief Construct a new RlWave object from the raylib wave
+         * @param wave the raylib wave
+         */
         explicit RlWave(const Wave &wave);
 
         /**
@@ -51,6 +55,12 @@ namespace raylib::audio {
          * @return the raylib wave
          */
         Wave &getWave();
+
+        /**
+         * @brief Get the raylib wave
+         * @return the raylib wave
+         */
+        const Wave &getWave() const;
 
         /**
          * @brief Export wave data to file

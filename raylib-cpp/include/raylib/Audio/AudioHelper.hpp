@@ -1,21 +1,21 @@
 /*
 ** EPITECH PROJECT, 2022
-** AudioDeviceHelper.hpp
+** AudioHelper.hpp
 ** FileHelper description:
-** AudioDeviceHelper.hpp
+** AudioHelper.hpp
 */
 
-#ifndef INDIESTUDIO_AUDIODEVICEHELPER_HPP
-#define INDIESTUDIO_AUDIODEVICEHELPER_HPP
+#ifndef INDIESTUDIO_AUDIOHELPER_HPP
+#define INDIESTUDIO_AUDIOHELPER_HPP
 
 #include <raylib.h>
 #include <string>
 
 namespace raylib::helper {
     /**
-     * @brief Helper for audio device management functions
+     * @brief Helper for audio device management functions, and more
      */
-    class AudioDeviceHelper {
+    class AudioHelper {
     public:
         /**
          * @brief Initialize audio device and context
@@ -39,9 +39,20 @@ namespace raylib::helper {
          */
         static void setMasterVolume(float volume);
 
+        /**
+         * @brief Stop any sound playing (using multichannel buffer pool)
+         */
+        static void stopMultiSound();
+
+        /**
+         * @brief Get the number of sounds playing in multichannel buffer pool
+         * @return the number of sounds playing in multichannel buffer pool
+         */
+        static int getNumberOfSoundsPlaying();
+
     private:
         static bool _audioDeviceInit; /**< If audio device has been initialized */
     };
 }
 
-#endif //INDIESTUDIO_AUDIODEVICEHELPER_HPP
+#endif //INDIESTUDIO_AUDIOHELPER_HPP
