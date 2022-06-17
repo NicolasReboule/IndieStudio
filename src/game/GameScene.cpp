@@ -149,6 +149,8 @@ void indie::GameScene::readyScene()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
+    this->_indexMenu = 0;
+
     this->_winTimer = 3.0f;
 
     BoundingBox box = {{-0.2, 0, -0.2},{0.2,  2, 0.2}};
@@ -265,6 +267,61 @@ void indie::GameScene::updateScene(float delta)
     } else if (globalInstance->_playersAlive <= 0) {
         this->_winTimer -= delta;
         this->displayWinner("SHHEEESSH");
+    }
+
+
+
+    if (sceneManager->getPaused()) {
+
+        auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
+        auto &buttonRestart = dynamic_cast<indie::ButtonRestartx05 &>(*sceneManager->getNode("buttonRestart"));
+        auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+        auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
+
+        if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
+            if (this->_indexMenu == 0) {
+                raylib::helper::input::MouseHelper::setMousePosition(550, 225);
+                this->_indexMenu = 1;
+            }
+            else if (this->_indexMenu == 1) {
+                raylib::helper::input::MouseHelper::setMousePosition(550, 325);
+                this->_indexMenu = 2;
+            }
+            else if (this->_indexMenu == 2) {
+                raylib::helper::input::MouseHelper::setMousePosition(550, 425);
+                this->_indexMenu = 3;
+            }
+        }
+        if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
+            if (this->_indexMenu == 1) {
+                raylib::helper::input::MouseHelper::setMousePosition(550, 125);
+                this->_indexMenu = 0;
+            }
+            else if (this->_indexMenu == 2) {
+                raylib::helper::input::MouseHelper::setMousePosition(550, 225);
+                this->_indexMenu = 1;
+            }
+            else if (this->_indexMenu == 3) {
+                raylib::helper::input::MouseHelper::setMousePosition(550, 325);
+                this->_indexMenu = 2;
+            }
+        }
+        if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+            switch (this->_indexMenu) {
+                case 0:
+                    buttonResume.pressed();
+                    break;
+                case 1:
+                    buttonRestart.pressed();
+                    break;
+                case 2:
+                    buttonMainMenu.pressed();
+                    break;
+                case 3:
+                    buttonQuit.pressed();
+                    break;
+            }
+        }
     }
 }
 

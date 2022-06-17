@@ -21,6 +21,8 @@ namespace indie {
         void readyScene() override;
 
         void sceneLauncher() override;
+    private:
+        int _indexMenu;
     };
 }
 

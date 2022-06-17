@@ -39,6 +39,8 @@ namespace indie {
             BREAKABLE_WALL
         };
 
+        int _indexMenu;
+
         float _winTimer;
 
         Vector2u _mapSizeMax;

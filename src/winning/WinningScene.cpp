@@ -16,10 +16,6 @@ indie::WinningScene::WinningScene(std::string name, std::string sceneSource) : S
 {
 }
 
-void indie::WinningScene::updateScene(float delta)
-{
-}
-
 void indie::WinningScene::sceneLauncher()
 {
 
@@ -81,11 +77,44 @@ void indie::WinningScene::sceneLauncher()
     buttonRestart->setPosition({500, 400});
     this->addNode(buttonRestart);
 
-    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonRestart", "./assets/gui/button_main_menu_x05.png");
+    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button_main_menu_x05.png");
     buttonMainMenu->setPosition({500, 500});
     this->addNode(buttonMainMenu);
 }
 
 void indie::WinningScene::readyScene()
 {
+    this->_indexMenu = 0;
+    raylib::helper::input::MouseHelper::setMousePosition(550, 425);
+}
+
+void indie::WinningScene::updateScene(float delta)
+{
+    auto &sceneManager = gameengine::SceneManager::getInstance();
+
+    auto &buttonMainmenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+    auto &buttonRestart = dynamic_cast<indie::ButtonRestartx05 &>(*sceneManager->getNode("buttonRestart"));
+
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
+        if (this->_indexMenu == 0) {
+            raylib::helper::input::MouseHelper::setMousePosition(550, 525);
+            this->_indexMenu = 1;
+        }
+    }
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
+        if (this->_indexMenu == 1) {
+            raylib::helper::input::MouseHelper::setMousePosition(550, 425);
+            this->_indexMenu = 0;
+        }
+    }
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+        switch (this->_indexMenu) {
+            case 0:
+                buttonRestart.pressed();
+                break;
+            case 1:
+                buttonMainmenu.pressed();
+                break;
+        }
+    }
 }

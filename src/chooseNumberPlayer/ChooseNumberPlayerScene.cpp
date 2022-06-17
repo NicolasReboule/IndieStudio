@@ -65,6 +65,9 @@ void indie::ChooseNumberPlayerScene::readyScene()
 
     globalInstnace->_indexMap = 0;
 
+    this->_indexMenu = 0;
+    raylib::helper::input::MouseHelper::setMousePosition(0, 500);
+
     auto &button1p = dynamic_cast<indie::Button1p &>(*sceneManager->getNode("button1p"));
     auto &button2p = dynamic_cast<indie::Button2p &>(*sceneManager->getNode("button2p"));
     auto &button3p = dynamic_cast<indie::Button3p &>(*sceneManager->getNode("button3p"));
@@ -104,6 +107,8 @@ void indie::ChooseNumberPlayerScene::updateScene(float delta)
     auto &mapEmpty = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapEmpty"));
     auto &mapCool = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapCool"));
 
+
+
     switch (globalInstnace->_indexMap) {
         case 0:
             mapDefault.setHiding(false);
@@ -123,4 +128,115 @@ void indie::ChooseNumberPlayerScene::updateScene(float delta)
         default:
             break;
     }
+
+    auto &button1p = dynamic_cast<indie::Button1p &>(*sceneManager->getNode("button1p"));
+    auto &button2p = dynamic_cast<indie::Button2p &>(*sceneManager->getNode("button2p"));
+    auto &button3p = dynamic_cast<indie::Button3p &>(*sceneManager->getNode("button3p"));
+    auto &button4p = dynamic_cast<indie::Button4p &>(*sceneManager->getNode("button4p"));
+
+    auto &buttonmainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+
+    auto &buttonLeft = dynamic_cast<indie::ButtonLeft &>(*sceneManager->getNode("buttonLeft"));
+    auto &buttonRight = dynamic_cast<indie::ButtonRight &>(*sceneManager->getNode("buttonRight"));
+
+
+
+
+
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
+        if (this->_indexMenu == 7) {
+            raylib::helper::input::MouseHelper::setMousePosition(50, 200);
+            this->_indexMenu = 5;
+        }
+        else if (this->_indexMenu == 5) {
+            raylib::helper::input::MouseHelper::setMousePosition(100, 500);
+            this->_indexMenu = 0;
+        }
+        else if (this->_indexMenu == 6) {
+            raylib::helper::input::MouseHelper::setMousePosition(1060, 500);
+            this->_indexMenu = 3;
+        }
+
+    }
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
+        if (this->_indexMenu == 0 || this->_indexMenu == 1) {
+            raylib::helper::input::MouseHelper::setMousePosition(50, 200);
+            this->_indexMenu = 5;
+        }
+        else if (this->_indexMenu == 2 || this->_indexMenu == 3) {
+            raylib::helper::input::MouseHelper::setMousePosition(1150, 200);
+            this->_indexMenu = 6;
+        }
+        else if (this->_indexMenu == 5 || this->_indexMenu == 6) {
+            raylib::helper::input::MouseHelper::setMousePosition(10, 10);
+            this->_indexMenu = 7;
+        }
+    }
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_LEFT)) {
+        if (this->_indexMenu == 1) {
+            raylib::helper::input::MouseHelper::setMousePosition(100, 500);
+            this->_indexMenu = 0;
+        }
+        else if (this->_indexMenu == 2) {
+            raylib::helper::input::MouseHelper::setMousePosition(421, 500);
+            this->_indexMenu = 1;
+        }
+        else if (this->_indexMenu == 3) {
+            raylib::helper::input::MouseHelper::setMousePosition(741, 500);
+            this->_indexMenu = 2;
+        }
+        else if (this->_indexMenu == 6) {
+            raylib::helper::input::MouseHelper::setMousePosition(50, 200);
+            this->_indexMenu = 5;
+        }
+    }
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)) {
+        if (this->_indexMenu == 0) {
+            raylib::helper::input::MouseHelper::setMousePosition(420, 500);
+            this->_indexMenu = 1;
+        }
+        else if (this->_indexMenu == 1) {
+            raylib::helper::input::MouseHelper::setMousePosition(721, 500);
+            this->_indexMenu = 2;
+        }
+        else if (this->_indexMenu == 2) {
+            raylib::helper::input::MouseHelper::setMousePosition(1061, 500);
+            this->_indexMenu = 3;
+        }
+        else if (this->_indexMenu == 5) {
+            raylib::helper::input::MouseHelper::setMousePosition(1150, 200);
+            this->_indexMenu = 6;
+        }
+    }
+
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+        switch (this->_indexMenu) {
+            case 0:
+                button1p.pressed();
+                break;
+            case 1:
+                button2p.pressed();
+                break;
+            case 2:
+                button3p.pressed();
+                break;
+            case 3:
+                button4p.pressed();
+                break;
+            case 5:
+                buttonLeft.pressed();
+                break;
+            case 6:
+                buttonRight.pressed();
+                break;
+            case 7:
+                buttonmainMenu.pressed();
+                break;
+        }
+    }
+
+    //std::cout << this->_indexMenu << std::endl;
+    std::cout << globalInstnace->_indexMap << std::endl;
+
+
 }

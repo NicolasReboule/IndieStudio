@@ -228,7 +228,7 @@ void indie::Player::handleInput()
     if (this->_state == ALIVE || this->_state == GHOST) {
         if ((raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) ||
             raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId,
-                                                                         GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) && this->_bombStock > 0) {
+                                                                         GAMEPAD_BUTTON_RIGHT_FACE_LEFT)) && this->_bombStock > 0) {
             this->spawnBomb();
             this->_bombStock -= 1;
             if (this->_state == GHOST) {
