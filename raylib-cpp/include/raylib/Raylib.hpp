@@ -27,7 +27,7 @@
 #include "3DObject/Shape3DHelper.hpp"
 #include "Audio/AudioHelper.hpp"
 #include "Audio/RlAudioStream.hpp"
-#include "Audio/RlMusic.hpp"
+#include "Audio/RlMusicStream.hpp"
 #include "Audio/RlSound.hpp"
 #include "Audio/RlWave.hpp"
 #include "Camera/CameraHelper.hpp"

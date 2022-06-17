@@ -61,7 +61,7 @@ int main(int ac, char **av)
 
     sound.play();
     //std::cout << anim.getCount() << std::endl;
-    uint i = 0;
+    unsigned int i = 0;
     while (window->isOpen()) {
         raylib::helper::draw::DrawHelper::beginDrawing();
         raylib::helper::draw::DrawHelper::clearBackground(RlColor::White);

@@ -23,9 +23,9 @@ raylib::RlModel raylib::builder::RlModelBuilder::build()
         model.setPosition(_position);
     } else if (_type != 0) {
         raylib::RlModel model((raylib::builder::RlMeshBuilder::MeshType) _type);
-    } else {
-        raylib::RlModel model(_modelPath);
+        return model;
     }
+    return raylib::RlModel(_modelPath);
 }
 
 raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMesh(const std::shared_ptr<raylib::RlMesh> &mesh)

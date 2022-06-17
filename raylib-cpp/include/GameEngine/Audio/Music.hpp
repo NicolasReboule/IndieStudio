@@ -12,7 +12,7 @@
 #include "ISound.hpp"
 
 namespace gameengine::audio {
-        class Music : public ISound, public raylib::RlMusic {
+        class Music : public ISound, public raylib::RlMusicStream {
         public:
             Music(const std::string &fileName, SoundCategory category);
         };

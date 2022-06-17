@@ -26,8 +26,8 @@ add_library(${PROJECT_NAME}
         src/raylib/3DObject/Shape3DHelper.cpp
         src/raylib/Audio/AudioHelper.cpp
         src/raylib/Audio/RlAudioStream.cpp
-        src/raylib/Audio/RlMusic.cpp
-        src/raylib/Audio/RlMusic.cpp
+        src/raylib/Audio/RlMusicStream.cpp
+        src/raylib/Audio/RlMusicStream.cpp
         src/raylib/Audio/RlSound.cpp
         src/raylib/Audio/RlSound.cpp
         src/raylib/Audio/RlWave.cpp
