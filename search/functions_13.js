@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['wavecopy_0',['waveCopy',['../classraylib_1_1_wave_helper.html#a59cc3728dedfb0b99d1927f1fa1adeb1',1,'raylib::WaveHelper']]],
-  ['wavecrop_1',['waveCrop',['../classraylib_1_1_wave_helper.html#a9812b2988dc8b2365518fbdd99950cab',1,'raylib::WaveHelper']]],
-  ['waveformat_2',['waveFormat',['../classraylib_1_1_wave_helper.html#aea2f7e33e3831ae70eb5aec3ed4692c3',1,'raylib::WaveHelper']]],
-  ['what_3',['what',['../classraylib_1_1ex_1_1_raylib_exception.html#a2985f7569b9c55f25278528b552291f1',1,'raylib::ex::RaylibException']]],
-  ['windowexception_4',['WindowException',['../classraylib_1_1ex_1_1_window_exception.html#a3d9320feb325e8e568ae73be0c829412',1,'raylib::ex::WindowException']]]
+  ['vector2_0',['Vector2',['../structraylib_1_1_vector2.html#a77bad62390bac4533ffb2ade610135e9',1,'raylib::Vector2::Vector2()=default'],['../structraylib_1_1_vector2.html#a6e01dd5f56303b840f4ba28d95dd3659',1,'raylib::Vector2::Vector2(T x, T y)']]],
+  ['vector3_1',['Vector3',['../structraylib_1_1_vector3.html#ad52298d7ab668192b8b97060400aaf5e',1,'raylib::Vector3::Vector3()=default'],['../structraylib_1_1_vector3.html#a2abec2e771e0d9ff43b7698c9675b977',1,'raylib::Vector3::Vector3(T x, T y, T z)']]],
+  ['vector4_2',['Vector4',['../structraylib_1_1_vector4.html#a3d941b6e8c98a7cb5d448655ebdcb9b0',1,'raylib::Vector4::Vector4()=default'],['../structraylib_1_1_vector4.html#acf9ffde7dbdc287a82fb9d8eb475a565',1,'raylib::Vector4::Vector4(T x, T y, T z, T w)']]]
 ];

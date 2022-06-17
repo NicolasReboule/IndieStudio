@@ -1,4 +1,0 @@
-<map id="raylib::TouchHelper::getTouchPosition" name="raylib::TouchHelper::getTouchPosition">
-<area shape="rect" id="node1" title="Get touch position XY for a touch point index (relative to screen size)" alt="" coords="5,5,137,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#a90b0bf4a19c18db480f26d697bd2c2fe" title="Convert a raylib vector to a Vector2f." alt="" coords="185,5,320,47"/>
-</map>

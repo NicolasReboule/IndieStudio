@@ -1,0 +1,9 @@
+<map id="raylib::ex::RaylibException" name="raylib::ex::RaylibException">
+<area shape="rect" id="node1" title="All exceptions of the raylib&#45;cpp library will inherit from this class." alt="" coords="417,131,585,223"/>
+<area shape="rect" id="node3" href="$classraylib_1_1ex_1_1_builder_exception.html" title="Exception thrown when a builder failed to build." alt="" coords="5,278,179,355"/>
+<area shape="rect" id="node4" href="$classraylib_1_1ex_1_1_camera_exception.html" title="Exception thrown when the camera creation fails." alt="" coords="203,278,381,355"/>
+<area shape="rect" id="node5" href="$classraylib_1_1ex_1_1_invalid_argument_exception.html" title="Exception thrown when an invalid argument is passed to a function." alt="" coords="406,271,597,363"/>
+<area shape="rect" id="node6" href="$classraylib_1_1ex_1_1_rl_animation_exception.html" title="Exception thrown when an animation is not found." alt="" coords="621,278,824,355"/>
+<area shape="rect" id="node7" href="$classraylib_1_1ex_1_1_window_exception.html" title="Exception thrown in the RlWindow class." alt="" coords="848,278,1027,355"/>
+<area shape="rect" id="node2" title=" " alt="" coords="451,5,552,83"/>
+</map>

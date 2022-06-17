@@ -1,0 +1,6 @@
+<map id="raylib::RlCamera::reset" name="raylib::RlCamera::reset">
+<area shape="rect" id="node1" title="Reset the camera to the initial state of the constructor." alt="" coords="5,46,156,73"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="204,5,387,47"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="208,71,383,112"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="435,13,573,39"/>
+</map>

@@ -1,4 +1,0 @@
-<map id="raylib::RlText::getFontSize" name="raylib::RlText::getFontSize">
-<area shape="rect" id="node1" title="Get the height of the text with the loaded font." alt="" coords="204,13,375,39"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_draw_text_helper.html#a05ae79df16c13b047e7848fed6f796ab" title="Draw text using RlText and additional parameters." alt="" coords="5,5,156,47"/>
-</map>

@@ -1,0 +1,10 @@
+<map id="raylib::RlColor::getAlpha" name="raylib::RlColor::getAlpha">
+<area shape="rect" id="node1" title="Get the alpha value." alt="" coords="268,222,425,249"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_gl_state_manager.html#a3632514698e8bdb40ded5dc2edfb723e" title="Set the color." alt="" coords="37,5,189,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a25d43d80ab64b099e6baab9c878a7095" title="Draw lines sequence." alt="" coords="13,71,212,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a112b8c1822c6f1c8f4450f89d6bff5d5" title="Draw a textured polygon." alt="" coords="40,135,185,191"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#acf5fdc21faf8793b3bba26954cdc513c" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="5,215,220,256"/>
+<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ab06339304185332d3b08b9291d0badc3" title="Draw a triangle strip defined by points." alt="" coords="17,279,209,335"/>
+<area shape="rect" id="node7" href="$_rl_color_8cpp.html#ac508f551b38a174ab6fb60bbc88541bf" title=" " alt="" coords="70,359,155,386"/>
+<area shape="rect" id="node8" href="$classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="28,410,197,437"/>
+</map>

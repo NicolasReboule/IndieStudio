@@ -1,4 +1,0 @@
-<map id="raylib::RlTexture::RlTexture" name="raylib::RlTexture::RlTexture">
-<area shape="rect" id="node1" title="Craete a RlTexture, cubemap from image, multiple image cubemap layouts supported." alt="" coords="5,5,124,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_image.html#ac6b5367fe5b7a7ea87880c6d136ce743" title="Get the image (const)" alt="" coords="172,13,339,39"/>
-</map>

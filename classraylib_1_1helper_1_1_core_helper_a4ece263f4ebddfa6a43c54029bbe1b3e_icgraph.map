@@ -1,0 +1,4 @@
+<map id="raylib::helper::CoreHelper::getFrameTime" name="raylib::helper::CoreHelper::getFrameTime">
+<area shape="rect" id="node1" title="Get time in seconds for last frame drawn (delta time)" alt="" coords="239,5,403,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_scene_manager.html#a83443a80176305d8ed4836ee9ceb534b" title=" " alt="" coords="5,5,191,47"/>
+</map>

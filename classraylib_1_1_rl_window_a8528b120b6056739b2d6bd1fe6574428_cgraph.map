@@ -1,4 +1,0 @@
-<map id="raylib::RlWindow::createWindow" name="raylib::RlWindow::createWindow">
-<area shape="rect" id="node1" title="Create a window with the given title, width and height." alt="" coords="5,5,164,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_core_helper.html#aa08dc0c2aac994147c12748d7122208f" title="Set target FPS (maximum)" alt="" coords="212,5,347,47"/>
-</map>

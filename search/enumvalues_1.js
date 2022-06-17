@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['imagecellular_0',['ImageCellular',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29daadc81e171dbe8f5357b42715a4485e0ae',1,'raylib::RlImageBuilder']]],
-  ['imagechecked_1',['ImageChecked',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29daaee9368acca73ae44043f50b4bd1f944e',1,'raylib::RlImageBuilder']]],
-  ['imagecolor_2',['ImageColor',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29daac64fc193ca9dd69d9b216979161028d3',1,'raylib::RlImageBuilder']]],
-  ['imagegradienth_3',['ImageGradientH',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29daa537ae47900b6a9ae84bcd3999fdbbeeb',1,'raylib::RlImageBuilder']]],
-  ['imagegradientradial_4',['ImageGradientRadial',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29daae5458db12d3440b5d115015c39195773',1,'raylib::RlImageBuilder']]],
-  ['imagegradientv_5',['ImageGradientV',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29daabc1f768b2e6c0b0bc38ef207ca8997fe',1,'raylib::RlImageBuilder']]],
-  ['imagewhitenoise_6',['ImageWhiteNoise',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29daa2a8ffb4f658e09305eea1ea2857fea32',1,'raylib::RlImageBuilder']]]
+  ['imagecellular_0',['ImageCellular',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085ab7fa25d56d12b37881067f67b751affe',1,'raylib::builder::RlImageBuilder']]],
+  ['imagechecked_1',['ImageChecked',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085ae123bb9a38ce84058866759769145b4e',1,'raylib::builder::RlImageBuilder']]],
+  ['imagecolor_2',['ImageColor',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085ac7b1f6684e2612b8df6c00c3aac78232',1,'raylib::builder::RlImageBuilder']]],
+  ['imagegradienth_3',['ImageGradientH',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085a19939e4654d457186ebe65b483b80e50',1,'raylib::builder::RlImageBuilder']]],
+  ['imagegradientradial_4',['ImageGradientRadial',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085a07dffe7b49eae70da8af02afe1dbc0f7',1,'raylib::builder::RlImageBuilder']]],
+  ['imagegradientv_5',['ImageGradientV',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085a6add9de34b2938297eaf34fa544a0a5e',1,'raylib::builder::RlImageBuilder']]],
+  ['imagewhitenoise_6',['ImageWhiteNoise',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085ae89c320bae5b0dd27654f72429b92926',1,'raylib::builder::RlImageBuilder']]]
 ];

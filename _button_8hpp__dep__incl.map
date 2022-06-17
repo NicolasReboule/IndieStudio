@@ -1,9 +1,8 @@
 <map id="raylib&#45;cpp/include/GameEngine/Nodes/2D/Button.hpp" name="raylib&#45;cpp/include/GameEngine/Nodes/2D/Button.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="337,5,499,61"/>
-<area shape="rect" id="node2" href="$_game_engine_8hpp.html" title=" " alt="" coords="210,109,413,151"/>
-<area shape="rect" id="node7" href="$_button_8cpp.html" title=" " alt="" coords="437,109,615,151"/>
+<area shape="rect" id="node1" title=" " alt="" coords="231,5,394,61"/>
+<area shape="rect" id="node2" href="$_game_engine_8hpp.html" title=" " alt="" coords="105,109,307,151"/>
+<area shape="rect" id="node6" href="$_button_8cpp.html" title=" " alt="" coords="332,109,509,151"/>
 <area shape="rect" id="node3" href="$_main_scene_8hpp.html" title=" " alt="" coords="5,199,199,240"/>
 <area shape="rect" id="node5" href="$_audio_manager_8cpp.html" title=" " alt="" coords="223,199,400,240"/>
-<area shape="rect" id="node6" href="$_music_8cpp.html" title=" " alt="" coords="424,199,601,240"/>
 <area shape="rect" id="node4" href="$_main_scene_8cpp.html" title=" " alt="" coords="13,288,191,329"/>
 </map>

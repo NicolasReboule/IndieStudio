@@ -1,0 +1,18 @@
+<map id="gameengine::SceneManager::drawAll" name="gameengine::SceneManager::drawAll">
+<area shape="rect" id="node1" title=" " alt="" coords="5,343,191,384"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a0fdd9cb7122ac4ea8137d144be3b4af2" title="Setup canvas (framebuffer) to start drawing." alt="" coords="252,5,432,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a4c3ffcc5b829439046044f3691504a1b" title="Begin 3D mode with custom camera (3D)" alt="" coords="494,103,675,144"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a0d10c5059c28b4a57775a7a010f20fbc" title="Set background color (framebuffer clear color)" alt="" coords="243,123,441,164"/>
+<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a116d67d909fe1a930fb5dc17c28a6951" title="Draw the current fps." alt="" coords="253,212,431,253"/>
+<area shape="rect" id="node8" href="$classraylib_1_1_shape3_d_helper.html#a74fa9bc17f92c5474817c1f175a36f33" title=" " alt="" coords="267,277,417,319"/>
+<area shape="rect" id="node10" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a1aaf03d0e7139f65047584a266a67f74" title="End canvas drawing and swap buffers (double buffering)" alt="" coords="257,343,427,384"/>
+<area shape="rect" id="node11" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a7030d894b46c141f9a08dc909a901e36" title="Ends 3D mode and returns to default 2D orthographic mode." alt="" coords="257,408,427,449"/>
+<area shape="rect" id="node12" href="$classraylib_1_1window_1_1_rl_window.html#abf597558a60c76fe8078fd87086b4ce2" title="Get the singleton instance of the RlWindow." alt="" coords="259,473,425,515"/>
+<area shape="rect" id="node13" href="$classraylib_1_1helper_1_1input_1_1_keyboard_helper.html#ae14b92293b8f65a7a9234a70899baee6" title="Check if a key has been pressed once." alt="" coords="239,539,445,580"/>
+<area shape="rect" id="node14" href="$classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="267,605,417,631"/>
+<area shape="rect" id="node16" href="$classraylib_1_1_rl_camera.html#ae4ebe564fb3aeb948833e11844d42447" title="Update the camera, needed to move the camera." alt="" coords="262,655,422,682"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="724,426,863,453"/>
+<area shape="rect" id="node6" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="507,246,662,273"/>
+<area shape="rect" id="node9" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="497,347,672,388"/>
+<area shape="rect" id="node15" href="$classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="493,509,676,551"/>
+</map>

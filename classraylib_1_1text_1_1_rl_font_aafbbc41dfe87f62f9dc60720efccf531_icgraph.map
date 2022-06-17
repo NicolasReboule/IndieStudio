@@ -1,0 +1,4 @@
+<map id="raylib::text::RlFont::getDefaultFont" name="raylib::text::RlFont::getDefaultFont">
+<area shape="rect" id="node1" title="Get the default font (FontSize: 20)" alt="" coords="176,5,299,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_text.html#add6431702a1ebbc5545d8e388815cd1a" title="RlText constructor (default font used)" alt="" coords="5,5,128,47"/>
+</map>

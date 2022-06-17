@@ -1,0 +1,4 @@
+<map id="raylib::helper::draw::DrawHelper::beginMode3D" name="raylib::helper::draw::DrawHelper::beginMode3D">
+<area shape="rect" id="node1" title="Begin 3D mode with custom camera (3D)" alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="235,13,373,39"/>
+</map>

@@ -1,14 +1,15 @@
 <map id="raylib&#45;cpp/src/raylib/Image/ImageGenerator.cpp" name="raylib&#45;cpp/src/raylib/Image/ImageGenerator.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="343,5,525,47"/>
-<area shape="rect" id="node2" href="$_image_generator_8hpp.html" title=" " alt="" coords="327,95,541,121"/>
-<area shape="rect" id="node3" href="$_rl_color_8hpp.html" title=" " alt="" coords="135,244,291,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="272,468,335,495"/>
-<area shape="rect" id="node10" href="$_rl_image_8hpp.html" title=" " alt="" coords="344,169,439,196"/>
-<area shape="rect" id="node12" title=" " alt="" coords="449,244,504,271"/>
-<area shape="rect" id="node4" href="$_math_8hpp.html" title=" " alt="" coords="46,319,155,345"/>
-<area shape="rect" id="node9" title=" " alt="" coords="179,319,241,345"/>
-<area shape="rect" id="node5" href="$_vector_8hpp.html" title=" " alt="" coords="5,468,156,495"/>
-<area shape="rect" id="node7" href="$_vector_helper_8hpp.html" title=" " alt="" coords="51,393,241,420"/>
-<area shape="rect" id="node6" title=" " alt="" coords="45,543,117,569"/>
-<area shape="rect" id="node11" title=" " alt="" coords="366,244,425,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="121,5,303,47"/>
+<area shape="rect" id="node2" href="$_image_generator_8hpp.html" title=" " alt="" coords="105,95,319,121"/>
+<area shape="rect" id="node3" href="$_rl_color_8hpp.html" title=" " alt="" coords="177,244,333,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="50,468,113,495"/>
+<area shape="rect" id="node11" href="$_rl_image_8hpp.html" title=" " alt="" coords="122,169,217,196"/>
+<area shape="rect" id="node13" title=" " alt="" coords="357,244,411,271"/>
+<area shape="rect" id="node4" href="$_math_8hpp.html" title=" " alt="" coords="267,319,376,345"/>
+<area shape="rect" id="node10" title=" " alt="" coords="181,319,243,345"/>
+<area shape="rect" id="node5" href="$_vector_8hpp.html" title=" " alt="" coords="311,468,462,495"/>
+<area shape="rect" id="node7" href="$_vector_helper_8hpp.html" title=" " alt="" coords="227,393,416,420"/>
+<area shape="rect" id="node9" title=" " alt="" coords="144,393,203,420"/>
+<area shape="rect" id="node6" title=" " alt="" coords="351,543,423,569"/>
+<area shape="rect" id="node12" title=" " alt="" coords="93,244,152,271"/>
 </map>

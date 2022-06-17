@@ -1,0 +1,5 @@
+<map id="raylib::RlCamera::setCameraMode" name="raylib::RlCamera::setCameraMode">
+<area shape="rect" id="node1" title="Set the camera mode." alt="" coords="5,13,221,39"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="269,5,452,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="500,13,639,39"/>
+</map>

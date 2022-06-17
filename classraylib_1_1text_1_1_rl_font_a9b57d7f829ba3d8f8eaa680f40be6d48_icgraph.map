@@ -1,0 +1,12 @@
+<map id="raylib::text::RlFont::getFont" name="raylib::text::RlFont::getFont">
+<area shape="rect" id="node1" title="Get the raylib font." alt="" coords="285,280,408,321"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#aa5b2681c4d12f6b1502e66b431790068" title="Draw a text centered to the position." alt="" coords="5,5,237,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1image_1_1_image_draw_helper.html#ab590f78697ad7064d46657f35a7be4f6" title="Draw text (custom sprite font) within an image (destination)" alt="" coords="39,71,204,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a0af986a28ae4701e1ff06b70c9ca6b4b" title="Draw text using Font and &#39;pro&#39; parameters (rotation)" alt="" coords="31,136,211,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#ae935db70605ced8a49396ed7c3400a49" title="Draw one character (codepoint)" alt="" coords="14,201,229,257"/>
+<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1_image_helper.html#affdc7ceae2bcbed6c0f974802778a491" title="Create an image from text (custom sprite font)" alt="" coords="35,280,208,321"/>
+<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1_text_helper.html#a72a51fd600f7814f70066c799536bab4" title="Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to &#39;?..." alt="" coords="40,345,203,387"/>
+<area shape="rect" id="node8" href="$classraylib_1_1helper_1_1_text_helper.html#a2accaeaf689520388c95ec61e544d2bd" title="Get glyph index position in font for a codepoint (unicode character), fallback to &#39;?..." alt="" coords="40,411,203,452"/>
+<area shape="rect" id="node9" href="$classraylib_1_1helper_1_1_text_helper.html#a124adf375ffd224985d85b2427c2a8d1" title="Get glyph font info data for a codepoint (unicode character), fallback to &#39;?&#39; if not found." alt="" coords="40,476,203,517"/>
+<area shape="rect" id="node10" href="$classraylib_1_1helper_1_1_text_helper.html#aa114ff1bcdb23b90b6539df115dc9bc6" title="Measure string width for custom font." alt="" coords="40,541,203,583"/>
+</map>

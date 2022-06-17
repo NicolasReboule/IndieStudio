@@ -1,4 +1,4 @@
 <map id="raylib::Collision2DHelper::checkCollisionCircles" name="raylib::Collision2DHelper::checkCollisionCircles">
 <area shape="rect" id="node1" title="Check if two circles are colliding." alt="" coords="5,5,167,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="215,5,349,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="215,5,389,47"/>
 </map>

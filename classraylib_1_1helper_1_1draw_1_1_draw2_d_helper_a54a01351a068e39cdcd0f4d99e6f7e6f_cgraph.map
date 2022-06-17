@@ -1,0 +1,4 @@
+<map id="raylib::helper::draw::Draw2DHelper::drawEllipseLines" name="raylib::helper::draw::Draw2DHelper::drawEllipseLines">
+<area shape="rect" id="node1" title="Draw ellipse outline." alt="" coords="5,5,189,61"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="237,20,392,47"/>
+</map>

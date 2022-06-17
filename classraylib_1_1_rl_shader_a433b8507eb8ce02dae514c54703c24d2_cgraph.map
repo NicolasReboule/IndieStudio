@@ -1,4 +1,0 @@
-<map id="raylib::RlShader::setValueTexture" name="raylib::RlShader::setValueTexture">
-<area shape="rect" id="node1" title="Set shader uniform value for texture (sampler2d)" alt="" coords="5,5,173,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_texture.html#a251ba675de3e15d6eabdab746c82aed0" title="Get the texture." alt="" coords="221,13,359,39"/>
-</map>

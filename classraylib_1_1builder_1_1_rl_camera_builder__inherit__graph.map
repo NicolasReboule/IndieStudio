@@ -1,0 +1,5 @@
+<map id="raylib::builder::RlCameraBuilder" name="raylib::builder::RlCameraBuilder">
+<area shape="rect" id="node1" title="Builder to create a RlCamera easily." alt="" coords="14,287,173,481"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="20,145,167,237"/>
+<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_i_builder.html" title="Interface for all the builder." alt="" coords="5,5,181,83"/>
+</map>

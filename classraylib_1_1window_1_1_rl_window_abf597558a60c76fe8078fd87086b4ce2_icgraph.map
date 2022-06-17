@@ -1,0 +1,5 @@
+<map id="raylib::window::RlWindow::getInstance" name="raylib::window::RlWindow::getInstance">
+<area shape="rect" id="node1" title="Get the singleton instance of the RlWindow." alt="" coords="239,35,405,76"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title=" " alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616" title="Construct a new RlCamera object." alt="" coords="9,71,187,98"/>
+</map>

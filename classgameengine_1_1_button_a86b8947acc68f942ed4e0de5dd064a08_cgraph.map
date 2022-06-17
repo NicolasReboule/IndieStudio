@@ -1,0 +1,7 @@
+<map id="gameengine::Button::draw" name="gameengine::Button::draw">
+<area shape="rect" id="node1" title=" " alt="" coords="5,49,141,90"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#ac8b34cc1578173981b49f9d93507014c" title="Draw a part of a texture defined by a rectangle." alt="" coords="189,41,335,97"/>
+<area shape="rect" id="node3" href="$classraylib_1_1texture_1_1_rl_texture.html#a1e9bbbbd3f6689828e4a363f3228bb50" title="Get the texture." alt="" coords="383,5,565,32"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="397,56,551,83"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="387,107,561,149"/>
+</map>

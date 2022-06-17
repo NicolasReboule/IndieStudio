@@ -1,0 +1,5 @@
+<map id="gameengine::ISound" name="gameengine::ISound">
+<area shape="rect" id="node1" title=" " alt="" coords="93,5,232,127"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1audio_1_1_fx.html" title=" " alt="" coords="5,182,155,259"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1audio_1_1_music.html" title=" " alt="" coords="179,175,314,267"/>
+</map>

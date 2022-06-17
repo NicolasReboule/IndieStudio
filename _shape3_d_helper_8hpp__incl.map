@@ -1,10 +1,12 @@
 <map id="raylib&#45;cpp/include/raylib/3DObject/Shape3DHelper.hpp" name="raylib&#45;cpp/include/raylib/3DObject/Shape3DHelper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="161,5,395,47"/>
-<area shape="rect" id="node2" href="$_math_8hpp.html" title=" " alt="" coords="111,169,221,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="247,319,309,345"/>
-<area shape="rect" id="node7" href="$_rl_color_8hpp.html" title=" " alt="" coords="316,95,472,121"/>
-<area shape="rect" id="node3" href="$_vector_8hpp.html" title=" " alt="" coords="5,319,156,345"/>
-<area shape="rect" id="node5" href="$_vector_helper_8hpp.html" title=" " alt="" coords="51,244,241,271"/>
-<area shape="rect" id="node4" title=" " alt="" coords="45,393,117,420"/>
-<area shape="rect" id="node8" title=" " alt="" coords="366,169,427,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="317,5,550,47"/>
+<area shape="rect" id="node2" href="$_math_8hpp.html" title=" " alt="" coords="179,169,288,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="334,319,397,345"/>
+<area shape="rect" id="node8" href="$_rl_color_8hpp.html" title=" " alt="" coords="298,95,454,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="539,95,589,121"/>
+<area shape="rect" id="node3" href="$_vector_8hpp.html" title=" " alt="" coords="93,319,243,345"/>
+<area shape="rect" id="node5" href="$_vector_helper_8hpp.html" title=" " alt="" coords="139,244,328,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,244,64,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="132,393,204,420"/>
+<area shape="rect" id="node9" title=" " alt="" coords="403,169,464,196"/>
 </map>

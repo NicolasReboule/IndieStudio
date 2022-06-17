@@ -1,4 +1,0 @@
-<map id="raylib::RlWindow::setWindowIcon" name="raylib::RlWindow::setWindowIcon">
-<area shape="rect" id="node1" title="Set icon for window (only PLATFORM_DESKTOP)" alt="" coords="5,5,216,32"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_image.html#ac6b5367fe5b7a7ea87880c6d136ce743" title="Get the image (const)" alt="" coords="264,5,431,32"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="raylib::Draw2DHelper::drawTriangle" name="raylib::Draw2DHelper::drawTriangle">
-<area shape="rect" id="node1" title="Draw a color&#45;filled triangle (vertex in counter&#45;clockwise order!)" alt="" coords="5,27,148,69"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="196,5,351,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="206,57,341,98"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="raylib::WorldHelper::getScreenToWorld2D" name="raylib::WorldHelper::getScreenToWorld2D">
-<area shape="rect" id="node1" title="Get the world space position for a 2d camera screen space position." alt="" coords="5,39,156,80"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="204,5,339,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_vector_helper.html#a90b0bf4a19c18db480f26d697bd2c2fe" title="Convert a raylib vector to a Vector2f." alt="" coords="204,71,339,112"/>
-</map>

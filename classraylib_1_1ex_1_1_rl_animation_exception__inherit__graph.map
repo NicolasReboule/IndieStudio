@@ -1,0 +1,5 @@
+<map id="raylib::ex::RlAnimationException" name="raylib::ex::RlAnimationException">
+<area shape="rect" id="node1" title="Exception thrown when an animation is not found." alt="" coords="5,271,208,348"/>
+<area shape="rect" id="node2" href="$classraylib_1_1ex_1_1_raylib_exception.html" title="All exceptions of the raylib&#45;cpp library will inherit from this class." alt="" coords="23,131,191,223"/>
+<area shape="rect" id="node3" title=" " alt="" coords="56,5,157,83"/>
+</map>

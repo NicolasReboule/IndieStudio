@@ -1,0 +1,4 @@
+<map id="raylib::Collision3dHelper::checkCollisionBoxes" name="raylib::Collision3dHelper::checkCollisionBoxes">
+<area shape="rect" id="node1" title="Check collision between two bounding boxes." alt="" coords="239,5,397,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_kinematic_body.html#abe2a89d864a6a131e2f81b1c0b06ad9b" title=" " alt="" coords="5,5,191,47"/>
+</map>

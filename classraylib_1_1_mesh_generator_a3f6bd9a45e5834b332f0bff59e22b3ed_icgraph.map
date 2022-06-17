@@ -1,0 +1,5 @@
+<map id="raylib::MeshGenerator::genMeshCube" name="raylib::MeshGenerator::genMeshCube">
+<area shape="rect" id="node1" title="Generate a mesh of a cube." alt="" coords="447,5,593,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html#a052f9a7e1a75873ee8da20d32c787c27" title="Create a mesh." alt="" coords="212,5,399,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_model.html#a867d4e90f2298fec360c6d9a294dccb9" title=" " alt="" coords="5,13,164,39"/>
+</map>

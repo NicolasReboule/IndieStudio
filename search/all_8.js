@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['haswindowstate_0',['hasWindowState',['../classraylib_1_1_rl_window.html#a62196d0fb1e953a4a0f3480fee072e67',1,'raylib::RlWindow']]],
-  ['hidecursor_1',['hideCursor',['../classraylib_1_1_cursor_helper.html#a9f87a67b927637a25e907d89f88c643d',1,'raylib::CursorHelper']]]
+  ['haswindowstate_0',['hasWindowState',['../classraylib_1_1window_1_1_rl_window.html#a2a362a79381cd5bd72ab3aef14c74b37',1,'raylib::window::RlWindow']]],
+  ['hidecursor_1',['hideCursor',['../classraylib_1_1helper_1_1input_1_1_cursor_helper.html#a26bc1b9ed8cb0bc51939d7b82d8b34a7',1,'raylib::helper::input::CursorHelper']]]
 ];

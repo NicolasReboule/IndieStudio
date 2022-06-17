@@ -1,0 +1,11 @@
+<map id="raylib::helper::draw::DrawTextHelper::drawText" name="raylib::helper::draw::DrawTextHelper::drawText">
+<area shape="rect" id="node1" title="Draw text using RlText values." alt="" coords="5,235,185,276"/>
+<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_text.html#a1e70922e90bf6023db4d4b1f82813624" title="Get the color of the text." alt="" coords="233,5,356,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_text.html#ac15da7f3e5b782e447e7bbd7d06c970b" title="Get the font." alt="" coords="233,71,356,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1text_1_1_rl_text.html#adb62bd3086dbcd14f25a1e6dfd03dc5b" title="Get the height of the text with the loaded font." alt="" coords="233,136,356,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1text_1_1_rl_text.html#aacf5c14590abdcf4b05c7cdfea0968d8" title="Get the text origin." alt="" coords="233,201,356,243"/>
+<area shape="rect" id="node6" href="$classraylib_1_1text_1_1_rl_text.html#ad32d9a7732a1e00fab4e81801f2e72a9" title="Get the position of the text." alt="" coords="233,267,356,308"/>
+<area shape="rect" id="node7" href="$classraylib_1_1text_1_1_rl_text.html#ab5b10d206f5b7bf065843eb7c55607fd" title="Get the text rotation." alt="" coords="233,332,356,373"/>
+<area shape="rect" id="node8" href="$classraylib_1_1text_1_1_rl_text.html#a2ef82fb0ee692a3706a57643620283e1" title="Get the text." alt="" coords="233,397,356,439"/>
+<area shape="rect" id="node9" href="$classraylib_1_1text_1_1_rl_text.html#aa760466f1ad28430061e233ce1e61ffa" title="Get the text spacing." alt="" coords="233,463,356,504"/>
+</map>

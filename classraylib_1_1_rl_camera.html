@@ -83,36 +83,99 @@ Collaboration diagram for raylib::RlCamera:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_rl_camera__coll__graph.png" border="0" usemap="#araylib_1_1_rl_camera_coll__map" alt="Collaboration graph"/></div>
 <map name="araylib_1_1_rl_camera_coll__map" id="araylib_1_1_rl_camera_coll__map">
-<area shape="rect" title="Camera class." alt="" coords="5,5,120,156"/>
+<area shape="rect" title="Camera class." alt="" coords="5,5,212,332"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d6af577bc961d3db9e3c7580a2ddd36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a7d6af577bc961d3db9e3c7580a2ddd36">RlCamera</a> (const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;position={ 0, 10, 10 }, const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;target={0, 0, 0}, const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;up={ 0, 1, 0 }, const float &amp;fovy=45, const CameraProjection &amp;projection=CAMERA_PERSPECTIVE)</td></tr>
-<tr class="memdesc:a7d6af577bc961d3db9e3c7580a2ddd36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classraylib_1_1_rl_camera.html" title="Camera class.">RlCamera</a> object.  <a href="classraylib_1_1_rl_camera.html#a7d6af577bc961d3db9e3c7580a2ddd36">More...</a><br /></td></tr>
-<tr class="separator:a7d6af577bc961d3db9e3c7580a2ddd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa328c11f5f27684589bde1e3caadaae6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#aa328c11f5f27684589bde1e3caadaae6">RlCamera</a> ()</td></tr>
+<tr class="memdesc:aa328c11f5f27684589bde1e3caadaae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor who doesn't initialize the camera.  <a href="classraylib_1_1_rl_camera.html#aa328c11f5f27684589bde1e3caadaae6">More...</a><br /></td></tr>
+<tr class="separator:aa328c11f5f27684589bde1e3caadaae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9bab72b10145fc4f3fb7b2d0f920616"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616">RlCamera</a> (const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;position, const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;target, const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;lookingPoint, const float &amp;fovy=45, const CameraProjection &amp;projection=CAMERA_PERSPECTIVE, const CameraMode &amp;cameraMode=CAMERA_FREE)</td></tr>
+<tr class="memdesc:ae9bab72b10145fc4f3fb7b2d0f920616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classraylib_1_1_rl_camera.html" title="Camera class.">RlCamera</a> object.  <a href="classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616">More...</a><br /></td></tr>
+<tr class="separator:ae9bab72b10145fc4f3fb7b2d0f920616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4ebe564fb3aeb948833e11844d42447"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#ae4ebe564fb3aeb948833e11844d42447">update</a> ()</td></tr>
 <tr class="memdesc:ae4ebe564fb3aeb948833e11844d42447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the camera, needed to move the camera.  <a href="classraylib_1_1_rl_camera.html#ae4ebe564fb3aeb948833e11844d42447">More...</a><br /></td></tr>
 <tr class="separator:ae4ebe564fb3aeb948833e11844d42447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa099ef07349fad0bd6a8efbc26dfbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe">reset</a> ()</td></tr>
+<tr class="memdesc:aaaa099ef07349fad0bd6a8efbc26dfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the camera to the initial state of the constructor.  <a href="classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe">More...</a><br /></td></tr>
+<tr class="separator:aaaa099ef07349fad0bd6a8efbc26dfbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce4003ffb22f0a6a6316228901cb55a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a8ce4003ffb22f0a6a6316228901cb55a">setPosition</a> (const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;position)</td></tr>
 <tr class="memdesc:a8ce4003ffb22f0a6a6316228901cb55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the camera.  <a href="classraylib_1_1_rl_camera.html#a8ce4003ffb22f0a6a6316228901cb55a">More...</a><br /></td></tr>
 <tr class="separator:a8ce4003ffb22f0a6a6316228901cb55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe7ee0da8ffa243146c47187641ed098"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#afe7ee0da8ffa243146c47187641ed098">setTarget</a> (const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;target)</td></tr>
 <tr class="memdesc:afe7ee0da8ffa243146c47187641ed098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the target of the camera (Camera looking at point)  <a href="classraylib_1_1_rl_camera.html#afe7ee0da8ffa243146c47187641ed098">More...</a><br /></td></tr>
 <tr class="separator:afe7ee0da8ffa243146c47187641ed098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41df1d18506284ec149969d1d8894749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a41df1d18506284ec149969d1d8894749">setProjection</a> (const CameraProjection &amp;projection)</td></tr>
+<tr class="memdesc:a41df1d18506284ec149969d1d8894749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera projection type.  <a href="classraylib_1_1_rl_camera.html#a41df1d18506284ec149969d1d8894749">More...</a><br /></td></tr>
+<tr class="separator:a41df1d18506284ec149969d1d8894749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc8d9e090d83b616dc2e5a85d594924"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a3dc8d9e090d83b616dc2e5a85d594924">setFov</a> (const float &amp;fovy)</td></tr>
+<tr class="memdesc:a3dc8d9e090d83b616dc2e5a85d594924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the fovy of the camera (Camera field-of-view Y)  <a href="classraylib_1_1_rl_camera.html#a3dc8d9e090d83b616dc2e5a85d594924">More...</a><br /></td></tr>
+<tr class="separator:a3dc8d9e090d83b616dc2e5a85d594924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6072eac3dde40f3a930751064aa5de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#aa6072eac3dde40f3a930751064aa5de3">setCameraMode</a> (const CameraMode &amp;mode)</td></tr>
+<tr class="memdesc:aa6072eac3dde40f3a930751064aa5de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera mode.  <a href="classraylib_1_1_rl_camera.html#aa6072eac3dde40f3a930751064aa5de3">More...</a><br /></td></tr>
+<tr class="separator:aa6072eac3dde40f3a930751064aa5de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53c0573a4b08b61f3a420838c3d692c4"><td class="memItemLeft" align="right" valign="top">const Camera3D &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4">get</a> () const</td></tr>
 <tr class="memdesc:a53c0573a4b08b61f3a420838c3d692c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the 3d camera.  <a href="classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4">More...</a><br /></td></tr>
 <tr class="separator:a53c0573a4b08b61f3a420838c3d692c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f628fe2dcd6cf3d7fb7c628341a8e37"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a3f628fe2dcd6cf3d7fb7c628341a8e37">geMatrix</a> ()</td></tr>
 <tr class="memdesc:a3f628fe2dcd6cf3d7fb7c628341a8e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the matrix of the camera.  <a href="classraylib_1_1_rl_camera.html#a3f628fe2dcd6cf3d7fb7c628341a8e37">More...</a><br /></td></tr>
 <tr class="separator:a3f628fe2dcd6cf3d7fb7c628341a8e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2807f3df9295fed532d0fc299a475dd4"><td class="memItemLeft" align="right" valign="top">const CameraMode &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a2807f3df9295fed532d0fc299a475dd4">getMode</a> () const</td></tr>
+<tr class="memdesc:a2807f3df9295fed532d0fc299a475dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera mode.  <a href="classraylib_1_1_rl_camera.html#a2807f3df9295fed532d0fc299a475dd4">More...</a><br /></td></tr>
+<tr class="separator:a2807f3df9295fed532d0fc299a475dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7eb85575b0b6b616ea9e6aa83b73307"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#af7eb85575b0b6b616ea9e6aa83b73307">getConstructedPosition</a> () const</td></tr>
+<tr class="memdesc:af7eb85575b0b6b616ea9e6aa83b73307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of the camera when construct.  <a href="classraylib_1_1_rl_camera.html#af7eb85575b0b6b616ea9e6aa83b73307">More...</a><br /></td></tr>
+<tr class="separator:af7eb85575b0b6b616ea9e6aa83b73307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37701ed8bc02963e5efc1e02896cba8b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a37701ed8bc02963e5efc1e02896cba8b">getConstructedTarget</a> () const</td></tr>
+<tr class="memdesc:a37701ed8bc02963e5efc1e02896cba8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the target of the camera when construct.  <a href="classraylib_1_1_rl_camera.html#a37701ed8bc02963e5efc1e02896cba8b">More...</a><br /></td></tr>
+<tr class="separator:a37701ed8bc02963e5efc1e02896cba8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ff4318b1d605542baaef57264382d9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a01ff4318b1d605542baaef57264382d9">getConstructedLookingPoint</a> () const</td></tr>
+<tr class="memdesc:a01ff4318b1d605542baaef57264382d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the looking point of the camera when construct.  <a href="classraylib_1_1_rl_camera.html#a01ff4318b1d605542baaef57264382d9">More...</a><br /></td></tr>
+<tr class="separator:a01ff4318b1d605542baaef57264382d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71714243b9297c9015dcbb87ff74845c"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a71714243b9297c9015dcbb87ff74845c">getConstructedFovy</a> () const</td></tr>
+<tr class="memdesc:a71714243b9297c9015dcbb87ff74845c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fovy of the camera when construct.  <a href="classraylib_1_1_rl_camera.html#a71714243b9297c9015dcbb87ff74845c">More...</a><br /></td></tr>
+<tr class="separator:a71714243b9297c9015dcbb87ff74845c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9866fa0bfb175a9c272dc037a01246f"><td class="memItemLeft" align="right" valign="top">const CameraProjection &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#aa9866fa0bfb175a9c272dc037a01246f">getConstructedProjection</a> () const</td></tr>
+<tr class="memdesc:aa9866fa0bfb175a9c272dc037a01246f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the projection of the camera when construct.  <a href="classraylib_1_1_rl_camera.html#aa9866fa0bfb175a9c272dc037a01246f">More...</a><br /></td></tr>
+<tr class="separator:aa9866fa0bfb175a9c272dc037a01246f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a50ec6525dc5e6bdefd0b1cadb1cae"><td class="memItemLeft" align="right" valign="top">const CameraMode &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classraylib_1_1_rl_camera.html#a41a50ec6525dc5e6bdefd0b1cadb1cae">getConstructedCameraMode</a> () const</td></tr>
+<tr class="memdesc:a41a50ec6525dc5e6bdefd0b1cadb1cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera mode when construct.  <a href="classraylib_1_1_rl_camera.html#a41a50ec6525dc5e6bdefd0b1cadb1cae">More...</a><br /></td></tr>
+<tr class="separator:a41a50ec6525dc5e6bdefd0b1cadb1cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Camera class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7d6af577bc961d3db9e3c7580a2ddd36" name="a7d6af577bc961d3db9e3c7580a2ddd36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d6af577bc961d3db9e3c7580a2ddd36">&#9670;&nbsp;</a></span>RlCamera()</h2>
+<a id="aa328c11f5f27684589bde1e3caadaae6" name="aa328c11f5f27684589bde1e3caadaae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa328c11f5f27684589bde1e3caadaae6">&#9670;&nbsp;</a></span>RlCamera() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::RlCamera::RlCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Empty constructor who doesn't initialize the camera. </p>
+
+</div>
+</div>
+<a id="ae9bab72b10145fc4f3fb7b2d0f920616" name="ae9bab72b10145fc4f3fb7b2d0f920616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9bab72b10145fc4f3fb7b2d0f920616">&#9670;&nbsp;</a></span>RlCamera() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,19 +187,19 @@ Public Member Functions</h2></td></tr>
           <td class="memname">raylib::RlCamera::RlCamera </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;&#160;</td>
-          <td class="paramname"><em>position</em> = <code>{&#160;0,&#160;10,&#160;10&#160;}</code>, </td>
+          <td class="paramname"><em>position</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;&#160;</td>
-          <td class="paramname"><em>target</em> = <code>{0,&#160;0,&#160;0}</code>, </td>
+          <td class="paramname"><em>target</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp;&#160;</td>
-          <td class="paramname"><em>up</em> = <code>{&#160;0,&#160;1,&#160;0&#160;}</code>, </td>
+          <td class="paramname"><em>lookingPoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -148,7 +211,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const CameraProjection &amp;&#160;</td>
-          <td class="paramname"><em>projection</em> = <code>CAMERA_PERSPECTIVE</code>&#160;</td>
+          <td class="paramname"><em>projection</em> = <code>CAMERA_PERSPECTIVE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CameraMode &amp;&#160;</td>
+          <td class="paramname"><em>cameraMode</em> = <code>CAMERA_FREE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -168,20 +237,37 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">position</td><td>the position of the camera </td></tr>
     <tr><td class="paramname">target</td><td>the target of the camera (Camera looking at point) </td></tr>
-    <tr><td class="paramname">up</td><td>the up of the camera (Camera up vector (rotation towards target)) </td></tr>
+    <tr><td class="paramname">lookingPoint</td><td>the lookingPoint of the camera (rotation towards target) </td></tr>
     <tr><td class="paramname">fovy</td><td>the fovy of the camera (Camera field-of-view Y) </td></tr>
     <tr><td class="paramname">projection</td><td>the projection of the camera </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>CameraProjection </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>the mode of the camera </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>CameraMode </dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>Don't use this use the RlCameraBuilder instead (please) </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>RlCameraBuilder </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">CameraException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_rl_camera_a7d6af577bc961d3db9e3c7580a2ddd36_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_a7d6af577bc961d3db9e3c7580a2ddd36_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_rl_camera_a7d6af577bc961d3db9e3c7580a2ddd36_cgraph" id="aclassraylib_1_1_rl_camera_a7d6af577bc961d3db9e3c7580a2ddd36_cgraph">
-<area shape="rect" title="Construct a new RlCamera object." alt="" coords="5,13,184,39"/>
-<area shape="rect" href="classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="232,5,367,47"/>
+<div class="center"><img src="classraylib_1_1_rl_camera_ae9bab72b10145fc4f3fb7b2d0f920616_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_ae9bab72b10145fc4f3fb7b2d0f920616_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_camera_ae9bab72b10145fc4f3fb7b2d0f920616_cgraph" id="aclassraylib_1_1_rl_camera_ae9bab72b10145fc4f3fb7b2d0f920616_cgraph">
+<area shape="rect" title="Construct a new RlCamera object." alt="" coords="5,46,184,73"/>
+<area shape="rect" href="classraylib_1_1window_1_1_rl_window.html#abf597558a60c76fe8078fd87086b4ce2" title="Get the singleton instance of the RlWindow." alt="" coords="240,5,407,47"/>
+<area shape="rect" href="classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="232,71,415,112"/>
+<area shape="rect" href="classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="463,78,601,105"/>
 </map>
 </div>
 
@@ -230,15 +316,271 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classraylib_1_1_rl_camera_a53c0573a4b08b61f3a420838c3d692c4_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_a53c0573a4b08b61f3a420838c3d692c4_icgraph" alt=""/></div>
 <map name="aclassraylib_1_1_rl_camera_a53c0573a4b08b61f3a420838c3d692c4_icgraph" id="aclassraylib_1_1_rl_camera_a53c0573a4b08b61f3a420838c3d692c4_icgraph">
-<area shape="rect" title="Get the 3d camera." alt="" coords="440,143,579,170"/>
-<area shape="rect" href="classraylib_1_1_draw_helper.html#a82d269f2ef4c715adf42c7d5606d26d6" title="Begin 3D mode with custom camera (3D)" alt="" coords="254,5,381,47"/>
-<area shape="rect" href="classraylib_1_1_draw_helper.html#ac1929beba2425c13d80a2b3ae6b4d146" title="Draw a billboard texture defined by source and rotation." alt="" coords="254,71,381,112"/>
-<area shape="rect" href="classraylib_1_1_world_helper.html#a630eff662a04e4e4ea9e1292b1b21a20" title="Get the screen space position for a 3d world space position." alt="" coords="250,136,385,177"/>
-<area shape="rect" href="classraylib_1_1_world_helper.html#aff44a45b06f8c612e5be45fdeb8b9047" title="Get size position for a 3d world space position." alt="" coords="243,201,392,243"/>
-<area shape="rect" href="classraylib_1_1_camera_helper.html#a600187094c169a84cc5f41027f1cd56c" title="Set camera mode (global camera)" alt="" coords="247,267,388,308"/>
-<area shape="rect" href="class_game_engine_1_1_scene_manager.html#a25782204989bff31992f622733bc4220" title=" " alt="" coords="5,5,195,47"/>
+<area shape="rect" title="Get the 3d camera." alt="" coords="751,181,889,208"/>
+<area shape="rect" href="classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a4c3ffcc5b829439046044f3691504a1b" title="Begin 3D mode with custom camera (3D)" alt="" coords="256,45,437,86"/>
+<area shape="rect" href="classraylib_1_1helper_1_1draw_1_1_draw_helper.html#ac24ea6e13742071cb602e31637bb9404" title="Draw a billboard texture defined by source and rotation." alt="" coords="503,43,703,85"/>
+<area shape="rect" href="classraylib_1_1helper_1_1input_1_1_mouse_helper.html#ad6d135f9e0dbaca82d31b918addea997" title="Get a ray trace from mouse position." alt="" coords="507,109,698,150"/>
+<area shape="rect" href="classraylib_1_1helper_1_1_world_helper.html#a18ad366f3b48d95cb72092263f0aff59" title="Get the screen space position for a 3d world space position." alt="" coords="517,174,688,215"/>
+<area shape="rect" href="classraylib_1_1helper_1_1_world_helper.html#a9a42123ebf5e267427e3ac1322efb644" title="Get size position for a 3d world space position." alt="" coords="517,239,688,281"/>
+<area shape="rect" href="_rl_camera_8cpp.html#a515aaeacd00b4cb36664a42ffcc2a6fe" title=" " alt="" coords="560,305,645,332"/>
+<area shape="rect" href="classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="511,357,694,398"/>
+<area shape="rect" href="classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title=" " alt="" coords="5,103,191,145"/>
+<area shape="rect" href="classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="271,169,422,196"/>
+<area shape="rect" href="classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616" title="Construct a new RlCamera object." alt="" coords="257,339,436,365"/>
+<area shape="rect" href="classraylib_1_1_rl_camera.html#aa6072eac3dde40f3a930751064aa5de3" title="Set the camera mode." alt="" coords="239,389,455,416"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a41a50ec6525dc5e6bdefd0b1cadb1cae" name="a41a50ec6525dc5e6bdefd0b1cadb1cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a50ec6525dc5e6bdefd0b1cadb1cae">&#9670;&nbsp;</a></span>getConstructedCameraMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CameraMode &amp; raylib::RlCamera::getConstructedCameraMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the camera mode when construct. </p>
+<dl class="section return"><dt>Returns</dt><dd>the camera mode </dd></dl>
+
+</div>
+</div>
+<a id="a71714243b9297c9015dcbb87ff74845c" name="a71714243b9297c9015dcbb87ff74845c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71714243b9297c9015dcbb87ff74845c">&#9670;&nbsp;</a></span>getConstructedFovy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float &amp; raylib::RlCamera::getConstructedFovy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the fovy of the camera when construct. </p>
+<dl class="section return"><dt>Returns</dt><dd>the fovy of the camera </dd></dl>
+
+</div>
+</div>
+<a id="a01ff4318b1d605542baaef57264382d9" name="a01ff4318b1d605542baaef57264382d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ff4318b1d605542baaef57264382d9">&#9670;&nbsp;</a></span>getConstructedLookingPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp; raylib::RlCamera::getConstructedLookingPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the looking point of the camera when construct. </p>
+<dl class="section return"><dt>Returns</dt><dd>the looking point vector of the camera </dd></dl>
+
+</div>
+</div>
+<a id="af7eb85575b0b6b616ea9e6aa83b73307" name="af7eb85575b0b6b616ea9e6aa83b73307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7eb85575b0b6b616ea9e6aa83b73307">&#9670;&nbsp;</a></span>getConstructedPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp; raylib::RlCamera::getConstructedPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the position of the camera when construct. </p>
+<dl class="section return"><dt>Returns</dt><dd>the position of the camera </dd></dl>
+
+</div>
+</div>
+<a id="aa9866fa0bfb175a9c272dc037a01246f" name="aa9866fa0bfb175a9c272dc037a01246f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9866fa0bfb175a9c272dc037a01246f">&#9670;&nbsp;</a></span>getConstructedProjection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CameraProjection &amp; raylib::RlCamera::getConstructedProjection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the projection of the camera when construct. </p>
+<dl class="section return"><dt>Returns</dt><dd>the projection of the camera </dd></dl>
+
+</div>
+</div>
+<a id="a37701ed8bc02963e5efc1e02896cba8b" name="a37701ed8bc02963e5efc1e02896cba8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37701ed8bc02963e5efc1e02896cba8b">&#9670;&nbsp;</a></span>getConstructedTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_vector_8hpp.html#a5b8bed255bd1955a49105c77f26dd6cb">Vector3f</a> &amp; raylib::RlCamera::getConstructedTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the target of the camera when construct. </p>
+<dl class="section return"><dt>Returns</dt><dd>the target of the camera </dd></dl>
+
+</div>
+</div>
+<a id="a2807f3df9295fed532d0fc299a475dd4" name="a2807f3df9295fed532d0fc299a475dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2807f3df9295fed532d0fc299a475dd4">&#9670;&nbsp;</a></span>getMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CameraMode &amp; raylib::RlCamera::getMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the camera mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>the camera mode </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_camera_a2807f3df9295fed532d0fc299a475dd4_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_a2807f3df9295fed532d0fc299a475dd4_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_camera_a2807f3df9295fed532d0fc299a475dd4_icgraph" id="aclassraylib_1_1_rl_camera_a2807f3df9295fed532d0fc299a475dd4_icgraph">
+<area shape="rect" title="Get the camera mode." alt="" coords="139,5,309,32"/>
+<area shape="rect" href="_rl_camera_8cpp.html#a515aaeacd00b4cb36664a42ffcc2a6fe" title=" " alt="" coords="5,5,91,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaaa099ef07349fad0bd6a8efbc26dfbe" name="aaaa099ef07349fad0bd6a8efbc26dfbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa099ef07349fad0bd6a8efbc26dfbe">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::RlCamera::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the camera to the initial state of the constructor. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_cgraph" id="aclassraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_cgraph">
+<area shape="rect" title="Reset the camera to the initial state of the constructor." alt="" coords="5,46,156,73"/>
+<area shape="rect" href="classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="204,5,387,47"/>
+<area shape="rect" href="classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="208,71,383,112"/>
+<area shape="rect" href="classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="435,13,573,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_icgraph" id="aclassraylib_1_1_rl_camera_aaaa099ef07349fad0bd6a8efbc26dfbe_icgraph">
+<area shape="rect" title="Reset the camera to the initial state of the constructor." alt="" coords="239,13,389,39"/>
+<area shape="rect" href="classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title=" " alt="" coords="5,5,191,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6072eac3dde40f3a930751064aa5de3" name="aa6072eac3dde40f3a930751064aa5de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6072eac3dde40f3a930751064aa5de3">&#9670;&nbsp;</a></span>setCameraMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::RlCamera::setCameraMode </td>
+          <td>(</td>
+          <td class="paramtype">const CameraMode &amp;&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the camera mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>the mode of the camera </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>CameraMode </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_camera_aa6072eac3dde40f3a930751064aa5de3_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_aa6072eac3dde40f3a930751064aa5de3_cgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_camera_aa6072eac3dde40f3a930751064aa5de3_cgraph" id="aclassraylib_1_1_rl_camera_aa6072eac3dde40f3a930751064aa5de3_cgraph">
+<area shape="rect" title="Set the camera mode." alt="" coords="5,13,221,39"/>
+<area shape="rect" href="classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="269,5,452,47"/>
+<area shape="rect" href="classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="500,13,639,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3dc8d9e090d83b616dc2e5a85d594924" name="a3dc8d9e090d83b616dc2e5a85d594924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc8d9e090d83b616dc2e5a85d594924">&#9670;&nbsp;</a></span>setFov()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::RlCamera::setFov </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>fovy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the fovy of the camera (Camera field-of-view Y) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fovy</td><td>the fovy of the camera </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -265,15 +607,33 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_rl_camera_a8ce4003ffb22f0a6a6316228901cb55a_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_a8ce4003ffb22f0a6a6316228901cb55a_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_rl_camera_a8ce4003ffb22f0a6a6316228901cb55a_cgraph" id="aclassraylib_1_1_rl_camera_a8ce4003ffb22f0a6a6316228901cb55a_cgraph">
-<area shape="rect" title="Set the position of the camera." alt="" coords="5,13,192,39"/>
-<area shape="rect" href="classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="240,5,375,47"/>
-</map>
+
 </div>
+</div>
+<a id="a41df1d18506284ec149969d1d8894749" name="a41df1d18506284ec149969d1d8894749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41df1d18506284ec149969d1d8894749">&#9670;&nbsp;</a></span>setProjection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::RlCamera::setProjection </td>
+          <td>(</td>
+          <td class="paramtype">const CameraProjection &amp;&#160;</td>
+          <td class="paramname"><em>projection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the camera projection type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">projection</td><td>the projection of the camera </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>CameraProjection </dd></dl>
 
 </div>
 </div>
@@ -300,15 +660,6 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classraylib_1_1_rl_camera_afe7ee0da8ffa243146c47187641ed098_cgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_afe7ee0da8ffa243146c47187641ed098_cgraph" alt=""/></div>
-<map name="aclassraylib_1_1_rl_camera_afe7ee0da8ffa243146c47187641ed098_cgraph" id="aclassraylib_1_1_rl_camera_afe7ee0da8ffa243146c47187641ed098_cgraph">
-<area shape="rect" title="Set the target of the camera (Camera looking at point)" alt="" coords="5,13,181,39"/>
-<area shape="rect" href="classraylib_1_1_vector_helper.html#a0cb72dee4733b5dbb757d3d0e5725e52" title="Convert a Vector2f to a raylib vector." alt="" coords="229,5,364,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -328,6 +679,15 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Update the camera, needed to move the camera. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classraylib_1_1_rl_camera_ae4ebe564fb3aeb948833e11844d42447_icgraph.png" border="0" usemap="#aclassraylib_1_1_rl_camera_ae4ebe564fb3aeb948833e11844d42447_icgraph" alt=""/></div>
+<map name="aclassraylib_1_1_rl_camera_ae4ebe564fb3aeb948833e11844d42447_icgraph" id="aclassraylib_1_1_rl_camera_ae4ebe564fb3aeb948833e11844d42447_icgraph">
+<area shape="rect" title="Update the camera, needed to move the camera." alt="" coords="239,13,399,39"/>
+<area shape="rect" href="classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title=" " alt="" coords="5,5,191,47"/>
+</map>
+</div>
 
 </div>
 </div>

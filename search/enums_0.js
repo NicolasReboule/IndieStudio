@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imagetype_0',['ImageType',['../classraylib_1_1_rl_image_builder.html#a652db622935f52b41ca260588f4a29da',1,'raylib::RlImageBuilder']]]
+  ['imagetype_0',['ImageType',['../classraylib_1_1builder_1_1_rl_image_builder.html#ae614f632fdbeba89676d4c4938825085',1,'raylib::builder::RlImageBuilder']]]
 ];

@@ -1,0 +1,5 @@
+<map id="gameengine::ex::GameEngineException" name="gameengine::ex::GameEngineException">
+<area shape="rect" id="node1" title="All exception thrown by the GameEngine will herit from this class." alt="" coords="5,131,196,237"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1ex_1_1_map_parser_exception.html" title="Exception thrown by the MapParser." alt="" coords="11,285,191,377"/>
+<area shape="rect" id="node2" title=" " alt="" coords="50,5,151,83"/>
+</map>

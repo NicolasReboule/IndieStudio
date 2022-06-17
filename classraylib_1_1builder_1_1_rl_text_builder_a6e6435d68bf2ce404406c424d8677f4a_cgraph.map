@@ -1,0 +1,7 @@
+<map id="raylib::builder::RlTextBuilder::build" name="raylib::builder::RlTextBuilder::build">
+<area shape="rect" id="node1" title="Build the RlText." alt="" coords="5,104,184,145"/>
+<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_text.html#a2d2fb50b061c0b356d3db27551251f2b" title="Set the font size." alt="" coords="232,5,355,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_text.html#ac46e0fbd70c92b642397518da3581fce" title="Set the text origin." alt="" coords="232,71,355,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1text_1_1_rl_text.html#afccc73e523c65528464acbfce2a67df2" title="Set the text rotation." alt="" coords="232,136,355,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1text_1_1_rl_text.html#a56fa7938d318f3ec50d3c3fc320d9e62" title="Set the text spacing." alt="" coords="232,201,355,243"/>
+</map>
