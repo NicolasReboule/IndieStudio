@@ -22,9 +22,6 @@ void indie::MainMenuScene::sceneLauncher()
 
     auto buttonQuit = std::make_shared<indie::ButtonQuit>("buttonQuit", "./assets/gui/button_quit.png");
     this->addNode(buttonQuit);
-
-
-
 }
 
 void indie::MainMenuScene::readyScene()
@@ -34,8 +31,8 @@ void indie::MainMenuScene::readyScene()
     auto &buttonPlay = dynamic_cast<indie::ButtonPlay &>(*sceneManager->getNode("buttonPlay"));
     auto &buttonQuit = dynamic_cast<indie::ButtonQuit &>(*sceneManager->getNode("buttonQuit"));
 
-    buttonPlay.setPosition({100, 100});
-    buttonQuit.setPosition({100, 300});
+    buttonPlay.setPosition({300, 200});
+    buttonQuit.setPosition({300, 400});
 }
 
 

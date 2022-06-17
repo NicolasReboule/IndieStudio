@@ -20,7 +20,7 @@ void indie::WallDestroyable::spawnBonus()
     auto random = raylib::Random();
     int rand = random.generate(0, 1);
     if (rand == 0) {
-        auto bonusRange = std::make_shared<indie::BonusRange>("bonusRange" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/tnt_side.png");
+        auto bonusRange = std::make_shared<indie::BonusRange>("bonusRange" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/blue.png");
         bonusRange->setPosition(this->_position);
         sceneManager->addNode(bonusRange);
     }

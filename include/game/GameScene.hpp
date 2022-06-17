@@ -26,7 +26,11 @@ namespace indie {
         void addWall(const Vector3f &position);
         void addBreakableWall(const Vector3f &position);
 
+        void addPlayer(Vector3f position);
+
         void displayWinner(const std::string &name);
+
+        void addfloor(const Vector3f &position);
     private:
         enum class MapType {
             UNKNOWN = -1,

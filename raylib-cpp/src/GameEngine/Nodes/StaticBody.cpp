@@ -93,6 +93,11 @@ bool &gameengine::StaticBody::getIsCollsionEnable()
     return this->_collisionEnable;
 }
 
+void gameengine::StaticBody::setCollisionEnable(bool value)
+{
+    this->_collisionEnable = value;
+}
+
 /*
 void gameengine::StaticBody::collisionBox()
 {

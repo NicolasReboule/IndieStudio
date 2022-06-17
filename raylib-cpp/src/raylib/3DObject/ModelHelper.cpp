@@ -16,7 +16,7 @@ void raylib::ModelHelper::drawModel(const raylib::RlModel &model)
                 raylib::helper::VectorHelper::toRaylibVector(model.getPosition()),
                 raylib::helper::VectorHelper::toRaylibVector(model.getRotationAxis()), model.getRotationAngle(),
                 raylib::helper::VectorHelper::toRaylibVector(model.getScale()), model.getColor());
-    raylib::helper::draw::DrawHelper::drawBoundingBox(model.getBoundingBox(), RlColor::Red); //TODO: remove this
+    //raylib::helper::draw::DrawHelper::drawBoundingBox(model.getBoundingBox(), RlColor::Red); //TODO: remove this
 }
 
 void raylib::ModelHelper::drawModelWires(const raylib::RlModel &model)

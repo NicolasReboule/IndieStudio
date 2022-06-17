@@ -39,7 +39,7 @@ add_executable(${BINARY_NAME}
         src/start/Logo.cpp
         src/start/StartScene.cpp
         src/winning/WinningScene.cpp
-        )
+        src/winning/ButtonRestart.cpp src/winning/ButtonRestart.hpp)
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 

@@ -13,6 +13,7 @@
 #include "game/ButtonMainMenu.hpp"
 #include "game/ButtonQuitx05.hpp"
 #include "game/ButtonResume.hpp"
+#include "winning/ButtonRestart.hpp"
 
 indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource), _mapSizeMax({60, 45}), _mapSize({0, 0})
 {
@@ -39,8 +40,22 @@ void indie::GameScene::addBreakableWall(const Vector3f &position)
     this->addNode(breakable);
 }
 
+void indie::GameScene::addfloor(const Vector3f &position)
+{
+    static int id = 0;
+    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube, "./assets/andesite.png");
+    floor->setPosition(position);
+    floor->setCollisionEnable(false);
+    floor->setScale({1, 0.1, 1});
+    this->addNode(floor);
+}
+
 void indie::GameScene::sceneLauncher()
 {
+    auto &window = raylib::window::RlWindow::getInstance();
+    raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build();
+    window->setCamera(camera);
+
     gameengine::map::MapParser<MapType> _mapParser("./assets/map/default.txt", this->_mapSymbol, this->_mapSizeMax);
     try {
         _mapParser.parse();
@@ -61,12 +76,15 @@ void indie::GameScene::sceneLauncher()
             switch (c) {
                 case MapType::UNKNOWN:
                 case MapType::NONE:
+                    this->addfloor({x, 0, z});
                     break;
                 case MapType::WALL:
                     this->addWall({x, 0.5, z});
+                    this->addfloor({x, 0, z});
                     break;
                 case MapType::BREAKABLE_WALL:
                     this->addBreakableWall({x, 0.5, z});
+                    this->addfloor({x, 0, z});
                     break;
             }
             x += 1;
@@ -93,6 +111,9 @@ void indie::GameScene::sceneLauncher()
     auto buttonResume = std::make_shared<indie::ButtonResume>("buttonResume", "./assets/gui/button_resume_x05.png");
     this->addNode(buttonResume);
 
+    auto buttonRestart = std::make_shared<indie::ButtonRestartx05>("buttonRestart", "./assets/gui/button_restart_x05.png");
+    this->addNode(buttonRestart);
+
     auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button_main_menu_x05.png");
     this->addNode(buttonMainMenu);
 
@@ -105,40 +126,40 @@ void indie::GameScene::sceneLauncher()
     this->addNode(grid);
 }
 
+
 void indie::GameScene::readyScene()
 {
-    auto sceneManager = gameengine::SceneManager::getInstance();
+    auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
+
+    BoundingBox box = {{-0.3, 0, -0.3},{0.3,  2, 0.3}};
+    Vector3f scale = {0.8, 0.8, 0.8};
 
     if (globalInstance->_numberPlayers > 0) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player0"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
+        player.setScale(scale);
         player.setPosition({-5, 0, -6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 1;
     }
     if (globalInstance->_numberPlayers > 1) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player1"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
+        player.setScale(scale);
         player.setPosition({5, 0, 6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 2;
     }
     if (globalInstance->_numberPlayers > 2) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player2"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
+        player.setScale(scale);
         player.setPosition({-5, 0, 6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 3;
     }
     if (globalInstance->_numberPlayers > 3) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player3"));
-        BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
         player.setBoundingBox(box);
-        player.setScale({0.8, 0.8, 0.8});
+        player.setScale(scale);
         player.setPosition({5, 0, -6}); //TODO: find a way to change this
         globalInstance->_playersAlive = 4;
     }
@@ -146,18 +167,38 @@ void indie::GameScene::readyScene()
 
     auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
     buttonResume.setHiding(true);
-    buttonResume.setPosition({50, 200});
+    buttonResume.setPosition({500, 100});
+
+    auto &buttonRestart = dynamic_cast<indie::ButtonRestartx05 &>(*sceneManager->getNode("buttonRestart"));
+    buttonRestart.setHiding(true);
+    buttonRestart.setPosition({500, 200});
 
     auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
     buttonMainMenu.setHiding(true);
-    buttonMainMenu.setPosition({50, 300});
+    buttonMainMenu.setPosition({500, 300});
 
     auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
     buttonQuit.setHiding(true);
-    buttonQuit.setPosition({50, 400});
-
+    buttonQuit.setPosition({500, 400});
 
 }
+
+//TODO: use this function
+void indie::GameScene::addPlayer(Vector3f position)
+{
+    auto sceneManager = gameengine::SceneManager::getInstance();
+    auto &globalInstance = indie::GlobalInstance::getInstance();
+
+    auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player3"));
+    BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
+    player.setBoundingBox(box);
+    player.setScale({0.8, 0.8, 0.8});
+    player.setPosition(position); //TODO: find a way to change this
+    globalInstance->_playersAlive = 4;
+}
+
+
+
 
 
 void indie::GameScene::updateScene(float delta)
@@ -215,12 +256,9 @@ void indie::GameScene::displayWinner(const std::string &name)
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
-    auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
-    auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
-    buttonMainMenu.setHiding(false);
-    buttonQuit.setHiding(false);
 
     globalInstance->_playerWinner = name;
-    //sceneManager->changeScene("winning");
+    sceneManager->changeScene("winning");
 }
+
 

@@ -11,15 +11,17 @@
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
-indie::Bomb::Bomb(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath) : StaticBody(name, type, texturepath)
+indie::Bomb::Bomb(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath, int range, const std::string &playerOwner) : StaticBody(name, type, texturepath)
 {
-    this->_timer = 1;
+    this->_range = range;
+    this->_timer = 2;
+    this->_playerOwner = playerOwner;
 }
 
 indie::Bomb::Bomb(const std::string &name, const std::string &objPath, int range, const std::string &playerOwner) : StaticBody(name, objPath, "")
 {
     this->_range = range;
-    this->_timer = 1;
+    this->_timer = 2;
     this->_playerOwner = playerOwner;
 }
 
@@ -93,7 +95,6 @@ void indie::Bomb::spawnMagma()
 void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
-    auto random = raylib::Random();
 
     for (int i = 0; i < this->_range; i++) {
         bool loop = true;
@@ -101,7 +102,7 @@ void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
         for (const auto &node: sceneManager->getAllNodes()) {
             try {
                 auto &wall = dynamic_cast<indie::Wall &>(*node);
-                std::cout << wall->getPosition() << ":::" << this->_position << std::endl;
+                //std::cout << wall->getPosition() << ":::" << this->_position << std::endl;
                 if (wall.getPosition() == pos) {
                     loop = false;
                     break;
@@ -113,9 +114,7 @@ void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
                     if (wallDestroyable.getPosition() == pos) {
                         wallDestroyable.spawnBonus();
                         sceneManager->deleteNode(node->getName());
-                        auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-                        magma->setPosition(pos);
-                        sceneManager->addNode(magma);
+                        this->instanceMagma(pos);
                         return;
                     }
                 }
@@ -125,10 +124,18 @@ void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
             }
         }
         if (loop) {
-            auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
-            magma->setPosition(pos);
-            sceneManager->addNode(magma);
+            this->instanceMagma(pos);
         } else
             break;
     }
+}
+
+void indie::Bomb::instanceMagma(Vector3f pos)
+{
+    auto &sceneManager = gameengine::SceneManager::getInstance();
+    auto random = raylib::Random();
+
+    auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    magma->setPosition(pos);
+    sceneManager->addNode(magma);
 }

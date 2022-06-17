@@ -16,11 +16,13 @@ namespace indie {
     public:
         enum State {
             DEAD = 0,
-            ALIVE = 1
+            ALIVE = 1,
+            WINNER = 2,
+            LOOSER = 3
         };
 
 
-        Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, int &numpadId);
+        Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, const int &numpadId);
         //Player(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId);
         ~Player() override = default;
 
@@ -37,6 +39,8 @@ namespace indie {
         void playerDead();
 
         State getState();
+
+        void setState(State state);
 
     private:
         int _range;

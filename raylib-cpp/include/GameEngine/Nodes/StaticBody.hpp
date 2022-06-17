@@ -42,6 +42,8 @@ namespace gameengine {
 
         bool &getIsCollsionEnable();
 
+        void setCollisionEnable(bool value);
+
     protected:
         raylib::RlModel _model;
 

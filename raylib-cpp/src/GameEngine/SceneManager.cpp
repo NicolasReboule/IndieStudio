@@ -37,7 +37,7 @@ void gameengine::SceneManager::changeSceneInWaiting()
     if (this->_waitingScene == "empty" || this->_waitingScene.empty())
         return;
 
-    std::cout << "change scen to : " << this->_waitingScene << std::endl;
+    std::cout << "change scene to : " << this->_waitingScene << std::endl;
 
     if (!this->_actualScene.empty())
         for (std::shared_ptr<gameengine::Scene> &sceneItem : this->_scenes) {
@@ -47,7 +47,10 @@ void gameengine::SceneManager::changeSceneInWaiting()
             }
         }
 
+    std::cout << this->_waitingScene << std::endl;
+
     for (std::shared_ptr<gameengine::Scene> &sceneItem : this->_scenes) {
+        std::cout << sceneItem->getSceneSource() << std::endl;
         if (sceneItem->getSceneSource() == this->_waitingScene) {
             this->_actualScene = sceneItem->getName();
             sceneItem->sceneLauncher();
@@ -121,16 +124,17 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
     auto window = raylib::window::RlWindow::getInstance();
 
     raylib::helper::draw::DrawHelper::beginDrawing();
-    raylib::helper::draw::DrawHelper::clearBackground(RlColor::DarkBrown);
+    raylib::helper::draw::DrawHelper::clearBackground(RlColor::Black);
     raylib::helper::draw::DrawTextHelper::drawFps(10, 10, 30);
 
     if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
         camera.reset();
     camera.update();
+    //std::cout << camera << std::endl;
     raylib::helper::draw::DrawHelper::beginMode3D(camera);
 
     this->draw();
-    raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red); //TODO: remove this
+    //raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red); //TODO: remove this
 
     raylib::helper::draw::DrawHelper::endMode3D();
 
