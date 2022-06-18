@@ -22,6 +22,10 @@ namespace indie {
         void sceneLauncher() override;
 
         void initScene() override;
+
+    private:
+        long _startTimestamp;
+        long _endTimestamp;
     };
 }
 

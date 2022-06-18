@@ -40,12 +40,10 @@ void gameengine::AudioManager::addSound(const std::string &fileName, SoundCatego
 
 void gameengine::AudioManager::deleteSound(const std::string &fileName)
 {
-    std::cout << this->_sounds.size() << std::endl;
     for (auto it = this->_sounds.begin(); it != this->_sounds.end(); it++) {
         if (this->_sounds.empty())
             return;
         if ((*it)->getName() == fileName) {
-            std::cout << this->_sounds.size() << std::endl;
             this->_sounds.erase(it);
         }
     }

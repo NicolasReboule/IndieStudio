@@ -22,8 +22,7 @@ namespace indie {
             GHOST = 4
         };
 
-        explicit Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, const int &numpadId);
-        //Player(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId);
+        explicit Player(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &numpadId);
         ~Player() override = default;
 
         void update(const float &delta) final;

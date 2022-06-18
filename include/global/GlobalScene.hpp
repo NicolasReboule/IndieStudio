@@ -14,13 +14,13 @@ namespace indie {
 
     class GlobalScene : public gameengine::Scene {
     public:
-        GlobalScene(const std::string &name = "global", const std::string &filename = "start");
+        explicit GlobalScene(const std::string &name = "global", const std::string &filename = "start");
 
         ~GlobalScene() override = default;
 
         void sceneLauncher() override;
 
-        void updateScene(float delta) override;
+        void updateScene(const float &delta) override;
 
         void initScene() override;
     };

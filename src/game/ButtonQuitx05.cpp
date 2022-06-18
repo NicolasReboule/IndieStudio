@@ -8,7 +8,8 @@
 
 #include "game/ButtonQuitx05.hpp"
 
-indie::ButtonQuitx05::ButtonQuitx05(const std::string &name,  const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
+indie::ButtonQuitx05::ButtonQuitx05(const std::string &name,  const std::shared_ptr<raylib::texture::RlTexture> &texture)
+    : Button(name, texture)
 {
 }
 

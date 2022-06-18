@@ -6,6 +6,7 @@
 */
 
 #include "raylib/3DObject/RlMesh.hpp"
+#include <iostream>
 
 raylib::model::RlMesh::RlMesh(const Mesh &mesh) : _mesh(mesh)
 {
@@ -13,6 +14,7 @@ raylib::model::RlMesh::RlMesh(const Mesh &mesh) : _mesh(mesh)
 
 raylib::model::RlMesh::~RlMesh()
 {
+    std::cout << "~RlMesh()" << std::endl;
     UnloadMesh(this->_mesh);
 }
 

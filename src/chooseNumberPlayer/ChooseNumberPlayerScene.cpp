@@ -226,7 +226,4 @@ void indie::ChooseNumberPlayerScene::updateScene(const float &delta)
                 break;
         }
     }
-
-    //std::cout << this->_indexMenu << std::endl;
-    std::cout << globalInstnace->_indexMap << std::endl;
 }

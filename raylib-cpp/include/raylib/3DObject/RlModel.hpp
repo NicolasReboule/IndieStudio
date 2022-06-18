@@ -40,16 +40,6 @@ namespace raylib {
         class RlModel {
         public:
             /**
-             * @brief Default constructor
-             */
-            RlModel()
-                : _model(nullptr), _position(0, 0, 0), _scale(1, 1, 1), _color(RlColor::White), _rotationAxis(0, 0, 0),
-                  _rotationAngle(0),
-                  _boundingBox(), _baseBoudingBox()
-            {
-            } //TODO: remove this
-
-            /**
              * @brief Construct a new RlModel object from a file
              * @param fileName the file name
              */

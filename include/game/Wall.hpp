@@ -13,7 +13,7 @@
 namespace indie {
     class Wall : public gameengine::node::_3D::StaticBody {
     public:
-        explicit Wall(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        explicit Wall(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture);
         ~Wall() override = default;
     };
 }

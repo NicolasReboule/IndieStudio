@@ -14,11 +14,10 @@ namespace indie {
 
     class WallDestroyable : public gameengine::node::_3D::StaticBody {
     public:
-       explicit WallDestroyable(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+       explicit WallDestroyable(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture);
         ~WallDestroyable() override = default;
 
         void spawnBonus();
-    private:
     };
 }
 

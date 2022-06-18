@@ -14,16 +14,11 @@
 #include "game/Magma.hpp"
 #include "game/Bonus.hpp"
 #include "winning/ButtonRestart.hpp"
-#include "game/WallDestroyable.hpp"
 #include "game/Wall.hpp"
 
-/*indie::Player::Player(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, int &numpadId) : gameengine::KinematicBody(name, type, texturePath), _anim((*this)->getModel(), "./assets/player.iqm")
-{
-    this->_numpadId = numpadId;
-    this->_timerAnim = 0.5;
-}*/
-
-indie::Player::Player(const std::string &name, const std::string &modelPath, const std::string &texturePath, const int &numpadId) : gameengine::KinematicBody(name, modelPath, texturePath), _anim(this->_model, "./assets/player.iqm")
+indie::Player::Player(const std::string &name, const raylib::model::RlModel &model, \
+const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &numpadId)
+    : gameengine::node::_3D::KinematicBody(name, model, texture), _anim(model, "./assets/models/player.iqm")
 {
     this->_numpadId = numpadId;
     this->_state = ALIVE;
@@ -33,6 +28,7 @@ indie::Player::Player(const std::string &name, const std::string &modelPath, con
     this->_range = 1;
     this->_speed = 5;
     this->_bombStock = 1;
+    this->_tempSpeed = 0;
 }
 
 void indie::Player::init()
@@ -54,15 +50,13 @@ void indie::Player::incrementBombStock(int bombStock)
     this->_bombStock += bombStock;
 }
 
-void indie::Player::update(float delta)
+void indie::Player::update(const float &delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
 
     this->_tempSpeed = this->_speed * delta;
     this->_timerAnim -= delta;
-
-
 
     switch (this->_state) {
         case WINNER:
@@ -83,7 +77,7 @@ void indie::Player::update(float delta)
         case GHOST:
             this->_timerGhost -= delta;
             if (this->_timerGhost <= 0) {
-                if (this->getColor().a == 255) {
+                if (this->getColor().getAlpha() == 255) {
                     Vector4f vector = {255, 255, 255, 200};
                     raylib::RlColor color(vector);
                     this->setColor(color);
@@ -112,17 +106,23 @@ void indie::Player::spawnBomb()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
 
-    auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/tnt_side.png",
-                                              this->_range, this->getName());
+    auto mesh = raylib::builder::RlMeshBuilder()
+        .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
+        .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+    raylib::model::RlModel model = raylib::model::RlModel(std::make_shared<raylib::model::RlMesh>(mesh));
+    auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)), model,
+    std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/tnt_side.png"), this->_range, this->getName());
 
     bomb->setRotationDegrees(-90, {1, 0, 0});
 
-    BoundingBox box = {{-0.5, 0, -0.5},
-                       {0.4,  1, 0.4}};
+    BoundingBox box = {
+        {-0.5, 0, -0.5},
+        {0.4,  1, 0.4}
+    };
     bomb->setBoundingBox(box);
     //bomb->setScale({0.9, 0.9, 0.9});
 
-    bomb->setPosition({std::round(this->_position.x), 0.5, std::round(this->_position.z)});
+    bomb->setPosition({std::round(this->getPosition().x), 0.5, std::round(this->getPosition().z)});
 
     bomb->setPlayerOwner(this->getName());
     sceneManager->addNode(bomb);
@@ -165,6 +165,7 @@ void indie::Player::checkCollisions()
                         sceneManager->deleteNode(node->getName());
                         return;
                     case Bonus::GHOST:
+                        std::cout << "bonus ghost" << std::endl;
                         this->_state = GHOST;
                         sceneManager->deleteNode(node->getName());
                         return;
@@ -210,14 +211,18 @@ void indie::Player::handleInput()
         this->setRotationDegrees(90, {0, 1, 0});
     }
     if (direction.x == 0 && direction.z == 0) {
-        if (this->_timerAnim <= 0)
-            this->_anim.update(1);
+        if (this->_timerAnim <= 0) {
+            //this->_anim.incrementFrameCount();
+            //this->_anim.update(1);
+        }
     } else {
-        if (this->_timerAnim <= 0)
-            this->_anim.update(0);
+        if (this->_timerAnim <= 0) {
+            //this->_anim.incrementFrameCount();
+            //this->_anim.update(0);
+        }
 
-        Vector3f newPosition = {this->_position.x + this->_tempSpeed * direction.x, this->_position.y + this->_tempSpeed * direction.y,
-                                this->_position.z + this->_tempSpeed * direction.z};
+        Vector3f newPosition = {this->getPosition().x + this->_tempSpeed * direction.x, this->getPosition().y + this->_tempSpeed * direction.y,
+                                this->getPosition().z + this->_tempSpeed * direction.z};
 
         if (this->_state == ALIVE) {
             this->moveAndCollide(newPosition);
@@ -227,8 +232,7 @@ void indie::Player::handleInput()
 
     if (this->_state == ALIVE || this->_state == GHOST) {
         if ((raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) ||
-            raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId,
-                                                                         GAMEPAD_BUTTON_RIGHT_FACE_LEFT)) && this->_bombStock > 0) {
+            raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_LEFT)) && this->_bombStock > 0) {
             this->spawnBomb();
             this->_bombStock -= 1;
             if (this->_state == GHOST) {
@@ -239,8 +243,7 @@ void indie::Player::handleInput()
     }
 
 
-    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId,
-                                                                         GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
+    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
 
         auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
         auto &buttonRestart = dynamic_cast<indie::ButtonRestartx05 &>(*sceneManager->getNode("buttonRestart"));
@@ -258,22 +261,24 @@ void indie::Player::handleInput()
 void indie::Player::moveAndGhosting(Vector3f position)
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
-
-    BoundingBox temp = {{
-                            this->getBoundingBox().min.x + position.x - this->_position.x,
-                            this->getBoundingBox().min.y + position.y - this->_position.y,
-                            this->getBoundingBox().min.z + position.z - this->_position.z,
-                        }, {
-                            this->getBoundingBox().max.x + position.x - this->_position.x,
-                            this->getBoundingBox().max.y + position.y - this->_position.y,
-                            this->getBoundingBox().max.z + position.z - this->_position.z,
-                        }};
+    BoundingBox temp = {
+        {
+            this->getBoundingBox().min.x + position.x - this->getPosition().x,
+            this->getBoundingBox().min.y + position.y - this->getPosition().y,
+            this->getBoundingBox().min.z + position.z - this->getPosition().z,
+        },
+        {
+            this->getBoundingBox().max.x + position.x - this->getPosition().x,
+            this->getBoundingBox().max.y + position.y - this->getPosition().y,
+            this->getBoundingBox().max.z + position.z - this->getPosition().z,
+        }
+    };
 
     if (this->_collisionEnable) {
         for (const auto &node: sceneManager->getAllNodes()) {
             try {
                 auto &staticBody = dynamic_cast<indie::Wall &>(*node);
-                if (staticBody.getName() != this->getName() && staticBody.getIsCollsionEnable() &&
+                if (staticBody.getName() != this->getName() && staticBody.hasCollisionEnabled() &&
                     raylib::helper::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
                     return;
                 }

@@ -95,3 +95,18 @@ void gameengine::node::_2D::Button::setEnabled(const bool &value)
 {
     this->_isEnabled = value;
 }
+
+const std::shared_ptr<raylib::texture::RlTexture> &gameengine::node::_2D::Button::getTexture() const
+{
+    return _texture;
+}
+
+const Rectangle &gameengine::node::_2D::Button::getBounds() const
+{
+    return _bounds;
+}
+
+const Rectangle &gameengine::node::_2D::Button::getRectangle() const
+{
+    return _rectangle;
+}

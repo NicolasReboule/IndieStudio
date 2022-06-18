@@ -14,8 +14,7 @@ namespace indie {
 
     class Magma : public gameengine::node::_3D::StaticBody {
     public:
-        explicit Magma(const std::string &name, const std::string &objPath, const std::string &playerOwner);
-        explicit Magma(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        explicit Magma(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture);
         ~Magma() override = default;
 
         void init() override;

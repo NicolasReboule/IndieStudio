@@ -50,7 +50,7 @@ void indie::Bomb::enableCollision()
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
             auto &player = dynamic_cast<indie::Player &>(*node);
-            if (player.isCollisionEnabled() && raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
+            if (player.hasCollisionEnabled() && raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
                 temp = false;
                 break;
             }
@@ -129,7 +129,11 @@ void indie::Bomb::instanceMagma(const Vector3f &pos)
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
 
-    auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), raylib::builder::RlMeshBuilder::MeshType::MeshCube, "assets/magma.png");
+    auto mesh = raylib::builder::RlMeshBuilder()
+        .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
+        .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+    raylib::model::RlModel model = raylib::model::RlModel(std::make_shared<raylib::model::RlMesh>(mesh));
+    auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), model, std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/magma.png"));
     magma->setPosition(pos);
     sceneManager->addNode(magma);
 }

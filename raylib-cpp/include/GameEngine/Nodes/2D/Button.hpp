@@ -91,6 +91,24 @@ namespace gameengine::node::_2D {
          */
         const bool &isEnabled() const;
 
+        /**
+         * @brief Get the linked texture
+         * @return the linked texture
+         */
+        const std::shared_ptr<raylib::texture::RlTexture> &getTexture() const;
+
+        /**
+         * @brief Get the bounds of the button
+         * @return the bounds of the button
+         */
+        const Rectangle &getBounds() const;
+
+        /**
+         * @brief Get the current texture rect of the button
+         * @return the current texture rect of the button
+         */
+        const Rectangle &getRectangle() const;
+
     private:
         std::shared_ptr<raylib::texture::RlTexture> _texture; /**< The linked texture to the button */
 

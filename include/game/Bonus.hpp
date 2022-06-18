@@ -21,10 +21,7 @@ namespace indie {
             GHOST
         };
 
-        explicit Bonus(const std::string &name, const std::string &objPath);
-
-        explicit Bonus(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type,
-              const std::string &texturePath);
+        explicit Bonus(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 
         ~Bonus() override = default;
 
@@ -32,9 +29,9 @@ namespace indie {
 
         void update(const float &delta) override;
 
-        BonusType getBonusType();
+        const BonusType &getBonusType() const;
 
-        void setBonusType(BonusType type);
+        void setBonusType(const BonusType &type);
 
     private:
         BonusType _type;

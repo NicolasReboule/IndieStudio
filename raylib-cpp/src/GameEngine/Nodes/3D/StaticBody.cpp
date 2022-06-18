@@ -17,6 +17,7 @@ gameengine::node::_3D::StaticBody::StaticBody(const std::string &name, const ray
     : Node3D(name), _model(model)
 {
     this->_collisionEnable = true;
+    this->_model.setMaterialTexture(texture);
 }
 
 void gameengine::node::_3D::StaticBody::init()
@@ -73,9 +74,9 @@ const RlColor &gameengine::node::_3D::StaticBody::getColor() const
     return this->_model.getColor();
 }
 
-raylib::model::RlModel &gameengine::node::_3D::StaticBody::operator->()
+raylib::model::RlModel *gameengine::node::_3D::StaticBody::operator->()
 {
-    return this->_model;
+    return &this->_model;
 }
 
 const BoundingBox &gameengine::node::_3D::StaticBody::getBoundingBox() const
@@ -88,7 +89,7 @@ void gameengine::node::_3D::StaticBody::setBoundingBox(const BoundingBox &boundi
     this->_model.setBoundingBox(boundingBox);
 }
 
-const bool &gameengine::node::_3D::StaticBody::isCollisionEnabled() const
+const bool &gameengine::node::_3D::StaticBody::hasCollisionEnabled() const
 {
     return this->_collisionEnable;
 }

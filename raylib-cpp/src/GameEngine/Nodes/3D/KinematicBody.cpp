@@ -46,7 +46,7 @@ void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &positi
     [this, &temp](auto &node) {
         try {
             auto &staticBody = dynamic_cast<gameengine::node::_3D::StaticBody &>(*node);
-            if (staticBody.getName() != this->getName() && staticBody.isCollisionEnabled() &&
+            if (staticBody.getName() != this->getName() && staticBody.hasCollisionEnabled() &&
                 raylib::helper::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
                 return true;
             }
@@ -63,7 +63,7 @@ void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &positi
         for (const auto &node: sceneManager->getAllNodes()) {
             try {
                 auto &staticBody = dynamic_cast<gameengine::node::_3D::StaticBody &>(*node);
-                if (staticBody.getName() != this->getName() && staticBody.isCollisionEnabled() &&
+                if (staticBody.getName() != this->getName() && staticBody.hasCollisionEnabled() &&
                     raylib::helper::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
                     return;
                 }

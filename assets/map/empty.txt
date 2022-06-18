@@ -3,7 +3,7 @@
 //'#' = wall
 
  ###########
-#  BBBBBBB  #
+#S BBBBBBB S#
 # BBBBBBBBB #
 #BBBBBBBBBBB#
 #BBBBBBBBBBB#
@@ -15,5 +15,5 @@
 #BBBBBBBBBBB#
 #BBBBBBBBBBB#
 # BBBBBBBBB #
-#  BBBBBBB  #
+#S BBBBBBB S#
  ###########

@@ -20,30 +20,36 @@ indie::GameScene::GameScene(const std::string &name, const std::string &sceneSou
     this->_mapSymbol = {
         {' ', MapType::NONE},
         {'#', MapType::WALL},
-        {'B', MapType::BREAKABLE_WALL}
+        {'B', MapType::BREAKABLE_WALL},
+        {'S', MapType::PLAYER_SPAWN}
     };
+    this->_indexMenu = 0;
+    this->_winTimer = 0;
 }
 
-void indie::GameScene::addWall(const Vector3f &position)
+void indie::GameScene::addWall(const Vector3f &position, const raylib::model::RlModel &model)
 {
+    auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/bricks.png");
     static int id = 0;
-    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube, "./assets/bricks.png");
+    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), model, texture);
     wall->setPosition(position);
     this->addNode(wall);
 }
 
-void indie::GameScene::addBreakableWall(const Vector3f &position)
+void indie::GameScene::addBreakableWall(const Vector3f &position, const raylib::model::RlModel &model)
 {
+    auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/blackstone.png");
     static int id = 0;
-    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube,"./assets/blackstone.png");
+    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), model, texture);
     breakable->setPosition(position);
     this->addNode(breakable);
 }
 
-void indie::GameScene::addfloor(const Vector3f &position)
+void indie::GameScene::addFloor(const Vector3f &position, const raylib::model::RlModel &model)
 {
+    auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/andesite.png");
     static int id = 0;
-    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube, "./assets/andesite.png");
+    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), model, texture);
     floor->setPosition(position);
     floor->setCollisionEnable(false);
     floor->setScale({1, 0.1, 1});
@@ -76,15 +82,21 @@ void indie::GameScene::sceneLauncher()
         std::cerr << "Error when parsing the map: " << e.what() << std::endl;
         std::exit(84);
     }
-    //init map
+
     this->_mapSize = _mapParser.getSize();
 
-    raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({0, std::max(20.0f, std::max(this->_mapSize.x, this->_mapSize.y) * 0.725f) , 0}).setCameraMode(CAMERA_FREE).build();
+    raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({0, std::max(20.0f, (float) std::max(this->_mapSize.x, this->_mapSize.y) * 0.725f) , 0}).setCameraMode(CAMERA_FREE).build();
     window->setCamera(camera);
 
     float x = 0;
     float z = -std::floor(((float) this->_mapSize.y / 2.0f));
     this->_map = _mapParser.getMap();
+    //raylib::builder::RlMeshBuilder()
+    //        .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
+    //        .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build()
+    auto mesh = std::make_shared<raylib::model::RlMesh>(std::move(raylib::model::MeshGenerator::genMeshCube(1.0f, 1.0f, 1.0f)));
+    raylib::model::RlModel model = raylib::model::RlModel(mesh);
+
     for (auto &item : this->_map) {
         x = -std::floor(((float) this->_mapSize.x / 2.0f));
         for (auto &c: item) {
@@ -93,10 +105,17 @@ void indie::GameScene::sceneLauncher()
                 case MapType::NONE:
                     break;
                 case MapType::WALL:
-                    this->addWall({x, 0.5, z});
+                    this->addWall({x, 0.5, z}, model);
                     break;
                 case MapType::BREAKABLE_WALL:
-                    this->addBreakableWall({x, 0.5, z});
+                    this->addBreakableWall({x, 0.5, z}, model);
+                    break;
+                case MapType::PLAYER_SPAWN:
+                    this->_playerSpawn.emplace_back(x, z);
+                    break;
+                case MapType::BOMB:
+                case MapType::BONUS:
+                case MapType::PLAYER:
                     break;
             }
             x += 1;
@@ -107,9 +126,10 @@ void indie::GameScene::sceneLauncher()
     long xMiddle = std::floor(((float) this->_mapSize.x / 2.0f));
     for (long zPos = -zMiddle; zPos <= zMiddle; zPos++)
         for (long xPos = -xMiddle; xPos <= xMiddle; xPos++)
-            this->addfloor({(float) xPos, -0.05, (float) zPos});
+            this->addFloor({(float) xPos, -0.05, (float) zPos}, model);
 
-
+    if (this->_playerSpawn.size() != 4)
+        std::cerr << "Player spawns are not well defined" << std::endl;
 
     for (int i = 0; i < globalInstance->_numberPlayers; i++) {
         std::string color;
@@ -121,25 +141,26 @@ void indie::GameScene::sceneLauncher()
             color = "green";
         else
             color  = "yellow";
-        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), "./assets/player.iqm", "./assets/" + color + ".png", i);
+        raylib::model::RlModel playerModel = raylib::model::RlModel("./assets/models/player.iqm");
+        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), playerModel, std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/" + color + ".png"), i);
         this->addNode(player);
     }
 
-    auto buttonResume = std::make_shared<indie::ButtonResume>("buttonResume", "./assets/gui/button_resume_x05.png");
+    auto buttonResume = std::make_shared<indie::ButtonResume>("buttonResume", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_resume_x05.png"));
     this->addNode(buttonResume);
 
-    auto buttonRestart = std::make_shared<indie::ButtonRestartx05>("buttonRestart", "./assets/gui/button_restart_x05.png");
+    auto buttonRestart = std::make_shared<indie::ButtonRestartx05>("buttonRestart", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_restart_x05.png"));
     this->addNode(buttonRestart);
 
-    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button_main_menu_x05.png");
+    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
     this->addNode(buttonMainMenu);
 
-    auto buttonQuit = std::make_shared<indie::ButtonQuitx05>("buttonQuit", "./assets/gui/button_quit_x05.png");
+    auto buttonQuit = std::make_shared<indie::ButtonQuitx05>("buttonQuit", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_quit_x05.png"));
     this->addNode(buttonQuit);
 
     Vector2i size = {(int) this->_mapSize.x, (int) this->_mapSize.y};
     Vector3f position = {size.x % 2 == 0 ? -0.5f : 0, 0, size.y % 2 == 0 ? -0.5f : 0};
-    auto grid = std::make_shared<gameengine::component::GridComponent>(size, position, 1.0f, RlColor::Black, std::string("grid"));
+    auto grid = std::make_shared<gameengine::node::_3D::Grid3D>(size, position, 1.0f, RlColor::White, "grid");
     this->addNode(grid);
 }
 
@@ -160,28 +181,32 @@ void indie::GameScene::initScene()
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player0"));
         player.setBoundingBox(box);
         player.setScale(scale);
-        player.setPosition({-5, 0, -6}); //TODO: find a way to change this
+        auto &pos = this->_playerSpawn[0];
+        player.setPosition({pos.x, 0, pos.y});
         globalInstance->_playersAlive = 1;
     }
     if (globalInstance->_numberPlayers > 1) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player1"));
         player.setBoundingBox(box);
         player.setScale(scale);
-        player.setPosition({5, 0, 6}); //TODO: find a way to change this
+        auto &pos = this->_playerSpawn[1];
+        player.setPosition({pos.x, 0, pos.y});
         globalInstance->_playersAlive = 2;
     }
     if (globalInstance->_numberPlayers > 2) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player2"));
         player.setBoundingBox(box);
         player.setScale(scale);
-        player.setPosition({-5, 0, 6}); //TODO: find a way to change this
+        auto &pos = this->_playerSpawn[2];
+        player.setPosition({pos.x, 0, pos.y});
         globalInstance->_playersAlive = 3;
     }
     if (globalInstance->_numberPlayers > 3) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player3"));
         player.setBoundingBox(box);
         player.setScale(scale);
-        player.setPosition({5, 0, -6}); //TODO: find a way to change this
+        auto &pos = this->_playerSpawn[3];
+        player.setPosition({pos.x, 0, pos.y});
         globalInstance->_playersAlive = 4;
     }
 
@@ -204,25 +229,7 @@ void indie::GameScene::initScene()
 
 }
 
-//TODO: use this function
-void indie::GameScene::addPlayer(Vector3f position)
-{
-    auto sceneManager = gameengine::SceneManager::getInstance();
-    auto &globalInstance = indie::GlobalInstance::getInstance();
-
-    auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player3"));
-    BoundingBox box = {{-0.5, 0, -0.5},{0.5,  2, 0.5}};
-    player.setBoundingBox(box);
-    player.setScale({0.8, 0.8, 0.8});
-    player.setPosition(position); //TODO: find a way to change this
-    globalInstance->_playersAlive = 4;
-}
-
-
-
-
-
-void indie::GameScene::updateScene(float delta)
+void indie::GameScene::updateScene(const float &delta)
 {
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
@@ -268,8 +275,6 @@ void indie::GameScene::updateScene(float delta)
         this->_winTimer -= delta;
         this->displayWinner("SHHEEESSH");
     }
-
-
 
     if (sceneManager->getPaused()) {
 
@@ -331,12 +336,11 @@ void indie::GameScene::displayWinner(const std::string &name)
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
     try {
-        auto &WinnerText = dynamic_cast<gameengine::Label &>(*sceneManager->getNode("winnerText"));
+        auto &WinnerText = dynamic_cast<gameengine::node::_2D::Label &>(*sceneManager->getNode("winnerText"));
         WinnerText.setText(name + "   WINNN !!!!");
-        std::cout << "MACHIN!! " << std::endl;
     }
     catch (const std::bad_cast &e) {
-        auto WinnerText = std::make_shared<gameengine::Label>("winnerText");
+        auto WinnerText = std::make_shared<gameengine::node::_2D::Label>("winnerText");
         WinnerText->setPosition({400, 0});
         WinnerText->setColor(RlColor::Gold);
         WinnerText->setScale({50, 50});
@@ -344,10 +348,6 @@ void indie::GameScene::displayWinner(const std::string &name)
         this->addNode(WinnerText);
         std::cout << "SUUUU!! " << std::endl;
     }
-
-
-    /*auto text = raylib::builder::RlTextBuilder().setText(name + "   WINNN !!!!").setPosition({400, 0}).setColor(RlColor::Gold).setFontSize(50).build();
-    raylib::helper::draw::DrawTextHelper::drawText(text);*/
 
     if (this->_winTimer <= 0) {
         globalInstance->_playerWinner = name;

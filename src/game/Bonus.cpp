@@ -5,17 +5,10 @@
 ** Bonus.cpp
 */
 
-
 #include "game/Bonus.hpp"
 
-indie::Bonus::Bonus(const std::string &name, const std::string &objPath)
-    : StaticBody(name, objPath, "")
-{
-    this->_collisionEnable = false;
-    this->setScale({0.8, 0.8, 0.8});
-}
-
-indie::Bonus::Bonus(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
+indie::Bonus::Bonus(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture)
+    : StaticBody(name, model, texture), _type()
 {
     this->_collisionEnable = false;
 }
@@ -24,17 +17,17 @@ void indie::Bonus::init()
 {
 }
 
-void indie::Bonus::update(float delta)
+void indie::Bonus::update(const float &delta)
 {
-    this->setRotationDegrees(this->getRotationDegrees() + 100 * delta,{0, 1, 0});
+    this->setRotationDegrees(this->getRotationDegrees() + 100 * delta, {0, 1, 0});
 }
 
-indie::Bonus::BonusType indie::Bonus::getBonusType()
+const indie::Bonus::BonusType &indie::Bonus::getBonusType() const
 {
     return this->_type;
 }
 
-void indie::Bonus::setBonusType(indie::Bonus::BonusType type)
+void indie::Bonus::setBonusType(const indie::Bonus::BonusType &type)
 {
     this->_type = type;
 }

@@ -1,9 +1,10 @@
 //' ' = Nothing
 //'B' = breakable
 //'#' = wall
+//'S' = player spawn
 
  ###########
-#  BBBBBBB  #
+#S BBBBBBB S#
 # BBBBBBBBB #
 ######B######
 #BBBBBBBBBBB#
@@ -15,5 +16,5 @@
 #BBBBBBBBBBB#
 ######B######
 # BBBBBBBBB #
-#  BBBBBBB  #
+#S BBBBBBB S#
  ###########

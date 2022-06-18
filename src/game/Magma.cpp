@@ -7,18 +7,10 @@
 
 #include "game/Magma.hpp"
 #include "game/Wall.hpp"
-#include "game/Player.hpp"
-#include "global/GlobalInstance.hpp"
 #include "game/WallDestroyable.hpp"
 
-indie::Magma::Magma(const std::string &name, const std::string &objPath, const std::string &playerOwner) : StaticBody(name, objPath, "")
-{
-    this->_timer = 0.5;
-    this->_collisionEnable = false;
-    this->_playerOwner = playerOwner;
-}
-
-indie::Magma::Magma(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath) : StaticBody(name, type, texturePath)
+indie::Magma::Magma(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture)
+    : StaticBody(name, model, texture)
 {
     this->_timer = 0.5;
     this->_collisionEnable = false;
@@ -28,7 +20,7 @@ void indie::Magma::init()
 {
 }
 
-void indie::Magma::update(float delta)
+void indie::Magma::update(const float &delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
@@ -50,8 +42,7 @@ void indie::Magma::checkWallCollision()
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
             auto &wall = dynamic_cast<indie::Wall &>(*node);
-            std::cout << wall->getPosition() << ":::" << this->_position << std::endl;
-            if (wall.getPosition() == this->_position) {
+            if (wall.getPosition() == this->getPosition()) {
                 sceneManager->deleteNodeInclude(this->getName());
                 break;
             }
@@ -59,7 +50,7 @@ void indie::Magma::checkWallCollision()
         catch (const std::bad_cast &e) {
             try {
                 auto &wallDestroyable = dynamic_cast<indie::WallDestroyable &>(*node);
-                if (wallDestroyable.getPosition() == this->_position) {
+                if (wallDestroyable.getPosition() == this->getPosition()) {
                     sceneManager->deleteNode(node->getName());
                 }
             }

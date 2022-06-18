@@ -33,8 +33,12 @@ void indie::MainMenuScene::initScene()
     auto &buttonPlay = dynamic_cast<indie::ButtonPlay &>(*sceneManager->getNode("buttonPlay"));
     auto &buttonQuit = dynamic_cast<indie::ButtonQuit &>(*sceneManager->getNode("buttonQuit"));
 
-    buttonPlay.setPosition({300, 200});
-    buttonQuit.setPosition({300, 400});
+    auto window = raylib::window::RlWindow::getInstance();
+    Rectangle playRect = buttonPlay.getBounds();
+    Rectangle quitRect = buttonQuit.getBounds();
+
+    buttonPlay.setPosition({((float) window->getWidth() - playRect.width) / 2, ((float) window->getHeight() - playRect.height) / 2 - playRect.height / 2 * 1.3f});
+    buttonQuit.setPosition({((float) window->getWidth() - quitRect.width)/ 2, ((float) window->getHeight() - quitRect.height) / 2 + quitRect.height / 2 * 1.3f});
 }
 
 void indie::MainMenuScene::updateScene(const float &delta)
@@ -45,14 +49,12 @@ void indie::MainMenuScene::updateScene(const float &delta)
     auto &buttonQuit = dynamic_cast<indie::ButtonQuit &>(*sceneManager->getNode("buttonQuit"));
 
     if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
-        std::cout << this->_indexMenu << std::endl;
         if (this->_indexMenu == 0) {
             raylib::helper::input::MouseHelper::setMousePosition(570, 450);
             this->_indexMenu = 1;
         }
     }
     if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
-        std::cout << this->_indexMenu << std::endl;
         if (this->_indexMenu == 1) {
             raylib::helper::input::MouseHelper::setMousePosition(570, 250);
             this->_indexMenu = 0;

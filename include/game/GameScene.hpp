@@ -25,14 +25,11 @@ namespace indie {
 
         void sceneLauncher() override;
 
-        void addWall(const Vector3f &position);
-        void addBreakableWall(const Vector3f &position);
-
-        void addPlayer(Vector3f position);
+        void addWall(const Vector3f &position, const raylib::model::RlModel &model);
+        void addBreakableWall(const Vector3f &position, const raylib::model::RlModel &model);
+        void addFloor(const Vector3f &position, const raylib::model::RlModel &model);
 
         void displayWinner(const std::string &name);
-
-        void addfloor(const Vector3f &position);
 
     private:
         enum class MapType {
@@ -40,6 +37,7 @@ namespace indie {
             NONE = 0,
             WALL,
             BREAKABLE_WALL,
+            PLAYER_SPAWN,
             BOMB,
             BONUS,
             PLAYER
@@ -53,6 +51,7 @@ namespace indie {
         Vector2u _mapSize;
         std::unordered_map<char, MapType> _mapSymbol;
         std::vector<std::vector<MapType>> _map;
+        std::vector<Vector2f> _playerSpawn;
     };
 }
 

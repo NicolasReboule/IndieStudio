@@ -18,7 +18,7 @@ void indie::GlobalScene::sceneLauncher()
 {
 }
 
-void indie::GlobalScene::updateScene(float delta)
+void indie::GlobalScene::updateScene(const float &delta)
 {
 }
 

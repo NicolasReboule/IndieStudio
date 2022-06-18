@@ -94,7 +94,7 @@ namespace gameengine::node::_3D {
          * @brief Get the raylib::model::RlModel through -> operator
          * @return the raylib::model::RlModel
          */
-        raylib::model::RlModel &operator->();
+        raylib::model::RlModel *operator->();
 
         /**
          * @brief Set the color of the static body
@@ -124,7 +124,7 @@ namespace gameengine::node::_3D {
          * @brief Check if the static body is colliding with another static body
          * @return true if the static body is colliding with another static body
          */
-        const bool &isCollisionEnabled() const;
+        const bool &hasCollisionEnabled() const;
 
         /**
          * @brief Set if the static body is colliding with another static body
