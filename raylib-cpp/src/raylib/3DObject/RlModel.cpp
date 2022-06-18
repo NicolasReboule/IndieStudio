@@ -7,207 +7,220 @@
 
 #include "raylib/3DObject/RlModel.hpp"
 
-raylib::RlModel::RlModel(const std::string &fileName, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-: _model(LoadModel(fileName.c_str())), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+raylib::model::RlModel::RlModel(const std::string &fileName)
+    : _model(std::make_shared<Model>()), _position(0, 0, 0), _scale(1, 1, 1), _color(RlColor::White),
+      _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _baseBoudingBox()
 {
-    this->_startBoundingBox = GetModelBoundingBox(_model);
-    if (!texturePath.empty())
-        setTextureMaterial();
+    *this->_model = LoadModel(fileName.c_str());
+    this->_boundingBox = this->_baseBoudingBox = GetModelBoundingBox(*_model);
+    this->_mesh = nullptr;
 }
 
-raylib::RlModel::RlModel(const Mesh &mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-: _model(LoadModelFromMesh(mesh)), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+raylib::model::RlModel::RlModel(const std::string &fileName, const std::string &textureName)
+    : _model(std::make_shared<Model>()), _position(0, 0, 0), _scale(1, 1, 1), _color(RlColor::White),
+    _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _baseBoudingBox()
 {
-    this->_startBoundingBox = GetModelBoundingBox(_model);
-    if (!texturePath.empty())
-        setTextureMaterial();
+    *this->_model = LoadModel(fileName.c_str());
+    this->_boundingBox = this->_baseBoudingBox = GetModelBoundingBox(*_model);
+    this->_mesh = nullptr;
+    this->_texture = std::make_shared<texture::RlTexture>(textureName);
+    this->setMaterialTexture(this->_texture);
 }
 
-raylib::RlModel::RlModel(const raylib::RlMesh &mesh, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-: _model(LoadModelFromMesh(mesh.getMesh())), _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+raylib::model::RlModel::RlModel(const std::shared_ptr<raylib::model::RlMesh> &mesh)
+    : _model(std::make_shared<Model>()), _position(0, 0, 0), _scale(1, 1, 1), _color(RlColor::White),
+      _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _baseBoudingBox()
 {
-    this->_startBoundingBox = GetModelBoundingBox(_model);
-    if (!texturePath.empty())
-        setTextureMaterial();
+    *this->_model = LoadModelFromMesh(mesh->getMesh());
+    this->_boundingBox = this->_baseBoudingBox = GetModelBoundingBox(*_model);
+    this->_mesh = mesh;
 }
 
-raylib::RlModel::RlModel(const builder::RlMeshBuilder::MeshType &type, const std::string &texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-:  _texture(texturePath), _position(position), _color(color), _scale(scale), _rotationAxis(rotationAxis), _rotationAngle(rotationAngle)
+raylib::model::RlModel::RlModel(const raylib::model::RlModel &model)
+    : _position(model._position), _scale(model._scale), _color(model._color),
+     _rotationAxis(model._rotationAxis), _rotationAngle(model._rotationAngle),
+     _boundingBox(model._boundingBox), _baseBoudingBox(model._baseBoudingBox)
 {
-    if (type == builder::RlMeshBuilder::MeshCube) {
-        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
-        this->_model = LoadModelFromMesh(mesh.getMesh());
-    }
-    else if (type == builder::RlMeshBuilder::MeshSphere) {
-        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshSphere).setRadius(0.5f).setRings(10).setSlices(10).build();
-        this->_model = LoadModelFromMesh(mesh.getMesh());
-    }
-    else {
-        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
-        this->_model = LoadModelFromMesh(mesh.getMesh());
-    }
-
-    //raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
-    //this->_model = LoadModelFromMesh(mesh.getMesh());
-
-    this->_startBoundingBox = GetModelBoundingBox(_model);
-
-    if (!texturePath.empty())
-        setTextureMaterial();
+    this->_model = model._model;
+    *this->_model = *model._model;
+    this->_mesh = model._mesh;
 }
 
-
-raylib::RlModel::~RlModel()
+raylib::model::RlModel &raylib::model::RlModel::operator=(const raylib::model::RlModel &model)
 {
-    UnloadModel(this->_model);
+    if (this == &model)
+        return *this;
+    this->_model = model._model;
+    *this->_model = *model._model;
+    this->_mesh = model._mesh;
+    this->_position = model._position;
+    this->_scale = model._scale;
+    this->_color = model._color;
+    this->_rotationAxis = model._rotationAxis;
+    this->_rotationAngle = model._rotationAngle;
+    this->_boundingBox = model._boundingBox;
+    this->_baseBoudingBox = model._baseBoudingBox;
+    return *this;
 }
 
-// Model loading/unloading functions
-
-void raylib::RlModel::setPosition(Vector3f position)
+raylib::model::RlModel::~RlModel()
 {
-    this->_position = position;
-
-
-    this->_boundingBox = this->_startBoundingBox;
-
-    this->_boundingBox.min.x = this->_boundingBox.min.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.min.y = this->_boundingBox.min.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.min.z = this->_boundingBox.min.z * this->_scale.z + this->_position.z;
-
-    this->_boundingBox.max.x = this->_boundingBox.max.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.max.y = this->_boundingBox.max.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.max.z = this->_boundingBox.max.z * this->_scale.z + this->_position.z;
+    if (this->_model.use_count() != 1)
+        return;
+    if (this->_mesh)
+        UnloadModelKeepMeshes(*this->_model);
+    else
+        UnloadModel(*this->_model);
 }
 
-void raylib::RlModel::setPosition(float x, float y, float z)
-{
-    _position.x = x;
-    _position.y = y;
-    _position.z = z;
-
-    this->_boundingBox = this->_startBoundingBox;
-
-    this->_boundingBox.min.x = this->_boundingBox.min.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.min.y = this->_boundingBox.min.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.min.z = this->_boundingBox.min.z * this->_scale.z + this->_position.z;
-
-    this->_boundingBox.max.x = this->_boundingBox.max.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.max.y = this->_boundingBox.max.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.max.z = this->_boundingBox.max.z * this->_scale.z + this->_position.z;
-}
-
-void raylib::RlModel::setScale(float x, float y, float z)
-{
-    this->_scale.x = x;
-    this->_scale.y = y;
-    this->_scale.z = z;
-
-    this->_boundingBox = this->_startBoundingBox;
-
-    this->_boundingBox.min.x = this->_boundingBox.min.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.min.y = this->_boundingBox.min.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.min.z = this->_boundingBox.min.z * this->_scale.z + this->_position.z;
-
-    this->_boundingBox.max.x = this->_boundingBox.max.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.max.y = this->_boundingBox.max.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.max.z = this->_boundingBox.max.z * this->_scale.z + this->_position.z;
-}
-
-void raylib::RlModel::setScale(Vector3f scale)
-{
-    this->_scale = scale;
-
-    this->_boundingBox = this->_startBoundingBox;
-
-    this->_boundingBox.min.x = this->_boundingBox.min.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.min.y = this->_boundingBox.min.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.min.z = this->_boundingBox.min.z * this->_scale.z + this->_position.z;
-
-    this->_boundingBox.max.x = this->_boundingBox.max.x * this->_scale.x + this->_position.x;
-    this->_boundingBox.max.y = this->_boundingBox.max.y * this->_scale.y + this->_position.y;
-    this->_boundingBox.max.z = this->_boundingBox.max.z * this->_scale.z + this->_position.z;
-}
-
-void raylib::RlModel::setColor(Color color)
-{
-    _color = color;
-}
-
-void raylib::RlModel::setRotationAxis(Vector3f rotationAxis)
-{
-    _rotationAxis = rotationAxis;
-}
-
-void raylib::RlModel::setRotationAxis(float x, float y, float z)
-{
-    _rotationAxis.x = x;
-    _rotationAxis.y = y;
-    _rotationAxis.z = z;
-}
-
-void raylib::RlModel::setRotationAngle(float rotationAngle)
-{
-    _rotationAngle = rotationAngle;
-}
-
-const Model &raylib::RlModel::getModel() const
-{
-    return this->_model;
-}
-
-const Vector3f &raylib::RlModel::getPosition() const
+const Vector3f &raylib::model::RlModel::getPosition() const
 {
     return this->_position;
 }
 
-const Vector3f &raylib::RlModel::getScale() const
+void raylib::model::RlModel::setPosition(const Vector3f &position)
+{
+    this->setPosition(position.x, position.y, position.z);
+}
+
+void raylib::model::RlModel::setPosition(const float &x, const float &y, const float &z)
+{
+    this->_position.x = x;
+    this->_position.y = y;
+    this->_position.z = z;
+    this->_boundingBox = this->_baseBoudingBox;
+
+    this->_boundingBox.min.x = this->_boundingBox.min.x * this->_scale.x + this->_position.x;
+    this->_boundingBox.min.y = this->_boundingBox.min.y * this->_scale.y + this->_position.y;
+    this->_boundingBox.min.z = this->_boundingBox.min.z * this->_scale.z + this->_position.z;
+
+    this->_boundingBox.max.x = this->_boundingBox.max.x * this->_scale.x + this->_position.x;
+    this->_boundingBox.max.y = this->_boundingBox.max.y * this->_scale.y + this->_position.y;
+    this->_boundingBox.max.z = this->_boundingBox.max.z * this->_scale.z + this->_position.z;
+}
+
+const Vector3f &raylib::model::RlModel::getScale() const
 {
     return this->_scale;
 }
 
-const Vector3f &raylib::RlModel::getRotationAxis() const
+void raylib::model::RlModel::setScale(const Vector3f &scale)
 {
-    return this->_rotationAxis;
+    this->setScale(scale.x, scale.y, scale.z);
 }
 
-const float &raylib::RlModel::getRotationAngle() const
+void raylib::model::RlModel::setScale(const float &x, const float &y, const float &z)
 {
-    return this->_rotationAngle;
+    this->_scale.x = x;
+    this->_scale.y = y;
+    this->_scale.z = z;
+    this->_boundingBox = this->_baseBoudingBox;
+
+    this->_boundingBox.min.x = this->_boundingBox.min.x * this->_scale.x + this->_position.x;
+    this->_boundingBox.min.y = this->_boundingBox.min.y * this->_scale.y + this->_position.y;
+    this->_boundingBox.min.z = this->_boundingBox.min.z * this->_scale.z + this->_position.z;
+
+    this->_boundingBox.max.x = this->_boundingBox.max.x * this->_scale.x + this->_position.x;
+    this->_boundingBox.max.y = this->_boundingBox.max.y * this->_scale.y + this->_position.y;
+    this->_boundingBox.max.z = this->_boundingBox.max.z * this->_scale.z + this->_position.z;
 }
 
-const Color &raylib::RlModel::getColor() const
+const RlColor &raylib::model::RlModel::getColor() const
 {
     return this->_color;
 }
 
-const BoundingBox &raylib::RlModel::getBoundingBox() const
+void raylib::model::RlModel::setColor(const RlColor &color)
+{
+    this->_color = color;
+}
+
+const Vector3f &raylib::model::RlModel::getRotationAxis() const
+{
+    return this->_rotationAxis;
+}
+
+void raylib::model::RlModel::setRotationAxis(const Vector3f &rotationAxis)
+{
+    this->_rotationAxis = rotationAxis;
+}
+
+void raylib::model::RlModel::setRotationAxis(const float &x, const float &y, const float &z)
+{
+    this->_rotationAxis.x = x;
+    this->_rotationAxis.y = y;
+    this->_rotationAxis.z = z;
+}
+
+float raylib::model::RlModel::getRotationAngle() const
+{
+    return this->_rotationAngle;
+}
+
+void raylib::model::RlModel::setRotationAngle(float rotationAngle)
+{
+    this->_rotationAngle = rotationAngle;
+}
+
+const BoundingBox &raylib::model::RlModel::getBoundingBox() const
 {
     return this->_boundingBox;
 }
 
-void raylib::RlModel::setTexture(const raylib::texture::RlTexture &texture)
+void raylib::model::RlModel::setBoundingBox(const BoundingBox &boundingBox)
 {
-    _texture = texture;
+    this->_boundingBox = this->_baseBoudingBox = boundingBox;
 }
 
-const raylib::texture::RlTexture &raylib::RlModel::getTexture() const
+const BoundingBox &raylib::model::RlModel::getBaseBoundingBox() const
 {
-    return _texture;
+    return this->_baseBoudingBox;
 }
 
-raylib::texture::RlTexture *raylib::RlModel::operator->()
+BoundingBox raylib::model::RlModel::getDefaultBoundingBox() const
 {
-    return &_texture;
+    return GetModelBoundingBox(*this->_model);
 }
 
-void raylib::RlModel::setTextureMaterial()
+const Model &raylib::model::RlModel::getModel() const
 {
-    SetMaterialTexture(&_model.materials[0], MATERIAL_MAP_DIFFUSE, _texture.get());
+    return *this->_model;
 }
 
-void raylib::RlModel::setBoundingBox(const BoundingBox &boundingBox)
+const std::shared_ptr<raylib::texture::RlTexture> &raylib::model::RlModel::getTexture() const
 {
-    this->_startBoundingBox = boundingBox;
+    return this->_texture;
 }
 
+void raylib::model::RlModel::setMaterialTexture(const std::shared_ptr<texture::RlTexture> &texture)
+{
+    setMaterialTexture(texture, 0, MATERIAL_MAP_DIFFUSE);
+}
+
+void raylib::model::RlModel::setMaterialTexture(const std::shared_ptr<texture::RlTexture> &texture, const int &materialIndex)
+{
+    setMaterialTexture(texture, materialIndex, MATERIAL_MAP_DIFFUSE);
+}
+
+void raylib::model::RlModel::setMaterialTexture(const std::shared_ptr<texture::RlTexture> &texture, const int &materialIndex, \
+const MaterialMapIndex &type)
+{
+    if (this->_model->materialCount < materialIndex)
+        throw ex::RlModelException("Material index is out of range");
+    this->_texture = texture;
+    SetMaterialTexture(&this->_model->materials[materialIndex], type, this->_texture->getTexture());
+}
+
+void raylib::model::RlModel::setMeshMaterial(const int &meshId, const int &materialId)
+{
+    SetModelMeshMaterial(&*this->_model, meshId, materialId);
+}
+
+//REMOVED not possible with raylib 4.0.0
+/*void raylib::model::RlModel::setMaterials(const std::vector<RlMaterial> &materials)
+{
+    if (materials.size() != this->_model->materialCount)
+        throw ex::RlModelException("Material count is not equal to the model's material count");
+    for (int i = 0; i < this->_model->materialCount; i++)
+        this->_model->materials[i] = materials[i].getMaterial();
+}*/

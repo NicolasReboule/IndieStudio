@@ -58,7 +58,7 @@ void raylib::texture::RlTexture::setWrap(const TextureWrap &wrap)
     SetTextureWrap(this->_texture, wrap);
 }
 
-Texture2D &raylib::texture::RlTexture::get()
+Texture2D &raylib::texture::RlTexture::getTexture()
 {
     return this->_texture;
 }

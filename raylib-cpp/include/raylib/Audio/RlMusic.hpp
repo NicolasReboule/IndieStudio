@@ -11,30 +11,113 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::audio {
+    /**
+     * @brief Encapulation of the raylib Music
+     */
     class RlMusic {
     public:
-        // Music management functions
-        RlMusic(const std::string &fileName);// Load music stream from file
-        RlMusic(const std::string &fileType, unsigned char *data, int dataSize); // Load music stream from data
+        /**
+         * @brief Construct a new RlMusic object from a file
+         * @param fileName the file name
+         */
+        explicit RlMusic(const std::string &fileName);
+
+        /**
+         * @brief Construct a new RlMusic object from data
+         * @param fileType the file type
+         * @param data the data
+         * @param dataSize the data size
+         */
+        explicit RlMusic(const std::string &fileType, unsigned char *data, const int &dataSize);
+
+        /**
+         * @brief Destroy the RlMusic object
+         */
         ~RlMusic();
 
-        void play();                                              // Start music playing
-        bool isPlaying();                                         // Check if music is playing
-        void update();                                            // Updates buffers for music streaming
-        void stop();                                              // Stop music playing
-        void pause();                                             // Pause music playing
-        void resume();                                            // Resume playing paused music
-        void seek(float position);                              // Seek music to a position (in seconds)
-        void setVolume(float volume);                                 // Set volume for music (1.0 is max level)
-        float getVolume() const;
-        void setPitch(float pitch);                                   // Set pitch for a music (1.0 is base level)
-        float getTimeLength();                                          // Get music time length (in seconds)
-        float getTimePlayed();                                          // Get current music time played (in seconds)
+        /**
+         * @brief Play the music stream
+         */
+        void play();
+
+        /**
+         * @brief Check if the music stream is playing
+         * @return true if the music stream is playing
+         */
+        bool isPlaying();
+
+        /**
+         * @brief Updates buffers for music streaming
+         */
+        void update();
+
+        /**
+         * @brief Stop the music stream playing
+         */
+        void stop();
+
+        /**
+         * @brief Pause the music stream playing
+         */
+        void pause();
+
+        /**
+         * @brief Resume the music stream playing
+         */
+        void resume();
+
+        /**
+         * @brief Seek the music stream to a position in seconds (set the current playing position)
+         * @param position the position
+         */
+        void seek(const float &position);
+
+        /**
+         * @brief Set the volume of the music stream (1.0 is max level)
+         * @param volume the volume
+         */
+        void setVolume(const float &volume);
+
+        /**
+         * @brief Get the volume of the music stream
+         * @return the volume
+         */
+        const float &getVolume() const;
+
+        /**
+         * @brief Set pitch for a music (1.0 is base level)
+         * @param pitch the pitch
+         */
+        void setPitch(const float &pitch);
+
+        /**
+         * @brief Get music time length (in seconds)
+         * @return the time length
+         */
+        float getTimeLength();
+
+        /**
+         * @brief Get current music time played (in seconds)
+         * @return the time played
+         */
+        float getTimePlayed();
+
+        /**
+         * @brief Check if the music stream is looping
+         * @return true if the music stream is looping
+         */
+        const bool &isLooping() const;
+
+        /**
+         * @brief Set if the music stream is looped
+         * @param loop if the music stream is looped
+         */
+        void setLooping(const bool &loop);
 
     private:
-        Music music;
-        float volume;
+        Music _music; /**< The raylib Music */
+        float _volume; /**< The volume of the music */
     };
 }
 

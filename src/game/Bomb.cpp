@@ -57,7 +57,7 @@ void indie::Bomb::enableCollision()
         try {
             auto &player = dynamic_cast<indie::Player &>(*node);
             if (player.getIsCollsionEnable() &&
-                raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
+                raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
                 temp = false;
                 break;
             }

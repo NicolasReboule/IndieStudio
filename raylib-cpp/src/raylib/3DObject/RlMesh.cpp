@@ -7,17 +7,46 @@
 
 #include "raylib/3DObject/RlMesh.hpp"
 
-raylib::RlMesh::RlMesh(const Mesh &mesh)
+raylib::model::RlMesh::RlMesh(const Mesh &mesh) : _mesh(mesh)
 {
-    this->_mesh = mesh;
 }
 
-const Mesh &raylib::RlMesh::getMesh() const
+raylib::model::RlMesh::~RlMesh()
 {
-    return _mesh;
+    UnloadMesh(this->_mesh);
 }
 
-void raylib::RlMesh::setMesh(const Mesh &mesh)
+void raylib::model::RlMesh::uploadInGPU(const bool &dynamic)
 {
-    _mesh = mesh;
+    UploadMesh(&this->_mesh, dynamic);
+}
+
+void raylib::model::RlMesh::updateBuffer(const int &index, void *data, const int &dataSize, const int &offset)
+{
+    UpdateMeshBuffer(this->_mesh, index, data, dataSize, offset);
+}
+
+bool raylib::model::RlMesh::exportMesh(const std::string &fileName)
+{
+    return ExportMesh(this->_mesh, fileName.c_str());
+}
+
+BoundingBox raylib::model::RlMesh::getBoundingBox()
+{
+    return GetMeshBoundingBox(this->_mesh);
+}
+
+void raylib::model::RlMesh::genTangents()
+{
+    GenMeshTangents(&this->_mesh);
+}
+
+void raylib::model::RlMesh::genBinormals()
+{
+    GenMeshBinormals(&this->_mesh);
+}
+
+const Mesh &raylib::model::RlMesh::getMesh() const
+{
+    return this->_mesh;
 }

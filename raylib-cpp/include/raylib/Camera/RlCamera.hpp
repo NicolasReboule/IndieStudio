@@ -29,7 +29,7 @@ namespace raylib {
     }
 
     /**
-     * @brief Camera class
+     * @brief Encapsulation of the raylib Camera3D
      */
     class RlCamera {
     public:

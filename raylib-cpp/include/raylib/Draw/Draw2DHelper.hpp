@@ -17,7 +17,7 @@
 
 namespace raylib::helper::draw {
     /**
-     * @brief Helper class for drawing 2d shapes
+     * @brief Helper class for drawing 2D shapes
      */
     class Draw2DHelper {
     public:

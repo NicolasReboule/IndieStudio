@@ -16,9 +16,9 @@ gameengine::Button::Button(const std::string &name, const std::string &filename)
     this->_action = false;
     this->_state = 0;
     this->_frameNum = 3;
-    this->_frameHeight = (float) this->_texture.get().height / (float)this->_frameNum;
-    this->_rectangle = {0, 0, (float) this->_texture.get().width, (float)this->_frameHeight};
-    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.get().width, this->_frameHeight};
+    this->_frameHeight = (float) this->_texture.getTexture().height / (float)this->_frameNum;
+    this->_rectangle = {0, 0, (float) this->_texture.getTexture().width, (float)this->_frameHeight};
+    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.getTexture().width, this->_frameHeight};
 }
 
 void gameengine::Button::ready()
@@ -34,7 +34,7 @@ void gameengine::Button::update(float delta)
             this->_state = 0;
             return;
         }
-        if (raylib::Collision2DHelper::checkCollisionPointRec(raylib::helper::input::MouseHelper::getMousePosition(), this->_bounds)) {
+        if (raylib::helper::Collision2DHelper::checkCollisionPointRec(raylib::helper::input::MouseHelper::getMousePosition(), this->_bounds)) {
             if (raylib::helper::input::MouseHelper::isMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                 this->_state = 2;
                 this->_action = true;
@@ -65,8 +65,8 @@ Vector2f gameengine::Button::getPosition()
 void gameengine::Button::setPosition(Vector2f position)
 {
     this->_position = position;
-    this->_rectangle = {0, 0, (float) this->_texture.get().width, (float)this->_frameHeight};
-    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.get().width, this->_frameHeight};
+    this->_rectangle = {0, 0, (float) this->_texture.getTexture().width, (float)this->_frameHeight};
+    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.getTexture().width, this->_frameHeight};
 }
 
 Vector2f gameengine::Button::getScale()

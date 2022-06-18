@@ -182,6 +182,7 @@ namespace raylib::builder {
 
         /**
          * @brief Build the RlImage object
+         * @throws BuilderException
          * @return the RlImage object
          */
         raylib::image::RlImage build() override;

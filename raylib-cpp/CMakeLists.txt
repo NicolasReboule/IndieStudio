@@ -15,19 +15,18 @@ add_library(${PROJECT_NAME}
         src/raylib/2DObject/Collision2DHelper.cpp
         src/raylib/3DObject/Collision3DHelper.cpp
         src/raylib/3DObject/MeshGenerator.cpp
-        src/raylib/3DObject/MeshHelper.cpp
-        src/raylib/3DObject/ModelHelper.cpp
+        src/raylib/3DObject/RlAnimation.cpp
         src/raylib/3DObject/RlMaterial.cpp
         src/raylib/3DObject/RlMesh.cpp
         src/raylib/3DObject/RlMesh.cpp
         src/raylib/3DObject/RlMeshBuilder.cpp
         src/raylib/3DObject/RlModel.cpp
-        src/raylib/3DObject/RlModelAnim.cpp
-        src/raylib/3DObject/Shape3DHelper.cpp
-        src/raylib/Audio/AudioDeviceHelper.cpp
+        src/raylib/3DObject/RlModelAnimation.cpp
+        src/raylib/3DObject/RlModelBuilder.cpp
+        src/raylib/Audio/AudioHelper.cpp
         src/raylib/Audio/RlAudioStream.cpp
-        src/raylib/Audio/RlMusic.cpp
-        src/raylib/Audio/RlMusic.cpp
+        src/raylib/Audio/RlMusicStream.cpp
+        src/raylib/Audio/RlMusicStream.cpp
         src/raylib/Audio/RlSound.cpp
         src/raylib/Audio/RlSound.cpp
         src/raylib/Audio/RlWave.cpp
@@ -40,7 +39,9 @@ add_library(${PROJECT_NAME}
         src/raylib/Core/FileHelper.cpp
         src/raylib/Core/WorldHelper.cpp
         src/raylib/Draw/Draw2DHelper.cpp
+        src/raylib/Draw/Draw3DHelper.cpp
         src/raylib/Draw/DrawHelper.cpp
+        src/raylib/Draw/DrawModelHelper.cpp
         src/raylib/Draw/DrawTextHelper.cpp
         src/raylib/Draw/DrawTextureHelper.cpp
         src/raylib/exception/BuilderException.cpp
@@ -61,10 +62,10 @@ add_library(${PROJECT_NAME}
         src/raylib/Math/VectorHelper.cpp
         src/raylib/Random.cpp
         src/raylib/Shader/RlShader.cpp
-        src/raylib/Text/TextCodepoint.cpp
         src/raylib/Text/RlFont.cpp
         src/raylib/Text/RlText.cpp
         src/raylib/Text/RlTextBuilder.cpp
+        src/raylib/Text/TextCodepoint.cpp
         src/raylib/Text/TextHelper.cpp
         src/raylib/Texture/RlRenderTexture.cpp
         src/raylib/Texture/RlTexture.cpp
@@ -80,14 +81,12 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/AbstractBase.cpp
         src/GameEngine/SceneManager.cpp
         src/GameEngine/Scene.cpp
-        src/GameEngine/MainScene.cpp
         src/GameEngine/Nodes/2D/Node2D.cpp
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/KinematicBody.cpp
         src/GameEngine/exception/GameEngineException.cpp
         src/GameEngine/exception/MapParserException.cpp
-        src/raylib/3DObject/RlAnimation.cpp
         src/GameEngine/Component/GridComponent.cpp
         src/GameEngine/Nodes/2D/Label.cpp
         )

@@ -11,9 +11,9 @@
 #include "raylib/Math/VectorHelper.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::helper {
     /**
-     * @brief Basic shapes collision detection functions
+     * @brief Helper class for 2D collision detection
      */
     class Collision2DHelper {
     public:
@@ -34,7 +34,7 @@ namespace raylib {
          * @param radius2 the second circle radius
          * @return true if the circles are colliding, false otherwise
          */
-        static bool checkCollisionCircles(const Vector2f &center1, float radius1, const Vector2f &center2, float radius2);
+        static bool checkCollisionCircles(const Vector2f &center1, const float &radius1, const Vector2f &center2, const float &radius2);
 
         /**
          * @brief Check if a circle is colliding with a rectangle
@@ -43,7 +43,7 @@ namespace raylib {
          * @param rec the rectangle
          * @return true if the circle is colliding with the rectangle, false otherwise
          */
-        static bool checkCollisionCircleRec(const Vector2f &center, float radius, const Rectangle &rec);
+        static bool checkCollisionCircleRec(const Vector2f &center, const float &radius, const Rectangle &rec);
 
         /**
          * @brief Check if point is inside rectangle
@@ -60,7 +60,7 @@ namespace raylib {
          * @param radius the circle radius
          * @return true if the point is colliding with the circle, false otherwise
          */
-        static bool checkCollisionPointCircle(const Vector2f &point, const Vector2f &center, float radius);
+        static bool checkCollisionPointCircle(const Vector2f &point, const Vector2f &center, const float &radius);
 
         /**
          * @brief Check if point is inside a triangle
@@ -91,7 +91,7 @@ namespace raylib {
          * @param threshold the margin in pixels
          * @return true if the point is colliding with the line, false otherwise
          */
-        static bool checkCollisionPointLine(const Vector2f &point, const Vector2f &p1, const Vector2f &p2, int threshold);
+        static bool checkCollisionPointLine(const Vector2f &point, const Vector2f &p1, const Vector2f &p2, const int &threshold);
 
         /**
          * @brief Get collision rectangle for two rectangles collision

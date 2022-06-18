@@ -77,7 +77,7 @@ namespace raylib::texture {
          * @brief Get the texture
          * @return the mutable raylib texture
          */
-        Texture2D &get();
+        Texture2D &getTexture();
 
         /**
          * @brief Get the texture

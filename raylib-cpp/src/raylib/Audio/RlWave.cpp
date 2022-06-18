@@ -33,6 +33,11 @@ Wave &raylib::audio::RlWave::getWave()
     return this->_wave;
 }
 
+const Wave &raylib::audio::RlWave::getWave() const
+{
+    return this->_wave;
+}
+
 bool raylib::audio::RlWave::exportWave(const std::string &fileName)
 {
     return ExportWave(this->_wave, fileName.c_str());

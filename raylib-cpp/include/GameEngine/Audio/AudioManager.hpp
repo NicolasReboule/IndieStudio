@@ -13,11 +13,11 @@
 #include <vector>
 
 namespace gameengine {
-    class AudioManager : public raylib::helper::AudioDeviceHelper {
+    class AudioManager {
     public:
-        AudioManager() = default;
+        AudioManager();
 
-        ~AudioManager() = default;
+        ~AudioManager();
 
         static std::shared_ptr<AudioManager> &getInstance();
 

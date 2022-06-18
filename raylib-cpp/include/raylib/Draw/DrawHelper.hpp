@@ -12,6 +12,7 @@
 #include "raylib/Color/RlColor.hpp"
 #include "raylib/Camera/RlCamera.hpp"
 #include "raylib/Texture/RlTexture.hpp"
+#include "raylib/Shader/RlShader.hpp"
 #include <raylib.h>
 
 namespace raylib::helper::draw {
@@ -73,7 +74,7 @@ namespace raylib::helper::draw {
          * @brief Begin custom shader drawing
          * @param shader to use
          */
-        static void beginShaderMode(const Shader &shader); //TODO: change this to RlShader
+        static void beginShaderMode(const shader::RlShader &shader);
 
         /**
          * @brief End custom shader drawing (use default shader)
@@ -115,52 +116,6 @@ namespace raylib::helper::draw {
          * @brief End stereo rendering (requires VR simulator)
          */
         static void endVrStereoMode();
-
-        //TODO: change location of this
-        /**
-         * @brief Draw bounding box (wires)
-         * @param box to use
-         * @param color to use
-         */
-        static void drawBoundingBox(const BoundingBox &box, const RlColor &color);
-
-        /**
-         * @brief Draw a billboard texture
-         * @param camera to use
-         * @param texture to use
-         * @param position to use
-         * @param size to use
-         * @param tint to use
-         */
-        static void drawBillboard(const RlCamera &camera, const texture::RlTexture &texture, const Vector3f &position, float size, const RlColor &tint);
-
-        /**
-         * @brief Draw a billboard texture defined by source
-         * @param camera to use
-         * @param texture to use
-         * @param source to use
-         * @param position to use
-         * @param size to use
-         * @param tint to use
-         */
-        static void drawBillboardRec(const RlCamera &camera, const texture::RlTexture &texture, const Rectangle &source,
-                                     const Vector3f &position, const Vector2f &size, const RlColor &tint);
-
-        /**
-         * @brief Draw a billboard texture defined by source and rotation
-         * @param camera to use
-         * @param texture to use
-         * @param source to use
-         * @param position to use
-         * @param up to use
-         * @param size to use
-         * @param origin to use
-         * @param rotation to use
-         * @param tint to use
-         */
-        static void drawBillboardPro(const RlCamera &camera, const texture::RlTexture &texture, const Rectangle &source,
-                                     const Vector3f &position, const Vector3f &up, const Vector2f &size,
-                                     const Vector2f &origin, float rotation, const RlColor &tint);
 
     };
 }
