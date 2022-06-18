@@ -57,7 +57,8 @@ int main(int ac, char **av)
     raylib::model::RlModel cpy = boost;
 
     raylib::helper::AudioHelper::initAudioDevice();
-    raylib::audio::RlMusic music = raylib::audio::RlMusic("./assets/sounds/soundcpy.wav");
+    raylib::audio::RlMusic music = raylib::audio::RlMusic("./assets/music/c418-sweden-trap-remix1.mp3");
+    music.play();
 
     //std::cout << anim.getCount() << std::endl;
     while (window->isOpen()) {
@@ -65,6 +66,7 @@ int main(int ac, char **av)
         raylib::helper::draw::DrawHelper::clearBackground(RlColor::White);
         raylib::helper::draw::DrawTextHelper::drawFps(10, 10, 30);
         camera.update();
+        music.update();
         raylib::helper::draw::DrawHelper::beginMode3D(camera);
         raylib::helper::draw::Draw3DHelper::drawGrid({9, 9}, 1.0f);
         raylib::helper::draw::DrawModelHelper::drawModel(boost);

@@ -103,6 +103,18 @@ namespace raylib::audio {
          */
         float getTimePlayed();
 
+        /**
+         * @brief Check if the music stream is looping
+         * @return true if the music stream is looping
+         */
+        const bool &isLooping() const;
+
+        /**
+         * @brief Set if the music stream is looped
+         * @param loop if the music stream is looped
+         */
+        void setLooping(const bool &loop);
+
     private:
         Music _music; /**< The raylib Music */
         float _volume; /**< The volume of the music */

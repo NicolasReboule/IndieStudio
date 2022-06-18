@@ -211,6 +211,11 @@ const MaterialMapIndex &type)
     SetMaterialTexture(&this->_model->materials[materialIndex], type, this->_texture->getTexture());
 }
 
+void raylib::model::RlModel::setMeshMaterial(const int &meshId, const int &materialId)
+{
+    SetModelMeshMaterial(&*this->_model, meshId, materialId);
+}
+
 //REMOVED not possible with raylib 4.0.0
 /*void raylib::model::RlModel::setMaterials(const std::vector<RlMaterial> &materials)
 {

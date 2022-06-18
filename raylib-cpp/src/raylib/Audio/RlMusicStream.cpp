@@ -81,3 +81,13 @@ float raylib::audio::RlMusic::getTimePlayed()
 {
     return GetMusicTimePlayed(this->_music);
 }
+
+const bool &raylib::audio::RlMusic::isLooping() const
+{
+    return this->_music.looping;
+}
+
+void raylib::audio::RlMusic::setLooping(const bool &loop)
+{
+    this->_music.looping = loop;
+}

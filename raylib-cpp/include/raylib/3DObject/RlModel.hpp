@@ -59,6 +59,7 @@ namespace raylib {
              * @brief Construct a new RlModel object from a file with a custom texture
              * @param fileName the file name
              * @param textureName the texture name
+             * @warning Don't use this, link the texture manually through a resource manager for better performances
              */
             explicit RlModel(const std::string &fileName, const std::string &textureName);
 
@@ -226,6 +227,13 @@ namespace raylib {
              * @param type the type of the texture (MATERIAL_MAP_DIFFUSE, MATERIAL_MAP_SPECULAR ...)
              */
             void setMaterialTexture(const std::shared_ptr<texture::RlTexture> &texture, const int &materialIndex, const MaterialMapIndex &type);
+
+            /**
+             * @brief Set material for a mesh
+             * @param meshId the mesh id
+             * @param materialId the material id
+             */
+            void setMeshMaterial(const int &meshId, const int &materialId);
 
 //REMOVED: not implemented in raylib 4.0.0
 //            /**
