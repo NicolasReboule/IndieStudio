@@ -156,7 +156,7 @@ raylib::builder::RlMeshBuilder &raylib::builder::RlMeshBuilder::setKnotRadSeg(co
     return *this;
 }
 
-raylib::RlMesh raylib::builder::RlMeshBuilder::build()
+raylib::models::RlMesh raylib::builder::RlMeshBuilder::build()
 {
     if (_type == -1)
         throw raylib::ex::BuilderException("Mesh type not set");
@@ -164,27 +164,27 @@ raylib::RlMesh raylib::builder::RlMeshBuilder::build()
         throw raylib::ex::BuilderException("Invalid arguments");
     switch (_type) {
         case MeshPoly:
-            return raylib::MeshGenerator::genMeshPoly(_sides, _radius);
+            return raylib::models::MeshGenerator::genMeshPoly(_sides, _radius);
         case MeshPlane:
-            return raylib::MeshGenerator::genMeshPlane(_width, _length, _resX, _resZ);
+            return raylib::models::MeshGenerator::genMeshPlane(_width, _length, _resX, _resZ);
         case MeshCube:
-            return raylib::MeshGenerator::genMeshCube(_width, _height, _length);
+            return raylib::models::MeshGenerator::genMeshCube(_width, _height, _length);
         case MeshSphere:
-            return raylib::MeshGenerator::genMeshSphere(_radius, _rings, _slices);
+            return raylib::models::MeshGenerator::genMeshSphere(_radius, _rings, _slices);
         case MeshHemiSphere:
-            return raylib::MeshGenerator::genMeshHemiSphere(_radius, _rings, _slices);
+            return raylib::models::MeshGenerator::genMeshHemiSphere(_radius, _rings, _slices);
         case MeshCylinder:
-            return raylib::MeshGenerator::genMeshCylinder(_radius, _height, _slices);
+            return raylib::models::MeshGenerator::genMeshCylinder(_radius, _height, _slices);
         case MeshCone:
-            return raylib::MeshGenerator::genMeshCone(_radius, _height, _slices);
+            return raylib::models::MeshGenerator::genMeshCone(_radius, _height, _slices);
         case MeshTorus:
-            return raylib::MeshGenerator::genMeshTorus(_radius, _size, _radSeg, _sides);
+            return raylib::models::MeshGenerator::genMeshTorus(_radius, _size, _radSeg, _sides);
         case MeshKnot:
-            return raylib::MeshGenerator::genMeshKnot(_radius, _size, _radSeg, _sides);
+            return raylib::models::MeshGenerator::genMeshKnot(_radius, _size, _radSeg, _sides);
         case MeshHeightmap:
-            return raylib::MeshGenerator::genMeshHeightmap(_heightmap, _vec3fSize);
+            return raylib::models::MeshGenerator::genMeshHeightmap(_heightmap, _vec3fSize);
         case MeshCubicmap:
-            return raylib::MeshGenerator::genMeshCubicmap(_cubicmap, _cubeSize);
+            return raylib::models::MeshGenerator::genMeshCubicmap(_cubicmap, _cubeSize);
         default:
             throw (raylib::ex::BuilderException("Unknown Mesh pattern"));
     }

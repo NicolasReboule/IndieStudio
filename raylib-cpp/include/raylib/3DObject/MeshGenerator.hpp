@@ -13,7 +13,10 @@
 #include "raylib/3DObject/RlMesh.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::models {
+    /**
+     * @brief Generate some type of mesh
+     */
     class MeshGenerator {
     public:
 

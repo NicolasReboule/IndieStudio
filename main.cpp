@@ -49,7 +49,7 @@ int main(int ac, char **av)
     window->createWindow("Bomberman", 1280, 720, 0);
     raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
     //raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
-    //raylib::RlModelAnim anim(model, "./assets/player.iqm");
+    //raylib::RlModelAnimation anim(model, "./assets/player.iqm");
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
     raylib::RlModel boost("./assets/boostSpeed.obj");
     raylib::helper::AudioHelper::initAudioDevice();

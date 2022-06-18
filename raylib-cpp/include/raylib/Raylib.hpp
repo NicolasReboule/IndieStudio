@@ -23,7 +23,7 @@
 #include "3DObject/RlMesh.hpp"
 #include "3DObject/RlMeshBuilder.hpp"
 #include "3DObject/RlModel.hpp"
-#include "3DObject/RlModelAnim.hpp"
+#include "3DObject/RlModelAnimation.hpp"
 #include "Audio/AudioHelper.hpp"
 #include "Audio/RlAudioStream.hpp"
 #include "Audio/RlMusic.hpp"

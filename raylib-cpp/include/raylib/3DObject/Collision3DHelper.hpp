@@ -79,7 +79,7 @@ namespace raylib::helper {
          * @param transform Transform of the mesh
          * @return If the ray and the mesh are colliding
          */
-        static RayCollision getRayCollisionMesh(Ray ray, RlMesh mesh, Matrix transform);
+        static RayCollision getRayCollisionMesh(Ray ray, models::RlMesh mesh, Matrix transform);
 
         /**
          * @brief Get collision info between ray and triangle

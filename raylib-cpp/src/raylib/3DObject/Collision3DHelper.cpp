@@ -40,7 +40,7 @@ RayCollision raylib::helper::Collision3dHelper::getRayCollisionModel(Ray ray, Rl
     return GetRayCollisionModel(ray, model.getModel());
 }
 
-RayCollision raylib::helper::Collision3dHelper::getRayCollisionMesh(Ray ray, RlMesh mesh, Matrix transform)
+RayCollision raylib::helper::Collision3dHelper::getRayCollisionMesh(Ray ray, models::RlMesh mesh, Matrix transform)
 {
     return GetRayCollisionMesh(ray, mesh.getMesh(), transform);
 }

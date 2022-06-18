@@ -28,7 +28,7 @@ raylib::RlModel raylib::builder::RlModelBuilder::build()
     return raylib::RlModel(_modelPath);
 }
 
-raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMesh(const std::shared_ptr<raylib::RlMesh> &mesh)
+raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMesh(const std::shared_ptr<raylib::models::RlMesh> &mesh)
 {
     _mesh = mesh;
     return *this;

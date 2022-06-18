@@ -23,7 +23,7 @@ add_library(${PROJECT_NAME}
         src/raylib/3DObject/RlMesh.cpp
         src/raylib/3DObject/RlMeshBuilder.cpp
         src/raylib/3DObject/RlModel.cpp
-        src/raylib/3DObject/RlModelAnim.cpp
+        src/raylib/3DObject/RlModelAnimation.cpp
         src/raylib/3DObject/RlModelBuilder.cpp
         src/raylib/Audio/AudioHelper.cpp
         src/raylib/Audio/RlAudioStream.cpp

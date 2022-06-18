@@ -8,7 +8,7 @@
 #include "raylib/3DObject/RlAnimation.hpp"
 
 //TODO: change this to RlModel
-raylib::RlAnimation::RlAnimation(const std::string &animationDir, const std::string &extension): _frame(0), _isLoaded(false)
+raylib::models::RlAnimation::RlAnimation(const std::string &animationDir, const std::string &extension): _frame(0), _isLoaded(false)
 {
     if (!helper::FileHelper::directoryExists(animationDir))
         throw ex::RlAnimationException("Animation dir: " + animationDir + " not found");
@@ -21,13 +21,13 @@ raylib::RlAnimation::RlAnimation(const std::string &animationDir, const std::str
     this->_isLoaded = true;
 }
 
-raylib::RlAnimation::~RlAnimation()
+raylib::models::RlAnimation::~RlAnimation()
 {
     for (const auto &item : this->_animationModels)
         UnloadModel(item);
 }
 
-void raylib::RlAnimation::update()
+void raylib::models::RlAnimation::update()
 {
     if (_animationModels.empty())
         return;
@@ -36,22 +36,22 @@ void raylib::RlAnimation::update()
         this->_frame = 0;
 }
 
-const std::vector<Model> &raylib::RlAnimation::getAnimationModels() const
+const std::vector<Model> &raylib::models::RlAnimation::getAnimationModels() const
 {
     return this->_animationModels;
 }
 
-std::size_t raylib::RlAnimation::getAnimationsSize() const
+std::size_t raylib::models::RlAnimation::getAnimationsSize() const
 {
     return this->_animationModels.size();
 }
 
-const unsigned int &raylib::RlAnimation::getFrame() const
+const unsigned int &raylib::models::RlAnimation::getFrame() const
 {
     return this->_frame;
 }
 
-const bool &raylib::RlAnimation::isLoaded() const
+const bool &raylib::models::RlAnimation::isLoaded() const
 {
     return this->_isLoaded;
 }

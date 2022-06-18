@@ -1,38 +1,40 @@
 /*
 ** EPITECH PROJECT, 2022
-** RlModelAnim.hpp
+** RlModelAnimation.hpp
 ** FileHelper description:
-** RlModelAnim.hpp
+** RlModelAnimation.hpp
 */
 
-#ifndef INDIESTUDIO_RLMODELANIM_HPP
-#define INDIESTUDIO_RLMODELANIM_HPP
+#ifndef INDIESTUDIO_RLMODELANIMATION_HPP
+#define INDIESTUDIO_RLMODELANIMATION_HPP
 
 #include "RlModel.hpp"
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::models {
     /**
      * @brief Model animation class (iqm)
      */
-    class RlModelAnim {
+    class RlModelAnimation {
     public:
         /**
          * @brief Create a new RlModelAnimation (support only iqm)
          * @param model the model to animate
          * @param fileName the file name of the animation
          */
-        explicit RlModelAnim(const RlModel &model, const std::string &fileName);
+        explicit RlModelAnimation(const RlModel &model, const std::string &fileName);
 
         /**
          * @brief Unload the model animation
          */
-        ~RlModelAnim();
+        ~RlModelAnimation();
 
         /**
          * @brief Update the animation
          * @param animIndex the index of the animation to update
+         * @warning the frameCount need to be incremented manually using incrementFrameCount()
+         * @see incrementFrameCount()
          */
         void update(const unsigned int &animIndex);
 
@@ -69,4 +71,4 @@ namespace raylib {
     };
 }
 
-#endif //INDIESTUDIO_RLMODELANIM_HPP
+#endif //INDIESTUDIO_RLMODELANIMATION_HPP

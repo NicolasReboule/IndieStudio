@@ -11,7 +11,7 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib {
+namespace raylib::models {
     /**
      * @brief Encapsulation of the raylib Mesh
      */
@@ -73,7 +73,6 @@ namespace raylib {
          * @return the mesh
          */
         const Mesh &getMesh() const;
-
 
     private:
         Mesh _mesh; /**< The raylib mesh*/

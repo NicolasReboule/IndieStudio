@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2022
-** RlModelAnim.cpp
+** RlModelAnimation.cpp
 ** FileHelper description:
-** RlModelAnim.cpp
+** RlModelAnimation.cpp
 */
 
-#include "raylib/3DObject/RlModelAnim.hpp"
+#include "raylib/3DObject/RlModelAnimation.hpp"
 
-raylib::RlModelAnim::RlModelAnim(const RlModel &model, const std::string &fileName) : _model(model)
+raylib::models::RlModelAnimation::RlModelAnimation(const RlModel &model, const std::string &fileName) : _model(model)
 {
     this->_count = 0;
     _anims = LoadModelAnimations(fileName.c_str(), &this->_count);
@@ -16,22 +16,21 @@ raylib::RlModelAnim::RlModelAnim(const RlModel &model, const std::string &fileNa
     this->_frameCount = 0;
 }
 
-raylib::RlModelAnim::~RlModelAnim()
+raylib::models::RlModelAnimation::~RlModelAnimation()
 {
     UnloadModelAnimations(_anims, this->_count);
 }
 
-void raylib::RlModelAnim::update(const unsigned int &animIndex)
+void raylib::models::RlModelAnimation::update(const unsigned int &animIndex)
 {
     if (animIndex >= this->_count)
         return;
-    this->_frameCount++;
     UpdateModelAnimation(this->_model.getModel(), this->_animations[animIndex], this->_frameCount);
     if (this->_frameCount >= this->_animations[animIndex].frameCount)
         this->_frameCount = 0;
 }
 
-void raylib::RlModelAnim::unload(const unsigned int &animIndex)
+void raylib::models::RlModelAnimation::unload(const unsigned int &animIndex)
 {
     if (animIndex < this->_count) {
         UnloadModelAnimation(this->_animations[animIndex]);
@@ -39,19 +38,19 @@ void raylib::RlModelAnim::unload(const unsigned int &animIndex)
     }
 }
 
-bool raylib::RlModelAnim::animationIndexIsValid(const unsigned int &animIndex)
+bool raylib::models::RlModelAnimation::animationIndexIsValid(const unsigned int &animIndex)
 {
     if (animIndex < this->_count)
         return IsModelAnimationValid(this->_model.getModel(), this->_animations[animIndex]);
     return false;
 }
 
-unsigned int raylib::RlModelAnim::getCount() const
+unsigned int raylib::models::RlModelAnimation::getCount() const
 {
-    return _count;
+    return this->_count;
 }
 
-void raylib::RlModelAnim::incrementFrameCount(const int &value)
+void raylib::models::RlModelAnimation::incrementFrameCount(const int &value)
 {
     this->_frameCount += value;
 }

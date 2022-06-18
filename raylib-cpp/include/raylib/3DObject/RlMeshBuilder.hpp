@@ -20,7 +20,7 @@ namespace raylib::builder {
     /**
      * @brief Builder to create a RlMesh easily
      */
-    class RlMeshBuilder : public IBuilder<RlMesh> {
+    class RlMeshBuilder : public IBuilder<models::RlMesh> {
     private:
         /**
          * @brief Enum for parameters
@@ -224,7 +224,7 @@ namespace raylib::builder {
          * @brief Create a mesh
          * @return the mesh
          */
-        RlMesh build() override;
+        models::RlMesh build() override;
 
     private:
         long _flags; /**< Flags for the mesh type */

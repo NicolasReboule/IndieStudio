@@ -22,7 +22,7 @@ namespace raylib {
     class RlModel {
     public:
         explicit RlModel(const std::string &fileName);
-        explicit RlModel(const RlMesh &mesh);
+        explicit RlModel(const models::RlMesh &mesh);
         explicit RlModel(const builder::RlMeshBuilder::MeshType &type);
 
         ~RlModel();

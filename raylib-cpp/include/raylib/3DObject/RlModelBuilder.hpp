@@ -37,7 +37,7 @@ namespace raylib::builder {
          * @param mesh Mesh of the model
          * @return the ModelBuilder object
          */
-        RlModelBuilder &setMesh(const std::shared_ptr<raylib::RlMesh> &mesh);
+        RlModelBuilder &setMesh(const std::shared_ptr<raylib::models::RlMesh> &mesh);
 
         /**
          * @brief Set the mesh type
@@ -95,7 +95,7 @@ namespace raylib::builder {
           */
          RlModelBuilder &setColor(const RlColor &color);
     private:
-        std::shared_ptr<raylib::RlMesh> _mesh;
+        std::shared_ptr<raylib::models::RlMesh> _mesh;
         long _type;
         std::string _modelPath;
         std::string _texturePath;

@@ -14,7 +14,7 @@ _scale(1, 1, 1), _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _sta
     this->_startBoundingBox = GetModelBoundingBox(_model);
 }
 
-raylib::RlModel::RlModel(const raylib::RlMesh &mesh)
+raylib::RlModel::RlModel(const raylib::models::RlMesh &mesh)
 : _model(LoadModelFromMesh(mesh.getMesh())), _texture(""), _position(0, 0, 0), _color(WHITE),
 _scale(1, 1, 1), _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _startBoundingBox()
 {
@@ -26,19 +26,19 @@ raylib::RlModel::RlModel(const builder::RlMeshBuilder::MeshType &type)
 _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _startBoundingBox()
 {
     if (type == builder::RlMeshBuilder::MeshCube) {
-        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+        raylib::models::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
         this->_model = LoadModelFromMesh(mesh.getMesh());
     }
     else if (type == builder::RlMeshBuilder::MeshSphere) {
-        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshSphere).setRadius(0.5f).setRings(10).setSlices(10).build();
+        raylib::models::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshSphere).setRadius(0.5f).setRings(10).setSlices(10).build();
         this->_model = LoadModelFromMesh(mesh.getMesh());
     }
     else {
-        raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+        raylib::models::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
         this->_model = LoadModelFromMesh(mesh.getMesh());
     }
 
-    //raylib::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
+    //raylib::models::RlMesh mesh = raylib::builder::RlMeshBuilder().setMeshType(raylib::builder::RlMeshBuilder::MeshCube).setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
     //this->_model = LoadModelFromMesh(mesh.getMesh());
 
     this->_startBoundingBox = GetModelBoundingBox(_model);

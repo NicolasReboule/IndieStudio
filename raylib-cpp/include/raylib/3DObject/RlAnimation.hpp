@@ -14,13 +14,13 @@
 #include <vector>
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::models {
 
     namespace ex {
         /**
          * @brief Exception thrown when an animation is not found
          */
-        class RlAnimationException : public RaylibException {
+        class RlAnimationException : public raylib::ex::RaylibException {
         public:
             /**
              * @brief Construct a new RlAnimationException object
