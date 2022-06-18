@@ -182,9 +182,9 @@ raylib::RlMesh raylib::builder::RlMeshBuilder::build()
         case MeshKnot:
             return raylib::MeshGenerator::genMeshKnot(_radius, _size, _radSeg, _sides);
         case MeshHeightmap:
-            return raylib::MeshGenerator::genMeshHeightmap(_heightmap.getImage(), _vec3fSize);
+            return raylib::MeshGenerator::genMeshHeightmap(_heightmap, _vec3fSize);
         case MeshCubicmap:
-            return raylib::MeshGenerator::genMeshCubicmap(_cubicmap.getImage(), _cubeSize);
+            return raylib::MeshGenerator::genMeshCubicmap(_cubicmap, _cubeSize);
         default:
             throw (raylib::ex::BuilderException("Unknown Mesh pattern"));
     }

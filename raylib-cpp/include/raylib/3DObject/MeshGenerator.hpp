@@ -8,9 +8,10 @@
 #ifndef INDIESTUDIO_MESHGENERATOR_HPP
 #define INDIESTUDIO_MESHGENERATOR_HPP
 
-#include <raylib.h>
 #include "raylib/Math.hpp"
+#include "raylib/Image/RlImage.hpp"
 #include "raylib/3DObject/RlMesh.hpp"
+#include <raylib.h>
 
 namespace raylib {
     class MeshGenerator {
@@ -24,7 +25,7 @@ namespace raylib {
          * @param length Length of the cube
          * @return Mesh of the cube
          */
-        static RlMesh genMeshCube(float width, float height, float length);
+        static RlMesh genMeshCube(const float &width, const float &height, const float &length);
 
         /**
          * @brief Generate a mesh of a cylinder
@@ -34,7 +35,7 @@ namespace raylib {
          * @param slices Number of slices
          * @return Mesh of the cylinder
          */
-        static RlMesh genMeshCylinder(float radius, float height, int slices);
+        static RlMesh genMeshCylinder(const float &radius, const float &height, const int &slices);
 
         /**
          * @brief Generate a mesh of a cone
@@ -44,7 +45,7 @@ namespace raylib {
          * @param slices Number of slices
          * @return Mesh of the cone
          */
-        static RlMesh genMeshCone(float radius, float height, int slices);
+        static RlMesh genMeshCone(const float &radius, const float &height, const int &slices);
 
         /**
          * @brief Generate a mesh of a sphere
@@ -54,7 +55,7 @@ namespace raylib {
          * @param slices Number of slices
          * @return Mesh of the sphere
          */
-        static RlMesh genMeshSphere(float radius, int rings, int slices);
+        static RlMesh genMeshSphere(const float &radius, const int &rings, const int &slices);
 
         /**
          * @brief Generate a mesh of an hemisphere
@@ -64,7 +65,7 @@ namespace raylib {
          * @param slices Number of slices
          * @return Mesh of the hemisphere
          */
-        static RlMesh genMeshHemiSphere(float radius, int rings, int slices);
+        static RlMesh genMeshHemiSphere(const float &radius, const int &rings, const int &slices);
 
         /**
          * @brief Generate a mesh of a plane
@@ -75,7 +76,7 @@ namespace raylib {
          * @param resZ resolution on the Z axis
          * @return Mesh of the plane
          */
-        static RlMesh genMeshPlane(float width, float length, int resX, int resZ);
+        static RlMesh genMeshPlane(const float &width, const float &length, const int &resX, const int &resZ);
 
         /**
          * @brief Generate a mesh of a torus
@@ -86,7 +87,7 @@ namespace raylib {
          * @param sides Number of sides
          * @return Mesh of the torus
          */
-        static RlMesh genMeshTorus(float radius, float size, int radSeg, int sides);
+        static RlMesh genMeshTorus(const float &radius, const float &size, const int &radSeg, const int &sides);
 
         /**
          * @brief Generate a mesh of a knot
@@ -97,7 +98,7 @@ namespace raylib {
          * @param sides Number of sides
          * @return Mesh of the knot
          */
-        static RlMesh genMeshKnot(float radius, float size, int radSeg, int sides);
+        static RlMesh genMeshKnot(const float &radius, const float &size, const int &radSeg, const int &sides);
 
         /**
          * @brief Generate a mesh of a heightmap
@@ -106,7 +107,7 @@ namespace raylib {
          * @param size Size of the heightmap
          * @return Mesh of the heightmap
          */
-        static RlMesh genMeshHeightmap(Image heightmap, Vector3f size);
+        static RlMesh genMeshHeightmap(const image::RlImage &heightmap, const Vector3f &size);
 
         /**
          * @brief Generate a mesh of a polygon
@@ -115,7 +116,7 @@ namespace raylib {
          * @param radius Radius of the polygon
          * @return Mesh of the polygon
          */
-        static RlMesh genMeshPoly(int sides, float radius);
+        static RlMesh genMeshPoly(const int &sides, const float &radius);
 
         /**
          * @brief Generate a mesh of a cubicmap
@@ -124,7 +125,7 @@ namespace raylib {
          * @param cubeSize Size of the cubicmap
          * @return Mesh of the cubicmap
          */
-        static RlMesh genMeshCubicmap(Image cubicmap, Vector3f cubeSize);
+        static RlMesh genMeshCubicmap(const image::RlImage &cubicmap, const Vector3f &cubeSize);
     };
 }
 

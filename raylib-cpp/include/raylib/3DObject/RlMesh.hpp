@@ -30,6 +30,45 @@ namespace raylib {
         ~RlMesh();
 
         /**
+         * @brief Upload mesh vertex data in GPU and provide VAO/VBO ids
+         * @param dynamic true if the mesh is dynamic
+         */
+        void uploadInGPU(const bool &dynamic);
+
+        /**
+         * @brief Update mesh vertex data in GPU for a specific buffer index
+         * @param index the buffer index to update
+         * @param data the new data to upload
+         * @param dataSize the size of the data to upload
+         * @param offset the offset to update
+         */
+        void updateBuffer(const int &index, void *data, const int &dataSize, const int &offset);
+
+        /**
+         * @brief Export mesh data to file, returns true on success
+         * @param fileName the file name to export the mesh in
+         * @return true on success
+         */
+        bool exportMesh(const std::string &fileName);
+
+        /**
+         * @brief Compute mesh bounding box limits
+         * @param mesh the mesh to compute the bounding box from
+         * @return the bounding box of the mesh
+         */
+        BoundingBox getBoundingBox();
+
+        /**
+         * @brief Compute mesh tangents
+         */
+        void genTangents();
+
+        /**
+         * @brief Compute mesh binormals
+         */
+        void genBinormals();
+
+        /**
          * @brief Get the mesh
          * @return the mesh
          */
