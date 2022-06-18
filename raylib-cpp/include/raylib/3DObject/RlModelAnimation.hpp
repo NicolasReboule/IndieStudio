@@ -60,7 +60,7 @@ namespace raylib::model {
         /**
          * @brief Increment the frame counter of a specific value
          */
-        void incrementFrameCount(const int &value);
+        void incrementFrameCount(const int &value = 1);
 
     private:
         const RlModel &_model; /**< A reference to the model to animate */

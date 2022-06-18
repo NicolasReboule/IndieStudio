@@ -34,7 +34,7 @@ void indie::GameScene::addWall(const Vector3f &position)
 void indie::GameScene::addBreakableWall(const Vector3f &position)
 {
     static int id = 0;
-    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube,"./assets/blackston.png");
+    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::builder::RlMeshBuilder::MeshCube,"./assets/blackstone.png");
     breakable->setPosition(position);
     this->addNode(breakable);
 }

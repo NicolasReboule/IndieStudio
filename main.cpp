@@ -48,15 +48,18 @@ int main(int ac, char **av)
     auto window = raylib::window::RlWindow::getInstance();
     window->createWindow("Bomberman", 1280, 720, 0);
     raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setCameraMode(CAMERA_FREE).build();
-    //raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
-    //raylib::RlModelAnimation anim(model, "./assets/player.iqm");
+    raylib::model::RlModel model("./assets/models/player.iqm", "./assets/textures/players/blue.png");
+    raylib::model::RlModelAnimation anim(model, "./assets/models/player.iqm");
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
-    raylib::model::RlModel boost("./assets/boostSpeed.obj");
+    auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/allItems.png");
+    raylib::model::RlModel boost("./assets/models/boost/boostSpeed.obj");
+    boost.setMaterialTexture(texture);
+    raylib::model::RlModel cpy = boost;
+
     raylib::helper::AudioHelper::initAudioDevice();
     raylib::audio::RlMusic music = raylib::audio::RlMusic("./assets/sounds/soundcpy.wav");
 
     //std::cout << anim.getCount() << std::endl;
-    unsigned int i = 0;
     while (window->isOpen()) {
         raylib::helper::draw::DrawHelper::beginDrawing();
         raylib::helper::draw::DrawHelper::clearBackground(RlColor::White);
@@ -65,6 +68,10 @@ int main(int ac, char **av)
         raylib::helper::draw::DrawHelper::beginMode3D(camera);
         raylib::helper::draw::Draw3DHelper::drawGrid({9, 9}, 1.0f);
         raylib::helper::draw::DrawModelHelper::drawModel(boost);
+        raylib::helper::draw::DrawModelHelper::drawModel(model, {-2, 0, -2}, 0.5f, RlColor::White);
+        anim.incrementFrameCount();
+        anim.update(0);
+        raylib::helper::draw::DrawModelHelper::drawModel(cpy, {3, 3, 3}, 2, RlColor::White);
 
         if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();

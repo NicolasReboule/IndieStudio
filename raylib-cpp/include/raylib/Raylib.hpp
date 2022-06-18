@@ -16,7 +16,6 @@
 #include "2DObject/Collision2DHelper.hpp"
 #include "3DObject/Collision3DHelper.hpp"
 #include "3DObject/MeshGenerator.hpp"
-#include "3DObject/ModelHelper.hpp"
 #include "3DObject/RlAnimation.hpp"
 #include "3DObject/RlMaterial.hpp"
 #include "3DObject/RlMesh.hpp"

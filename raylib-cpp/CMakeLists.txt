@@ -15,7 +15,6 @@ add_library(${PROJECT_NAME}
         src/raylib/2DObject/Collision2DHelper.cpp
         src/raylib/3DObject/Collision3DHelper.cpp
         src/raylib/3DObject/MeshGenerator.cpp
-        src/raylib/3DObject/ModelHelper.cpp
         src/raylib/3DObject/RlAnimation.cpp
         src/raylib/3DObject/RlMaterial.cpp
         src/raylib/3DObject/RlMesh.cpp
