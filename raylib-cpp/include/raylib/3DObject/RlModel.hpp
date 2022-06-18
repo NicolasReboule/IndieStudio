@@ -8,10 +8,11 @@
 #ifndef INDIESTUDIO_RLMODEL_HPP
 #define INDIESTUDIO_RLMODEL_HPP
 
-#include "RlMesh.hpp"
-#include "raylib/Texture/RlTexture.hpp"
-#include "raylib/Math.hpp"
 #include "raylib/exception/RaylibException.hpp"
+#include "raylib/Math.hpp"
+#include "raylib/Texture/RlTexture.hpp"
+#include "RlMaterial.hpp"
+#include "RlMesh.hpp"
 #include <raylib.h>
 #include <string>
 #include <memory>
@@ -222,9 +223,17 @@ namespace raylib {
              * @brief Set the material texture of the model
              * @param texture the texture
              * @param materialIndex the material index to set the texture
-             * @param type the type of the texture
+             * @param type the type of the texture (MATERIAL_MAP_DIFFUSE, MATERIAL_MAP_SPECULAR ...)
              */
             void setMaterialTexture(const std::shared_ptr<texture::RlTexture> &texture, const int &materialIndex, const MaterialMapIndex &type);
+
+//REMOVED: not implemented in raylib 4.0.0
+//            /**
+//             * @brief Set the models materials
+//             * @param materials the materials
+//             * @warning This function will erase the current materials
+//             */
+//            void setMaterials(const std::vector<RlMaterial> &materials);
 
         private:
             std::shared_ptr<Model> _model; /**< The raylib model */

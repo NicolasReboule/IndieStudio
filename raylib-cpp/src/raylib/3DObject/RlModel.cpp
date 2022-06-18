@@ -65,7 +65,7 @@ raylib::model::RlModel &raylib::model::RlModel::operator=(const raylib::model::R
 
 raylib::model::RlModel::~RlModel()
 {
-    if (!this->_model.unique())
+    if (this->_model.use_count() != 1)
         return;
     if (this->_mesh)
         UnloadModelKeepMeshes(*this->_model);
@@ -210,3 +210,12 @@ const MaterialMapIndex &type)
     this->_texture = texture;
     SetMaterialTexture(&this->_model->materials[materialIndex], type, this->_texture->getTexture());
 }
+
+//REMOVED not possible with raylib 4.0.0
+/*void raylib::model::RlModel::setMaterials(const std::vector<RlMaterial> &materials)
+{
+    if (materials.size() != this->_model->materialCount)
+        throw ex::RlModelException("Material count is not equal to the model's material count");
+    for (int i = 0; i < this->_model->materialCount; i++)
+        this->_model->materials[i] = materials[i].getMaterial();
+}*/

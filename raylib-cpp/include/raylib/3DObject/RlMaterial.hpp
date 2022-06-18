@@ -8,24 +8,60 @@
 #ifndef INDIESTUDIO_RLMATERIAL_HPP
 #define INDIESTUDIO_RLMATERIAL_HPP
 
+#include "raylib/Core/FileHelper.hpp"
+#include <rlgl.h>
+#include <external/tinyobj_loader_c.h>
 #include <raylib.h>
+#include <utils.h>
 #include <string>
+#include <vector>
 
 namespace raylib::model {
+    /**
+     * @brief Encapsulation of the raylib Material
+     */
     class RlMaterial {
     public:
-        RlMaterial();
-        ~RlMaterial();
-        // Material loading/unloading functions
-        Material *loadMaterials(const std::string &fileName, int *materialCount);                                 // Load materials from model file
-        void setMaterialTexture(Material *material, int mapType, Texture2D texture);                       // Set texture for a material map type (MATERIAL_MAP_DIFFUSE, MATERIAL_MAP_SPECULAR...)
-        void setModelMeshMaterial(Model *model, int meshId, int materialId);                               // Set material for a mesh
+        /**
+         * @brief Construct a new RlMaterial object
+         * @param fileName the file name
+         */
+        explicit RlMaterial(const std::string &fileName);
 
+        /**
+         * @brief Construct a new RlMaterial object from the raylib Material
+         * @param material the raylib Material
+         */
+        explicit RlMaterial(Material &material);
+
+        /**
+         * @brief Destroy the RlMaterial object
+         */
+        ~RlMaterial();
+
+        /**
+         * @brief Get the raylib immutable Material
+         * @return the raylib immutable Material
+         */
         const Material &getMaterial() const;
-        const int &getMaterialCount() const;
+
+        /**
+         * @brief Get the raylib mutable Material
+         * @return the raylib mutable Material
+         */
+        Material &getMaterial();
+
+//REMOVED raylib is bad :/
+//        /**
+//         * @brief Load multiple materials from a file
+//         * @param fileName the file name
+//         * @return the vector of materials
+//         * @warning Only .mtl is supported
+//         */
+//        static std::vector<model::RlMaterial> loadMaterials(const std::string &fileName);
+
     private:
-        Material _material;
-        int _materialCount;
+        Material _material; /**< The raylib material */
     };
 }
 #endif //INDIESTUDIO_RLMATERIAL_HPP
