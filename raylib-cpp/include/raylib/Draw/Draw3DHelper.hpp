@@ -11,6 +11,7 @@
 #include "raylib/Math.hpp"
 #include "raylib/Color/RlColor.hpp"
 #include "raylib/Texture/RlTexture.hpp"
+#include "raylib/Camera/RlCamera.hpp"
 #include <raylib.h>
 #include <rlgl.h>
 #include <vector>
@@ -239,6 +240,51 @@ namespace raylib::helper::draw {
          * @param color the color of the grid
          */
         static void drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing, const RlColor &color);
+
+        /**
+         * @brief Draw bounding box (wires)
+         * @param box to use
+         * @param color to use
+         */
+        static void drawBoundingBox(const BoundingBox &box, const RlColor &color);
+
+        /**
+         * @brief Draw a billboard texture
+         * @param camera the camera to use
+         * @param texture the texture to use
+         * @param position the position of the billboard
+         * @param size the size of the billboard
+         * @param tint the tint of the billboard
+         */
+        static void drawBillboard(const RlCamera &camera, const texture::RlTexture &texture, const Vector3f &position, float size, const RlColor &tint);
+
+        /**
+         * @brief Draw a billboard texture defined by source
+         * @param camera the camera to use
+         * @param texture the texture to use
+         * @param source the source of the texture
+         * @param position the position of the billboard
+         * @param size the size of the billboard
+         * @param tint the tint of the billboard
+         */
+        static void drawBillboardRec(const RlCamera &camera, const texture::RlTexture &texture, const Rectangle &source,
+                                     const Vector3f &position, const Vector2f &size, const RlColor &tint);
+
+        /**
+         * @brief Draw a billboard texture defined by source and rotation
+         * @param camera the camera to use
+         * @param texture the texture to use
+         * @param source the source of the texture
+         * @param position the position of the billboard
+         * @param up the up vector of the billboard
+         * @param size the size of the billboard
+         * @param origin the origin of the billboard
+         * @param rotation the rotation of the billboard
+         * @param tint the tint of the billboard
+         */
+        static void drawBillboardPro(const RlCamera &camera, const texture::RlTexture &texture, const Rectangle &source,
+                                     const Vector3f &position, const Vector3f &up, const Vector2f &size,
+                                     const Vector2f &origin, float rotation, const RlColor &tint);
 
     };
 }

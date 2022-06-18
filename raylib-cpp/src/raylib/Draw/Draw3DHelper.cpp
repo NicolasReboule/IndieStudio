@@ -154,11 +154,11 @@ const float &startRadius, const float &endRadius, const int &sides, const RlColo
 void raylib::helper::draw::Draw3DHelper::drawCylinderWires(const Vector3f &position, const float &radiusTop, \
 const float &radiusBottom, const float &height, const int &slices, const RlColor &color)
 {
-    DrawCylinderWires(raylib::helper::VectorHelper::toRaylibVector(position), radiusTop, radiusBottom, height, slices,color.getColor());
+    DrawCylinderWires(raylib::helper::VectorHelper::toRaylibVector(position), radiusTop, radiusBottom, height, slices, color.getColor());
 }
 
 void raylib::helper::draw::Draw3DHelper::drawCylinderWires(const Vector3f &startPos, const Vector3f &endPos, \
-const float &startRadius, const float &endRadius, const int &sides,  const RlColor &color)
+const float &startRadius, const float &endRadius, const int &sides, const RlColor &color)
 {
     DrawCylinderWiresEx(raylib::helper::VectorHelper::toRaylibVector(startPos), raylib::helper::VectorHelper::toRaylibVector(endPos),
                         startRadius, endRadius, sides, color.getColor());
@@ -189,8 +189,7 @@ void raylib::helper::draw::Draw3DHelper::drawGrid(const Vector2i &size, const Ve
     drawGrid(size, position, spacing, RlColor::Black);
 }
 
-void raylib::helper::draw::Draw3DHelper::drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing,
-                                                  const RlColor &color)
+void raylib::helper::draw::Draw3DHelper::drawGrid(const Vector2i &size, const Vector3f &position, const float &spacing, const RlColor &color)
 {
     rlBegin(RL_LINES);
     rlCheckRenderBatchLimit((size.x + size.y + 2) * 4);
@@ -211,4 +210,33 @@ void raylib::helper::draw::Draw3DHelper::drawGrid(const Vector2i &size, const Ve
     }
 
     rlEnd();
+}
+
+void raylib::helper::draw::Draw3DHelper::drawBoundingBox(const BoundingBox &box, const RlColor &color)
+{
+    DrawBoundingBox(box, color.getColor());
+}
+
+void raylib::helper::draw::Draw3DHelper::drawBillboard(const RlCamera &camera, const texture::RlTexture &texture, \
+const Vector3f &position, float size, const RlColor &tint)
+{
+    Rectangle source = {0.0f, 0.0f, (float) texture.getWidth(), (float) texture.getHeight()};
+    drawBillboardRec(camera, texture, source, position, {size, size}, tint);
+}
+
+void raylib::helper::draw::Draw3DHelper::drawBillboardRec(const RlCamera &camera, const texture::RlTexture &texture, \
+const Rectangle &source, const Vector3f &position, const Vector2f &size, const RlColor &tint)
+{
+    drawBillboardPro(camera, texture, source, position, {0.0f, 1.0f, 0.0f}, size, {0, 0}, 0.0f, tint);
+}
+
+void raylib::helper::draw::Draw3DHelper::drawBillboardPro(const RlCamera &camera, const texture::RlTexture &texture, \
+const Rectangle &source, const Vector3f &position, const Vector3f &up, const Vector2f &size, const Vector2f &origin, \
+float rotation, const RlColor &tint)
+{
+    DrawBillboardPro(camera.get(), texture.get(), source,
+                     raylib::helper::VectorHelper::toRaylibVector(position),
+                     raylib::helper::VectorHelper::toRaylibVector(up),
+                     raylib::helper::VectorHelper::toRaylibVector(size),
+                     raylib::helper::VectorHelper::toRaylibVector(origin), rotation, tint.getColor());
 }
