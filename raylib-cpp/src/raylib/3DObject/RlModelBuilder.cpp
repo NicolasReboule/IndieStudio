@@ -18,12 +18,12 @@ raylib::model::RlModel raylib::builder::RlModelBuilder::build()
     if (_modelPath.empty() && _mesh == nullptr && _type == 0)
         throw raylib::ex::BuilderException("Nor model path, nor mesh, nor type are set");
     if (_modelPath.empty()) {
-        raylib::model::RlModel model(*_mesh);
+        //raylib::model::RlModel model(*_mesh);
         //model.setTexture(_texturePath);
-        model.setPosition(_position);
+        //model.setPosition(_position);
     } else if (_type != 0) {
-        raylib::model::RlModel model((raylib::builder::RlMeshBuilder::MeshType) _type);
-        return model;
+        //raylib::model::RlModel model((raylib::builder::RlMeshBuilder::MeshType) _type);
+        //return model;
     }
     return raylib::model::RlModel(_modelPath);
 }

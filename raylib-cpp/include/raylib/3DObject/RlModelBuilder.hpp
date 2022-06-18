@@ -8,8 +8,9 @@
 #ifndef INDIESTUDIO_RLMODELBUILDER_HPP
 #define INDIESTUDIO_RLMODELBUILDER_HPP
 
-#include "RlModel.hpp"
 #include "raylib/exception/BuilderException.hpp"
+#include "RlModel.hpp"
+#include "RlMeshBuilder.hpp"
 #include "raylib/IBuilder.hpp"
 #include <memory>
 #include <string>

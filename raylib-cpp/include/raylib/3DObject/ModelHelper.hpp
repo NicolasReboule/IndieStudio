@@ -26,12 +26,12 @@ namespace raylib::helper {
         static void unloadModelKeepMeshes(Model model);
 
         /**
-         * @brief Get the BoundingBox of a model
+         * @brief Get the BoundingBox of a model (Compute model bounding box limits (considers all meshes))
          * @warning The BoundingBox is not updated if the model is updated after the call of this function
          * @param model to get the BoundingBox from
          * @return the BoundingBox of the model
          */
-        static BoundingBox getModelBoundingBox(Model model);                                                      // Compute model bounding box limits (considers all meshes)
+        static BoundingBox getModelBoundingBox(Model model);
 
     };
 }
