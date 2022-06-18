@@ -5,20 +5,19 @@
 ** WinningScene.cpp
 */
 
-
 #include "winning/WinningScene.hpp"
 #include "global/GlobalInstance.hpp"
 #include "game/Player.hpp"
 #include "winning/ButtonRestart.hpp"
 #include "game/ButtonMainMenu.hpp"
 
-indie::WinningScene::WinningScene(std::string name, std::string sceneSource) : Scene(name, sceneSource)
+indie::WinningScene::WinningScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
+    this->_indexMenu = 0;
 }
 
 void indie::WinningScene::sceneLauncher()
 {
-
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &window = raylib::window::RlWindow::getInstance();
@@ -28,10 +27,8 @@ void indie::WinningScene::sceneLauncher()
     raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setCameraMode(CAMERA_FREE).setPosition({-10, 5, 0}).setTarget({0, -0.5, 0}).setLookingPoint({0, 5, 0}).build();
     window->setCamera(camera);
 
-    //globalInstance->_playerWinner = "player0";
-
-
     std::cout << "winner: " << globalInstance->_playerWinner << std::endl;
+    auto playerModel = std::make_shared<raylib::model::RlModel>("./assets/models/player.iqm"); //TODO: replace this with manager
 
     if (globalInstance->_playerWinner == "player0") {
         auto player = std::make_shared<indie::Player>("player0", "./assets/player.iqm", "./assets/blue.png", 0);
@@ -72,7 +69,6 @@ void indie::WinningScene::sceneLauncher()
         this->addNode(player3);
     }
 
-
     auto buttonRestart = std::make_shared<indie::ButtonRestartx05>("buttonRestart", "./assets/gui/button_restart_x05.png");
     buttonRestart->setPosition({500, 400});
     this->addNode(buttonRestart);
@@ -82,13 +78,13 @@ void indie::WinningScene::sceneLauncher()
     this->addNode(buttonMainMenu);
 }
 
-void indie::WinningScene::readyScene()
+void indie::WinningScene::initScene()
 {
     this->_indexMenu = 0;
     raylib::helper::input::MouseHelper::setMousePosition(550, 425);
 }
 
-void indie::WinningScene::updateScene(float delta)
+void indie::WinningScene::updateScene(const float &delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 

@@ -12,25 +12,26 @@
 
 namespace indie {
 
-    class Bomb : public gameengine::StaticBody {
+    class Bomb : public gameengine::node::_3D::StaticBody {
     public:
-        Bomb(const std::string &name, const std::string &objPath, int range, const std::string &playerOwner);
-        Bomb(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePat0, int range, const std::string &playerOwnerh);
+        explicit Bomb(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner);
+
         ~Bomb() override = default;
 
-        void ready() override;
+        void init() override;
 
-        void update(float delta) override;
+        void update(const float &delta) override;
 
         void spawnMagma();
 
-        void addMagma(Vector3f position, Vector3f addI);
+        void addMagma(const Vector3f &position, const Vector3f &addI);
 
-        void instanceMagma(Vector3f pos);
+        void instanceMagma(const Vector3f &pos);
 
         void enableCollision();
 
         void setPlayerOwner(const std::string &playerOwner);
+
     private:
         std::string _playerOwner;
         float _timer;

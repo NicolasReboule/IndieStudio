@@ -7,11 +7,11 @@
 
 #include "mainMenu/ButtonQuit.hpp"
 
-indie::ButtonQuit::ButtonQuit(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonQuit::ButtonQuit(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
 {
 }
 
-void indie::ButtonQuit::ready()
+void indie::ButtonQuit::init()
 {
 }
 

@@ -7,11 +7,11 @@
 
 #include "game/ButtonMainMenu.hpp"
 
-indie::ButtonMainMenu::ButtonMainMenu(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonMainMenu::ButtonMainMenu(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
 {
 }
 
-void indie::ButtonMainMenu::ready()
+void indie::ButtonMainMenu::init()
 {
 }
 

@@ -11,15 +11,14 @@
 
 namespace indie {
 
-    class ButtonQuit : public gameengine::Button {
+    class ButtonQuit : public gameengine::node::_2D::Button {
     public:
-        explicit ButtonQuit(const std::string &name, const std::string &filename);
+        explicit ButtonQuit(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 
         ~ButtonQuit() override = default;
 
-        void ready() override;
+        void init() override;
 
         void pressed() override;
     };
-
 }

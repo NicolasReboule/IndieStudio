@@ -7,11 +7,11 @@
 
 #include "mainMenu/ButtonPlay.hpp"
 
-indie::ButtonPlay::ButtonPlay(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonPlay::ButtonPlay(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
 {
 }
 
-void indie::ButtonPlay::ready()
+void indie::ButtonPlay::init()
 {
 }
 

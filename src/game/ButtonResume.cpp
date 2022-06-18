@@ -10,13 +10,13 @@
 #include "game/ButtonQuitx05.hpp"
 #include "winning/ButtonRestart.hpp"
 
-indie::ButtonResume::ButtonResume(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonResume::ButtonResume(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
 {
 }
 
-void indie::ButtonResume::ready()
+void indie::ButtonResume::init()
 {
-    Button::ready();
+    Button::init();
 }
 
 void indie::ButtonResume::pressed()

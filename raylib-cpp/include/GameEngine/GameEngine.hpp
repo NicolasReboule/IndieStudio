@@ -15,17 +15,17 @@
 
 #include "SceneManager.hpp"
 
-#include "GameEngine/Component/GridComponent.hpp"
+#include "GameEngine/Nodes/3D/Grid3D.hpp"
 
-#include "GameEngine/Nodes/Node.hpp"
-#include "GameEngine/Nodes/StaticBody.hpp"
+#include "GameEngine/Nodes/3D/Node3D.hpp"
+#include "GameEngine/Nodes/3D/StaticBody.hpp"
 
 #include "GameEngine/Nodes/2D/Node2D.hpp"
 #include "GameEngine/Nodes/2D/Button.hpp"
 
 #include "GameEngine/Nodes/2D/TextureRect.hpp"
 
-#include "GameEngine/Nodes/KinematicBody.hpp"
+#include "GameEngine/Nodes/3D/KinematicBody.hpp"
 
 #include "GameEngine/Nodes/2D/Label.hpp"
 

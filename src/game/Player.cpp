@@ -35,7 +35,7 @@ indie::Player::Player(const std::string &name, const std::string &modelPath, con
     this->_bombStock = 1;
 }
 
-void indie::Player::ready()
+void indie::Player::init()
 {
 }
 
@@ -136,7 +136,7 @@ void indie::Player::checkCollisions()
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
             auto &magma = dynamic_cast<indie::Magma &>(*node);
-            if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
+            if (raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), magma.getBoundingBox())) {
                 this->playerDead();
                 globalInstance->_playersAlive -= 1;
                 return;
@@ -146,7 +146,7 @@ void indie::Player::checkCollisions()
         }
         try {
             auto &bonus = dynamic_cast<indie::Bonus &>(*node);
-            if (raylib::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonus.getBoundingBox())) {
+            if (raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonus.getBoundingBox())) {
                 switch (bonus.getBonusType()) {
                     case Bonus::FIRE:
                         std::cout << "bonus fire" << std::endl;
@@ -274,7 +274,7 @@ void indie::Player::moveAndGhosting(Vector3f position)
             try {
                 auto &staticBody = dynamic_cast<indie::Wall &>(*node);
                 if (staticBody.getName() != this->getName() && staticBody.getIsCollsionEnable() &&
-                    raylib::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
+                    raylib::helper::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
                     return;
                 }
             }

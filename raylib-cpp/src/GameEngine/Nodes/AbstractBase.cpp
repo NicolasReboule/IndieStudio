@@ -7,32 +7,38 @@
 
 #include "GameEngine/Nodes/AbstractBase.hpp"
 
-gameengine::AbstractBase::AbstractBase(const std::string &name)
+gameengine::node::AbstractBase::AbstractBase(const std::string &name)
 {
     this->_name = name;
 }
 
-const std::string &gameengine::AbstractBase::getName() const
+const std::string &gameengine::node::AbstractBase::getName() const
 {
     return this->_name;
 }
 
-const std::string &gameengine::AbstractBase::getGroup() const
+const std::string &gameengine::node::AbstractBase::getGroup() const
 {
     return this->_group;
 }
 
-void gameengine::AbstractBase::setGroup(const std::string &group)
+void gameengine::node::AbstractBase::setGroup(const std::string &group)
 {
     this->_group = group;
 }
 
-bool gameengine::AbstractBase::isHiding() const
+const bool &gameengine::node::AbstractBase::isHiding() const
 {
     return this->_hiding;
 }
 
-void gameengine::AbstractBase::setHiding(bool value)
+void gameengine::node::AbstractBase::setHiding(bool value)
 {
     this->_hiding = value;
+}
+
+std::ostream &operator<<(std::ostream &os, const gameengine::node::AbstractBase &abstractBase)
+{
+    os << "AbstractBase: " << abstractBase.getName() << " - " << abstractBase.getGroup() << " | Hiding: " << abstractBase.isHiding();
+    return os;
 }

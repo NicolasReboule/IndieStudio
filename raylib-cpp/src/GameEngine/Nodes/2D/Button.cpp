@@ -6,29 +6,28 @@
 */
 
 #include "GameEngine/Nodes/2D/Button.hpp"
-#include "raylib/Math/VectorHelper.hpp"
 
-gameengine::Button::Button(const std::string &name, const std::string &filename) : gameengine::Node2D(name),
-    _texture(filename), _position({0, 0}), _scale({1, 1}), _bounds(), _rectangle()
+gameengine::node::_2D::Button::Button(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture) : Node2D(name),
+    _texture(nullptr), _position({0, 0}), _scale({1, 1}), _bounds(), _rectangle()
 {
+    this->_texture = texture;
     this->_rotationDegrees = 0;
-
     this->_action = false;
     this->_state = 0;
     this->_frameNum = 3;
-    this->_frameHeight = (float) this->_texture.getTexture().height / (float)this->_frameNum;
-    this->_rectangle = {0, 0, (float) this->_texture.getTexture().width, (float)this->_frameHeight};
-    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.getTexture().width, this->_frameHeight};
+    this->_frameHeight = (float) this->_texture->getTexture().height / (float)this->_frameNum;
+    this->_rectangle = {0, 0, (float) this->_texture->getTexture().width, (float)this->_frameHeight};
+    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture->getTexture().width, this->_frameHeight};
 }
 
-void gameengine::Button::ready()
+void gameengine::node::_2D::Button::init()
 {
 
 }
 
-void gameengine::Button::update(float delta)
+void gameengine::node::_2D::Button::update(const float &delta)
 {
-    if (this->_isEnable) {
+    if (this->_isEnabled) {
         if (this->_action) {
             this->_action = false;
             this->_state = 0;
@@ -40,8 +39,6 @@ void gameengine::Button::update(float delta)
                 this->_action = true;
             } else
                 this->_state = 1;
-
-            //if (raylib::MouseHelper::isMouseButtonReleased(MOUSE_BUTTON_LEFT))
         } else
             this->_state = 0;
 
@@ -52,50 +49,49 @@ void gameengine::Button::update(float delta)
     }
 }
 
-void gameengine::Button::draw()
+void gameengine::node::_2D::Button::draw()
 {
-    raylib::helper::draw::DrawTextureHelper::drawTextureRec(this->_texture, this->_rectangle, this->_position, RlColor::White);
+    raylib::helper::draw::DrawTextureHelper::drawTextureRec(*this->_texture, this->_rectangle, this->_position, RlColor::White);
 }
 
-Vector2f gameengine::Button::getPosition()
+const Vector2f &gameengine::node::_2D::Button::getPosition() const
 {
     return this->_position;
 }
 
-void gameengine::Button::setPosition(Vector2f position)
+void gameengine::node::_2D::Button::setPosition(const Vector2f &position)
 {
     this->_position = position;
-    this->_rectangle = {0, 0, (float) this->_texture.getTexture().width, (float)this->_frameHeight};
-    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture.getTexture().width, this->_frameHeight};
+    this->_rectangle = {0, 0, (float) this->_texture->getTexture().width, (float) this->_frameHeight};
+    this->_bounds = {this->_position.x, this->_position.y, (float) this->_texture->getTexture().width, this->_frameHeight};
 }
 
-Vector2f gameengine::Button::getScale()
+const Vector2f &gameengine::node::_2D::Button::getScale() const
 {
     return this->_scale;
 }
 
-void gameengine::Button::setScale(Vector2f scale)
+void gameengine::node::_2D::Button::setScale(const Vector2f &scale)
 {
-
     this->_scale = scale;
 }
 
-float gameengine::Button::getRotationDegrees()
+float gameengine::node::_2D::Button::getRotationDegrees() const
 {
     return this->_rotationDegrees;
 }
 
-void gameengine::Button::setRotationDegrees(float rotationDegrees)
+void gameengine::node::_2D::Button::setRotationDegrees(const float &rotationDegrees)
 {
     this->_rotationDegrees = rotationDegrees;
 }
 
-bool gameengine::Button::getIsEnable()
+const bool &gameengine::node::_2D::Button::isEnabled() const
 {
-    return this->_isEnable;
+    return this->_isEnabled;
 }
 
-void gameengine::Button::setEnable(bool value)
+void gameengine::node::_2D::Button::setEnabled(const bool &value)
 {
-    this->_isEnable = value;
+    this->_isEnabled = value;
 }

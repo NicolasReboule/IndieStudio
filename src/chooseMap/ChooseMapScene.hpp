@@ -15,10 +15,12 @@ namespace indie {
     class ChooseMap : public gameengine::Scene {
     public:
         explicit ChooseMap(const std::string &name = "chooseMap", const std::string &sceneSource = "chooseMap");
-        ~ChooseMap() override = default;
-        void updateScene(float delta) override;
 
-        void readyScene() override;
+        ~ChooseMap() override = default;
+
+        void updateScene(const float &delta) override;
+
+        void initScene() override;
 
         void sceneLauncher() override;
     };

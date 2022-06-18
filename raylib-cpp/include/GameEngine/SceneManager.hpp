@@ -8,10 +8,9 @@
 #ifndef INDIESTUDIO_SCENEMANAGER_HPP
 #define INDIESTUDIO_SCENEMANAGER_HPP
 
-#include "raylib/Raylib.hpp"
 #include "Scene.hpp"
+#include <raylib/Raylib.hpp>
 #include <vector>
-
 
 namespace gameengine {
 
@@ -28,17 +27,17 @@ namespace gameengine {
 
         void makeLoop(raylib::RlCamera &camera);
 
-        std::shared_ptr<gameengine::AbstractBase> getNode(const std::string& name);
+        std::shared_ptr<gameengine::node::AbstractBase> getNode(const std::string& name);
 
         std::shared_ptr<gameengine::Scene> &getCurrentScene();
 
-        void addNode(const std::shared_ptr<gameengine::AbstractBase> &node);
+        void addNode(const std::shared_ptr<gameengine::node::AbstractBase> &node);
 
         void deleteNode(const std::string &name);
 
         void deleteNodeInclude(const std::string &Includename);
 
-        std::vector<std::shared_ptr<gameengine::AbstractBase>> getAllNodes();
+        std::vector<std::shared_ptr<gameengine::node::AbstractBase>> getAllNodes();
 
         void update();
 

@@ -36,11 +36,11 @@ add_executable(${BINARY_NAME}
         src/mainMenu/ButtonQuit.cpp
         src/mainMenu/ButtonStart.cpp
         src/mainMenu/MainMenuScene.cpp
-        src/start/Logo.cpp
+        src/start/Image.cpp
         src/start/StartScene.cpp
         src/winning/WinningScene.cpp
         src/winning/ButtonRestart.cpp
-        src/chooseMap/chooseMapScene.cpp
+        src/chooseMap/ChooseMapScene.cpp
         src/chooseNumberPlayer/ButtonLeft.cpp
         src/chooseNumberPlayer/ButtonRight.cpp)
 

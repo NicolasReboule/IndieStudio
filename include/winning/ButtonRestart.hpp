@@ -12,13 +12,13 @@
 
 namespace indie {
 
-    class ButtonRestartx05 : public gameengine::Button {
+    class ButtonRestartx05 : public gameengine::node::_2D::Button {
     public:
-        explicit ButtonRestartx05(const std::string &name, const std::string &filename);
+        explicit ButtonRestartx05(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 
         ~ButtonRestartx05() override = default;
 
-        void ready() override;
+        void init() override;
 
         void pressed() override;
     };

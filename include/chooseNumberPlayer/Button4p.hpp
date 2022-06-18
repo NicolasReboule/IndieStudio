@@ -12,13 +12,13 @@
 
 namespace indie {
 
-    class Button4p : public gameengine::Button {
+    class Button4p : public gameengine::node::_2D::Button {
     public:
-        explicit Button4p(const std::string &name, const std::string &filename);
+        explicit Button4p(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 
         ~Button4p() override = default;
 
-        void ready() override;
+        void init() override;
 
         void pressed() override;
 

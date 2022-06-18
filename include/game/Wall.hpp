@@ -11,9 +11,9 @@
 #include "GameEngine/GameEngine.hpp"
 
 namespace indie {
-    class Wall : public gameengine::StaticBody {
+    class Wall : public gameengine::node::_3D::StaticBody {
     public:
-        Wall(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        explicit Wall(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~Wall() override = default;
     };
 }

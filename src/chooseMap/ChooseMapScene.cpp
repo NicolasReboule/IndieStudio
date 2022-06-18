@@ -5,7 +5,7 @@
 ** chooseMapScene.cpp
 */
 
-#include "chooseMapScene.hpp"
+#include "ChooseMapScene.hpp"
 #include "chooseNumberPlayer/ButtonLeft.hpp"
 #include "chooseNumberPlayer/ButtonRight.hpp"
 #include "global/GlobalInstance.hpp"
@@ -18,12 +18,12 @@ void indie::ChooseMap::sceneLauncher()
 {
 }
 
-void indie::ChooseMap::readyScene()
+void indie::ChooseMap::initScene()
 {
 
 }
 
-void indie::ChooseMap::updateScene(float delta)
+void indie::ChooseMap::updateScene(const float &delta)
 {
 
 }

@@ -152,7 +152,7 @@ void raylib::model::RlModel::setRotationAxis(const float &x, const float &y, con
     this->_rotationAxis.z = z;
 }
 
-float raylib::model::RlModel::getRotationAngle() const
+const float &raylib::model::RlModel::getRotationAngle() const
 {
     return this->_rotationAngle;
 }

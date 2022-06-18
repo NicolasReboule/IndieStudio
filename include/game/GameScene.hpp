@@ -16,10 +16,12 @@ namespace indie {
     class GameScene : public gameengine::Scene {
     public:
         explicit GameScene(const std::string &name = "game", const std::string &sceneSource = "game");
-        ~GameScene() override = default;
-        void updateScene(float delta) override;
 
-        void readyScene() override;
+        ~GameScene() override = default;
+
+        void updateScene(const float &delta) override;
+
+        void initScene() override;
 
         void sceneLauncher() override;
 
@@ -31,12 +33,16 @@ namespace indie {
         void displayWinner(const std::string &name);
 
         void addfloor(const Vector3f &position);
+
     private:
         enum class MapType {
             UNKNOWN = -1,
             NONE = 0,
             WALL,
-            BREAKABLE_WALL
+            BREAKABLE_WALL,
+            BOMB,
+            BONUS,
+            PLAYER
         };
 
         int _indexMenu;

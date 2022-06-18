@@ -12,7 +12,7 @@
 
 namespace indie {
 
-    class Bonus : public gameengine::StaticBody {
+    class Bonus : public gameengine::node::_3D::StaticBody {
     public:
         enum BonusType {
             FIRE,
@@ -21,17 +21,21 @@ namespace indie {
             GHOST
         };
 
-        Bonus(const std::string &name, const std::string &objPath);
-        Bonus(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        explicit Bonus(const std::string &name, const std::string &objPath);
+
+        explicit Bonus(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type,
+              const std::string &texturePath);
+
         ~Bonus() override = default;
 
-        void ready() override;
+        void init() override;
 
-        void update(float delta) override;
+        void update(const float &delta) override;
 
         BonusType getBonusType();
 
         void setBonusType(BonusType type);
+
     private:
         BonusType _type;
     };

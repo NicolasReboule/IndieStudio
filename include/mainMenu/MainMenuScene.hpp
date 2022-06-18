@@ -14,16 +14,16 @@ namespace indie {
 
     class MainMenuScene : public gameengine::Scene {
     public:
-
-        explicit MainMenuScene(std::string name = "mainMenu", std::string sceneSource = "mainMenu");
+        explicit MainMenuScene(const std::string &name = "mainMenu", const std::string &sceneSource = "mainMenu");
 
         ~MainMenuScene() override = default;
 
-        void updateScene(float delta) override;
+        void updateScene(const float &delta) override;
 
         void sceneLauncher() override;
 
-        void readyScene() override;
+        void initScene() override;
+
     private:
         int _indexMenu;
     };

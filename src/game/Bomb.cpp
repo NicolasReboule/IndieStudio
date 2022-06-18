@@ -11,26 +11,21 @@
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
-indie::Bomb::Bomb(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturepath, int range, const std::string &playerOwner) : StaticBody(name, type, texturepath)
+indie::Bomb::Bomb(const std::string &name, const raylib::model::RlModel &model, \
+const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner)
+    : StaticBody(name, model, texture)
 {
     this->_range = range;
     this->_timer = 2;
     this->_playerOwner = playerOwner;
 }
 
-indie::Bomb::Bomb(const std::string &name, const std::string &objPath, int range, const std::string &playerOwner) : StaticBody(name, objPath, "")
-{
-    this->_range = range;
-    this->_timer = 2;
-    this->_playerOwner = playerOwner;
-}
-
-void indie::Bomb::ready()
+void indie::Bomb::init()
 {
     this->_collisionEnable = false;
 }
 
-void indie::Bomb::update(float delta)
+void indie::Bomb::update(const float &delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
@@ -51,13 +46,11 @@ void indie::Bomb::enableCollision()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
-
     bool temp = true;
     for (const auto &node: sceneManager->getAllNodes()) {
         try {
             auto &player = dynamic_cast<indie::Player &>(*node);
-            if (player.getIsCollsionEnable() &&
-                raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
+            if (player.isCollisionEnabled() && raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), player.getBoundingBox())) {
                 temp = false;
                 break;
             }
@@ -75,37 +68,35 @@ void indie::Bomb::spawnMagma()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
+    const Vector3f &bombPos = this->getPosition();
 
-    Vector3f position = {this->_position.x, this->_position.y, this->_position.z};
+    Vector3f position = this->getPosition();
     Vector3f addI = {0, 0, 0};
     this->addMagma(position, addI);
-    position = {this->_position.x + 1, this->_position.y, this->_position.z};
+    position = {bombPos.x + 1, bombPos.y, bombPos.z};
     addI = {1, 0, 0};
     this->addMagma(position, addI);
-    position = {this->_position.x - 1, this->_position.y, this->_position.z};
+    position = {bombPos.x - 1, bombPos.y, bombPos.z};
     addI = {-1, 0, 0};
     this->addMagma(position, addI);
-    position = {this->_position.x, this->_position.y, this->_position.z + 1};
+    position = {bombPos.x, bombPos.y, bombPos.z + 1};
     addI = {0, 0, 1};
     this->addMagma(position, addI);
-    position = {this->_position.x, this->_position.y, this->_position.z - 1};
+    position = {bombPos.x, bombPos.y, bombPos.z - 1};
     addI = {0, 0, -1};
     this->addMagma(position, addI);
-
-
 }
 
-void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
+void indie::Bomb::addMagma(const Vector3f &position, const Vector3f &addI)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
     for (int i = 0; i < this->_range; i++) {
         bool loop = true;
-        Vector3f pos = {position.x + addI.x * (float)i, position.y + addI.y * (float)i, position.z + addI.z * (float)i};
+        Vector3f pos = {position.x + addI.x * (float) i, position.y + addI.y * (float) i, position.z + addI.z * (float) i};
         for (const auto &node: sceneManager->getAllNodes()) {
             try {
                 auto &wall = dynamic_cast<indie::Wall &>(*node);
-                //std::cout << wall->getPosition() << ":::" << this->_position << std::endl;
                 if (wall.getPosition() == pos) {
                     loop = false;
                     break;
@@ -133,7 +124,7 @@ void indie::Bomb::addMagma(Vector3f position, Vector3f addI)
     }
 }
 
-void indie::Bomb::instanceMagma(Vector3f pos)
+void indie::Bomb::instanceMagma(const Vector3f &pos)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();

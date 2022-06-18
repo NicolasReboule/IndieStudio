@@ -8,11 +8,11 @@
 #include "chooseNumberPlayer/Button2p.hpp"
 #include "global/GlobalInstance.hpp"
 
-indie::Button2p::Button2p(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::Button2p::Button2p(const std::string &name,  const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
 {
 }
 
-void indie::Button2p::ready()
+void indie::Button2p::init()
 {
 }
 

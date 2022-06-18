@@ -14,14 +14,14 @@ namespace indie {
 
     class StartScene : public gameengine::Scene {
     public:
-        explicit StartScene(std::string name = "start", std::string sceneSource = "start");
+        explicit StartScene(const std::string &name = "start", const std::string &sceneSource = "start");
         ~StartScene() override = default;
 
-        void updateScene(float delta) override;
+        void updateScene(const float &delta) override;
 
         void sceneLauncher() override;
 
-        void readyScene() override;
+        void initScene() override;
     };
 }
 

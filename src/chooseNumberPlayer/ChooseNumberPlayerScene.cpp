@@ -10,55 +10,52 @@
 #include "chooseNumberPlayer/Button2p.hpp"
 #include "chooseNumberPlayer/Button3p.hpp"
 #include "chooseNumberPlayer/Button4p.hpp"
-
 #include "chooseNumberPlayer/ButtonLeft.hpp"
 #include "chooseNumberPlayer/ButtonRight.hpp"
 
 #include "game/ButtonMainMenu.hpp"
-
 #include "global/GlobalInstance.hpp"
-
 #include "start/Logo.hpp"
 
 indie::ChooseNumberPlayerScene::ChooseNumberPlayerScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
+    this->_indexMenu = 0;
 }
 
 void indie::ChooseNumberPlayerScene::sceneLauncher()
 {
-    auto button1p = std::make_shared<indie::Button1p>("button1p", "./assets/gui/button_1p.png");
+    auto button1p = std::make_shared<indie::Button1p>("button1p", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_1p.png"));
     this->addNode(button1p);
 
-    auto button2p = std::make_shared<indie::Button2p>("button2p", "./assets/gui/button_2p.png");
+    auto button2p = std::make_shared<indie::Button2p>("button2p", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_2p.png"));
     this->addNode(button2p);
 
-    auto button3p = std::make_shared<indie::Button3p>("button3p", "./assets/gui/button_3p.png");
+    auto button3p = std::make_shared<indie::Button3p>("button3p", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_3p.png"));
     this->addNode(button3p);
 
-    auto button4p = std::make_shared<indie::Button4p>("button4p", "./assets/gui/button_4p.png");
+    auto button4p = std::make_shared<indie::Button4p>("button4p", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_4p.png"));
     this->addNode(button4p);
 
-
-    auto buttonLeft = std::make_shared<indie::ButtonLeft>("buttonLeft", "./assets/gui/button_left.png");
+    auto buttonLeft = std::make_shared<indie::ButtonLeft>("buttonLeft", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_left.png"));
     this->addNode(buttonLeft);
 
-    auto buttonRight = std::make_shared<indie::ButtonRight>("buttonRight", "./assets/gui/button_right.png");
+    auto buttonRight = std::make_shared<indie::ButtonRight>("buttonRight", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_right.png"));
     this->addNode(buttonRight);
 
-    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", "./assets/gui/button_main_menu_x05.png");
+    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
     this->addNode(buttonMainMenu);
 
-    auto mapDefault = std::make_shared<indie::Logo>("mapDefault", "./assets/gui/map/default.png");
+    auto mapDefault = std::make_shared<indie::Image>("mapDefault", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/map/default.png"));
     this->addNode(mapDefault);
 
-    auto mapEmpty = std::make_shared<indie::Logo>("mapEmpty", "./assets/gui/map/empty.png");
+    auto mapEmpty = std::make_shared<indie::Image>("mapEmpty", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/map/empty.png"));
     this->addNode(mapEmpty);
 
-    auto mapCool = std::make_shared<indie::Logo>("mapCool", "./assets/gui/map/cool.png");
+    auto mapCool = std::make_shared<indie::Image>("mapCool", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/map/cool.png"));
     this->addNode(mapCool);
 }
 
-void indie::ChooseNumberPlayerScene::readyScene()
+void indie::ChooseNumberPlayerScene::initScene()
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstnace = indie::GlobalInstance::getInstance();
@@ -78,9 +75,9 @@ void indie::ChooseNumberPlayerScene::readyScene()
     auto &buttonLeft = dynamic_cast<indie::ButtonLeft &>(*sceneManager->getNode("buttonLeft"));
     auto &buttonRight = dynamic_cast<indie::ButtonRight &>(*sceneManager->getNode("buttonRight"));
 
-    auto &mapDefault = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapDefault"));
-    auto &mapEmpty = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapEmpty"));
-    auto &mapCool = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapCool"));
+    auto &mapDefault = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapDefault"));
+    auto &mapEmpty = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapEmpty"));
+    auto &mapCool = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapCool"));
 
 
     button1p.setPosition({000, 500});
@@ -98,16 +95,14 @@ void indie::ChooseNumberPlayerScene::readyScene()
     mapCool.setPosition({420, 10});
 }
 
-void indie::ChooseNumberPlayerScene::updateScene(float delta)
+void indie::ChooseNumberPlayerScene::updateScene(const float &delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstnace = indie::GlobalInstance::getInstance();
 
-    auto &mapDefault = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapDefault"));
-    auto &mapEmpty = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapEmpty"));
-    auto &mapCool = dynamic_cast<indie::Logo &>(*sceneManager->getNode("mapCool"));
-
-
+    auto &mapDefault = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapDefault"));
+    auto &mapEmpty = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapEmpty"));
+    auto &mapCool = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapCool"));
 
     switch (globalInstnace->_indexMap) {
         case 0:
@@ -138,9 +133,6 @@ void indie::ChooseNumberPlayerScene::updateScene(float delta)
 
     auto &buttonLeft = dynamic_cast<indie::ButtonLeft &>(*sceneManager->getNode("buttonLeft"));
     auto &buttonRight = dynamic_cast<indie::ButtonRight &>(*sceneManager->getNode("buttonRight"));
-
-
-
 
 
     if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
@@ -237,6 +229,4 @@ void indie::ChooseNumberPlayerScene::updateScene(float delta)
 
     //std::cout << this->_indexMenu << std::endl;
     std::cout << globalInstnace->_indexMap << std::endl;
-
-
 }

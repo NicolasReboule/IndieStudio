@@ -23,13 +23,9 @@ void gameengine::SceneManager::addScene(const std::shared_ptr<gameengine::Scene>
 
 void gameengine::SceneManager::deleteScene(const std::string &scene)
 {
-    unsigned i = 0;
-    for (const auto &item: this->_scenes) {
-        if (item->getName() == scene)
-            break;
-        i = i + 1;
-    }
-    this->_scenes.erase(this->_scenes.begin() + i);
+    std::erase_if(this->_scenes, [&scene](auto &sc) {
+        return sc->getName() == scene;
+    });
 }
 
 void gameengine::SceneManager::changeSceneInWaiting()
@@ -54,8 +50,8 @@ void gameengine::SceneManager::changeSceneInWaiting()
         if (sceneItem->getSceneSource() == this->_waitingScene) {
             this->_actualScene = sceneItem->getName();
             sceneItem->sceneLauncher();
-            sceneItem->readyScene();
-            sceneItem->ready();
+            sceneItem->initScene();
+            sceneItem->init();
             sceneItem->setPaused(false);
             break;
         }
@@ -71,8 +67,8 @@ void gameengine::SceneManager::changeSceneInWaiting()
                 sceneItem->sceneLauncher();
                 sceneItem->setLaunched();
             }
-            sceneItem->readyScene();
-            sceneItem->ready();
+            sceneItem->initScene();
+            sceneItem->init();
         }
     }*/
 }
@@ -82,11 +78,11 @@ void gameengine::SceneManager::changeScene(const std::string &scene)
    this->_waitingScene = scene;
 }
 
-std::shared_ptr<gameengine::AbstractBase> gameengine::SceneManager::getNode(const std::string& name)
+std::shared_ptr<gameengine::node::AbstractBase> gameengine::SceneManager::getNode(const std::string& name)
 {
     for (const auto &item: this->_scenes)
         if (item->getSceneSource() == this->_actualScene) {
-            std::shared_ptr<gameengine::AbstractBase> temp;
+            std::shared_ptr<gameengine::node::AbstractBase> temp;
             if ((temp = item->getNode(name)) != nullptr)
                 return temp;
         }
@@ -94,11 +90,11 @@ std::shared_ptr<gameengine::AbstractBase> gameengine::SceneManager::getNode(cons
     return nullptr;
 }
 
-std::vector<std::shared_ptr<gameengine::AbstractBase>> gameengine::SceneManager::getAllNodes()
+std::vector<std::shared_ptr<gameengine::node::AbstractBase>> gameengine::SceneManager::getAllNodes()
 {
     for (const auto &item: this->_scenes)
         if (item->getSceneSource() == this->_actualScene)
-            return item->getAllNode();
+            return item->getNodes();
     return {};
 }
 
@@ -130,11 +126,10 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
     if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
         camera.reset();
     camera.update();
-    //std::cout << camera << std::endl;
+
     raylib::helper::draw::DrawHelper::beginMode3D(camera);
 
     this->draw();
-    //raylib::Shape3DHelper::drawLine3D({0, 0, 0}, {0, 60, 0}, RlColor::Red); //TODO: remove this
 
     raylib::helper::draw::DrawHelper::endMode3D();
 
@@ -170,15 +165,14 @@ void gameengine::SceneManager::makeLoop(raylib::RlCamera &camera)
     this->drawAll(camera);
 }
 
-void gameengine::SceneManager::addNode(const std::shared_ptr<gameengine::AbstractBase> &node)
+void gameengine::SceneManager::addNode(const std::shared_ptr<gameengine::node::AbstractBase> &node)
 {
     for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
         if (scene->getSceneSource() == this->_actualScene) {
             scene->addNode(node);
-            node->ready();
+            node->init();
             return;
         }
-
 }
 
 void gameengine::SceneManager::deleteNodeInLst()
@@ -220,7 +214,7 @@ bool gameengine::SceneManager::getPaused()
 {
     for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
         if (scene->getSceneSource() == this->_actualScene)
-            return scene->getPaused();
+            return scene->isPaused();
     return false;
 }
 

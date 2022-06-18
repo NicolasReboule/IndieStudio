@@ -20,7 +20,7 @@ indie::Bonus::Bonus(const std::string &name, const raylib::builder::RlMeshBuilde
     this->_collisionEnable = false;
 }
 
-void indie::Bonus::ready()
+void indie::Bonus::init()
 {
 }
 

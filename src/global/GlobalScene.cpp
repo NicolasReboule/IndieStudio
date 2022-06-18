@@ -22,7 +22,7 @@ void indie::GlobalScene::updateScene(float delta)
 {
 }
 
-void indie::GlobalScene::readyScene()
+void indie::GlobalScene::initScene()
 {
 }
 

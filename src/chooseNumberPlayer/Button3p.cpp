@@ -8,11 +8,11 @@
 #include "chooseNumberPlayer/Button3p.hpp"
 #include "global/GlobalInstance.hpp"
 
-indie::Button3p::Button3p(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::Button3p::Button3p(const std::string &name,  const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
 {
 }
 
-void indie::Button3p::ready()
+void indie::Button3p::init()
 {
 }
 

@@ -163,7 +163,7 @@ namespace raylib {
              * @brief Get the model rotation angle
              * @return the model rotation angle
              */
-            float getRotationAngle() const;
+            const float &getRotationAngle() const;
 
             /**
              * @brief Set the model rotation angle

@@ -12,9 +12,9 @@
 
 namespace indie {
 
-    class WallDestroyable : public gameengine::StaticBody {
+    class WallDestroyable : public gameengine::node::_3D::StaticBody {
     public:
-        WallDestroyable(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+       explicit WallDestroyable(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~WallDestroyable() override = default;
 
         void spawnBonus();

@@ -14,8 +14,10 @@ namespace indie {
 
     class GlobalInstance {
     public:
-        GlobalInstance() = default;
+        GlobalInstance() : _numberPlayers(0), _playersAlive(0), _indexMap(0) {}
+
         ~GlobalInstance() = default;
+
         static std::shared_ptr<indie::GlobalInstance> &getInstance();
 
         int _numberPlayers;

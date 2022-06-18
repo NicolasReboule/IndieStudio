@@ -24,7 +24,7 @@ indie::Magma::Magma(const std::string &name, const raylib::builder::RlMeshBuilde
     this->_collisionEnable = false;
 }
 
-void indie::Magma::ready()
+void indie::Magma::init()
 {
 }
 

@@ -5,18 +5,17 @@
 ** Global.cpp
 */
 
-
 #include "global/Global.hpp"
 
 indie::Global::Global(const std::string &name) : AbstractBase(name)
 {
 }
 
-void indie::Global::ready()
+void indie::Global::init()
 {
 }
 
-void indie::Global::update(float delta)
+void indie::Global::update(const float &delta)
 {
 }
 
@@ -24,7 +23,7 @@ void indie::Global::draw()
 {
 }
 
-float indie::Global::getRotationDegrees()
+float indie::Global::getRotationDegrees() const
 {
     return 0;
 }

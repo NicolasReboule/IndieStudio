@@ -8,12 +8,12 @@
 #include "chooseNumberPlayer/ButtonLeft.hpp"
 #include "global/GlobalInstance.hpp"
 
-indie::ButtonLeft::ButtonLeft(const std::string &name, const std::string &filename) : Button(name, filename)
+indie::ButtonLeft::ButtonLeft(const std::string &name,  const std::shared_ptr<raylib::texture::RlTexture> &texture) : Button(name, texture)
 {
     this->_index = 0;
 }
 
-void indie::ButtonLeft::ready()
+void indie::ButtonLeft::init()
 {
 }
 

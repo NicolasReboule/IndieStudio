@@ -7,6 +7,6 @@
 
 #include "GameEngine/Nodes/2D/Node2D.hpp"
 
-gameengine::Node2D::Node2D(const std::string &name) : AbstractBase(name)
+gameengine::node::_2D::Node2D::Node2D(const std::string &name) : AbstractBase(name)
 {
 }

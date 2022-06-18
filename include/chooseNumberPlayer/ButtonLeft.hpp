@@ -12,19 +12,20 @@
 
 namespace indie {
 
-    class ButtonLeft : public gameengine::Button {
+    class ButtonLeft : public gameengine::node::_2D::Button {
     public:
-        explicit ButtonLeft(const std::string &name, const std::string &filename);
+        explicit ButtonLeft(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 
         ~ButtonLeft() override = default;
 
-        void ready() override;
+        void init() override;
 
         void pressed() override;
 
         void setIndex(int index);
 
         int getIndex() const;
+
     private:
         int _index;
     };

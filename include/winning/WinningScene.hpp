@@ -14,14 +14,15 @@ namespace indie {
 
     class WinningScene : public gameengine::Scene {
     public:
-        explicit WinningScene(std::string name = "winning", std::string sceneSource = "winning");
+        explicit WinningScene(const std::string &name = "winning", const std::string &sceneSource = "winning");
         ~WinningScene() override = default;
 
-        void updateScene(float delta) override;
+        void updateScene(const float &delta) override;
 
         void sceneLauncher() override;
 
-        void readyScene() override;
+        void initScene() override;
+
     private:
         int _indexMenu;
     };

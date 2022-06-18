@@ -11,18 +11,20 @@
 #include "GameEngine/GameEngine.hpp"
 
 namespace indie {
-
-    class Global : public gameengine::AbstractBase {
-        public:
+    /**
+     * @brief Global class
+     */
+    class Global : public gameengine::node::AbstractBase {
+    public:
         explicit Global(const std::string &name);
 
-        void ready() override;
+        void init() override;
 
-        void update(float delta) override;
+        void update(const float &delta) override;
 
         void draw() override;
 
-        float getRotationDegrees() override;
+        float getRotationDegrees() const override;
 
         ~Global() override = default;
     };

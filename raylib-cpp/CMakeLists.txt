@@ -76,18 +76,18 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Audio/ISound.cpp
         src/GameEngine/Audio/Fx.cpp
         src/GameEngine/Audio/Music.cpp
-        src/GameEngine/Nodes/StaticBody.cpp
-        src/GameEngine/Nodes/Node.cpp
+        src/GameEngine/Nodes/3D/StaticBody.cpp
+        src/GameEngine/Nodes/3D/Node3D.cpp
         src/GameEngine/Nodes/AbstractBase.cpp
         src/GameEngine/SceneManager.cpp
         src/GameEngine/Scene.cpp
         src/GameEngine/Nodes/2D/Node2D.cpp
         src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/TextureRect.cpp
-        src/GameEngine/Nodes/KinematicBody.cpp
+        src/GameEngine/Nodes/3D/KinematicBody.cpp
         src/GameEngine/exception/GameEngineException.cpp
         src/GameEngine/exception/MapParserException.cpp
-        src/GameEngine/Component/GridComponent.cpp
+        src/GameEngine/Nodes/3D/Grid3D.cpp
         src/GameEngine/Nodes/2D/Label.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)

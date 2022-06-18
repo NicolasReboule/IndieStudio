@@ -22,7 +22,7 @@ namespace indie {
 
         void updateScene(float delta) override;
 
-        void readyScene() override;
+        void initScene() override;
     };
 }
 

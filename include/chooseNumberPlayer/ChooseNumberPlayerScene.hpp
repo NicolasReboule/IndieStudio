@@ -16,9 +16,10 @@ namespace indie {
     public:
         explicit ChooseNumberPlayerScene(const std::string &name = "chooseNumberPlayer", const std::string &sceneSource = "chooseNumberPlayer");
         ~ChooseNumberPlayerScene() override = default;
-        void updateScene(float delta) override;
 
-        void readyScene() override;
+        void updateScene(const float &delta) override;
+
+        void initScene() override;
 
         void sceneLauncher() override;
     private:

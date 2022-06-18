@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** Logo.hpp
+** Image.hpp
 ** File description:
-** Logo.hpp
+** Image.hpp
 */
 
 #ifndef INDIESTUDIO_LOGO_HPP
@@ -11,16 +11,33 @@
 #include <GameEngine/GameEngine.hpp>
 
 namespace indie {
-
-    class Logo : public gameengine::TextureRect {
+    /**
+     * @brief Class for the logo of the game
+     */
+    class Image : public gameengine::node::_2D::TextureRect {
     public:
-        explicit Logo(const std::string &name, const std::string &filename);
+        /**
+         * @brief Construct a new Image object
+         * @param name the name of the logo
+         * @param texture the texture of the logo
+         */
+        explicit Image(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 
-        ~Logo() override = default;
+        /**
+         * @brief Destruct the Image object
+         */
+        ~Image() override = default;
 
-        void ready() override;
+        /**
+         * @brief Initialize the logo
+         */
+        void init() override;
 
-        void update(float delta) override;
+        /**
+         * @brief Update the logo
+         * @param delta the delta time
+         */
+        void update(const float &delta) override;
     };
 }
 

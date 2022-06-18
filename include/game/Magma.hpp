@@ -12,19 +12,20 @@
 
 namespace indie {
 
-    class Magma : public gameengine::StaticBody {
+    class Magma : public gameengine::node::_3D::StaticBody {
     public:
-        Magma(const std::string &name, const std::string &objPath, const std::string &playerOwner);
-        Magma(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
+        explicit Magma(const std::string &name, const std::string &objPath, const std::string &playerOwner);
+        explicit Magma(const std::string &name, const raylib::builder::RlMeshBuilder::MeshType &type, const std::string &texturePath);
         ~Magma() override = default;
 
-        void ready() override;
+        void init() override;
 
-        void update(float delta) override;
+        void update(const float &delta) override;
 
         void handlePlayerCollision();
 
         void checkWallCollision();
+
     private:
         std::string _playerOwner;
         float _timer;

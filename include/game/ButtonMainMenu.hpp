@@ -12,13 +12,13 @@
 
 namespace indie {
 
-    class ButtonMainMenu : public gameengine::Button {
+    class ButtonMainMenu : public gameengine::node::_2D::Button {
     public:
-        explicit ButtonMainMenu(const std::string &name, const std::string &filename);
+        explicit ButtonMainMenu(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 
         ~ButtonMainMenu() override = default;
 
-        void ready() override;
+        void init() override;
 
         void pressed() override;
     };

@@ -144,7 +144,7 @@ void indie::GameScene::sceneLauncher()
 }
 
 
-void indie::GameScene::readyScene()
+void indie::GameScene::initScene()
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
