@@ -18,7 +18,7 @@ namespace raylib::builder {
     /**
      * @brief Builder to create a RlModel easily
      */
-    class RlModelBuilder : public IBuilder<raylib::RlModel> {
+    class RlModelBuilder : public IBuilder<raylib::model::RlModel> {
     public:
         /**
          * @brief Construct a new ModelBuilder object
@@ -30,14 +30,14 @@ namespace raylib::builder {
          * @throws BuilderException
          * @return the RlModel
          */
-        raylib::RlModel build() override;
+        raylib::model::RlModel build() override;
 
         /**
          * @brief Set the mesh
          * @param mesh Mesh of the model
          * @return the ModelBuilder object
          */
-        RlModelBuilder &setMesh(const std::shared_ptr<raylib::models::RlMesh> &mesh);
+        RlModelBuilder &setMesh(const std::shared_ptr<raylib::model::RlMesh> &mesh);
 
         /**
          * @brief Set the mesh type
@@ -95,7 +95,7 @@ namespace raylib::builder {
           */
          RlModelBuilder &setColor(const RlColor &color);
     private:
-        std::shared_ptr<raylib::models::RlMesh> _mesh;
+        std::shared_ptr<raylib::model::RlMesh> _mesh;
         long _type;
         std::string _modelPath;
         std::string _texturePath;

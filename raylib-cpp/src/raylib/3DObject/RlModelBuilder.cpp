@@ -13,22 +13,22 @@ raylib::builder::RlModelBuilder::RlModelBuilder() : _mesh(), _modelPath(), _text
     _rotationAngle = 0;
 }
 
-raylib::RlModel raylib::builder::RlModelBuilder::build()
+raylib::model::RlModel raylib::builder::RlModelBuilder::build()
 {
     if (_modelPath.empty() && _mesh == nullptr && _type == 0)
         throw raylib::ex::BuilderException("Nor model path, nor mesh, nor type are set");
     if (_modelPath.empty()) {
-        raylib::RlModel model(*_mesh);
+        raylib::model::RlModel model(*_mesh);
         //model.setTexture(_texturePath);
         model.setPosition(_position);
     } else if (_type != 0) {
-        raylib::RlModel model((raylib::builder::RlMeshBuilder::MeshType) _type);
+        raylib::model::RlModel model((raylib::builder::RlMeshBuilder::MeshType) _type);
         return model;
     }
-    return raylib::RlModel(_modelPath);
+    return raylib::model::RlModel(_modelPath);
 }
 
-raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMesh(const std::shared_ptr<raylib::models::RlMesh> &mesh)
+raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMesh(const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
     _mesh = mesh;
     return *this;

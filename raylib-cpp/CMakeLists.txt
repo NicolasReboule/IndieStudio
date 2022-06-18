@@ -15,7 +15,6 @@ add_library(${PROJECT_NAME}
         src/raylib/2DObject/Collision2DHelper.cpp
         src/raylib/3DObject/Collision3DHelper.cpp
         src/raylib/3DObject/MeshGenerator.cpp
-        src/raylib/3DObject/MeshHelper.cpp
         src/raylib/3DObject/ModelHelper.cpp
         src/raylib/3DObject/RlAnimation.cpp
         src/raylib/3DObject/RlMaterial.cpp
@@ -43,6 +42,7 @@ add_library(${PROJECT_NAME}
         src/raylib/Draw/Draw2DHelper.cpp
         src/raylib/Draw/Draw3DHelper.cpp
         src/raylib/Draw/DrawHelper.cpp
+        src/raylib/Draw/DrawModelHelper.cpp
         src/raylib/Draw/DrawTextHelper.cpp
         src/raylib/Draw/DrawTextureHelper.cpp
         src/raylib/exception/BuilderException.cpp

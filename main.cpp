@@ -51,7 +51,7 @@ int main(int ac, char **av)
     //raylib::RlModel model("./assets/player.iqm", "./assets/blue.png");
     //raylib::RlModelAnimation anim(model, "./assets/player.iqm");
     raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
-    raylib::RlModel boost("./assets/boostSpeed.obj");
+    raylib::model::RlModel boost("./assets/boostSpeed.obj");
     raylib::helper::AudioHelper::initAudioDevice();
     raylib::audio::RlMusic music = raylib::audio::RlMusic("./assets/sounds/soundcpy.wav");
 
@@ -64,7 +64,7 @@ int main(int ac, char **av)
         camera.update();
         raylib::helper::draw::DrawHelper::beginMode3D(camera);
         raylib::helper::draw::Draw3DHelper::drawGrid({9, 9}, 1.0f);
-        raylib::helper::ModelHelper::drawModel(boost);
+        raylib::helper::draw::DrawModelHelper::drawModel(boost);
 
         if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
             camera.reset();

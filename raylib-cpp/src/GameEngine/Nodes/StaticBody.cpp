@@ -31,7 +31,7 @@ void gameengine::StaticBody::update(float delta)
 
 void gameengine::StaticBody::draw()
 {
-    raylib::helper::ModelHelper::drawModel(this->_model);
+    raylib::helper::draw::DrawModelHelper::drawModel(this->_model);
 }
 
 Vector3f gameengine::StaticBody::getPosition()
@@ -70,10 +70,10 @@ void gameengine::StaticBody::setScale(Vector3f newScale)
 
 void gameengine::StaticBody::setColor(raylib::RlColor color)
 {
-    this->_model.setColor(color.getColor());
+    this->_model.setColor(color);
 }
 
-raylib::RlModel *gameengine::StaticBody::operator->()
+raylib::model::RlModel *gameengine::StaticBody::operator->() //TODO: remove this wtf
 {
     return &this->_model;
 }
@@ -93,10 +93,3 @@ bool &gameengine::StaticBody::getIsCollsionEnable()
     return this->_collisionEnable;
 }
 
-/*
-void gameengine::StaticBody::collisionBox()
-{
-    std::cout << "(" << this->_model.getBoundingBox().max.x << "," << this->_model.getBoundingBox().max.y << "," << this->_model.getBoundingBox().max.x << ")" << std::endl;
-}
-
-*/

@@ -11,7 +11,7 @@
 #include <raylib.h>
 #include <string>
 
-namespace raylib::models {
+namespace raylib::model {
     class RlMaterial {
     public:
         RlMaterial();

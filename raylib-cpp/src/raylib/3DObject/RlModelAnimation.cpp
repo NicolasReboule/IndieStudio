@@ -7,7 +7,7 @@
 
 #include "raylib/3DObject/RlModelAnimation.hpp"
 
-raylib::models::RlModelAnimation::RlModelAnimation(const RlModel &model, const std::string &fileName) : _model(model)
+raylib::model::RlModelAnimation::RlModelAnimation(const RlModel &model, const std::string &fileName) : _model(model)
 {
     this->_count = 0;
     _anims = LoadModelAnimations(fileName.c_str(), &this->_count);
@@ -16,12 +16,12 @@ raylib::models::RlModelAnimation::RlModelAnimation(const RlModel &model, const s
     this->_frameCount = 0;
 }
 
-raylib::models::RlModelAnimation::~RlModelAnimation()
+raylib::model::RlModelAnimation::~RlModelAnimation()
 {
     UnloadModelAnimations(_anims, this->_count);
 }
 
-void raylib::models::RlModelAnimation::update(const unsigned int &animIndex)
+void raylib::model::RlModelAnimation::update(const unsigned int &animIndex)
 {
     if (animIndex >= this->_count)
         return;
@@ -30,7 +30,7 @@ void raylib::models::RlModelAnimation::update(const unsigned int &animIndex)
         this->_frameCount = 0;
 }
 
-void raylib::models::RlModelAnimation::unload(const unsigned int &animIndex)
+void raylib::model::RlModelAnimation::unload(const unsigned int &animIndex)
 {
     if (animIndex < this->_count) {
         UnloadModelAnimation(this->_animations[animIndex]);
@@ -38,19 +38,19 @@ void raylib::models::RlModelAnimation::unload(const unsigned int &animIndex)
     }
 }
 
-bool raylib::models::RlModelAnimation::animationIndexIsValid(const unsigned int &animIndex)
+bool raylib::model::RlModelAnimation::animationIndexIsValid(const unsigned int &animIndex)
 {
     if (animIndex < this->_count)
         return IsModelAnimationValid(this->_model.getModel(), this->_animations[animIndex]);
     return false;
 }
 
-unsigned int raylib::models::RlModelAnimation::getCount() const
+unsigned int raylib::model::RlModelAnimation::getCount() const
 {
     return this->_count;
 }
 
-void raylib::models::RlModelAnimation::incrementFrameCount(const int &value)
+void raylib::model::RlModelAnimation::incrementFrameCount(const int &value)
 {
     this->_frameCount += value;
 }

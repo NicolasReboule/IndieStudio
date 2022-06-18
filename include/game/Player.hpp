@@ -46,7 +46,7 @@ namespace indie {
         float _timerAnim;
         int _numpadId;
 
-        raylib::models::RlModelAnimation _anim;
+        raylib::model::RlModelAnimation _anim;
     };
 }
 

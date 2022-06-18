@@ -52,9 +52,9 @@ void raylib::helper::draw::DrawHelper::endTextureMode()
     EndTextureMode();
 }
 
-void raylib::helper::draw::DrawHelper::beginShaderMode(const Shader &shader)
+void raylib::helper::draw::DrawHelper::beginShaderMode(const shader::RlShader &shader)
 {
-    BeginShaderMode(shader);
+    BeginShaderMode(shader.getShader());
 }
 
 void raylib::helper::draw::DrawHelper::endShaderMode()

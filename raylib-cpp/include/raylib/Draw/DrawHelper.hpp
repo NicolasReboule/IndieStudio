@@ -12,6 +12,7 @@
 #include "raylib/Color/RlColor.hpp"
 #include "raylib/Camera/RlCamera.hpp"
 #include "raylib/Texture/RlTexture.hpp"
+#include "raylib/Shader/RlShader.hpp"
 #include <raylib.h>
 
 namespace raylib::helper::draw {
@@ -73,7 +74,7 @@ namespace raylib::helper::draw {
          * @brief Begin custom shader drawing
          * @param shader to use
          */
-        static void beginShaderMode(const Shader &shader); //TODO: change this to RlShader
+        static void beginShaderMode(const shader::RlShader &shader);
 
         /**
          * @brief End custom shader drawing (use default shader)

@@ -15,14 +15,14 @@
 #include <string>
 #include "raylib/3DObject/RlMeshBuilder.hpp"
 
-namespace raylib {
+namespace raylib::model {
     /**
      * @brief Model class
      */
     class RlModel {
     public:
         explicit RlModel(const std::string &fileName);
-        explicit RlModel(const models::RlMesh &mesh);
+        explicit RlModel(const model::RlMesh &mesh);
         explicit RlModel(const builder::RlMeshBuilder::MeshType &type);
 
         ~RlModel();
@@ -31,7 +31,7 @@ namespace raylib {
         void setPosition(float x, float y, float z);
         void setScale(Vector3f scale);
         void setScale(float x, float y, float z);
-        void setColor(Color color);
+        void setColor(const RlColor &color);
         void setRotationAxis(Vector3f rotationAxis);
         void setRotationAxis(float x, float y, float z);
         void setRotationAngle(float rotationAngle);
@@ -42,7 +42,7 @@ namespace raylib {
         const Model &getModel() const;
         const Vector3f &getPosition() const;
         const Vector3f &getScale() const;
-        const Color &getColor() const;
+        const RlColor &getColor() const;
         const Vector3f &getRotationAxis() const;
         const float &getRotationAngle() const;
         const texture::RlTexture &getTexture() const;
@@ -54,7 +54,7 @@ namespace raylib {
         Model _model;
         texture::RlTexture _texture;
         Vector3f _position;
-        Color _color;
+        RlColor _color;
         Vector3f _scale;
         Vector3f _rotationAxis;
         float _rotationAngle;

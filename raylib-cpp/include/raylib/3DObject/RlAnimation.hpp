@@ -14,7 +14,7 @@
 #include <vector>
 #include <raylib.h>
 
-namespace raylib::models {
+namespace raylib::model {
 
     namespace ex {
         /**

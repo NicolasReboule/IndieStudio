@@ -32,7 +32,7 @@ namespace gameengine {
         void setRotationDegrees(float degrees, Vector3f rotationAxis) override;
         void setScale(Vector3f newScale) override;
 
-        raylib::RlModel *operator->();
+        raylib::model::RlModel *operator->();
 
         void setColor(raylib::RlColor color);
 
@@ -43,7 +43,7 @@ namespace gameengine {
         bool &getIsCollsionEnable();
 
     protected:
-        raylib::RlModel _model;
+        raylib::model::RlModel _model;
 
         bool _collisionEnable;
         Vector3f _position;
