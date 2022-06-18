@@ -9,7 +9,8 @@
 #define INDIESTUDIO_RLMESH_HPP
 
 #include <raylib.h>
-#include <string>
+#include <iostream>
+#include <memory>
 
 namespace raylib::model {
     /**
@@ -23,6 +24,19 @@ namespace raylib::model {
          * @attention Don't use this, use the RlMeshBuilder instead
          */
         explicit RlMesh(const Mesh &mesh);
+
+        /**
+         * @brief Copy constructor (create a copy of the raylib Mesh)
+         * @param mesh the mesh
+         */
+        RlMesh(const RlMesh &mesh);
+
+        /**
+         * @brief Assignment operator (Create a copy of the raylib Mesh)
+         * @param mesh the Mesh
+         * @return the RlMesh
+         */
+        RlMesh &operator=(const RlMesh &mesh);
 
         /**
          * @brief Destroys the RlMesh
@@ -74,8 +88,14 @@ namespace raylib::model {
          */
         const Mesh &getMesh() const;
 
+        /**
+         * @brief Get the mesh shared ptr
+         * @return the mesh shared ptr
+         */
+        const std::shared_ptr<Mesh> &getMeshSharedPtr() const;
+
     private:
-        Mesh _mesh; /**< The raylib mesh*/
+        std::shared_ptr<Mesh> _mesh; /**< The raylib mesh */
     };
 }
 

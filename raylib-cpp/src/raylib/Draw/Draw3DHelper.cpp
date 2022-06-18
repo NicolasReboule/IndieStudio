@@ -197,7 +197,7 @@ void raylib::helper::draw::Draw3DHelper::drawGrid(const Vector2i &size, const Ve
     float halfSizeX = (float) size.x * 0.5f;
     float halfSizeZ = (float) size.y * 0.5f;
 
-    rlColor3f(color.getRed(), color.getGreen(), color.getBlue());
+    rlColor4ub(color.getRed(), color.getRed(), color.getBlue(), color.getAlpha());
 
     for (int i = 0; i <= size.x; i++) {
         rlVertex3f((float) i * spacing - halfSizeX + position.x, position.y, halfSizeZ + position.z);

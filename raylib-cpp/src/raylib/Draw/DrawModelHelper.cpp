@@ -21,7 +21,7 @@ std::vector<Matrix> &transforms)
 
 void raylib::helper::draw::DrawModelHelper::drawModel(const raylib::model::RlModel &model)
 {
-    drawModel(model, model.getPosition(), model.getScale(), model.getRotationAngle(), model.getScale(), model.getColor());
+    drawModel(model, model.getPosition(), model.getRotationAxis(), model.getRotationAngle(), model.getScale(), model.getColor());
 }
 
 void raylib::helper::draw::DrawModelHelper::drawModel(const raylib::model::RlModel &model, const Vector3f &position, \

@@ -70,6 +70,12 @@ namespace gameengine::node::_2D {
         void setRotationDegrees(const float &rotationDegrees) override;
 
         /**
+         * @brief Center the button on the given position
+         * @param pos the position to center the button on
+         */
+        void centerButton(const Vector2f &pos);
+
+        /**
          * @brief When the button is clicked
          */
         virtual void pressed() = 0;
@@ -109,6 +115,18 @@ namespace gameengine::node::_2D {
          */
         const Rectangle &getRectangle() const;
 
+        /**
+         * @brief Get the origin of the button
+         * @return the origin of the button
+         */
+        const Vector2f &getOrigin() const;
+
+        /**
+         * @brief Set the origin of the button
+         * @param origin the origin of the button
+         */
+        void setOrigin(const Vector2f &origin);
+
     private:
         std::shared_ptr<raylib::texture::RlTexture> _texture; /**< The linked texture to the button */
 
@@ -116,6 +134,7 @@ namespace gameengine::node::_2D {
 
         Vector2f _position; /**< The position of the button */
         Vector2f _scale; /**< The scale of the button */
+        Vector2f _origin; /**< The origin of the button */
         float _rotationDegrees; /**< The rotation of the button */
 
         int _frameNum; /**< The frame number of the button */

@@ -15,7 +15,7 @@
 
 #include "game/ButtonMainMenu.hpp"
 #include "global/GlobalInstance.hpp"
-#include "start/Logo.hpp"
+#include "start/Image.hpp"
 
 indie::ChooseNumberPlayerScene::ChooseNumberPlayerScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {

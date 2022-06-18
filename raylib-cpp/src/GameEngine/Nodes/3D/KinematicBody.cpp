@@ -42,8 +42,10 @@ void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &positi
         }
     };
 
-    auto found = std::find_if(sceneManager->getAllNodes().begin(), sceneManager->getAllNodes().end(),
+   /* auto found = std::find_if(sceneManager->getAllNodes().begin(), sceneManager->getAllNodes().end(),
     [this, &temp](auto &node) {
+        if (node == nullptr)
+            return false;
         try {
             auto &staticBody = dynamic_cast<gameengine::node::_3D::StaticBody &>(*node);
             if (staticBody.getName() != this->getName() && staticBody.hasCollisionEnabled() &&
@@ -57,9 +59,9 @@ void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &positi
     });
 
     if (found != sceneManager->getAllNodes().end())
-        return;
+        return;*/
 
-    /*if (this->_collisionEnable) {
+    if (this->_collisionEnable) {
         for (const auto &node: sceneManager->getAllNodes()) {
             try {
                 auto &staticBody = dynamic_cast<gameengine::node::_3D::StaticBody &>(*node);
@@ -72,7 +74,7 @@ void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &positi
                 continue;
             }
         }
-    }*/
+    }
 
     this->setPosition(position);
 }

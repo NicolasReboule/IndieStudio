@@ -60,56 +60,56 @@ namespace raylib::window {
          * @brief Check if window has been initialized successfully
          * @return true if the window has been initialized successfully, false otherwise
          */
-        bool isWindowReady();
+        bool isReady();
 
         /**
          * @brief Check if window is currently fullscreen
          * @return true if the window is fullscreen, false otherwise
          */
-        bool isWindowFullscreen();
+        bool isFullScreen();
 
         /**
          * @brief Check if window is currently hidden (only PLATFORM_DESKTOP)
          * @return true if the window is hidden, false otherwise
          */
-        bool isWindowHidden();
+        bool isHidden();
 
         /**
          * @brief Check if window is currently minimized (only PLATFORM_DESKTOP)
          * @return true if the window is minimized, false otherwise
          */
-        bool isWindowMinimized();
+        bool isMinimized();
 
         /**
          * @brief Check if window is currently maximized (only PLATFORM_DESKTOP)
          * @return true if the window is maximized, false otherwise
          */
-        bool isWindowMaximized();
+        bool isMaximized();
 
         /**
          * @brief Check if window is currently focused (only PLATFORM_DESKTOP)
          * @return true if the window is focused, false otherwise
          */
-        bool isWindowFocused();
+        bool isFocused();
 
         /**
          * @brief Check if window has been resized last frame
          * @return true if the window has been resized, false otherwise
          */
-        bool isWindowResized();
+        bool isResized();
 
         /**
          * @brief Check if one specific window flag is enabled
          * @param flag the flag to check (@see ConfigFlags enum)
          * @return true if the flag is enabled, false otherwise
          */
-        bool hasWindowState(const ConfigFlags &flag);
+        bool hasState(const ConfigFlags &flag);
 
         /**
          * @brief Set window configuration state using flags
          * @param flags the flags to set (@see ConfigFlags enum)
          */
-        void setWindowState(unsigned int flags);
+        void setState(unsigned int flags);
 
         /**
          * @brief Set window configuration state using flags
@@ -121,7 +121,7 @@ namespace raylib::window {
          * @brief Clear window configuration state flags
          * @param flags the flags to clear (@see ConfigFlags enum)
          */
-        void clearWindowState(unsigned int flags);
+        void clearState(unsigned int flags);
 
         /**
          * @brief Toggle window state: fullscreen/windowed (only PLATFORM_DESKTOP)
@@ -131,56 +131,56 @@ namespace raylib::window {
         /**
          * @brief Set window state: maximized, if resizable (only PLATFORM_DESKTOP)
          */
-        void maximizeWindow();
+        void maximize();
 
         /**
          * @brief Set window state: minimized, if resizable (only PLATFORM_DESKTOP)
          */
-        void minimizeWindow();
+        void minimize();
 
         /**
          * @brief Set window state: not minimized/maximized (only PLATFORM_DESKTOP)
          */
-        void restoreWindow();
+        void restore();
 
         /**
          * @brief Set icon for window (only PLATFORM_DESKTOP)
          * @param image the image to set as icon
          */
-        void setWindowIcon(const image::RlImage &image);
+        void setIcon(const image::RlImage &image);
 
         /**
          * @brief Set title for window (only PLATFORM_DESKTOP)
          * @param title the title to set
          */
-        void setWindowTitle(const std::string &title);
+        void setTitle(const std::string &title);
 
         /**
          * @brief Set window position on screen (only PLATFORM_DESKTOP)
          * @param x the x position
          * @param y the y position
          */
-        void setWindowPosition(int x, int y);
+        void setPosition(int x, int y);
 
         /**
          * @brief Set monitor for the current window (fullscreen mode)
          * @param monitor the monitor to set
          */
-        void setWindowMonitor(int monitor);
+        void setMonitor(int monitor);
 
         /**
          * @brief Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE)
          * @param width the minimum width
          * @param height the minimum height
          */
-        void setWindowMinSize(int width, int height);
+        void setMinSize(int width, int height);
 
         /**
          * @brief Set window dimensions
          * @param width the width
          * @param height the height
          */
-        void setWindowSize(int width, int height);
+        void setSize(int width, int height);
 
         /**
          * @brief Take a screenshot of the current window

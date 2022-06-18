@@ -25,9 +25,9 @@ namespace indie {
 
         void sceneLauncher() override;
 
-        void addWall(const Vector3f &position, const raylib::model::RlModel &model);
-        void addBreakableWall(const Vector3f &position, const raylib::model::RlModel &model);
-        void addFloor(const Vector3f &position, const raylib::model::RlModel &model);
+        void addWall(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh);
+        void addBreakableWall(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh);
+        void addFloor(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh);
 
         void displayWinner(const std::string &name);
 

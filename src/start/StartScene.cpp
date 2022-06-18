@@ -6,7 +6,7 @@
 */
 
 #include "start/StartScene.hpp"
-#include "start/Logo.hpp"
+#include "start/Image.hpp"
 
 indie::StartScene::StartScene(const std::string &name, const std::string& sceneSource) : Scene(name, sceneSource)
 {

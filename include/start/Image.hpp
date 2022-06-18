@@ -5,8 +5,8 @@
 ** Image.hpp
 */
 
-#ifndef INDIESTUDIO_LOGO_HPP
-#define INDIESTUDIO_LOGO_HPP
+#ifndef INDIESTUDIO_IMAGE_HPP
+#define INDIESTUDIO_IMAGE_HPP
 
 #include <GameEngine/GameEngine.hpp>
 
@@ -41,4 +41,4 @@ namespace indie {
     };
 }
 
-#endif //INDIESTUDIO_LOGO_HPP
+#endif //INDIESTUDIO_IMAGE_HPP

@@ -8,6 +8,7 @@
 #include "mainMenu/MainMenuScene.hpp"
 #include "mainMenu/ButtonPlay.hpp"
 #include "mainMenu/ButtonQuit.hpp"
+#include "start/Image.hpp"
 
 indie::MainMenuScene::MainMenuScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
@@ -16,10 +17,15 @@ indie::MainMenuScene::MainMenuScene(const std::string &name, const std::string &
 
 void indie::MainMenuScene::sceneLauncher()
 {
+    auto background = std::make_shared<indie::Image>("background", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/logo_big.png"));
+    this->addNode(background);
+
     auto buttonPlay = std::make_shared<indie::ButtonPlay>("buttonPlay", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_play.png"));
+    buttonPlay->setScale({0.5f, 0.5f});
     this->addNode(buttonPlay);
 
     auto buttonQuit = std::make_shared<indie::ButtonQuit>("buttonQuit", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_quit.png"));
+    buttonQuit->setScale({0.5f, 0.5f});
     this->addNode(buttonQuit);
 }
 
@@ -37,8 +43,8 @@ void indie::MainMenuScene::initScene()
     Rectangle playRect = buttonPlay.getBounds();
     Rectangle quitRect = buttonQuit.getBounds();
 
-    buttonPlay.setPosition({((float) window->getWidth() - playRect.width) / 2, ((float) window->getHeight() - playRect.height) / 2 - playRect.height / 2 * 1.3f});
-    buttonQuit.setPosition({((float) window->getWidth() - quitRect.width)/ 2, ((float) window->getHeight() - quitRect.height) / 2 + quitRect.height / 2 * 1.3f});
+    buttonPlay.centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + playRect.height * 4.0f});
+    buttonQuit.centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + quitRect.height * 5.5f});
 }
 
 void indie::MainMenuScene::updateScene(const float &delta)

@@ -127,6 +127,12 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
         camera.reset();
     camera.update();
 
+    if (raylib::helper::input::GamepadHelper::isGamepadAvailable(0)) {
+        float gamepadX = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(0, GAMEPAD_AXIS_LEFT_X);
+        float gamepadY = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(0, GAMEPAD_AXIS_LEFT_Y);
+        raylib::helper::input::MouseHelper::setMousePosition((int) gamepadX, (int) gamepadY);
+    }
+
     raylib::helper::draw::DrawHelper::beginMode3D(camera);
 
     this->draw();

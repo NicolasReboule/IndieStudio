@@ -46,47 +46,47 @@ bool raylib::window::RlWindow::isOpen()
     return !WindowShouldClose();
 }
 
-bool raylib::window::RlWindow::isWindowReady()
+bool raylib::window::RlWindow::isReady()
 {
     return IsWindowReady();
 }
 
-bool raylib::window::RlWindow::isWindowFullscreen()
+bool raylib::window::RlWindow::isFullScreen()
 {
     return IsWindowFullscreen();
 }
 
-bool raylib::window::RlWindow::isWindowHidden()
+bool raylib::window::RlWindow::isHidden()
 {
     return IsWindowHidden();
 }
 
-bool raylib::window::RlWindow::isWindowMaximized()
+bool raylib::window::RlWindow::isMaximized()
 {
     return IsWindowMaximized();
 }
 
-bool raylib::window::RlWindow::isWindowMinimized()
+bool raylib::window::RlWindow::isMinimized()
 {
     return IsWindowMinimized();
 }
 
-bool raylib::window::RlWindow::isWindowFocused()
+bool raylib::window::RlWindow::isFocused()
 {
     return IsWindowFocused();
 }
 
-bool raylib::window::RlWindow::isWindowResized()
+bool raylib::window::RlWindow::isResized()
 {
     return IsWindowResized();
 }
 
-bool raylib::window::RlWindow::hasWindowState(const ConfigFlags &flag)
+bool raylib::window::RlWindow::hasState(const ConfigFlags &flag)
 {
     return IsWindowState(flag);
 }
 
-void raylib::window::RlWindow::setWindowState(unsigned int flags)
+void raylib::window::RlWindow::setState(unsigned int flags)
 {
     SetWindowState(flags);
 }
@@ -96,7 +96,7 @@ void raylib::window::RlWindow::setConfigFlags(unsigned int flags)
     SetConfigFlags(flags);
 }
 
-void raylib::window::RlWindow::clearWindowState(unsigned int flags)
+void raylib::window::RlWindow::clearState(unsigned int flags)
 {
     ClearWindowState(flags);
 }
@@ -106,50 +106,50 @@ void raylib::window::RlWindow::toggleFullscreen()
     ToggleFullscreen();
 }
 
-void raylib::window::RlWindow::maximizeWindow()
+void raylib::window::RlWindow::maximize()
 {
     MaximizeWindow();
 }
 
-void raylib::window::RlWindow::minimizeWindow()
+void raylib::window::RlWindow::minimize()
 {
     MinimizeWindow();
 }
 
-void raylib::window::RlWindow::restoreWindow()
+void raylib::window::RlWindow::restore()
 {
     RestoreWindow();
 }
 
-void raylib::window::RlWindow::setWindowIcon(const image::RlImage &image)
+void raylib::window::RlWindow::setIcon(const image::RlImage &image)
 {
     SetWindowIcon(image.getImage());
 }
 
-void raylib::window::RlWindow::setWindowTitle(const std::string &title)
+void raylib::window::RlWindow::setTitle(const std::string &title)
 {
     _title = title;
     SetWindowTitle(title.c_str());
 }
 
-void raylib::window::RlWindow::setWindowPosition(int x, int y)
+void raylib::window::RlWindow::setPosition(int x, int y)
 {
     SetWindowPosition(x, y);
 }
 
-void raylib::window::RlWindow::setWindowMonitor(int monitor)
+void raylib::window::RlWindow::setMonitor(int monitor)
 {
     SetWindowMonitor(monitor);
 }
 
-void raylib::window::RlWindow::setWindowMinSize(int width, int height)
+void raylib::window::RlWindow::setMinSize(int width, int height)
 {
     this->_minHeight = height;
     this->_minWidth = width;
     SetWindowMinSize(width, height);
 }
 
-void raylib::window::RlWindow::setWindowSize(int width, int height)
+void raylib::window::RlWindow::setSize(int width, int height)
 {
     this->_height = height;
     this->_width = width;

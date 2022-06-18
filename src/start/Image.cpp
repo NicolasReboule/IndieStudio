@@ -5,7 +5,7 @@
 ** Image.cpp
 */
 
-#include "start/Logo.hpp"
+#include "start/Image.hpp"
 
 indie::Image::Image(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture) : gameengine::node::_2D::TextureRect(name, texture)
 {

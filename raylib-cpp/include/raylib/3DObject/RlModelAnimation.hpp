@@ -63,7 +63,7 @@ namespace raylib::model {
         void incrementFrameCount(const int &value = 1);
 
     private:
-        const RlModel &_model; /**< A reference to the model to animate */
+        RlModel _model; /**< A reference to the model to animate */
         std::vector<ModelAnimation> _animations; /**< A vector containing all the iqm animations */
         ModelAnimation *_anims; /**< A pointer to the raylib iqm animations */
         unsigned int _count; /**< The number of animations loaded from the iqm */

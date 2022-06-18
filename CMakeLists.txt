@@ -40,7 +40,6 @@ add_executable(${BINARY_NAME}
         src/start/StartScene.cpp
         src/winning/WinningScene.cpp
         src/winning/ButtonRestart.cpp
-        src/chooseMap/ChooseMapScene.cpp
         src/chooseNumberPlayer/ButtonLeft.cpp
         src/chooseNumberPlayer/ButtonRight.cpp)
 

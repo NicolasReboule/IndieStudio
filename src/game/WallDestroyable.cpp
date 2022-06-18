@@ -40,7 +40,7 @@ void indie::WallDestroyable::spawnBonus()
        bonusBomb->setBonusType(indie::Bonus::BonusType::BOMB);
        sceneManager->addNode(bonusBomb);
    } else if (rand == 3) {
-       auto ghostModel = std::make_shared<raylib::model::RlModel>("./assets/models/boost/boostBomb.obj", "assets/textures/bonus.png");
+       auto ghostModel = std::make_shared<raylib::model::RlModel>("./assets/models/boost/boostGhost.obj", "assets/textures/bonus.png");
        auto bonusGhost = std::make_shared<indie::Bonus>("bonusGhost" + std::to_string(random.generate(0, 99999)), *ghostModel, ghostModel->getTexture());
        bonusGhost->setPosition(this->getPosition());
        bonusGhost->setBonusType(indie::Bonus::BonusType::GHOST);

@@ -212,13 +212,13 @@ void indie::Player::handleInput()
     }
     if (direction.x == 0 && direction.z == 0) {
         if (this->_timerAnim <= 0) {
-            //this->_anim.incrementFrameCount();
-            //this->_anim.update(1);
+            this->_anim.incrementFrameCount();
+            this->_anim.update(1);
         }
     } else {
         if (this->_timerAnim <= 0) {
-            //this->_anim.incrementFrameCount();
-            //this->_anim.update(0);
+            this->_anim.incrementFrameCount();
+            this->_anim.update(0);
         }
 
         Vector3f newPosition = {this->getPosition().x + this->_tempSpeed * direction.x, this->getPosition().y + this->_tempSpeed * direction.y,

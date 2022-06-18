@@ -29,57 +29,57 @@ void indie::WinningScene::sceneLauncher()
 
     std::cout << "winner: " << globalInstance->_playerWinner << std::endl;
 
-    auto playerModel = std::make_shared<raylib::model::RlModel>("./assets/models/player.iqm"); //TODO: replace this with manager
+    //TODO: replace this with manager
     auto blueTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/blue.png");
     auto redTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/red.png");
     auto greenTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/green.png");
     auto yellowTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/yellow.png");
 
     if (globalInstance->_playerWinner == "player0") {
-        auto player = std::make_shared<indie::Player>("player0", *playerModel, blueTexture, 0);
+        auto player = std::make_shared<indie::Player>("player0", raylib::model::RlModel("./assets/models/player.iqm"), blueTexture, 0);
         player->setState(indie::Player::State::WINNER);
         this->addNode(player);
         std::cout << "blue" << std::endl;
     } else if (globalInstance->_playerWinner == "player1") {
-        auto player = std::make_shared<indie::Player>("player1", *playerModel, redTexture, 1);
+        auto player = std::make_shared<indie::Player>("player1", raylib::model::RlModel("./assets/models/player.iqm"), redTexture, 1);
         player->setState(indie::Player::State::WINNER);
         this->addNode(player);
         std::cout << "red" << std::endl;
     } else if (globalInstance->_playerWinner == "player2") {
-        auto player = std::make_shared<indie::Player>("player2", *playerModel, greenTexture, 2);
+        auto player = std::make_shared<indie::Player>("player2", raylib::model::RlModel("./assets/models/player.iqm"), greenTexture, 2);
         player->setState(indie::Player::State::WINNER);
         this->addNode(player);
         std::cout << "green" << std::endl;
     } else if (globalInstance->_playerWinner == "player3") {
-        auto player = std::make_shared<indie::Player>("player3", *playerModel, yellowTexture, 3);
+        auto player = std::make_shared<indie::Player>("player3", raylib::model::RlModel("./assets/models/player.iqm"), yellowTexture, 3);
         player->setState(indie::Player::State::WINNER);
         this->addNode(player);
         std::cout << "yellow" << std::endl;
     } else {
-        auto player0 = std::make_shared<indie::Player>("player0", *playerModel, blueTexture, 0);
+        auto player0 = std::make_shared<indie::Player>("player0", raylib::model::RlModel("./assets/models/player.iqm"), blueTexture, 0);
         player0->setState(indie::Player::State::LOOSER);
         player0->setPosition({0, 0, -2});
         this->addNode(player0);
-        auto player1 = std::make_shared<indie::Player>("player1", *playerModel, redTexture, 1);
+        auto player1 = std::make_shared<indie::Player>("player1", raylib::model::RlModel("./assets/models/player.iqm"), redTexture, 1);
         player1->setState(indie::Player::State::LOOSER);
         player1->setPosition({0, 0, -1});
         this->addNode(player1);
-        auto player2 = std::make_shared<indie::Player>("player2", *playerModel, greenTexture, 2);
+        auto player2 = std::make_shared<indie::Player>("player2", raylib::model::RlModel("./assets/models/player.iqm"), greenTexture, 2);
         player2->setState(indie::Player::State::LOOSER);
         player2->setPosition({0, 0, 1});
         this->addNode(player2);
-        auto player3 = std::make_shared<indie::Player>("player3", *playerModel, yellowTexture, 3);
+        auto player3 = std::make_shared<indie::Player>("player3", raylib::model::RlModel("./assets/models/player.iqm"), yellowTexture, 3);
         player3->setState(indie::Player::State::LOOSER);
         player3->setPosition({0, 0, 2});
         this->addNode(player3);
     }
 
     auto buttonRestart = std::make_shared<indie::ButtonRestartx05>("buttonRestart", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_restart_x05.png"));
-    buttonRestart->setPosition({500, 400});
+    buttonRestart->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonRestart->getBounds().height});
     this->addNode(buttonRestart);
 
     auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
-    buttonMainMenu->setPosition({500, 500});
+    buttonMainMenu->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonMainMenu->getBounds().height * 2.5f});
     this->addNode(buttonMainMenu);
 }
 

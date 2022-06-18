@@ -27,29 +27,29 @@ indie::GameScene::GameScene(const std::string &name, const std::string &sceneSou
     this->_winTimer = 0;
 }
 
-void indie::GameScene::addWall(const Vector3f &position, const raylib::model::RlModel &model)
+void indie::GameScene::addWall(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
     auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/bricks.png");
     static int id = 0;
-    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), model, texture);
+    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), raylib::model::RlModel(mesh), texture);
     wall->setPosition(position);
     this->addNode(wall);
 }
 
-void indie::GameScene::addBreakableWall(const Vector3f &position, const raylib::model::RlModel &model)
+void indie::GameScene::addBreakableWall(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
     auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/blackstone.png");
     static int id = 0;
-    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), model, texture);
+    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::model::RlModel(mesh), texture);
     breakable->setPosition(position);
     this->addNode(breakable);
 }
 
-void indie::GameScene::addFloor(const Vector3f &position, const raylib::model::RlModel &model)
+void indie::GameScene::addFloor(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
     auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/andesite.png");
     static int id = 0;
-    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), model, texture);
+    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), raylib::model::RlModel(mesh), texture);
     floor->setPosition(position);
     floor->setCollisionEnable(false);
     floor->setScale({1, 0.1, 1});
@@ -91,11 +91,9 @@ void indie::GameScene::sceneLauncher()
     float x = 0;
     float z = -std::floor(((float) this->_mapSize.y / 2.0f));
     this->_map = _mapParser.getMap();
-    //raylib::builder::RlMeshBuilder()
-    //        .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
-    //        .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build()
-    auto mesh = std::make_shared<raylib::model::RlMesh>(std::move(raylib::model::MeshGenerator::genMeshCube(1.0f, 1.0f, 1.0f)));
-    raylib::model::RlModel model = raylib::model::RlModel(mesh);
+    auto mesh = std::make_shared<raylib::model::RlMesh>(raylib::builder::RlMeshBuilder()
+        .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
+        .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build());
 
     for (auto &item : this->_map) {
         x = -std::floor(((float) this->_mapSize.x / 2.0f));
@@ -105,10 +103,10 @@ void indie::GameScene::sceneLauncher()
                 case MapType::NONE:
                     break;
                 case MapType::WALL:
-                    this->addWall({x, 0.5, z}, model);
+                    this->addWall({x, 0.5, z}, mesh);
                     break;
                 case MapType::BREAKABLE_WALL:
-                    this->addBreakableWall({x, 0.5, z}, model);
+                    this->addBreakableWall({x, 0.5, z}, mesh);
                     break;
                 case MapType::PLAYER_SPAWN:
                     this->_playerSpawn.emplace_back(x, z);
@@ -126,7 +124,7 @@ void indie::GameScene::sceneLauncher()
     long xMiddle = std::floor(((float) this->_mapSize.x / 2.0f));
     for (long zPos = -zMiddle; zPos <= zMiddle; zPos++)
         for (long xPos = -xMiddle; xPos <= xMiddle; xPos++)
-            this->addFloor({(float) xPos, -0.05, (float) zPos}, model);
+            this->addFloor({(float) xPos, -0.05, (float) zPos}, mesh);
 
     if (this->_playerSpawn.size() != 4)
         std::cerr << "Player spawns are not well defined" << std::endl;
