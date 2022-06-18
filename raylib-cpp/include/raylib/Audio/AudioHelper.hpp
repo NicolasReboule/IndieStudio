@@ -13,7 +13,7 @@
 
 namespace raylib::helper {
     /**
-     * @brief Helper for audio device management functions, and more
+     * @brief Helper class for audio device management functions, and more
      */
     class AudioHelper {
     public:

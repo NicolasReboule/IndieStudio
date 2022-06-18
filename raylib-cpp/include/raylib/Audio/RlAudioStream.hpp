@@ -10,7 +10,7 @@
 
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::audio {
     /**
      * @brief Encapsulation of the raylib AudioStream
      */

@@ -14,7 +14,7 @@
 
 namespace raylib::shader {
     /**
-     * @brief The encapsultation of the raylib Shader
+     * @brief Encapsultation of the raylib Shader
      * NOTE: Shader functionality is not available on OpenGL 1.1
      */
     class RlShader {

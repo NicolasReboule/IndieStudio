@@ -11,7 +11,7 @@
 #include "raylib/Math/VectorHelper.hpp"
 #include <raylib.h>
 
-namespace raylib {
+namespace raylib::helper {
     /**
      * @brief Helper class for 2D collision detection
      */
