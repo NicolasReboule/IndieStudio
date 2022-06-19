@@ -133,13 +133,13 @@ void indie::ChooseNumberPlayerScene::updateScene(const float &delta)
             break;
         case 1:
             mapDefault.setHiding(true);
-            mapEmpty.setHiding(false);
-            mapCool.setHiding(true);
+            mapEmpty.setHiding(true);
+            mapCool.setHiding(false);
             break;
         case 2:
             mapDefault.setHiding(true);
-            mapEmpty.setHiding(true);
-            mapCool.setHiding(false);
+            mapEmpty.setHiding(false);
+            mapCool.setHiding(true);
             break;
         default:
             break;
