@@ -74,7 +74,7 @@ std::string raylib::helper::FileHelper::getPrevDirectoryPath(const std::string &
 
 std::string raylib::helper::FileHelper::getWorkingDirectory()
 {
-    return std::filesystem::current_path().string();
+    return std::filesystem::current_path().generic_string();
 }
 
 std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath, const bool &recursive)
@@ -83,11 +83,11 @@ std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std
     if (recursive) {
         for (auto &p : std::filesystem::recursive_directory_iterator(dirPath))
             if (p.is_regular_file())
-                files.push_back(p.path().string());
+                files.push_back(p.path().generic_string());
         return files;
     }
     for (auto &p : std::filesystem::directory_iterator(dirPath))
-        files.push_back(p.path().string());
+        files.push_back(p.path().generic_string());
     return files;
 }
 
@@ -103,13 +103,13 @@ std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std
     std::vector<std::string> files;
     if (recursive) {
         for (auto &p : std::filesystem::recursive_directory_iterator(dirPath))
-            if (p.is_regular_file() && filterFunction(p.path().string()))
-                files.push_back(p.path().string());
+            if (p.is_regular_file() && filterFunction(p.path().generic_string()))
+                files.push_back(p.path().generic_string());
         return files;
     }
     for (auto &p : std::filesystem::directory_iterator(dirPath))
-        if (filterFunction(p.path().string()))
-            files.push_back(p.path().string());
+        if (filterFunction(p.path().generic_string()))
+            files.push_back(p.path().generic_string());
     return files;
 }
 
