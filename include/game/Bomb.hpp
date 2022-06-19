@@ -36,6 +36,7 @@ namespace indie {
         std::string _playerOwner;
         float _timer;
         int _range;
+        std::shared_ptr<gameengine::AudioManager> &_audioManager;
     };
 
 }

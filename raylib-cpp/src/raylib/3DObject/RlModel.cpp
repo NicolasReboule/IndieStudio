@@ -77,7 +77,6 @@ raylib::model::RlModel::~RlModel()
 {
     if (this->_model.use_count() != 1)
         return;
-    std::cout << "~RlModel()" << std::endl;
     if (this->_mesh)
         UnloadModelKeepMeshes(*this->_model);
     else

@@ -6,19 +6,11 @@
 */
 
 #include "game/Player.hpp"
-#include "game/Bomb.hpp"
-#include "game/ButtonMainMenu.hpp"
-#include "game/ButtonQuitx05.hpp"
-#include "game/ButtonResume.hpp"
-#include "global/GlobalInstance.hpp"
-#include "game/Magma.hpp"
-#include "game/Bonus.hpp"
-#include "winning/ButtonRestart.hpp"
-#include "game/Wall.hpp"
 
 indie::Player::Player(const std::string &name, const raylib::model::RlModel &model, \
 const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &numpadId)
-    : gameengine::node::_3D::KinematicBody(name, model, texture), _anim(model, "./assets/models/player.iqm")
+    : gameengine::node::_3D::KinematicBody(name, model, texture), _anim(model, "./assets/models/player.iqm"),
+                      _audioManager(gameengine::AudioManager::getInstance())
 {
     this->_numpadId = numpadId;
     this->_state = ALIVE;
@@ -146,25 +138,22 @@ void indie::Player::checkCollisions()
         try {
             auto &bonus = dynamic_cast<indie::Bonus &>(*node);
             if (raylib::helper::Collision3dHelper::checkCollisionBoxes(this->getBoundingBox(), bonus.getBoundingBox())) {
+                this->_audioManager->playSound("powerup");
                 switch (bonus.getBonusType()) {
                     case Bonus::FIRE:
-                        std::cout << "bonus fire" << std::endl;
                         this->_range += 1;
                         sceneManager->deleteNode(node->getName());
                         return;
                     case Bonus::BOMB:
-                        std::cout << "bonus bomb" << std::endl;
                         this->_bombStock += 1;
                         sceneManager->deleteNode(node->getName());
                         return;
                         return;
                     case Bonus::SPEED:
-                        std::cout << "bonus speed" << std::endl;
                         this->_speed += 2;
                         sceneManager->deleteNode(node->getName());
                         return;
                     case Bonus::GHOST:
-                        std::cout << "bonus ghost" << std::endl;
                         this->_state = GHOST;
                         sceneManager->deleteNode(node->getName());
                         return;
@@ -209,6 +198,7 @@ void indie::Player::handleInput()
         direction.z = 1;
         this->setRotationDegrees(90, {0, 1, 0});
     }
+
     if (direction.x == 0 && direction.z == 0) {
         if (this->_timerAnim <= 0) {
             this->_anim.incrementFrameCount();
@@ -220,7 +210,8 @@ void indie::Player::handleInput()
             this->_anim.update(0);
         }
 
-        Vector3f newPosition = {this->getPosition().x + this->_tempSpeed * direction.x, this->getPosition().y + this->_tempSpeed * direction.y,
+        Vector3f newPosition = {this->getPosition().x + this->_tempSpeed * direction.x,
+                                this->getPosition().y + this->_tempSpeed * direction.y,
                                 this->getPosition().z + this->_tempSpeed * direction.z};
 
         if (this->_state == ALIVE) {
@@ -242,12 +233,12 @@ void indie::Player::handleInput()
     }
 
 
-    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
+    if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_ESCAPE) || raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
 
-        auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
-        auto &buttonRestart = dynamic_cast<indie::ButtonRestartx05 &>(*sceneManager->getNode("buttonRestart"));
-        auto &buttonMainMenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
-        auto &buttonQuit = dynamic_cast<indie::ButtonQuitx05 &>(*sceneManager->getNode("buttonQuit"));
+        auto &buttonResume = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonResume"));
+        auto &buttonRestart = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonRestart"));
+        auto &buttonMainMenu = dynamic_cast<indie::button::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
+        auto &buttonQuit = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonQuit"));
 
         buttonResume.setHiding(false);
         buttonRestart.setHiding(false);
@@ -298,5 +289,6 @@ void indie::Player::playerDead()
     this->setColor(color);
     this->_state = DEAD;
     this->_collisionEnable = false;
+    this->_audioManager->playSound("death");
 }
 

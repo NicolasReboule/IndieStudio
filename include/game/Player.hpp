@@ -8,7 +8,14 @@
 #ifndef INDIESTUDIO_PLAYER_HPP
 #define INDIESTUDIO_PLAYER_HPP
 
-#include "GameEngine/GameEngine.hpp"
+#include "game/Bomb.hpp"
+#include "button/ButtonMainMenu.hpp"
+#include "button/ButtonResume.hpp"
+#include "global/GlobalInstance.hpp"
+#include "game/Magma.hpp"
+#include "game/Bonus.hpp"
+#include "game/Wall.hpp"
+#include <GameEngine/GameEngine.hpp>
 
 namespace indie {
 
@@ -51,6 +58,7 @@ namespace indie {
         int _range;
         int _bombStock;
         float _timerGhost;
+        std::shared_ptr<gameengine::AudioManager> &_audioManager;
 
         State _state;
 

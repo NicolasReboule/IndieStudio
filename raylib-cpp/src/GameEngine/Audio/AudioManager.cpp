@@ -49,7 +49,6 @@ void gameengine::AudioManager::addSound(const std::string &filePath, AbstractSou
         this->_sounds.emplace_back(std::make_unique<gameengine::audio::Sound>(filePath, category));
     else
         this->_sounds.emplace_back(std::make_unique<gameengine::audio::Music>(filePath, category));
-    this->_sounds.back()->setVolume(100);
     std::cout << "[GameEngine][AudioManager] Loaded: " << filePath << std::endl;
 }
 

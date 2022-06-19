@@ -8,6 +8,8 @@
 #include "raylib/Audio/RlSound.hpp"
 #include "raylib/Audio/RlWave.hpp"
 
+#include <iostream>
+
 raylib::audio::RlSound::RlSound(const Sound &sound) : _sound(sound), _volume(100)
 {
 }
@@ -22,6 +24,7 @@ raylib::audio::RlSound::RlSound(const raylib::audio::RlWave &wave) : _sound(Load
 
 raylib::audio::RlSound::~RlSound()
 {
+    std::cout << "~RlSound" << std::endl;
     if (this->_sound.stream.buffer)
         UnloadSound(this->_sound);
     this->_sound.stream.buffer = nullptr;

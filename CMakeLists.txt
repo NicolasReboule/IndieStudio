@@ -15,33 +15,24 @@ include_directories(include raylib-cpp/include/) # Add the good includes
 
 add_executable(${BINARY_NAME}
         main.cpp
-        src/chooseNumberPlayer/Button1p.cpp
-        src/chooseNumberPlayer/Button2p.cpp
-        src/chooseNumberPlayer/Button3p.cpp
-        src/chooseNumberPlayer/Button4p.cpp
-        src/chooseNumberPlayer/ChooseNumberPlayerScene.cpp
+        src/scene/ChooseNumberPlayerScene.cpp
         src/game/Bomb.cpp
         src/game/Bonus.cpp
-        src/game/ButtonMainMenu.cpp
-        src/game/ButtonQuitx05.cpp
-        src/game/ButtonResume.cpp
-        src/game/GameScene.cpp
+        src/button/ButtonMainMenu.cpp
+        src/button/ButtonResume.cpp
+        src/scene/GameScene.cpp
         src/game/Magma.cpp
         src/game/Player.cpp
         src/game/Wall.cpp
         src/game/WallDestroyable.cpp
-        src/global/Global.cpp
         src/global/GlobalInstance.cpp
-        src/global/GlobalScene.cpp
-        src/mainMenu/ButtonQuit.cpp
-        src/mainMenu/ButtonStart.cpp
-        src/mainMenu/MainMenuScene.cpp
-        src/start/Image.cpp
-        src/start/StartScene.cpp
-        src/winning/WinningScene.cpp
-        src/winning/ButtonRestart.cpp
-        src/chooseNumberPlayer/ButtonLeft.cpp
-        src/chooseNumberPlayer/ButtonRight.cpp include/IndieButton.hpp src/IndieButton.cpp)
+        src/scene/MainMenuScene.cpp
+        src/Image.cpp
+        src/scene/StartScene.cpp
+        src/scene/WinningScene.cpp
+        src/button/IndieButton.cpp
+        src/button/ButtonQuit.cpp
+        src/button/ButtonRestart.cpp)
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 
