@@ -4,12 +4,12 @@ Engine & Raylib encapsulation for IndieStudio project
 
 ## Team
 
-- [Alwyn Mattapullut](alwyn.mattapullut@epitech.eu) - :mortar_board: :computer:
-- [Noa Olivette](noa.olivette@epitech.eu) - :video_game: :computer:
-- [Nicolas Reboulé](nicolas.reboule@epitech.eu) - :computer:
-- [Hugo Baret](hugo.baret@epitech.eu) - :computer:
-- [Quentin Robert](quentin.robert@epitech.eu) - :man_with_probing_cane:
-- [Nicolas Julie](nicolas.julie@epitech.eu) - :see_no_evil:
+- [Alwyn Mattapullut](alwyn.mattapullut@epitech.eu) - **Leader**
+- [Noa Olivette](noa.olivette@epitech.eu) - **Developer**
+- [Nicolas Reboulé](nicolas.reboule@epitech.eu) - **Developper**
+- [Hugo Baret](hugo.baret@epitech.eu) - **Developper**
+- [Quentin Robert](quentin.robert@epitech.eu) - **Missing Person**
+- [Nicolas Julie](nicolas.julie@epitech.eu) - **Missing Person**
 
 ## Wiki
 
@@ -19,8 +19,8 @@ Engine & Raylib encapsulation for IndieStudio project
 
 ### Full project Uml
 
-![Full project uml](indie.svg)
+![Full project uml](./indie.svg)
 
 ### Raylib-CPP + GameEngine UML
 
-![Raylib uml](raylib.svg)
+![Raylib uml](./raylib.svg)
