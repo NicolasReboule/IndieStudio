@@ -11,6 +11,9 @@
 #include <raylib/Raylib.hpp>
 
 namespace gameengine {
+    /**
+     * @brief Manage all textures, and load them if they are not loaded
+     */
     class TextureManager {
     public:
         /**

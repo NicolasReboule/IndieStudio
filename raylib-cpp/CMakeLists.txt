@@ -84,7 +84,6 @@ add_library(${PROJECT_NAME}
         src/GameEngine/Nodes/2D/TextureRect.cpp
         src/GameEngine/Nodes/3D/Grid3D.cpp
         src/GameEngine/Nodes/3D/KinematicBody.cpp
-        src/GameEngine/Nodes/3D/MultiCube.cpp
         src/GameEngine/Nodes/3D/Node3D.cpp
         src/GameEngine/Nodes/3D/StaticBody.cpp
         src/GameEngine/Nodes/AbstractBase.cpp

@@ -12,7 +12,9 @@
 #include "raylib/Math/VectorHelper.hpp"
 
 namespace gameengine::node::_2D {
-
+    /**
+     * @brief Basic button implementation
+     */
     class Button : public Node2D {
     public:
         /**

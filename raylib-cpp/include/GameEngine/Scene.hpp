@@ -14,7 +14,7 @@
 
 namespace gameengine {
     /**
-     * @brief Scene class
+     * @brief A Scene is a node that contains other nodes.
      */
     class Scene {
     public:

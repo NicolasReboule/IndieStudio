@@ -8,6 +8,11 @@
 #ifndef INDIESTUDIO_GAMEENGINE_HPP
 #define INDIESTUDIO_GAMEENGINE_HPP
 
+/**
+ * @brief The only purpose of this is to include all the headers
+ * @file GameEngine.hpp
+ */
+
 #include "Audio/AbstractSound.hpp"
 #include "Audio/AudioManager.hpp"
 #include "Audio/Music.hpp"
@@ -21,7 +26,6 @@
 #include "Nodes/2D/TextureRect.hpp"
 #include "Nodes/3D/Grid3D.hpp"
 #include "Nodes/3D/KinematicBody.hpp"
-#include "Nodes/3D/MultiCube.hpp"
 #include "Nodes/3D/Node3D.hpp"
 #include "Nodes/3D/StaticBody.hpp"
 #include "Scene.hpp"

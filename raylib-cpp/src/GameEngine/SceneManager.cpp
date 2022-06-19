@@ -195,9 +195,9 @@ void gameengine::SceneManager::deleteNode(const std::string &name)
     this->_nodesToDelete.push_back(name);
 }
 
-void gameengine::SceneManager::deleteNodeInclude(const std::string &IncludeName)
+void gameengine::SceneManager::deleteNodeInclude(const std::string &containedName)
 {
-    this->_nodesToDeleteIncludes.push_back(IncludeName);
+    this->_nodesToDeleteIncludes.push_back(containedName);
 }
 
 void gameengine::SceneManager::setPaused(bool value)
