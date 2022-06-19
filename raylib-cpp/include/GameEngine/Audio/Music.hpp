@@ -9,13 +9,27 @@
 #define INDIESTUDIO_MUSIC_HPP
 
 #include "raylib/Raylib.hpp"
-#include "ISound.hpp"
+#include "AbstractSound.hpp"
 
 namespace gameengine::audio {
-        class Music : public ISound, public raylib::audio::RlMusic {
-        public:
-            Music(const std::string &fileName, SoundCategory category);
-        };
-    }
+    /**
+     * @brief A music
+     */
+    class Music : public AbstractSound, public raylib::audio::RlMusic {
+    public:
+        /**
+         * @brief Construct a new Music object
+         * @param fileName the file name
+         * @param category the category
+         */
+        explicit Music(const std::string &fileName, AbstractSound::SoundCategory category);
+
+        /**
+         * @brief Set the volume
+         * @param volume the volume
+         */
+        void setVolume(const float &volume) override;
+    };
+}
 
 #endif //INDIESTUDIO_MUSIC_HPP

@@ -111,13 +111,6 @@ void gameengine::SceneManager::update()
             scene->update(delta);
         }
 
-    /*if (raylib::helper::input::GamepadHelper::isGamepadAvailable(0)) {
-        float gamepadX = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(0, GAMEPAD_AXIS_LEFT_X);
-        float gamepadY = raylib::helper::input::GamepadHelper::getGamepadAxisMovement(0, GAMEPAD_AXIS_LEFT_Y);
-        Vector2f pos = raylib::helper::input::MouseHelper::getMousePosition();
-        raylib::helper::input::MouseHelper::setMousePosition((int) (pos.x + gamepadX), (int) (pos.y + gamepadY));
-    }*/
-
     this->deleteNodeInLst();
     this->changeSceneInWaiting();
 }
@@ -133,8 +126,6 @@ void gameengine::SceneManager::drawAll(raylib::RlCamera &camera)
     if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_R))
         camera.reset();
     camera.update();
-
-
 
     raylib::helper::draw::DrawHelper::beginMode3D(camera);
 

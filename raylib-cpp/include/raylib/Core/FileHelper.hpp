@@ -111,10 +111,10 @@ namespace raylib::helper {
         /**
          * @brief Get all files in directory
          * @param dirPath the directory path
-         * @param count the number of files
+         * @param recursive true to get all files in subdirectories
          * @return the files
          */
-        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath);
+        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath, const bool &recursive = false);
 
         /**
          * @brief Get all files in directory with a filter
@@ -123,7 +123,17 @@ namespace raylib::helper {
          * If null, all files are kept
          * @return the files
          */
-        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath, const std::function<bool(const std::string &fileName)> &filterFunction);
+        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath, const std::function<bool(const std::string &)> &filter);
+
+        /**
+         * @brief Get all files in directory with a filter
+         * @param dirPath the directory path
+         * @param filterFunction the filter function to apply (true to keep file)
+         * @param recursive true to get all files in subdirectories
+         * If null, all files are kept
+         * @return the files
+         */
+        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath, const bool &recursive, const std::function<bool(const std::string &fileName)> &filterFunction);
 
         /**
          * @brief Change working directory

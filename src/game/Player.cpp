@@ -112,7 +112,7 @@ void indie::Player::spawnBomb()
         .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
     raylib::model::RlModel model = raylib::model::RlModel(std::make_shared<raylib::model::RlMesh>(mesh));*/
     auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)),
-        std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/tnt.png"), this->_range, this->getName());
+        std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/tnt_side.png"), this->_range, this->getName());
 
     bomb->setRotationDegrees(-90, {1, 0, 0});
 

@@ -9,8 +9,8 @@
 #define INDIESTUDIO_GAMEENGINE_HPP
 
 #include "Audio/AudioManager.hpp"
-#include "Audio/Fx.hpp"
-#include "Audio/ISound.hpp"
+#include "Audio/Sound.hpp"
+#include "Audio/AbstractSound.hpp"
 #include "Audio/Music.hpp"
 #include "GameEngine/Nodes/2D/Button.hpp"
 #include "GameEngine/Nodes/2D/Label.hpp"

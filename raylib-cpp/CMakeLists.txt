@@ -73,8 +73,8 @@ add_library(${PROJECT_NAME}
         src/raylib/Window/System.cpp
 
         src/GameEngine/Audio/AudioManager.cpp
-        src/GameEngine/Audio/ISound.cpp
-        src/GameEngine/Audio/Fx.cpp
+        src/GameEngine/Audio/AbstractSound.cpp
+        src/GameEngine/Audio/Sound.cpp
         src/GameEngine/Audio/Music.cpp
         src/GameEngine/Nodes/3D/StaticBody.cpp
         src/GameEngine/Nodes/3D/Node3D.cpp

@@ -77,19 +77,36 @@ std::string raylib::helper::FileHelper::getWorkingDirectory()
     return std::filesystem::current_path().string();
 }
 
-std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath)
+std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath, const bool &recursive)
 {
     std::vector<std::string> files;
+    if (recursive) {
+        for (auto &p : std::filesystem::recursive_directory_iterator(dirPath))
+            if (p.is_regular_file())
+                files.push_back(p.path().string());
+        return files;
+    }
     for (auto &p : std::filesystem::directory_iterator(dirPath))
         files.push_back(p.path().string());
     return files;
 }
 
-std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath, const std::function<bool(const std::string &)> &filterFunction)
+std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath,const std::function<bool(const std::string &)> &filter)
+{
+    return getDirectoryFiles(dirPath, false, filter);
+}
+
+std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath, const bool &recursive, const std::function<bool(const std::string &)> &filterFunction)
 {
     if (filterFunction == nullptr)
-        return getDirectoryFiles(dirPath);
+        return getDirectoryFiles(dirPath, recursive);
     std::vector<std::string> files;
+    if (recursive) {
+        for (auto &p : std::filesystem::recursive_directory_iterator(dirPath))
+            if (p.is_regular_file() && filterFunction(p.path().string()))
+                files.push_back(p.path().string());
+        return files;
+    }
     for (auto &p : std::filesystem::directory_iterator(dirPath))
         if (filterFunction(p.path().string()))
             files.push_back(p.path().string());
