@@ -19,6 +19,7 @@ void indie::StartScene::sceneLauncher()
 
     textureManager->loadTextures();
     map3DLoader->loadMaps();
+    this->_startTimestamp = Time::getMillisecondsTime();
 
     auto gameScreen = std::make_shared<indie::Image>("gameScreen", textureManager->getTexture("./assets/textures/gui/splashart.png"));
     this->addNode(gameScreen);

@@ -25,7 +25,7 @@ void indie::GameScene::sceneLauncher()
     window->setCamera(camera);
 
     for (const auto &item: this->_map->getMapModels())
-        this->addNode(item); //should work i think lol
+        this->addNode(item);
 
     for (int i = 0; i < globalInstance->_numberPlayers; i++) {
         std::string color;
@@ -81,7 +81,6 @@ void indie::GameScene::initScene()
     auto &window = raylib::window::RlWindow::getInstance();
 
     this->_indexMenu = 0;
-
     this->_winTimer = 3.0f;
 
     BoundingBox box = {{-0.2, 0, -0.2},{0.2,  2, 0.2}};
@@ -174,34 +173,58 @@ void indie::GameScene::updateScene(const float &delta)
         auto &mainMenuPos = buttonMainMenu.getPosition();
         auto &mainMenuOri = buttonMainMenu.getOrigin();
         auto &quitPos = buttonQuit.getPosition();
-        auto &quitOri = buttonQuit.getOrigin();
+
+        static bool mouseMoved = false;
+        if (!mouseMoved) {
+            switch (this->_indexMenu) {
+                case 0:
+                    raylib::helper::input::MouseHelper::setMousePosition((int) resumePos.x, (int) (resumePos.y - resumeOri.y));
+                    break;
+                case 1:
+                    raylib::helper::input::MouseHelper::setMousePosition((int) restartPos.x, (int) (restartPos.y - restartOri.y));
+                    break;
+                case 2:
+                    raylib::helper::input::MouseHelper::setMousePosition((int) mainMenuPos.x, (int) (mainMenuPos.y - mainMenuOri.y));
+                    break;
+                case 3:
+                    raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitPos.y));
+                    break;
+            }
+            mouseMoved = true;
+        }
 
         if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
             if (this->_indexMenu == 0) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) (restartPos.x + restartOri.x), (int) (restartPos.y + restartOri.y));
+                raylib::helper::input::MouseHelper::setMousePosition((int) restartPos.x, (int) (restartPos.y - restartOri.y));
                 this->_indexMenu = 1;
+                mouseMoved = false;
             }
             else if (this->_indexMenu == 1) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) (mainMenuPos.x + mainMenuOri.x), (int) (mainMenuPos.y + mainMenuOri.y));
+                raylib::helper::input::MouseHelper::setMousePosition((int) mainMenuPos.x, (int) (mainMenuPos.y - mainMenuOri.y));
                 this->_indexMenu = 2;
+                mouseMoved = false;
             }
             else if (this->_indexMenu == 2) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) (quitPos.x + quitOri.x), (int) (quitPos.y + quitOri.y));
+                raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitPos.y));
                 this->_indexMenu = 3;
+                mouseMoved = false;
             }
         }
         if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
             if (this->_indexMenu == 1) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) (resumePos.x + resumeOri.x), (int) (resumePos.y + resumeOri.y));
+                raylib::helper::input::MouseHelper::setMousePosition((int) resumePos.x, (int) (resumePos.y - resumeOri.y));
                 this->_indexMenu = 0;
+                mouseMoved = false;
             }
             else if (this->_indexMenu == 2) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) (restartPos.x + restartOri.x), (int) (restartPos.y + restartOri.y));
+                raylib::helper::input::MouseHelper::setMousePosition((int) restartPos.x, (int) (restartPos.y - restartOri.y));
                 this->_indexMenu = 1;
+                mouseMoved = false;
             }
             else if (this->_indexMenu == 3) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) (mainMenuPos.x + mainMenuOri.x), (int) (mainMenuPos.y + mainMenuOri.y));
+                raylib::helper::input::MouseHelper::setMousePosition((int) mainMenuPos.x, (int) (mainMenuPos.y - mainMenuOri.y));
                 this->_indexMenu = 2;
+                mouseMoved = false;
             }
         }
         if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
