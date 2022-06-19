@@ -33,7 +33,7 @@ void gameengine::SceneManager::changeSceneInWaiting()
     if (this->_waitingScene == "empty" || this->_waitingScene.empty())
         return;
 
-    std::cout << "change scene to : " << this->_waitingScene << std::endl;
+    std::cout << "[GameEngine][SceneManager] Changing scene to : " << this->_waitingScene << std::endl;
 
     if (!this->_actualScene.empty())
         for (std::shared_ptr<gameengine::Scene> &sceneItem : this->_scenes) {
@@ -43,10 +43,7 @@ void gameengine::SceneManager::changeSceneInWaiting()
             }
         }
 
-    std::cout << this->_waitingScene << std::endl;
-
     for (std::shared_ptr<gameengine::Scene> &sceneItem : this->_scenes) {
-        std::cout << sceneItem->getSceneSource() << std::endl;
         if (sceneItem->getSceneSource() == this->_waitingScene) {
             this->_actualScene = sceneItem->getName();
             sceneItem->sceneLauncher();
@@ -210,7 +207,7 @@ void gameengine::SceneManager::setPaused(bool value)
             scene->setPaused(value);
 }
 
-bool gameengine::SceneManager::getPaused()
+bool gameengine::SceneManager::isPaused()
 {
     for (std::shared_ptr<gameengine::Scene> &scene : this->_scenes)
         if (scene->getSceneSource() == this->_actualScene)

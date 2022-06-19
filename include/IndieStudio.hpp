@@ -8,12 +8,12 @@
 #ifndef INDIESTUDIO_INDIESTUDIO_HPP
 #define INDIESTUDIO_INDIESTUDIO_HPP
 
-#include "start/StartScene.hpp"
-#include "mainMenu/MainMenuScene.hpp"
-#include "game/GameScene.hpp"
-#include "chooseNumberPlayer/ChooseNumberPlayerScene.hpp"
+#include "scene/StartScene.hpp"
+#include "scene/MainMenuScene.hpp"
+#include "scene/GameScene.hpp"
+#include "scene/ChooseNumberPlayerScene.hpp"
 #include "global/GlobalInstance.hpp"
-#include "winning/WinningScene.hpp"
+#include "scene/WinningScene.hpp"
 
 #include <GameEngine/GameEngine.hpp>
 

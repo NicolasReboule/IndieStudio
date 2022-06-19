@@ -12,7 +12,7 @@
 #include "game/WallDestroyable.hpp"
 
 indie::Bomb::Bomb(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner)
-    : MultiCube(name, {1, 1, 1}, texture)
+    : MultiCube(name, {1, 1, 1}, texture), _audioManager(gameengine::AudioManager::getInstance())
 {
     this->_range = range;
     this->_timer = 2;
@@ -21,6 +21,7 @@ indie::Bomb::Bomb(const std::string &name, const std::shared_ptr<raylib::texture
 
 void indie::Bomb::init()
 {
+    _audioManager->playSound("active_bomb");
     this->_collisionEnable = false;
 }
 
@@ -65,6 +66,7 @@ void indie::Bomb::enableCollision()
 
 void indie::Bomb::spawnMagma()
 {
+    _audioManager->playSound("explosion");
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
     const Vector3f &bombPos = this->getPosition();

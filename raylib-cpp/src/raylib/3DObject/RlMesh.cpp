@@ -28,7 +28,6 @@ raylib::model::RlMesh &raylib::model::RlMesh::operator=(const raylib::model::RlM
 
 raylib::model::RlMesh::~RlMesh()
 {
-    std::cout << "~RlMesh()" << std::endl;
     if (this->_mesh.use_count() != 1)
         return;
     UnloadMesh(*this->_mesh);

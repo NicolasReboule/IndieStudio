@@ -49,7 +49,7 @@ namespace gameengine {
 
         void setPaused(bool value);
 
-        bool getPaused();
+        bool isPaused();
 
     private:
         void deleteNodeInLst();
