@@ -239,7 +239,6 @@ void indie::Player::handleInput()
         }
     }
 
-
     if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_ESCAPE) || raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
 
         auto &buttonResume = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonResume"));
@@ -341,6 +340,7 @@ void indie::Player::botControl()
     auto random = raylib::Random();
 
     if (this->botTarget == "up" && !this->moveAndCollide(up)) {
+        this->setRotationDegrees(270, {0, 1, 0});
         int rand = random.generate(0, 2);
         if (rand == 0)
             this->botTarget = "left";
@@ -352,6 +352,7 @@ void indie::Player::botControl()
             this->botTarget = "down";
     }
     else if (this->botTarget == "left" && !this->moveAndCollide(left)) {
+        this->setRotationDegrees(0, {0, 1, 0});
         int rand = random.generate(0, 2);
         if (rand == 0)
             this->botTarget = "down";
@@ -363,6 +364,7 @@ void indie::Player::botControl()
             this->botTarget = "right";
     }
     else if (this->botTarget == "down" && !this->moveAndCollide(down)) {
+        this->setRotationDegrees(90, {0, 1, 0});
         int rand = random.generate(0, 2);
         if (rand == 0)
             this->botTarget = "right";
@@ -374,6 +376,7 @@ void indie::Player::botControl()
             this->botTarget = "up";
     }
     else if (this->botTarget == "right" && !this->moveAndCollide(right)) {
+        this->setRotationDegrees(180, {0, 1, 0});
         int rand = random.generate(0, 2);
         if (rand == 0)
             this->botTarget = "up";
