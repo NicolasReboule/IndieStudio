@@ -29,6 +29,7 @@ If you want to build the game you can run the following command:
 git clone https://github.com/alwyn974/IndieStudio.git
 cd IndieStudio
 mkdir build
+cd build
 cmake ..
 cmake --build . --config Release
 ```
@@ -45,8 +46,9 @@ If you want to install the game you can run the following command:
 git clone https://github.com/alwyn974/IndieStudio.git
 cd IndieStudio
 mkdir build
+cd build
 cmake ..
 cpack
 ```
 
-At the root of the repository a `dist` directory will be created. It contains the game.
+At the root of the repository a `dist` directory will be created. It contains the game installer.
