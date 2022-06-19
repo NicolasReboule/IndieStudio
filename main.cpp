@@ -17,8 +17,7 @@ int main(int ac, char **av)
 
         window->createWindow("Bomberman", 1280, 720, 60);
         window->setConfigFlags(FLAG_WINDOW_RESIZABLE);
-        window->setCamera(
-            raylib::builder::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build());
+        window->setCamera(raylib::builder::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build());
         raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
         raylib::helper::input::KeyboardHelper::setExitKey(KEY_NULL);
         raylib::image::RlImage image = raylib::helper::ImageHelper::load("./assets/textures/icon.png");
@@ -58,6 +57,7 @@ int main(int ac, char **av)
         std::cerr << "An unknown error occured" << std::endl;
         return (84);
     }
+    indie::map::Map3DLoader::getInstance().reset();
     return (0);
 }
 

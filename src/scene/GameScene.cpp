@@ -206,7 +206,6 @@ void indie::GameScene::updateScene(const float &delta)
                 mouseMoved = false;
             }
             else if (this->_indexMenu == 2) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitOri.y));
                 this->_indexMenu = 3;
                 mouseMoved = false;
             }
@@ -229,6 +228,7 @@ void indie::GameScene::updateScene(const float &delta)
             }
         }
         if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+            mouseMoved = false;
             switch (this->_indexMenu) {
                 case 0:
                     buttonResume.pressed();

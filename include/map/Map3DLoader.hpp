@@ -67,10 +67,10 @@ namespace indie::map {
          * @brief Get the singleton instance of the map loader
          * @return the singleton instance of the map loader
          */
-        static std::unique_ptr<Map3DLoader> &getInstance();
+        static std::shared_ptr<Map3DLoader> &getInstance();
 
     private:
-        static std::unique_ptr<Map3DLoader> _instance; /**< The instance of the map loader */
+        static std::shared_ptr<Map3DLoader> _instance; /**< The instance of the map loader */
 
         /**
          * @brief Parse the map

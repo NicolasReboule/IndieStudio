@@ -41,7 +41,7 @@ namespace indie {
 
         std::vector<Vector2f> buttonsPos;
 
-        std::unique_ptr<map::Map3DLoader> &_map3DLoader;
+        std::shared_ptr<map::Map3DLoader> &_map3DLoader;
         std::shared_ptr<map::Map> _map;
         std::unique_ptr<gameengine::TextureManager> &_textureManager;
     };

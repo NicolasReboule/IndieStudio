@@ -7,7 +7,7 @@
 
 #include "map/Map3DLoader.hpp"
 
-std::unique_ptr<indie::map::Map3DLoader> indie::map::Map3DLoader::_instance;
+std::shared_ptr<indie::map::Map3DLoader> indie::map::Map3DLoader::_instance;
 
 indie::map::Map3DLoader::Map3DLoader() : _textureManager(gameengine::TextureManager::getInstance()), _mapSizeMax(200, 200)
 {
@@ -139,7 +139,7 @@ void indie::map::Map3DLoader::setMapSizeMax(const Vector2u &mapSizeMax)
     this->_mapSizeMax = mapSizeMax;
 }
 
-std::unique_ptr<indie::map::Map3DLoader> &indie::map::Map3DLoader::getInstance()
+std::shared_ptr<indie::map::Map3DLoader> &indie::map::Map3DLoader::getInstance()
 {
     if (_instance == nullptr)
         _instance = std::make_unique<Map3DLoader>();
