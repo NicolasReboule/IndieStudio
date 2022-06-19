@@ -162,14 +162,14 @@ namespace raylib {
          * @param other another color
          * @return true if the two color are equal, false otherwise
          */
-        bool operator==(const RlColor &rhs) const;
+        bool operator==(const RlColor &other) const;
 
         /**
          * @brief Check inequality between two colors
          * @param other another color
          * @return true if the two color are not equal, false otherwise
          */
-        bool operator!=(const RlColor &rhs) const;
+        bool operator!=(const RlColor &other) const;
 
         /**
          * @brief Remove the value to all the color components

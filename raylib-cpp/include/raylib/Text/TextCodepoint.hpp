@@ -38,7 +38,7 @@ namespace raylib::text {
 
         /**
          * @brief Encode one codepoint into UTF-8 byte (array length returned as parameter)
-         * @oaram codepoint the codepoint to encode
+         * @param codepoint the codepoint to encode
          * @param byteSize the size of the codepoint will be stored in it
          * @return the codepoint count
          */
@@ -46,7 +46,7 @@ namespace raylib::text {
 
         /**
          * @brief Encode text as codepoints array into UTF-8 text string
-         * @param length the length of the codepoints (in bytes)
+         * @param bytesLength the length of the codepoints (in bytes)
          * @return the UTF-8 text string
          */
         std::string toUTF8String(const int &bytesLength);

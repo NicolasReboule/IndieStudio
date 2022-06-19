@@ -168,9 +168,9 @@ bool raylib::RlColor::operator==(const raylib::RlColor &other) const
            && this->_color.b == other.getBlue() && this->_color.a == other.getAlpha();
 }
 
-bool raylib::RlColor::operator!=(const raylib::RlColor &rhs) const
+bool raylib::RlColor::operator!=(const raylib::RlColor &other) const
 {
-    return !(rhs == *this);
+    return !(other == *this);
 }
 
 raylib::RlColor &raylib::RlColor::operator-(unsigned char value)

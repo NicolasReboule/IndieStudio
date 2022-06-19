@@ -25,7 +25,6 @@ namespace raylib::helper {
         /**
          * @brief Load file data as byte array (read)
          * @param fileName the file name
-         * @param bytesRead the number of bytes read
          * @return the byte array
          */
         static std::vector<unsigned char> loadFileData(const std::string &fileName);
@@ -123,7 +122,7 @@ namespace raylib::helper {
          * If null, all files are kept
          * @return the files
          */
-        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath, const std::function<bool(const std::string &)> &filter);
+        static std::vector<std::string> getDirectoryFiles(const std::string &dirPath, const std::function<bool(const std::string &)> &filterFunction);
 
         /**
          * @brief Get all files in directory with a filter

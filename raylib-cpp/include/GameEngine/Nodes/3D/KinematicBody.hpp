@@ -27,7 +27,7 @@ namespace gameengine::node::_3D {
          * @brief Construct a new Kinematic Body object
          * @param name the name of the body
          * @param model the model of the body
-         * @param texturePath the path of the texture
+         * @param texture the texture
          */
         explicit KinematicBody(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture);
 

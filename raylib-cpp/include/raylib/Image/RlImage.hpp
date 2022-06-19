@@ -208,7 +208,6 @@ namespace raylib::image {
         /**
          * @brief Load colors palette from image as a Color array (RGBA - 32bit)
          * @param maxPaletteSize the max palette size
-         * @param colorsCount the colors count
          * @return the color array
          */
         std::vector<RlColor> loadImagePalette(int maxPaletteSize);

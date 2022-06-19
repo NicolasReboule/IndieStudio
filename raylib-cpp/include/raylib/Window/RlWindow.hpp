@@ -40,6 +40,7 @@ namespace raylib::window {
          * @param title the title of the window
          * @param height the height of the window
          * @param width the width of the window
+         * @param fps the frame rate limit of the window
          * @throws WindowException if the window has already been created
          */
         void createWindow(const std::string &title, int width, int height, int fps = 60);

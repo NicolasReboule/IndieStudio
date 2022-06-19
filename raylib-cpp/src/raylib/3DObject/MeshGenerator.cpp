@@ -52,9 +52,9 @@ raylib::model::RlMesh raylib::model::MeshGenerator::genMeshKnot(const float &rad
     return RlMesh(GenMeshKnot(radius, size, radSeg, sides));
 }
 
-raylib::model::RlMesh raylib::model::MeshGenerator::genMeshHeightmap(const raylib::image::RlImage &heightmap, const Vector3f &size)
+raylib::model::RlMesh raylib::model::MeshGenerator::genMeshHeightmap(const raylib::image::RlImage &heightMap, const Vector3f &size)
 {
-    return RlMesh(GenMeshHeightmap(heightmap.getImage(), raylib::helper::VectorHelper::toRaylibVector(size)));
+    return RlMesh(GenMeshHeightmap(heightMap.getImage(), raylib::helper::VectorHelper::toRaylibVector(size)));
 }
 
 raylib::model::RlMesh raylib::model::MeshGenerator::genMeshCubicmap(const raylib::image::RlImage &cubicmap, const Vector3f &cubeSize)

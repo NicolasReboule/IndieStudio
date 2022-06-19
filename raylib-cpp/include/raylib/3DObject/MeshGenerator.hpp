@@ -34,7 +34,7 @@ namespace raylib::model {
          * @brief Generate a mesh of a cylinder
          * @warning Don't use this, instead use RlMeshBuilder
          * @param radius Radius of the cylinder
-         * @param rings Number of rings
+         * @param height Height of the cylinder
          * @param slices Number of slices
          * @return Mesh of the cylinder
          */
@@ -44,7 +44,7 @@ namespace raylib::model {
          * @brief Generate a mesh of a cone
          * @warning Don't use this, instead use RlMeshBuilder
          * @param radius Radius of the cone
-         * @param rings Number of rings
+         * @param height Height of the cone
          * @param slices Number of slices
          * @return Mesh of the cone
          */
@@ -110,7 +110,7 @@ namespace raylib::model {
          * @param size Size of the heightmap
          * @return Mesh of the heightmap
          */
-        static RlMesh genMeshHeightmap(const image::RlImage &heightmap, const Vector3f &size);
+        static RlMesh genMeshHeightmap(const image::RlImage &heightMap, const Vector3f &size);
 
         /**
          * @brief Generate a mesh of a polygon

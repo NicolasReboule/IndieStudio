@@ -42,6 +42,7 @@ namespace raylib::text {
          * @brief RlText constructor
          * @param text the text to use
          * @param fontPath the path to the font to use
+         * @param fontSize the size of the font to use
          * @param position the position of the text
          * @param color the color of the text
          */

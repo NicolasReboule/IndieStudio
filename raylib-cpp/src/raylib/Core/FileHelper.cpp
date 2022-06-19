@@ -91,9 +91,9 @@ std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std
     return files;
 }
 
-std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath,const std::function<bool(const std::string &)> &filter)
+std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath,const std::function<bool(const std::string &)> &filterFunction)
 {
-    return getDirectoryFiles(dirPath, false, filter);
+    return getDirectoryFiles(dirPath, false, filterFunction);
 }
 
 std::vector<std::string> raylib::helper::FileHelper::getDirectoryFiles(const std::string &dirPath, const bool &recursive, const std::function<bool(const std::string &)> &filterFunction)

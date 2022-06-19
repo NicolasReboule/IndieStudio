@@ -45,7 +45,7 @@ namespace raylib {
          * @param lookingPoint the lookingPoint of the camera (rotation towards target)
          * @param fovy the fovy of the camera (Camera field-of-view Y)
          * @param projection the projection of the camera @see CameraProjection
-         * @param mode the mode of the camera @see CameraMode
+         * @param cameraMode the mode of the camera @see CameraMode
          * @attention Don't use this use the RlCameraBuilder instead (please)
          * @see RlCameraBuilder
          * @throws CameraException

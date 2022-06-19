@@ -104,9 +104,8 @@ namespace raylib::helper::draw {
 
         /**
          * @brief Draw lines sequence
-         * @param points
-         * @param pointsCount
-         * @param color
+         * @param points the points to draw
+         * @param color the color to use
          */
         static void drawLineStrip(const std::vector<Vector2f> &points, const RlColor &color);
 
@@ -270,11 +269,11 @@ namespace raylib::helper::draw {
 
         /**
          * @brief Draw a gradient-filled rectangle with custom vertex colors
-         * @param posX to Draw at
-         * @param posY to Draw at
-         * @param width to use
-         * @param height to use
-         * @param color to use
+         * @param rec to Draw
+         * @param col1 to use
+         * @param col2 to use
+         * @param col3 to use
+         * @param col4 to use
          */
         static void drawRectangleGradient(const Rectangle &rec, const RlColor &col1, const RlColor &col2, const RlColor &col3, const RlColor &col4);
 

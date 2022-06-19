@@ -83,8 +83,8 @@ namespace raylib::builder {
         raylib::model::RlModel build() override;
 
         /**
-         * @brief Set the rotation
-         * @param rotation Rotation of the model
+         * @brief Set the rotation axis
+         * @param rotationAxis the rotation axis
          * @return the ModelBuilder object
          */
         RlModelBuilder setRotationAxis(const Vector3f &rotationAxis);

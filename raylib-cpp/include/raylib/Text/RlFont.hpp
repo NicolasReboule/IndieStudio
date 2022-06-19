@@ -27,7 +27,7 @@ namespace raylib::text {
         /**
          * @brief Create a RlFont, using a font path
          * Load font from file into GPU memory (VRAM)
-         * @param filename the font path
+         * @param fontPath the font path
          */
         explicit RlFont(const std::string &fontPath);
 
