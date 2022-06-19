@@ -11,7 +11,6 @@
 indie::StartScene::StartScene(const std::string &name, const std::string& sceneSource) : Scene(name, sceneSource)
 {
     this->_startTimestamp = Time::getMillisecondsTime();
-    this->_endTimestamp = _startTimestamp + 5000;
 }
 
 void indie::StartScene::sceneLauncher()
@@ -30,7 +29,7 @@ void indie::StartScene::initScene()
     auto &studioScreen = dynamic_cast<indie::Image &>(*sceneManager->getNode("studioScreen"));
     auto &gameScreen = dynamic_cast<indie::Image &>(*sceneManager->getNode("gameScreen"));
 
-    studioScreen.getColor().alpha(1.0f);
+    studioScreen.getColor().alpha(0.0f);
     gameScreen.getColor().alpha(0.0f);
 }
 
@@ -41,16 +40,30 @@ void indie::StartScene::updateScene(const float &delta)
     auto &gameScreen = dynamic_cast<indie::Image &>(*sceneManager->getNode("gameScreen"));
     auto &studioScreen = dynamic_cast<indie::Image &>(*sceneManager->getNode("studioScreen"));
 
-    if (studioScreen.getColor().getAlpha() > 0) {
-        studioScreen.getColor().setAlpha((unsigned char) ((float) studioScreen.getColor().getAlpha() - 1 * delta));
+    long ms = Time::getMillisecondsTime();
+    long elapsed = ms - this->_startTimestamp;
+    long fadeTime = 3500;
 
-        if (studioScreen.getColor().getAlpha() < 1)
-            gameScreen.getColor().setAlpha(255);
-    } else {
-        if (gameScreen.getColor().getAlpha() > 0)
-            gameScreen.getColor().setAlpha((unsigned char) ((float) gameScreen.getColor().getAlpha() - 1 * delta));
+    if (ms <= _startTimestamp + fadeTime) {
+        unsigned char currentAlpha = 0 + (255 - 0) * elapsed / fadeTime;
+        studioScreen.getColor().setAlpha(currentAlpha);
     }
 
-    if (Time::getMillisecondsTime() >= this->_endTimestamp + 4000)
+    if (ms >= _startTimestamp + fadeTime && studioScreen.getColor().getAlpha() > 2) {
+        unsigned char currentAlpha = 255 + (0 - 255) * elapsed / fadeTime;
+        studioScreen.getColor().setAlpha(currentAlpha == 0 ? 255 : currentAlpha);
+    }
+
+    if (ms <= _startTimestamp + fadeTime * 3 && studioScreen.getColor().getAlpha() <= 2) {
+        unsigned char currentAlpha = 0 + (255 - 0) * (elapsed - fadeTime * 2) / fadeTime;
+        gameScreen.getColor().setAlpha(currentAlpha);
+    }
+
+    if (ms >= _startTimestamp + fadeTime * 3) {
+        unsigned char currentAlpha = 255 + (0 - 255) * (elapsed - fadeTime * 3) / fadeTime;
+        gameScreen.getColor().setAlpha(currentAlpha == 0 ? 255 : currentAlpha);
+    }
+
+    if (ms >= this->_startTimestamp + fadeTime * 4)
         sceneManager->changeScene("mainMenu");
 }

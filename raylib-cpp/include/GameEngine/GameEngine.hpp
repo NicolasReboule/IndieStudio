@@ -20,6 +20,7 @@
 #include "GameEngine/Nodes/3D/KinematicBody.hpp"
 #include "GameEngine/Nodes/3D/Node3D.hpp"
 #include "GameEngine/Nodes/3D/StaticBody.hpp"
+#include "GameEngine/Nodes/3D/MultiCube.hpp"
 #include "SceneManager.hpp"
 #include "Time.hpp"
 

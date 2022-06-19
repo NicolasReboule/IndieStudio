@@ -11,9 +11,8 @@
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
-indie::Bomb::Bomb(const std::string &name, const raylib::model::RlModel &model, \
-const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner)
-    : StaticBody(name, model, texture)
+indie::Bomb::Bomb(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner)
+    : MultiCube(name, {1, 1, 1}, texture)
 {
     this->_range = range;
     this->_timer = 2;

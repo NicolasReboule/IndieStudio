@@ -25,7 +25,6 @@ namespace indie {
 
     private:
         long _startTimestamp;
-        long _endTimestamp;
     };
 }
 

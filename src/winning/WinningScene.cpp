@@ -75,11 +75,11 @@ void indie::WinningScene::sceneLauncher()
     }
 
     auto buttonRestart = std::make_shared<indie::ButtonRestartx05>("buttonRestart", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_restart_x05.png"));
-    buttonRestart->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonRestart->getBounds().height});
+    buttonRestart->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonRestart->getBounds().height * 2});
     this->addNode(buttonRestart);
 
     auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
-    buttonMainMenu->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonMainMenu->getBounds().height * 2.5f});
+    buttonMainMenu->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonMainMenu->getBounds().height * 3.5f});
     this->addNode(buttonMainMenu);
 }
 

@@ -102,16 +102,15 @@ void indie::Player::update(const float &delta)
 
 void indie::Player::spawnBomb()
 {
-
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
 
-    auto mesh = raylib::builder::RlMeshBuilder()
+    /*auto mesh = raylib::builder::RlMeshBuilder()
         .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
         .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
-    raylib::model::RlModel model = raylib::model::RlModel(std::make_shared<raylib::model::RlMesh>(mesh));
-    auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)), model,
-    std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/tnt_side.png"), this->_range, this->getName());
+    raylib::model::RlModel model = raylib::model::RlModel(std::make_shared<raylib::model::RlMesh>(mesh));*/
+    auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)),
+        std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/tnt.png"), this->_range, this->getName());
 
     bomb->setRotationDegrees(-90, {1, 0, 0});
 

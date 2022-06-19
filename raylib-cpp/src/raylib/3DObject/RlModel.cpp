@@ -36,6 +36,16 @@ raylib::model::RlModel::RlModel(const std::shared_ptr<raylib::model::RlMesh> &me
     this->_mesh = mesh;
 }
 
+raylib::model::RlModel::RlModel(const raylib::model::RlMesh &mesh)
+    : _model(std::make_shared<Model>()), _position(0, 0, 0), _scale(1, 1, 1), _color(RlColor::White),
+      _rotationAxis(0, 0, 0), _rotationAngle(0), _boundingBox(), _baseBoudingBox()
+{
+    *this->_model = LoadModelFromMesh(mesh.getMesh());
+    this->_boundingBox = this->_baseBoudingBox = GetModelBoundingBox(*_model);
+    this->_mesh = std::make_shared<RlMesh>(mesh);
+    *this->_mesh = mesh;
+}
+
 raylib::model::RlModel::RlModel(const raylib::model::RlModel &model)
     : _position(model._position), _scale(model._scale), _color(model._color),
      _rotationAxis(model._rotationAxis), _rotationAngle(model._rotationAngle),

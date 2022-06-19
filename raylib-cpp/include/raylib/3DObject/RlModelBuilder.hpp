@@ -17,7 +17,7 @@
 
 namespace raylib::builder {
     /**
-     * @brief Builder to create a RlModel easily
+     * @brief Builder to create a RlModel easily //TODO: rework this shit
      */
     class RlModelBuilder : public IBuilder<raylib::model::RlModel> {
     public:

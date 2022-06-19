@@ -12,9 +12,9 @@
 
 namespace indie {
 
-    class Bomb : public gameengine::node::_3D::StaticBody {
+    class Bomb : public gameengine::node::_3D::MultiCube {
     public:
-        explicit Bomb(const std::string &name, const raylib::model::RlModel &model, const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner);
+        explicit Bomb(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner);
 
         ~Bomb() override = default;
 

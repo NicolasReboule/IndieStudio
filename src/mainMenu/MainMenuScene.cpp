@@ -20,11 +20,11 @@ void indie::MainMenuScene::sceneLauncher()
     auto background = std::make_shared<indie::Image>("background", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/logo_big.png"));
     this->addNode(background);
 
-    auto buttonPlay = std::make_shared<indie::ButtonPlay>("buttonPlay", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_play.png"));
+    auto buttonPlay = std::make_shared<indie::ButtonPlay>("buttonPlay", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_play_x05.png"));
     buttonPlay->setScale({0.5f, 0.5f});
     this->addNode(buttonPlay);
 
-    auto buttonQuit = std::make_shared<indie::ButtonQuit>("buttonQuit", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_quit.png"));
+    auto buttonQuit = std::make_shared<indie::ButtonQuit>("buttonQuit", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_quit_x05.png"));
     buttonQuit->setScale({0.5f, 0.5f});
     this->addNode(buttonQuit);
 }

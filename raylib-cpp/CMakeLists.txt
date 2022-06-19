@@ -89,5 +89,5 @@ add_library(${PROJECT_NAME}
         src/GameEngine/exception/MapParserException.cpp
         src/GameEngine/Nodes/3D/Grid3D.cpp
         src/GameEngine/Nodes/2D/Label.cpp
-        )
+        include/GameEngine/Nodes/3D/MultiCube.hpp src/GameEngine/Nodes/3D/MultiCube.cpp)
 target_link_libraries(${PROJECT_NAME} raylib)

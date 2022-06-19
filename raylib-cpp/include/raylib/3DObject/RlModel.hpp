@@ -59,6 +59,12 @@ namespace raylib {
              */
             explicit RlModel(const std::shared_ptr<RlMesh> &mesh);
 
+            /***
+             * @brief Construct a new RlModel object from a mesh
+             * @param mesh the mesh
+             */
+            explicit RlModel(const RlMesh &mesh);
+
             /**
              * @brief Copy constructor (create a copy of the raylib Model)
              * @param model the model

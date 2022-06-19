@@ -242,6 +242,11 @@ namespace raylib::window {
          */
         void setCamera(const RlCamera &camera);
 
+        /**
+         * @brief Set if the window should be closed
+         * @param isOpen false if the window should be closed, true otherwise
+         */
+        void setIsOpen(const bool &isOpen);
 
     private:
         static std::shared_ptr<RlWindow> _instance; /**< The singleton instance of the RlWindow */
@@ -252,6 +257,7 @@ namespace raylib::window {
         int _minWidth; /**< The minimum width of the window */
         int _minHeight; /**< The minimum height of the window */
         bool _isCreated = false; /**< If the window is created */
+        bool _isOpen; /**< If the window is open */
 
         raylib::RlCamera _camera; /**< The window camera */
     };

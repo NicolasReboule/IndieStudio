@@ -19,5 +19,5 @@ void indie::ButtonQuitx05::init()
 
 void indie::ButtonQuitx05::pressed()
 {
-    std::cout << "Quit game" << std::endl;
+    raylib::window::RlWindow::getInstance()->setIsOpen(false);
 }
