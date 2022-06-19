@@ -27,7 +27,7 @@ int main(int ac, char **av)
     sceneManager->addScene(std::make_shared<indie::ChooseNumberPlayerScene>());
     sceneManager->addScene(std::make_shared<indie::GameScene>());
     sceneManager->addScene(std::make_shared<indie::WinningScene>());
-    sceneManager->changeScene("start");
+    sceneManager->changeScene("mainMenu");
 
     while (window->isOpen())
         sceneManager->makeLoop(window->getCamera());

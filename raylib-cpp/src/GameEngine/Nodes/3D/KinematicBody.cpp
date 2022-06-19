@@ -20,11 +20,11 @@ const std::shared_ptr<raylib::texture::RlTexture> &texture)
 {
 }
 
-void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &position)
+bool gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &position)
 {
     if (!_collisionEnable) {
         this->setPosition(position);
-        return;
+        return true;
     }
 
     auto sceneManager = gameengine::SceneManager::getInstance();
@@ -67,7 +67,7 @@ void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &positi
                 auto &staticBody = dynamic_cast<gameengine::node::_3D::StaticBody &>(*node);
                 if (staticBody.getName() != this->getName() && staticBody.hasCollisionEnabled() &&
                     raylib::helper::Collision3dHelper::checkCollisionBoxes(temp, staticBody.getBoundingBox())) {
-                    return;
+                    return false;
                 }
             }
             catch (const std::bad_cast &e) {
@@ -77,5 +77,6 @@ void gameengine::node::_3D::KinematicBody::moveAndCollide(const Vector3f &positi
     }
 
     this->setPosition(position);
+    return true;
 }
 

@@ -29,6 +29,8 @@ const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &numpadId)
     this->_speed = 5;
     this->_bombStock = 1;
     this->_tempSpeed = 0;
+
+    this->botTarget = "";
 }
 
 void indie::Player::init()
@@ -125,6 +127,8 @@ void indie::Player::spawnBomb()
 
     bomb->setPlayerOwner(this->getName());
     sceneManager->addNode(bomb);
+
+    this->_bombStock -= 1;
 }
 
 void indie::Player::checkCollisions()
@@ -178,6 +182,10 @@ void indie::Player::checkCollisions()
 
 void indie::Player::handleInput()
 {
+    if (this->_numpadId < 0) {
+        this->botControl();
+        return;
+    }
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
     Vector3f direction = {0, 0, 0};
@@ -233,7 +241,6 @@ void indie::Player::handleInput()
         if ((raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_SPACE) ||
             raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_RIGHT_FACE_LEFT)) && this->_bombStock > 0) {
             this->spawnBomb();
-            this->_bombStock -= 1;
             if (this->_state == GHOST) {
                 this->_state = ALIVE;
                 this->setColor(raylib::RlColor::White);
@@ -242,7 +249,7 @@ void indie::Player::handleInput()
     }
 
 
-    if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
+    if (raylib::helper::input::KeyboardHelper::isKeyPressed(KEY_ESCAPE) || raylib::helper::input::GamepadHelper::isGamepadButtonPressed(this->_numpadId, GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
 
         auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));
         auto &buttonRestart = dynamic_cast<indie::ButtonRestartx05 &>(*sceneManager->getNode("buttonRestart"));
@@ -300,3 +307,94 @@ void indie::Player::playerDead()
     this->_collisionEnable = false;
 }
 
+void indie::Player::botControl()
+{
+    if (this->_state == DEAD)
+        return;
+    Vector3f right = {this->getPosition().x + this->_tempSpeed * 1, this->getPosition().y + this->_tempSpeed * 0,
+                            this->getPosition().z + this->_tempSpeed * 0};
+    Vector3f left = {this->getPosition().x + this->_tempSpeed * -1, this->getPosition().y + this->_tempSpeed * 0,
+                      this->getPosition().z + this->_tempSpeed * 0};
+    Vector3f up = {this->getPosition().x + this->_tempSpeed * 0, this->getPosition().y + this->_tempSpeed * 0,
+                      this->getPosition().z + this->_tempSpeed * -1};
+    Vector3f down = {this->getPosition().x + this->_tempSpeed * 0, this->getPosition().y + this->_tempSpeed * 0,
+                      this->getPosition().z + this->_tempSpeed * 1};
+
+    Vector3f none = {0, 0, 0};
+
+
+    if (this->_timerAnim <= 0) {
+        this->_anim.incrementFrameCount();
+        this->_anim.update(0);
+    }
+
+    if (this->botTarget.empty()) {
+       this->botTarget = "up";
+       std::cout << "none" << std::endl;
+    }
+
+    //std::cout << "none" << std::endl;
+
+    /*if (this->botTarget == "up")
+        std::cout << "up" << std::endl;
+    else if (this->botTarget == "down")
+        std::cout << "down" << std::endl;
+    else if (this->botTarget == "left")
+        std::cout << "left" << std::endl;
+    else if (this->botTarget == "right")
+        std::cout << "right" << std::endl;
+    else
+        std::cout << "nothing" << std::endl;*/
+
+    auto random = raylib::Random();
+
+    if (this->botTarget == "up" && !this->moveAndCollide(up)) {
+        int rand = random.generate(0, 2);
+        if (rand == 0)
+            this->botTarget = "left";
+        else if (rand == 1)
+            this->botTarget = "right";
+        else if (this->_bombStock > 0)
+            this->spawnBomb();
+        else
+            this->botTarget = "down";
+    }
+    else if (this->botTarget == "left" && !this->moveAndCollide(left)) {
+        int rand = random.generate(0, 2);
+        if (rand == 0)
+            this->botTarget = "down";
+        else if (rand == 1)
+            this->botTarget = "up";
+        else if (this->_bombStock > 0)
+            this->spawnBomb();
+        else
+            this->botTarget = "right";
+    }
+    else if (this->botTarget == "down" && !this->moveAndCollide(down)) {
+        int rand = random.generate(0, 2);
+        if (rand == 0)
+            this->botTarget = "right";
+        else if (rand == 1)
+            this->botTarget = "left";
+        else if (this->_bombStock > 0)
+            this->spawnBomb();
+        else
+            this->botTarget = "up";
+    }
+    else if (this->botTarget == "right" && !this->moveAndCollide(right)) {
+        int rand = random.generate(0, 2);
+        if (rand == 0)
+            this->botTarget = "up";
+        else if (rand == 1)
+            this->botTarget = "down";
+        else if (this->_bombStock > 0)
+            this->spawnBomb();
+        else
+            this->botTarget = "left";
+    }
+}
+
+void indie::Player::botSpawnBomb()
+{
+
+}

@@ -34,7 +34,7 @@ void indie::MainMenuScene::initScene()
     auto sceneManager = gameengine::SceneManager::getInstance();
 
     this->_indexMenu = 0;
-    raylib::helper::input::MouseHelper::setMousePosition(570, 250);
+    raylib::helper::input::MouseHelper::setMousePosition(525, 250);
 
     auto &buttonPlay = dynamic_cast<indie::ButtonPlay &>(*sceneManager->getNode("buttonPlay"));
     auto &buttonQuit = dynamic_cast<indie::ButtonQuit &>(*sceneManager->getNode("buttonQuit"));
@@ -56,13 +56,13 @@ void indie::MainMenuScene::updateScene(const float &delta)
 
     if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
         if (this->_indexMenu == 0) {
-            raylib::helper::input::MouseHelper::setMousePosition(570, 450);
+            raylib::helper::input::MouseHelper::setMousePosition(570, 625);
             this->_indexMenu = 1;
         }
     }
     if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
         if (this->_indexMenu == 1) {
-            raylib::helper::input::MouseHelper::setMousePosition(570, 250);
+            raylib::helper::input::MouseHelper::setMousePosition(570, 525);
             this->_indexMenu = 0;
         }
     }

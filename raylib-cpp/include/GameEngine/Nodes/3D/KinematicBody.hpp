@@ -39,8 +39,9 @@ namespace gameengine::node::_3D {
         /**
          * @brief Move the body and check collision
          * @param position the position to move to
+         * @return if body moved
          */
-        void moveAndCollide(const Vector3f &position);
+        bool moveAndCollide(const Vector3f &position);
     };
 }
 

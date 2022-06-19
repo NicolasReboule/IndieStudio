@@ -45,6 +45,10 @@ namespace indie {
 
         void moveAndGhosting(Vector3f position);
 
+        void botControl();
+
+        void botSpawnBomb();
+
     private:
         float _tempSpeed;
         float _speed;
@@ -56,6 +60,8 @@ namespace indie {
 
         float _timerAnim;
         int _numpadId;
+
+        std::string botTarget;
 
         raylib::model::RlModelAnimation _anim;
     };

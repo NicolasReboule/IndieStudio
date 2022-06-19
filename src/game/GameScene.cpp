@@ -143,6 +143,20 @@ void indie::GameScene::sceneLauncher()
         auto player = std::make_shared<indie::Player>("player" + std::to_string(i), playerModel, std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/" + color + ".png"), i);
         this->addNode(player);
     }
+    for (int i = globalInstance->_numberPlayers; i < 4; i++) {
+        std::string color;
+        if (i == 0)
+            color = "blue";
+        else if (i == 1)
+            color = "red";
+        else if (i == 2)
+            color = "green";
+        else
+            color  = "yellow";
+        raylib::model::RlModel playerModel = raylib::model::RlModel("./assets/models/player.iqm");
+        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), playerModel, std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/" + color + ".png"), -1);
+        this->addNode(player);
+    }
 
     auto buttonResume = std::make_shared<indie::ButtonResume>("buttonResume", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_resume_x05.png"));
     this->addNode(buttonResume);
@@ -175,7 +189,24 @@ void indie::GameScene::initScene()
     BoundingBox box = {{-0.2, 0, -0.2},{0.2,  2, 0.2}};
     Vector3f scale = {0.8, 0.8, 0.8};
 
-    if (globalInstance->_numberPlayers > 0) {
+    for (int i = 0; i < globalInstance->_numberPlayers; i++) {
+        auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player" + std::to_string(i)));
+        player.setBoundingBox(box);
+        player.setScale(scale);
+        auto &pos = this->_playerSpawn[i];
+        player.setPosition({pos.x, 0, pos.y});
+    }
+    for (int i = globalInstance->_numberPlayers; i < 4; i++) {
+        auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player" + std::to_string(i)));
+        player.setBoundingBox(box);
+        player.setScale(scale);
+        auto &pos = this->_playerSpawn[i];
+        player.setPosition({pos.x, 0, pos.y});
+
+    }
+    globalInstance->_playersAlive = 4;
+
+    /*if (globalInstance->_numberPlayers > 0) {
         auto &player = dynamic_cast<indie::Player &>(*sceneManager->getNode("player0"));
         player.setBoundingBox(box);
         player.setScale(scale);
@@ -206,7 +237,7 @@ void indie::GameScene::initScene()
         auto &pos = this->_playerSpawn[3];
         player.setPosition({pos.x, 0, pos.y});
         globalInstance->_playersAlive = 4;
-    }
+    }*/
 
 
     auto &buttonResume = dynamic_cast<indie::ButtonResume &>(*sceneManager->getNode("buttonResume"));

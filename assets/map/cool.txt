@@ -3,7 +3,7 @@
 //'#' = wall
 //'S' = player spawn
 
- ###########
+#############
 #S BBBBBBB S#
 # BBBBBBBBB #
 ######B######
@@ -17,4 +17,4 @@
 ######B######
 # BBBBBBBBB #
 #S BBBBBBB S#
- ###########
+#############

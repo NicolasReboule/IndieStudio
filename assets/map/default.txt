@@ -2,7 +2,7 @@
 //'B' = breakable
 //'#' = wall
 
- ###########
+#############
 #S BBBBBBB S#
 # #B#B#B#B# #
 #BBBBBBBBBBB#
@@ -16,4 +16,4 @@
 #BBBBBBBBBBB#
 # #B#B#B#B# #
 #S BBBBBBB S#
- ###########
+#############
