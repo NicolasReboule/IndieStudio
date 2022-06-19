@@ -6,10 +6,6 @@
 */
 
 #include "winning/WinningScene.hpp"
-#include "global/GlobalInstance.hpp"
-#include "game/Player.hpp"
-#include "winning/ButtonRestart.hpp"
-#include "game/ButtonMainMenu.hpp"
 
 indie::WinningScene::WinningScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
 {
@@ -74,11 +70,18 @@ void indie::WinningScene::sceneLauncher()
         this->addNode(player3);
     }
 
-    auto buttonRestart = std::make_shared<indie::ButtonRestartx05>("buttonRestart", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_restart_x05.png"));
+    auto buttonRestart = std::make_shared<indie::button::IndieButton>("buttonRestart",
+    std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_restart_x05.png"), [&sceneManager, &globalInstance](auto &name) {
+        globalInstance->_playersAlive = globalInstance->_numberPlayers;
+        sceneManager->changeScene("game");
+    });
     buttonRestart->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonRestart->getBounds().height * 2});
     this->addNode(buttonRestart);
 
-    auto buttonMainMenu = std::make_shared<indie::ButtonMainMenu>("buttonMainMenu", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
+    auto buttonMainMenu = std::make_shared<indie::button::IndieButton>("buttonMainMenu",
+    std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"), [&sceneManager, &globalInstance](auto &name) {
+        sceneManager->changeScene("mainMenu");
+    });
     buttonMainMenu->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonMainMenu->getBounds().height * 3.5f});
     this->addNode(buttonMainMenu);
 }
@@ -93,8 +96,8 @@ void indie::WinningScene::updateScene(const float &delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
-    auto &buttonMainmenu = dynamic_cast<indie::ButtonMainMenu &>(*sceneManager->getNode("buttonMainMenu"));
-    auto &buttonRestart = dynamic_cast<indie::ButtonRestartx05 &>(*sceneManager->getNode("buttonRestart"));
+    auto &buttonMainmenu = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonMainMenu"));
+    auto &buttonRestart = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonRestart"));
 
     if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
         if (this->_indexMenu == 0) {

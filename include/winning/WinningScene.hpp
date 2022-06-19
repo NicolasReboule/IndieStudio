@@ -8,6 +8,11 @@
 #ifndef INDIESTUDIO_WINNINGSCENE_HPP
 #define INDIESTUDIO_WINNINGSCENE_HPP
 
+#include "global/GlobalInstance.hpp"
+#include "game/Player.hpp"
+#include "game/ButtonMainMenu.hpp"
+#include "winning/ButtonRestart.hpp"
+#include "IndieButton.hpp"
 #include <GameEngine/GameEngine.hpp>
 
 namespace indie {

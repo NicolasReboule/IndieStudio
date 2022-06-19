@@ -15,6 +15,9 @@ indie::StartScene::StartScene(const std::string &name, const std::string& sceneS
 
 void indie::StartScene::sceneLauncher()
 {
+    auto &audioManager = gameengine::AudioManager::getInstance();
+    audioManager->loadSounds();
+
     auto gameScreen = std::make_shared<indie::Image>("gameScreen", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/splashart.png"));
     this->addNode(gameScreen);
 
@@ -59,7 +62,7 @@ void indie::StartScene::updateScene(const float &delta)
         gameScreen.getColor().setAlpha(currentAlpha);
     }
 
-    if (ms >= _startTimestamp + fadeTime * 3) {
+    if (ms >= _startTimestamp + fadeTime * 3 && studioScreen.getColor().getAlpha() <= 2) {
         unsigned char currentAlpha = 255 + (0 - 255) * (elapsed - fadeTime * 3) / fadeTime;
         gameScreen.getColor().setAlpha(currentAlpha == 0 ? 255 : currentAlpha);
     }

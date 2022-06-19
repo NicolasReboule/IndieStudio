@@ -41,7 +41,7 @@ add_executable(${BINARY_NAME}
         src/winning/WinningScene.cpp
         src/winning/ButtonRestart.cpp
         src/chooseNumberPlayer/ButtonLeft.cpp
-        src/chooseNumberPlayer/ButtonRight.cpp)
+        src/chooseNumberPlayer/ButtonRight.cpp include/IndieButton.hpp src/IndieButton.cpp)
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 
