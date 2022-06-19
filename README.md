@@ -45,6 +45,7 @@ If you want to install the game you can run the following command:
 git clone https://github.com/alwyn974/IndieStudio.git
 cd IndieStudio
 mkdir build
+cmake ..
 cpack
 ```
 
