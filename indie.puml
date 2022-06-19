@@ -1,0 +1,2127 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+namespace raylib {
+	class GlStateManager {
+		+{static} color(const RlColor& color) : void
+		+{static} color(unsigned char r, unsigned char g, unsigned char b, unsigned char a) : void
+		+{static} color(float r, float g, float b, float a) : void
+		+{static} color(unsigned char r, unsigned char g, unsigned char b) : void
+		+{static} disableBackfaceCulling() : void
+		+{static} disableColorBlend() : void
+		+{static} disableDepthMask() : void
+		+{static} disableDepthTest() : void
+		+{static} disableScissorTest() : void
+		+{static} disableSmoothLines() : void
+		+{static} disableWireMode() : void
+		+{static} enableBackfaceCulling() : void
+		+{static} enableColorBlend() : void
+		+{static} enableDepthMask() : void
+		+{static} enableDepthTest() : void
+		+{static} enableScissorTest() : void
+		+{static} enableSmoothLines() : void
+		+{static} enableWireMode() : void
+		+{static} popMatrix() : void
+		+{static} pushMatrix() : void
+		+{static} rotate(const Vector3f& rotation) : void
+		+{static} scale(const Vector3f& scale) : void
+		+{static} scissor(int x, int y, int width, int height) : void
+		+{static} scissor(const Rectangle& rect) : void
+		+{static} translate(const Vector3f& translation) : void
+	}
+
+	class Random {
+		+Random()
+		+generate(double min, double max) : double
+		+generate(float min, float max) : float
+		+generate(int min, int max) : int
+		+generate(long min, long max) : long
+		+generate(short min, short max) : short
+		-_random_device : std::random_device
+		+generateSizeT(std::size_t min, std::size_t max) : std::size_t
+	}
+
+	class RlCamera {
+		+RlCamera()
+		+RlCamera(const Vector3f& position, const Vector3f& target, const Vector3f& lookingPoint, const float& fovy, const CameraProjection& projection, const CameraMode& cameraMode)
+		-_camera : Camera3D
+		+get() : Camera3D& {query}
+		-_cameraMode : CameraMode
+		-_mode : CameraMode
+		+getConstructedCameraMode() : CameraMode& {query}
+		+getMode() : CameraMode& {query}
+		-_projection : CameraProjection
+		+getConstructedProjection() : CameraProjection& {query}
+		+geMatrix() : Matrix
+		-_lookingPoint : Vector3f
+		-_position : Vector3f
+		-_target : Vector3f
+		+getConstructedLookingPoint() : Vector3f& {query}
+		+getConstructedPosition() : Vector3f& {query}
+		+getConstructedTarget() : Vector3f& {query}
+		-_fovy : float
+		+getConstructedFovy() : float& {query}
+		+reset() : void
+		+setCameraMode(const CameraMode& mode) : void
+		+setFov(const float& fovy) : void
+		+setPosition(const Vector3f& position) : void
+		+setProjection(const CameraProjection& projection) : void
+		+setTarget(const Vector3f& target) : void
+		+update() : void
+	}
+
+	class RlColor {
+		+RlColor(Color color)
+		+RlColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a)
+		+RlColor(std::uint32_t color)
+		+RlColor(const Vector4f& normalizedColor)
+		+RlColor(float hue, float saturation, float value)
+		-_color : Color
+		+getColor() : Color& {query}
+		+operator+(unsigned char value) : RlColor&
+		+operator+=(unsigned char value) : RlColor&
+		+operator-(unsigned char value) : RlColor&
+		+operator-=(unsigned char value) : RlColor&
+		+setAlpha(unsigned char a) : RlColor&
+		+setBlue(unsigned char b) : RlColor&
+		+setGreen(unsigned char g) : RlColor&
+		+setRed(unsigned char r) : RlColor&
+		+toHSV() : Vector3f
+		+normalize() : Vector4f {query}
+		+operator!=(const RlColor& rhs) : bool {query}
+		+operator==(const RlColor& rhs) : bool {query}
+		+{static} Beige : static const RlColor
+		+{static} Black : static const RlColor
+		+{static} Blue : static const RlColor
+		+{static} Brown : static const RlColor
+		+{static} DarkBlue : static const RlColor
+		+{static} DarkBrown : static const RlColor
+		+{static} DarkGray : static const RlColor
+		+{static} DarkGreen : static const RlColor
+		+{static} DarkPurple : static const RlColor
+		+{static} Gold : static const RlColor
+		+{static} Gray : static const RlColor
+		+{static} Green : static const RlColor
+		+{static} LightGray : static const RlColor
+		+{static} Lime : static const RlColor
+		+{static} Magenta : static const RlColor
+		+{static} Maroon : static const RlColor
+		+{static} Orange : static const RlColor
+		+{static} Pink : static const RlColor
+		+{static} Purple : static const RlColor
+		+{static} RayWhite : static const RlColor
+		+{static} Red : static const RlColor
+		+{static} SkyBlue : static const RlColor
+		+{static} Transparent : static const RlColor
+		+{static} Violet : static const RlColor
+		+{static} White : static const RlColor
+		+{static} Yellow : static const RlColor
+		+toInteger() : std::uint32_t {query}
+		+getAlpha() : unsigned char& {query}
+		+getBlue() : unsigned char& {query}
+		+getGreen() : unsigned char& {query}
+		+getRed() : unsigned char& {query}
+		+alpha(float alpha) : void
+		+alphaBlend(const RlColor& src, const RlColor& tint) : void
+		+setColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a) : void
+		+setColor(const Color& color) : void
+	}
+
+	class Vector2 <template<typename T>> {
+		+Vector2()
+		+Vector2(T x, T y)
+		+x : T
+		+y : T
+		+operator!=(const Vector2<T>& other) : bool {query}
+		+operator==(const Vector2<T>& other) : bool {query}
+	}
+
+	class Vector3 <template<typename T>> {
+		+Vector3()
+		+Vector3(T x, T y, T z)
+		+x : T
+		+y : T
+		+z : T
+		+operator!=(const Vector3<T>& other) : bool {query}
+		+operator==(const Vector3<T>& other) : bool {query}
+	}
+
+	class Vector4 <template<typename T>> {
+		+Vector4()
+		+Vector4(T x, T y, T z, T w)
+		+w : T
+		+x : T
+		+y : T
+		+z : T
+		+operator!=(const Vector4& other) : bool {query}
+		+operator==(const Vector4& other) : bool {query}
+	}
+
+	namespace window {
+		class RlWindow {
+			+RlWindow()
+			+~RlWindow()
+			-_isCreated : bool
+			-_isOpen : bool
+			+hasState(const ConfigFlags& flag) : bool
+			+isFocused() : bool
+			+isFullScreen() : bool
+			+isHidden() : bool
+			+isMaximized() : bool
+			+isMinimized() : bool
+			+isOpen() : bool
+			+isReady() : bool
+			+isResized() : bool
+			+isIsCreated() : bool& {query}
+			-_height : int
+			-_minHeight : int
+			-_minWidth : int
+			-_width : int
+			+getHeight() : int& {query}
+			+getMinHeight() : int& {query}
+			+getMinWidth() : int& {query}
+			+getWidth() : int& {query}
+			-_camera : raylib::RlCamera
+			+getCamera() : raylib::RlCamera&
+			+getCamera() : raylib::RlCamera& {query}
+			-{static} _instance : static std::shared_ptr<RlWindow>
+			+{static} getInstance() : std::shared_ptr<RlWindow>&
+			-_title : std::string
+			+getTitle() : std::string& {query}
+			+clearState(unsigned int flags) : void
+			+createWindow(const std::string& title, int width, int height, int fps) : void
+			+maximize() : void
+			+minimize() : void
+			+restore() : void
+			+setCamera(const RlCamera& camera) : void
+			+setConfigFlags(unsigned int flags) : void
+			+setIcon(const image::RlImage& image) : void
+			+setIsOpen(const bool& isOpen) : void
+			+setMinSize(int width, int height) : void
+			+setMonitor(int monitor) : void
+			+setPosition(int x, int y) : void
+			+setSize(int width, int height) : void
+			+setState(unsigned int flags) : void
+			+setTitle(const std::string& title) : void
+			+takeScreenshot(const std::string& fileName) : void
+			+toggleFullscreen() : void
+		}
+
+		class System {
+			+{static} getMonitorPosition(int monitorIndex) : Vector2f
+			+{static} getWindowPosition() : Vector2f
+			+{static} getWindowScaleDPI() : Vector2f
+			+{static} getMonitorPhysicalSize(int monitorIndex) : Vector2i
+			+{static} getMonitorSize(int monitorIndex) : Vector2i
+			+{static} getScreenSize() : Vector2i
+			+{static} getCurrentMonitor() : int
+			+{static} getMonitorCount() : int
+			+{static} getMonitorHeight(int monitorIndex) : int
+			+{static} getMonitorPhysicalHeight(int monitorIndex) : int
+			+{static} getMonitorPhysicalWidth(int monitorIndex) : int
+			+{static} getMonitorRefreshRate(int monitorIndex) : int
+			+{static} getMonitorWidth(int monitorIndex) : int
+			+{static} getScreenHeight() : int
+			+{static} getScreenWidth() : int
+			+{static} getClipboardText() : std::string
+			+{static} getMonitorName(int monitorIndex) : std::string
+			+{static} setClipboardText(const std::string& text) : void
+		}
+	}
+
+	namespace texture {
+		class RlRenderTexture {
+			+RlRenderTexture(int width, int height)
+			+~RlRenderTexture()
+			-_renderTexture : RenderTexture2D
+			+getRenderTexture() : RenderTexture2D& {query}
+		}
+
+		class RlTexture {
+			+RlTexture(const std::string& fileName)
+			+RlTexture(const image::RlImage& image)
+			+RlTexture(const image::RlImage& image, const CubemapLayout& layout)
+			+~RlTexture()
+			-_textureRec : Rectangle
+			+getTextureRec() : Rectangle& {query}
+			-_texture : Texture2D
+			+get() : Texture2D& {query}
+			+getTexture() : Texture2D&
+			+getFormat() : int& {query}
+			+getHeight() : int& {query}
+			+getMipmaps() : int& {query}
+			+getWidth() : int& {query}
+			-_texturePath : std::string
+			+getPath() : std::string& {query}
+			+getID() : unsigned int& {query}
+			+genTextureMipmaps() : void
+			+setFilter(const TextureFilter& filter) : void
+			+setWrap(const TextureWrap& wrap) : void
+			+update(const void* pixels) : void
+			+updateRect(const Rectangle& rec, const void* pixels) : void
+		}
+	}
+
+	namespace text {
+		class RlFont {
+			+RlFont()
+			+RlFont(const std::string& fontPath)
+			+RlFont(const int& fontSize)
+			+RlFont(const std::string& fontPath, const int& fontSize, int* fontChars, const int& glyphCount)
+			+RlFont(const image::RlImage& image, const RlColor& key, const int& firstChar)
+			+RlFont(const std::string& fileType, const unsigned char* fileData, int dataSize, const int& fontSize, int* fontChars, const int& glyphCount)
+			+~RlFont()
+			-_font : Font
+			+getFont() : Font& {query}
+			-_fontSize : int
+			+getFontSize() : int {query}
+			+{static} getDefaultFont() : std::shared_ptr<RlFont>
+			-_fontPath : std::string
+			+getFontPath() : std::string& {query}
+		}
+
+		class RlText {
+			+RlText(const std::string& text, const Vector2f& position, const RlColor& color)
+			+RlText(const std::string& text, std::shared_ptr<RlFont>& font, const Vector2f& position, const RlColor& color)
+			+RlText(const std::string& text, const std::string& fontPath, float fontSize, const Vector2f& position, const RlColor& color)
+			-_color : RlColor
+			+getColor() : RlColor& {query}
+			-_origin : Vector2f
+			-_position : Vector2f
+			+getSize() : Vector2f {query}
+			+getOrigin() : Vector2f& {query}
+			+getPosition() : Vector2f& {query}
+			-_fontSize : float
+			-_rotation : float
+			-_textSpacing : float
+			+getFontSize() : float {query}
+			+getRotation() : float {query}
+			+getTextSpacing() : float {query}
+			+getWidth() : float {query}
+			-_font : std::shared_ptr<RlFont>
+			+getFont() : std::shared_ptr<RlFont>& {query}
+			-_text : std::string
+			+getText() : std::string& {query}
+			+setColor(const RlColor& color) : void
+			+setFont(const std::shared_ptr<RlFont>& font) : void
+			+setFontSize(float fontSize) : void
+			+setOrigin(const Vector2f& origin) : void
+			+setPosition(float x, float y) : void
+			+setPosition(const Vector2f& pos) : void
+			+setRotation(float rotation) : void
+			+setText(const std::string& text) : void
+			+setTextSpacing(float textSpacing) : void
+		}
+
+		class TextCodepoint {
+			+TextCodepoint(const std::string& text)
+			+getCodepointsCount() : int {query}
+			+{static} codePointToUTF8(const int& codepoint, int& byteSize) : std::string
+			+toUTF8String(const int& bytesLength) : std::string
+			-_codepoints : std::vector<int>
+			+getCodepoints() : std::vector<int>& {query}
+		}
+	}
+
+	namespace shader {
+		class RlShader {
+			+RlShader()
+			+~RlShader()
+			-_shader : Shader
+			+getShader() : Shader& {query}
+			+getLocation(const std::string& uniformName) : int
+			+getLocationAttrib(const std::string& attribName) : int
+			+load(const std::string& vsFileName, const std::string& fsFileName) : void
+			+loadFromMemory(const std::string& vsCode, const std::string& fsCode) : void
+			+setValue(int locIndex, const void* value, int uniformType) : void
+			+setValueMatrix(int locIndex, const Matrix& mat) : void
+			+setValueTexture(int locIndex, const texture::RlTexture& texture) : void
+			+setValueV(int locIndex, const void* value, int uniformType, int count) : void
+		}
+	}
+
+	namespace model {
+		class MeshGenerator {
+			+{static} genMeshCone(const float& radius, const float& height, const int& slices) : RlMesh
+			+{static} genMeshCube(const float& width, const float& height, const float& length) : RlMesh
+			+{static} genMeshCubicmap(const image::RlImage& cubicmap, const Vector3f& cubeSize) : RlMesh
+			+{static} genMeshCylinder(const float& radius, const float& height, const int& slices) : RlMesh
+			+{static} genMeshHeightmap(const image::RlImage& heightmap, const Vector3f& size) : RlMesh
+			+{static} genMeshHemiSphere(const float& radius, const int& rings, const int& slices) : RlMesh
+			+{static} genMeshKnot(const float& radius, const float& size, const int& radSeg, const int& sides) : RlMesh
+			+{static} genMeshPlane(const float& width, const float& length, const int& resX, const int& resZ) : RlMesh
+			+{static} genMeshPoly(const int& sides, const float& radius) : RlMesh
+			+{static} genMeshSphere(const float& radius, const int& rings, const int& slices) : RlMesh
+			+{static} genMeshTorus(const float& radius, const float& size, const int& radSeg, const int& sides) : RlMesh
+		}
+
+		class RlAnimation {
+			+RlAnimation()
+			+RlAnimation(const std::string& animationDir, const std::string& extension)
+			-_isLoaded : bool
+			+isLoaded() : bool& {query}
+			+getAnimationsSize() : std::size_t {query}
+			-_animationModels : std::vector<RlModel>
+			+getAnimationModels() : std::vector<RlModel>& {query}
+			-_frame : unsigned int
+			+getFrame() : unsigned int& {query}
+			+update() : void
+		}
+
+		class RlMaterial {
+			+RlMaterial(const std::string& fileName)
+			+RlMaterial(Material& material)
+			+~RlMaterial()
+			-_material : Material
+			+getMaterial() : Material& {query}
+			+getMaterial() : Material&
+		}
+
+		class RlMesh {
+			+RlMesh(const Mesh& mesh)
+			+RlMesh(const RlMesh& mesh)
+			+~RlMesh()
+			+getBoundingBox() : BoundingBox
+			+getMesh() : Mesh& {query}
+			+operator=(const RlMesh& mesh) : RlMesh&
+			+exportMesh(const std::string& fileName) : bool
+			-_mesh : std::shared_ptr<Mesh>
+			+getMeshSharedPtr() : std::shared_ptr<Mesh>& {query}
+			+genBinormals() : void
+			+genTangents() : void
+			+updateBuffer(const int& index, void* data, const int& dataSize, const int& offset) : void
+			+uploadInGPU(const bool& dynamic) : void
+		}
+
+		class RlModel {
+			+RlModel(const std::string& fileName)
+			+RlModel(const std::string& fileName, const std::string& textureName)
+			+RlModel(const std::shared_ptr<RlMesh>& mesh)
+			+RlModel(const RlMesh& mesh)
+			+RlModel(const RlModel& model)
+			+~RlModel()
+			-_baseBoudingBox : BoundingBox
+			-_boundingBox : BoundingBox
+			+getDefaultBoundingBox() : BoundingBox {query}
+			+getBaseBoundingBox() : BoundingBox& {query}
+			+getBoundingBox() : BoundingBox& {query}
+			+getModel() : Model& {query}
+			-_color : RlColor
+			+getColor() : RlColor& {query}
+			+operator=(const RlModel& model) : RlModel&
+			-_position : Vector3f
+			-_rotationAxis : Vector3f
+			-_scale : Vector3f
+			+getPosition() : Vector3f& {query}
+			+getRotationAxis() : Vector3f& {query}
+			+getScale() : Vector3f& {query}
+			-_rotationAngle : float
+			+getRotationAngle() : float& {query}
+			-_model : std::shared_ptr<Model>
+			-_mesh : std::shared_ptr<RlMesh>
+			-_texture : std::shared_ptr<texture::RlTexture>
+			+getTexture() : std::shared_ptr<texture::RlTexture>& {query}
+			+setBoundingBox(const BoundingBox& boundingBox) : void
+			+setColor(const RlColor& color) : void
+			+setMaterialTexture(const std::shared_ptr<texture::RlTexture>& texture) : void
+			+setMaterialTexture(const std::shared_ptr<texture::RlTexture>& texture, const int& materialIndex) : void
+			+setMaterialTexture(const std::shared_ptr<texture::RlTexture>& texture, const int& materialIndex, const MaterialMapIndex& type) : void
+			+setMeshMaterial(const int& meshId, const int& materialId) : void
+			+setPosition(const Vector3f& position) : void
+			+setPosition(const float& x, const float& y, const float& z) : void
+			+setRotationAngle(float rotationAngle) : void
+			+setRotationAxis(const Vector3f& rotationAxis) : void
+			+setRotationAxis(const float& x, const float& y, const float& z) : void
+			+setScale(const Vector3f& scale) : void
+			+setScale(const float& x, const float& y, const float& z) : void
+		}
+
+		class RlModelAnimation {
+			+RlModelAnimation(const RlModel& model, const std::string& fileName)
+			+~RlModelAnimation()
+			-_anims : ModelAnimation*
+			-_model : RlModel
+			+animationIndexIsValid(const unsigned int& animIndex) : bool
+			-_frameCount : int
+			-_animations : std::vector<ModelAnimation>
+			-_count : unsigned int
+			+getCount() : unsigned int {query}
+			+incrementFrameCount(const int& value) : void
+			+unload(const unsigned int& animIndex) : void
+			+update(const unsigned int& animIndex) : void
+		}
+	}
+
+	namespace image {
+		class ImageDrawHelper {
+			+{static} clearBackground(image::RlImage& dst, const RlColor& color) : void
+			+{static} drawCircle(image::RlImage& dst, int centerX, int centerY, int radius, const RlColor& color) : void
+			+{static} drawCircle(image::RlImage& dst, const Vector2f& center, int radius, const RlColor& color) : void
+			+{static} drawImage(image::RlImage& dst, const image::RlImage& src, const Rectangle& srcRec, const Rectangle& dstRec, const RlColor& tint) : void
+			+{static} drawImageText(image::RlImage& dst, const std::string& text, int posX, int posY, int fontSize, const RlColor& color) : void
+			+{static} drawImageText(image::RlImage& dst, const raylib::text::RlFont& font, const std::string& text, const Vector2f& position, float fontSize, float spacing, const RlColor& tint) : void
+			+{static} drawLine(image::RlImage& dst, int startPosX, int startPosY, int endPosX, int endPosY, const RlColor& color) : void
+			+{static} drawLine(image::RlImage& dst, const Vector2f& start, const Vector2f& end, const RlColor& color) : void
+			+{static} drawPixel(image::RlImage& dst, int posX, int posY, const RlColor& color) : void
+			+{static} drawPixel(image::RlImage& dst, const Vector2f& position, const RlColor& color) : void
+			+{static} drawRectangle(image::RlImage& dst, int posX, int posY, int width, int height, const RlColor& color) : void
+			+{static} drawRectangle(image::RlImage& dst, const Vector2f& position, const Vector2f& size, const RlColor& color) : void
+			+{static} drawRectangleLines(image::RlImage& dst, const Rectangle& rec, int thick, const RlColor& color) : void
+			+{static} drawRectangleRec(image::RlImage& dst, const Rectangle& rec, const RlColor& color) : void
+		}
+
+		class ImageGenerator {
+			+{static} genImageCellular(const int& width, const int& height, const int& tileSize) : RlImage
+			+{static} genImageChecked(const int& width, const int& height, const int& checksX, const int& checksY, const RlColor& col1, const RlColor& col2) : RlImage
+			+{static} genImageColor(const int& width, const int& height, const RlColor& color) : RlImage
+			+{static} genImageGradientH(const int& width, const int& height, const RlColor& left, const RlColor& right) : RlImage
+			+{static} genImageGradientRadial(const int& width, const int& height, float density, const RlColor& inner, const RlColor& outer) : RlImage
+			+{static} genImageGradientV(const int& width, const int& height, const RlColor& top, const RlColor& bottom) : RlImage
+			+{static} genImageWhiteNoise(const int& width, const int& height, float factor) : RlImage
+		}
+
+		class RlImage {
+			+RlImage(const Image& image)
+			+RlImage(const Image& image, int frameCount)
+			+~RlImage()
+			-_image : Image
+			+getImage() : Image& {query}
+			+getImage() : Image&
+			+getImageAlphaBorder(float threshold) : Rectangle
+			+getImageColor(int x, int y) : RlColor
+			+copy() : RlImage
+			+subImage(const Rectangle& rec) : RlImage
+			+save(const std::string& fileName) : bool
+			+saveAsCode(const std::string& fileName) : bool
+			-_frameCount : int
+			+getFrameCount() : int& {query}
+			+loadImageColors() : std::vector<RlColor>
+			+loadImagePalette(int maxPaletteSize) : std::vector<RlColor>
+			+alphaClear(const RlColor& color, float threshold) : void
+			+alphaCrop(float threshold) : void
+			+alphaMask(const RlImage& alphaMask) : void
+			+alphaPremultiply() : void
+			+changeFormat(int newFormat) : void
+			+colorBrightness(int brightness) : void
+			+colorContrast(float contrast) : void
+			+colorGrayscale() : void
+			+colorInvert() : void
+			+colorReplace(const RlColor& color, const RlColor& replace) : void
+			+colorTint(const RlColor& color) : void
+			+crop(const Rectangle& crop) : void
+			+dither(int rBpp, int gBpp, int bBpp, int aBpp) : void
+			+flipHorizontal() : void
+			+flipVertical() : void
+			+mipmaps() : void
+			+resize(int newWidth, int newHeight) : void
+			+resizeCanvas(int newWidth, int newHeight, int offsetX, int offsetY, const RlColor& fill) : void
+			+resizeNearesetNeighbor(int newWidth, int newHeight) : void
+			+rotateClockwise() : void
+			+rotateCounterClockwise() : void
+			+toPot(const RlColor& fill) : void
+		}
+	}
+
+	namespace helper {
+		class AudioHelper {
+			+{static} isAudioDeviceReady() : bool
+			+{static} getNumberOfSoundsPlaying() : int
+			-{static} _audioDeviceInit : static bool
+			+{static} closeAudioDevice() : void
+			+{static} initAudioDevice() : void
+			+{static} setAudioStreamBufferSizeDefault(const int& size) : void
+			+{static} setMasterVolume(float volume) : void
+			+{static} stopMultiSound() : void
+		}
+
+		class CameraHelper {
+			+{static} setAltControl(int keyAlt) : void
+			+{static} setCameraMode(const RlCamera& camera, const CameraMode& mode) : void
+			+{static} setMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown) : void
+			+{static} setPanControl(int keyPan) : void
+			+{static} setSmoothZoomControl(int keySmoothZoom) : void
+		}
+
+		class Collision2DHelper {
+			+{static} getCollisionRec(const Rectangle& rec1, const Rectangle& rec2) : Rectangle
+			+{static} checkCollisionCircleRec(const Vector2f& center, const float& radius, const Rectangle& rec) : bool
+			+{static} checkCollisionCircles(const Vector2f& center1, const float& radius1, const Vector2f& center2, const float& radius2) : bool
+			+{static} checkCollisionLines(const Vector2f& startPos1, const Vector2f& endPos1, const Vector2f& startPos2, const Vector2f& endPos2, Vector2f& collisionPoint) : bool
+			+{static} checkCollisionPointCircle(const Vector2f& point, const Vector2f& center, const float& radius) : bool
+			+{static} checkCollisionPointLine(const Vector2f& point, const Vector2f& p1, const Vector2f& p2, const int& threshold) : bool
+			+{static} checkCollisionPointRec(const Vector2f& point, const Rectangle& rec) : bool
+			+{static} checkCollisionPointTriangle(const Vector2f& point, const Vector2f& p1, const Vector2f& p2, const Vector2f& p3) : bool
+			+{static} checkCollisionRecs(const Rectangle& rec1, const Rectangle& rec2) : bool
+		}
+
+		class Collision3dHelper {
+			+{static} getRayCollisionBox(const Ray& ray, const BoundingBox& box) : RayCollision
+			+{static} getRayCollisionMesh(const Ray& ray, const model::RlMesh& mesh, const Matrix& transform) : RayCollision
+			+{static} getRayCollisionModel(const Ray& ray, const model::RlModel& model) : RayCollision
+			+{static} getRayCollisionQuad(const Ray& ray, const Vector3f& p1, const Vector3f& p2, const Vector3f& p3, const Vector3f& p4) : RayCollision
+			+{static} getRayCollisionSphere(const Ray& ray, const Vector3f& center, const float& radius) : RayCollision
+			+{static} getRayCollisionTriangle(const Ray& ray, const Vector3f& p1, const Vector3f& p2, const Vector3f& p3) : RayCollision
+			+{static} checkCollisionBoxSphere(const BoundingBox& box, const Vector3f& center, const float& radius) : bool
+			+{static} checkCollisionBoxes(const BoundingBox& box1, const BoundingBox& box2) : bool
+			+{static} checkCollisionSpheres(const Vector3f& center1, const float& radius1, const Vector3f& center2, const float& radius2) : bool
+		}
+
+		class ColorHelper {
+			+{static} colorAlpha(const RlColor& color, float alpha) : RlColor
+			+{static} colorAlphaBlend(const RlColor& dst, const RlColor& src, const RlColor& tint) : RlColor
+			+{static} colorFromHSV(float hue, float saturation, float value) : RlColor
+			+{static} colorFromNormalized(const Vector4f& normalizedColor) : RlColor
+			+{static} getColor(unsigned int hexValue) : RlColor
+			+{static} getPixelColor(void* srcPtr, int format) : RlColor
+			+{static} colorToHSV(const RlColor& color) : Vector3f
+			+{static} getPixelDataSize(int width, int height, int format) : int
+			+{static} setPixelColor(void* dstPtr, const RlColor& color, int format) : void
+		}
+
+		class CoreHelper {
+			+{static} loadVrStereoConfig(const VrDeviceInfo& device) : VrStereoConfig
+			+{static} getTime() : double
+			+{static} getFrameTime() : float
+			+{static} getFPS() : int
+			+{static} openURL(const std::string& url) : void
+			+{static} setFramerateLimit(int fps) : void
+			+{static} unloadVrStereoConfig(const VrStereoConfig& config) : void
+		}
+
+		class FileHelper {
+			+{static} directoryExists(const std::string& dirPath) : bool
+			+{static} fileExists(const std::string& fileName) : bool
+			+{static} isFileDropped() : bool
+			+{static} isFileExtension(const std::string& fileName, const std::string& ext) : bool
+			+{static} saveFileText(const std::string& fileName, const std::string& text) : bool
+			+{static} getFileModTime(const std::string& fileName) : long long
+			+{static} getDirectoryPath(const std::string& filePath) : std::string
+			+{static} getFileExtension(const std::string& fileName) : std::string
+			+{static} getFileName(const std::string& filePath) : std::string
+			+{static} getFileNameWithoutExt(const std::string& filePath) : std::string
+			+{static} getPrevDirectoryPath(const std::string& dirPath) : std::string
+			+{static} getWorkingDirectory() : std::string
+			+{static} loadFileText(const std::string& fileName) : std::string
+			+{static} getDirectoryFiles(const std::string& dirPath, const bool& recursive) : std::vector<std::string>
+			+{static} getDirectoryFiles(const std::string& dirPath, const std::function<bool ( const std::string& )>& filter) : std::vector<std::string>
+			+{static} getDirectoryFiles(const std::string& dirPath, const bool& recursive, const std::function<bool ( const std::string& fileName )>& filterFunction) : std::vector<std::string>
+			+{static} getDroppedFiles() : std::vector<std::string>
+			+{static} loadFileData(const std::string& fileName) : std::vector<unsigned char>
+			+{static} changeDirectory(const std::string& dir) : void
+		}
+
+		class ImageHelper {
+			+{static} fromText(const std::string& text, int fontSize, const RlColor& color) : raylib::image::RlImage
+			+{static} fromText(const raylib::text::RlFont& font, const std::string& text, float fontSize, float spacing, const RlColor& tint) : raylib::image::RlImage
+			+{static} genImageFontAtlas(const GlyphInfo* chars, Rectangle** recs, int glyphCount, int fontSize, int padding, int packMethod) : raylib::image::RlImage
+			+{static} load(const std::string& fileName) : raylib::image::RlImage
+			+{static} loadAnim(const std::string& fileName) : raylib::image::RlImage
+			+{static} loadFromMemory(const std::string& fileType, const unsigned char* fileData, int dataSize) : raylib::image::RlImage
+			+{static} loadFromScreen() : raylib::image::RlImage
+			+{static} loadFromTexture(const Texture2D& texture) : raylib::image::RlImage
+			+{static} loadRaw(const std::string& fileName, int width, int height, int format, int headerSize) : raylib::image::RlImage
+		}
+
+		class TextHelper {
+			+{static} getGlyphInfo(const raylib::text::RlFont& font, int codepoint) : GlyphInfo
+			+{static} getGlyphAtlasRec(const raylib::text::RlFont& font, int codepoint) : Rectangle
+			+{static} measureText(const raylib::text::RlFont& font, const std::string& text) : Vector2f
+			+{static} measureText(const raylib::text::RlFont& font, const std::string& text, float fontSize, float spacing) : Vector2f
+			+{static} getGlyphIndex(const raylib::text::RlFont& font, int codepoint) : int
+			+{static} measureText(const std::string& text, int fontSize) : int
+		}
+
+		class VectorHelper {
+			+{static} toVectorf(const::Vector2& vector) : Vector2f
+			+{static} toVectorf(const::Vector3& vector) : Vector3f
+			+{static} toVectorf(const::Vector4& vector) : Vector4f
+			+toRaylibVector(const Vector2f& vector) : static::Vector2
+			+toRaylibVector(const Vector3f& vector) : static::Vector3
+			+toRaylibVector(const Vector4f& vector) : static::Vector4
+		}
+
+		class WorldHelper {
+			+{static} getScreenToWorld2D(const Vector2f& position, const Camera2D& camera) : Vector2f
+			+{static} getWorldToScreen(const Vector3f& position, const RlCamera& camera) : Vector2f
+			+{static} getWorldToScreen2D(const Vector2f& position, const Camera2D& camera) : Vector2f
+			+{static} getWorldToScreenEx(const Vector3f& position, const RlCamera& camera, int width, int height) : Vector2f
+		}
+
+		namespace input {
+			class CursorHelper {
+				+{static} isCursorHidden() : bool
+				+{static} isCursorOnScreen() : bool
+				+{static} disableCursor() : void
+				+{static} enableCursor() : void
+				+{static} hideCursor() : void
+				+{static} showCursor() : void
+			}
+
+			class GamepadHelper {
+				+{static} isGamepadAvailable(const int& gamepad) : bool
+				+{static} isGamepadButtonDown(const int& gamepad, const GamepadButton& button) : bool
+				+{static} isGamepadButtonPressed(const int& gamepad, const GamepadButton& button) : bool
+				+{static} isGamepadButtonReleased(const int& gamepad, const GamepadButton& button) : bool
+				+{static} isGamepadButtonUp(const int& gamepad, const GamepadButton& button) : bool
+				+{static} getGamepadAxisMovement(const int& gamepad, const GamepadAxis& axis) : float
+				+{static} getGamepadAxisCount(const int& gamepad) : int
+				+{static} getGamepadButtonPressed() : int
+				+{static} setGamepadMappings(const std::string& mappings) : int
+				+{static} getGamepadName(const int& gamepad) : std::string
+			}
+
+			class KeyboardHelper {
+				+{static} isKeyDown(const KeyboardKey& key) : bool
+				+{static} isKeyPressed(const KeyboardKey& key) : bool
+				+{static} isKeyReleased(const KeyboardKey& key) : bool
+				+{static} isKeyUp(const KeyboardKey& key) : bool
+				+{static} getCharPressed() : int
+				+{static} getKeyPressed() : int
+				+{static} getKeyName(const int& key, const int& scancode) : std::string
+				+{static} getPressedKeys() : std::vector<KeyboardKey>
+				+{static} getPressedChars() : std::vector<int>
+				+{static} setExitKey(const KeyboardKey& key) : void
+			}
+
+			class MouseHelper {
+				+{static} getMouseRay(const Vector2f& mousePosition, const RlCamera& camera) : Ray
+				+{static} getMouseDelta() : Vector2f
+				+{static} getMousePosition() : Vector2f
+				+{static} isMouseButtonDown(const MouseButton& button) : bool
+				+{static} isMouseButtonPressed(const MouseButton& button) : bool
+				+{static} isMouseButtonReleased(const MouseButton& button) : bool
+				+{static} isMouseButtonUp(const MouseButton& button) : bool
+				+{static} getMouseWheelMove() : float
+				+{static} getMouseX() : int
+				+{static} getMouseY() : int
+				+{static} setMouseCursor(const MouseCursor& cursor) : void
+				+{static} setMouseOffset(int offsetX, int offsetY) : void
+				+{static} setMousePosition(int x, int y) : void
+				+{static} setMouseScale(float scaleX, float scaleY) : void
+			}
+
+			class TouchHelper {
+				+{static} getGestureDragVector() : Vector2f
+				+{static} getGesturePinchVector() : Vector2f
+				+{static} getTouchPosition(const int& index) : Vector2f
+				+{static} isGestureDetected(const int& gesture) : bool
+				+{static} getGestureDragAngle() : float
+				+{static} getGestureHoldDuration() : float
+				+{static} getGesturePinchAngle() : float
+				+{static} getGestureDetected() : int
+				+{static} getTouchPointCount() : int
+				+{static} getTouchPointId(const int& index) : int
+				+{static} getTouchX() : int
+				+{static} getTouchY() : int
+				+{static} setGesturesEnabled(const unsigned int& flags) : void
+			}
+		}
+
+		namespace draw {
+			class Draw2DHelper {
+				-{static} _texShapesRec : static Rectangle
+				-{static} _texShapes : static Texture2D
+				+{static} drawCircle(int centerX, int centerY, float radius, const RlColor& color) : void
+				+{static} drawCircle(const Vector2f& center, float radius, const RlColor& color) : void
+				+{static} drawCircleGradient(int centerX, int centerY, float radius, const RlColor& color1, const RlColor& color2) : void
+				+{static} drawCircleLines(int centerX, int centerY, float radius, const RlColor& color) : void
+				+{static} drawCircleSector(const Vector2f& center, float radius, float startAngle, float endAngle, int segments, const RlColor& color) : void
+				+{static} drawCircleSectorLines(const Vector2f& center, float radius, float startAngle, float endAngle, int segments, const RlColor& color) : void
+				+{static} drawEllipse(int centerX, int centerY, float radiusH, float radiusV, const RlColor& color) : void
+				+{static} drawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, const RlColor& color) : void
+				+{static} drawLine(int startPosX, int startPosY, int endPosX, int endPosY, const RlColor& color) : void
+				+{static} drawLine(const Vector2f& startPos, const Vector2f& endPos, const RlColor& color) : void
+				+{static} drawLine(const Vector2f& startPos, const Vector2f& endPos, float thick, const RlColor& color) : void
+				+{static} drawLineBezier(const Vector2f& startPos, const Vector2f& endPos, float thick, const RlColor& color) : void
+				+{static} drawLineBezierCubic(const Vector2f& startPos, const Vector2f& endPos, const Vector2f& startControlPos, const Vector2f& endControlPos, float thick, const RlColor& color) : void
+				+{static} drawLineBezierQuad(const Vector2f& startPos, const Vector2f& endPos, const Vector2f& controlPos, float thick, const RlColor& color) : void
+				+{static} drawLineStrip(const std::vector<Vector2f>& points, const RlColor& color) : void
+				+{static} drawPixel(int posX, int posY, const RlColor& color) : void
+				+{static} drawPixel(const Vector2f& position, const RlColor& color) : void
+				+{static} drawPoly(const Vector2f& center, int sides, float radius, float rotation, const RlColor& color) : void
+				+{static} drawPolyLines(const Vector2f& center, int sides, float radius, float rotation, const RlColor& color) : void
+				+{static} drawPolyLines(const Vector2f& center, int sides, float radius, float rotation, float lineThick, const RlColor& color) : void
+				+{static} drawRectangle(int posX, int posY, int width, int height, const RlColor& color) : void
+				+{static} drawRectangle(const Vector2f& position, const Vector2f& size, const RlColor& color) : void
+				+{static} drawRectangle(const Rectangle& rec, const RlColor& color) : void
+				+{static} drawRectangle(const Rectangle& rec, const Vector2f& origin, float rotation, const RlColor& color) : void
+				+{static} drawRectangleGradient(const Rectangle& rec, const RlColor& col1, const RlColor& col2, const RlColor& col3, const RlColor& col4) : void
+				+{static} drawRectangleGradientH(int posX, int posY, int width, int height, const RlColor& color1, const RlColor& color2) : void
+				+{static} drawRectangleGradientV(int posX, int posY, int width, int height, const RlColor& color1, const RlColor& color2) : void
+				+{static} drawRectangleLines(int posX, int posY, int width, int height, const RlColor& color) : void
+				+{static} drawRectangleLinesEx(const Rectangle& rec, float lineThick, const RlColor& color) : void
+				+{static} drawRectangleRounded(const Rectangle& rec, float roundness, int segments, const RlColor& color) : void
+				+{static} drawRectangleRoundedLines(const Rectangle& rec, float roundness, int segments, float lineThick, const RlColor& color) : void
+				+{static} drawRing(const Vector2f& center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, const RlColor& color) : void
+				+{static} drawRingLines(const Vector2f& center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, const RlColor& color) : void
+				+{static} drawTriangle(const Vector2f& v1, const Vector2f& v2, const Vector2f& v3, const RlColor& color) : void
+				+{static} drawTriangleFan(const std::vector<Vector2f>& points, const RlColor& color) : void
+				+{static} drawTriangleLines(const Vector2f& v1, const Vector2f& v2, const Vector2f& v3, const RlColor& color) : void
+				+{static} drawTriangleStrip(const std::vector<Vector2f>& points, const RlColor& color) : void
+				+{static} setShapesTexture(const texture::RlTexture& texture, const Rectangle& source) : void
+			}
+
+			class Draw3DHelper {
+				+{static} drawBillboard(const RlCamera& camera, const texture::RlTexture& texture, const Vector3f& position, float size, const RlColor& tint) : void
+				+{static} drawBillboardPro(const RlCamera& camera, const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const Vector3f& up, const Vector2f& size, const Vector2f& origin, float rotation, const RlColor& tint) : void
+				+{static} drawBillboardRec(const RlCamera& camera, const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const Vector2f& size, const RlColor& tint) : void
+				+{static} drawBoundingBox(const BoundingBox& box, const RlColor& color) : void
+				+{static} drawCircle(const Vector3f& center, const float& radius, const Vector3f& rotationAxis, const float& rotationAngle, const RlColor& color) : void
+				+{static} drawCube(const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCube(const Vector3f& position, const Vector3f& size, const RlColor& color) : void
+				+{static} drawCubeTexture(const texture::RlTexture& texture, const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCubeTextureRec(const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCubeWires(const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCubeWires(const Vector3f& position, const Vector3f& size, const RlColor& color) : void
+				+{static} drawCylinder(const Vector3f& position, const float& radiusTop, const float& radiusBottom, const float& height, const int& slices, const RlColor& color) : void
+				+{static} drawCylinder(const Vector3f& startPos, const Vector3f& endPos, const float& startRadius, const float& endRadius, const int& sides, const RlColor& color) : void
+				+{static} drawCylinderWires(const Vector3f& position, const float& radiusTop, const float& radiusBottom, const float& height, const int& slices, const RlColor& color) : void
+				+{static} drawCylinderWires(const Vector3f& startPos, const Vector3f& endPos, const float& startRadius, const float& endRadius, const int& sides, const RlColor& color) : void
+				+{static} drawGrid(const int& slices, const float& spacing) : void
+				+{static} drawGrid(const Vector2i& size, const float& spacing) : void
+				+{static} drawGrid(const Vector2i& size, const Vector3f& position, const float& spacing) : void
+				+{static} drawGrid(const Vector2i& size, const Vector3f& position, const float& spacing, const RlColor& color) : void
+				+{static} drawLine(const Vector3f& startPos, const Vector3f& endPos, const RlColor& color) : void
+				+{static} drawPlane(const Vector3f& centerPos, const Vector2f& size, const RlColor& color) : void
+				+{static} drawPoint(const Vector3f& position, const RlColor& color) : void
+				+{static} drawRay(const Ray& ray, const RlColor& color) : void
+				+{static} drawSphere(const Vector3f& centerPos, const float& radius, const RlColor& color) : void
+				+{static} drawSphere(const Vector3f& centerPos, const float& radius, const int& rings, const int& slices, const RlColor& color) : void
+				+{static} drawSphereWires(const Vector3f& centerPos, const float& radius, const int& rings, const int& slices, const RlColor& color) : void
+				+{static} drawTriangle3D(const Vector3f& v1, const Vector3f& v2, const Vector3f& v3, const RlColor& color) : void
+				+{static} drawTriangleStrip3D(const std::vector<Vector3f>& points, const RlColor& color) : void
+			}
+
+			class DrawHelper {
+				+{static} beginBlendMode(int mode) : void
+				+{static} beginDrawing() : void
+				+{static} beginMode2D(const Camera2D& camera) : void
+				+{static} beginMode3D(const RlCamera& camera) : void
+				+{static} beginScissorMode(int x, int y, int width, int height) : void
+				+{static} beginShaderMode(const shader::RlShader& shader) : void
+				+{static} beginTextureMode(const RenderTexture2D& target) : void
+				+{static} beginVrStereoMode(const VrStereoConfig& config) : void
+				+{static} clearBackground(const RlColor& color) : void
+				+{static} endBlendMode() : void
+				+{static} endDrawing() : void
+				+{static} endMode2D() : void
+				+{static} endMode3D() : void
+				+{static} endScissorMode() : void
+				+{static} endShaderMode() : void
+				+{static} endTextureMode() : void
+				+{static} endVrStereoMode() : void
+			}
+
+			class DrawModelHelper {
+				+{static} drawMesh(const raylib::model::RlMesh& mesh, const raylib::model::RlMaterial& material, const Matrix& transform) : void
+				+{static} drawMeshInstanced(const raylib::model::RlMesh& mesh, const raylib::model::RlMaterial& material, std::vector<Matrix>& transforms) : void
+				+{static} drawModel(const raylib::model::RlModel& model) : void
+				+{static} drawModel(const raylib::model::RlModel& model, const Vector3f& position, const float& scale, const RlColor& tint) : void
+				+{static} drawModel(const raylib::model::RlModel& model, const Vector3f& position, const Vector3f& rotationAxis, const float& rotationAngle, const Vector3f& scale, const RlColor& tint) : void
+				+{static} drawModelWires(const raylib::model::RlModel& model) : void
+				+{static} drawModelWires(const raylib::model::RlModel& model, const Vector3f& position, const float& scale, const RlColor& tint) : void
+				+{static} drawModelWires(const raylib::model::RlModel& model, const Vector3f& position, const Vector3f& rotationAxis, const float& rotationAngle, const Vector3f& scale, const RlColor& tint) : void
+			}
+
+			class DrawTextHelper {
+				+{static} drawCenteredText(const std::string& text, const raylib::text::RlFont& font, const Vector2f& position, const RlColor& color, const float& spacing) : void
+				+{static} drawCenteredText(const std::string& text, const raylib::text::RlFont& font, const Vector2f& position, const float& fontSize, const RlColor& color, const float& spacing) : void
+				+{static} drawCenteredText(const raylib::text::RlText& text) : void
+				+{static} drawFps(const Vector2f& pos, const int& fontSize) : void
+				+{static} drawFps(const float& posX, const float& posY, const int& fontSize) : void
+				+{static} drawFps(const Vector2f& pos) : void
+				+{static} drawFps(const int& posX, const int& posY) : void
+				+{static} drawText(const std::string& text, const Vector2f& pos, const int& fontSize, const RlColor& color) : void
+				+{static} drawText(const std::string& text, const float& posX, const float& posY, const int& fontSize, const RlColor& color) : void
+				+{static} drawText(const std::string& text, const raylib::text::RlFont& font, const Vector2f& position, const RlColor& color) : void
+				+{static} drawText(const std::string& text, const raylib::text::RlFont& font, const Vector2f& position, const float& fontSize, const RlColor& tint, const float& spacing) : void
+				+{static} drawText(const std::string& text, const raylib::text::RlFont& font, const Vector2f& position, const float& rotation, const float& fontSize, const RlColor& tint, const float& spacing) : void
+				+{static} drawText(const std::string& text, const raylib::text::RlFont& font, const Vector2f& position, const Vector2f& origin, const float& fontSize, const RlColor& tint, const float& spacing) : void
+				+{static} drawText(const std::string& text, const raylib::text::RlFont& font, const Vector2f& position, const Vector2f& origin, const float& rotation, const float& fontSize, const RlColor& tint, const float& spacing) : void
+				+{static} drawText(const raylib::text::RlText& text, const Vector2f& position, const RlColor& color) : void
+				+{static} drawText(const raylib::text::RlText& text, const float& posX, const float& posY, const RlColor& color) : void
+				+{static} drawText(const raylib::text::RlText& text) : void
+				+{static} drawTextUsingCodepoint(const raylib::text::RlFont& font, const int& codepoint, const Vector2f& position, float fontSize, const RlColor& tint) : void
+			}
+
+			class DrawTextureHelper {
+				+{static} drawTexture(const texture::RlTexture& texture, int posX, int posY, const RlColor& tint) : void
+				+{static} drawTexture(const texture::RlTexture& texture, const Vector2f& position, const RlColor& tint) : void
+				+{static} drawTexture(const texture::RlTexture& texture, const Vector2f& position, float rotation, float scale, const RlColor& tint) : void
+				+{static} drawTexture(const texture::RlTexture& texture, const Rectangle& source, const Rectangle& dest, const Vector2f& origin, float rotation, const RlColor& tint) : void
+				+{static} drawTextureNPatch(const texture::RlTexture& texture, const NPatchInfo& nPatchInfo, const Rectangle& dest, const Vector2f& origin, float rotation, const RlColor& tint) : void
+				+{static} drawTexturePoly(const texture::RlTexture& texture, const Vector2f& center, const std::vector<Vector2f>& points, std::vector<Vector2f>& texcoords, const RlColor& tint) : void
+				+{static} drawTextureQuad(const texture::RlTexture& texture, const Vector2f& tiling, const Vector2f& offset, const Rectangle& quad, const RlColor& tint) : void
+				+{static} drawTextureRec(const texture::RlTexture& texture, const Rectangle& source, const Vector2f& position, const RlColor& tint) : void
+				+{static} drawTextureTiled(const texture::RlTexture& texture, const Rectangle& source, const Rectangle& dest, const Vector2f& origin, float rotation, float scale, const RlColor& tint) : void
+			}
+		}
+	}
+
+	namespace ex {
+		class BuilderException {
+			+BuilderException(const std::string& msg)
+		}
+
+		class CameraException {
+			+CameraException(const std::string& message)
+		}
+
+		class InvalidArgumentException {
+			+InvalidArgumentException(const std::string& msg)
+		}
+
+		class RaylibException {
+			+RaylibException(const std::string& msg, bool prefix)
+			+what() : char* {query}
+			-_msg : std::string
+		}
+
+		class RlAnimationException {
+			+RlAnimationException(const std::string& message)
+		}
+
+		class RlModelException {
+			+RlModelException(const std::string& message)
+		}
+
+		class WindowException {
+			+WindowException(const std::string& msg)
+		}
+	}
+
+	namespace builder {
+		abstract class IBuilder <template<typename T>> {
+			+{abstract} build() : T
+		}
+
+		class RlCameraBuilder {
+			+RlCameraBuilder()
+			-_cameraMode : CameraMode
+			-_projection : CameraProjection
+			+build() : RlCamera
+			+setCameraMode(CameraMode cameraMode) : RlCameraBuilder&
+			+setFovy(float fovy) : RlCameraBuilder&
+			+setLookingPoint(const Vector3f& lookingPoint) : RlCameraBuilder&
+			+setPosition(const Vector3f& position) : RlCameraBuilder&
+			+setProjection(CameraProjection projection) : RlCameraBuilder&
+			+setTarget(const Vector3f& target) : RlCameraBuilder&
+			-_lookingPoint : Vector3f
+			-_position : Vector3f
+			-_target : Vector3f
+			-_fovy : float
+		}
+
+		class RlImageBuilder {
+			+RlImageBuilder()
+			-_bottom : RlColor
+			-_col1 : RlColor
+			-_col2 : RlColor
+			-_color : RlColor
+			-_inner : RlColor
+			-_left : RlColor
+			-_outer : RlColor
+			-_right : RlColor
+			-_top : RlColor
+			+setBottom(const RlColor& bottom) : RlImageBuilder&
+			+setChecksX(const int& checksX) : RlImageBuilder&
+			+setChecksY(const int& checksY) : RlImageBuilder&
+			+setCol1(const RlColor& col1) : RlImageBuilder&
+			+setCol2(const RlColor& col2) : RlImageBuilder&
+			+setColor(const RlColor& color) : RlImageBuilder&
+			+setDensity(const float& density) : RlImageBuilder&
+			+setFactor(const float& factor) : RlImageBuilder&
+			+setHeight(const int& height) : RlImageBuilder&
+			+setInner(const RlColor& inner) : RlImageBuilder&
+			+setLeft(const RlColor& left) : RlImageBuilder&
+			+setOuter(const RlColor& outer) : RlImageBuilder&
+			+setRight(const RlColor& right) : RlImageBuilder&
+			+setTitleSize(const int& titleSize) : RlImageBuilder&
+			+setTop(const RlColor& top) : RlImageBuilder&
+			+setType(ImageType type) : RlImageBuilder&
+			+setWidth(const int& width) : RlImageBuilder&
+			-_density : float
+			-_factor : float
+			-_checksX : int
+			-_checksY : int
+			-_height : int
+			-_titleSize : int
+			-_width : int
+			-_flags : long
+			-_type : long
+			+build() : raylib::image::RlImage
+		}
+
+		class RlMeshBuilder {
+			+RlMeshBuilder()
+			+setConeSlices(const int& slices) : RlMeshBuilder&
+			+setCubeSize(const Vector3f& cubeSize) : RlMeshBuilder&
+			+setCubicmap(const image::RlImage& cubicmap) : RlMeshBuilder&
+			+setHeight(const float& height) : RlMeshBuilder&
+			+setHeightmap(const image::RlImage& heightmap) : RlMeshBuilder&
+			+setHemisphereRings(const int& rings) : RlMeshBuilder&
+			+setKnotRadSeg(const int& radSeg) : RlMeshBuilder&
+			+setLength(const float& length) : RlMeshBuilder&
+			+setMeshType(MeshType meshType) : RlMeshBuilder&
+			+setRadSeg(const int& radSeg) : RlMeshBuilder&
+			+setRadius(const float& radius) : RlMeshBuilder&
+			+setResX(const int& resX) : RlMeshBuilder&
+			+setResZ(const int& resZ) : RlMeshBuilder&
+			+setRings(const int& rings) : RlMeshBuilder&
+			+setSides(const int& sides) : RlMeshBuilder&
+			+setSize(const float& size) : RlMeshBuilder&
+			+setSlices(const int& slices) : RlMeshBuilder&
+			+setVec3fSize(const Vector3f& size) : RlMeshBuilder&
+			+setWidth(const float& width) : RlMeshBuilder&
+			-_cubeSize : Vector3f
+			-_vec3fSize : Vector3f
+			-_height : float
+			-_length : float
+			-_radius : float
+			-_size : float
+			-_width : float
+			-_cubicmap : image::RlImage
+			-_heightmap : image::RlImage
+			-_radSeg : int
+			-_resX : int
+			-_resZ : int
+			-_rings : int
+			-_sides : int
+			-_slices : int
+			-_flags : long
+			-_type : long
+			+build() : model::RlMesh
+		}
+
+		class RlModelBuilder {
+			+RlModelBuilder()
+			-_boundingBox : BoundingBox
+			-_color : RlColor
+			+setRotationAxis(const Vector3f& rotationAxis) : RlModelBuilder
+			+setBoundingBox(const BoundingBox& boundingBox) : RlModelBuilder&
+			+setColor(const RlColor& color) : RlModelBuilder&
+			+setMesh(const std::shared_ptr<raylib::model::RlMesh>& mesh) : RlModelBuilder&
+			+setMesh(const raylib::model::RlMesh& mesh) : RlModelBuilder&
+			+setModelPath(const std::string& modelPath) : RlModelBuilder&
+			+setPosition(const Vector3f& position) : RlModelBuilder&
+			+setRotationAngle(const float& rotationAngle) : RlModelBuilder&
+			+setScale(const Vector3f& scale) : RlModelBuilder&
+			+setTexture(const std::shared_ptr<texture::RlTexture>& texture) : RlModelBuilder&
+			+setTexturePath(const std::string& texturePath) : RlModelBuilder&
+			-_position : Vector3f
+			-_rotationAxis : Vector3f
+			-_scale : Vector3f
+			-_boundingBoxSet : bool
+			-_rotationAngle : float
+			-_flags : long
+			+build() : raylib::model::RlModel
+			-{static} _validTypes : static std::vector<ValidType>
+			-_mesh : std::shared_ptr<raylib::model::RlMesh>
+			-_texture : std::shared_ptr<texture::RlTexture>
+			-_modelPath : std::string
+			-_texturePath : std::string
+		}
+
+		class RlTextBuilder {
+			+RlTextBuilder()
+			-_color : RlColor
+			+setColor(const RlColor& color) : RlTextBuilder&
+			+setFont(const std::shared_ptr<raylib::text::RlFont>& font) : RlTextBuilder&
+			+setFontPath(const std::string& fontPath) : RlTextBuilder&
+			+setFontSize(const float& fontSize) : RlTextBuilder&
+			+setOrigin(const Vector2f& origin) : RlTextBuilder&
+			+setPosition(const Vector2f& position) : RlTextBuilder&
+			+setRotation(const float& rotation) : RlTextBuilder&
+			+setSpacing(const float& spacing) : RlTextBuilder&
+			+setText(const std::string& text) : RlTextBuilder&
+			-_origin : Vector2f
+			-_position : Vector2f
+			-_isFontPathSet : bool
+			-_isFontSet : bool
+			-_isFontSizeSet : bool
+			-_isTextSet : bool
+			-_fontSize : float
+			-_rotation : float
+			-_textSpacing : float
+			+build() : raylib::text::RlText
+			-_font : std::shared_ptr<raylib::text::RlFont>
+			-_fontPath : std::string
+			-_text : std::string
+		}
+
+		enum RlImageBuilder::ImageType {
+			ImageCellular
+			ImageChecked
+			ImageColor
+			ImageGradientH
+			ImageGradientRadial
+			ImageGradientV
+			ImageWhiteNoise
+		}
+
+		enum RlImageBuilder::ParameterName {
+			Bottom
+			ChecksX
+			ChecksY
+			Col1
+			Col2
+			Color
+			Density
+			Factor
+			Height
+			Inner
+			Left
+			Outer
+			Right
+			TitleSize
+			Top
+			Width
+		}
+
+		enum RlMeshBuilder::MeshType {
+			MeshCone
+			MeshCube
+			MeshCubicmap
+			MeshCylinder
+			MeshHeightmap
+			MeshHemiSphere
+			MeshKnot
+			MeshPlane
+			MeshPoly
+			MeshSphere
+			MeshTorus
+		}
+
+		enum RlMeshBuilder::ParameterName {
+			ConeSlices
+			CubeSize
+			Cubicmap
+			Height
+			Heightmap
+			HemisphereRings
+			KnotRadSeg
+			Length
+			RadSeg
+			Radius
+			ResX
+			ResZ
+			Rings
+			Sides
+			Size
+			Slices
+			Vec3fSize
+			Width
+		}
+
+		enum RlModelBuilder::RequiredParameter {
+			MESH
+			MODEL_PATH
+			SHARED_TEXTURE
+			TEXTURE_PATH
+		}
+
+		enum RlModelBuilder::ValidType {
+			RLMODEL_MESH
+			RLMODEL_MESH_AND_SHARED_TEXTURE
+			RLMODEL_PATH
+			RLMODEL_PATH_AND_SHARED_TEXTURE
+			RLMODEL_PATH_AND_TEXTURE
+		}
+	}
+
+	namespace audio {
+		class RlAudioStream {
+			+RlAudioStream(const unsigned int& sampleRate, const unsigned int& sampleSize, const unsigned int& channels)
+			+~RlAudioStream()
+			-_stream : AudioStream
+			+isPlaying() : bool
+			+isProcessed() : bool
+			-_volume : float
+			+getVolume() : float& {query}
+			+pause() : void
+			+play() : void
+			+resume() : void
+			+setPitch(const float& pitch) : void
+			+setVolume(float volume) : void
+			+stop() : void
+			+update(const void* data, const int& samplesCount) : void
+		}
+
+		class RlMusic {
+			+RlMusic(const std::string& fileName)
+			+RlMusic(const std::string& fileType, unsigned char* data, const int& dataSize)
+			+~RlMusic()
+			-_music : Music
+			+isPlaying() : bool
+			+isLooping() : bool& {query}
+			-_volume : float
+			+getTimeLength() : float
+			+getTimePlayed() : float
+			+getVolume() : float& {query}
+			+pause() : void
+			+play() : void
+			+resume() : void
+			+seek(const float& position) : void
+			+setLooping(const bool& loop) : void
+			+setPitch(const float& pitch) : void
+			+setVolume(const float& volume) : void
+			+stop() : void
+			+update() : void
+		}
+
+		class RlSound {
+			+RlSound(const Sound& sound)
+			+RlSound(const std::string& fileName)
+			+RlSound(const RlWave& wave)
+			+~RlSound()
+			-_sound : Sound
+			+isPlaying() : bool
+			-_volume : float
+			+getVolume() : float& {query}
+			+pause() : void
+			+play() : void
+			+playMulti() : void
+			+resume() : void
+			+setPitch(const float& pitch) : void
+			+setVolume(const float& volume) : void
+			+stop() : void
+			+update(const void* data, const int& samplesCount) : void
+		}
+
+		class RlWave {
+			+RlWave()
+			+RlWave(const Wave& wave)
+			+RlWave(const std::string& path)
+			+RlWave(const std::string& fileType, const unsigned char* fileData, int dataSize)
+			+~RlWave()
+			+copy() : RlWave
+			-_wave : Wave
+			+getWave() : Wave&
+			+getWave() : Wave& {query}
+			+exportWave(const std::string& fileName) : bool
+			+exportWaveAsCode(const std::string& fileName) : bool
+			-_samplesPtr : float*
+			+toSound() : raylib::audio::RlSound {query}
+			-_samples : std::vector<float>
+			+getSamples() : std::vector<float>
+			+crop(const int& initSample, const int& finalSample) : void
+			+format(const int& sampleRate, const int& sampleSize, const int& channels) : void
+		}
+	}
+}
+
+
+namespace indie {
+	class Bomb {
+		+Bomb(const std::string& name, const raylib::model::RlModel& model, const int& range, const std::string& playerOwner)
+		+~Bomb()
+		-_timer : float
+		-_range : int
+		-_audioManager : std::shared_ptr<gameengine::AudioManager>&
+		-_playerOwner : std::string
+		+addMagma(const Vector3f& position, const Vector3f& addI) : void
+		+enableCollision() : void
+		+init() : void
+		+instanceMagma(const Vector3f& pos) : void
+		+setPlayerOwner(const std::string& playerOwner) : void
+		+spawnMagma() : void
+		+update(const float& delta) : void
+	}
+
+	class Bonus {
+		+Bonus(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		+~Bonus()
+		-_type : BonusType
+		+getBonusType() : int& {query}
+		+init() : void
+		+setBonusType(BonusType type) : void
+		+update(const float& delta) : void
+	}
+
+	class ChooseNumberPlayerScene {
+		+ChooseNumberPlayerScene(const std::string& name, const std::string& sceneSource)
+		+~ChooseNumberPlayerScene()
+		-_indexMenu : int
+		-_savedIndexMap : int
+		-_map3DLoader : std::shared_ptr<indie::map::Map3DLoader>&
+		+initScene() : void
+		+sceneLauncher() : void
+		+updateScene(const float& delta) : void
+	}
+
+	class GameScene {
+		+GameScene(const std::string& name, const std::string& sceneSource)
+		+~GameScene()
+		-_winTimer : float
+		-_indexMenu : int
+		-_map3DLoader : std::shared_ptr<map::Map3DLoader>&
+		-_map : std::shared_ptr<map::Map>
+		-_textureManager : std::unique_ptr<gameengine::TextureManager>&
+		-buttonsPos : std::vector<Vector2f>
+		+displayWinner(const std::string& name) : void
+		+initScene() : void
+		+sceneLauncher() : void
+		+updateScene(const float& delta) : void
+	}
+
+	class GlobalInstance {
+		+GlobalInstance()
+		+~GlobalInstance()
+		+_indexMap : int
+		+_numberPlayers : int
+		+_playersAlive : int
+		-{static} _instance : static std::shared_ptr<GlobalInstance>
+		+{static} getInstance() : std::shared_ptr<indie::GlobalInstance>&
+		+_playerWinner : std::string
+	}
+
+	class Image {
+		+Image(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		+~Image()
+		+init() : void
+		+update(const float& delta) : void
+	}
+
+	class Magma {
+		+Magma(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		+~Magma()
+		-_timer : float
+		-_playerOwner : std::string
+		+checkWallCollision() : void
+		+handlePlayerCollision() : void
+		+init() : void
+		+update(const float& delta) : void
+	}
+
+	class MainMenuScene {
+		+MainMenuScene(const std::string& name, const std::string& sceneSource)
+		+~MainMenuScene()
+		-_indexMenu : int
+		+initScene() : void
+		+sceneLauncher() : void
+		+updateScene(const float& delta) : void
+	}
+
+	class Player {
+		+Player(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture, const int& numpadId)
+		+~Player()
+		-_state : State
+		-_speed : float
+		-_tempSpeed : float
+		-_timerAnim : float
+		-_timerGhost : float
+		-_bombStock : int
+		-_numpadId : int
+		-_range : int
+		+getState() : int
+		-_anim : raylib::model::RlModelAnimation
+		-_audioManager : std::shared_ptr<gameengine::AudioManager>&
+		-botTarget : std::string
+		-_textureManager : std::unique_ptr<gameengine::TextureManager>&
+		+botControl() : void
+		+botSpawnBomb() : void
+		+checkCollisions() : void
+		+handleInput() : void
+		+incrementBombStock(int bombStock) : void
+		+init() : void
+		+moveAndGhosting(Vector3f position) : void
+		+playerDead() : void
+		+setState(State state) : void
+		+spawnBomb() : void
+		+update(const float& delta) : void
+	}
+
+	class StartScene {
+		+StartScene(const std::string& name, const std::string& sceneSource)
+		+~StartScene()
+		-_startTimestamp : long
+		+initScene() : void
+		+sceneLauncher() : void
+		+updateScene(const float& delta) : void
+	}
+
+	class Wall {
+		+Wall(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		+~Wall()
+	}
+
+	class WallDestroyable {
+		+WallDestroyable(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		+~WallDestroyable()
+		+spawnBonus() : void
+	}
+
+	class WinningScene {
+		+WinningScene(const std::string& name, const std::string& sceneSource)
+		+~WinningScene()
+		-_indexMenu : int
+		+initScene() : void
+		+sceneLauncher() : void
+		+updateScene(const float& delta) : void
+	}
+
+	enum Bonus::BonusType {
+		BOMB
+		FIRE
+		GHOST
+		SPEED
+	}
+
+	enum Player::State {
+		ALIVE
+		DEAD
+		GHOST
+		LOOSER
+		WINNER
+	}
+
+	namespace map {
+		class Map {
+			+Map(const std::string& mapPath, gameengine::map::MapParser<MapType>&& mapParser, const std::vector<std::shared_ptr<gameengine::node::_3D::StaticBody>>& mapModels)
+			-_mapSize : Vector2u
+			-_mapSizeMax : Vector2u
+			+getMapSize() : Vector2u& {query}
+			+getMapSizeMax() : Vector2u& {query}
+			-_mapParser : gameengine::map::MapParser<MapType>
+			+getMapParser() : gameengine::map::MapParser<MapType>& {query}
+			-_mapPath : std::string
+			+getMapPath() : std::string& {query}
+			-_playerSpawns : std::vector<Vector2f>
+			+getPlayerSpawns() : std::vector<Vector2f>& {query}
+			-_mapModels : std::vector<std::shared_ptr<gameengine::node::_3D::StaticBody>>
+			+getMapModels() : std::vector<std::shared_ptr<gameengine::node::_3D::StaticBody>>& {query}
+			-_map : std::vector<std::vector<MapType>>
+			+getMap() : std::vector<std::vector<MapType>>& {query}
+			+setMap(const std::vector<std::vector<MapType>>& map) : void
+			+setMapModels(const std::vector<std::shared_ptr<gameengine::node::_3D::StaticBody>>& mapModels) : void
+			+setMapPath(const std::string& mapPath) : void
+			+setMapSize(const Vector2u& mapSize) : void
+			+setMapSizeMax(const Vector2u& mapSizeMax) : void
+			+setPlayerSpawns(const std::vector<Vector2f>& playerSpawns) : void
+		}
+
+		class Map3DLoader {
+			+Map3DLoader()
+			-_mapSizeMax : Vector2u
+			+getMapSizeMax() : Vector2u& {query}
+			-{static} _instance : static std::shared_ptr<Map3DLoader>
+			+{static} getInstance() : std::shared_ptr<Map3DLoader>&
+			-_tmpMapPath : std::string
+			-_textureManager : std::unique_ptr<gameengine::TextureManager>&
+			+getMapSymbol() : std::unordered_map<char , Map::MapType>& {query}
+			-_mapSymbol : std::unordered_map<char, Map::MapType>
+			-_maps : std::vector<std::shared_ptr<Map>>
+			+getMaps() : std::vector<std::shared_ptr<Map>>& {query}
+			-addBreakableWall(std::vector<std::shared_ptr<gameengine::node::_3D::StaticBody>>& models, const Vector3f& position, const std::shared_ptr<raylib::model::RlMesh>& mesh) : void
+			-addFloor(std::vector<std::shared_ptr<gameengine::node::_3D::StaticBody>>& models, const Vector3f& position, const std::shared_ptr<raylib::model::RlMesh>& mesh) : void
+			+addMap(const std::string& mapPath) : void
+			-addWall(std::vector<std::shared_ptr<gameengine::node::_3D::StaticBody>>& models, const Vector3f& position, const std::shared_ptr<raylib::model::RlMesh>& mesh) : void
+			+loadMaps(const std::string& directory) : void
+			-parseMap(const std::string& mapPath) : void
+			+setMapSizeMax(const Vector2u& mapSizeMax) : void
+		}
+
+		enum Map::MapType {
+			BOMB
+			BONUS
+			BREAKABLE_WALL
+			NONE
+			PLAYER
+			PLAYER_SPAWN
+			UNKNOWN
+			WALL
+		}
+	}
+
+	namespace button {
+		class ButtonMainMenu {
+			+ButtonMainMenu(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		}
+
+		class ButtonQuit {
+			+ButtonQuit(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		}
+
+		class ButtonRestart {
+			+ButtonRestart(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		}
+
+		class ButtonResume {
+			+ButtonResume(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+		}
+
+		class IndieButton {
+			+IndieButton(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture, const std::function<void ( const std::string& buttonName )>& callback)
+			#function<void(const std::string& buttonName)
+			+pressed() : void
+		}
+	}
+}
+
+
+namespace gameengine {
+	abstract class AbstractSound {
+		+AbstractSound(const std::string& filePath, SoundCategory category)
+		+~AbstractSound()
+		-_category : SoundCategory
+		+getCategory() : int {query}
+		-_filePath : std::string
+		-_name : std::string
+		+getFilePath() : std::string& {query}
+		+getName() : std::string& {query}
+		+{abstract} setVolume(const float& volume) : void
+	}
+
+	class AudioManager {
+		+AudioManager()
+		+~AudioManager()
+		-{static} _instance : static std::shared_ptr<AudioManager>
+		+{static} getInstance() : std::shared_ptr<AudioManager>&
+		+getSound(const std::string& name) : std::unique_ptr<AbstractSound>&
+		-_sounds : std::vector<std::unique_ptr<gameengine::AbstractSound>>
+		+addSound(const std::string& filePath, AbstractSound::SoundCategory category) : void
+		+deleteSound(const std::string& name) : void
+		+loadSounds(const std::string& assetsPath) : void
+		+loadSounds(const std::string& soundDir, const std::string& musicDir) : void
+		+playSound(const std::string& name) : void
+		+setVolume(const float& volume, AbstractSound::SoundCategory category) : void
+	}
+
+	abstract class Scene {
+		+Scene(const std::string& name, const std::string& sceneSource)
+		+~Scene()
+		-_isLaunched : bool
+		-_isPaused : bool
+		+deleteNode(const std::string& name) : bool
+		+isLaunched() : bool& {query}
+		+isPaused() : bool& {query}
+		+getNode(const std::string& name) : std::shared_ptr<gameengine::node::AbstractBase>
+		-_name : std::string
+		-_sceneSource : std::string
+		+getName() : std::string& {query}
+		+getSceneSource() : std::string& {query}
+		-_nodes : std::vector<std::shared_ptr<gameengine::node::AbstractBase>>
+		+getNodes() : std::vector<std::shared_ptr<gameengine::node::AbstractBase>>& {query}
+		+addNode(const std::shared_ptr<gameengine::node::AbstractBase>& node) : void
+		+deleteNodeIncludes(const std::string& includeName) : void
+		+destroy() : void
+		+draw() : void
+		+draw2D() : void
+		+init() : void
+		+{abstract} initScene() : void
+		+{abstract} sceneLauncher() : void
+		+setLaunched() : void
+		+setPaused(const bool& value) : void
+		+update(const float& delta) : void
+		+{abstract} updateScene(const float& delta) : void
+	}
+
+	class SceneManager {
+		+isPaused() : bool
+		-{static} _instance : static std::shared_ptr<SceneManager>
+		+getCurrentScene() : std::shared_ptr<gameengine::Scene>&
+		+{static} getInstance() : std::shared_ptr<gameengine::SceneManager>&
+		+getNode(const std::string& name) : std::shared_ptr<gameengine::node::AbstractBase>
+		-_actualScene : std::string
+		-_waitingScene : std::string
+		-_scenes : std::vector<std::shared_ptr<gameengine::Scene>>
+		+getAllNodes() : std::vector<std::shared_ptr<gameengine::node::AbstractBase>>
+		-_nodesToDelete : std::vector<std::string>
+		-_nodesToDeleteIncludes : std::vector<std::string>
+		+addNode(const std::shared_ptr<gameengine::node::AbstractBase>& node) : void
+		+addScene(const std::shared_ptr<gameengine::Scene>& scene) : void
+		+changeScene(const std::string& scene) : void
+		-changeSceneInWaiting() : void
+		+deleteNode(const std::string& name) : void
+		-deleteNodeInLst() : void
+		+deleteNodeInclude(const std::string& containedName) : void
+		+deleteScene(const std::string& scene) : void
+		+draw() : void
+		+draw2D() : void
+		+drawAll(raylib::RlCamera& camera) : void
+		+makeLoop(raylib::RlCamera& camera) : void
+		+setPaused(bool value) : void
+		+update() : void
+	}
+
+	class TextureManager {
+		-{static} _defaultTexture : static std::shared_ptr<raylib::texture::RlTexture>
+		-{static} _instance : static std::unique_ptr<TextureManager>
+		+getTexture(const std::string& textureName) : std::shared_ptr<raylib::texture::RlTexture>
+		+{static} getDefaultTexture() : std::shared_ptr<raylib::texture::RlTexture>&
+		+{static} getInstance() : std::unique_ptr<TextureManager>&
+		-_textures : std::vector<std::shared_ptr<raylib::texture::RlTexture>>
+		+getTextures() : std::vector<std::shared_ptr<raylib::texture::RlTexture>>& {query}
+		+loadTextures(const std::string& texturesDir) : void
+	}
+
+	class Time {
+		+Time()
+		+~Time()
+		+{static} getMicrosecondsTime() : long
+		+{static} getMillisecondsTime() : long
+		+{static} getNanoTime(std::chrono::seconds time) : long
+		+{static} getNanoTime(std::chrono::milliseconds time) : long
+		+{static} getNanoTime(std::chrono::microseconds time) : long
+		+{static} getNanosecondsTime() : long
+		+{static} getSecondsTime() : long
+	}
+
+	enum AbstractSound::SoundCategory {
+		FX
+		MUSIC
+	}
+
+	namespace node {
+		abstract class AbstractBase {
+			+AbstractBase(const std::string& name)
+			+AbstractBase(const AbstractBase &)
+			+~AbstractBase()
+			#_hiding : bool
+			+isHiding() : bool& {query}
+			+{abstract} getRotationDegrees() : float {query}
+			#_group : std::string
+			#_name : std::string
+			+getGroup() : std::string& {query}
+			+getName() : std::string& {query}
+			+{abstract} draw() : void
+			+{abstract} init() : void
+			+setGroup(const std::string& group) : void
+			+setHiding(bool value) : void
+			+{abstract} update(const float& delta) : void
+		}
+
+		namespace _3D {
+			class Grid3D {
+				+Grid3D(const Vector2i& size, const Vector3f& position, const float& spacing, const RlColor& tint, const std::string& name)
+				+Grid3D(const Grid3D &)
+				-_tint : RlColor
+				-_size : Vector2i
+				-_position : Vector3f
+				-_scale : Vector3f
+				+getPosition() : Vector3f& {query}
+				+getScale() : Vector3f& {query}
+				-_spacing : float
+				+getRotationDegrees() : float {query}
+				+draw() : void
+				+init() : void
+				+setPosition(const Vector3f& pos) : void
+				+setRotationDegrees(const float& degrees, const Vector3f& rotationAxis) : void
+				+setScale(const Vector3f& newScale) : void
+				+setSize(const Vector2i& size) : void
+				+setSpacing(const float& spacing) : void
+				+setTint(const RlColor& tint) : void
+				+update(const float& delta) : void
+			}
+
+			class KinematicBody {
+				+KinematicBody(const std::string& name, const raylib::model::RlModel& model)
+				+KinematicBody(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+				+~KinematicBody()
+				+moveAndCollide(const Vector3f& position) : bool
+			}
+
+			abstract class Node3D {
+				+Node3D(const std::string& name)
+				+Node3D(const Node3D &)
+				+~Node3D()
+				+{abstract} getPosition() : Vector3f& {query}
+				+{abstract} getScale() : Vector3f& {query}
+				+{abstract} setPosition(const Vector3f& pos) : void
+				+{abstract} setRotationDegrees(const float& degrees, const Vector3f& rotationAxis) : void
+				+{abstract} setScale(const Vector3f& newScale) : void
+			}
+
+			class StaticBody {
+				+StaticBody(const std::string& name, const raylib::model::RlModel& model)
+				+StaticBody(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+				+~StaticBody()
+				+getBoundingBox() : BoundingBox& {query}
+				+getColor() : RlColor& {query}
+				+getPosition() : Vector3f& {query}
+				+getScale() : Vector3f& {query}
+				#_collisionEnable : bool
+				+hasCollisionEnabled() : bool& {query}
+				+getRotationDegrees() : float {query}
+				+operator->() : raylib :: model :: RlModel*
+				#_model : raylib::model::RlModel
+				+getModel() : raylib::model::RlModel&
+				+getModel() : raylib::model::RlModel& {query}
+				+draw() : void
+				+init() : void
+				+setBoundingBox(const BoundingBox& boundingBox) : void
+				+setCollisionEnable(bool value) : void
+				+setColor(const raylib::RlColor& color) : void
+				+setPosition(const Vector3f& pos) : void
+				+setRotationDegrees(const float& degrees, const Vector3f& rotationAxis) : void
+				+setScale(const Vector3f& newScale) : void
+				+update(const float& delta) : void
+			}
+		}
+
+		namespace _2D {
+			abstract class Button {
+				+Button(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+				-_bounds : Rectangle
+				-_rectangle : Rectangle
+				+getBounds() : Rectangle& {query}
+				+getRectangle() : Rectangle& {query}
+				-_origin : Vector2f
+				-_position : Vector2f
+				-_scale : Vector2f
+				+getOrigin() : Vector2f& {query}
+				+getPosition() : Vector2f& {query}
+				+getScale() : Vector2f& {query}
+				-_action : bool
+				-_isEnabled : bool
+				+isEnabled() : bool& {query}
+				-_frameHeight : float
+				-_rotationDegrees : float
+				+getRotationDegrees() : float {query}
+				-_frameNum : int
+				-_state : int
+				-_texture : std::shared_ptr<raylib::texture::RlTexture>
+				+getTexture() : std::shared_ptr<raylib::texture::RlTexture>& {query}
+				+centerButton(const Vector2f& pos) : void
+				+draw() : void
+				+init() : void
+				+{abstract} pressed() : void
+				+setEnabled(const bool& value) : void
+				+setOrigin(const Vector2f& origin) : void
+				+setPosition(const Vector2f& position) : void
+				+setRotationDegrees(const float& rotationDegrees) : void
+				+setScale(const Vector2f& scale) : void
+				+update(const float& delta) : void
+			}
+
+			class Label {
+				+Label(const std::string& name, const Vector2f& position, const Vector2f& scale, const float& degrees, const raylib::RlColor& color)
+				+~Label()
+				-_position : Vector2f
+				-_scale : Vector2f
+				+getPosition() : Vector2f& {query}
+				+getScale() : Vector2f& {query}
+				-_rotationDegrees : float
+				+getRotationDegrees() : float {query}
+				-_color : raylib::RlColor
+				+getColor() : raylib::RlColor&
+				+getColor() : raylib::RlColor& {query}
+				-_textComponent : raylib::text::RlText
+				-_text : std::string
+				+draw() : void
+				+init() : void
+				+setColor(raylib::RlColor color) : void
+				+setPosition(const Vector2f& position) : void
+				+setRotationDegrees(const float& rotationDegrees) : void
+				+setScale(const Vector2f& scale) : void
+				+setText(const std::string& text) : void
+				+update(const float& delta) : void
+			}
+
+			abstract class Node2D {
+				+Node2D(const std::string& name)
+				+Node2D(const Node2D &)
+				+~Node2D()
+				+{abstract} getPosition() : Vector2f& {query}
+				+{abstract} getScale() : Vector2f& {query}
+				+{abstract} setPosition(const Vector2f& pos) : void
+				+{abstract} setRotationDegrees(const float& degrees) : void
+				+{abstract} setScale(const Vector2f& newScale) : void
+			}
+
+			class TextureRect {
+				+TextureRect(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture, const Vector2f& position, const Vector2f& scale, const float& degrees, const raylib::RlColor& color)
+				+~TextureRect()
+				-_position : Vector2f
+				-_scale : Vector2f
+				+getPosition() : Vector2f& {query}
+				+getScale() : Vector2f& {query}
+				-_rotationDegrees : float
+				+getRotationDegrees() : float {query}
+				-_color : raylib::RlColor
+				+getColor() : raylib::RlColor&
+				+getColor() : raylib::RlColor& {query}
+				-_texture : std::shared_ptr<raylib::texture::RlTexture>
+				+draw() : void
+				+init() : void
+				+setColor(const RlColor& color) : void
+				+setPosition(const Vector2f& position) : void
+				+setRotationDegrees(const float& rotationDegrees) : void
+				+setScale(const Vector2f& scale) : void
+				+update(const float& delta) : void
+			}
+		}
+	}
+
+	namespace map {
+		class MapParser <template<typename T>> {
+			+MapParser(const std::string& fileName, const std::unordered_map<char, T>& symbols, const Vector2u& maxSize)
+			-_maxSize : Vector2u
+			-_size : Vector2u
+			+getMaxSize() : Vector2u& {query}
+			+getSize() : Vector2u& {query}
+			-_file : std::ifstream
+			-_buffer : std::string
+			-_fileName : std::string
+			-removeComment(const std::string& line) : std::string
+			+getBuffer() : std::string& {query}
+			+getFileName() : std::string& {query}
+			+getSymbols() : std::unordered_map<char , T>& {query}
+			-_symbols : std::unordered_map<char, T>
+			-_map : std::vector<std::vector<T>>
+			+getMap() : std::vector<std::vector<T>>& {query}
+			+parse() : void
+			-parseMap() : void
+		}
+	}
+
+	namespace ex {
+		class GameEngineException {
+			+GameEngineException(const std::string& message, const bool& prefix)
+			+what() : char* {query}
+			-_msg : std::string
+		}
+
+		class MapParserException {
+			+MapParserException(const std::string& message)
+		}
+	}
+
+	namespace audio {
+		class Music {
+			+Music(const std::string& fileName, AbstractSound::SoundCategory category)
+			+setVolume(const float& volume) : void
+		}
+
+		class Sound {
+			+Sound(const std::string& fileName, SoundCategory category)
+			+setVolume(const float& volume) : void
+		}
+	}
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+gameengine.node.AbstractBase <|-- gameengine.node._2D.Node2D
+
+
+gameengine.node.AbstractBase <|-- gameengine.node._3D.Node3D
+
+
+gameengine.AbstractSound <|-- gameengine.audio.Music
+
+
+gameengine.AbstractSound <|-- gameengine.audio.Sound
+
+
+gameengine.node._2D.Button <|-- indie.button.IndieButton
+
+
+gameengine.ex.GameEngineException <|-- gameengine.ex.MapParserException
+
+
+raylib.builder.IBuilder <|-- raylib.builder.RlCameraBuilder
+
+
+raylib.builder.IBuilder <|-- raylib.builder.RlImageBuilder
+
+
+raylib.builder.IBuilder <|-- raylib.builder.RlMeshBuilder
+
+
+raylib.builder.IBuilder <|-- raylib.builder.RlModelBuilder
+
+
+raylib.builder.IBuilder <|-- raylib.builder.RlTextBuilder
+
+
+indie.button.IndieButton <|-- indie.button.ButtonMainMenu
+
+
+indie.button.IndieButton <|-- indie.button.ButtonQuit
+
+
+indie.button.IndieButton <|-- indie.button.ButtonRestart
+
+
+indie.button.IndieButton <|-- indie.button.ButtonResume
+
+
+gameengine.node._3D.KinematicBody <|-- indie.Player
+
+
+gameengine.node._2D.Node2D <|-- gameengine.node._2D.Button
+
+
+gameengine.node._2D.Node2D <|-- gameengine.node._2D.Label
+
+
+gameengine.node._2D.Node2D <|-- gameengine.node._2D.TextureRect
+
+
+gameengine.node._3D.Node3D <|-- gameengine.node._3D.Grid3D
+
+
+gameengine.node._3D.Node3D <|-- gameengine.node._3D.StaticBody
+
+
+raylib.ex.RaylibException <|-- raylib.ex.BuilderException
+
+
+raylib.ex.RaylibException <|-- raylib.ex.CameraException
+
+
+raylib.ex.RaylibException <|-- raylib.ex.InvalidArgumentException
+
+
+raylib.ex.RaylibException <|-- raylib.ex.RlAnimationException
+
+
+raylib.ex.RaylibException <|-- raylib.ex.RlModelException
+
+
+raylib.ex.RaylibException <|-- raylib.ex.WindowException
+
+
+raylib.audio.RlMusic <|-- gameengine.audio.Music
+
+
+raylib.audio.RlSound <|-- gameengine.audio.Sound
+
+
+gameengine.Scene <|-- indie.ChooseNumberPlayerScene
+
+
+gameengine.Scene <|-- indie.GameScene
+
+
+gameengine.Scene <|-- indie.MainMenuScene
+
+
+gameengine.Scene <|-- indie.StartScene
+
+
+gameengine.Scene <|-- indie.WinningScene
+
+
+gameengine.node._3D.StaticBody <|-- indie.Bomb
+
+
+gameengine.node._3D.StaticBody <|-- indie.Bonus
+
+
+gameengine.node._3D.StaticBody <|-- gameengine.node._3D.KinematicBody
+
+
+gameengine.node._3D.StaticBody <|-- indie.Magma
+
+
+gameengine.node._3D.StaticBody <|-- indie.Wall
+
+
+gameengine.node._3D.StaticBody <|-- indie.WallDestroyable
+
+
+gameengine.node._2D.TextureRect <|-- indie.Image
+
+
+
+
+
+/' Aggregation relationships '/
+
+gameengine.AudioManager *-- gameengine.AbstractSound
+
+
+gameengine.AudioManager *-- gameengine.AudioManager
+
+
+indie.Bomb *-- gameengine.AudioManager
+
+
+gameengine.node._2D.Button *-- raylib.texture.RlTexture
+
+
+indie.ChooseNumberPlayerScene *-- indie.map.Map3DLoader
+
+
+indie.GameScene *-- indie.map.Map
+
+
+indie.GameScene *-- indie.map.Map3DLoader
+
+
+indie.GameScene *-- gameengine.TextureManager
+
+
+indie.GlobalInstance *-- indie.GlobalInstance
+
+
+gameengine.node._3D.Grid3D *-- raylib.RlColor
+
+
+gameengine.node._2D.Label *-- raylib.RlColor
+
+
+gameengine.node._2D.Label *-- raylib.text.RlText
+
+
+indie.map.Map *-- gameengine.map.MapParser
+
+
+indie.map.Map *-- gameengine.node._3D.StaticBody
+
+
+indie.map.Map3DLoader "2" *-- indie.map.Map
+
+
+indie.map.Map3DLoader *-- indie.map.Map3DLoader
+
+
+indie.map.Map3DLoader *-- indie.map.Map::MapType
+
+
+indie.map.Map3DLoader *-- gameengine.TextureManager
+
+
+indie.Player *-- gameengine.AudioManager
+
+
+indie.Player *-- raylib.model.RlModelAnimation
+
+
+indie.Player *-- gameengine.TextureManager
+
+
+raylib.model.RlAnimation *-- raylib.model.RlModel
+
+
+raylib.RlColor "26" *-- raylib.RlColor
+
+
+raylib.image.RlImage *-- indie.Image
+
+
+raylib.builder.RlImageBuilder "9" *-- raylib.RlColor
+
+
+raylib.builder.RlMeshBuilder "2" *-- raylib.image.RlImage
+
+
+raylib.model.RlModel *-- raylib.RlColor
+
+
+raylib.model.RlModel *-- raylib.model.RlMesh
+
+
+raylib.model.RlModel *-- raylib.texture.RlTexture
+
+
+raylib.model.RlModelAnimation *-- raylib.model.RlModel
+
+
+raylib.builder.RlModelBuilder *-- raylib.RlColor
+
+
+raylib.builder.RlModelBuilder *-- raylib.model.RlMesh
+
+
+raylib.builder.RlModelBuilder *-- raylib.texture.RlTexture
+
+
+raylib.audio.RlMusic *-- gameengine.audio.Music
+
+
+raylib.audio.RlSound *-- gameengine.audio.Sound
+
+
+raylib.text.RlText *-- raylib.RlColor
+
+
+raylib.text.RlText *-- raylib.text.RlFont
+
+
+raylib.builder.RlTextBuilder *-- raylib.RlColor
+
+
+raylib.builder.RlTextBuilder *-- raylib.text.RlFont
+
+
+raylib.window.RlWindow *-- raylib.RlCamera
+
+
+raylib.window.RlWindow *-- raylib.window.RlWindow
+
+
+gameengine.Scene *-- gameengine.node.AbstractBase
+
+
+gameengine.SceneManager *-- gameengine.Scene
+
+
+gameengine.SceneManager *-- gameengine.SceneManager
+
+
+gameengine.node._3D.StaticBody *-- raylib.model.RlModel
+
+
+gameengine.TextureManager "2" *-- raylib.texture.RlTexture
+
+
+gameengine.TextureManager *-- gameengine.TextureManager
+
+
+gameengine.node._2D.TextureRect *-- raylib.RlColor
+
+
+gameengine.node._2D.TextureRect *-- raylib.texture.RlTexture
+
+
+
+
+
+
+/' Nested objects '/
+
+gameengine.AbstractSound +-- gameengine.AbstractSound::SoundCategory
+
+
+indie.Bonus +-- indie.Bonus::BonusType
+
+
+indie.map.Map +-- indie.map.Map::MapType
+
+
+indie.Player +-- indie.Player::State
+
+
+raylib.builder.RlImageBuilder +-- raylib.builder.RlImageBuilder::ImageType
+
+
+raylib.builder.RlImageBuilder +-- raylib.builder.RlImageBuilder::ParameterName
+
+
+raylib.builder.RlMeshBuilder +-- raylib.builder.RlMeshBuilder::MeshType
+
+
+raylib.builder.RlMeshBuilder +-- raylib.builder.RlMeshBuilder::ParameterName
+
+
+raylib.builder.RlModelBuilder +-- raylib.builder.RlModelBuilder::RequiredParameter
+
+
+raylib.builder.RlModelBuilder +-- raylib.builder.RlModelBuilder::ValidType
+
+
+
+
+@enduml

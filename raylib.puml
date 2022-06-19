@@ -6,37 +6,7 @@
 
 /' Objects '/
 
-enum SoundCategory {
-	FX
-	MUSIC
-}
-
-
 namespace raylib {
-	class Collision2DHelper {
-		+{static} getCollisionRec(const Rectangle& rec1, const Rectangle& rec2) : Rectangle
-		+{static} checkCollisionCircleRec(const Vector2f& center, float radius, const Rectangle& rec) : bool
-		+{static} checkCollisionCircles(const Vector2f& center1, float radius1, const Vector2f& center2, float radius2) : bool
-		+{static} checkCollisionLines(const Vector2f& startPos1, const Vector2f& endPos1, const Vector2f& startPos2, const Vector2f& endPos2, Vector2f& collisionPoint) : bool
-		+{static} checkCollisionPointCircle(const Vector2f& point, const Vector2f& center, float radius) : bool
-		+{static} checkCollisionPointLine(const Vector2f& point, const Vector2f& p1, const Vector2f& p2, int threshold) : bool
-		+{static} checkCollisionPointRec(const Vector2f& point, const Rectangle& rec) : bool
-		+{static} checkCollisionPointTriangle(const Vector2f& point, const Vector2f& p1, const Vector2f& p2, const Vector2f& p3) : bool
-		+{static} checkCollisionRecs(const Rectangle& rec1, const Rectangle& rec2) : bool
-	}
-
-	class Collision3dHelper {
-		+{static} getRayCollisionBox(Ray ray, BoundingBox box) : RayCollision
-		+{static} getRayCollisionMesh(Ray ray, RlMesh mesh, Matrix transform) : RayCollision
-		+{static} getRayCollisionModel(Ray ray, RlModel model) : RayCollision
-		+{static} getRayCollisionQuad(Ray ray, Vector3f p1, Vector3f p2, Vector3f p3, Vector3f p4) : RayCollision
-		+{static} getRayCollisionSphere(Ray ray, Vector3f center, float radius) : RayCollision
-		+{static} getRayCollisionTriangle(Ray ray, Vector3f p1, Vector3f p2, Vector3f p3) : RayCollision
-		+{static} checkCollisionBoxSphere(BoundingBox box, Vector3f center, float radius) : bool
-		+{static} checkCollisionBoxes(BoundingBox box1, BoundingBox box2) : bool
-		+{static} checkCollisionSpheres(Vector3f center1, float radius1, Vector3f center2, float radius2) : bool
-	}
-
 	class GlStateManager {
 		+{static} color(const RlColor& color) : void
 		+{static} color(unsigned char r, unsigned char g, unsigned char b, unsigned char a) : void
@@ -65,38 +35,6 @@ namespace raylib {
 		+{static} translate(const Vector3f& translation) : void
 	}
 
-	class MeshGenerator {
-		+{static} genMeshCone(float radius, float height, int slices) : RlMesh
-		+{static} genMeshCube(float width, float height, float length) : RlMesh
-		+{static} genMeshCubicmap(Image cubicmap, Vector3f cubeSize) : RlMesh
-		+{static} genMeshCylinder(float radius, float height, int slices) : RlMesh
-		+{static} genMeshHeightmap(Image heightmap, Vector3f size) : RlMesh
-		+{static} genMeshHemiSphere(float radius, int rings, int slices) : RlMesh
-		+{static} genMeshKnot(float radius, float size, int radSeg, int sides) : RlMesh
-		+{static} genMeshPlane(float width, float length, int resX, int resZ) : RlMesh
-		+{static} genMeshPoly(int sides, float radius) : RlMesh
-		+{static} genMeshSphere(float radius, int rings, int slices) : RlMesh
-		+{static} genMeshTorus(float radius, float size, int radSeg, int sides) : RlMesh
-	}
-
-	class MeshHelper {
-		+{static} getMeshBoundingBox(Mesh mesh) : BoundingBox
-		+{static} exportMesh(Mesh mesh, const std::string& fileName) : bool
-		+{static} drawMesh(Mesh mesh, Material material, Matrix transform) : void
-		+{static} drawMeshInstanced(Mesh mesh, Material material, Matrix* transforms, int instances) : void
-		+{static} genMeshBinormals(Mesh* mesh) : void
-		+{static} genMeshTangents(Mesh* mesh) : void
-		+{static} updateMeshBuffer(Mesh mesh, int index, void* data, int dataSize, int offset) : void
-		+{static} uploadMesh(Mesh* mesh, bool dynamic) : void
-	}
-
-	class ModelHelper {
-		+{static} getModelBoundingBox(Model model) : BoundingBox
-		+{static} drawModel(const RlModel& model) : void
-		+{static} drawModelWires(const RlModel& model) : void
-		+{static} unloadModelKeepMeshes(Model model) : void
-	}
-
 	class Random {
 		+Random()
 		+generate(double min, double max) : double
@@ -106,37 +44,6 @@ namespace raylib {
 		+generate(short min, short max) : short
 		-_random_device : std::random_device
 		+generateSizeT(std::size_t min, std::size_t max) : std::size_t
-	}
-
-	class RlAnimation {
-		+RlAnimation()
-		+RlAnimation(const std::string& animationDir, const std::string& extension)
-		+~RlAnimation()
-		-_isLoaded : bool
-		+isLoaded() : bool& {query}
-		+getAnimationsSize() : std::size_t {query}
-		-_animationModels : std::vector<Model>
-		+getAnimationModels() : std::vector<Model>& {query}
-		-_frame : unsigned int
-		+getFrame() : unsigned int& {query}
-		+update() : void
-	}
-
-	class RlAudioStream {
-		+RlAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels)
-		+~RlAudioStream()
-		-stream : AudioStream
-		+isPlaying() : bool
-		+isProcessed() : bool
-		+getVolume() : float {query}
-		-volume : float
-		+pause() : void
-		+play() : void
-		+resume() : void
-		+setPitch(float pitch) : void
-		+setVolume(float volume) : void
-		+stop() : void
-		+update(const void* data, int samplesCount) : void
 	}
 
 	class RlCamera {
@@ -225,124 +132,6 @@ namespace raylib {
 		+setColor(const Color& color) : void
 	}
 
-	class RlMaterial {
-		+RlMaterial()
-		+~RlMaterial()
-		-_material : Material
-		+getMaterial() : Material& {query}
-		+loadMaterials(const std::string& fileName, int* materialCount) : Material*
-		-_materialCount : int
-		+getMaterialCount() : int& {query}
-		+setMaterialTexture(Material* material, int mapType, Texture2D texture) : void
-		+setModelMeshMaterial(Model* model, int meshId, int materialId) : void
-	}
-
-	class RlMesh {
-		+RlMesh(const Mesh& mesh)
-		-_mesh : Mesh
-		+getMesh() : Mesh& {query}
-		+setMesh(const Mesh& mesh) : void
-	}
-
-	class RlModel {
-		+RlModel(const std::string& fileName, const std::string& texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-		+RlModel(const Mesh& mesh, const std::string& texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-		+RlModel(const RlMesh& mesh, const std::string& texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-		+RlModel(const builder::RlMeshBuilder::MeshType& type, const std::string& texturePath, Vector3f position, Vector3f scale, Color color, Vector3f rotationAxis, float rotationAngle)
-		+~RlModel()
-		-_boundingBox : BoundingBox
-		-_startBoundingBox : BoundingBox
-		+getBoundingBox() : BoundingBox& {query}
-		-_color : Color
-		+getColor() : Color& {query}
-		-_model : Model
-		+getModel() : Model& {query}
-		-_position : Vector3f
-		-_rotationAxis : Vector3f
-		-_scale : Vector3f
-		+getPosition() : Vector3f& {query}
-		+getRotationAxis() : Vector3f& {query}
-		+getScale() : Vector3f& {query}
-		-_rotationAngle : float
-		+getRotationAngle() : float& {query}
-		+operator->() : texture :: RlTexture*
-		-_texture : texture::RlTexture
-		+getTexture() : texture::RlTexture& {query}
-		+setBoundingBox(const BoundingBox& boundingBox) : void
-		+setColor(Color color) : void
-		+setPosition(Vector3f position) : void
-		+setPosition(float x, float y, float z) : void
-		+setRotationAngle(float rotationAngle) : void
-		+setRotationAxis(Vector3f rotationAxis) : void
-		+setRotationAxis(float x, float y, float z) : void
-		+setScale(Vector3f scale) : void
-		+setScale(float x, float y, float z) : void
-		+setTexture(const texture::RlTexture& texture) : void
-		+setTextureMaterial() : void
-	}
-
-	class RlModelAnim {
-		+RlModelAnim(const RlModel& model, const std::string& fileName)
-		+~RlModelAnim()
-		-_anims : ModelAnimation*
-		+animationIndexIsValid(const unsigned int& animIndex) : bool
-		-_model : const RlModel&
-		-_frameCount : int
-		-_animations : std::vector<ModelAnimation>
-		-_count : unsigned int
-		+getCount() : unsigned int {query}
-		+incrementFrameCount(const int& value) : void
-		+unload(const unsigned int& animIndex) : void
-		+update(const unsigned int& animIndex) : void
-	}
-
-	class RlMusic {
-		+RlMusic(const std::string& fileName)
-		+RlMusic(const std::string& fileType, unsigned char* data, int dataSize)
-		+~RlMusic()
-		-music : Music
-		+isPlaying() : bool
-		+getTimeLength() : float
-		+getTimePlayed() : float
-		+getVolume() : float {query}
-		-volume : float
-		+pause() : void
-		+play() : void
-		+resume() : void
-		+seek(float position) : void
-		+setPitch(float pitch) : void
-		+setVolume(float volume) : void
-		+stop() : void
-		+update() : void
-	}
-
-	class Shape3DHelper {
-		+{static} drawCircle3D(Vector3f center, float radius, Vector3f rotationAxis, float rotationAngle, RlColor color) : void
-		+{static} drawCube(Vector3f position, float width, float height, float length, RlColor color) : void
-		+{static} drawCubeTexture(Texture2D texture, Vector3f position, float width, float height, float length, RlColor color) : void
-		+{static} drawCubeTextureRec(Texture2D texture, Rectangle source, Vector3f position, float width, float height, float length, RlColor color) : void
-		+{static} drawCubeV(Vector3f position, Vector3f size, RlColor color) : void
-		+{static} drawCubeWires(Vector3f position, float width, float height, float length, RlColor color) : void
-		+{static} drawCubeWiresV(Vector3f position, Vector3f size, RlColor color) : void
-		+{static} drawCylinder(Vector3f position, float radiusTop, float radiusBottom, float height, int slices, RlColor color) : void
-		+{static} drawCylinderEx(Vector3f startPos, Vector3f endPos, float startRadius, float endRadius, int sides, RlColor color) : void
-		+{static} drawCylinderWires(Vector3f position, float radiusTop, float radiusBottom, float height, int slices, RlColor color) : void
-		+{static} drawCylinderWiresEx(Vector3f startPos, Vector3f endPos, float startRadius, float endRadius, int sides, RlColor color) : void
-		+{static} drawGrid(int slices, float spacing) : void
-		+{static} drawGrid(const Vector2i& size, const float& spacing) : void
-		+{static} drawGrid(const Vector2i& size, const Vector3f& position, const float& spacing) : void
-		+{static} drawGrid(const Vector2i& size, const Vector3f& position, const float& spacing, const RlColor& color) : void
-		+{static} drawLine3D(Vector3f startPos, Vector3f endPos, RlColor color) : void
-		+{static} drawPlane(Vector3f centerPos, Vector2f size, RlColor color) : void
-		+{static} drawPoint3D(Vector3f position, RlColor color) : void
-		+{static} drawRay(Ray ray, RlColor color) : void
-		+{static} drawSphere(Vector3f centerPos, float radius, RlColor color) : void
-		+{static} drawSphereEx(Vector3f centerPos, float radius, int rings, int slices, RlColor color) : void
-		+{static} drawSphereWires(Vector3f centerPos, float radius, int rings, int slices, RlColor color) : void
-		+{static} drawTriangle3D(Vector3f v1, Vector3f v2, Vector3f v3, RlColor color) : void
-		+{static} drawTriangleStrip3D(::Vector3* points, int pointsCount, RlColor color) : void
-	}
-
 	class Vector2 <template<typename T>> {
 		+Vector2()
 		+Vector2(T x, T y)
@@ -378,15 +167,16 @@ namespace raylib {
 			+RlWindow()
 			+~RlWindow()
 			-_isCreated : bool
-			+hasWindowState(const ConfigFlags& flag) : bool
+			-_isOpen : bool
+			+hasState(const ConfigFlags& flag) : bool
+			+isFocused() : bool
+			+isFullScreen() : bool
+			+isHidden() : bool
+			+isMaximized() : bool
+			+isMinimized() : bool
 			+isOpen() : bool
-			+isWindowFocused() : bool
-			+isWindowFullscreen() : bool
-			+isWindowHidden() : bool
-			+isWindowMaximized() : bool
-			+isWindowMinimized() : bool
-			+isWindowReady() : bool
-			+isWindowResized() : bool
+			+isReady() : bool
+			+isResized() : bool
 			+isIsCreated() : bool& {query}
 			-_height : int
 			-_minHeight : int
@@ -403,20 +193,21 @@ namespace raylib {
 			+{static} getInstance() : std::shared_ptr<RlWindow>&
 			-_title : std::string
 			+getTitle() : std::string& {query}
-			+clearWindowState(unsigned int flags) : void
+			+clearState(unsigned int flags) : void
 			+createWindow(const std::string& title, int width, int height, int fps) : void
-			+maximizeWindow() : void
-			+minimizeWindow() : void
-			+restoreWindow() : void
+			+maximize() : void
+			+minimize() : void
+			+restore() : void
 			+setCamera(const RlCamera& camera) : void
 			+setConfigFlags(unsigned int flags) : void
-			+setWindowIcon(const image::RlImage& image) : void
-			+setWindowMinSize(int width, int height) : void
-			+setWindowMonitor(int monitor) : void
-			+setWindowPosition(int x, int y) : void
-			+setWindowSize(int width, int height) : void
-			+setWindowState(unsigned int flags) : void
-			+setWindowTitle(const std::string& title) : void
+			+setIcon(const image::RlImage& image) : void
+			+setIsOpen(const bool& isOpen) : void
+			+setMinSize(int width, int height) : void
+			+setMonitor(int monitor) : void
+			+setPosition(int x, int y) : void
+			+setSize(int width, int height) : void
+			+setState(unsigned int flags) : void
+			+setTitle(const std::string& title) : void
 			+takeScreenshot(const std::string& fileName) : void
 			+toggleFullscreen() : void
 		}
@@ -459,8 +250,8 @@ namespace raylib {
 			-_textureRec : Rectangle
 			+getTextureRec() : Rectangle& {query}
 			-_texture : Texture2D
-			+get() : Texture2D&
 			+get() : Texture2D& {query}
+			+getTexture() : Texture2D&
 			+getFormat() : int& {query}
 			+getHeight() : int& {query}
 			+getMipmaps() : int& {query}
@@ -554,6 +345,118 @@ namespace raylib {
 		}
 	}
 
+	namespace model {
+		class MeshGenerator {
+			+{static} genMeshCone(const float& radius, const float& height, const int& slices) : RlMesh
+			+{static} genMeshCube(const float& width, const float& height, const float& length) : RlMesh
+			+{static} genMeshCubicmap(const image::RlImage& cubicmap, const Vector3f& cubeSize) : RlMesh
+			+{static} genMeshCylinder(const float& radius, const float& height, const int& slices) : RlMesh
+			+{static} genMeshHeightmap(const image::RlImage& heightmap, const Vector3f& size) : RlMesh
+			+{static} genMeshHemiSphere(const float& radius, const int& rings, const int& slices) : RlMesh
+			+{static} genMeshKnot(const float& radius, const float& size, const int& radSeg, const int& sides) : RlMesh
+			+{static} genMeshPlane(const float& width, const float& length, const int& resX, const int& resZ) : RlMesh
+			+{static} genMeshPoly(const int& sides, const float& radius) : RlMesh
+			+{static} genMeshSphere(const float& radius, const int& rings, const int& slices) : RlMesh
+			+{static} genMeshTorus(const float& radius, const float& size, const int& radSeg, const int& sides) : RlMesh
+		}
+
+		class RlAnimation {
+			+RlAnimation()
+			+RlAnimation(const std::string& animationDir, const std::string& extension)
+			-_isLoaded : bool
+			+isLoaded() : bool& {query}
+			+getAnimationsSize() : std::size_t {query}
+			-_animationModels : std::vector<RlModel>
+			+getAnimationModels() : std::vector<RlModel>& {query}
+			-_frame : unsigned int
+			+getFrame() : unsigned int& {query}
+			+update() : void
+		}
+
+		class RlMaterial {
+			+RlMaterial(const std::string& fileName)
+			+RlMaterial(Material& material)
+			+~RlMaterial()
+			-_material : Material
+			+getMaterial() : Material& {query}
+			+getMaterial() : Material&
+		}
+
+		class RlMesh {
+			+RlMesh(const Mesh& mesh)
+			+RlMesh(const RlMesh& mesh)
+			+~RlMesh()
+			+getBoundingBox() : BoundingBox
+			+getMesh() : Mesh& {query}
+			+operator=(const RlMesh& mesh) : RlMesh&
+			+exportMesh(const std::string& fileName) : bool
+			-_mesh : std::shared_ptr<Mesh>
+			+getMeshSharedPtr() : std::shared_ptr<Mesh>& {query}
+			+genBinormals() : void
+			+genTangents() : void
+			+updateBuffer(const int& index, void* data, const int& dataSize, const int& offset) : void
+			+uploadInGPU(const bool& dynamic) : void
+		}
+
+		class RlModel {
+			+RlModel(const std::string& fileName)
+			+RlModel(const std::string& fileName, const std::string& textureName)
+			+RlModel(const std::shared_ptr<RlMesh>& mesh)
+			+RlModel(const RlMesh& mesh)
+			+RlModel(const RlModel& model)
+			+~RlModel()
+			-_baseBoudingBox : BoundingBox
+			-_boundingBox : BoundingBox
+			+getDefaultBoundingBox() : BoundingBox {query}
+			+getBaseBoundingBox() : BoundingBox& {query}
+			+getBoundingBox() : BoundingBox& {query}
+			+getModel() : Model& {query}
+			-_color : RlColor
+			+getColor() : RlColor& {query}
+			+operator=(const RlModel& model) : RlModel&
+			-_position : Vector3f
+			-_rotationAxis : Vector3f
+			-_scale : Vector3f
+			+getPosition() : Vector3f& {query}
+			+getRotationAxis() : Vector3f& {query}
+			+getScale() : Vector3f& {query}
+			-_rotationAngle : float
+			+getRotationAngle() : float& {query}
+			-_model : std::shared_ptr<Model>
+			-_mesh : std::shared_ptr<RlMesh>
+			-_texture : std::shared_ptr<texture::RlTexture>
+			+getTexture() : std::shared_ptr<texture::RlTexture>& {query}
+			+setBoundingBox(const BoundingBox& boundingBox) : void
+			+setColor(const RlColor& color) : void
+			+setMaterialTexture(const std::shared_ptr<texture::RlTexture>& texture) : void
+			+setMaterialTexture(const std::shared_ptr<texture::RlTexture>& texture, const int& materialIndex) : void
+			+setMaterialTexture(const std::shared_ptr<texture::RlTexture>& texture, const int& materialIndex, const MaterialMapIndex& type) : void
+			+setMeshMaterial(const int& meshId, const int& materialId) : void
+			+setPosition(const Vector3f& position) : void
+			+setPosition(const float& x, const float& y, const float& z) : void
+			+setRotationAngle(float rotationAngle) : void
+			+setRotationAxis(const Vector3f& rotationAxis) : void
+			+setRotationAxis(const float& x, const float& y, const float& z) : void
+			+setScale(const Vector3f& scale) : void
+			+setScale(const float& x, const float& y, const float& z) : void
+		}
+
+		class RlModelAnimation {
+			+RlModelAnimation(const RlModel& model, const std::string& fileName)
+			+~RlModelAnimation()
+			-_anims : ModelAnimation*
+			-_model : RlModel
+			+animationIndexIsValid(const unsigned int& animIndex) : bool
+			-_frameCount : int
+			-_animations : std::vector<ModelAnimation>
+			-_count : unsigned int
+			+getCount() : unsigned int {query}
+			+incrementFrameCount(const int& value) : void
+			+unload(const unsigned int& animIndex) : void
+			+update(const unsigned int& animIndex) : void
+		}
+	}
+
 	namespace image {
 		class ImageDrawHelper {
 			+{static} clearBackground(image::RlImage& dst, const RlColor& color) : void
@@ -625,12 +528,15 @@ namespace raylib {
 	}
 
 	namespace helper {
-		class AudioDeviceHelper {
+		class AudioHelper {
 			+{static} isAudioDeviceReady() : bool
+			+{static} getNumberOfSoundsPlaying() : int
 			-{static} _audioDeviceInit : static bool
 			+{static} closeAudioDevice() : void
 			+{static} initAudioDevice() : void
+			+{static} setAudioStreamBufferSizeDefault(const int& size) : void
 			+{static} setMasterVolume(float volume) : void
+			+{static} stopMultiSound() : void
 		}
 
 		class CameraHelper {
@@ -639,6 +545,30 @@ namespace raylib {
 			+{static} setMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown) : void
 			+{static} setPanControl(int keyPan) : void
 			+{static} setSmoothZoomControl(int keySmoothZoom) : void
+		}
+
+		class Collision2DHelper {
+			+{static} getCollisionRec(const Rectangle& rec1, const Rectangle& rec2) : Rectangle
+			+{static} checkCollisionCircleRec(const Vector2f& center, const float& radius, const Rectangle& rec) : bool
+			+{static} checkCollisionCircles(const Vector2f& center1, const float& radius1, const Vector2f& center2, const float& radius2) : bool
+			+{static} checkCollisionLines(const Vector2f& startPos1, const Vector2f& endPos1, const Vector2f& startPos2, const Vector2f& endPos2, Vector2f& collisionPoint) : bool
+			+{static} checkCollisionPointCircle(const Vector2f& point, const Vector2f& center, const float& radius) : bool
+			+{static} checkCollisionPointLine(const Vector2f& point, const Vector2f& p1, const Vector2f& p2, const int& threshold) : bool
+			+{static} checkCollisionPointRec(const Vector2f& point, const Rectangle& rec) : bool
+			+{static} checkCollisionPointTriangle(const Vector2f& point, const Vector2f& p1, const Vector2f& p2, const Vector2f& p3) : bool
+			+{static} checkCollisionRecs(const Rectangle& rec1, const Rectangle& rec2) : bool
+		}
+
+		class Collision3dHelper {
+			+{static} getRayCollisionBox(const Ray& ray, const BoundingBox& box) : RayCollision
+			+{static} getRayCollisionMesh(const Ray& ray, const model::RlMesh& mesh, const Matrix& transform) : RayCollision
+			+{static} getRayCollisionModel(const Ray& ray, const model::RlModel& model) : RayCollision
+			+{static} getRayCollisionQuad(const Ray& ray, const Vector3f& p1, const Vector3f& p2, const Vector3f& p3, const Vector3f& p4) : RayCollision
+			+{static} getRayCollisionSphere(const Ray& ray, const Vector3f& center, const float& radius) : RayCollision
+			+{static} getRayCollisionTriangle(const Ray& ray, const Vector3f& p1, const Vector3f& p2, const Vector3f& p3) : RayCollision
+			+{static} checkCollisionBoxSphere(const BoundingBox& box, const Vector3f& center, const float& radius) : bool
+			+{static} checkCollisionBoxes(const BoundingBox& box1, const BoundingBox& box2) : bool
+			+{static} checkCollisionSpheres(const Vector3f& center1, const float& radius1, const Vector3f& center2, const float& radius2) : bool
 		}
 
 		class ColorHelper {
@@ -677,8 +607,9 @@ namespace raylib {
 			+{static} getPrevDirectoryPath(const std::string& dirPath) : std::string
 			+{static} getWorkingDirectory() : std::string
 			+{static} loadFileText(const std::string& fileName) : std::string
-			+{static} getDirectoryFiles(const std::string& dirPath) : std::vector<std::string>
-			+{static} getDirectoryFiles(const std::string& dirPath, const std::function<bool ( const std::string& fileName )>& filterFunction) : std::vector<std::string>
+			+{static} getDirectoryFiles(const std::string& dirPath, const bool& recursive) : std::vector<std::string>
+			+{static} getDirectoryFiles(const std::string& dirPath, const std::function<bool ( const std::string& )>& filter) : std::vector<std::string>
+			+{static} getDirectoryFiles(const std::string& dirPath, const bool& recursive, const std::function<bool ( const std::string& fileName )>& filterFunction) : std::vector<std::string>
 			+{static} getDroppedFiles() : std::vector<std::string>
 			+{static} loadFileData(const std::string& fileName) : std::vector<unsigned char>
 			+{static} changeDirectory(const std::string& dir) : void
@@ -835,20 +766,47 @@ namespace raylib {
 				+{static} setShapesTexture(const texture::RlTexture& texture, const Rectangle& source) : void
 			}
 
+			class Draw3DHelper {
+				+{static} drawBillboard(const RlCamera& camera, const texture::RlTexture& texture, const Vector3f& position, float size, const RlColor& tint) : void
+				+{static} drawBillboardPro(const RlCamera& camera, const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const Vector3f& up, const Vector2f& size, const Vector2f& origin, float rotation, const RlColor& tint) : void
+				+{static} drawBillboardRec(const RlCamera& camera, const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const Vector2f& size, const RlColor& tint) : void
+				+{static} drawBoundingBox(const BoundingBox& box, const RlColor& color) : void
+				+{static} drawCircle(const Vector3f& center, const float& radius, const Vector3f& rotationAxis, const float& rotationAngle, const RlColor& color) : void
+				+{static} drawCube(const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCube(const Vector3f& position, const Vector3f& size, const RlColor& color) : void
+				+{static} drawCubeTexture(const texture::RlTexture& texture, const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCubeTextureRec(const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCubeWires(const Vector3f& position, const float& width, const float& height, const float& length, const RlColor& color) : void
+				+{static} drawCubeWires(const Vector3f& position, const Vector3f& size, const RlColor& color) : void
+				+{static} drawCylinder(const Vector3f& position, const float& radiusTop, const float& radiusBottom, const float& height, const int& slices, const RlColor& color) : void
+				+{static} drawCylinder(const Vector3f& startPos, const Vector3f& endPos, const float& startRadius, const float& endRadius, const int& sides, const RlColor& color) : void
+				+{static} drawCylinderWires(const Vector3f& position, const float& radiusTop, const float& radiusBottom, const float& height, const int& slices, const RlColor& color) : void
+				+{static} drawCylinderWires(const Vector3f& startPos, const Vector3f& endPos, const float& startRadius, const float& endRadius, const int& sides, const RlColor& color) : void
+				+{static} drawGrid(const int& slices, const float& spacing) : void
+				+{static} drawGrid(const Vector2i& size, const float& spacing) : void
+				+{static} drawGrid(const Vector2i& size, const Vector3f& position, const float& spacing) : void
+				+{static} drawGrid(const Vector2i& size, const Vector3f& position, const float& spacing, const RlColor& color) : void
+				+{static} drawLine(const Vector3f& startPos, const Vector3f& endPos, const RlColor& color) : void
+				+{static} drawPlane(const Vector3f& centerPos, const Vector2f& size, const RlColor& color) : void
+				+{static} drawPoint(const Vector3f& position, const RlColor& color) : void
+				+{static} drawRay(const Ray& ray, const RlColor& color) : void
+				+{static} drawSphere(const Vector3f& centerPos, const float& radius, const RlColor& color) : void
+				+{static} drawSphere(const Vector3f& centerPos, const float& radius, const int& rings, const int& slices, const RlColor& color) : void
+				+{static} drawSphereWires(const Vector3f& centerPos, const float& radius, const int& rings, const int& slices, const RlColor& color) : void
+				+{static} drawTriangle3D(const Vector3f& v1, const Vector3f& v2, const Vector3f& v3, const RlColor& color) : void
+				+{static} drawTriangleStrip3D(const std::vector<Vector3f>& points, const RlColor& color) : void
+			}
+
 			class DrawHelper {
 				+{static} beginBlendMode(int mode) : void
 				+{static} beginDrawing() : void
 				+{static} beginMode2D(const Camera2D& camera) : void
 				+{static} beginMode3D(const RlCamera& camera) : void
 				+{static} beginScissorMode(int x, int y, int width, int height) : void
-				+{static} beginShaderMode(const Shader& shader) : void
+				+{static} beginShaderMode(const shader::RlShader& shader) : void
 				+{static} beginTextureMode(const RenderTexture2D& target) : void
 				+{static} beginVrStereoMode(const VrStereoConfig& config) : void
 				+{static} clearBackground(const RlColor& color) : void
-				+{static} drawBillboard(const RlCamera& camera, const texture::RlTexture& texture, const Vector3f& position, float size, const RlColor& tint) : void
-				+{static} drawBillboardPro(const RlCamera& camera, const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const Vector3f& up, const Vector2f& size, const Vector2f& origin, float rotation, const RlColor& tint) : void
-				+{static} drawBillboardRec(const RlCamera& camera, const texture::RlTexture& texture, const Rectangle& source, const Vector3f& position, const Vector2f& size, const RlColor& tint) : void
-				+{static} drawBoundingBox(const BoundingBox& box, const RlColor& color) : void
 				+{static} endBlendMode() : void
 				+{static} endDrawing() : void
 				+{static} endMode2D() : void
@@ -857,6 +815,17 @@ namespace raylib {
 				+{static} endShaderMode() : void
 				+{static} endTextureMode() : void
 				+{static} endVrStereoMode() : void
+			}
+
+			class DrawModelHelper {
+				+{static} drawMesh(const raylib::model::RlMesh& mesh, const raylib::model::RlMaterial& material, const Matrix& transform) : void
+				+{static} drawMeshInstanced(const raylib::model::RlMesh& mesh, const raylib::model::RlMaterial& material, std::vector<Matrix>& transforms) : void
+				+{static} drawModel(const raylib::model::RlModel& model) : void
+				+{static} drawModel(const raylib::model::RlModel& model, const Vector3f& position, const float& scale, const RlColor& tint) : void
+				+{static} drawModel(const raylib::model::RlModel& model, const Vector3f& position, const Vector3f& rotationAxis, const float& rotationAngle, const Vector3f& scale, const RlColor& tint) : void
+				+{static} drawModelWires(const raylib::model::RlModel& model) : void
+				+{static} drawModelWires(const raylib::model::RlModel& model, const Vector3f& position, const float& scale, const RlColor& tint) : void
+				+{static} drawModelWires(const raylib::model::RlModel& model, const Vector3f& position, const Vector3f& rotationAxis, const float& rotationAngle, const Vector3f& scale, const RlColor& tint) : void
 			}
 
 			class DrawTextHelper {
@@ -915,6 +884,10 @@ namespace raylib {
 
 		class RlAnimationException {
 			+RlAnimationException(const std::string& message)
+		}
+
+		class RlModelException {
+			+RlModelException(const std::string& message)
 		}
 
 		class WindowException {
@@ -986,7 +959,6 @@ namespace raylib {
 
 		class RlMeshBuilder {
 			+RlMeshBuilder()
-			+build() : RlMesh
 			+setConeSlices(const int& slices) : RlMeshBuilder&
 			+setCubeSize(const Vector3f& cubeSize) : RlMeshBuilder&
 			+setCubicmap(const image::RlImage& cubicmap) : RlMeshBuilder&
@@ -1023,6 +995,36 @@ namespace raylib {
 			-_slices : int
 			-_flags : long
 			-_type : long
+			+build() : model::RlMesh
+		}
+
+		class RlModelBuilder {
+			+RlModelBuilder()
+			-_boundingBox : BoundingBox
+			-_color : RlColor
+			+setRotationAxis(const Vector3f& rotationAxis) : RlModelBuilder
+			+setBoundingBox(const BoundingBox& boundingBox) : RlModelBuilder&
+			+setColor(const RlColor& color) : RlModelBuilder&
+			+setMesh(const std::shared_ptr<raylib::model::RlMesh>& mesh) : RlModelBuilder&
+			+setMesh(const raylib::model::RlMesh& mesh) : RlModelBuilder&
+			+setModelPath(const std::string& modelPath) : RlModelBuilder&
+			+setPosition(const Vector3f& position) : RlModelBuilder&
+			+setRotationAngle(const float& rotationAngle) : RlModelBuilder&
+			+setScale(const Vector3f& scale) : RlModelBuilder&
+			+setTexture(const std::shared_ptr<texture::RlTexture>& texture) : RlModelBuilder&
+			+setTexturePath(const std::string& texturePath) : RlModelBuilder&
+			-_position : Vector3f
+			-_rotationAxis : Vector3f
+			-_scale : Vector3f
+			-_boundingBoxSet : bool
+			-_rotationAngle : float
+			-_flags : long
+			+build() : raylib::model::RlModel
+			-{static} _validTypes : static std::vector<ValidType>
+			-_mesh : std::shared_ptr<raylib::model::RlMesh>
+			-_texture : std::shared_ptr<texture::RlTexture>
+			-_modelPath : std::string
+			-_texturePath : std::string
 		}
 
 		class RlTextBuilder {
@@ -1115,28 +1117,80 @@ namespace raylib {
 			Vec3fSize
 			Width
 		}
+
+		enum RlModelBuilder::RequiredParameter {
+			MESH
+			MODEL_PATH
+			SHARED_TEXTURE
+			TEXTURE_PATH
+		}
+
+		enum RlModelBuilder::ValidType {
+			RLMODEL_MESH
+			RLMODEL_MESH_AND_SHARED_TEXTURE
+			RLMODEL_PATH
+			RLMODEL_PATH_AND_SHARED_TEXTURE
+			RLMODEL_PATH_AND_TEXTURE
+		}
 	}
 
 	namespace audio {
+		class RlAudioStream {
+			+RlAudioStream(const unsigned int& sampleRate, const unsigned int& sampleSize, const unsigned int& channels)
+			+~RlAudioStream()
+			-_stream : AudioStream
+			+isPlaying() : bool
+			+isProcessed() : bool
+			-_volume : float
+			+getVolume() : float& {query}
+			+pause() : void
+			+play() : void
+			+resume() : void
+			+setPitch(const float& pitch) : void
+			+setVolume(float volume) : void
+			+stop() : void
+			+update(const void* data, const int& samplesCount) : void
+		}
+
+		class RlMusic {
+			+RlMusic(const std::string& fileName)
+			+RlMusic(const std::string& fileType, unsigned char* data, const int& dataSize)
+			+~RlMusic()
+			-_music : Music
+			+isPlaying() : bool
+			+isLooping() : bool& {query}
+			-_volume : float
+			+getTimeLength() : float
+			+getTimePlayed() : float
+			+getVolume() : float& {query}
+			+pause() : void
+			+play() : void
+			+resume() : void
+			+seek(const float& position) : void
+			+setLooping(const bool& loop) : void
+			+setPitch(const float& pitch) : void
+			+setVolume(const float& volume) : void
+			+stop() : void
+			+update() : void
+		}
+
 		class RlSound {
 			+RlSound(const Sound& sound)
 			+RlSound(const std::string& fileName)
-			+RlSound(Wave wave)
+			+RlSound(const RlWave& wave)
 			+~RlSound()
 			-_sound : Sound
 			+isPlaying() : bool
 			-_volume : float
-			+getVolume() : float {query}
-			+{static} getPlayings() : int
+			+getVolume() : float& {query}
 			+pause() : void
 			+play() : void
 			+playMulti() : void
 			+resume() : void
-			+setPitch(float pitch) : void
-			+setVolume(float volume) : void
+			+setPitch(const float& pitch) : void
+			+setVolume(const float& volume) : void
 			+stop() : void
-			+{static} stopMulti() : void
-			+update(const void* data, int samplesCount) : void
+			+update(const void* data, const int& samplesCount) : void
 		}
 
 		class RlWave {
@@ -1148,6 +1202,7 @@ namespace raylib {
 			+copy() : RlWave
 			-_wave : Wave
 			+getWave() : Wave&
+			+getWave() : Wave& {query}
 			+exportWave(const std::string& fileName) : bool
 			+exportWaveAsCode(const std::string& fileName) : bool
 			-_samplesPtr : float*
@@ -1162,22 +1217,16 @@ namespace raylib {
 
 
 namespace gameengine {
-	abstract class AbstractBase {
-		+AbstractBase(const std::string& name)
-		+AbstractBase(const AbstractBase &)
-		+~AbstractBase()
-		-_hiding : bool
-		+isHiding() : bool {query}
-		+{abstract} getRotationDegrees() : float
-		-_group : std::string
+	abstract class AbstractSound {
+		+AbstractSound(const std::string& filePath, SoundCategory category)
+		+~AbstractSound()
+		-_category : SoundCategory
+		+getCategory() : int {query}
+		-_filePath : std::string
 		-_name : std::string
-		+getGroup() : std::string& {query}
+		+getFilePath() : std::string& {query}
 		+getName() : std::string& {query}
-		+{abstract} draw() : void
-		+{abstract} ready() : void
-		+setGroup(const std::string& group) : void
-		+setHiding(bool value) : void
-		+{abstract} update(float delta) : void
+		+{abstract} setVolume(const float& volume) : void
 	}
 
 	class AudioManager {
@@ -1185,134 +1234,64 @@ namespace gameengine {
 		+~AudioManager()
 		-{static} _instance : static std::shared_ptr<AudioManager>
 		+{static} getInstance() : std::shared_ptr<AudioManager>&
-		-_sounds : std::vector<std::unique_ptr<gameengine::ISound>>
-		+addSound(const std::string& fileName, SoundCategory category) : void
-		+deleteSound(const std::string& fileName) : void
-		+playSound(const std::string& fileName) : void
-		+setVolume(float volume, SoundCategory category) : void
-	}
-
-	abstract class Button {
-		+Button(const std::string& name, const std::string& filename)
-		+~Button()
-		-_bounds : Rectangle
-		-_rectangle : Rectangle
-		-_position : Vector2f
-		-_scale : Vector2f
-		+getPosition() : Vector2f
-		+getScale() : Vector2f
-		-_action : bool
-		-_isEnable : bool
-		+getIsEnable() : bool
-		-_frameHeight : float
-		-_rotationDegrees : float
-		+getRotationDegrees() : float
-		-_frameNum : int
-		-_state : int
-		-_texture : raylib::texture::RlTexture
-		+draw() : void
-		+{abstract} pressed() : void
-		+ready() : void
-		+setEnable(bool value) : void
-		+setPosition(Vector2f position) : void
-		+setRotationDegrees(float rotationDegrees) : void
-		+setScale(Vector2f scale) : void
-		+update(float delta) : void
-	}
-
-	class ISound {
-		+ISound(std::string fileName, SoundCategory category)
-		+~ISound()
-		-_category : SoundCategory
-		+getCategory() : int {query}
-		-_name : std::string
-		+getName() : std::string
-	}
-
-	class KinematicBody {
-		+KinematicBody(const std::string& name, const raylib::builder::RlMeshBuilder::MeshType& type, const std::string& texturePath)
-		+KinematicBody(const std::string& name, const std::string& modelPath, const std::string& texturePath)
-		+~KinematicBody()
-		+moveAndCollide(Vector3f position) : void
-	}
-
-	class MainScene {
-		+MainScene(std::string name, std::string sceneSource)
-		+~MainScene()
-		+sceneLauncher() : void
-	}
-
-	abstract class Node {
-		+Node(const std::string& name)
-		+Node(const Node &)
-		+~Node()
-		+{abstract} getPosition() : Vector3f
-		+{abstract} getScale() : Vector3f
-		+{abstract} setPosition(Vector3f pos) : void
-		+{abstract} setRotationDegrees(float degrees, Vector3f rotationAxis) : void
-		+{abstract} setScale(Vector3f newScale) : void
-	}
-
-	abstract class Node2D {
-		+Node2D(const std::string& name)
-		+Node2D(const Node2D &)
-		+~Node2D()
-		+{abstract} getPosition() : Vector2f
-		+{abstract} getScale() : Vector2f
-		+{abstract} setPosition(Vector2f pos) : void
-		+{abstract} setRotationDegrees(float degrees) : void
-		+{abstract} setScale(Vector2f newScale) : void
+		+getSound(const std::string& name) : std::unique_ptr<AbstractSound>&
+		-_sounds : std::vector<std::unique_ptr<gameengine::AbstractSound>>
+		+addSound(const std::string& filePath, AbstractSound::SoundCategory category) : void
+		+deleteSound(const std::string& name) : void
+		+loadSounds(const std::string& assetsPath) : void
+		+loadSounds(const std::string& soundDir, const std::string& musicDir) : void
+		+playSound(const std::string& name) : void
+		+setVolume(const float& volume, AbstractSound::SoundCategory category) : void
 	}
 
 	abstract class Scene {
-		+Scene(std::string name, std::string sceneSource)
+		+Scene(const std::string& name, const std::string& sceneSource)
 		+~Scene()
 		-_isLaunched : bool
 		-_isPaused : bool
-		+getPaused() : bool {query}
-		+isLaunched() : bool&
-		+getNode(const std::string& name) : std::shared_ptr<gameengine::AbstractBase>
+		+deleteNode(const std::string& name) : bool
+		+isLaunched() : bool& {query}
+		+isPaused() : bool& {query}
+		+getNode(const std::string& name) : std::shared_ptr<gameengine::node::AbstractBase>
 		-_name : std::string
 		-_sceneSource : std::string
-		+getName() : std::string
-		+getSceneSource() : std::string
-		-_nodes : std::vector<std::shared_ptr<gameengine::AbstractBase>>
-		+getAllNode() : std::vector<std::shared_ptr<gameengine::AbstractBase>>
-		+addNode(const std::shared_ptr<gameengine::AbstractBase>& node) : void
-		+deleteNode(const std::string& name) : void
+		+getName() : std::string& {query}
+		+getSceneSource() : std::string& {query}
+		-_nodes : std::vector<std::shared_ptr<gameengine::node::AbstractBase>>
+		+getNodes() : std::vector<std::shared_ptr<gameengine::node::AbstractBase>>& {query}
+		+addNode(const std::shared_ptr<gameengine::node::AbstractBase>& node) : void
 		+deleteNodeIncludes(const std::string& includeName) : void
 		+destroy() : void
 		+draw() : void
 		+draw2D() : void
-		+ready() : void
-		+{abstract} readyScene() : void
+		+init() : void
+		+{abstract} initScene() : void
 		+{abstract} sceneLauncher() : void
 		+setLaunched() : void
-		+setPaused(bool value) : void
-		+update(float delta) : void
-		+{abstract} updateScene(float delta) : void
+		+setPaused(const bool& value) : void
+		+update(const float& delta) : void
+		+{abstract} updateScene(const float& delta) : void
 	}
 
 	class SceneManager {
-		+SceneManager()
-		+~SceneManager()
-		+getPaused() : bool
+		+isPaused() : bool
 		-{static} _instance : static std::shared_ptr<SceneManager>
-		+getNode(const std::string& name) : std::shared_ptr<gameengine::AbstractBase>
+		+getCurrentScene() : std::shared_ptr<gameengine::Scene>&
 		+{static} getInstance() : std::shared_ptr<gameengine::SceneManager>&
+		+getNode(const std::string& name) : std::shared_ptr<gameengine::node::AbstractBase>
 		-_actualScene : std::string
 		-_waitingScene : std::string
-		+getAllNodes() : std::vector<std::shared_ptr<gameengine::AbstractBase>>
 		-_scenes : std::vector<std::shared_ptr<gameengine::Scene>>
+		+getAllNodes() : std::vector<std::shared_ptr<gameengine::node::AbstractBase>>
 		-_nodesToDelete : std::vector<std::string>
 		-_nodesToDeleteIncludes : std::vector<std::string>
-		+addNode(const std::shared_ptr<gameengine::AbstractBase>& node) : void
+		+addNode(const std::shared_ptr<gameengine::node::AbstractBase>& node) : void
 		+addScene(const std::shared_ptr<gameengine::Scene>& scene) : void
 		+changeScene(const std::string& scene) : void
 		-changeSceneInWaiting() : void
 		+deleteNode(const std::string& name) : void
 		-deleteNodeInLst() : void
-		+deleteNodeInclude(const std::string& Includename) : void
+		+deleteNodeInclude(const std::string& containedName) : void
 		+deleteScene(const std::string& scene) : void
 		+draw() : void
 		+draw2D() : void
@@ -1322,51 +1301,213 @@ namespace gameengine {
 		+update() : void
 	}
 
-	class StaticBody {
-		+StaticBody(const std::string& name, const std::string& modelPath, const std::string& texturePath)
-		+StaticBody(const std::string& name, const raylib::builder::RlMeshBuilder::MeshType& type, const std::string& texturepath)
-		+~StaticBody()
-		+getBoundingBox() : BoundingBox& {query}
-		#_position : Vector3f
-		#_scale : Vector3f
-		+getPosition() : Vector3f
-		+getScale() : Vector3f
-		#_collisionEnable : bool
-		+getIsCollsionEnable() : bool&
-		#_rotationDegrees : float
-		+getRotationDegrees() : float
-		+operator->() : raylib :: RlModel*
-		#_model : raylib::RlModel
-		+draw() : void
-		+ready() : void
-		+setBoundingBox(BoundingBox& boundingBox) : void
-		+setColor(raylib::RlColor color) : void
-		+setPosition(Vector3f pos) : void
-		+setRotationDegrees(float degrees, Vector3f rotationAxis) : void
-		+setScale(Vector3f newScale) : void
-		+update(float delta) : void
+	class TextureManager {
+		-{static} _defaultTexture : static std::shared_ptr<raylib::texture::RlTexture>
+		-{static} _instance : static std::unique_ptr<TextureManager>
+		+getTexture(const std::string& textureName) : std::shared_ptr<raylib::texture::RlTexture>
+		+{static} getDefaultTexture() : std::shared_ptr<raylib::texture::RlTexture>&
+		+{static} getInstance() : std::unique_ptr<TextureManager>&
+		-_textures : std::vector<std::shared_ptr<raylib::texture::RlTexture>>
+		+getTextures() : std::vector<std::shared_ptr<raylib::texture::RlTexture>>& {query}
+		+loadTextures(const std::string& texturesDir) : void
 	}
 
-	class TextureRect {
-		+TextureRect(const std::string& name, const std::string& filename, Vector2f position, Vector2f scale, float, const raylib::RlColor& color)
-		+~TextureRect()
-		-_position : Vector2f
-		-_scale : Vector2f
-		+getPosition() : Vector2f
-		+getScale() : Vector2f
-		-_rotationDegrees : float
-		+getRotationDegrees() : float
-		-_color : raylib::RlColor
-		+getColor() : raylib::RlColor&
-		+getColor() : raylib::RlColor& {query}
-		-_texture : raylib::texture::RlTexture
-		+draw() : void
-		+ready() : void
-		+setColor(unsigned int r, unsigned int g, unsigned int b, unsigned int a) : void
-		+setPosition(Vector2f position) : void
-		+setRotationDegrees(float rotationDegrees) : void
-		+setScale(Vector2f scale) : void
-		+update(float delta) : void
+	class Time {
+		+Time()
+		+~Time()
+		+{static} getMicrosecondsTime() : long
+		+{static} getMillisecondsTime() : long
+		+{static} getNanoTime(std::chrono::seconds time) : long
+		+{static} getNanoTime(std::chrono::milliseconds time) : long
+		+{static} getNanoTime(std::chrono::microseconds time) : long
+		+{static} getNanosecondsTime() : long
+		+{static} getSecondsTime() : long
+	}
+
+	enum AbstractSound::SoundCategory {
+		FX
+		MUSIC
+	}
+
+	namespace node {
+		abstract class AbstractBase {
+			+AbstractBase(const std::string& name)
+			+AbstractBase(const AbstractBase &)
+			+~AbstractBase()
+			#_hiding : bool
+			+isHiding() : bool& {query}
+			+{abstract} getRotationDegrees() : float {query}
+			#_group : std::string
+			#_name : std::string
+			+getGroup() : std::string& {query}
+			+getName() : std::string& {query}
+			+{abstract} draw() : void
+			+{abstract} init() : void
+			+setGroup(const std::string& group) : void
+			+setHiding(bool value) : void
+			+{abstract} update(const float& delta) : void
+		}
+
+		namespace _3D {
+			class Grid3D {
+				+Grid3D(const Vector2i& size, const Vector3f& position, const float& spacing, const RlColor& tint, const std::string& name)
+				+Grid3D(const Grid3D &)
+				-_tint : RlColor
+				-_size : Vector2i
+				-_position : Vector3f
+				-_scale : Vector3f
+				+getPosition() : Vector3f& {query}
+				+getScale() : Vector3f& {query}
+				-_spacing : float
+				+getRotationDegrees() : float {query}
+				+draw() : void
+				+init() : void
+				+setPosition(const Vector3f& pos) : void
+				+setRotationDegrees(const float& degrees, const Vector3f& rotationAxis) : void
+				+setScale(const Vector3f& newScale) : void
+				+setSize(const Vector2i& size) : void
+				+setSpacing(const float& spacing) : void
+				+setTint(const RlColor& tint) : void
+				+update(const float& delta) : void
+			}
+
+			class KinematicBody {
+				+KinematicBody(const std::string& name, const raylib::model::RlModel& model)
+				+KinematicBody(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+				+~KinematicBody()
+				+moveAndCollide(const Vector3f& position) : bool
+			}
+
+			abstract class Node3D {
+				+Node3D(const std::string& name)
+				+Node3D(const Node3D &)
+				+~Node3D()
+				+{abstract} getPosition() : Vector3f& {query}
+				+{abstract} getScale() : Vector3f& {query}
+				+{abstract} setPosition(const Vector3f& pos) : void
+				+{abstract} setRotationDegrees(const float& degrees, const Vector3f& rotationAxis) : void
+				+{abstract} setScale(const Vector3f& newScale) : void
+			}
+
+			class StaticBody {
+				+StaticBody(const std::string& name, const raylib::model::RlModel& model)
+				+StaticBody(const std::string& name, const raylib::model::RlModel& model, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+				+~StaticBody()
+				+getBoundingBox() : BoundingBox& {query}
+				+getColor() : RlColor& {query}
+				+getPosition() : Vector3f& {query}
+				+getScale() : Vector3f& {query}
+				#_collisionEnable : bool
+				+hasCollisionEnabled() : bool& {query}
+				+getRotationDegrees() : float {query}
+				+operator->() : raylib :: model :: RlModel*
+				#_model : raylib::model::RlModel
+				+getModel() : raylib::model::RlModel&
+				+getModel() : raylib::model::RlModel& {query}
+				+draw() : void
+				+init() : void
+				+setBoundingBox(const BoundingBox& boundingBox) : void
+				+setCollisionEnable(bool value) : void
+				+setColor(const raylib::RlColor& color) : void
+				+setPosition(const Vector3f& pos) : void
+				+setRotationDegrees(const float& degrees, const Vector3f& rotationAxis) : void
+				+setScale(const Vector3f& newScale) : void
+				+update(const float& delta) : void
+			}
+		}
+
+		namespace _2D {
+			abstract class Button {
+				+Button(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture)
+				-_bounds : Rectangle
+				-_rectangle : Rectangle
+				+getBounds() : Rectangle& {query}
+				+getRectangle() : Rectangle& {query}
+				-_origin : Vector2f
+				-_position : Vector2f
+				-_scale : Vector2f
+				+getOrigin() : Vector2f& {query}
+				+getPosition() : Vector2f& {query}
+				+getScale() : Vector2f& {query}
+				-_action : bool
+				-_isEnabled : bool
+				+isEnabled() : bool& {query}
+				-_frameHeight : float
+				-_rotationDegrees : float
+				+getRotationDegrees() : float {query}
+				-_frameNum : int
+				-_state : int
+				-_texture : std::shared_ptr<raylib::texture::RlTexture>
+				+getTexture() : std::shared_ptr<raylib::texture::RlTexture>& {query}
+				+centerButton(const Vector2f& pos) : void
+				+draw() : void
+				+init() : void
+				+{abstract} pressed() : void
+				+setEnabled(const bool& value) : void
+				+setOrigin(const Vector2f& origin) : void
+				+setPosition(const Vector2f& position) : void
+				+setRotationDegrees(const float& rotationDegrees) : void
+				+setScale(const Vector2f& scale) : void
+				+update(const float& delta) : void
+			}
+
+			class Label {
+				+Label(const std::string& name, const Vector2f& position, const Vector2f& scale, const float& degrees, const raylib::RlColor& color)
+				+~Label()
+				-_position : Vector2f
+				-_scale : Vector2f
+				+getPosition() : Vector2f& {query}
+				+getScale() : Vector2f& {query}
+				-_rotationDegrees : float
+				+getRotationDegrees() : float {query}
+				-_color : raylib::RlColor
+				+getColor() : raylib::RlColor&
+				+getColor() : raylib::RlColor& {query}
+				-_textComponent : raylib::text::RlText
+				-_text : std::string
+				+draw() : void
+				+init() : void
+				+setColor(raylib::RlColor color) : void
+				+setPosition(const Vector2f& position) : void
+				+setRotationDegrees(const float& rotationDegrees) : void
+				+setScale(const Vector2f& scale) : void
+				+setText(const std::string& text) : void
+				+update(const float& delta) : void
+			}
+
+			abstract class Node2D {
+				+Node2D(const std::string& name)
+				+Node2D(const Node2D &)
+				+~Node2D()
+				+{abstract} getPosition() : Vector2f& {query}
+				+{abstract} getScale() : Vector2f& {query}
+				+{abstract} setPosition(const Vector2f& pos) : void
+				+{abstract} setRotationDegrees(const float& degrees) : void
+				+{abstract} setScale(const Vector2f& newScale) : void
+			}
+
+			class TextureRect {
+				+TextureRect(const std::string& name, const std::shared_ptr<raylib::texture::RlTexture>& texture, const Vector2f& position, const Vector2f& scale, const float& degrees, const raylib::RlColor& color)
+				+~TextureRect()
+				-_position : Vector2f
+				-_scale : Vector2f
+				+getPosition() : Vector2f& {query}
+				+getScale() : Vector2f& {query}
+				-_rotationDegrees : float
+				+getRotationDegrees() : float {query}
+				-_color : raylib::RlColor
+				+getColor() : raylib::RlColor&
+				+getColor() : raylib::RlColor& {query}
+				-_texture : std::shared_ptr<raylib::texture::RlTexture>
+				+draw() : void
+				+init() : void
+				+setColor(const RlColor& color) : void
+				+setPosition(const Vector2f& position) : void
+				+setRotationDegrees(const float& rotationDegrees) : void
+				+setScale(const Vector2f& scale) : void
+				+update(const float& delta) : void
+			}
+		}
 	}
 
 	namespace map {
@@ -1403,35 +1544,15 @@ namespace gameengine {
 		}
 	}
 
-	namespace component {
-		class GridComponent {
-			+GridComponent(const Vector2i& size, const Vector3f& position, const float& spacing, const RlColor& tint, const std::string& name)
-			+GridComponent(const GridComponent &)
-			-_tint : RlColor
-			-_size : Vector2i
-			-_position : Vector3f
-			-_scale : Vector3f
-			+getPosition() : Vector3f
-			+getScale() : Vector3f
-			-_rotationDegrees : float
-			-_spacing : float
-			+getRotationDegrees() : float
-			+draw() : void
-			+ready() : void
-			+setPosition(Vector3f pos) : void
-			+setRotationDegrees(float degrees, Vector3f rotationAxis) : void
-			+setScale(Vector3f newScale) : void
-			+update(float delta) : void
-		}
-	}
-
 	namespace audio {
-		class Fx {
-			+Fx(const std::string& fileName, SoundCategory category)
+		class Music {
+			+Music(const std::string& fileName, AbstractSound::SoundCategory category)
+			+setVolume(const float& volume) : void
 		}
 
-		class Music {
-			+Music(const std::string& fileName, SoundCategory category)
+		class Sound {
+			+Sound(const std::string& fileName, SoundCategory category)
+			+setVolume(const float& volume) : void
 		}
 	}
 }
@@ -1442,13 +1563,16 @@ namespace gameengine {
 
 /' Inheritance relationships '/
 
-gameengine.AbstractBase <|-- gameengine.Node
+gameengine.node.AbstractBase <|-- gameengine.node._2D.Node2D
 
 
-gameengine.AbstractBase <|-- gameengine.Node2D
+gameengine.node.AbstractBase <|-- gameengine.node._3D.Node3D
 
 
-raylib.helper.AudioDeviceHelper <|-- gameengine.AudioManager
+gameengine.AbstractSound <|-- gameengine.audio.Music
+
+
+gameengine.AbstractSound <|-- gameengine.audio.Sound
 
 
 gameengine.ex.GameEngineException <|-- gameengine.ex.MapParserException
@@ -1463,25 +1587,25 @@ raylib.builder.IBuilder <|-- raylib.builder.RlImageBuilder
 raylib.builder.IBuilder <|-- raylib.builder.RlMeshBuilder
 
 
+raylib.builder.IBuilder <|-- raylib.builder.RlModelBuilder
+
+
 raylib.builder.IBuilder <|-- raylib.builder.RlTextBuilder
 
 
-gameengine.ISound <|-- gameengine.audio.Fx
+gameengine.node._2D.Node2D <|-- gameengine.node._2D.Button
 
 
-gameengine.ISound <|-- gameengine.audio.Music
+gameengine.node._2D.Node2D <|-- gameengine.node._2D.Label
 
 
-gameengine.Node <|-- gameengine.component.GridComponent
+gameengine.node._2D.Node2D <|-- gameengine.node._2D.TextureRect
 
 
-gameengine.Node <|-- gameengine.StaticBody
+gameengine.node._3D.Node3D <|-- gameengine.node._3D.Grid3D
 
 
-gameengine.Node2D <|-- gameengine.Button
-
-
-gameengine.Node2D <|-- gameengine.TextureRect
+gameengine.node._3D.Node3D <|-- gameengine.node._3D.StaticBody
 
 
 raylib.ex.RaylibException <|-- raylib.ex.BuilderException
@@ -1496,19 +1620,19 @@ raylib.ex.RaylibException <|-- raylib.ex.InvalidArgumentException
 raylib.ex.RaylibException <|-- raylib.ex.RlAnimationException
 
 
+raylib.ex.RaylibException <|-- raylib.ex.RlModelException
+
+
 raylib.ex.RaylibException <|-- raylib.ex.WindowException
 
 
-raylib.RlMusic <|-- gameengine.audio.Music
+raylib.audio.RlMusic <|-- gameengine.audio.Music
 
 
-raylib.audio.RlSound <|-- gameengine.audio.Fx
+raylib.audio.RlSound <|-- gameengine.audio.Sound
 
 
-gameengine.Scene <|-- gameengine.MainScene
-
-
-gameengine.StaticBody <|-- gameengine.KinematicBody
+gameengine.node._3D.StaticBody <|-- gameengine.node._3D.KinematicBody
 
 
 
@@ -1516,19 +1640,25 @@ gameengine.StaticBody <|-- gameengine.KinematicBody
 
 /' Aggregation relationships '/
 
+gameengine.AudioManager *-- gameengine.AbstractSound
+
+
 gameengine.AudioManager *-- gameengine.AudioManager
 
 
-gameengine.AudioManager *-- gameengine.ISound
+gameengine.node._2D.Button *-- raylib.texture.RlTexture
 
 
-gameengine.Button *-- raylib.texture.RlTexture
+gameengine.node._3D.Grid3D *-- raylib.RlColor
 
 
-gameengine.component.GridComponent *-- raylib.RlColor
+gameengine.node._2D.Label *-- raylib.RlColor
 
 
-gameengine.ISound *-- .SoundCategory
+gameengine.node._2D.Label *-- raylib.text.RlText
+
+
+raylib.model.RlAnimation *-- raylib.model.RlModel
 
 
 raylib.RlColor "26" *-- raylib.RlColor
@@ -1540,13 +1670,31 @@ raylib.builder.RlImageBuilder "9" *-- raylib.RlColor
 raylib.builder.RlMeshBuilder "2" *-- raylib.image.RlImage
 
 
-raylib.RlModel *-- raylib.texture.RlTexture
+raylib.model.RlModel *-- raylib.RlColor
 
 
-raylib.RlModelAnim *-- raylib.RlModel
+raylib.model.RlModel *-- raylib.model.RlMesh
 
 
-raylib.RlMusic *-- gameengine.audio.Music
+raylib.model.RlModel *-- raylib.texture.RlTexture
+
+
+raylib.model.RlModelAnimation *-- raylib.model.RlModel
+
+
+raylib.builder.RlModelBuilder *-- raylib.RlColor
+
+
+raylib.builder.RlModelBuilder *-- raylib.model.RlMesh
+
+
+raylib.builder.RlModelBuilder *-- raylib.texture.RlTexture
+
+
+raylib.audio.RlMusic *-- gameengine.audio.Music
+
+
+raylib.audio.RlSound *-- gameengine.audio.Sound
 
 
 raylib.text.RlText *-- raylib.RlColor
@@ -1567,7 +1715,7 @@ raylib.window.RlWindow *-- raylib.RlCamera
 raylib.window.RlWindow *-- raylib.window.RlWindow
 
 
-gameengine.Scene *-- gameengine.AbstractBase
+gameengine.Scene *-- gameengine.node.AbstractBase
 
 
 gameengine.SceneManager *-- gameengine.Scene
@@ -1576,13 +1724,19 @@ gameengine.SceneManager *-- gameengine.Scene
 gameengine.SceneManager *-- gameengine.SceneManager
 
 
-gameengine.StaticBody *-- raylib.RlModel
+gameengine.node._3D.StaticBody *-- raylib.model.RlModel
 
 
-gameengine.TextureRect *-- raylib.RlColor
+gameengine.TextureManager "2" *-- raylib.texture.RlTexture
 
 
-gameengine.TextureRect *-- raylib.texture.RlTexture
+gameengine.TextureManager *-- gameengine.TextureManager
+
+
+gameengine.node._2D.TextureRect *-- raylib.RlColor
+
+
+gameengine.node._2D.TextureRect *-- raylib.texture.RlTexture
 
 
 
@@ -1590,6 +1744,9 @@ gameengine.TextureRect *-- raylib.texture.RlTexture
 
 
 /' Nested objects '/
+
+gameengine.AbstractSound +-- gameengine.AbstractSound::SoundCategory
+
 
 raylib.builder.RlImageBuilder +-- raylib.builder.RlImageBuilder::ImageType
 
@@ -1601,6 +1758,12 @@ raylib.builder.RlMeshBuilder +-- raylib.builder.RlMeshBuilder::MeshType
 
 
 raylib.builder.RlMeshBuilder +-- raylib.builder.RlMeshBuilder::ParameterName
+
+
+raylib.builder.RlModelBuilder +-- raylib.builder.RlModelBuilder::RequiredParameter
+
+
+raylib.builder.RlModelBuilder +-- raylib.builder.RlModelBuilder::ValidType
 
 
 
