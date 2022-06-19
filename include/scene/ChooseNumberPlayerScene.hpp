@@ -11,6 +11,7 @@
 #include "button/ButtonMainMenu.hpp"
 #include "global/GlobalInstance.hpp"
 #include "Image.hpp"
+#include "map/Map3DLoader.hpp"
 #include <GameEngine/GameEngine.hpp>
 
 namespace indie {

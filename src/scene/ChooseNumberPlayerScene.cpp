@@ -17,6 +17,7 @@ void indie::ChooseNumberPlayerScene::sceneLauncher()
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &textureManager = gameengine::TextureManager::getInstance();
+    auto &mapLoader = indie::map::Map3DLoader::getInstance();
 
     auto button1p = std::make_shared<indie::button::IndieButton>("button1p",
     textureManager->getTexture("./assets/textures/gui/button_1p.png"), [globalInstance, sceneManager](auto &name) {
@@ -55,9 +56,9 @@ void indie::ChooseNumberPlayerScene::sceneLauncher()
     this->addNode(buttonLeft);
 
     auto buttonRight = std::make_shared<indie::button::IndieButton>("buttonRight",
-        textureManager->getTexture("./assets/textures/gui/button_right.png"), [globalInstance, sceneManager](auto &name) {
+        textureManager->getTexture("./assets/textures/gui/button_right.png"), [globalInstance, sceneManager, mapLoader](auto &name) {
             int index = globalInstance->_indexMap;
-            if (index < 2)
+            if (index < mapLoader->getMaps().size() - 1)
                 globalInstance->_indexMap = index + 1;
     });
     this->addNode(buttonRight);

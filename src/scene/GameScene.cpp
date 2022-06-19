@@ -206,6 +206,7 @@ void indie::GameScene::updateScene(const float &delta)
                 mouseMoved = false;
             }
             else if (this->_indexMenu == 2) {
+                raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitOri.y));
                 this->_indexMenu = 3;
                 mouseMoved = false;
             }
