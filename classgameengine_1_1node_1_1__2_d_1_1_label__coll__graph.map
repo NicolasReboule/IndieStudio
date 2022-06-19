@@ -1,0 +1,7 @@
+<map id="gameengine::node::_2D::Label" name="gameengine::node::_2D::Label">
+<area shape="rect" id="node1" title="A label is a text displayed on the screen." alt="" coords="33,692,188,989"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_node2_d.html" title="A 2D node." alt="" coords="33,448,188,643"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="5,160,216,399"/>
+<area shape="rect" id="node4" title=" " alt="" coords="46,5,93,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="125,5,179,83"/>
+</map>

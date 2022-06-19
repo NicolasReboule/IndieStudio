@@ -1,0 +1,4 @@
+<map id="raylib::helper::draw::Draw3DHelper::drawRay" name="raylib::helper::draw::Draw3DHelper::drawRay">
+<area shape="rect" id="node1" title="Draw a ray line." alt="" coords="5,5,173,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="221,13,376,39"/>
+</map>

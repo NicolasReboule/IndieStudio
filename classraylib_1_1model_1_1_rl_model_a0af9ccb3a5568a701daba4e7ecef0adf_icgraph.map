@@ -1,0 +1,5 @@
+<map id="raylib::model::RlModel::setMaterialTexture" name="raylib::model::RlModel::setMaterialTexture">
+<area shape="rect" id="node1" title="Set the material texture of the model (Default index 0 and type MATERIAL_MAP_DIFFUSE)" alt="" coords="236,39,383,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_rl_model.html#abe0ced679ce035725c5c37afb60a3668" title="Construct a new RlModel object from a file with a custom texture." alt="" coords="23,5,170,47"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1__3_d_1_1_static_body.html#a7ce488956712a24d90f476a0e578f5b8" title="Construct a new Static Body object." alt="" coords="5,71,188,112"/>
+</map>

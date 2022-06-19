@@ -1,6 +1,0 @@
-<map id="raylib::RlModel::getColor" name="raylib::RlModel::getColor">
-<area shape="rect" id="node1" title=" " alt="" coords="393,46,552,73"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_model_helper.html#a4e6b1e133e22780ee28b90320d6a2983" title="Draw a model." alt="" coords="215,5,345,47"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_model_helper.html#a83cb0a155c1e2c7906a0ddccc2065ca3" title="Draw a model wires." alt="" coords="215,71,345,112"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_static_body.html#a4a6aacabdc3097edca4506603db1c4af" title=" " alt="" coords="5,5,167,47"/>
-</map>

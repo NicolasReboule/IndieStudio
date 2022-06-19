@@ -1,0 +1,4 @@
+<map id="gameengine::AudioManager::~AudioManager" name="gameengine::AudioManager::~AudioManager">
+<area shape="rect" id="node1" title="Destroy the AudioManager object." alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_audio_helper.html#a284db577db1b7d010d5aac52feb64f8d" title="Close the audio device and context." alt="" coords="235,5,405,47"/>
+</map>

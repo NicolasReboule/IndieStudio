@@ -1,0 +1,3 @@
+<map id="gameengine::Time" name="gameengine::Time">
+<area shape="rect" id="node1" title="Utility class to manipulate std::chrono." alt="" coords="5,5,175,200"/>
+</map>

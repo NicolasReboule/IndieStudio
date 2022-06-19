@@ -1,0 +1,12 @@
+<map id="gameengine::node::_2D::Label::init" name="gameengine::node::_2D::Label::init">
+<area shape="rect" id="node1" title="Initialize the label." alt="" coords="5,233,137,275"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_rl_text_builder.html#a6e6435d68bf2ce404406c424d8677f4a" title="Build the RlText." alt="" coords="185,103,364,144"/>
+<area shape="rect" id="node7" href="$classraylib_1_1builder_1_1_rl_text_builder.html#a132cc926cd61be847dea9cfc3c8afc43" title="Set the color." alt="" coords="185,168,364,209"/>
+<area shape="rect" id="node8" href="$classraylib_1_1builder_1_1_rl_text_builder.html#ae600699f931c654ca8663e0a1c9eb9dd" title="Set the font size." alt="" coords="185,233,364,275"/>
+<area shape="rect" id="node9" href="$classraylib_1_1builder_1_1_rl_text_builder.html#abff0b1b1b50591f08c65912701b2862d" title="Set the posisition." alt="" coords="185,299,364,340"/>
+<area shape="rect" id="node10" href="$classraylib_1_1builder_1_1_rl_text_builder.html#af0a11d181ddea1bd4e0880ace54084c7" title="Set the text." alt="" coords="185,364,364,405"/>
+<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_text.html#a2d2fb50b061c0b356d3db27551251f2b" title="Set the font size." alt="" coords="412,5,535,47"/>
+<area shape="rect" id="node4" href="$classraylib_1_1text_1_1_rl_text.html#ac46e0fbd70c92b642397518da3581fce" title="Set the text origin." alt="" coords="412,71,535,112"/>
+<area shape="rect" id="node5" href="$classraylib_1_1text_1_1_rl_text.html#afccc73e523c65528464acbfce2a67df2" title="Set the text rotation." alt="" coords="412,136,535,177"/>
+<area shape="rect" id="node6" href="$classraylib_1_1text_1_1_rl_text.html#a56fa7938d318f3ec50d3c3fc320d9e62" title="Set the text spacing." alt="" coords="412,201,535,243"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="gameengine::AbstractSound::AbstractSound" name="gameengine::AbstractSound::AbstractSound">
+<area shape="rect" id="node1" title="Construct a new AbstractSound object." alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_file_helper.html#ad2f941a0020d82d8e12758c9e25f1b5e" title="Get file name without extension." alt="" coords="237,5,401,47"/>
+</map>

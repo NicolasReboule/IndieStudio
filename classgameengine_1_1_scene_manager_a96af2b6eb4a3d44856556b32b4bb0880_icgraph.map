@@ -1,4 +1,4 @@
 <map id="gameengine::SceneManager::getInstance" name="gameengine::SceneManager::getInstance">
-<area shape="rect" id="node1" title=" " alt="" coords="239,5,424,47"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_kinematic_body.html#abe2a89d864a6a131e2f81b1c0b06ad9b" title=" " alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node1" title="Get the instance of the scene manager." alt="" coords="197,13,383,54"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__3_d_1_1_kinematic_body.html#a432b9d6e140841c6bf8b648f03c6463e" title="Move the body and check collision." alt="" coords="5,5,149,61"/>
 </map>

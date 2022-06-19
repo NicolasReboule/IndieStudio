@@ -1,4 +1,0 @@
-<map id="raylib::MeshGenerator::genMeshHeightmap" name="raylib::MeshGenerator::genMeshHeightmap">
-<area shape="rect" id="node1" title="Generate a mesh of a heightmap." alt="" coords="5,5,152,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="200,5,375,47"/>
-</map>

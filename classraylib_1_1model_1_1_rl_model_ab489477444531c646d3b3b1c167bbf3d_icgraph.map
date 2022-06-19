@@ -1,0 +1,5 @@
+<map id="raylib::model::RlModel::getColor" name="raylib::model::RlModel::getColor">
+<area shape="rect" id="node1" title="Get the model color." alt="" coords="449,5,596,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a01080d481bacd99bcf2ccee36a6a4ffe" title="Draw a 3d model." alt="" coords="201,5,401,47"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1__3_d_1_1_static_body.html#aadd6715fcfe4a213ad672643cc30579e" title="Draw the static body." alt="" coords="5,5,153,47"/>
+</map>

@@ -1,11 +1,16 @@
 <map id="raylib::RlColor::getBlue" name="raylib::RlColor::getBlue">
-<area shape="rect" id="node1" title="Get the blue value." alt="" coords="268,251,419,278"/>
+<area shape="rect" id="node1" title="Get the blue value." alt="" coords="268,411,419,438"/>
 <area shape="rect" id="node2" href="$classraylib_1_1_gl_state_manager.html#a3632514698e8bdb40ded5dc2edfb723e" title="Set the color." alt="" coords="37,5,189,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_shape3_d_helper.html#a5f8ad8086501ea78436b920bb68f7f58" title="Draw a grid of size (width/height) with some spacing, centered on position, with a color." alt="" coords="38,71,187,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a25d43d80ab64b099e6baab9c878a7095" title="Draw lines sequence." alt="" coords="13,136,212,177"/>
-<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a112b8c1822c6f1c8f4450f89d6bff5d5" title="Draw a textured polygon." alt="" coords="40,201,185,257"/>
-<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#acf5fdc21faf8793b3bba26954cdc513c" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="5,280,220,321"/>
-<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ab06339304185332d3b08b9291d0badc3" title="Draw a triangle strip defined by points." alt="" coords="17,345,209,401"/>
-<area shape="rect" id="node8" href="$_rl_color_8cpp.html#ac508f551b38a174ab6fb60bbc88541bf" title=" " alt="" coords="70,425,155,451"/>
-<area shape="rect" id="node9" href="$classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="28,475,197,502"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a3acccb903a516d6edb4efcb55ed7bd2b" title="Draw a circle in 3D." alt="" coords="23,71,202,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a739eac2650eaede8e465b1189ff6abc2" title="Draw a grid of size (width/height) with some spacing, centered on position, with a color." alt="" coords="27,136,198,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a5bd10e7d880628acba85128ccefc8032" title="Draw a line in 3D." alt="" coords="27,201,198,243"/>
+<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a25d43d80ab64b099e6baab9c878a7095" title="Draw lines sequence." alt="" coords="13,267,212,308"/>
+<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a1557c379b763ef18a0dab2e29c3db988" title="Draw a point in 3D." alt="" coords="25,332,201,373"/>
+<area shape="rect" id="node8" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a112b8c1822c6f1c8f4450f89d6bff5d5" title="Draw a textured polygon." alt="" coords="40,397,185,453"/>
+<area shape="rect" id="node9" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a8ed450560c1ce29f536f4409e9ad16de" title="Draw a color&#45;filled triangle (vertex in counter&#45;clockwise order!) in 3D." alt="" coords="9,476,217,517"/>
+<area shape="rect" id="node10" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#acf5fdc21faf8793b3bba26954cdc513c" title="Draw a triangle fan defined by points (first vertex is the center, shared by all triangles) By defaul..." alt="" coords="5,541,220,583"/>
+<area shape="rect" id="node11" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ab06339304185332d3b08b9291d0badc3" title="Draw a triangle strip defined by points." alt="" coords="17,606,209,662"/>
+<area shape="rect" id="node12" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#ab9a2c39bcbe8d73f5e6ccf323c664977" title="Draw a triangle strip defined by points in 3D." alt="" coords="17,686,209,742"/>
+<area shape="rect" id="node13" href="$_rl_color_8cpp.html#ac508f551b38a174ab6fb60bbc88541bf" title=" " alt="" coords="70,766,155,793"/>
+<area shape="rect" id="node14" href="$classraylib_1_1_rl_color.html#a60d9f1d893aa9b9374fbe2a384fb553c" title="Check equality between two colors." alt="" coords="28,817,197,843"/>
 </map>

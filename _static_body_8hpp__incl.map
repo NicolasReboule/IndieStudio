@@ -1,81 +1,82 @@
-<map id="raylib&#45;cpp/include/GameEngine/Nodes/StaticBody.hpp" name="raylib&#45;cpp/include/GameEngine/Nodes/StaticBody.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="281,5,514,47"/>
-<area shape="rect" id="node2" href="$_node_8hpp.html" title=" " alt="" coords="409,95,487,121"/>
-<area shape="rect" id="node21" href="$_rl_mesh_builder_8hpp.html" title=" " alt="" coords="3247,468,3470,495"/>
-<area shape="rect" id="node3" href="$_abstract_base_8hpp.html" title=" " alt="" coords="1813,169,1939,196"/>
-<area shape="rect" id="node4" href="$_raylib_8hpp.html" title="All raylib includes." alt="" coords="3239,244,3353,271"/>
-<area shape="rect" id="node5" href="$_collision2_d_helper_8hpp.html" title=" " alt="" coords="1735,707,1942,733"/>
-<area shape="rect" id="node8" title=" " alt="" coords="521,931,593,957"/>
-<area shape="rect" id="node10" href="$_collision3_d_helper_8hpp.html" title=" " alt="" coords="3051,319,3258,345"/>
-<area shape="rect" id="node11" href="$_math_8hpp.html" title=" " alt="" coords="513,707,623,733"/>
-<area shape="rect" id="node13" href="$_rl_model_8hpp.html" title=" " alt="" coords="3569,393,3754,420"/>
-<area shape="rect" id="node14" href="$_rl_mesh_8hpp.html" title=" " alt="" coords="3376,632,3467,659"/>
-<area shape="rect" id="node16" href="$_rl_texture_8hpp.html" title=" " alt="" coords="3950,468,4133,495"/>
-<area shape="rect" id="node17" href="$_rl_image_8hpp.html" title=" " alt="" coords="1917,550,2085,577"/>
-<area shape="rect" id="node18" href="$_rl_color_8hpp.html" title=" " alt="" coords="1195,632,1351,659"/>
-<area shape="rect" id="node22" href="$_mesh_generator_8hpp.html" title=" " alt="" coords="2211,550,2346,577"/>
-<area shape="rect" id="node27" href="$_mesh_helper_8hpp.html" title=" " alt="" coords="3602,550,3777,577"/>
-<area shape="rect" id="node28" href="$_model_helper_8hpp.html" title=" " alt="" coords="3531,319,3709,345"/>
-<area shape="rect" id="node29" href="$_rl_animation_8hpp.html" title=" " alt="" coords="5114,550,5289,577"/>
-<area shape="rect" id="node30" href="$_file_helper_8hpp.html" title=" " alt="" coords="5649,632,5820,659"/>
-<area shape="rect" id="node35" href="$_rl_material_8hpp.html" title=" " alt="" coords="3900,632,4063,659"/>
-<area shape="rect" id="node36" href="$_rl_model_anim_8hpp.html" title=" " alt="" coords="4163,319,4344,345"/>
-<area shape="rect" id="node37" href="$_shape3_d_helper_8hpp.html" title=" " alt="" coords="925,550,1120,577"/>
-<area shape="rect" id="node39" href="$_audio_device_helper_8hpp.html" title=" " alt="" coords="4340,632,4535,659"/>
-<area shape="rect" id="node40" href="$_rl_audio_stream_8hpp.html" title=" " alt="" coords="5068,632,5239,659"/>
-<area shape="rect" id="node41" href="$_rl_music_8hpp.html" title=" " alt="" coords="5895,632,6025,659"/>
-<area shape="rect" id="node42" href="$_rl_sound_8hpp.html" title=" " alt="" coords="6101,632,6233,659"/>
-<area shape="rect" id="node43" href="$_rl_wave_8hpp.html" title=" " alt="" coords="5795,550,5923,577"/>
-<area shape="rect" id="node44" href="$_camera_helper_8hpp.html" title=" " alt="" coords="2376,468,2555,495"/>
-<area shape="rect" id="node45" href="$_rl_camera_8hpp.html" title=" " alt="" coords="2574,550,2677,577"/>
-<area shape="rect" id="node46" href="$_rl_camera_builder_8hpp.html" title=" " alt="" coords="2981,468,3173,495"/>
-<area shape="rect" id="node47" href="$_color_helper_8hpp.html" title=" " alt="" coords="702,550,850,577"/>
-<area shape="rect" id="node48" href="$_core_helper_8hpp.html" title=" " alt="" coords="3903,550,4046,577"/>
-<area shape="rect" id="node49" href="$_world_helper_8hpp.html" title=" " alt="" coords="2579,468,2727,495"/>
-<area shape="rect" id="node50" href="$_draw2_d_helper_8hpp.html" title=" " alt="" coords="1107,393,1271,420"/>
-<area shape="rect" id="node51" href="$_draw_helper_8hpp.html" title=" " alt="" coords="1987,393,2135,420"/>
-<area shape="rect" id="node52" href="$_draw_text_helper_8hpp.html" title=" " alt="" coords="3333,319,3507,345"/>
-<area shape="rect" id="node53" href="$_rl_text_8hpp.html" title=" " alt="" coords="4096,393,4243,420"/>
-<area shape="rect" id="node54" href="$_rl_font_8hpp.html" title=" " alt="" coords="1765,468,1912,495"/>
-<area shape="rect" id="node56" href="$_text_helper_8hpp.html" title=" " alt="" coords="5408,468,5517,495"/>
-<area shape="rect" id="node57" href="$_draw_texture_helper_8hpp.html" title=" " alt="" coords="3881,393,4071,420"/>
-<area shape="rect" id="node59" href="$_exceptions_8hpp.html" title="The Exceptions class is a collection of exceptions." alt="" coords="4668,468,4836,495"/>
-<area shape="rect" id="node61" href="$_gl_state_manager_8hpp.html" title=" " alt="" coords="1601,550,1741,577"/>
-<area shape="rect" id="node63" href="$_image_draw_helper_8hpp.html" title=" " alt="" coords="1401,393,1591,420"/>
-<area shape="rect" id="node64" href="$_image_generator_8hpp.html" title=" " alt="" coords="1309,468,1488,495"/>
-<area shape="rect" id="node65" href="$_image_helper_8hpp.html" title=" " alt="" coords="499,393,659,420"/>
-<area shape="rect" id="node66" href="$_rl_image_builder_8hpp.html" title=" " alt="" coords="1670,393,1845,420"/>
-<area shape="rect" id="node67" href="$_cursor_helper_8hpp.html" title=" " alt="" coords="6948,781,7111,808"/>
-<area shape="rect" id="node68" href="$_gamepad_helper_8hpp.html" title=" " alt="" coords="6826,632,7006,659"/>
-<area shape="rect" id="node69" href="$_keyboard_helper_8hpp.html" title=" " alt="" coords="6572,632,6751,659"/>
-<area shape="rect" id="node70" href="$_mouse_helper_8hpp.html" title=" " alt="" coords="2037,468,2200,495"/>
-<area shape="rect" id="node71" href="$_touch_helper_8hpp.html" title=" " alt="" coords="1500,632,1660,659"/>
-<area shape="rect" id="node72" href="$_random_8hpp.html" title=" " alt="" coords="7082,319,7177,345"/>
-<area shape="rect" id="node74" href="$_rl_shader_8hpp.html" title=" " alt="" coords="4520,393,4664,420"/>
-<area shape="rect" id="node75" href="$_rl_text_builder_8hpp.html" title=" " alt="" coords="3936,319,4088,345"/>
-<area shape="rect" id="node76" href="$_text_codepoint_8hpp.html" title=" " alt="" coords="5415,632,5574,659"/>
-<area shape="rect" id="node77" href="$_rl_render_texture_8hpp.html" title=" " alt="" coords="6308,632,6497,659"/>
-<area shape="rect" id="node78" href="$_rl_window_8hpp.html" title=" " alt="" coords="2752,468,2907,495"/>
-<area shape="rect" id="node79" href="$_system_8hpp.html" title=" " alt="" coords="2905,632,3045,659"/>
-<area shape="rect" id="node6" href="$_vector_helper_8hpp.html" title=" " alt="" coords="701,781,891,808"/>
-<area shape="rect" id="node9" title=" " alt="" coords="3203,856,3266,883"/>
-<area shape="rect" id="node7" href="$_vector_8hpp.html" title=" " alt="" coords="515,856,599,883"/>
-<area shape="rect" id="node12" title=" " alt="" coords="568,781,627,808"/>
-<area shape="rect" id="node15" title=" " alt="" coords="4225,707,4279,733"/>
-<area shape="rect" id="node20" title=" " alt="" coords="5297,707,5356,733"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1243,707,1304,733"/>
-<area shape="rect" id="node23" href="$_i_builder_8hpp.html" title=" " alt="" coords="2997,550,3121,577"/>
-<area shape="rect" id="node24" href="$_builder_exception_8hpp.html" title=" " alt="" coords="4649,543,4804,584"/>
-<area shape="rect" id="node25" href="$_raylib_exception_8hpp.html" title=" " alt="" coords="4610,632,4841,659"/>
-<area shape="rect" id="node26" title=" " alt="" coords="4687,707,4764,733"/>
-<area shape="rect" id="node31" title=" " alt="" coords="5481,707,5548,733"/>
-<area shape="rect" id="node32" title=" " alt="" coords="5572,707,5652,733"/>
-<area shape="rect" id="node33" title=" " alt="" coords="5676,707,5751,733"/>
-<area shape="rect" id="node34" title=" " alt="" coords="5775,707,5854,733"/>
-<area shape="rect" id="node38" title=" " alt="" coords="1375,632,1425,659"/>
-<area shape="rect" id="node55" title=" " alt="" coords="2905,550,2973,577"/>
-<area shape="rect" id="node58" href="$_invalid_argument_exception_8hpp.html" title=" " alt="" coords="4879,543,5038,584"/>
-<area shape="rect" id="node60" href="$_window_exception_8hpp.html" title=" " alt="" coords="4477,550,4625,577"/>
-<area shape="rect" id="node62" title=" " alt="" coords="6735,707,6841,733"/>
-<area shape="rect" id="node73" title=" " alt="" coords="7097,393,7162,420"/>
+<map id="raylib&#45;cpp/include/GameEngine/Nodes/3D/StaticBody.hpp" name="raylib&#45;cpp/include/GameEngine/Nodes/3D/StaticBody.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="6079,5,6241,61"/>
+<area shape="rect" id="node2" href="$_node3_d_8hpp.html" title=" " alt="" coords="6072,109,6165,136"/>
+<area shape="rect" id="node35" href="$_rl_mesh_builder_8hpp.html" title=" " alt="" coords="6814,348,7002,375"/>
+<area shape="rect" id="node3" href="$_abstract_base_8hpp.html" title=" " alt="" coords="5306,184,5497,225"/>
+<area shape="rect" id="node4" href="$_raylib_8hpp.html" title="All raylib includes." alt="" coords="3961,273,4076,300"/>
+<area shape="rect" id="node5" href="$_collision2_d_helper_8hpp.html" title=" " alt="" coords="3425,736,3631,763"/>
+<area shape="rect" id="node8" title=" " alt="" coords="7035,960,7107,987"/>
+<area shape="rect" id="node10" href="$_collision3_d_helper_8hpp.html" title=" " alt="" coords="6327,348,6534,375"/>
+<area shape="rect" id="node11" href="$_math_8hpp.html" title=" " alt="" coords="3291,736,3400,763"/>
+<area shape="rect" id="node13" href="$_rl_model_8hpp.html" title=" " alt="" coords="5582,423,5767,449"/>
+<area shape="rect" id="node17" href="$_rl_texture_8hpp.html" title=" " alt="" coords="1961,505,2143,531"/>
+<area shape="rect" id="node18" href="$_rl_image_8hpp.html" title=" " alt="" coords="2747,587,2915,613"/>
+<area shape="rect" id="node19" href="$_rl_color_8hpp.html" title=" " alt="" coords="1905,661,2061,688"/>
+<area shape="rect" id="node22" href="$_rl_material_8hpp.html" title=" " alt="" coords="923,505,1027,531"/>
+<area shape="rect" id="node23" href="$_file_helper_8hpp.html" title=" " alt="" coords="424,587,595,613"/>
+<area shape="rect" id="node31" href="$_rl_mesh_8hpp.html" title=" " alt="" coords="6715,505,6805,531"/>
+<area shape="rect" id="node33" href="$_mesh_generator_8hpp.html" title=" " alt="" coords="6409,423,6602,449"/>
+<area shape="rect" id="node34" href="$_rl_animation_8hpp.html" title=" " alt="" coords="4602,348,4777,375"/>
+<area shape="rect" id="node38" href="$_rl_model_animation_8hpp.html" title=" " alt="" coords="5614,348,5823,375"/>
+<area shape="rect" id="node39" href="$_audio_helper_8hpp.html" title=" " alt="" coords="3477,587,3632,613"/>
+<area shape="rect" id="node40" href="$_rl_audio_stream_8hpp.html" title=" " alt="" coords="5,811,176,837"/>
+<area shape="rect" id="node41" href="$_rl_music_8hpp.html" title=" " alt="" coords="3707,587,3837,613"/>
+<area shape="rect" id="node42" href="$_rl_sound_8hpp.html" title=" " alt="" coords="4278,587,4410,613"/>
+<area shape="rect" id="node43" href="$_rl_wave_8hpp.html" title=" " alt="" coords="3929,505,4057,531"/>
+<area shape="rect" id="node44" href="$_camera_helper_8hpp.html" title=" " alt="" coords="2713,423,2892,449"/>
+<area shape="rect" id="node45" href="$_rl_camera_8hpp.html" title=" " alt="" coords="4133,505,4235,531"/>
+<area shape="rect" id="node46" href="$_rl_camera_builder_8hpp.html" title=" " alt="" coords="4183,423,4375,449"/>
+<area shape="rect" id="node47" href="$_color_helper_8hpp.html" title=" " alt="" coords="251,587,399,613"/>
+<area shape="rect" id="node48" href="$_core_helper_8hpp.html" title=" " alt="" coords="5603,505,5746,531"/>
+<area shape="rect" id="node49" href="$_world_helper_8hpp.html" title=" " alt="" coords="3655,423,3803,449"/>
+<area shape="rect" id="node50" href="$_draw2_d_helper_8hpp.html" title=" " alt="" coords="1399,423,1563,449"/>
+<area shape="rect" id="node51" href="$_draw3_d_helper_8hpp.html" title=" " alt="" coords="1587,423,1751,449"/>
+<area shape="rect" id="node52" href="$_draw_helper_8hpp.html" title=" " alt="" coords="2274,348,2422,375"/>
+<area shape="rect" id="node53" href="$_rl_shader_8hpp.html" title=" " alt="" coords="2143,423,2321,449"/>
+<area shape="rect" id="node54" href="$_draw_model_helper_8hpp.html" title=" " alt="" coords="997,348,1179,375"/>
+<area shape="rect" id="node55" href="$_gl_state_manager_8hpp.html" title=" " alt="" coords="1102,505,1277,531"/>
+<area shape="rect" id="node57" href="$_draw_text_helper_8hpp.html" title=" " alt="" coords="6559,348,6732,375"/>
+<area shape="rect" id="node58" href="$_rl_text_8hpp.html" title=" " alt="" coords="6237,423,6384,449"/>
+<area shape="rect" id="node59" href="$_rl_font_8hpp.html" title=" " alt="" coords="3333,505,3480,531"/>
+<area shape="rect" id="node60" href="$_text_helper_8hpp.html" title=" " alt="" coords="6227,505,6336,531"/>
+<area shape="rect" id="node61" href="$_draw_texture_helper_8hpp.html" title=" " alt="" coords="1775,423,1966,449"/>
+<area shape="rect" id="node63" href="$_exceptions_8hpp.html" title="The Exceptions class is a collection of exceptions." alt="" coords="5191,423,5359,449"/>
+<area shape="rect" id="node65" href="$_image_draw_helper_8hpp.html" title=" " alt="" coords="2498,423,2689,449"/>
+<area shape="rect" id="node66" href="$_image_generator_8hpp.html" title=" " alt="" coords="2675,505,2853,531"/>
+<area shape="rect" id="node67" href="$_image_helper_8hpp.html" title=" " alt="" coords="3217,423,3377,449"/>
+<area shape="rect" id="node68" href="$_rl_image_builder_8hpp.html" title=" " alt="" coords="2967,423,3142,449"/>
+<area shape="rect" id="node69" href="$_cursor_helper_8hpp.html" title=" " alt="" coords="4523,736,4685,763"/>
+<area shape="rect" id="node70" href="$_gamepad_helper_8hpp.html" title=" " alt="" coords="6054,587,6234,613"/>
+<area shape="rect" id="node71" href="$_keyboard_helper_8hpp.html" title=" " alt="" coords="4637,587,4816,613"/>
+<area shape="rect" id="node72" href="$_mouse_helper_8hpp.html" title=" " alt="" coords="4551,423,4713,449"/>
+<area shape="rect" id="node73" href="$_touch_helper_8hpp.html" title=" " alt="" coords="3376,661,3536,688"/>
+<area shape="rect" id="node74" href="$_random_8hpp.html" title=" " alt="" coords="6046,348,6141,375"/>
+<area shape="rect" id="node76" href="$_rl_text_builder_8hpp.html" title=" " alt="" coords="5172,348,5324,375"/>
+<area shape="rect" id="node77" href="$_text_codepoint_8hpp.html" title=" " alt="" coords="2990,587,3149,613"/>
+<area shape="rect" id="node78" href="$_rl_render_texture_8hpp.html" title=" " alt="" coords="3963,587,4152,613"/>
+<area shape="rect" id="node79" href="$_rl_window_8hpp.html" title=" " alt="" coords="4788,423,4943,449"/>
+<area shape="rect" id="node80" href="$_system_8hpp.html" title=" " alt="" coords="6513,587,6653,613"/>
+<area shape="rect" id="node6" href="$_vector_helper_8hpp.html" title=" " alt="" coords="3408,811,3597,837"/>
+<area shape="rect" id="node9" title=" " alt="" coords="3730,885,3793,912"/>
+<area shape="rect" id="node7" href="$_vector_8hpp.html" title=" " alt="" coords="3461,885,3545,912"/>
+<area shape="rect" id="node12" title=" " alt="" coords="3275,811,3333,837"/>
+<area shape="rect" id="node14" href="$_raylib_exception_8hpp.html" title=" " alt="" coords="5155,587,5386,613"/>
+<area shape="rect" id="node16" title=" " alt="" coords="4259,661,4314,688"/>
+<area shape="rect" id="node32" title=" " alt="" coords="5707,587,5775,613"/>
+<area shape="rect" id="node15" title=" " alt="" coords="5232,661,5309,688"/>
+<area shape="rect" id="node21" title=" " alt="" coords="2563,661,2621,688"/>
+<area shape="rect" id="node20" title=" " alt="" coords="2020,736,2081,763"/>
+<area shape="rect" id="node28" title=" " alt="" coords="1406,587,1455,613"/>
+<area shape="rect" id="node29" title=" " alt="" coords="721,587,895,613"/>
+<area shape="rect" id="node30" title=" " alt="" coords="920,587,976,613"/>
+<area shape="rect" id="node24" title=" " alt="" coords="697,661,764,688"/>
+<area shape="rect" id="node25" title=" " alt="" coords="391,661,471,688"/>
+<area shape="rect" id="node26" title=" " alt="" coords="495,661,569,688"/>
+<area shape="rect" id="node27" title=" " alt="" coords="594,661,673,688"/>
+<area shape="rect" id="node36" href="$_i_builder_8hpp.html" title=" " alt="" coords="5001,505,5125,531"/>
+<area shape="rect" id="node37" href="$_builder_exception_8hpp.html" title=" " alt="" coords="5424,497,5579,539"/>
+<area shape="rect" id="node56" title=" " alt="" coords="4761,661,4866,688"/>
+<area shape="rect" id="node62" href="$_invalid_argument_exception_8hpp.html" title=" " alt="" coords="4818,497,4977,539"/>
+<area shape="rect" id="node64" href="$_window_exception_8hpp.html" title=" " alt="" coords="5201,505,5349,531"/>
+<area shape="rect" id="node75" title=" " alt="" coords="6046,423,6111,449"/>
 </map>

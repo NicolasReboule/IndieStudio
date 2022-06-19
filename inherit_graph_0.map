@@ -1,10 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classgameengine_1_1_abstract_base.html" title=" " alt="" coords="5,93,183,120"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_node.html" title=" " alt="" coords="239,64,368,91"/>
-<area shape="rect" id="node6" href="$classgameengine_1_1_node2_d.html" title=" " alt="" coords="231,123,376,149"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_static_body.html" title=" " alt="" coords="427,5,589,32"/>
-<area shape="rect" id="node5" href="$classgameengine_1_1component_1_1_grid_component.html" title=" " alt="" coords="427,57,589,98"/>
-<area shape="rect" id="node4" href="$classgameengine_1_1_kinematic_body.html" title=" " alt="" coords="640,5,825,32"/>
-<area shape="rect" id="node7" href="$classgameengine_1_1_button.html" title=" " alt="" coords="440,123,576,149"/>
-<area shape="rect" id="node8" href="$classgameengine_1_1_texture_rect.html" title=" " alt="" coords="424,173,592,200"/>
+<area shape="rect" id="node1" href="$classgameengine_1_1_abstract_sound.html" title="Abstraction for sound." alt="" coords="5,56,189,83"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1audio_1_1_music.html" title="A music." alt="" coords="237,7,372,49"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1audio_1_1_sound.html" title="A sound effect." alt="" coords="237,82,372,123"/>
+<area shape="rect" id="node4" href="$classraylib_1_1audio_1_1_rl_music.html" title="Encapulation of the raylib Music." alt="" coords="26,5,169,32"/>
+<area shape="rect" id="node5" href="$classraylib_1_1audio_1_1_rl_sound.html" title="Encapulation of the raylib Sound." alt="" coords="25,107,169,133"/>
 </map>

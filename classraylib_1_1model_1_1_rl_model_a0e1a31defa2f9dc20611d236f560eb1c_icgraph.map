@@ -1,0 +1,5 @@
+<map id="raylib::model::RlModel::getModel" name="raylib::model::RlModel::getModel">
+<area shape="rect" id="node1" title="Get the raylib model." alt="" coords="253,39,400,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#aa5c846f978e5a374f89b060ca27a2304" title="Draw a model with extended parameters." alt="" coords="5,5,205,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_collision3d_helper.html#a216827c3ade632cf7dd649827bf53da9" title="Get collision info between ray and model." alt="" coords="10,71,201,112"/>
+</map>

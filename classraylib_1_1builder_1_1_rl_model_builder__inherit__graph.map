@@ -1,0 +1,5 @@
+<map id="raylib::builder::RlModelBuilder" name="raylib::builder::RlModelBuilder">
+<area shape="rect" id="node1" title="Builder to create a RlModel easily." alt="" coords="19,287,168,555"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="9,145,177,237"/>
+<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_i_builder.html" title="Interface for all the builder." alt="" coords="5,5,181,83"/>
+</map>

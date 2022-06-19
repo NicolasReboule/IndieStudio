@@ -7,6 +7,6 @@ var searchData=
   ['gamepadhelper_2ehpp_4',['GamepadHelper.hpp',['../_gamepad_helper_8hpp.html',1,'']]],
   ['glstatemanager_2ecpp_5',['GlStateManager.cpp',['../_gl_state_manager_8cpp.html',1,'']]],
   ['glstatemanager_2ehpp_6',['GlStateManager.hpp',['../_gl_state_manager_8hpp.html',1,'']]],
-  ['gridcomponent_2ecpp_7',['GridComponent.cpp',['../_grid_component_8cpp.html',1,'']]],
-  ['gridcomponent_2ehpp_8',['GridComponent.hpp',['../_grid_component_8hpp.html',1,'']]]
+  ['grid3d_2ecpp_7',['Grid3D.cpp',['../_grid3_d_8cpp.html',1,'']]],
+  ['grid3d_2ehpp_8',['Grid3D.hpp',['../_grid3_d_8hpp.html',1,'']]]
 ];

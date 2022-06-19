@@ -1,0 +1,7 @@
+<map id="raylib::model::RlMesh::getMesh" name="raylib::model::RlMesh::getMesh">
+<area shape="rect" id="node1" title="Get the mesh." alt="" coords="251,113,393,155"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a1b227cc157939db8910baa26bd765cff" title="Draw a 3d mesh with material and transform." alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a58b25e2ef87331d67e2fb921b1f3cdd5" title="Draw multiple mesh instances with material and different transforms." alt="" coords="5,70,203,126"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_collision3d_helper.html#ad843cf028c1106efb871f5bca0f604ef" title="Get collision info between ray and mesh." alt="" coords="11,149,197,191"/>
+<area shape="rect" id="node5" href="$classraylib_1_1model_1_1_rl_model.html#a3e0e7c494efd4d4d350cd67bd3d93e5a" title="Construct a new RlModel object from a mesh." alt="" coords="31,215,177,256"/>
+</map>

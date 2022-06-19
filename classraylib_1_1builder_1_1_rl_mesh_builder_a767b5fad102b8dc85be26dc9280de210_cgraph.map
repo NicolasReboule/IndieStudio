@@ -1,0 +1,16 @@
+<map id="raylib::builder::RlMeshBuilder::build" name="raylib::builder::RlMeshBuilder::build">
+<area shape="rect" id="node1" title="Create a mesh." alt="" coords="5,332,192,373"/>
+<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_mesh_generator.html#afcc9a56af142dede6f581146bc9bfdf4" title="Generate a mesh of a cone." alt="" coords="240,5,428,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1model_1_1_mesh_generator.html#a64a28443b3617b9fca9b85347c70d959" title="Generate a mesh of a cube." alt="" coords="240,71,428,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1model_1_1_mesh_generator.html#a64a804f4e9c5e072613ddea0b3f6b460" title="Generate a mesh of a cubicmap." alt="" coords="240,201,428,243"/>
+<area shape="rect" id="node7" href="$classraylib_1_1model_1_1_mesh_generator.html#a649909893dcca37f6e7ee086eb7c4c4a" title="Generate a mesh of a cylinder." alt="" coords="240,267,428,308"/>
+<area shape="rect" id="node8" href="$classraylib_1_1model_1_1_mesh_generator.html#a15900dad8920385932dd682e3c0e0a58" title="Generate a mesh of a heightmap." alt="" coords="240,136,428,177"/>
+<area shape="rect" id="node9" href="$classraylib_1_1model_1_1_mesh_generator.html#a64e6df5c4e111d58b3e21ed99798ca91" title="Generate a mesh of an hemisphere." alt="" coords="240,332,428,373"/>
+<area shape="rect" id="node10" href="$classraylib_1_1model_1_1_mesh_generator.html#a22cf6e974bb79463a4f3dafae9a23ee7" title="Generate a mesh of a knot." alt="" coords="240,397,428,439"/>
+<area shape="rect" id="node11" href="$classraylib_1_1model_1_1_mesh_generator.html#afca715e91dc7ce4d21759da19d9e2f87" title="Generate a mesh of a plane." alt="" coords="240,463,428,504"/>
+<area shape="rect" id="node12" href="$classraylib_1_1model_1_1_mesh_generator.html#ad1a166241fba5d99813ed04458ad54d1" title="Generate a mesh of a polygon." alt="" coords="240,528,428,569"/>
+<area shape="rect" id="node13" href="$classraylib_1_1model_1_1_mesh_generator.html#a0877c0ed15c2ff8124f9100a7cfc3961" title="Generate a mesh of a sphere." alt="" coords="240,593,428,635"/>
+<area shape="rect" id="node14" href="$classraylib_1_1model_1_1_mesh_generator.html#a7a1ff456b7d2c536a545b42c6f465660" title="Generate a mesh of a torus." alt="" coords="240,659,428,700"/>
+<area shape="rect" id="node5" href="$classraylib_1_1image_1_1_rl_image.html#ad472063666ebe8047bf4b0a5d8f77bbb" title="Get the image (const)" alt="" coords="490,136,637,177"/>
+<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="476,201,651,243"/>
+</map>

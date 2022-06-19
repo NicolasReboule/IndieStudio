@@ -1,0 +1,5 @@
+<map id="gameengine::node::AbstractBase::draw" name="gameengine::node::AbstractBase::draw">
+<area shape="rect" id="node1" title="Draw the node." alt="" coords="223,27,404,69"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_scene.html#aef82197f46fd581d2158b56e1512b441" title="Draw 3D element of the scene." alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1_scene.html#a4d9bf66f28e6d80552e49549f11ebd3b" title="Draw 2d elements of the scene." alt="" coords="19,57,161,98"/>
+</map>

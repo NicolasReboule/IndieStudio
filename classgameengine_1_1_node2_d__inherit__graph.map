@@ -1,6 +1,0 @@
-<map id="gameengine::Node2D" name="gameengine::Node2D">
-<area shape="rect" id="node1" title=" " alt="" coords="97,292,252,472"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_button.html" title=" " alt="" coords="5,520,160,788"/>
-<area shape="rect" id="node4" href="$classgameengine_1_1_texture_rect.html" title=" " alt="" coords="184,520,352,788"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_abstract_base.html" title=" " alt="" coords="86,5,263,244"/>
-</map>

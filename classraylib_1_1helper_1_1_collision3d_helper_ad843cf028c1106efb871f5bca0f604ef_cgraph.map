@@ -1,0 +1,4 @@
+<map id="raylib::helper::Collision3dHelper::getRayCollisionMesh" name="raylib::helper::Collision3dHelper::getRayCollisionMesh">
+<area shape="rect" id="node1" title="Get collision info between ray and mesh." alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_rl_mesh.html#a78ae69045480a5b920a7dee35bd696df" title="Get the mesh." alt="" coords="240,5,383,47"/>
+</map>

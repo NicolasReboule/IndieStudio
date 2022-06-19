@@ -1,9 +1,7 @@
 <map id="raylib&#45;cpp/include/GameEngine/SceneManager.hpp" name="raylib&#45;cpp/include/GameEngine/SceneManager.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="313,5,528,47"/>
-<area shape="rect" id="node2" href="$_game_engine_8hpp.html" title=" " alt="" coords="105,95,307,136"/>
-<area shape="rect" id="node6" href="$_kinematic_body_8cpp.html" title=" " alt="" coords="331,95,510,136"/>
-<area shape="rect" id="node7" href="$_scene_manager_8cpp.html" title=" " alt="" coords="535,95,712,136"/>
-<area shape="rect" id="node3" href="$_main_scene_8hpp.html" title=" " alt="" coords="5,184,199,225"/>
-<area shape="rect" id="node5" href="$_audio_manager_8cpp.html" title=" " alt="" coords="223,184,400,225"/>
-<area shape="rect" id="node4" href="$_main_scene_8cpp.html" title=" " alt="" coords="13,273,191,315"/>
+<area shape="rect" id="node1" title=" " alt="" coords="225,5,439,47"/>
+<area shape="rect" id="node2" href="$_game_engine_8hpp.html" title="The only purpose of this is to include all the headers." alt="" coords="5,95,208,136"/>
+<area shape="rect" id="node4" href="$_kinematic_body_8cpp.html" title=" " alt="" coords="233,95,431,136"/>
+<area shape="rect" id="node5" href="$_scene_manager_8cpp.html" title=" " alt="" coords="455,95,633,136"/>
+<area shape="rect" id="node3" href="$_audio_manager_8cpp.html" title=" " alt="" coords="18,184,195,225"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="gameengine::audio::Sound::setVolume" name="gameengine::audio::Sound::setVolume">
+<area shape="rect" id="node1" title="Set the volume of the sound." alt="" coords="5,5,140,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1audio_1_1_rl_sound.html#ab052a064b36c1dfa82567d3b54f9bdbd" title="Set volume for a sound (1.0 is max level)" alt="" coords="188,5,332,47"/>
+</map>

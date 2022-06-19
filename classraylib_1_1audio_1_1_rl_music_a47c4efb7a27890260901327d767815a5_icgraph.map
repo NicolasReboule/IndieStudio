@@ -1,0 +1,4 @@
+<map id="raylib::audio::RlMusic::play" name="raylib::audio::RlMusic::play">
+<area shape="rect" id="node1" title="Play the music stream." alt="" coords="235,5,377,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#a180974a3f439882a46ae4b453eb53923" title="Play a sound." alt="" coords="5,5,187,47"/>
+</map>

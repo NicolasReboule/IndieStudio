@@ -1,0 +1,8 @@
+<map id="gameengine::node::_2D::Button::update" name="gameengine::node::_2D::Button::update">
+<area shape="rect" id="node1" title="Update the button." alt="" coords="5,71,140,112"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#adcc005637b43bf6f99ec27cb61745af8" title="Check if point is inside rectangle." alt="" coords="189,5,401,47"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1input_1_1_mouse_helper.html#ac5f5342cc857a0354f49434dbc7cac38" title="Get the mouse position." alt="" coords="188,71,403,112"/>
+<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1input_1_1_mouse_helper.html#af0f0c5d01ccbae6a21c0a3c6a3fad3f0" title="Check if a mouse button has been pressed once." alt="" coords="196,135,395,191"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="451,5,625,47"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1_vector_helper.html#ac895c58ad64b9480a5dcb4be336bdf32" title="Convert a raylib vector to a Vector2f." alt="" coords="451,71,625,112"/>
+</map>

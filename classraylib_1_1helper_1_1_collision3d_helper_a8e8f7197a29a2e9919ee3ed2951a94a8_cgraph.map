@@ -1,0 +1,4 @@
+<map id="raylib::helper::Collision3dHelper::getRayCollisionTriangle" name="raylib::helper::Collision3dHelper::getRayCollisionTriangle">
+<area shape="rect" id="node1" title="Get collision info between ray and triangle." alt="" coords="5,5,207,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="255,5,429,47"/>
+</map>

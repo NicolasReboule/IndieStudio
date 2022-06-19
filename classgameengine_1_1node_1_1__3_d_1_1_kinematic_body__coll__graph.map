@@ -1,0 +1,9 @@
+<map id="gameengine::node::_3D::KinematicBody" name="gameengine::node::_3D::KinematicBody">
+<area shape="rect" id="node1" title="A kinematic body is a body that can move." alt="" coords="61,1461,200,1597"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__3_d_1_1_static_body.html" title="A 3D node that is not affected by physics." alt="" coords="52,1027,209,1412"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1__3_d_1_1_node3_d.html" title="A 3D Node." alt="" coords="53,615,208,810"/>
+<area shape="rect" id="node4" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="44,160,254,399"/>
+<area shape="rect" id="node5" title=" " alt="" coords="6,5,52,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="122,5,176,83"/>
+<area shape="rect" id="node7" href="$classraylib_1_1model_1_1_rl_model.html" title="Encapsulation of the raylib Model." alt="" coords="232,461,408,964"/>
+</map>

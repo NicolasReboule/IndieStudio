@@ -1,0 +1,4 @@
+<map id="gameengine::node::_2D::Label::setColor" name="gameengine::node::_2D::Label::setColor">
+<area shape="rect" id="node1" title="Set the color of the label." alt="" coords="5,5,143,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="191,13,345,39"/>
+</map>

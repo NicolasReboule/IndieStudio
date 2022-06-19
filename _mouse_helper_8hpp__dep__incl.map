@@ -1,36 +1,38 @@
 <map id="raylib&#45;cpp/include/raylib/Inputs/MouseHelper.hpp" name="raylib&#45;cpp/include/raylib/Inputs/MouseHelper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="817,5,1018,47"/>
-<area shape="rect" id="node2" href="$_raylib_8hpp.html" title="All raylib includes." alt="" coords="772,95,895,136"/>
-<area shape="rect" id="node34" href="$_mouse_helper_8cpp.html" title=" " alt="" coords="919,95,1086,136"/>
-<area shape="rect" id="node3" href="$_audio_manager_8hpp.html" title=" " alt="" coords="5,489,253,530"/>
-<area shape="rect" id="node4" href="$_game_engine_8hpp.html" title=" " alt="" coords="1177,585,1380,627"/>
-<area shape="rect" id="node8" href="$_fx_8hpp.html" title=" " alt="" coords="277,489,456,530"/>
-<area shape="rect" id="node10" href="$_i_sound_8hpp.html" title=" " alt="" coords="543,385,750,426"/>
-<area shape="rect" id="node11" href="$_music_8hpp.html" title=" " alt="" coords="733,489,933,530"/>
-<area shape="rect" id="node14" href="$_abstract_base_8hpp.html" title=" " alt="" coords="1496,184,1691,240"/>
-<area shape="rect" id="node31" href="$_scene_manager_8hpp.html" title=" " alt="" coords="2654,489,2869,530"/>
-<area shape="rect" id="node7" href="$_audio_manager_8cpp.html" title=" " alt="" coords="682,675,859,716"/>
-<area shape="rect" id="node5" href="$_main_scene_8hpp.html" title=" " alt="" coords="1182,675,1375,716"/>
-<area shape="rect" id="node6" href="$_main_scene_8cpp.html" title=" " alt="" coords="1190,764,1367,805"/>
-<area shape="rect" id="node9" href="$_fx_8cpp.html" title=" " alt="" coords="278,585,455,627"/>
-<area shape="rect" id="node13" href="$_i_sound_8cpp.html" title=" " alt="" coords="481,489,658,530"/>
-<area shape="rect" id="node12" href="$_music_8cpp.html" title=" " alt="" coords="745,585,922,627"/>
-<area shape="rect" id="node15" href="$_node2_d_8hpp.html" title=" " alt="" coords="1963,377,2125,433"/>
-<area shape="rect" id="node22" href="$_node_8hpp.html" title=" " alt="" coords="1493,288,1694,329"/>
-<area shape="rect" id="node30" href="$_scene_8hpp.html" title=" " alt="" coords="2459,385,2624,426"/>
-<area shape="rect" id="node33" href="$_abstract_base_8cpp.html" title=" " alt="" coords="1291,288,1469,329"/>
-<area shape="rect" id="node16" href="$_button_8hpp.html" title=" " alt="" coords="1877,481,2040,537"/>
-<area shape="rect" id="node18" href="$_texture_rect_8hpp.html" title=" " alt="" coords="2064,481,2227,537"/>
-<area shape="rect" id="node20" href="$_node2_d_8cpp.html" title=" " alt="" coords="2251,489,2429,530"/>
-<area shape="rect" id="node21" href="$_scene_8cpp.html" title=" " alt="" coords="2453,489,2630,530"/>
-<area shape="rect" id="node17" href="$_button_8cpp.html" title=" " alt="" coords="1867,585,2045,627"/>
-<area shape="rect" id="node19" href="$_texture_rect_8cpp.html" title=" " alt="" coords="2069,585,2251,627"/>
-<area shape="rect" id="node23" href="$_grid_component_8hpp.html" title=" " alt="" coords="1003,377,1173,433"/>
-<area shape="rect" id="node25" href="$_static_body_8hpp.html" title=" " alt="" coords="1399,385,1633,426"/>
-<area shape="rect" id="node29" href="$_node_8cpp.html" title=" " alt="" coords="1198,385,1375,426"/>
-<area shape="rect" id="node24" href="$_grid_component_8cpp.html" title=" " alt="" coords="1059,489,1269,530"/>
-<area shape="rect" id="node26" href="$_kinematic_body_8hpp.html" title=" " alt="" coords="1649,481,1853,537"/>
-<area shape="rect" id="node28" href="$_static_body_8cpp.html" title=" " alt="" coords="1294,489,1471,530"/>
-<area shape="rect" id="node27" href="$_kinematic_body_8cpp.html" title=" " alt="" coords="1663,585,1841,627"/>
-<area shape="rect" id="node32" href="$_scene_manager_8cpp.html" title=" " alt="" coords="2673,585,2850,627"/>
+<area shape="rect" id="node1" title=" " alt="" coords="797,5,998,47"/>
+<area shape="rect" id="node2" href="$_raylib_8hpp.html" title="All raylib includes." alt="" coords="752,95,875,136"/>
+<area shape="rect" id="node36" href="$_mouse_helper_8cpp.html" title=" " alt="" coords="899,95,1066,136"/>
+<area shape="rect" id="node3" href="$_abstract_sound_8hpp.html" title=" " alt="" coords="467,392,658,448"/>
+<area shape="rect" id="node4" href="$_audio_manager_8hpp.html" title=" " alt="" coords="709,503,957,545"/>
+<area shape="rect" id="node5" href="$_game_engine_8hpp.html" title="The only purpose of this is to include all the headers." alt="" coords="1451,600,1653,641"/>
+<area shape="rect" id="node7" href="$_music_8hpp.html" title=" " alt="" coords="5,503,205,545"/>
+<area shape="rect" id="node9" href="$_sound_8hpp.html" title=" " alt="" coords="229,503,432,545"/>
+<area shape="rect" id="node12" href="$_abstract_base_8hpp.html" title=" " alt="" coords="1860,184,2055,240"/>
+<area shape="rect" id="node31" href="$_scene_manager_8hpp.html" title=" " alt="" coords="2707,503,2922,545"/>
+<area shape="rect" id="node34" href="$_texture_manager_8hpp.html" title=" " alt="" coords="876,191,1097,233"/>
+<area shape="rect" id="node11" href="$_abstract_sound_8cpp.html" title=" " alt="" coords="507,503,685,545"/>
+<area shape="rect" id="node6" href="$_audio_manager_8cpp.html" title=" " alt="" coords="1249,689,1426,731"/>
+<area shape="rect" id="node8" href="$_music_8cpp.html" title=" " alt="" coords="17,600,194,641"/>
+<area shape="rect" id="node10" href="$_sound_8cpp.html" title=" " alt="" coords="242,600,419,641"/>
+<area shape="rect" id="node13" href="$_node2_d_8hpp.html" title=" " alt="" coords="2275,392,2437,448"/>
+<area shape="rect" id="node22" href="$_node3_d_8hpp.html" title=" " alt="" coords="1732,288,1895,344"/>
+<area shape="rect" id="node30" href="$_scene_8hpp.html" title=" " alt="" coords="2080,399,2245,441"/>
+<area shape="rect" id="node33" href="$_abstract_base_8cpp.html" title=" " alt="" coords="1995,295,2173,337"/>
+<area shape="rect" id="node14" href="$_button_8hpp.html" title=" " alt="" coords="2080,496,2243,552"/>
+<area shape="rect" id="node16" href="$_label_8hpp.html" title=" " alt="" coords="2520,496,2683,552"/>
+<area shape="rect" id="node18" href="$_texture_rect_8hpp.html" title=" " alt="" coords="2947,496,3109,552"/>
+<area shape="rect" id="node20" href="$_node2_d_8cpp.html" title=" " alt="" coords="2267,503,2445,545"/>
+<area shape="rect" id="node21" href="$_scene_8cpp.html" title=" " alt="" coords="1878,503,2055,545"/>
+<area shape="rect" id="node15" href="$_button_8cpp.html" title=" " alt="" coords="2073,600,2250,641"/>
+<area shape="rect" id="node17" href="$_label_8cpp.html" title=" " alt="" coords="2513,600,2690,641"/>
+<area shape="rect" id="node19" href="$_texture_rect_8cpp.html" title=" " alt="" coords="2937,600,3119,641"/>
+<area shape="rect" id="node23" href="$_grid3_d_8hpp.html" title=" " alt="" coords="1217,392,1380,448"/>
+<area shape="rect" id="node25" href="$_static_body_8hpp.html" title=" " alt="" coords="1529,392,1692,448"/>
+<area shape="rect" id="node29" href="$_node3_d_8cpp.html" title=" " alt="" coords="1878,399,2055,441"/>
+<area shape="rect" id="node24" href="$_grid3_d_8cpp.html" title=" " alt="" coords="1083,503,1261,545"/>
+<area shape="rect" id="node26" href="$_kinematic_body_8hpp.html" title=" " alt="" coords="1589,496,1752,552"/>
+<area shape="rect" id="node28" href="$_static_body_8cpp.html" title=" " alt="" coords="1337,503,1514,545"/>
+<area shape="rect" id="node27" href="$_kinematic_body_8cpp.html" title=" " alt="" coords="1765,600,1963,641"/>
+<area shape="rect" id="node32" href="$_scene_manager_8cpp.html" title=" " alt="" coords="2726,600,2903,641"/>
+<area shape="rect" id="node35" href="$_texture_manager_8cpp.html" title=" " alt="" coords="877,295,1054,337"/>
 </map>

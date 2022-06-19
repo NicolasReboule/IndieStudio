@@ -1,0 +1,4 @@
+<map id="gameengine::AudioManager::AudioManager" name="gameengine::AudioManager::AudioManager">
+<area shape="rect" id="node1" title="Construct a new AudioManager object." alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_audio_helper.html#a57ca32164cdcfaaf6c5585cbb342b401" title="Initialize audio device and context." alt="" coords="235,5,405,47"/>
+</map>

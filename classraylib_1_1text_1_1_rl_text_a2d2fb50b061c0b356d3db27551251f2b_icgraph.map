@@ -1,4 +1,5 @@
 <map id="raylib::text::RlText::setFontSize" name="raylib::text::RlText::setFontSize">
-<area shape="rect" id="node1" title="Set the font size." alt="" coords="232,5,355,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_rl_text_builder.html#a6e6435d68bf2ce404406c424d8677f4a" title="Build the RlText." alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node1" title="Set the font size." alt="" coords="412,5,535,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_rl_text_builder.html#a6e6435d68bf2ce404406c424d8677f4a" title="Build the RlText." alt="" coords="185,5,364,47"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1__2_d_1_1_label.html#a22423ea789d7bdedc1f4a04e0d7da448" title="Initialize the label." alt="" coords="5,5,137,47"/>
 </map>

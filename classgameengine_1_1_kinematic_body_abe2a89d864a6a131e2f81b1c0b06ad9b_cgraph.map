@@ -1,5 +1,0 @@
-<map id="gameengine::KinematicBody::moveAndCollide" name="gameengine::KinematicBody::moveAndCollide">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,191,80"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_collision3d_helper.html#aca68b3827c8066bb061d7a8afc1493bb" title="Check collision between two bounding boxes." alt="" coords="252,5,411,47"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_scene_manager.html#a96af2b6eb4a3d44856556b32b4bb0880" title=" " alt="" coords="239,71,424,112"/>
-</map>

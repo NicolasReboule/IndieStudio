@@ -1,4 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classgameengine_1_1_scene.html" title=" " alt="" coords="5,5,140,32"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_main_scene.html" title=" " alt="" coords="188,5,351,32"/>
+<area shape="rect" id="node1" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="5,177,216,203"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_node2_d.html" title="A 2D node." alt="" coords="264,104,396,145"/>
+<area shape="rect" id="node6" href="$classgameengine_1_1node_1_1__3_d_1_1_node3_d.html" title="A 3D Node." alt="" coords="264,201,396,243"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1__2_d_1_1_button.html" title="Basic button implementation." alt="" coords="444,5,576,47"/>
+<area shape="rect" id="node4" href="$classgameengine_1_1node_1_1__2_d_1_1_label.html" title="A label is a text displayed on the screen." alt="" coords="444,71,576,112"/>
+<area shape="rect" id="node5" href="$classgameengine_1_1node_1_1__2_d_1_1_texture_rect.html" title="Class representing a texture rectangle." alt="" coords="444,136,576,177"/>
+<area shape="rect" id="node7" href="$classgameengine_1_1node_1_1__3_d_1_1_grid3_d.html" title="A 3D Grid." alt="" coords="444,201,576,243"/>
+<area shape="rect" id="node8" href="$classgameengine_1_1node_1_1__3_d_1_1_static_body.html" title="A 3D node that is not affected by physics." alt="" coords="444,267,576,308"/>
+<area shape="rect" id="node9" href="$classgameengine_1_1node_1_1__3_d_1_1_kinematic_body.html" title="A kinematic body is a body that can move." alt="" coords="624,267,763,308"/>
 </map>

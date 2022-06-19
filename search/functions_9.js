@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kinematicbody_0',['KinematicBody',['../classgameengine_1_1_kinematic_body.html#ae778dfe595c6734c4a2906188caf63e6',1,'gameengine::KinematicBody::KinematicBody(const std::string &amp;name, const raylib::builder::RlMeshBuilder::MeshType &amp;type, const std::string &amp;texturePath)'],['../classgameengine_1_1_kinematic_body.html#acefe24e94c977d1840c53a06a1715e4b',1,'gameengine::KinematicBody::KinematicBody(const std::string &amp;name, const std::string &amp;modelPath, const std::string &amp;texturePath)']]]
+  ['kinematicbody_0',['KinematicBody',['../classgameengine_1_1node_1_1__3_d_1_1_kinematic_body.html#aee6c6b6faa3bd595c19ac8f55d4158a2',1,'gameengine::node::_3D::KinematicBody::KinematicBody(const std::string &amp;name, const raylib::model::RlModel &amp;model)'],['../classgameengine_1_1node_1_1__3_d_1_1_kinematic_body.html#adfcc1aa653a6b169b2146330a677eb24',1,'gameengine::node::_3D::KinematicBody::KinematicBody(const std::string &amp;name, const raylib::model::RlModel &amp;model, const std::shared_ptr&lt; raylib::texture::RlTexture &gt; &amp;texture)']]]
 ];

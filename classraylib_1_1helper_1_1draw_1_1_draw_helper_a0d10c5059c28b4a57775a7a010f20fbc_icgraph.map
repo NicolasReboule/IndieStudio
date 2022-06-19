@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::DrawHelper::clearBackground" name="raylib::helper::draw::DrawHelper::clearBackground">
 <area shape="rect" id="node1" title="Set background color (framebuffer clear color)" alt="" coords="239,5,437,47"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title=" " alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title="Draw all the nodes from the current scene." alt="" coords="5,5,191,47"/>
 </map>

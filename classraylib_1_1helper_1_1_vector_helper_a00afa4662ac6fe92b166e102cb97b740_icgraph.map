@@ -1,74 +1,61 @@
 <map id="raylib::helper::VectorHelper::toRaylibVector" name="raylib::helper::VectorHelper::toRaylibVector">
-<area shape="rect" id="node1" title="Convert a Vector2f to a raylib vector." alt="" coords="733,2077,908,2119"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_collision3d_helper.html#a041d4f9bab9b382fd272e864c65a8373" title="Check collision between a bounding box and a sphere." alt="" coords="479,5,653,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_collision2_d_helper.html#a113e84dfb4c80acea4f8fb16e6165d26" title="Check if a circle is colliding with a rectangle." alt="" coords="482,71,650,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_collision2_d_helper.html#aeb166ef2629c6a0fa3dc9a733fdaa5c2" title="Check if two circles are colliding." alt="" coords="485,136,647,177"/>
-<area shape="rect" id="node5" href="$classraylib_1_1_collision2_d_helper.html#ac6f6ffb1ee21e68de73f522183ad1fd4" title="Check the collision between two lines defined by two points each, returns collision point by referenc..." alt="" coords="485,201,647,243"/>
-<area shape="rect" id="node6" href="$classraylib_1_1_collision2_d_helper.html#abd08620d57e6325bd36732b46ca49fc3" title="Check if point is inside circle." alt="" coords="479,267,653,308"/>
-<area shape="rect" id="node7" href="$classraylib_1_1_collision2_d_helper.html#a60ae69e960ff2b696cb1a8e4f00d28dd" title="Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels..." alt="" coords="483,332,649,373"/>
-<area shape="rect" id="node8" href="$classraylib_1_1_collision2_d_helper.html#a2bad9012963fa0c736f6abf5e22a8141" title="Check if point is inside rectangle." alt="" coords="483,397,649,439"/>
-<area shape="rect" id="node10" href="$classraylib_1_1_collision2_d_helper.html#adf412a2fe47c16beaddcfab56828b134" title="Check if point is inside a triangle." alt="" coords="472,463,660,504"/>
-<area shape="rect" id="node11" href="$classraylib_1_1_collision3d_helper.html#a826cc3bf96190593e0b47c3e29726d46" title="Check collision between two spheres." alt="" coords="486,528,646,569"/>
-<area shape="rect" id="node12" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#ac24ea6e13742071cb602e31637bb9404" title="Draw a billboard texture defined by source and rotation." alt="" coords="466,593,666,635"/>
-<area shape="rect" id="node13" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a2bbbbb0731f3d27b6f823af82f996748" title="Draw a color&#45;filled circle." alt="" coords="477,659,655,700"/>
-<area shape="rect" id="node14" href="$classraylib_1_1_shape3_d_helper.html#a3619d3ff741c2eabbe0b492f7a9a3200" title=" " alt="" coords="491,724,641,765"/>
-<area shape="rect" id="node15" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ae2e961fce56f54f0daa775e58978bd1c" title="Draw a piece of a circle." alt="" coords="457,789,675,831"/>
-<area shape="rect" id="node16" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a85b6335c8643f3e26d21fc79fed298f1" title="Draw circle sector outline." alt="" coords="457,854,675,910"/>
-<area shape="rect" id="node17" href="$classraylib_1_1_shape3_d_helper.html#aea6489646a84876d067989fa3e459fce" title=" " alt="" coords="491,933,641,975"/>
-<area shape="rect" id="node18" href="$classraylib_1_1_shape3_d_helper.html#aee739e16ab9b4fb6b42094681c07aaff" title=" " alt="" coords="491,999,641,1040"/>
-<area shape="rect" id="node19" href="$classraylib_1_1_shape3_d_helper.html#ae0370583bec7b2c5a69eca43833d5a42" title=" " alt="" coords="490,1064,642,1105"/>
-<area shape="rect" id="node20" href="$classraylib_1_1_shape3_d_helper.html#ac7b48ef6732aa5f483226b0cc9f0455c" title=" " alt="" coords="491,1129,641,1171"/>
-<area shape="rect" id="node21" href="$classraylib_1_1_shape3_d_helper.html#ab4c0ba98efb4d20dacb1925de4e0a5f5" title=" " alt="" coords="491,1195,641,1236"/>
-<area shape="rect" id="node22" href="$classraylib_1_1_shape3_d_helper.html#a1c35b672284701d78fe864fb3680570b" title=" " alt="" coords="491,1260,641,1301"/>
-<area shape="rect" id="node23" href="$classraylib_1_1_shape3_d_helper.html#ac923768996a72ea792fd46015af6267c" title=" " alt="" coords="491,1325,641,1367"/>
-<area shape="rect" id="node24" href="$classraylib_1_1_shape3_d_helper.html#a6da9be7dc1f32c56f978f5ef52d53d4e" title=" " alt="" coords="491,1391,641,1432"/>
-<area shape="rect" id="node25" href="$classraylib_1_1_shape3_d_helper.html#a9ef141e872cb3924628369aa0cf228e6" title=" " alt="" coords="491,1456,641,1497"/>
-<area shape="rect" id="node26" href="$classraylib_1_1_shape3_d_helper.html#a4abf375963ef42eeb6052965cd5b2730" title=" " alt="" coords="491,1521,641,1563"/>
-<area shape="rect" id="node27" href="$classraylib_1_1image_1_1_image_draw_helper.html#ab590f78697ad7064d46657f35a7be4f6" title="Draw text (custom sprite font) within an image (destination)" alt="" coords="483,1587,649,1628"/>
-<area shape="rect" id="node28" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a4f5c2cc1b45aa658e194f7999c9bf1b1" title="Draw a line." alt="" coords="481,1652,651,1693"/>
-<area shape="rect" id="node29" href="$classraylib_1_1_shape3_d_helper.html#a74fa9bc17f92c5474817c1f175a36f33" title=" " alt="" coords="491,3132,641,3173"/>
-<area shape="rect" id="node31" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a2f193bd47079f75a41bc9f2ec4e5cea9" title="Draw a Line using cubic&#45;bezier curves in&#45;out." alt="" coords="463,1783,669,1824"/>
-<area shape="rect" id="node32" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a00bf2e002f8905221bbc1c1b944f9d1c" title="Draw a line using cubic bezier curves with 2 control points." alt="" coords="463,1847,669,1903"/>
-<area shape="rect" id="node33" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a642e98679563e3d4cf283bc6258a67c3" title="Draw a line using quadratic bezier curves with a control point." alt="" coords="447,1927,685,1968"/>
-<area shape="rect" id="node34" href="$classraylib_1_1_model_helper.html#a4e6b1e133e22780ee28b90320d6a2983" title="Draw a model." alt="" coords="501,1717,631,1759"/>
-<area shape="rect" id="node36" href="$classraylib_1_1_model_helper.html#a83cb0a155c1e2c7906a0ddccc2065ca3" title="Draw a model wires." alt="" coords="501,2044,631,2085"/>
-<area shape="rect" id="node37" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a549653368e73478ab676c0eeebd1038a" title="Draw a pixel." alt="" coords="479,2109,653,2151"/>
-<area shape="rect" id="node38" href="$classraylib_1_1_shape3_d_helper.html#a11a4a1c4d0e5ce85836edc5084006308" title=" " alt="" coords="491,2175,641,2216"/>
-<area shape="rect" id="node39" href="$classraylib_1_1_shape3_d_helper.html#afffa41bfe349d99983544ccd0b47c383" title=" " alt="" coords="491,2240,641,2281"/>
-<area shape="rect" id="node40" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a3a46714be635e4f601e2c61622273f88" title="Draw a regular polygon (Vector version)" alt="" coords="481,2305,651,2347"/>
-<area shape="rect" id="node41" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a56efb571e70734938a5410557a507439" title="Draw a polygon outline of n sides." alt="" coords="465,2371,667,2412"/>
-<area shape="rect" id="node42" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a8b566d2ffd096781dd0a043cde9bea08" title="Draw a filled rectangle." alt="" coords="464,2436,668,2477"/>
-<area shape="rect" id="node43" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a3834bd2798cca8c40cfde8a0b4728f11" title="Draw a ring." alt="" coords="480,2501,652,2543"/>
-<area shape="rect" id="node44" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a046e9739f6649156eadbeefe9236703e" title="Draw a ring outline." alt="" coords="464,2567,668,2608"/>
-<area shape="rect" id="node45" href="$classraylib_1_1_shape3_d_helper.html#aad6511ef6946106c5787c5c902c070fd" title=" " alt="" coords="491,2632,641,2673"/>
-<area shape="rect" id="node46" href="$classraylib_1_1_shape3_d_helper.html#ad32d53cb45b7579ded9a0cb8d2a4ad79" title=" " alt="" coords="491,2697,641,2739"/>
-<area shape="rect" id="node47" href="$classraylib_1_1_shape3_d_helper.html#a9eca5fc9690fe4a5ba4c34337276a42f" title=" " alt="" coords="491,2763,641,2804"/>
-<area shape="rect" id="node48" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a0af986a28ae4701e1ff06b70c9ca6b4b" title="Draw text using Font and &#39;pro&#39; parameters (rotation)" alt="" coords="476,2828,656,2869"/>
-<area shape="rect" id="node49" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#af8c5bad13a4dbbb81f0c50de7bb93bb9" title="Draw a texture with extended parameters." alt="" coords="493,2893,639,2949"/>
-<area shape="rect" id="node50" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a1647d91325dc5aaab127144e317c32fb" title="Draws a texture (or part of it) that stretches or shrinks nicely." alt="" coords="493,2973,639,3029"/>
-<area shape="rect" id="node51" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#aa53c987d59bb5d0879295e63a45a8b4e" title="Draw a texture quad with tiling and offset parameters." alt="" coords="493,3053,639,3109"/>
-<area shape="rect" id="node52" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#ac8b34cc1578173981b49f9d93507014c" title="Draw a part of a texture defined by a rectangle." alt="" coords="493,3566,639,3622"/>
-<area shape="rect" id="node55" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#afe64ae0d1d668bf89fba997fab79b150" title="Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest." alt="" coords="493,3197,639,3253"/>
-<area shape="rect" id="node56" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#ae935db70605ced8a49396ed7c3400a49" title="Draw one character (codepoint)" alt="" coords="459,3277,673,3333"/>
-<area shape="rect" id="node57" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ad9630ee1c03553bb3026aaa27dd48aa7" title="Draw a color&#45;filled triangle (vertex in counter&#45;clockwise order!)" alt="" coords="470,3356,662,3397"/>
-<area shape="rect" id="node58" href="$classraylib_1_1_shape3_d_helper.html#a3fc1d6cb04d979da16ec5b2538a66f96" title=" " alt="" coords="491,3421,641,3463"/>
-<area shape="rect" id="node59" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a4b48e4c37d565c079624dabd86512cbc" title="Draw a triangle outline (vertex in counter&#45;clockwise order!)" alt="" coords="470,3486,662,3542"/>
-<area shape="rect" id="node60" href="$classraylib_1_1_mesh_generator.html#a38cfb71be74c8cba61d73b57db264e5f" title="Generate a mesh of a cubicmap." alt="" coords="493,4233,639,4275"/>
-<area shape="rect" id="node63" href="$classraylib_1_1_mesh_generator.html#a5a601e7f489aab12fefd99dc677559fb" title="Generate a mesh of a heightmap." alt="" coords="493,3645,639,3687"/>
-<area shape="rect" id="node64" href="$classraylib_1_1helper_1_1input_1_1_mouse_helper.html#ad6d135f9e0dbaca82d31b918addea997" title="Get a ray trace from mouse position." alt="" coords="471,3711,661,3752"/>
-<area shape="rect" id="node65" href="$classraylib_1_1_collision3d_helper.html#ae4687791c9d3c1edc5b3ea6b8968528c" title="Get collision info between ray and quad." alt="" coords="487,3776,645,3817"/>
-<area shape="rect" id="node66" href="$classraylib_1_1_collision3d_helper.html#ad090c0597c46d279169813a54f74e67a" title="Get collision info between ray and sphere." alt="" coords="487,3841,645,3883"/>
-<area shape="rect" id="node67" href="$classraylib_1_1_collision3d_helper.html#a1a1d66d53fdc817ed2be128dc37c7f32" title="Get collision info between ray and triangle." alt="" coords="485,3907,647,3948"/>
-<area shape="rect" id="node68" href="$classraylib_1_1helper_1_1_world_helper.html#a4bbbb06b78c23c33af5e28db6e85020d" title="Get the world space position for a 2d camera screen space position." alt="" coords="481,3972,651,4013"/>
-<area shape="rect" id="node69" href="$classraylib_1_1helper_1_1_world_helper.html#a18ad366f3b48d95cb72092263f0aff59" title="Get the screen space position for a 3d world space position." alt="" coords="481,4037,651,4079"/>
-<area shape="rect" id="node70" href="$classraylib_1_1helper_1_1_world_helper.html#a1c4b46018d7d110f581582ad900d5047" title="Get the screen space position for a 2d camera world space position." alt="" coords="481,4103,651,4144"/>
-<area shape="rect" id="node71" href="$classraylib_1_1helper_1_1_world_helper.html#a9a42123ebf5e267427e3ac1322efb644" title="Get size position for a 3d world space position." alt="" coords="481,4168,651,4209"/>
-<area shape="rect" id="node72" href="$classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="491,1993,641,2019"/>
-<area shape="rect" id="node9" href="$classgameengine_1_1_button.html#ab48ce343d018badbbded36080171501d" title=" " alt="" coords="237,397,373,439"/>
-<area shape="rect" id="node30" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title=" " alt="" coords="213,2559,398,2600"/>
-<area shape="rect" id="node35" href="$classgameengine_1_1_static_body.html#a4a6aacabdc3097edca4506603db1c4af" title=" " alt="" coords="225,1717,386,1759"/>
-<area shape="rect" id="node53" href="$classgameengine_1_1_button.html#a86b8947acc68f942ed4e0de5dd064a08" title=" " alt="" coords="237,3541,373,3583"/>
-<area shape="rect" id="node54" href="$classgameengine_1_1_texture_rect.html#a4ea374bc98615ffa4d998fcaca590080" title=" " alt="" coords="221,3607,389,3648"/>
-<area shape="rect" id="node61" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html#a052f9a7e1a75873ee8da20d32c787c27" title="Create a mesh." alt="" coords="212,3936,399,3977"/>
-<area shape="rect" id="node62" href="$classraylib_1_1_rl_model.html#a867d4e90f2298fec360c6d9a294dccb9" title=" " alt="" coords="5,3943,164,3970"/>
+<area shape="rect" id="node1" title="Convert a Vector2f to a raylib vector." alt="" coords="531,1777,705,1819"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_collision3d_helper.html#afee0759c997658805fd37b229e79797c" title="Check collision between a bounding box and a sphere." alt="" coords="255,5,468,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#a89618651f062861aff3b101331504fda" title="Check if a circle is colliding with a rectangle." alt="" coords="254,71,469,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#a4ec8a7dd2b69bb50ce3151839124bca2" title="Check if two circles are colliding." alt="" coords="262,136,461,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#ae4ad70de85cabbb08fa7e57756d42431" title="Check the collision between two lines defined by two points each, returns collision point by referenc..." alt="" coords="266,201,457,243"/>
+<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#a0b5228151ebdedc3e5018f2aae537718" title="Check if point is inside circle." alt="" coords="250,267,473,308"/>
+<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#af773fc478216fe280b26683268462226" title="Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels..." alt="" coords="254,332,469,373"/>
+<area shape="rect" id="node8" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#adcc005637b43bf6f99ec27cb61745af8" title="Check if point is inside rectangle." alt="" coords="255,397,467,439"/>
+<area shape="rect" id="node10" href="$classraylib_1_1helper_1_1_collision2_d_helper.html#aed1970bee2617698412d58c25fe20075" title="Check if point is inside a triangle." alt="" coords="244,463,479,504"/>
+<area shape="rect" id="node11" href="$classraylib_1_1helper_1_1_collision3d_helper.html#a050ab4af11f1e2e62a2ae9f5042a5c43" title="Check collision between two spheres." alt="" coords="262,528,461,569"/>
+<area shape="rect" id="node12" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a633b858b106d6a22f983bd209d223018" title="Draw a billboard texture defined by source and rotation." alt="" coords="253,593,469,635"/>
+<area shape="rect" id="node13" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a2bbbbb0731f3d27b6f823af82f996748" title="Draw a color&#45;filled circle." alt="" coords="272,659,451,700"/>
+<area shape="rect" id="node14" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ae2e961fce56f54f0daa775e58978bd1c" title="Draw a piece of a circle." alt="" coords="253,724,470,765"/>
+<area shape="rect" id="node15" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a85b6335c8643f3e26d21fc79fed298f1" title="Draw circle sector outline." alt="" coords="253,789,470,845"/>
+<area shape="rect" id="node16" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#ab4fe6fca83c5e9c2d9c5831d068f55b5" title="Draw a cube in 3D." alt="" coords="273,868,449,909"/>
+<area shape="rect" id="node17" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a59a109f2e324d21750c726d63359d7a3" title="Draw cube textured in 3D." alt="" coords="252,933,471,975"/>
+<area shape="rect" id="node18" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#abc4309e4d39ed416fe15704258fd9327" title="Draw cube with a region of a texture in 3D." alt="" coords="240,999,483,1040"/>
+<area shape="rect" id="node19" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#ad4318148a02cb02fe8326b681287a23c" title="Draw cube wires in 3D." alt="" coords="257,1064,466,1105"/>
+<area shape="rect" id="node20" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#aaedea07d7d168932153ec50209eb348c" title="Draw a cylinder/cone in 3D." alt="" coords="265,1129,457,1171"/>
+<area shape="rect" id="node21" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#acf966b3f03880642ddf6b1f4ea3b2fea" title="Draw a cylinder/cone wires in 3D." alt="" coords="265,1194,457,1250"/>
+<area shape="rect" id="node22" href="$classraylib_1_1image_1_1_image_draw_helper.html#ab590f78697ad7064d46657f35a7be4f6" title="Draw text (custom sprite font) within an image (destination)" alt="" coords="279,1273,444,1315"/>
+<area shape="rect" id="node23" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a4f5c2cc1b45aa658e194f7999c9bf1b1" title="Draw a line." alt="" coords="276,1339,447,1380"/>
+<area shape="rect" id="node24" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a2f193bd47079f75a41bc9f2ec4e5cea9" title="Draw a Line using cubic&#45;bezier curves in&#45;out." alt="" coords="258,1404,465,1445"/>
+<area shape="rect" id="node25" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a00bf2e002f8905221bbc1c1b944f9d1c" title="Draw a line using cubic bezier curves with 2 control points." alt="" coords="258,1469,465,1525"/>
+<area shape="rect" id="node26" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a642e98679563e3d4cf283bc6258a67c3" title="Draw a line using quadratic bezier curves with a control point." alt="" coords="242,1548,481,1589"/>
+<area shape="rect" id="node27" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#aa5c846f978e5a374f89b060ca27a2304" title="Draw a model with extended parameters." alt="" coords="261,1613,461,1655"/>
+<area shape="rect" id="node28" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a549653368e73478ab676c0eeebd1038a" title="Draw a pixel." alt="" coords="274,1679,449,1720"/>
+<area shape="rect" id="node29" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a0fafb04042d7f74cc82538bfbfa2bc71" title="Draw a plane XZ in 3D." alt="" coords="272,1744,451,1785"/>
+<area shape="rect" id="node30" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a3a46714be635e4f601e2c61622273f88" title="Draw a regular polygon (Vector version)" alt="" coords="276,1809,447,1851"/>
+<area shape="rect" id="node31" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a56efb571e70734938a5410557a507439" title="Draw a polygon outline of n sides." alt="" coords="260,1875,463,1916"/>
+<area shape="rect" id="node32" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a8b566d2ffd096781dd0a043cde9bea08" title="Draw a filled rectangle." alt="" coords="259,1940,463,1981"/>
+<area shape="rect" id="node33" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a3834bd2798cca8c40cfde8a0b4728f11" title="Draw a ring." alt="" coords="275,2005,447,2047"/>
+<area shape="rect" id="node34" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a046e9739f6649156eadbeefe9236703e" title="Draw a ring outline." alt="" coords="259,2071,463,2112"/>
+<area shape="rect" id="node35" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a440d33f206f20551d44da7c9dd57b0c3" title="Draw sphere with extended parameters in 3D." alt="" coords="268,2136,455,2177"/>
+<area shape="rect" id="node36" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a99ab6eb53050315826b34582bf7bd654" title="Draw sphere wires in 3D." alt="" coords="251,2201,471,2243"/>
+<area shape="rect" id="node37" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a0af986a28ae4701e1ff06b70c9ca6b4b" title="Draw text using Font and &#39;pro&#39; parameters (rotation)" alt="" coords="271,2267,451,2308"/>
+<area shape="rect" id="node38" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#af8c5bad13a4dbbb81f0c50de7bb93bb9" title="Draw a texture with extended parameters." alt="" coords="289,2331,434,2387"/>
+<area shape="rect" id="node39" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a1647d91325dc5aaab127144e317c32fb" title="Draws a texture (or part of it) that stretches or shrinks nicely." alt="" coords="289,2411,434,2467"/>
+<area shape="rect" id="node40" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#aa53c987d59bb5d0879295e63a45a8b4e" title="Draw a texture quad with tiling and offset parameters." alt="" coords="289,2491,434,2547"/>
+<area shape="rect" id="node41" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#ac8b34cc1578173981b49f9d93507014c" title="Draw a part of a texture defined by a rectangle." alt="" coords="289,2571,434,2627"/>
+<area shape="rect" id="node43" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#afe64ae0d1d668bf89fba997fab79b150" title="Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest." alt="" coords="289,2651,434,2707"/>
+<area shape="rect" id="node44" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#ae935db70605ced8a49396ed7c3400a49" title="Draw one character (codepoint)" alt="" coords="254,2731,469,2787"/>
+<area shape="rect" id="node45" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ad9630ee1c03553bb3026aaa27dd48aa7" title="Draw a color&#45;filled triangle (vertex in counter&#45;clockwise order!)" alt="" coords="265,2811,457,2852"/>
+<area shape="rect" id="node46" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#a4b48e4c37d565c079624dabd86512cbc" title="Draw a triangle outline (vertex in counter&#45;clockwise order!)" alt="" coords="265,2875,457,2931"/>
+<area shape="rect" id="node47" href="$classraylib_1_1model_1_1_mesh_generator.html#a64a804f4e9c5e072613ddea0b3f6b460" title="Generate a mesh of a cubicmap." alt="" coords="267,2955,455,2996"/>
+<area shape="rect" id="node49" href="$classraylib_1_1model_1_1_mesh_generator.html#a15900dad8920385932dd682e3c0e0a58" title="Generate a mesh of a heightmap." alt="" coords="267,3020,455,3061"/>
+<area shape="rect" id="node50" href="$classraylib_1_1helper_1_1input_1_1_mouse_helper.html#ad6d135f9e0dbaca82d31b918addea997" title="Get a ray trace from mouse position." alt="" coords="266,3085,457,3127"/>
+<area shape="rect" id="node51" href="$classraylib_1_1helper_1_1_collision3d_helper.html#abc9c54f1f256fe1fdd47a96443a317c8" title="Get collision info between ray and quad." alt="" coords="268,3151,455,3192"/>
+<area shape="rect" id="node52" href="$classraylib_1_1helper_1_1_collision3d_helper.html#ab86a80ffd1f83511b568b8ce3a8a951a" title="Get collision info between ray and sphere." alt="" coords="263,3216,459,3257"/>
+<area shape="rect" id="node53" href="$classraylib_1_1helper_1_1_collision3d_helper.html#a8e8f7197a29a2e9919ee3ed2951a94a8" title="Get collision info between ray and triangle." alt="" coords="261,3281,462,3323"/>
+<area shape="rect" id="node54" href="$classraylib_1_1helper_1_1_world_helper.html#a4bbbb06b78c23c33af5e28db6e85020d" title="Get the world space position for a 2d camera screen space position." alt="" coords="276,3347,447,3388"/>
+<area shape="rect" id="node55" href="$classraylib_1_1helper_1_1_world_helper.html#a18ad366f3b48d95cb72092263f0aff59" title="Get the screen space position for a 3d world space position." alt="" coords="276,3412,447,3453"/>
+<area shape="rect" id="node56" href="$classraylib_1_1helper_1_1_world_helper.html#a1c4b46018d7d110f581582ad900d5047" title="Get the screen space position for a 2d camera world space position." alt="" coords="276,3477,447,3519"/>
+<area shape="rect" id="node57" href="$classraylib_1_1helper_1_1_world_helper.html#a9a42123ebf5e267427e3ac1322efb644" title="Get size position for a 3d world space position." alt="" coords="276,3543,447,3584"/>
+<area shape="rect" id="node58" href="$classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="286,3609,437,3635"/>
+<area shape="rect" id="node9" href="$classgameengine_1_1node_1_1__2_d_1_1_button.html#aa4fb625334876387cdc6440c02d6350d" title="Update the button." alt="" coords="31,397,166,439"/>
+<area shape="rect" id="node42" href="$classgameengine_1_1node_1_1__2_d_1_1_texture_rect.html#a84c8c3da69b28e82fdfaac5e52cfde67" title="Draw the texture rectangle." alt="" coords="21,2579,176,2620"/>
+<area shape="rect" id="node48" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html#a767b5fad102b8dc85be26dc9280de210" title="Create a mesh." alt="" coords="5,2988,192,3029"/>
+<area shape="rect" id="node59" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title="Draw all the nodes from the current scene." alt="" coords="6,3601,191,3643"/>
 </map>

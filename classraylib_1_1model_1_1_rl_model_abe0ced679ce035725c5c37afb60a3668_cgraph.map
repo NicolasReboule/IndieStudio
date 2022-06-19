@@ -1,0 +1,4 @@
+<map id="raylib::model::RlModel::RlModel" name="raylib::model::RlModel::RlModel">
+<area shape="rect" id="node1" title="Construct a new RlModel object from a file with a custom texture." alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_rl_model.html#a0af9ccb3a5568a701daba4e7ecef0adf" title="Set the material texture of the model (Default index 0 and type MATERIAL_MAP_DIFFUSE)" alt="" coords="200,5,347,47"/>
+</map>

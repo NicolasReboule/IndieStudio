@@ -1,0 +1,4 @@
+<map id="gameengine::node::AbstractBase::update" name="gameengine::node::AbstractBase::update">
+<area shape="rect" id="node1" title="Update the node." alt="" coords="195,5,376,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_scene.html#ada57900aa41b1171034589a0098549c2" title="Update the scene." alt="" coords="5,5,147,47"/>
+</map>

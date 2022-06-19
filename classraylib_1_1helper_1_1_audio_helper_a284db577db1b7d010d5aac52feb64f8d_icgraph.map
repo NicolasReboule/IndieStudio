@@ -1,0 +1,4 @@
+<map id="raylib::helper::AudioHelper::closeAudioDevice" name="raylib::helper::AudioHelper::closeAudioDevice">
+<area shape="rect" id="node1" title="Close the audio device and context." alt="" coords="235,5,405,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#a3c8767df90cda38882a7e387260ed350" title="Destroy the AudioManager object." alt="" coords="5,5,187,47"/>
+</map>

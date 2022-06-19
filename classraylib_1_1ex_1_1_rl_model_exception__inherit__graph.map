@@ -1,0 +1,5 @@
+<map id="raylib::ex::RlModelException" name="raylib::ex::RlModelException">
+<area shape="rect" id="node1" title="Exception thrown when a RlModel has any error." alt="" coords="5,271,185,348"/>
+<area shape="rect" id="node2" href="$classraylib_1_1ex_1_1_raylib_exception.html" title="All exceptions of the raylib&#45;cpp library will inherit from this class." alt="" coords="11,131,179,223"/>
+<area shape="rect" id="node3" title=" " alt="" coords="45,5,146,83"/>
+</map>

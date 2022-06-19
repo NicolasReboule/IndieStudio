@@ -1,6 +1,0 @@
-<map id="raylib::RlAnimation::RlAnimation" name="raylib::RlAnimation::RlAnimation">
-<area shape="rect" id="node1" title="Construct a new RlAnimation object." alt="" coords="5,71,133,112"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_file_helper.html#a147047e35c6b6bfd27d45099e25a0f40" title="Check if directory exists." alt="" coords="181,5,340,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_file_helper.html#a4e46b504d670003b3aee8ec7a9770f37" title="Get all files in directory." alt="" coords="181,71,340,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_file_helper.html#a9fae932b176c2d64e4041289aab6c7cd" title="Check if file extension is valid." alt="" coords="181,136,340,177"/>
-</map>

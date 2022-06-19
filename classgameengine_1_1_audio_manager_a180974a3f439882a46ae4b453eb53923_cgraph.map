@@ -1,0 +1,5 @@
+<map id="gameengine::AudioManager::playSound" name="gameengine::AudioManager::playSound">
+<area shape="rect" id="node1" title="Play a sound." alt="" coords="5,39,187,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1audio_1_1_rl_music.html#a47c4efb7a27890260901327d767815a5" title="Play the music stream." alt="" coords="235,5,378,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1audio_1_1_rl_sound.html#a7160890a4e7a8040361cbd82b8592821" title="Play a sound (using multichannel buffer pool)" alt="" coords="235,71,379,112"/>
+</map>

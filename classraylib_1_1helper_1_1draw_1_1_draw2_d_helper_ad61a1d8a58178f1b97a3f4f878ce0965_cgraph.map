@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::Draw2DHelper::setShapesTexture" name="raylib::helper::draw::Draw2DHelper::setShapesTexture">
 <area shape="rect" id="node1" title="Set texture and rectangle to be used on shapes drawing NOTE: It can be useful when using basic shapes..." alt="" coords="5,5,228,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1texture_1_1_rl_texture.html#a1e9bbbbd3f6689828e4a363f3228bb50" title="Get the texture." alt="" coords="276,13,459,39"/>
+<area shape="rect" id="node2" href="$classraylib_1_1texture_1_1_rl_texture.html#a0dea20c0fed308a46fe6e35ca0c5ea8d" title="Get the texture." alt="" coords="276,13,459,39"/>
 </map>

@@ -17,7 +17,7 @@ var searchData=
   ['endtexturemode_14',['endTextureMode',['../classraylib_1_1helper_1_1draw_1_1_draw_helper.html#acad8e537282243f8f8e82cdf2d25bf03',1,'raylib::helper::draw::DrawHelper']]],
   ['endvrstereomode_15',['endVrStereoMode',['../classraylib_1_1helper_1_1draw_1_1_draw_helper.html#aed18867f9c47eac58e66e952f27160b8',1,'raylib::helper::draw::DrawHelper']]],
   ['exceptions_2ehpp_16',['Exceptions.hpp',['../_exceptions_8hpp.html',1,'']]],
-  ['exportmesh_17',['exportMesh',['../classraylib_1_1_mesh_helper.html#af094e80aeb8d8c1f00b6005d6fbb4a58',1,'raylib::MeshHelper']]],
+  ['exportmesh_17',['exportMesh',['../classraylib_1_1model_1_1_rl_mesh.html#a2a565ba68408d47a71aa86ce4ac78500',1,'raylib::model::RlMesh']]],
   ['exportwave_18',['exportWave',['../classraylib_1_1audio_1_1_rl_wave.html#a0b33f6514b7e77814ad72d9c622ba06b',1,'raylib::audio::RlWave']]],
   ['exportwaveascode_19',['exportWaveAsCode',['../classraylib_1_1audio_1_1_rl_wave.html#a65df700be496709d20082f03c2252e8a',1,'raylib::audio::RlWave']]]
 ];

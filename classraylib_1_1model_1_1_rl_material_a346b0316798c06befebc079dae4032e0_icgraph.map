@@ -1,0 +1,5 @@
+<map id="raylib::model::RlMaterial::getMaterial" name="raylib::model::RlMaterial::getMaterial">
+<area shape="rect" id="node1" title="Get the raylib immutable Material." alt="" coords="251,41,408,83"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a1b227cc157939db8910baa26bd765cff" title="Draw a 3d mesh with material and transform." alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a58b25e2ef87331d67e2fb921b1f3cdd5" title="Draw multiple mesh instances with material and different transforms." alt="" coords="5,70,203,126"/>
+</map>

@@ -1,6 +1,6 @@
 <map id="raylib::Vector2&lt; T &gt;" name="raylib::Vector2&lt; T &gt;">
-<area shape="rect" id="node1" title="Struct containing a vector with 2 dimensions." alt="" coords="181,5,315,141"/>
-<area shape="rect" id="node2" href="$structraylib_1_1_vector2.html" title=" " alt="" coords="5,204,155,340"/>
-<area shape="rect" id="node3" href="$structraylib_1_1_vector2.html" title=" " alt="" coords="179,204,317,340"/>
-<area shape="rect" id="node4" href="$structraylib_1_1_vector2.html" title=" " alt="" coords="342,204,519,340"/>
+<area shape="rect" id="node1" title="Struct containing a vector with 2 dimensions." alt="" coords="215,5,349,141"/>
+<area shape="rect" id="node2" href="$structraylib_1_1_vector2.html" title=" " alt="" coords="5,204,183,340"/>
+<area shape="rect" id="node3" href="$structraylib_1_1_vector2.html" title=" " alt="" coords="207,204,357,340"/>
+<area shape="rect" id="node4" href="$structraylib_1_1_vector2.html" title=" " alt="" coords="381,204,519,340"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="gameengine::audio::Sound" name="gameengine::audio::Sound">
+<area shape="rect" id="node1" title="A sound effect." alt="" coords="123,321,258,428"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_abstract_sound.html" title="Abstraction for sound." alt="" coords="5,64,189,215"/>
+<area shape="rect" id="node3" href="$classraylib_1_1audio_1_1_rl_sound.html" title="Encapulation of the raylib Sound." alt="" coords="213,5,357,273"/>
+</map>

@@ -1,4 +1,4 @@
 <map id="raylib::helper::input::MouseHelper::isMouseButtonPressed" name="raylib::helper::input::MouseHelper::isMouseButtonPressed">
-<area shape="rect" id="node1" title="Check if a mouse button has been pressed once." alt="" coords="189,5,388,61"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_button.html#ab48ce343d018badbbded36080171501d" title=" " alt="" coords="5,13,141,54"/>
+<area shape="rect" id="node1" title="Check if a mouse button has been pressed once." alt="" coords="188,5,387,61"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_button.html#aa4fb625334876387cdc6440c02d6350d" title="Update the button." alt="" coords="5,13,140,54"/>
 </map>

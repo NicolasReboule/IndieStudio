@@ -1,0 +1,4 @@
+<map id="gameengine::node::_2D::Label::draw" name="gameengine::node::_2D::Label::draw">
+<area shape="rect" id="node1" title="Draw the label." alt="" coords="5,5,137,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a52e2ad81ad754c073c23b18381831bf1" title="Draw a text (using default font)" alt="" coords="185,5,365,47"/>
+</map>
