@@ -173,6 +173,7 @@ void indie::GameScene::updateScene(const float &delta)
         auto &mainMenuPos = buttonMainMenu.getPosition();
         auto &mainMenuOri = buttonMainMenu.getOrigin();
         auto &quitPos = buttonQuit.getPosition();
+        auto &quitOri = buttonQuit.getOrigin();
 
         static bool mouseMoved = false;
         if (!mouseMoved) {
@@ -187,7 +188,7 @@ void indie::GameScene::updateScene(const float &delta)
                     raylib::helper::input::MouseHelper::setMousePosition((int) mainMenuPos.x, (int) (mainMenuPos.y - mainMenuOri.y));
                     break;
                 case 3:
-                    raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitPos.y));
+                    raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitOri.y));
                     break;
             }
             mouseMoved = true;
@@ -205,7 +206,7 @@ void indie::GameScene::updateScene(const float &delta)
                 mouseMoved = false;
             }
             else if (this->_indexMenu == 2) {
-                raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitPos.y));
+                raylib::helper::input::MouseHelper::setMousePosition((int) quitPos.x, (int) (quitPos.y - quitOri.y));
                 this->_indexMenu = 3;
                 mouseMoved = false;
             }
