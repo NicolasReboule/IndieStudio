@@ -92,3 +92,7 @@ add_library(${PROJECT_NAME}
         src/GameEngine/TextureManager.cpp
         )
 target_link_libraries(${PROJECT_NAME} raylib)
+
+install(TARGETS ${PROJECT_NAME} DESTINATION lib)
+install(DIRECTORY include/raylib DESTINATION include)
+install(DIRECTORY include/GameEngine DESTINATION include)

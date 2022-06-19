@@ -107,6 +107,7 @@ namespace indie::map {
         std::unordered_map<char, Map::MapType> _mapSymbol; /**< The map for binding char and map type*/
         std::vector<std::shared_ptr<Map>> _maps; /**< The vector of maps*/
         Vector2u _mapSizeMax; /**< The max size of the map*/
+        std::string _tmpMapPath; /**< The temporary map path*/
     };
 }
 

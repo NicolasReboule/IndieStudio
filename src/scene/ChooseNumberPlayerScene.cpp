@@ -7,9 +7,10 @@
 
 #include "scene/ChooseNumberPlayerScene.hpp"
 
-indie::ChooseNumberPlayerScene::ChooseNumberPlayerScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource)
+indie::ChooseNumberPlayerScene::ChooseNumberPlayerScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource), _map3DLoader(indie::map::Map3DLoader::getInstance())
 {
     this->_indexMenu = 0;
+    this->_savedIndexMap = -1;
 }
 
 void indie::ChooseNumberPlayerScene::sceneLauncher()
@@ -17,7 +18,6 @@ void indie::ChooseNumberPlayerScene::sceneLauncher()
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &textureManager = gameengine::TextureManager::getInstance();
-    auto &mapLoader = indie::map::Map3DLoader::getInstance();
 
     auto button1p = std::make_shared<indie::button::IndieButton>("button1p",
     textureManager->getTexture("./assets/textures/gui/button_1p.png"), [globalInstance, sceneManager](auto &name) {
@@ -56,32 +56,24 @@ void indie::ChooseNumberPlayerScene::sceneLauncher()
     this->addNode(buttonLeft);
 
     auto buttonRight = std::make_shared<indie::button::IndieButton>("buttonRight",
-        textureManager->getTexture("./assets/textures/gui/button_right.png"), [globalInstance, sceneManager, mapLoader](auto &name) {
+        textureManager->getTexture("./assets/textures/gui/button_right.png"), [this, globalInstance, sceneManager](auto &name) {
             int index = globalInstance->_indexMap;
-            if (index < mapLoader->getMaps().size() - 1)
+            if (index < this->_map3DLoader->getMaps().size() - 1)
                 globalInstance->_indexMap = index + 1;
     });
     this->addNode(buttonRight);
 
     auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu", textureManager->getTexture("./assets/textures/gui/button_main_menu_x05.png"));
     this->addNode(buttonMainMenu);
-
-    auto mapDefault = std::make_shared<indie::Image>("mapDefault", textureManager->getTexture("./assets/textures/gui/map/default.png"));
-    this->addNode(mapDefault);
-
-    auto mapEmpty = std::make_shared<indie::Image>("mapEmpty", textureManager->getTexture("./assets/textures/gui/map/empty.png"));
-    this->addNode(mapEmpty);
-
-    auto mapCool = std::make_shared<indie::Image>("mapCool", textureManager->getTexture("./assets/textures/gui/map/cool.png"));
-    this->addNode(mapCool);
 }
 
 void indie::ChooseNumberPlayerScene::initScene()
 {
     auto sceneManager = gameengine::SceneManager::getInstance();
-    auto &globalInstnace = indie::GlobalInstance::getInstance();
+    auto &globalInstance = indie::GlobalInstance::getInstance();
 
-    globalInstnace->_indexMap = 0;
+    globalInstance->_indexMap = 0;
+    this->_savedIndexMap = -1;
 
     this->_indexMenu = 0;
     raylib::helper::input::MouseHelper::setMousePosition(100, 550);
@@ -96,11 +88,6 @@ void indie::ChooseNumberPlayerScene::initScene()
     auto &buttonLeft = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonLeft"));
     auto &buttonRight = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonRight"));
 
-    auto &mapDefault = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapDefault"));
-    auto &mapEmpty = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapEmpty"));
-    auto &mapCool = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapCool"));
-
-
     button1p.setPosition({000, 500});
     button2p.setPosition({320, 500});
     button3p.setPosition({640, 500});
@@ -110,39 +97,29 @@ void indie::ChooseNumberPlayerScene::initScene()
 
     buttonLeft.setPosition({50, 200});
     buttonRight.setPosition({1150, 200});
-
-    mapDefault.setPosition({420, 10});
-    mapEmpty.setPosition({420, 10});
-    mapCool.setPosition({420, 10});
 }
 
 void indie::ChooseNumberPlayerScene::updateScene(const float &delta)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
-    auto &globalInstnace = indie::GlobalInstance::getInstance();
+    auto &globalInstance = indie::GlobalInstance::getInstance();
+    auto &window = raylib::window::RlWindow::getInstance();
 
-    auto &mapDefault = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapDefault"));
-    auto &mapEmpty = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapEmpty"));
-    auto &mapCool = dynamic_cast<indie::Image &>(*sceneManager->getNode("mapCool"));
-
-    switch (globalInstnace->_indexMap) {
-        case 0:
-            mapDefault.setHiding(false);
-            mapEmpty.setHiding(true);
-            mapCool.setHiding(true);
-            break;
-        case 1:
-            mapDefault.setHiding(true);
-            mapEmpty.setHiding(true);
-            mapCool.setHiding(false);
-            break;
-        case 2:
-            mapDefault.setHiding(true);
-            mapEmpty.setHiding(false);
-            mapCool.setHiding(true);
-            break;
-        default:
-            break;
+    if (this->_savedIndexMap != globalInstance->_indexMap) {
+        auto &map = this->_map3DLoader->getMaps()[globalInstance->_indexMap];
+        auto &mapSize = map->getMapSize();
+        if (this->_savedIndexMap != -1) {
+            auto &oldMap = this->_map3DLoader->getMaps()[this->_savedIndexMap];
+            this->deleteNodeIncludes(oldMap->getMapPath());
+        }
+        for (const auto &item: map->getMapModels())
+            this->addNode(item);
+        Vector2i size = {(int) mapSize.x + 2, (int) mapSize.y + 2};
+        Vector3f position = {size.x % 2 == 0 ? -0.5f : 0, 0, size.y % 2 == 0 ? -0.5f : 0};
+        this->addNode(std::make_shared<gameengine::node::_3D::Grid3D>(size, position, 1.0f, RlColor::White, map->getMapPath() + "-grid"));
+        raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({-20, 20, -20}).setCameraMode(CAMERA_ORBITAL).build();
+        window->setCamera(camera);
+        this->_savedIndexMap = globalInstance->_indexMap;
     }
 
     auto &button1p = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("button1p"));

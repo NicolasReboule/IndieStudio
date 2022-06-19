@@ -28,3 +28,4 @@ bomberman
 *.dir/
 *.lib
 *.pdb
+dist/

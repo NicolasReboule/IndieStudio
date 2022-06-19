@@ -42,19 +42,24 @@ int main(int ac, char **av)
 
         while (window->isOpen()) {
             sceneManager->makeLoop(window->getCamera());
+            std::cout << window->getCamera() << std::endl;
             dynamic_cast<raylib::audio::RlMusic &>(*sound).update();
         }
     } catch (gameengine::ex::GameEngineException &e) {
         std::cerr << "An error occured in the GameEngine: " << e.what() << std::endl;
+        indie::map::Map3DLoader::getInstance().reset(); //Fix window close before map destroyed
         return (84);
     } catch (raylib::ex::RaylibException &e) {
         std::cerr << "An error occured in the raylib: " << e.what() << std::endl;
+        indie::map::Map3DLoader::getInstance().reset();
         return (84);
     } catch (std::exception &e) {
         std::cerr << "A standard error occured: " << e.what() << std::endl;
+        indie::map::Map3DLoader::getInstance().reset();
         return (84);
     } catch (...) {
         std::cerr << "An unknown error occured" << std::endl;
+        indie::map::Map3DLoader::getInstance().reset();
         return (84);
     }
     indie::map::Map3DLoader::getInstance().reset();

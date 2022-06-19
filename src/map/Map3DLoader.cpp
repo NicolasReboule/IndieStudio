@@ -36,6 +36,7 @@ void indie::map::Map3DLoader::addMap(const std::string &mapPath)
 
 void indie::map::Map3DLoader::parseMap(const std::string &mapPath)
 {
+    this->_tmpMapPath = mapPath;
     gameengine::map::MapParser<Map::MapType> mapParser(mapPath, this->_mapSymbol, this->_mapSizeMax);
     mapParser.parse();
     auto mapSize = mapParser.getSize();
@@ -94,7 +95,7 @@ void indie::map::Map3DLoader::addWall(std::vector<std::shared_ptr<gameengine::no
 const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
     static unsigned long id = 0;
-    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/bricks.png"));
+    auto wall = std::make_shared<indie::Wall>(this->_tmpMapPath + "-wall" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/bricks.png"));
     wall->setPosition(position);
     models.push_back(wall);
 }
@@ -103,7 +104,7 @@ void indie::map::Map3DLoader::addBreakableWall(std::vector<std::shared_ptr<gamee
 const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
     static unsigned long id = 0;
-    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/blackstone.png"));
+    auto breakable = std::make_shared<indie::WallDestroyable>(this->_tmpMapPath + "-wallDestroyable" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/blackstone.png"));
     breakable->setPosition(position);
     models.push_back(breakable);
 }
@@ -112,7 +113,7 @@ void indie::map::Map3DLoader::addFloor(std::vector<std::shared_ptr<gameengine::n
 const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
     static unsigned long id = 0;
-    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/andesite.png"));
+    auto floor = std::make_shared<indie::Wall>(this->_tmpMapPath + "-floor" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/andesite.png"));
     floor->setPosition(position);
     floor->setCollisionEnable(false);
     floor->setScale({1, 0.1, 1});

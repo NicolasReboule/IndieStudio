@@ -28,6 +28,8 @@ namespace indie {
         void sceneLauncher() override;
     private:
         int _indexMenu;
+        int _savedIndexMap;
+        std::shared_ptr<indie::map::Map3DLoader> &_map3DLoader;
     };
 }
 
