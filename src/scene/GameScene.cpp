@@ -167,32 +167,40 @@ void indie::GameScene::updateScene(const float &delta)
         auto &buttonRestart = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonRestart"));
         auto &buttonMainMenu = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonMainMenu"));
         auto &buttonQuit = dynamic_cast<indie::button::IndieButton &>(*sceneManager->getNode("buttonQuit"));
+        auto &resumePos = buttonResume.getPosition();
+        auto &resumeOri = buttonResume.getOrigin();
+        auto &restartPos = buttonRestart.getPosition();
+        auto &restartOri = buttonRestart.getOrigin();
+        auto &mainMenuPos = buttonMainMenu.getPosition();
+        auto &mainMenuOri = buttonMainMenu.getOrigin();
+        auto &quitPos = buttonQuit.getPosition();
+        auto &quitOri = buttonQuit.getOrigin();
 
         if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
             if (this->_indexMenu == 0) {
-                raylib::helper::input::MouseHelper::setMousePosition(550, 225);
+                raylib::helper::input::MouseHelper::setMousePosition((int) (restartPos.x + restartOri.x), (int) (restartPos.y + restartOri.y));
                 this->_indexMenu = 1;
             }
             else if (this->_indexMenu == 1) {
-                raylib::helper::input::MouseHelper::setMousePosition(550, 325);
+                raylib::helper::input::MouseHelper::setMousePosition((int) (mainMenuPos.x + mainMenuOri.x), (int) (mainMenuPos.y + mainMenuOri.y));
                 this->_indexMenu = 2;
             }
             else if (this->_indexMenu == 2) {
-                raylib::helper::input::MouseHelper::setMousePosition(550, 425);
+                raylib::helper::input::MouseHelper::setMousePosition((int) (quitPos.x + quitOri.x), (int) (quitPos.y + quitOri.y));
                 this->_indexMenu = 3;
             }
         }
         if (raylib::helper::input::GamepadHelper::isGamepadButtonPressed(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
             if (this->_indexMenu == 1) {
-                raylib::helper::input::MouseHelper::setMousePosition(550, 125);
+                raylib::helper::input::MouseHelper::setMousePosition((int) (resumePos.x + resumeOri.x), (int) (resumePos.y + resumeOri.y));
                 this->_indexMenu = 0;
             }
             else if (this->_indexMenu == 2) {
-                raylib::helper::input::MouseHelper::setMousePosition(550, 225);
+                raylib::helper::input::MouseHelper::setMousePosition((int) (restartPos.x + restartOri.x), (int) (restartPos.y + restartOri.y));
                 this->_indexMenu = 1;
             }
             else if (this->_indexMenu == 3) {
-                raylib::helper::input::MouseHelper::setMousePosition(550, 325);
+                raylib::helper::input::MouseHelper::setMousePosition((int) (mainMenuPos.x + mainMenuOri.x), (int) (mainMenuPos.y + mainMenuOri.y));
                 this->_indexMenu = 2;
             }
         }

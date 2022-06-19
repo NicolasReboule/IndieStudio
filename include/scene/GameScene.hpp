@@ -37,8 +37,9 @@ namespace indie {
 
     private:
         int _indexMenu;
-
         float _winTimer;
+
+        std::vector<Vector2f> buttonsPos;
 
         std::unique_ptr<map::Map3DLoader> &_map3DLoader;
         std::shared_ptr<map::Map> _map;

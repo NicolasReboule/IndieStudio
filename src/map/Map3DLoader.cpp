@@ -36,7 +36,6 @@ void indie::map::Map3DLoader::addMap(const std::string &mapPath)
 
 void indie::map::Map3DLoader::parseMap(const std::string &mapPath)
 {
-    static unsigned long id = 0;
     gameengine::map::MapParser<Map::MapType> mapParser(mapPath, this->_mapSymbol, this->_mapSizeMax);
     mapParser.parse();
     auto mapSize = mapParser.getSize();
