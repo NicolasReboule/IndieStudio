@@ -93,8 +93,8 @@ namespace raylib {
 		+setRed(unsigned char r) : RlColor&
 		+toHSV() : Vector3f
 		+normalize() : Vector4f {query}
-		+operator!=(const RlColor& rhs) : bool {query}
-		+operator==(const RlColor& rhs) : bool {query}
+		+operator!=(const RlColor& other) : bool {query}
+		+operator==(const RlColor& other) : bool {query}
 		+{static} Beige : static const RlColor
 		+{static} Black : static const RlColor
 		+{static} Blue : static const RlColor
@@ -351,7 +351,7 @@ namespace raylib {
 			+{static} genMeshCube(const float& width, const float& height, const float& length) : RlMesh
 			+{static} genMeshCubicmap(const image::RlImage& cubicmap, const Vector3f& cubeSize) : RlMesh
 			+{static} genMeshCylinder(const float& radius, const float& height, const int& slices) : RlMesh
-			+{static} genMeshHeightmap(const image::RlImage& heightmap, const Vector3f& size) : RlMesh
+			+{static} genMeshHeightmap(const image::RlImage& heightMap, const Vector3f& size) : RlMesh
 			+{static} genMeshHemiSphere(const float& radius, const int& rings, const int& slices) : RlMesh
 			+{static} genMeshKnot(const float& radius, const float& size, const int& radSeg, const int& sides) : RlMesh
 			+{static} genMeshPlane(const float& width, const float& length, const int& resX, const int& resZ) : RlMesh
@@ -608,7 +608,7 @@ namespace raylib {
 			+{static} getWorkingDirectory() : std::string
 			+{static} loadFileText(const std::string& fileName) : std::string
 			+{static} getDirectoryFiles(const std::string& dirPath, const bool& recursive) : std::vector<std::string>
-			+{static} getDirectoryFiles(const std::string& dirPath, const std::function<bool ( const std::string& )>& filter) : std::vector<std::string>
+			+{static} getDirectoryFiles(const std::string& dirPath, const std::function<bool ( const std::string& )>& filterFunction) : std::vector<std::string>
 			+{static} getDirectoryFiles(const std::string& dirPath, const bool& recursive, const std::function<bool ( const std::string& fileName )>& filterFunction) : std::vector<std::string>
 			+{static} getDroppedFiles() : std::vector<std::string>
 			+{static} loadFileData(const std::string& fileName) : std::vector<unsigned char>
