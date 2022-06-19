@@ -4,12 +4,12 @@ Engine & Raylib encapsulation for IndieStudio project
 
 ## Team
 
-- [Alwyn Mattapullut](alwyn.mattapullut@epitech.eu) - **Leader**
-- [Noa Olivette](noa.olivette@epitech.eu) - **Developer**
-- [Nicolas Reboulé](nicolas.reboule@epitech.eu) - **Developper**
-- [Hugo Baret](hugo.baret@epitech.eu) - **Developper**
-- [Quentin Robert](quentin.robert@epitech.eu) - **Missing Person**
-- [Nicolas Julie](nicolas.julie@epitech.eu) - **Missing Person**
+- [Alwyn Mattapullut](alwyn.mattapullut@epitech.eu) - 🎓 💻
+- [Noa Olivette](noa.olivette@epitech.eu) - 🎮 💻
+- [Nicolas Reboulé](nicolas.reboule@epitech.eu) - 💻
+- [Hugo Baret](hugo.baret@epitech.eu) - 💻
+- [Quentin Robert](quentin.robert@epitech.eu) - 👨🏿‍🦯
+- [Nicolas Julie](nicolas.julie@epitech.eu) - 🤏
 
 ## Wiki
 
