@@ -7,8 +7,10 @@
 
 #include "IndieStudio.hpp"
 
-int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
+int main(int ac, char **av)
 {
+    (void) ac;
+    (void) av;
     try {
         auto &window = raylib::window::RlWindow::getInstance();
         auto &sceneManager = gameengine::SceneManager::getInstance();

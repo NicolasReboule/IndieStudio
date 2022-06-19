@@ -10,6 +10,7 @@
 
 #include "raylib/Core/FileHelper.hpp"
 #include "raylib/exception/RaylibException.hpp"
+#include "RlModel.hpp"
 #include <string>
 #include <vector>
 #include <raylib.h>
@@ -50,11 +51,6 @@ namespace raylib {
             explicit RlAnimation(const std::string &animationDir,  const std::string &extension);
 
             /**
-             * @brief Destroy the RlAnimation object
-             */
-            ~RlAnimation();
-
-            /**
              * @brief Update the animation
              */
             void update();
@@ -63,7 +59,7 @@ namespace raylib {
              * @brief get models of the animation
              * @return a vector of models
              */
-            const std::vector<Model> &getAnimationModels() const;
+            const std::vector<RlModel> &getAnimationModels() const;
 
             /**
              * @brief Get the number of frames of the animation
@@ -86,7 +82,7 @@ namespace raylib {
 
         private:
             bool _isLoaded; /**< If the animations has been laoded*/
-            std::vector<Model> _animationModels; /** All the models for the animation */
+            std::vector<RlModel> _animationModels; /** All the models for the animation */
             unsigned int _frame; /** The frame index of the current model */
         };
     }

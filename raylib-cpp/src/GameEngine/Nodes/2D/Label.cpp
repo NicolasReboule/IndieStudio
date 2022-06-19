@@ -14,7 +14,6 @@ gameengine::node::_2D::Label::Label(const std::string &name, const Vector2f &pos
 
 void gameengine::node::_2D::Label::init()
 {
-    //TODO: change this
     this->_textComponent = raylib::builder::RlTextBuilder()
         .setText(this->_text)
         .setPosition(this->_position)

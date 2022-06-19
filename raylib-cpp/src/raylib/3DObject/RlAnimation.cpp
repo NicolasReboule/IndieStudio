@@ -7,7 +7,6 @@
 
 #include "raylib/3DObject/RlAnimation.hpp"
 
-//TODO: change this to RlModel
 raylib::model::RlAnimation::RlAnimation(const std::string &animationDir, const std::string &extension): _frame(0), _isLoaded(false)
 {
     if (!helper::FileHelper::directoryExists(animationDir))
@@ -17,14 +16,8 @@ raylib::model::RlAnimation::RlAnimation(const std::string &animationDir, const s
     });
     std::sort(modelsNames.begin(), modelsNames.end());
     for (const auto &item : modelsNames)
-        this->_animationModels.push_back(LoadModel(item.c_str()));
+        this->_animationModels.emplace_back(item);
     this->_isLoaded = true;
-}
-
-raylib::model::RlAnimation::~RlAnimation()
-{
-    for (const auto &item : this->_animationModels)
-        UnloadModel(item);
 }
 
 void raylib::model::RlAnimation::update()
@@ -36,7 +29,7 @@ void raylib::model::RlAnimation::update()
         this->_frame = 0;
 }
 
-const std::vector<Model> &raylib::model::RlAnimation::getAnimationModels() const
+const std::vector<raylib::model::RlModel> &raylib::model::RlAnimation::getAnimationModels() const
 {
     return this->_animationModels;
 }

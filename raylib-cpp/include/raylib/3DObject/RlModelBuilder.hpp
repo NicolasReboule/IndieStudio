@@ -17,7 +17,7 @@
 
 namespace raylib::builder {
     /**
-     * @brief Builder to create a RlModel easily //TODO: rework this shit
+     * @brief Builder to create a RlModel easily
      */
     class RlModelBuilder : public IBuilder<raylib::model::RlModel> {
     public:
@@ -27,13 +27,6 @@ namespace raylib::builder {
         RlModelBuilder();
 
         /**
-         * @brief Build the RlModel
-         * @throws BuilderException
-         * @return the RlModel
-         */
-        raylib::model::RlModel build() override;
-
-        /**
          * @brief Set the mesh
          * @param mesh Mesh of the model
          * @return the ModelBuilder object
@@ -41,11 +34,11 @@ namespace raylib::builder {
         RlModelBuilder &setMesh(const std::shared_ptr<raylib::model::RlMesh> &mesh);
 
         /**
-         * @brief Set the mesh type
-         * @param meshType Mesh type of the model
+         * @brief Set the mesh
+         * @param mesh the mesh
          * @return the ModelBuilder object
          */
-        RlModelBuilder &setMeshType(const raylib::builder::RlMeshBuilder::MeshType &meshType);
+        RlModelBuilder &setMesh(const raylib::model::RlMesh &mesh);
 
         /**
          * @brief Set the model path
@@ -75,6 +68,20 @@ namespace raylib::builder {
          */
         RlModelBuilder &setScale(const Vector3f &scale);
 
+         /**
+          * @brief Set the color
+          * @param color Color of the model
+          * @return the ModelBuilder object
+          */
+         RlModelBuilder &setColor(const RlColor &color);
+
+        /**
+         * @brief Build the RlModel
+         * @throws BuilderException
+         * @return the RlModel
+         */
+        raylib::model::RlModel build() override;
+
         /**
          * @brief Set the rotation
          * @param rotation Rotation of the model
@@ -87,24 +94,52 @@ namespace raylib::builder {
          * @param rotationAngle Rotation angle of the model
          * @return the ModelBuilder object
          */
-         RlModelBuilder &setRotationAngle(const float &rotationAngle);
+        RlModelBuilder &setRotationAngle(const float &rotationAngle);
 
-         /**
-          * @brief Set the color
-          * @param color Color of the model
-          * @return the ModelBuilder object
-          */
-         RlModelBuilder &setColor(const RlColor &color);
+        /**
+         * @brief Set the bouding box of the model
+         * @param boundingBox the bounding box
+         * @return the ModelBuilder object
+         */
+        RlModelBuilder &setBoundingBox(const BoundingBox &boundingBox);
+
+        /**
+         * @brief Set the texture of the model
+         * @param texture the texture
+         * @return the ModelBuilder object
+         */
+        RlModelBuilder &setTexture(const std::shared_ptr<texture::RlTexture> &texture);
+
     private:
-        std::shared_ptr<raylib::model::RlMesh> _mesh;
-        long _type;
-        std::string _modelPath;
-        std::string _texturePath;
-        Vector3f _position;
-        Vector3f _scale;
-        Vector3f _rotationAxis;
-        float _rotationAngle;
-        RlColor _color;
+        enum RequiredParameter {
+            MESH = 2,
+            MODEL_PATH = 8,
+            TEXTURE_PATH = 16,
+            SHARED_TEXTURE = 32
+        };
+
+        enum ValidType {
+            RLMODEL_PATH = MODEL_PATH,
+            RLMODEL_PATH_AND_TEXTURE = MODEL_PATH | TEXTURE_PATH,
+            RLMODEL_PATH_AND_SHARED_TEXTURE = MODEL_PATH | SHARED_TEXTURE,
+            RLMODEL_MESH = MESH,
+            RLMODEL_MESH_AND_SHARED_TEXTURE = MESH | SHARED_TEXTURE,
+        };
+
+        static std::vector<ValidType> _validTypes;
+
+        long _flags; /**< Flag used for the builder */
+        std::shared_ptr<raylib::model::RlMesh> _mesh; /**< The linked mesh*/
+        std::string _modelPath; /**< The path to the model */
+        std::string _texturePath; /**< The texture path */
+        Vector3f _position; /**< The position of the model */
+        Vector3f _scale; /**< The scale of the model */
+        RlColor _color; /**< The color of the model */
+        Vector3f _rotationAxis; /**< The ratation axis of the model */
+        float _rotationAngle; /**< The rotation angle of the model */
+        BoundingBox _boundingBox; /**< The bounding box of the model */
+        bool _boundingBoxSet; /**< True if the bounding box is set */
+        std::shared_ptr<texture::RlTexture> _texture; /**< The linked texture*/
     };
 }
 #endif //INDIESTUDIO_RLMODELBUILDER_HPP

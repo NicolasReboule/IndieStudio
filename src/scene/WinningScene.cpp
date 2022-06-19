@@ -26,7 +26,6 @@ void indie::WinningScene::sceneLauncher()
 
     std::cout << "winner: " << globalInstance->_playerWinner << std::endl;
 
-    //TODO: replace this with manager
     auto blueTexture = textureManager->getTexture("./assets/textures/players/blue.png");
     auto redTexture = textureManager->getTexture("./assets/textures/players/red.png");
     auto greenTexture = textureManager->getTexture("./assets/textures/players/green.png");

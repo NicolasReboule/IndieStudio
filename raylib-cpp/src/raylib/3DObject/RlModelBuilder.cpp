@@ -7,77 +7,130 @@
 
 #include "raylib/3DObject/RlModelBuilder.hpp"
 
-raylib::builder::RlModelBuilder::RlModelBuilder() : _mesh(), _modelPath(), _texturePath(), _position(0, 0, 0), _scale(1, 1, 1), _rotationAxis(0, 0, 0), _color(WHITE)
-{
-    _type = 0;
-    _rotationAngle = 0;
-}
+std::vector<raylib::builder::RlModelBuilder::ValidType> raylib::builder::RlModelBuilder::_validTypes = {
+    RLMODEL_PATH,
+    RLMODEL_PATH_AND_TEXTURE,
+    RLMODEL_PATH_AND_SHARED_TEXTURE,
+    RLMODEL_MESH,
+    RLMODEL_MESH_AND_SHARED_TEXTURE
+};
 
-raylib::model::RlModel raylib::builder::RlModelBuilder::build()
+raylib::builder::RlModelBuilder::RlModelBuilder() : _mesh(), _modelPath(), _texturePath(),
+_position(0, 0, 0), _scale(1, 1, 1), _rotationAxis(0, 0, 0), _color(RlColor::White), _boundingBox()
 {
-    if (_modelPath.empty() && _mesh == nullptr && _type == 0)
-        throw raylib::ex::BuilderException("Nor model path, nor mesh, nor type are set");
-    if (_modelPath.empty()) {
-        //raylib::model::RlModel model(*_mesh);
-        //model.setMaterialTexture(_texturePath);
-        //model.setPosition(_position);
-    } else if (_type != 0) {
-        //raylib::model::RlModel model((raylib::builder::RlMeshBuilder::MeshType) _type);
-        //return model;
-    }
-    return raylib::model::RlModel(_modelPath);
+    this->_flags = 0;
+    this->_rotationAngle = 0;
 }
 
 raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMesh(const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
-    _mesh = mesh;
+    this->_mesh = mesh;
+    this->_flags |= MESH;
     return *this;
 }
 
-raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMeshType(const raylib::builder::RlMeshBuilder::MeshType &meshType)
+raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setMesh(const raylib::model::RlMesh &mesh)
 {
-    _type = meshType;
+    this->_mesh = std::make_shared<raylib::model::RlMesh>(mesh);
+    this->_flags |= MESH;
     return *this;
 }
 
 raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setModelPath(const std::string &modelPath)
 {
-    _modelPath = modelPath;
+    this->_modelPath = modelPath;
+    this->_flags |= MODEL_PATH;
     return *this;
 }
 
 raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setTexturePath(const std::string &texturePath)
 {
-    _texturePath = texturePath;
+    this->_texturePath = texturePath;
+    this->_flags |= TEXTURE_PATH;
     return *this;
 }
 
 raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setPosition(const Vector3f &position)
 {
-    _position = position;
+    this->_position = position;
     return *this;
 }
 
 raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setScale(const Vector3f &scale)
 {
-    _scale = scale;
-    return *this;
-}
-
-raylib::builder::RlModelBuilder raylib::builder::RlModelBuilder::setRotationAxis(const Vector3f &rotationAxis)
-{
-    _rotationAxis = rotationAxis;
-    return *this;
-}
-
-raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setRotationAngle(const float &rotationAngle)
-{
-    _rotationAngle = rotationAngle;
+    this->_scale = scale;
     return *this;
 }
 
 raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setColor(const RlColor &color)
 {
-    _color = color;
+    this->_color = color;
     return *this;
 }
+
+raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setRotationAngle(const float &rotationAngle)
+{
+    this->_rotationAngle = rotationAngle;
+    return *this;
+}
+
+raylib::builder::RlModelBuilder raylib::builder::RlModelBuilder::setRotationAxis(const Vector3f &rotationAxis)
+{
+    this->_rotationAxis = rotationAxis;
+    return *this;
+}
+
+raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setBoundingBox(const BoundingBox &boundingBox)
+{
+    this->_boundingBox = boundingBox;
+    this->_boundingBoxSet = true;
+    return *this;
+}
+
+raylib::builder::RlModelBuilder &raylib::builder::RlModelBuilder::setTexture(const std::shared_ptr<texture::RlTexture> &texture)
+{
+    this->_texture = texture;
+    this->_flags |= SHARED_TEXTURE;
+    return *this;
+}
+
+raylib::model::RlModel raylib::builder::RlModelBuilder::build()
+{
+    bool isValid = false;
+    for (auto &type : _validTypes) {
+        isValid = this->_flags == type;
+        if (isValid)
+            break;
+    }
+    if (!isValid)
+        throw raylib::ex::BuilderException("Invalid parameter for model builder");
+    std::shared_ptr<raylib::model::RlModel> model;
+    switch (this->_flags) {
+        case RLMODEL_PATH:
+            model = std::make_shared<model::RlModel>(this->_modelPath);
+            break;
+        case RLMODEL_PATH_AND_TEXTURE:
+            model = std::make_shared<model::RlModel>(this->_modelPath, this->_texturePath);
+            break;
+        case RLMODEL_PATH_AND_SHARED_TEXTURE:
+            model = std::make_shared<model::RlModel>(this->_modelPath);
+            model->setMaterialTexture(this->_texture);
+            break;
+        case RLMODEL_MESH:
+            model = std::make_shared<model::RlModel>(this->_mesh);
+            break;
+        case RLMODEL_MESH_AND_SHARED_TEXTURE:
+            model = std::make_shared<model::RlModel>(this->_modelPath);
+            model->setMaterialTexture(this->_texture);
+            break;
+    }
+    model->setPosition(this->_position);
+    model->setScale(this->_scale);
+    model->setColor(this->_color);
+    model->setRotationAxis(this->_rotationAxis);
+    model->setRotationAngle(this->_rotationAngle);
+    if (this->_boundingBoxSet)
+        model->setBoundingBox(this->_boundingBox);
+    return *model;
+}
+
