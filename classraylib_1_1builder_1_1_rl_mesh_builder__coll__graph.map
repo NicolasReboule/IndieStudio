@@ -1,5 +1,5 @@
 <map id="raylib::builder::RlMeshBuilder" name="raylib::builder::RlMeshBuilder">
-<area shape="rect" id="node1" title="Builder to create a RlMesh easily." alt="" coords="5,287,192,657"/>
-<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="25,145,172,237"/>
-<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_i_builder.html" title="Interface for all the builder." alt="" coords="11,5,187,83"/>
+<area shape="rect" id="node1" title="Builder to create a RlMesh easily." alt="" coords="5,287,220,657"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="27,145,198,237"/>
+<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_i_builder.html" title="Interface for all the builder." alt="" coords="9,5,217,83"/>
 </map>

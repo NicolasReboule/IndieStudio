@@ -1,4 +1,4 @@
 <map id="raylib::model::RlModel::RlModel" name="raylib::model::RlModel::RlModel">
-<area shape="rect" id="node1" title="Construct a new RlModel object from a mesh." alt="" coords="5,5,152,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_rl_mesh.html#a78ae69045480a5b920a7dee35bd696df" title="Get the mesh." alt="" coords="200,5,343,47"/>
+<area shape="rect" id="node1" title="Construct a new RlModel object from a mesh." alt="" coords="5,5,175,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_rl_mesh.html#a78ae69045480a5b920a7dee35bd696df" title="Get the mesh." alt="" coords="223,5,387,47"/>
 </map>

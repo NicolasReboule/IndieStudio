@@ -1,4 +1,4 @@
 <map id="raylib::image::RlImage::resizeCanvas" name="raylib::image::RlImage::resizeCanvas">
-<area shape="rect" id="node1" title="Resize canvas and fill with color." alt="" coords="5,5,152,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="200,13,355,39"/>
+<area shape="rect" id="node1" title="Resize canvas and fill with color." alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="224,13,401,39"/>
 </map>

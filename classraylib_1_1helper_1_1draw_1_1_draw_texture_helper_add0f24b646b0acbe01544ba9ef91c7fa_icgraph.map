@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::DrawTextureHelper::drawTexture" name="raylib::helper::draw::DrawTextureHelper::drawTexture">
-<area shape="rect" id="node1" title="Draw a texture." alt="" coords="185,5,331,61"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_button.html#a3bac0e0869294d461d357829a24a4807" title="Draw the button." alt="" coords="5,13,137,54"/>
+<area shape="rect" id="node1" title="Draw a texture." alt="" coords="204,5,367,61"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_button.html#a3bac0e0869294d461d357829a24a4807" title="Draw the button." alt="" coords="5,13,156,54"/>
 </map>

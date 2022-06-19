@@ -1,4 +1,4 @@
 <map id="raylib::helper::AudioHelper::initAudioDevice" name="raylib::helper::AudioHelper::initAudioDevice">
-<area shape="rect" id="node1" title="Initialize audio device and context." alt="" coords="235,5,405,47"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#a0b1ce1d7bffa7b7df4c68e92e8ea06b8" title="Construct a new AudioManager object." alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node1" title="Initialize audio device and context." alt="" coords="259,5,455,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#a0b1ce1d7bffa7b7df4c68e92e8ea06b8" title="Construct a new AudioManager object." alt="" coords="5,5,211,47"/>
 </map>

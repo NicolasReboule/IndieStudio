@@ -1,4 +1,4 @@
 <map id="raylib::helper::input::MouseHelper::getMouseDelta" name="raylib::helper::input::MouseHelper::getMouseDelta">
-<area shape="rect" id="node1" title="Get mouse delta between frames." alt="" coords="5,5,204,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#ac895c58ad64b9480a5dcb4be336bdf32" title="Convert a raylib vector to a Vector2f." alt="" coords="252,5,427,47"/>
+<area shape="rect" id="node1" title="Get mouse delta between frames." alt="" coords="5,5,228,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#ac895c58ad64b9480a5dcb4be336bdf32" title="Convert a raylib vector to a Vector2f." alt="" coords="276,5,476,47"/>
 </map>

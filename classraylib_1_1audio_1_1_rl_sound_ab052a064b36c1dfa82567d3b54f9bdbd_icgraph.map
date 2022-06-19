@@ -1,4 +1,4 @@
 <map id="raylib::audio::RlSound::setVolume" name="raylib::audio::RlSound::setVolume">
-<area shape="rect" id="node1" title="Set volume for a sound (1.0 is max level)" alt="" coords="188,5,332,47"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1audio_1_1_sound.html#aad14b8cf8d2ef997830bffed819cbfef" title="Set the volume of the sound." alt="" coords="5,5,140,47"/>
+<area shape="rect" id="node1" title="Set volume for a sound (1.0 is max level)" alt="" coords="208,5,372,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1audio_1_1_sound.html#aad14b8cf8d2ef997830bffed819cbfef" title="Set the volume of the sound." alt="" coords="5,5,160,47"/>
 </map>

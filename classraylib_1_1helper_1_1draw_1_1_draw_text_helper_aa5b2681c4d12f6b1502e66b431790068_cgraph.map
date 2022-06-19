@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::DrawTextHelper::drawCenteredText" name="raylib::helper::draw::DrawTextHelper::drawCenteredText">
-<area shape="rect" id="node1" title="Draw a text centered to the position." alt="" coords="5,5,237,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="285,5,408,47"/>
+<area shape="rect" id="node1" title="Draw a text centered to the position." alt="" coords="5,5,265,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="313,5,456,47"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="raylib::texture::RlTexture::getWidth" name="raylib::texture::RlTexture::getWidth">
-<area shape="rect" id="node1" title="Get texture width." alt="" coords="249,5,408,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a5b534549bf24ae83c29198c6109c2318" title="Draw a billboard texture." alt="" coords="5,5,201,47"/>
+<area shape="rect" id="node1" title="Get texture width." alt="" coords="276,5,459,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a5b534549bf24ae83c29198c6109c2318" title="Draw a billboard texture." alt="" coords="5,5,228,47"/>
 </map>

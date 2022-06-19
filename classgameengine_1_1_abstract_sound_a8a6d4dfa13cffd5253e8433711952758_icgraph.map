@@ -1,4 +1,4 @@
 <map id="gameengine::AbstractSound::setVolume" name="gameengine::AbstractSound::setVolume">
-<area shape="rect" id="node1" title="Set the Volume." alt="" coords="235,5,419,47"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#acd0dca04cb4b25daab442b72b0c133a9" title="Set the volume of a category." alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node1" title="Set the Volume." alt="" coords="259,5,464,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#acd0dca04cb4b25daab442b72b0c133a9" title="Set the volume of a category." alt="" coords="5,5,211,47"/>
 </map>

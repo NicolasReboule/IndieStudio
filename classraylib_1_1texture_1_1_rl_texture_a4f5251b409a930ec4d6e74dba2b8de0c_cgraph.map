@@ -1,4 +1,4 @@
 <map id="raylib::texture::RlTexture::RlTexture" name="raylib::texture::RlTexture::RlTexture">
-<area shape="rect" id="node1" title="Create a RlTexture from image." alt="" coords="5,5,164,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1image_1_1_rl_image.html#ad472063666ebe8047bf4b0a5d8f77bbb" title="Get the image (const)" alt="" coords="212,5,359,47"/>
+<area shape="rect" id="node1" title="Create a RlTexture from image." alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1image_1_1_rl_image.html#aea5a163730f7b0ef8f7ef7dd2ac7221b" title="Get the image (const)" alt="" coords="236,5,407,47"/>
 </map>

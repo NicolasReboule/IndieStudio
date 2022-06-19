@@ -1,6 +1,6 @@
 <map id="raylib::helper::draw::DrawTextHelper::drawText" name="raylib::helper::draw::DrawTextHelper::drawText">
-<area shape="rect" id="node1" title="Draw text using Font and &#39;pro&#39; parameters (rotation)" alt="" coords="5,57,185,98"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="243,5,398,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="259,57,382,98"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="233,122,408,163"/>
+<area shape="rect" id="node1" title="Draw text using Font and &#39;pro&#39; parameters (rotation)" alt="" coords="5,57,207,98"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="266,5,443,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="283,57,426,98"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="255,122,455,163"/>
 </map>

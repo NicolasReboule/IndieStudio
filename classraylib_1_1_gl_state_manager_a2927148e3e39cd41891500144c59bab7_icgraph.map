@@ -1,4 +1,4 @@
 <map id="raylib::GlStateManager::enableWireMode" name="raylib::GlStateManager::enableWireMode">
-<area shape="rect" id="node1" title="Enable the wire mode." alt="" coords="253,13,405,54"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a04311dfca707459fd334f18e6156fd2d" title="Draw a model with extended parameters." alt="" coords="5,5,205,61"/>
+<area shape="rect" id="node1" title="Enable the wire mode." alt="" coords="280,13,452,54"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a04311dfca707459fd334f18e6156fd2d" title="Draw a model with extended parameters." alt="" coords="5,5,232,61"/>
 </map>

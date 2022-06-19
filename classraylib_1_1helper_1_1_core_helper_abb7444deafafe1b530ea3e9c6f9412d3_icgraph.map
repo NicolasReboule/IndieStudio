@@ -1,4 +1,4 @@
 <map id="raylib::helper::CoreHelper::setFramerateLimit" name="raylib::helper::CoreHelper::setFramerateLimit">
-<area shape="rect" id="node1" title="Set target FPS (maximum)" alt="" coords="220,5,384,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1window_1_1_rl_window.html#a1d3f4c037fc2b6c33cdca8f1a30a17c9" title="Create a window with the given title, width and height." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node1" title="Set target FPS (maximum)" alt="" coords="243,5,432,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1window_1_1_rl_window.html#a1d3f4c037fc2b6c33cdca8f1a30a17c9" title="Create a window with the given title, width and height." alt="" coords="5,5,195,47"/>
 </map>

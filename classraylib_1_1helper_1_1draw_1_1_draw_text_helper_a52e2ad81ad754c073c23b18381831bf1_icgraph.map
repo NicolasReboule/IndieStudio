@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::DrawTextHelper::drawText" name="raylib::helper::draw::DrawTextHelper::drawText">
-<area shape="rect" id="node1" title="Draw a text (using default font)" alt="" coords="185,5,365,47"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_label.html#a0a14471b4fa8a998e18bb8d81a6e3f82" title="Draw the label." alt="" coords="5,5,137,47"/>
+<area shape="rect" id="node1" title="Draw a text (using default font)" alt="" coords="204,5,405,47"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_label.html#a0a14471b4fa8a998e18bb8d81a6e3f82" title="Draw the label." alt="" coords="5,5,156,47"/>
 </map>

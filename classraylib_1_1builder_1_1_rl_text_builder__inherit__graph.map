@@ -1,5 +1,5 @@
 <map id="raylib::builder::RlTextBuilder" name="raylib::builder::RlTextBuilder">
-<area shape="rect" id="node1" title="Builder to create a RlText easily." alt="" coords="5,287,184,511"/>
-<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="21,145,168,237"/>
-<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_i_builder.html" title="Interface for all the builder." alt="" coords="7,5,183,83"/>
+<area shape="rect" id="node1" title="Builder to create a RlText easily." alt="" coords="6,287,213,511"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="24,145,195,237"/>
+<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_i_builder.html" title="Interface for all the builder." alt="" coords="5,5,213,83"/>
 </map>

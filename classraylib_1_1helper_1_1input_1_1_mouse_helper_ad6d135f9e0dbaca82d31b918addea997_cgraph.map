@@ -1,5 +1,5 @@
 <map id="raylib::helper::input::MouseHelper::getMouseRay" name="raylib::helper::input::MouseHelper::getMouseRay">
-<area shape="rect" id="node1" title="Get a ray trace from mouse position." alt="" coords="5,27,196,69"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="262,5,401,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="244,57,419,98"/>
+<area shape="rect" id="node1" title="Get a ray trace from mouse position." alt="" coords="5,27,219,69"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_camera.html#a53c0573a4b08b61f3a420838c3d692c4" title="Get the 3d camera." alt="" coords="287,5,447,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="267,57,467,98"/>
 </map>

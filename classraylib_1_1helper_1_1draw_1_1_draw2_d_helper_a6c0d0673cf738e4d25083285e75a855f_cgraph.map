@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::Draw2DHelper::drawCircle" name="raylib::helper::draw::Draw2DHelper::drawCircle">
-<area shape="rect" id="node1" title="Draw a color&#45;filled circle." alt="" coords="5,5,184,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="232,13,387,39"/>
+<area shape="rect" id="node1" title="Draw a color&#45;filled circle." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="256,13,433,39"/>
 </map>

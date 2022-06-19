@@ -1,6 +1,6 @@
 <map id="raylib::text::RlFont::getFontSize" name="raylib::text::RlFont::getFontSize">
-<area shape="rect" id="node1" title="Get the font size." alt="" coords="285,71,408,112"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a57172f95cd2679bf6af7a7bf6ab8a153" title="Draw a text centered to the position." alt="" coords="5,5,237,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a7a791b9e0e76435ed6a05b49521f80bf" title="Draw text using font and additional parameters." alt="" coords="31,71,211,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_text_helper.html#a7f7111302bfc433ca6c90772070f333a" title="Measure string width for custom font." alt="" coords="40,136,203,177"/>
+<area shape="rect" id="node1" title="Get the font size." alt="" coords="313,71,456,112"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a57172f95cd2679bf6af7a7bf6ab8a153" title="Draw a text centered to the position." alt="" coords="5,5,265,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a7a791b9e0e76435ed6a05b49521f80bf" title="Draw text using font and additional parameters." alt="" coords="35,71,236,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_text_helper.html#a7f7111302bfc433ca6c90772070f333a" title="Measure string width for custom font." alt="" coords="42,136,229,177"/>
 </map>

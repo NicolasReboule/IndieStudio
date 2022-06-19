@@ -1,7 +1,7 @@
 <map id="raylib::helper::CameraHelper::setCameraMode" name="raylib::helper::CameraHelper::setCameraMode">
-<area shape="rect" id="node1" title="Set camera mode (global camera)" alt="" coords="503,56,685,97"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="271,13,422,39"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616" title="Construct a new RlCamera object." alt="" coords="257,63,436,90"/>
-<area shape="rect" id="node5" href="$classraylib_1_1_rl_camera.html#aa6072eac3dde40f3a930751064aa5de3" title="Set the camera mode." alt="" coords="239,114,455,141"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title="Draw all the nodes from the current scene." alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node1" title="Set camera mode (global camera)" alt="" coords="555,56,765,97"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="297,13,469,39"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616" title="Construct a new RlCamera object." alt="" coords="282,63,485,90"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_rl_camera.html#aa6072eac3dde40f3a930751064aa5de3" title="Set the camera mode." alt="" coords="260,114,507,141"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title="Draw all the nodes from the current scene." alt="" coords="5,5,212,47"/>
 </map>

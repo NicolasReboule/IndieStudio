@@ -1,0 +1,9 @@
+<map id="gameengine::node::_3D::MultiCube" name="gameengine::node::_3D::MultiCube">
+<area shape="rect" id="node1" title=" " alt="" coords="205,1461,355,1568"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__3_d_1_1_static_body.html" title="A 3D node that is not affected by physics." alt="" coords="191,1027,369,1412"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1__3_d_1_1_node3_d.html" title="A 3D Node." alt="" coords="59,615,235,810"/>
+<area shape="rect" id="node4" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="5,160,243,399"/>
+<area shape="rect" id="node5" title=" " alt="" coords="77,5,136,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="213,5,264,83"/>
+<area shape="rect" id="node7" href="$classraylib_1_1model_1_1_rl_model.html" title="Encapsulation of the raylib Model." alt="" coords="317,461,520,964"/>
+</map>

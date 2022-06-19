@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::DrawHelper::beginShaderMode" name="raylib::helper::draw::DrawHelper::beginShaderMode">
-<area shape="rect" id="node1" title="Begin custom shader drawing." alt="" coords="5,5,212,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1shader_1_1_rl_shader.html#a77ed669fd650b30292226c61ac8f9d64" title="Get the raylib Shader&#39;s." alt="" coords="260,5,416,47"/>
+<area shape="rect" id="node1" title="Begin custom shader drawing." alt="" coords="5,5,237,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1shader_1_1_rl_shader.html#a77ed669fd650b30292226c61ac8f9d64" title="Get the raylib Shader&#39;s." alt="" coords="285,5,463,47"/>
 </map>

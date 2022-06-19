@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::DrawTextureHelper::drawTextureRec" name="raylib::helper::draw::DrawTextureHelper::drawTextureRec">
-<area shape="rect" id="node1" title="Draw a part of a texture defined by a rectangle." alt="" coords="208,5,353,61"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_texture_rect.html#a84c8c3da69b28e82fdfaac5e52cfde67" title="Draw the texture rectangle." alt="" coords="5,13,160,54"/>
+<area shape="rect" id="node1" title="Draw a part of a texture defined by a rectangle." alt="" coords="225,5,388,61"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_texture_rect.html#a84c8c3da69b28e82fdfaac5e52cfde67" title="Draw the texture rectangle." alt="" coords="5,13,177,54"/>
 </map>

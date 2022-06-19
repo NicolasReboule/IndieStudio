@@ -1,6 +1,6 @@
 <map id="raylib::helper::draw::DrawTextHelper::drawTextUsingCodepoint" name="raylib::helper::draw::DrawTextHelper::drawTextUsingCodepoint">
-<area shape="rect" id="node1" title="Draw one character (codepoint)" alt="" coords="5,49,220,105"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="278,5,433,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="294,57,417,98"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="268,122,443,163"/>
+<area shape="rect" id="node1" title="Draw one character (codepoint)" alt="" coords="5,49,244,105"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="303,5,481,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="321,57,463,98"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="292,122,492,163"/>
 </map>

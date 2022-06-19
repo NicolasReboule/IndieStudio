@@ -1,4 +1,4 @@
 <map id="raylib::audio::RlAudioStream::RlAudioStream" name="raylib::audio::RlAudioStream::RlAudioStream">
-<area shape="rect" id="node1" title="Construct a new RlAudioStream object, Init audio stream (to stream raw audio pcm data)" alt="" coords="5,5,188,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1audio_1_1_rl_audio_stream.html#a155534166826235b6b1a868ba58b24f2" title="Set the volume of the audio stream (1.0 is max level)" alt="" coords="236,5,419,47"/>
+<area shape="rect" id="node1" title="Construct a new RlAudioStream object, Init audio stream (to stream raw audio pcm data)" alt="" coords="5,5,213,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1audio_1_1_rl_audio_stream.html#a155534166826235b6b1a868ba58b24f2" title="Set the volume of the audio stream (1.0 is max level)" alt="" coords="261,5,469,47"/>
 </map>

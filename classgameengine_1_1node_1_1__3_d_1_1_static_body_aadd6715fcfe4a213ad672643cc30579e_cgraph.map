@@ -1,9 +1,9 @@
 <map id="gameengine::node::_3D::StaticBody::draw" name="gameengine::node::_3D::StaticBody::draw">
-<area shape="rect" id="node1" title="Draw the static body." alt="" coords="5,136,153,177"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a01080d481bacd99bcf2ccee36a6a4ffe" title="Draw a 3d model." alt="" coords="201,136,401,177"/>
-<area shape="rect" id="node3" href="$classraylib_1_1model_1_1_rl_model.html#ab489477444531c646d3b3b1c167bbf3d" title="Get the model color." alt="" coords="449,5,596,47"/>
-<area shape="rect" id="node4" href="$classraylib_1_1model_1_1_rl_model.html#a1793409d9a531553c09a74ed06f46ea6" title="Get the model position." alt="" coords="449,71,596,112"/>
-<area shape="rect" id="node5" href="$classraylib_1_1model_1_1_rl_model.html#a1f09a7683ba85c88deec725cb4e0ea3f" title="Get the model rotation angle." alt="" coords="449,136,596,177"/>
-<area shape="rect" id="node6" href="$classraylib_1_1model_1_1_rl_model.html#acf60657730abff649d49a021839c1258" title="Get the model rotation axis." alt="" coords="449,201,596,243"/>
-<area shape="rect" id="node7" href="$classraylib_1_1model_1_1_rl_model.html#aaa6f670dec025df76859c8ec4e3914f8" title="Get the model scale." alt="" coords="449,267,596,308"/>
+<area shape="rect" id="node1" title="Draw the static body." alt="" coords="5,136,169,177"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_model_helper.html#a01080d481bacd99bcf2ccee36a6a4ffe" title="Draw a 3d model." alt="" coords="217,136,444,177"/>
+<area shape="rect" id="node3" href="$classraylib_1_1model_1_1_rl_model.html#ab489477444531c646d3b3b1c167bbf3d" title="Get the model color." alt="" coords="492,5,661,47"/>
+<area shape="rect" id="node4" href="$classraylib_1_1model_1_1_rl_model.html#a1793409d9a531553c09a74ed06f46ea6" title="Get the model position." alt="" coords="492,71,661,112"/>
+<area shape="rect" id="node5" href="$classraylib_1_1model_1_1_rl_model.html#a1f09a7683ba85c88deec725cb4e0ea3f" title="Get the model rotation angle." alt="" coords="492,136,661,177"/>
+<area shape="rect" id="node6" href="$classraylib_1_1model_1_1_rl_model.html#acf60657730abff649d49a021839c1258" title="Get the model rotation axis." alt="" coords="492,201,661,243"/>
+<area shape="rect" id="node7" href="$classraylib_1_1model_1_1_rl_model.html#aaa6f670dec025df76859c8ec4e3914f8" title="Get the model scale." alt="" coords="492,267,661,308"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="raylib::text::RlText::RlText" name="raylib::text::RlText::RlText">
-<area shape="rect" id="node1" title="RlText constructor (default font used)" alt="" coords="5,5,128,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_font.html#aafbbc41dfe87f62f9dc60720efccf531" title="Get the default font (FontSize: 20)" alt="" coords="176,5,299,47"/>
+<area shape="rect" id="node1" title="RlText constructor (default font used)" alt="" coords="5,5,147,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_font.html#aafbbc41dfe87f62f9dc60720efccf531" title="Get the default font (FontSize: 20)" alt="" coords="195,5,337,47"/>
 </map>

@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classraylib_1_1audio_1_1_rl_audio_stream.html" title="Encapsulation of the raylib AudioStream." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node1" href="$classgameengine_1_1_abstract_sound.html" title="Abstraction for sound." alt="" coords="5,56,211,83"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1audio_1_1_music.html" title="A music." alt="" coords="259,7,413,49"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1audio_1_1_sound.html" title="A sound effect." alt="" coords="259,82,413,123"/>
+<area shape="rect" id="node4" href="$classraylib_1_1audio_1_1_rl_music.html" title="Encapulation of the raylib Music." alt="" coords="27,5,189,32"/>
+<area shape="rect" id="node5" href="$classraylib_1_1audio_1_1_rl_sound.html" title="Encapulation of the raylib Sound." alt="" coords="26,107,190,133"/>
 </map>

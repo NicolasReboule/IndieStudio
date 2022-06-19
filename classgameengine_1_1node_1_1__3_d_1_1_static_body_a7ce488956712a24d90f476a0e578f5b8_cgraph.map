@@ -1,4 +1,4 @@
 <map id="gameengine::node::_3D::StaticBody::StaticBody" name="gameengine::node::_3D::StaticBody::StaticBody">
-<area shape="rect" id="node1" title="Construct a new Static Body object." alt="" coords="5,5,188,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_rl_model.html#a0af9ccb3a5568a701daba4e7ecef0adf" title="Set the material texture of the model (Default index 0 and type MATERIAL_MAP_DIFFUSE)" alt="" coords="236,5,383,47"/>
+<area shape="rect" id="node1" title="Construct a new Static Body object." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1model_1_1_rl_model.html#a0af9ccb3a5568a701daba4e7ecef0adf" title="Set the material texture of the model (Default index 0 and type MATERIAL_MAP_DIFFUSE)" alt="" coords="256,5,425,47"/>
 </map>

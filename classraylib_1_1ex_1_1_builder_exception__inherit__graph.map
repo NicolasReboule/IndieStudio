@@ -1,5 +1,5 @@
 <map id="raylib::ex::BuilderException" name="raylib::ex::BuilderException">
-<area shape="rect" id="node1" title="Exception thrown when a builder failed to build." alt="" coords="5,271,179,348"/>
-<area shape="rect" id="node2" href="$classraylib_1_1ex_1_1_raylib_exception.html" title="All exceptions of the raylib&#45;cpp library will inherit from this class." alt="" coords="8,131,176,223"/>
-<area shape="rect" id="node3" title=" " alt="" coords="41,5,143,83"/>
+<area shape="rect" id="node1" title="Exception thrown when a builder failed to build." alt="" coords="5,271,207,348"/>
+<area shape="rect" id="node2" href="$classraylib_1_1ex_1_1_raylib_exception.html" title="All exceptions of the raylib&#45;cpp library will inherit from this class." alt="" coords="8,131,204,223"/>
+<area shape="rect" id="node3" title=" " alt="" coords="63,5,149,83"/>
 </map>

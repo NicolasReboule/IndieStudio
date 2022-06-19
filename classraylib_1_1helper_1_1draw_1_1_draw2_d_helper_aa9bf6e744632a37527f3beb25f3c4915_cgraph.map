@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::Draw2DHelper::drawPixel" name="raylib::helper::draw::Draw2DHelper::drawPixel">
-<area shape="rect" id="node1" title="Draw a pixel." alt="" coords="5,5,180,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="228,13,383,39"/>
+<area shape="rect" id="node1" title="Draw a pixel." alt="" coords="5,5,201,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="249,13,427,39"/>
 </map>

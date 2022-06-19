@@ -1,14 +1,14 @@
 <map id="raylib::RlCamera::get" name="raylib::RlCamera::get">
-<area shape="rect" id="node1" title="Get the 3d camera." alt="" coords="767,183,905,210"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a4c3ffcc5b829439046044f3691504a1b" title="Begin 3D mode with custom camera (3D)" alt="" coords="256,46,437,88"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a633b858b106d6a22f983bd209d223018" title="Draw a billboard texture defined by source and rotation." alt="" coords="503,45,719,86"/>
-<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1input_1_1_mouse_helper.html#ad6d135f9e0dbaca82d31b918addea997" title="Get a ray trace from mouse position." alt="" coords="515,110,706,152"/>
-<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1_world_helper.html#a18ad366f3b48d95cb72092263f0aff59" title="Get the screen space position for a 3d world space position." alt="" coords="525,176,696,217"/>
-<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1_world_helper.html#a9a42123ebf5e267427e3ac1322efb644" title="Get size position for a 3d world space position." alt="" coords="525,241,696,282"/>
-<area shape="rect" id="node8" href="$_rl_camera_8cpp.html#a515aaeacd00b4cb36664a42ffcc2a6fe" title=" " alt="" coords="568,307,653,334"/>
-<area shape="rect" id="node9" href="$classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="519,358,702,400"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title="Draw all the nodes from the current scene." alt="" coords="5,105,191,146"/>
-<area shape="rect" id="node10" href="$classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="271,171,422,198"/>
-<area shape="rect" id="node11" href="$classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616" title="Construct a new RlCamera object." alt="" coords="257,340,436,367"/>
-<area shape="rect" id="node12" href="$classraylib_1_1_rl_camera.html#aa6072eac3dde40f3a930751064aa5de3" title="Set the camera mode." alt="" coords="239,391,455,418"/>
+<area shape="rect" id="node1" title="Get the 3d camera." alt="" coords="847,185,1007,212"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_helper.html#a4c3ffcc5b829439046044f3691504a1b" title="Begin 3D mode with custom camera (3D)" alt="" coords="281,48,486,90"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a633b858b106d6a22f983bd209d223018" title="Draw a billboard texture defined by source and rotation." alt="" coords="555,47,799,88"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1input_1_1_mouse_helper.html#ad6d135f9e0dbaca82d31b918addea997" title="Get a ray trace from mouse position." alt="" coords="570,112,783,154"/>
+<area shape="rect" id="node6" href="$classraylib_1_1helper_1_1_world_helper.html#a18ad366f3b48d95cb72092263f0aff59" title="Get the screen space position for a 3d world space position." alt="" coords="579,178,775,219"/>
+<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1_world_helper.html#a9a42123ebf5e267427e3ac1322efb644" title="Get size position for a 3d world space position." alt="" coords="579,243,775,284"/>
+<area shape="rect" id="node8" href="$_rl_camera_8cpp.html#a35037b2addcc5a83e49b1ee7b3d7c62a" title=" " alt="" coords="627,309,726,336"/>
+<area shape="rect" id="node9" href="$classraylib_1_1helper_1_1_camera_helper.html#ac83498804ce63cf4050b2b5ee9833759" title="Set camera mode (global camera)" alt="" coords="571,360,782,402"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1_scene_manager.html#a5014657e42a72d2dc9374ab48b0e12a2" title="Draw all the nodes from the current scene." alt="" coords="5,107,212,148"/>
+<area shape="rect" id="node10" href="$classraylib_1_1_rl_camera.html#aaaa099ef07349fad0bd6a8efbc26dfbe" title="Reset the camera to the initial state of the constructor." alt="" coords="297,173,469,200"/>
+<area shape="rect" id="node11" href="$classraylib_1_1_rl_camera.html#ae9bab72b10145fc4f3fb7b2d0f920616" title="Construct a new RlCamera object." alt="" coords="282,342,485,369"/>
+<area shape="rect" id="node12" href="$classraylib_1_1_rl_camera.html#aa6072eac3dde40f3a930751064aa5de3" title="Set the camera mode." alt="" coords="260,393,507,420"/>
 </map>

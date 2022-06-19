@@ -1,5 +1,5 @@
 <map id="gameengine::AbstractSound" name="gameengine::AbstractSound">
-<area shape="rect" id="node1" title="Abstraction for sound." alt="" coords="59,5,243,156"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1audio_1_1_music.html" title="A music." alt="" coords="5,204,140,311"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1audio_1_1_sound.html" title="A sound effect." alt="" coords="164,204,299,311"/>
+<area shape="rect" id="node1" title="Abstraction for sound." alt="" coords="69,5,275,156"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1audio_1_1_music.html" title="A music." alt="" coords="5,204,160,311"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1audio_1_1_sound.html" title="A sound effect." alt="" coords="184,204,339,311"/>
 </map>

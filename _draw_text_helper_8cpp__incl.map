@@ -1,19 +1,19 @@
 <map id="raylib&#45;cpp/src/raylib/Draw/DrawTextHelper.cpp" name="raylib&#45;cpp/src/raylib/Draw/DrawTextHelper.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="179,5,356,47"/>
-<area shape="rect" id="node2" href="$_draw_text_helper_8hpp.html" title=" " alt="" coords="164,95,371,121"/>
-<area shape="rect" id="node3" href="$_rl_text_8hpp.html" title=" " alt="" coords="453,169,599,196"/>
-<area shape="rect" id="node7" href="$_math_8hpp.html" title=" " alt="" coords="79,468,189,495"/>
-<area shape="rect" id="node4" href="$_rl_font_8hpp.html" title=" " alt="" coords="398,244,545,271"/>
-<area shape="rect" id="node11" title=" " alt="" coords="440,617,503,644"/>
-<area shape="rect" id="node15" title=" " alt="" coords="552,393,607,420"/>
-<area shape="rect" id="node16" title=" " alt="" coords="199,319,267,345"/>
-<area shape="rect" id="node17" href="$_text_helper_8hpp.html" title=" " alt="" coords="619,244,729,271"/>
-<area shape="rect" id="node5" href="$_rl_image_8hpp.html" title=" " alt="" coords="291,319,459,345"/>
-<area shape="rect" id="node6" href="$_rl_color_8hpp.html" title=" " alt="" coords="169,393,325,420"/>
-<area shape="rect" id="node14" title=" " alt="" coords="350,393,409,420"/>
-<area shape="rect" id="node13" title=" " alt="" coords="217,468,278,495"/>
-<area shape="rect" id="node8" href="$_vector_8hpp.html" title=" " alt="" coords="5,617,156,644"/>
-<area shape="rect" id="node10" href="$_vector_helper_8hpp.html" title=" " alt="" coords="51,543,241,569"/>
-<area shape="rect" id="node12" title=" " alt="" coords="265,543,323,569"/>
-<area shape="rect" id="node9" title=" " alt="" coords="45,692,117,719"/>
+<area shape="rect" id="node1" title=" " alt="" coords="184,5,379,47"/>
+<area shape="rect" id="node2" href="$_draw_text_helper_8hpp.html" title=" " alt="" coords="165,95,397,121"/>
+<area shape="rect" id="node3" href="$_rl_text_8hpp.html" title=" " alt="" coords="469,169,632,196"/>
+<area shape="rect" id="node7" href="$_math_8hpp.html" title=" " alt="" coords="83,468,207,495"/>
+<area shape="rect" id="node4" href="$_rl_font_8hpp.html" title=" " alt="" coords="411,244,573,271"/>
+<area shape="rect" id="node11" title=" " alt="" coords="470,617,541,644"/>
+<area shape="rect" id="node15" title=" " alt="" coords="585,393,644,420"/>
+<area shape="rect" id="node16" title=" " alt="" coords="200,319,277,345"/>
+<area shape="rect" id="node17" href="$_text_helper_8hpp.html" title=" " alt="" coords="649,244,767,271"/>
+<area shape="rect" id="node5" href="$_rl_image_8hpp.html" title=" " alt="" coords="302,319,493,345"/>
+<area shape="rect" id="node6" href="$_rl_color_8hpp.html" title=" " alt="" coords="181,393,355,420"/>
+<area shape="rect" id="node14" title=" " alt="" coords="379,393,442,420"/>
+<area shape="rect" id="node13" title=" " alt="" coords="235,468,301,495"/>
+<area shape="rect" id="node8" href="$_vector_8hpp.html" title=" " alt="" coords="5,617,173,644"/>
+<area shape="rect" id="node10" href="$_vector_helper_8hpp.html" title=" " alt="" coords="55,543,265,569"/>
+<area shape="rect" id="node12" title=" " alt="" coords="289,543,351,569"/>
+<area shape="rect" id="node9" title=" " alt="" coords="49,692,129,719"/>
 </map>

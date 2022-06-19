@@ -1,5 +1,5 @@
 <map id="raylib::model::MeshGenerator::genMeshCubicmap" name="raylib::model::MeshGenerator::genMeshCubicmap">
-<area shape="rect" id="node1" title="Generate a mesh of a cubicmap." alt="" coords="5,39,193,80"/>
-<area shape="rect" id="node2" href="$classraylib_1_1image_1_1_rl_image.html#ad472063666ebe8047bf4b0a5d8f77bbb" title="Get the image (const)" alt="" coords="255,5,402,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="241,71,416,112"/>
+<area shape="rect" id="node1" title="Generate a mesh of a cubicmap." alt="" coords="5,39,221,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1image_1_1_rl_image.html#aea5a163730f7b0ef8f7ef7dd2ac7221b" title="Get the image (const)" alt="" coords="284,5,455,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="269,71,469,112"/>
 </map>

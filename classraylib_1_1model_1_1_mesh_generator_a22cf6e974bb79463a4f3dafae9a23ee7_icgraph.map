@@ -1,4 +1,4 @@
 <map id="raylib::model::MeshGenerator::genMeshKnot" name="raylib::model::MeshGenerator::genMeshKnot">
-<area shape="rect" id="node1" title="Generate a mesh of a knot." alt="" coords="240,5,428,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html#a767b5fad102b8dc85be26dc9280de210" title="Create a mesh." alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node1" title="Generate a mesh of a knot." alt="" coords="268,5,484,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html#a767b5fad102b8dc85be26dc9280de210" title="Create a mesh." alt="" coords="5,5,220,47"/>
 </map>

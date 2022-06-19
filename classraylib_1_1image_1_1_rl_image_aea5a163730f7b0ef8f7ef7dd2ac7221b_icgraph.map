@@ -1,0 +1,18 @@
+<map id="raylib::image::RlImage::getImage" name="raylib::image::RlImage::getImage">
+<area shape="rect" id="node1" title="Get the image (const)" alt="" coords="532,431,703,472"/>
+<area shape="rect" id="node2" href="$classraylib_1_1image_1_1_image_draw_helper.html#a224312d44f9b2d24dcd615332610ce0a" title="Clear image background with given color." alt="" coords="281,5,471,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1image_1_1_image_draw_helper.html#ac74f16b56da5f1ee9d25ea93e5058eb9" title="Draw circle within an image." alt="" coords="281,71,471,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1image_1_1_image_draw_helper.html#afd089f6e544fbaea3f3395440f6490d7" title="Draw a source image within a destination image (tint applied to source)" alt="" coords="281,136,471,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1image_1_1_image_draw_helper.html#a601572ad9954838382dcb21a991fcc39" title="Draw text (using default font) within an image (destination)" alt="" coords="281,201,471,243"/>
+<area shape="rect" id="node6" href="$classraylib_1_1image_1_1_image_draw_helper.html#af0755caf8b75ef9e33debbc71bae08e2" title="Draw line within an image." alt="" coords="281,267,471,308"/>
+<area shape="rect" id="node7" href="$classraylib_1_1image_1_1_image_draw_helper.html#aed3f7ce4244fd781820f3c1b5f1d2714" title="Draw pixel within an image." alt="" coords="281,332,471,373"/>
+<area shape="rect" id="node8" href="$classraylib_1_1image_1_1_image_draw_helper.html#a40999935bcc23604ac96cd78d981618f" title="Draw rectangle within an image." alt="" coords="281,397,471,439"/>
+<area shape="rect" id="node9" href="$classraylib_1_1image_1_1_image_draw_helper.html#aa1b8db43adbf7117051f2f9b1609aba7" title="Draw rectangle lines within an image." alt="" coords="274,463,478,504"/>
+<area shape="rect" id="node10" href="$classraylib_1_1image_1_1_image_draw_helper.html#a6805cbd998389d3c08aab2dc64e6237e" title="Draw rectangle within an image." alt="" coords="279,528,473,569"/>
+<area shape="rect" id="node11" href="$classraylib_1_1model_1_1_mesh_generator.html#a64a804f4e9c5e072613ddea0b3f6b460" title="Generate a mesh of a cubicmap." alt="" coords="268,593,484,635"/>
+<area shape="rect" id="node13" href="$classraylib_1_1model_1_1_mesh_generator.html#a2f3bea36194ef0e5911879300fd2670e" title="Generate a mesh of a heightmap." alt="" coords="268,659,484,700"/>
+<area shape="rect" id="node14" href="$classraylib_1_1text_1_1_rl_font.html#a63c8fff00ca5b90a0caa7f4114257935" title="Create a RlFont, using an iamge, key color and first character Load font from Image (XNA style)" alt="" coords="305,724,447,765"/>
+<area shape="rect" id="node15" href="$classraylib_1_1texture_1_1_rl_texture.html#a4f5251b409a930ec4d6e74dba2b8de0c" title="Create a RlTexture from image." alt="" coords="285,789,467,831"/>
+<area shape="rect" id="node16" href="$classraylib_1_1window_1_1_rl_window.html#afa428e69395a8e66722e6c9b5a480372" title="Set icon for window (only PLATFORM_DESKTOP)" alt="" coords="281,855,471,896"/>
+<area shape="rect" id="node12" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html#a767b5fad102b8dc85be26dc9280de210" title="Create a mesh." alt="" coords="5,627,220,668"/>
+</map>

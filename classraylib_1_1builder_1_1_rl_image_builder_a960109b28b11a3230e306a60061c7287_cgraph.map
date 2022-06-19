@@ -1,11 +1,11 @@
 <map id="raylib::builder::RlImageBuilder::build" name="raylib::builder::RlImageBuilder::build">
-<area shape="rect" id="node1" title="Build the RlImage object." alt="" coords="5,201,156,243"/>
-<area shape="rect" id="node2" href="$classraylib_1_1image_1_1_image_generator.html#a6c3ff21bd42e63517d4bef11e6e2b91a" title="Generate image: cellular algorithm. Bigger tileSize means bigger cells." alt="" coords="204,5,396,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1image_1_1_image_generator.html#a094c3a5b426b9eac868f67cbe848ff1f" title="Generate image: checked." alt="" coords="204,71,396,112"/>
-<area shape="rect" id="node5" href="$classraylib_1_1image_1_1_image_generator.html#a00e3ad6ace7442e5c0c512fa06d716c7" title="Generate image: plain color." alt="" coords="204,136,396,177"/>
-<area shape="rect" id="node6" href="$classraylib_1_1image_1_1_image_generator.html#ac7ca176b7a28d68fcc9baeeb85d17cc7" title="Generate image: horizontal gradient." alt="" coords="204,201,396,243"/>
-<area shape="rect" id="node7" href="$classraylib_1_1image_1_1_image_generator.html#af23d9097c9261c800bbeed66ddbb79a3" title="Generate image: radial gradient." alt="" coords="204,267,396,308"/>
-<area shape="rect" id="node8" href="$classraylib_1_1image_1_1_image_generator.html#aa2e4ca935a2a9cbb04a075b40af76871" title="Generate image: vertical gradient." alt="" coords="204,332,396,373"/>
-<area shape="rect" id="node9" href="$classraylib_1_1image_1_1_image_generator.html#a98162be8e5835118fd22f6ad2150b5cd" title="Generate image: white noise." alt="" coords="204,397,396,439"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="444,209,599,235"/>
+<area shape="rect" id="node1" title="Build the RlImage object." alt="" coords="5,201,180,243"/>
+<area shape="rect" id="node2" href="$classraylib_1_1image_1_1_image_generator.html#a6c3ff21bd42e63517d4bef11e6e2b91a" title="Generate image: cellular algorithm. Bigger tileSize means bigger cells." alt="" coords="228,5,451,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1image_1_1_image_generator.html#a094c3a5b426b9eac868f67cbe848ff1f" title="Generate image: checked." alt="" coords="228,71,451,112"/>
+<area shape="rect" id="node5" href="$classraylib_1_1image_1_1_image_generator.html#a00e3ad6ace7442e5c0c512fa06d716c7" title="Generate image: plain color." alt="" coords="228,136,451,177"/>
+<area shape="rect" id="node6" href="$classraylib_1_1image_1_1_image_generator.html#ac7ca176b7a28d68fcc9baeeb85d17cc7" title="Generate image: horizontal gradient." alt="" coords="228,201,451,243"/>
+<area shape="rect" id="node7" href="$classraylib_1_1image_1_1_image_generator.html#af23d9097c9261c800bbeed66ddbb79a3" title="Generate image: radial gradient." alt="" coords="228,267,451,308"/>
+<area shape="rect" id="node8" href="$classraylib_1_1image_1_1_image_generator.html#aa2e4ca935a2a9cbb04a075b40af76871" title="Generate image: vertical gradient." alt="" coords="228,332,451,373"/>
+<area shape="rect" id="node9" href="$classraylib_1_1image_1_1_image_generator.html#a98162be8e5835118fd22f6ad2150b5cd" title="Generate image: white noise." alt="" coords="228,397,451,439"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="499,209,676,235"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="raylib::helper::draw::Draw3DHelper::drawCircle" name="raylib::helper::draw::Draw3DHelper::drawCircle">
-<area shape="rect" id="node1" title="Draw a circle in 3D." alt="" coords="5,74,184,115"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#a1a5277817a6fb1db4b7328325692a1cb" title="Get the alpha value." alt="" coords="233,5,390,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_rl_color.html#a8d523f2a93f9e98f116bc87f9a808150" title="Get the blue value." alt="" coords="236,56,387,83"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#a0dbbc8a68cb2b50466cf1cf4fcb9950f" title="Get the green value." alt="" coords="232,107,391,133"/>
-<area shape="rect" id="node5" href="$classraylib_1_1_rl_color.html#a26f3708a2d7ed7ac4d9fb854cb9a8c48" title="Get the red value." alt="" coords="238,157,385,184"/>
+<area shape="rect" id="node1" title="Draw a circle in 3D." alt="" coords="5,74,208,115"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#a1a5277817a6fb1db4b7328325692a1cb" title="Get the alpha value." alt="" coords="257,5,437,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_color.html#a8d523f2a93f9e98f116bc87f9a808150" title="Get the blue value." alt="" coords="261,56,433,83"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#a0dbbc8a68cb2b50466cf1cf4fcb9950f" title="Get the green value." alt="" coords="256,107,439,133"/>
+<area shape="rect" id="node5" href="$classraylib_1_1_rl_color.html#a26f3708a2d7ed7ac4d9fb854cb9a8c48" title="Get the red value." alt="" coords="263,157,431,184"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="gameengine::node::_3D::StaticBody" name="gameengine::node::_3D::StaticBody">
-<area shape="rect" id="node1" title="A 3D node that is not affected by physics." alt="" coords="32,564,189,964"/>
-<area shape="rect" id="node4" href="$classgameengine_1_1node_1_1__3_d_1_1_kinematic_body.html" title="A kinematic body is a body that can move." alt="" coords="41,1012,180,1148"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__3_d_1_1_node3_d.html" title="A 3D Node." alt="" coords="33,321,188,516"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="5,5,216,273"/>
+<area shape="rect" id="node1" title="A 3D node that is not affected by physics." alt="" coords="35,564,213,964"/>
+<area shape="rect" id="node4" href="$classgameengine_1_1node_1_1__3_d_1_1_kinematic_body.html" title="A kinematic body is a body that can move." alt="" coords="45,1012,203,1148"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__3_d_1_1_node3_d.html" title="A 3D Node." alt="" coords="36,321,212,516"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="5,5,243,273"/>
 </map>

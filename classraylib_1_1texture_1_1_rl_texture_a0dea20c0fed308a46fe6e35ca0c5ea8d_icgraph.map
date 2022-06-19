@@ -1,16 +1,16 @@
 <map id="raylib::texture::RlTexture::get" name="raylib::texture::RlTexture::get">
-<area shape="rect" id="node1" title="Get the texture." alt="" coords="499,375,681,402"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a633b858b106d6a22f983bd209d223018" title="Draw a billboard texture defined by source and rotation." alt="" coords="221,5,437,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a59a109f2e324d21750c726d63359d7a3" title="Draw cube textured in 3D." alt="" coords="220,71,439,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#abc4309e4d39ed416fe15704258fd9327" title="Draw cube with a region of a texture in 3D." alt="" coords="208,136,451,177"/>
-<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#add0f24b646b0acbe01544ba9ef91c7fa" title="Draw a texture." alt="" coords="257,201,402,257"/>
-<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a1647d91325dc5aaab127144e317c32fb" title="Draws a texture (or part of it) that stretches or shrinks nicely." alt="" coords="257,281,402,337"/>
-<area shape="rect" id="node8" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a112b8c1822c6f1c8f4450f89d6bff5d5" title="Draw a textured polygon." alt="" coords="257,361,402,417"/>
-<area shape="rect" id="node9" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#aa53c987d59bb5d0879295e63a45a8b4e" title="Draw a texture quad with tiling and offset parameters." alt="" coords="257,441,402,497"/>
-<area shape="rect" id="node10" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#ac8b34cc1578173981b49f9d93507014c" title="Draw a part of a texture defined by a rectangle." alt="" coords="257,521,402,577"/>
-<area shape="rect" id="node12" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#afe64ae0d1d668bf89fba997fab79b150" title="Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest." alt="" coords="257,601,402,657"/>
-<area shape="rect" id="node13" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ad61a1d8a58178f1b97a3f4f878ce0965" title="Set texture and rectangle to be used on shapes drawing NOTE: It can be useful when using basic shapes..." alt="" coords="218,680,441,721"/>
-<area shape="rect" id="node14" href="$classraylib_1_1shader_1_1_rl_shader.html#af527816fb092e2dfa4d5f32ca3d2997e" title="Set shader uniform value for texture (sampler2d)" alt="" coords="251,745,407,787"/>
-<area shape="rect" id="node6" href="$classgameengine_1_1node_1_1__2_d_1_1_button.html#a3bac0e0869294d461d357829a24a4807" title="Draw the button." alt="" coords="17,208,149,249"/>
-<area shape="rect" id="node11" href="$classgameengine_1_1node_1_1__2_d_1_1_texture_rect.html#a84c8c3da69b28e82fdfaac5e52cfde67" title="Draw the texture rectangle." alt="" coords="5,528,160,569"/>
+<area shape="rect" id="node1" title="Get the texture." alt="" coords="544,377,756,403"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a633b858b106d6a22f983bd209d223018" title="Draw a billboard texture defined by source and rotation." alt="" coords="239,5,483,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#a59a109f2e324d21750c726d63359d7a3" title="Draw cube textured in 3D." alt="" coords="237,71,484,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1draw_1_1_draw3_d_helper.html#abc4309e4d39ed416fe15704258fd9327" title="Draw cube with a region of a texture in 3D." alt="" coords="225,136,496,177"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#add0f24b646b0acbe01544ba9ef91c7fa" title="Draw a texture." alt="" coords="279,202,442,258"/>
+<area shape="rect" id="node7" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a1647d91325dc5aaab127144e317c32fb" title="Draws a texture (or part of it) that stretches or shrinks nicely." alt="" coords="279,282,442,338"/>
+<area shape="rect" id="node8" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#a112b8c1822c6f1c8f4450f89d6bff5d5" title="Draw a textured polygon." alt="" coords="279,362,442,418"/>
+<area shape="rect" id="node9" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#aa53c987d59bb5d0879295e63a45a8b4e" title="Draw a texture quad with tiling and offset parameters." alt="" coords="279,442,442,498"/>
+<area shape="rect" id="node10" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#ac8b34cc1578173981b49f9d93507014c" title="Draw a part of a texture defined by a rectangle." alt="" coords="279,522,442,578"/>
+<area shape="rect" id="node12" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#afe64ae0d1d668bf89fba997fab79b150" title="Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest." alt="" coords="279,602,442,658"/>
+<area shape="rect" id="node13" href="$classraylib_1_1helper_1_1draw_1_1_draw2_d_helper.html#ad61a1d8a58178f1b97a3f4f878ce0965" title="Set texture and rectangle to be used on shapes drawing NOTE: It can be useful when using basic shapes..." alt="" coords="237,683,485,724"/>
+<area shape="rect" id="node14" href="$classraylib_1_1shader_1_1_rl_shader.html#af527816fb092e2dfa4d5f32ca3d2997e" title="Set shader uniform value for texture (sampler2d)" alt="" coords="272,748,449,789"/>
+<area shape="rect" id="node6" href="$classgameengine_1_1node_1_1__2_d_1_1_button.html#a3bac0e0869294d461d357829a24a4807" title="Draw the button." alt="" coords="16,209,167,251"/>
+<area shape="rect" id="node11" href="$classgameengine_1_1node_1_1__2_d_1_1_texture_rect.html#a84c8c3da69b28e82fdfaac5e52cfde67" title="Draw the texture rectangle." alt="" coords="5,529,177,571"/>
 </map>

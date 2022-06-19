@@ -1,6 +1,6 @@
 <map id="raylib::helper::FileHelper::getDirectoryFiles" name="raylib::helper::FileHelper::getDirectoryFiles">
-<area shape="rect" id="node1" title="Get all files in directory." alt="" coords="244,71,403,112"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#a5a5fcae90c77a8a9e10fec32c012cf66" title="Load all sounds in different categories." alt="" coords="10,5,191,47"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_texture_manager.html#a23eccd6fd7bd9ae42a056a89483740b9" title="Will load all textures in the directory and subdirectories." alt="" coords="5,71,196,112"/>
-<area shape="rect" id="node4" href="$classraylib_1_1model_1_1_rl_animation.html#affe4493a9b2dea89143b99b071c0a601" title="Construct a new RlAnimation object." alt="" coords="16,136,185,177"/>
+<area shape="rect" id="node1" title="Get all files in directory." alt="" coords="269,71,452,112"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1_audio_manager.html#a5a5fcae90c77a8a9e10fec32c012cf66" title="Load all sounds in different categories." alt="" coords="11,5,216,47"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1_texture_manager.html#a23eccd6fd7bd9ae42a056a89483740b9" title="Will load all textures in the directory and subdirectories." alt="" coords="5,71,221,112"/>
+<area shape="rect" id="node4" href="$classraylib_1_1model_1_1_rl_animation.html#affe4493a9b2dea89143b99b071c0a601" title="Construct a new RlAnimation object." alt="" coords="15,136,211,177"/>
 </map>

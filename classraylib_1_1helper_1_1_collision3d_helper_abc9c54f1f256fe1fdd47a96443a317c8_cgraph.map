@@ -1,4 +1,4 @@
 <map id="raylib::helper::Collision3dHelper::getRayCollisionQuad" name="raylib::helper::Collision3dHelper::getRayCollisionQuad">
-<area shape="rect" id="node1" title="Get collision info between ray and quad." alt="" coords="5,5,192,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="240,5,415,47"/>
+<area shape="rect" id="node1" title="Get collision info between ray and quad." alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="263,5,463,47"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="gameengine::node::_3D::KinematicBody::moveAndCollide" name="gameengine::node::_3D::KinematicBody::moveAndCollide">
-<area shape="rect" id="node1" title="Move the body and check collision." alt="" coords="5,31,149,87"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_collision3d_helper.html#afa7f566fb3293f479cd9cba181e40600" title="Check collision between two bounding boxes." alt="" coords="197,5,384,47"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1_scene_manager.html#a96af2b6eb4a3d44856556b32b4bb0880" title="Get the instance of the scene manager." alt="" coords="198,71,383,112"/>
+<area shape="rect" id="node1" title="Move the body and check collision." alt="" coords="5,31,167,87"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_collision3d_helper.html#afa7f566fb3293f479cd9cba181e40600" title="Check collision between two bounding boxes." alt="" coords="215,5,421,47"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1_scene_manager.html#a96af2b6eb4a3d44856556b32b4bb0880" title="Get the instance of the scene manager." alt="" coords="215,71,421,112"/>
 </map>

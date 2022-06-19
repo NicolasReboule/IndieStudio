@@ -1,4 +1,4 @@
 <map id="raylib::helper::ColorHelper::colorAlpha" name="raylib::helper::ColorHelper::colorAlpha">
-<area shape="rect" id="node1" title="Returns color with alpha applied, alpha goes from 0.0f to 1.0f." alt="" coords="5,5,172,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="220,13,375,39"/>
+<area shape="rect" id="node1" title="Returns color with alpha applied, alpha goes from 0.0f to 1.0f." alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="247,13,424,39"/>
 </map>

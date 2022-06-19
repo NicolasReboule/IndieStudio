@@ -1,13 +1,13 @@
 <map id="raylib::builder::IBuilder&lt; T &gt;" name="raylib::builder::IBuilder&lt; T &gt;">
-<area shape="rect" id="node1" title="Interface for all the builder." alt="" coords="369,5,545,83"/>
-<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="14,145,161,237"/>
-<area shape="rect" id="node4" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="188,145,357,237"/>
-<area shape="rect" id="node6" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="383,145,530,237"/>
-<area shape="rect" id="node8" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="559,145,727,237"/>
-<area shape="rect" id="node10" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="758,145,905,237"/>
-<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_rl_camera_builder.html" title="Builder to create a RlCamera easily." alt="" coords="5,375,164,569"/>
-<area shape="rect" id="node5" href="$classraylib_1_1builder_1_1_rl_image_builder.html" title="Builder to create a RlImage easily." alt="" coords="188,294,339,650"/>
-<area shape="rect" id="node7" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html" title="Builder to create a RlMesh easily." alt="" coords="363,287,550,657"/>
-<area shape="rect" id="node9" href="$classraylib_1_1builder_1_1_rl_model_builder.html" title="Builder to create a RlModel easily." alt="" coords="574,338,723,606"/>
-<area shape="rect" id="node11" href="$classraylib_1_1builder_1_1_rl_text_builder.html" title="Builder to create a RlText easily." alt="" coords="747,360,926,584"/>
+<area shape="rect" id="node1" title="Interface for all the builder." alt="" coords="416,5,624,83"/>
+<area shape="rect" id="node2" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="12,145,183,237"/>
+<area shape="rect" id="node4" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="207,145,407,237"/>
+<area shape="rect" id="node6" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="433,145,604,237"/>
+<area shape="rect" id="node8" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="655,145,825,237"/>
+<area shape="rect" id="node10" href="$classraylib_1_1builder_1_1_i_builder.html" title=" " alt="" coords="861,145,1059,237"/>
+<area shape="rect" id="node3" href="$classraylib_1_1builder_1_1_rl_camera_builder.html" title="Builder to create a RlCamera easily." alt="" coords="5,375,189,569"/>
+<area shape="rect" id="node5" href="$classraylib_1_1builder_1_1_rl_image_builder.html" title="Builder to create a RlImage easily." alt="" coords="215,294,390,650"/>
+<area shape="rect" id="node7" href="$classraylib_1_1builder_1_1_rl_text_builder.html" title="Builder to create a RlText easily." alt="" coords="414,360,621,584"/>
+<area shape="rect" id="node9" href="$classraylib_1_1builder_1_1_rl_mesh_builder.html" title="Builder to create a RlMesh easily." alt="" coords="645,287,859,657"/>
+<area shape="rect" id="node11" href="$classraylib_1_1builder_1_1_rl_model_builder.html" title="Builder to create a RlModel easily." alt="" coords="884,338,1057,606"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::Draw2DHelper::drawRectangle" name="raylib::helper::draw::Draw2DHelper::drawRectangle">
-<area shape="rect" id="node1" title="Draw a filled rectangle." alt="" coords="5,5,209,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="257,13,412,39"/>
+<area shape="rect" id="node1" title="Draw a filled rectangle." alt="" coords="5,5,236,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="284,13,461,39"/>
 </map>

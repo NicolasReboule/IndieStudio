@@ -1,6 +1,6 @@
 <map id="raylib::helper::draw::DrawTextureHelper::drawTextureTiled" name="raylib::helper::draw::DrawTextureHelper::drawTextureTiled">
-<area shape="rect" id="node1" title="Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest." alt="" coords="5,41,151,97"/>
-<area shape="rect" id="node2" href="$classraylib_1_1texture_1_1_rl_texture.html#a0dea20c0fed308a46fe6e35ca0c5ea8d" title="Get the texture." alt="" coords="199,5,381,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="213,56,367,83"/>
-<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="203,107,377,149"/>
+<area shape="rect" id="node1" title="Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest." alt="" coords="5,41,168,97"/>
+<area shape="rect" id="node2" href="$classraylib_1_1texture_1_1_rl_texture.html#a0dea20c0fed308a46fe6e35ca0c5ea8d" title="Get the texture." alt="" coords="216,5,428,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="233,56,411,83"/>
+<area shape="rect" id="node4" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="222,107,422,149"/>
 </map>

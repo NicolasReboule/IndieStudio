@@ -1,7 +1,7 @@
 <map id="gameengine::node::_2D::TextureRect::draw" name="gameengine::node::_2D::TextureRect::draw">
-<area shape="rect" id="node1" title="Draw the texture rectangle." alt="" coords="5,49,160,90"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#ac8b34cc1578173981b49f9d93507014c" title="Draw a part of a texture defined by a rectangle." alt="" coords="208,41,353,97"/>
-<area shape="rect" id="node3" href="$classraylib_1_1texture_1_1_rl_texture.html#a0dea20c0fed308a46fe6e35ca0c5ea8d" title="Get the texture." alt="" coords="401,5,584,32"/>
-<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="415,56,570,83"/>
-<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="405,107,580,149"/>
+<area shape="rect" id="node1" title="Draw the texture rectangle." alt="" coords="5,49,177,90"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_texture_helper.html#ac8b34cc1578173981b49f9d93507014c" title="Draw a part of a texture defined by a rectangle." alt="" coords="225,41,388,97"/>
+<area shape="rect" id="node3" href="$classraylib_1_1texture_1_1_rl_texture.html#a0dea20c0fed308a46fe6e35ca0c5ea8d" title="Get the texture." alt="" coords="436,5,648,32"/>
+<area shape="rect" id="node4" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="453,56,631,83"/>
+<area shape="rect" id="node5" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="442,107,642,149"/>
 </map>

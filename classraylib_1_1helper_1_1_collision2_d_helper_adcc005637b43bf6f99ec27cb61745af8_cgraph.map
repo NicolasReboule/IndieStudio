@@ -1,4 +1,4 @@
 <map id="raylib::helper::Collision2DHelper::checkCollisionPointRec" name="raylib::helper::Collision2DHelper::checkCollisionPointRec">
-<area shape="rect" id="node1" title="Check if point is inside rectangle." alt="" coords="5,5,217,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="265,5,440,47"/>
+<area shape="rect" id="node1" title="Check if point is inside rectangle." alt="" coords="5,5,240,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="288,5,488,47"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="raylib::helper::TextHelper::measureText" name="raylib::helper::TextHelper::measureText">
-<area shape="rect" id="node1" title="Measure string width for custom font." alt="" coords="5,39,168,80"/>
-<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="242,5,365,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_vector_helper.html#ac895c58ad64b9480a5dcb4be336bdf32" title="Convert a raylib vector to a Vector2f." alt="" coords="216,71,391,112"/>
+<area shape="rect" id="node1" title="Measure string width for custom font." alt="" coords="5,39,192,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="269,5,411,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1_vector_helper.html#ac895c58ad64b9480a5dcb4be336bdf32" title="Convert a raylib vector to a Vector2f." alt="" coords="240,71,440,112"/>
 </map>

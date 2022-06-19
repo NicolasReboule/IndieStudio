@@ -1,5 +1,5 @@
 <map id="raylib::helper::draw::DrawModelHelper::drawModelWires" name="raylib::helper::draw::DrawModelHelper::drawModelWires">
-<area shape="rect" id="node1" title="Draw a model wires (with texture if set)" alt="" coords="5,31,205,87"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_gl_state_manager.html#a7b732c38c6aa4d5fae6f4c7763f024c2" title="Disable the wire mode." alt="" coords="253,5,405,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1_gl_state_manager.html#a2927148e3e39cd41891500144c59bab7" title="Enable the wire mode." alt="" coords="253,71,405,112"/>
+<area shape="rect" id="node1" title="Draw a model wires (with texture if set)" alt="" coords="5,31,232,87"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_gl_state_manager.html#a7b732c38c6aa4d5fae6f4c7763f024c2" title="Disable the wire mode." alt="" coords="280,5,452,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1_gl_state_manager.html#a2927148e3e39cd41891500144c59bab7" title="Enable the wire mode." alt="" coords="280,71,452,112"/>
 </map>

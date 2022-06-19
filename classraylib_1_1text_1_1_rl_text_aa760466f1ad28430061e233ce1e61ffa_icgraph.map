@@ -1,5 +1,5 @@
 <map id="raylib::text::RlText::getTextSpacing" name="raylib::text::RlText::getTextSpacing">
-<area shape="rect" id="node1" title="Get the text spacing." alt="" coords="285,39,408,80"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#af0746843ab30bb0740a9484447b97a1f" title="Draw a text centered to the position of the text." alt="" coords="5,5,237,47"/>
-<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a84cd538b0a79a455aefad0ac3fd88b9b" title="Draw text using RlText and additional parameters." alt="" coords="31,71,211,112"/>
+<area shape="rect" id="node1" title="Get the text spacing." alt="" coords="313,39,455,80"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#af0746843ab30bb0740a9484447b97a1f" title="Draw a text centered to the position of the text." alt="" coords="5,5,265,47"/>
+<area shape="rect" id="node3" href="$classraylib_1_1helper_1_1draw_1_1_draw_text_helper.html#a84cd538b0a79a455aefad0ac3fd88b9b" title="Draw text using RlText and additional parameters." alt="" coords="35,71,236,112"/>
 </map>

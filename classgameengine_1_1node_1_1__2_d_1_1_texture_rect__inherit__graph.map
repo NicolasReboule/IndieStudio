@@ -1,5 +1,5 @@
 <map id="gameengine::node::_2D::TextureRect" name="gameengine::node::_2D::TextureRect">
-<area shape="rect" id="node1" title="Class representing a texture rectangle." alt="" coords="33,564,188,847"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_node2_d.html" title="A 2D node." alt="" coords="33,321,188,516"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="5,5,216,273"/>
+<area shape="rect" id="node1" title="Class representing a texture rectangle." alt="" coords="35,564,213,847"/>
+<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1__2_d_1_1_node2_d.html" title="A 2D node." alt="" coords="36,321,212,516"/>
+<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1_abstract_base.html" title="AbstractBase is the base class for all the nodes." alt="" coords="5,5,243,273"/>
 </map>

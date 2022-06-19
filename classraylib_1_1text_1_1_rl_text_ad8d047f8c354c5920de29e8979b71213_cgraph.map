@@ -1,4 +1,4 @@
 <map id="raylib::text::RlText::getSize" name="raylib::text::RlText::getSize">
-<area shape="rect" id="node1" title="Get the size of the text with the loaded font." alt="" coords="5,5,128,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_text_helper.html#a8ac6faf7d0f73665051282b48eb7752e" title="Measure string width for default font." alt="" coords="176,5,339,47"/>
+<area shape="rect" id="node1" title="Get the size of the text with the loaded font." alt="" coords="5,5,147,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_text_helper.html#a8ac6faf7d0f73665051282b48eb7752e" title="Measure string width for default font." alt="" coords="195,5,381,47"/>
 </map>

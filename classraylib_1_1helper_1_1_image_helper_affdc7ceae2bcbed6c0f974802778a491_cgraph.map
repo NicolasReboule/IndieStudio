@@ -1,5 +1,5 @@
 <map id="raylib::helper::ImageHelper::fromText" name="raylib::helper::ImageHelper::fromText">
-<area shape="rect" id="node1" title="Create an image from text (custom sprite font)" alt="" coords="5,27,179,69"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="227,5,381,32"/>
-<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="243,57,365,98"/>
+<area shape="rect" id="node1" title="Create an image from text (custom sprite font)" alt="" coords="5,27,205,69"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="253,5,431,32"/>
+<area shape="rect" id="node3" href="$classraylib_1_1text_1_1_rl_font.html#a9b57d7f829ba3d8f8eaa680f40be6d48" title="Get the raylib font." alt="" coords="271,57,413,98"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="raylib::ex::InvalidArgumentException" name="raylib::ex::InvalidArgumentException">
-<area shape="rect" id="node1" title="Exception thrown when an invalid argument is passed to a function." alt="" coords="5,271,196,363"/>
-<area shape="rect" id="node2" href="$classraylib_1_1ex_1_1_raylib_exception.html" title="All exceptions of the raylib&#45;cpp library will inherit from this class." alt="" coords="17,131,185,223"/>
-<area shape="rect" id="node3" title=" " alt="" coords="50,5,151,83"/>
+<area shape="rect" id="node1" title="Exception thrown when an invalid argument is passed to a function." alt="" coords="5,271,224,363"/>
+<area shape="rect" id="node2" href="$classraylib_1_1ex_1_1_raylib_exception.html" title="All exceptions of the raylib&#45;cpp library will inherit from this class." alt="" coords="17,131,213,223"/>
+<area shape="rect" id="node3" title=" " alt="" coords="71,5,158,83"/>
 </map>

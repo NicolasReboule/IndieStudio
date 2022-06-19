@@ -1,4 +1,4 @@
 <map id="raylib::helper::Collision3dHelper::checkCollisionBoxSphere" name="raylib::helper::Collision3dHelper::checkCollisionBoxSphere">
-<area shape="rect" id="node1" title="Check collision between a bounding box and a sphere." alt="" coords="5,5,219,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="267,5,441,47"/>
+<area shape="rect" id="node1" title="Check collision between a bounding box and a sphere." alt="" coords="5,5,243,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1helper_1_1_vector_helper.html#a00afa4662ac6fe92b166e102cb97b740" title="Convert a Vector2f to a raylib vector." alt="" coords="291,5,491,47"/>
 </map>

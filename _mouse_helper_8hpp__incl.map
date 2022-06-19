@@ -1,13 +1,13 @@
 <map id="raylib&#45;cpp/include/raylib/Inputs/MouseHelper.hpp" name="raylib&#45;cpp/include/raylib/Inputs/MouseHelper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="232,5,433,47"/>
-<area shape="rect" id="node2" href="$_math_8hpp.html" title=" " alt="" coords="146,169,255,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="301,319,364,345"/>
-<area shape="rect" id="node8" href="$_rl_camera_8hpp.html" title=" " alt="" coords="239,95,426,121"/>
-<area shape="rect" id="node3" href="$_vector_8hpp.html" title=" " alt="" coords="18,319,169,345"/>
-<area shape="rect" id="node5" href="$_vector_helper_8hpp.html" title=" " alt="" coords="106,244,295,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="23,244,82,271"/>
-<area shape="rect" id="node4" title=" " alt="" coords="58,393,130,420"/>
-<area shape="rect" id="node9" href="$_raylib_exception_8hpp.html" title=" " alt="" coords="370,169,601,196"/>
-<area shape="rect" id="node10" title=" " alt="" coords="487,244,564,271"/>
-<area shape="rect" id="node11" title=" " alt="" coords="408,244,462,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="246,5,470,47"/>
+<area shape="rect" id="node2" href="$_math_8hpp.html" title=" " alt="" coords="153,169,277,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="323,319,393,345"/>
+<area shape="rect" id="node8" href="$_rl_camera_8hpp.html" title=" " alt="" coords="253,95,463,121"/>
+<area shape="rect" id="node3" href="$_vector_8hpp.html" title=" " alt="" coords="17,319,185,345"/>
+<area shape="rect" id="node5" href="$_vector_helper_8hpp.html" title=" " alt="" coords="110,244,321,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="24,244,87,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="61,393,141,420"/>
+<area shape="rect" id="node9" href="$_raylib_exception_8hpp.html" title=" " alt="" coords="395,169,659,196"/>
+<area shape="rect" id="node10" title=" " alt="" coords="528,244,615,271"/>
+<area shape="rect" id="node11" title=" " alt="" coords="445,244,503,271"/>
 </map>

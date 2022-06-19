@@ -1,4 +1,4 @@
 <map id="raylib::helper::draw::DrawTextHelper::drawText" name="raylib::helper::draw::DrawTextHelper::drawText">
-<area shape="rect" id="node1" title="Draw a text (using default font)" alt="" coords="5,5,185,47"/>
-<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="233,13,388,39"/>
+<area shape="rect" id="node1" title="Draw a text (using default font)" alt="" coords="5,5,207,47"/>
+<area shape="rect" id="node2" href="$classraylib_1_1_rl_color.html#acc01c768ea633c5f8c0db7c126596b13" title="Get the Raylib&#39;s Color." alt="" coords="255,13,432,39"/>
 </map>
