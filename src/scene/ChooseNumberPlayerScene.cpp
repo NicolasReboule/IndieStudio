@@ -117,7 +117,8 @@ void indie::ChooseNumberPlayerScene::updateScene(const float &delta)
         Vector2i size = {(int) mapSize.x + 2, (int) mapSize.y + 2};
         Vector3f position = {size.x % 2 == 0 ? -0.5f : 0, 0, size.y % 2 == 0 ? -0.5f : 0};
         this->addNode(std::make_shared<gameengine::node::_3D::Grid3D>(size, position, 1.0f, RlColor::White, map->getMapPath() + "-grid"));
-        raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({-20, 20, -20}).setCameraMode(CAMERA_ORBITAL).build();
+        float pos = std::max(20.0f, (float) std::max(mapSize.x, mapSize.y) * 0.725f);
+        raylib::RlCamera camera = raylib::builder::RlCameraBuilder().setPosition({-pos, pos, -pos}).setCameraMode(CAMERA_ORBITAL).build();
         window->setCamera(camera);
         this->_savedIndexMap = globalInstance->_indexMap;
     }

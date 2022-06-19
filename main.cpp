@@ -15,7 +15,7 @@ int main(int ac, char **av)
         auto &window = raylib::window::RlWindow::getInstance();
         auto &sceneManager = gameengine::SceneManager::getInstance();
 
-        window->createWindow("Bomberman", 1280, 720, 60);
+        window->createWindow("Bomberman", 1280, 720, ac > 1 && std::string(av[1]) == "--unlimited" ? 0 : 60);
         window->setConfigFlags(FLAG_WINDOW_RESIZABLE);
         window->setCamera(raylib::builder::RlCameraBuilder().setPosition({0, 20, 0}).setCameraMode(CAMERA_FREE).build());
         raylib::helper::input::MouseHelper::setMouseCursor(MOUSE_CURSOR_CROSSHAIR);
@@ -42,7 +42,6 @@ int main(int ac, char **av)
 
         while (window->isOpen()) {
             sceneManager->makeLoop(window->getCamera());
-            std::cout << window->getCamera() << std::endl;
             dynamic_cast<raylib::audio::RlMusic &>(*sound).update();
         }
     } catch (gameengine::ex::GameEngineException &e) {
