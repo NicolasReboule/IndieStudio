@@ -8,7 +8,9 @@
 #ifndef INDIESTUDIO_STARTSCENE_HPP
 #define INDIESTUDIO_STARTSCENE_HPP
 
-#include "GameEngine/GameEngine.hpp"
+#include "Image.hpp"
+#include "map/Map3DLoader.hpp"
+#include <GameEngine/GameEngine.hpp>
 
 namespace indie {
 

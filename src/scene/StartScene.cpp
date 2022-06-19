@@ -6,8 +6,6 @@
 */
 
 #include "scene/StartScene.hpp"
-#include "Image.hpp"
-#include <thread>
 
 indie::StartScene::StartScene(const std::string &name, const std::string& sceneSource) : Scene(name, sceneSource)
 {
@@ -17,8 +15,10 @@ indie::StartScene::StartScene(const std::string &name, const std::string& sceneS
 void indie::StartScene::sceneLauncher()
 {
     auto &textureManager = gameengine::TextureManager::getInstance();
+    auto &map3DLoader = indie::map::Map3DLoader::getInstance();
 
     textureManager->loadTextures();
+    map3DLoader->loadMaps();
 
     auto gameScreen = std::make_shared<indie::Image>("gameScreen", textureManager->getTexture("./assets/textures/gui/splashart.png"));
     this->addNode(gameScreen);

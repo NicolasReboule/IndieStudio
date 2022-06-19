@@ -32,7 +32,7 @@ add_executable(${BINARY_NAME}
         src/scene/WinningScene.cpp
         src/button/IndieButton.cpp
         src/button/ButtonQuit.cpp
-        src/button/ButtonRestart.cpp)
+        src/button/ButtonRestart.cpp src/map/Map3DLoader.cpp include/map/Map3DLoader.hpp src/map/Map.cpp include/map/Map.hpp)
 
 target_link_libraries(${BINARY_NAME} raylib-cpp) # Link raylib-cpp to the executable
 
