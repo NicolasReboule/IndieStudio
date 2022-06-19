@@ -1,6 +1,0 @@
-<map id="operator&lt;&lt;" name="operator&lt;&lt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,91,105"/>
-<area shape="rect" id="node2" href="$classgameengine_1_1node_1_1_abstract_base.html#a14c7b1b5df9a934d89c2708a467768c2" title="Get the group of the node." alt="" coords="139,5,320,47"/>
-<area shape="rect" id="node3" href="$classgameengine_1_1node_1_1_abstract_base.html#af820bad057bf773dc0ef39d74fec2ff2" title="Get the name." alt="" coords="139,71,320,112"/>
-<area shape="rect" id="node4" href="$classgameengine_1_1node_1_1_abstract_base.html#a964634e032fa3d68e867ab81a06ccdc2" title="If the node is active." alt="" coords="139,136,320,177"/>
-</map>
