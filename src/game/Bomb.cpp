@@ -11,8 +11,8 @@
 #include "game/Player.hpp"
 #include "game/WallDestroyable.hpp"
 
-indie::Bomb::Bomb(const std::string &name, const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &range, const std::string &playerOwner)
-    : MultiCube(name, {1, 1, 1}, texture), _audioManager(gameengine::AudioManager::getInstance())
+indie::Bomb::Bomb(const std::string &name, const raylib::model::RlModel &model, const int &range, const std::string &playerOwner)
+    : StaticBody(name, model), _audioManager(gameengine::AudioManager::getInstance())
 {
     this->_range = range;
     this->_timer = 2;
@@ -128,13 +128,14 @@ void indie::Bomb::addMagma(const Vector3f &position, const Vector3f &addI)
 void indie::Bomb::instanceMagma(const Vector3f &pos)
 {
     auto &sceneManager = gameengine::SceneManager::getInstance();
+    static auto &textureManager = gameengine::TextureManager::getInstance();
     auto random = raylib::Random();
 
     auto mesh = raylib::builder::RlMeshBuilder()
         .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
         .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
     raylib::model::RlModel model = raylib::model::RlModel(std::make_shared<raylib::model::RlMesh>(mesh));
-    auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), model, std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/magma.png"));
+    auto magma = std::make_shared<indie::Magma>("magma" + std::to_string(random.generate(0, 99999)), model, textureManager->getTexture("./assets/textures/blocks/magma.png"));
     magma->setPosition(pos);
     sceneManager->addNode(magma);
 }

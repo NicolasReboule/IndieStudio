@@ -55,6 +55,8 @@ namespace indie {
         std::unordered_map<char, MapType> _mapSymbol;
         std::vector<std::vector<MapType>> _map;
         std::vector<Vector2f> _playerSpawn;
+
+        std::unique_ptr<gameengine::TextureManager> &_textureManager;
     };
 }
 

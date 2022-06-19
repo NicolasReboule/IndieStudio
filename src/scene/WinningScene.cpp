@@ -17,6 +17,7 @@ void indie::WinningScene::sceneLauncher()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &window = raylib::window::RlWindow::getInstance();
+    auto &textureManager = gameengine::TextureManager::getInstance();
 
     std::cout << "winner: " << globalInstance->_playerWinner << std::endl;
 
@@ -26,10 +27,10 @@ void indie::WinningScene::sceneLauncher()
     std::cout << "winner: " << globalInstance->_playerWinner << std::endl;
 
     //TODO: replace this with manager
-    auto blueTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/blue.png");
-    auto redTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/red.png");
-    auto greenTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/green.png");
-    auto yellowTexture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/yellow.png");
+    auto blueTexture = textureManager->getTexture("./assets/textures/players/blue.png");
+    auto redTexture = textureManager->getTexture("./assets/textures/players/red.png");
+    auto greenTexture = textureManager->getTexture("./assets/textures/players/green.png");
+    auto yellowTexture = textureManager->getTexture("./assets/textures/players/yellow.png");
 
     if (globalInstance->_playerWinner == "player0") {
         auto player = std::make_shared<indie::Player>("player0", raylib::model::RlModel("./assets/models/player.iqm"), blueTexture, 0);
@@ -66,11 +67,11 @@ void indie::WinningScene::sceneLauncher()
         this->addNode(player3);
     }
 
-    auto buttonRestart = std::make_shared<indie::button::ButtonRestart>("buttonRestart",std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_restart_x05.png"));
+    auto buttonRestart = std::make_shared<indie::button::ButtonRestart>("buttonRestart",textureManager->getTexture("./assets/textures/gui/button_restart_x05.png"));
     buttonRestart->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonRestart->getBounds().height * 2});
     this->addNode(buttonRestart);
 
-    auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu",std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
+    auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu",textureManager->getTexture("./assets/textures/gui/button_main_menu_x05.png"));
     buttonMainMenu->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonMainMenu->getBounds().height * 3.5f});
     this->addNode(buttonMainMenu);
 }

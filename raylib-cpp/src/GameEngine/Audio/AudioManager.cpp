@@ -84,3 +84,13 @@ void gameengine::AudioManager::setVolume(const float &volume, AbstractSound::Sou
         }
     }
 }
+
+std::unique_ptr<gameengine::AbstractSound> &gameengine::AudioManager::getSound(const std::string &name)
+{
+    for (auto &sound: this->_sounds) {
+        if (sound->getName() == name || sound->getFilePath() == name) {
+            return sound;
+        }
+    }
+    throw std::runtime_error("[GameEngine][AudioManager] Sound not found: " + name);
+}

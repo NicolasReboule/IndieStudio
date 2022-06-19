@@ -10,7 +10,7 @@
 indie::Player::Player(const std::string &name, const raylib::model::RlModel &model, \
 const std::shared_ptr<raylib::texture::RlTexture> &texture, const int &numpadId)
     : gameengine::node::_3D::KinematicBody(name, model, texture), _anim(model, "./assets/models/player.iqm"),
-                      _audioManager(gameengine::AudioManager::getInstance())
+                      _audioManager(gameengine::AudioManager::getInstance()), _textureManager(gameengine::TextureManager::getInstance())
 {
     this->_numpadId = numpadId;
     this->_state = ALIVE;
@@ -99,12 +99,9 @@ void indie::Player::spawnBomb()
     auto &sceneManager = gameengine::SceneManager::getInstance();
     auto random = raylib::Random();
 
-    /*auto mesh = raylib::builder::RlMeshBuilder()
-        .setMeshType(raylib::builder::RlMeshBuilder::MeshType::MeshCube)
-        .setWidth(1.0f).setHeight(1.0f).setLength(1.0f).build();
-    raylib::model::RlModel model = raylib::model::RlModel(std::make_shared<raylib::model::RlMesh>(mesh));*/
-    auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)),
-        std::make_shared<raylib::texture::RlTexture>("assets/textures/blocks/tnt_side.png"), this->_range, this->getName());
+    static raylib::model::RlModel bombModel = raylib::model::RlModel("./assets/models/tnt.obj");
+    bombModel.setMaterialTexture(this->_textureManager->getTexture("./assets/textures/blocks/tnt.png"));
+    auto bomb = std::make_shared<indie::Bomb>("bomb" + std::to_string(random.generate(0, 99999)), bombModel, this->_range, this->getName());
 
     bomb->setRotationDegrees(-90, {1, 0, 0});
 

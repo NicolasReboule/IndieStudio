@@ -72,22 +72,24 @@ add_library(${PROJECT_NAME}
         src/raylib/Window/RlWindow.cpp
         src/raylib/Window/System.cpp
 
-        src/GameEngine/Audio/AudioManager.cpp
         src/GameEngine/Audio/AbstractSound.cpp
-        src/GameEngine/Audio/Sound.cpp
+        src/GameEngine/Audio/AudioManager.cpp
         src/GameEngine/Audio/Music.cpp
-        src/GameEngine/Nodes/3D/StaticBody.cpp
-        src/GameEngine/Nodes/3D/Node3D.cpp
-        src/GameEngine/Nodes/AbstractBase.cpp
-        src/GameEngine/SceneManager.cpp
-        src/GameEngine/Scene.cpp
-        src/GameEngine/Nodes/2D/Node2D.cpp
-        src/GameEngine/Nodes/2D/Button.cpp
-        src/GameEngine/Nodes/2D/TextureRect.cpp
-        src/GameEngine/Nodes/3D/KinematicBody.cpp
+        src/GameEngine/Audio/Sound.cpp
         src/GameEngine/exception/GameEngineException.cpp
         src/GameEngine/exception/MapParserException.cpp
-        src/GameEngine/Nodes/3D/Grid3D.cpp
+        src/GameEngine/Nodes/2D/Button.cpp
         src/GameEngine/Nodes/2D/Label.cpp
-        include/GameEngine/Nodes/3D/MultiCube.hpp src/GameEngine/Nodes/3D/MultiCube.cpp)
+        src/GameEngine/Nodes/2D/Node2D.cpp
+        src/GameEngine/Nodes/2D/TextureRect.cpp
+        src/GameEngine/Nodes/3D/Grid3D.cpp
+        src/GameEngine/Nodes/3D/KinematicBody.cpp
+        src/GameEngine/Nodes/3D/MultiCube.cpp
+        src/GameEngine/Nodes/3D/Node3D.cpp
+        src/GameEngine/Nodes/3D/StaticBody.cpp
+        src/GameEngine/Nodes/AbstractBase.cpp
+        src/GameEngine/Scene.cpp
+        src/GameEngine/SceneManager.cpp
+        src/GameEngine/TextureManager.cpp
+        )
 target_link_libraries(${PROJECT_NAME} raylib)

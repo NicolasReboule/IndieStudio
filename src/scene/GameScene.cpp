@@ -13,7 +13,7 @@
 #include "button/ButtonMainMenu.hpp"
 #include "button/ButtonResume.hpp"
 
-indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource), _mapSizeMax({1000, 1000}), _mapSize({0, 0})
+indie::GameScene::GameScene(const std::string &name, const std::string &sceneSource) : Scene(name, sceneSource), _mapSizeMax({1000, 1000}), _mapSize({0, 0}), _textureManager(gameengine::TextureManager::getInstance())
 {
     this->_mapSymbol = {
         {' ', MapType::NONE},
@@ -27,27 +27,24 @@ indie::GameScene::GameScene(const std::string &name, const std::string &sceneSou
 
 void indie::GameScene::addWall(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
-    auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/bricks.png");
     static int id = 0;
-    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), raylib::model::RlModel(mesh), texture);
+    auto wall = std::make_shared<indie::Wall>("wall" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/bricks.png"));
     wall->setPosition(position);
     this->addNode(wall);
 }
 
 void indie::GameScene::addBreakableWall(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
-    auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/blackstone.png");
     static int id = 0;
-    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::model::RlModel(mesh), texture);
+    auto breakable = std::make_shared<indie::WallDestroyable>("wallDestroyable" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/blackstone.png"));
     breakable->setPosition(position);
     this->addNode(breakable);
 }
 
 void indie::GameScene::addFloor(const Vector3f &position, const std::shared_ptr<raylib::model::RlMesh> &mesh)
 {
-    auto texture = std::make_shared<raylib::texture::RlTexture>("./assets/textures/blocks/andesite.png");
     static int id = 0;
-    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), raylib::model::RlModel(mesh), texture);
+    auto floor = std::make_shared<indie::Wall>("floor" + std::to_string(id++), raylib::model::RlModel(mesh), _textureManager->getTexture("./assets/textures/blocks/andesite.png"));
     floor->setPosition(position);
     floor->setCollisionEnable(false);
     floor->setScale({1, 0.1, 1});
@@ -138,7 +135,7 @@ void indie::GameScene::sceneLauncher()
         else
             color  = "yellow";
         raylib::model::RlModel playerModel = raylib::model::RlModel("./assets/models/player.iqm");
-        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), playerModel, std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/" + color + ".png"), i);
+        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), playerModel, _textureManager->getTexture("./assets/textures/players/" + color + ".png"), i);
         this->addNode(player);
     }
     for (int i = globalInstance->_numberPlayers; i < 4; i++) {
@@ -152,20 +149,20 @@ void indie::GameScene::sceneLauncher()
         else
             color  = "yellow";
         raylib::model::RlModel playerModel = raylib::model::RlModel("./assets/models/player.iqm");
-        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), playerModel, std::make_shared<raylib::texture::RlTexture>("./assets/textures/players/" + color + ".png"), -1);
+        auto player = std::make_shared<indie::Player>("player" + std::to_string(i), playerModel, _textureManager->getTexture("./assets/textures/players/" + color + ".png"), -1);
         this->addNode(player);
     }
 
-    auto buttonResume = std::make_shared<indie::button::ButtonResume>("buttonResume", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_resume_x05.png"));
+    auto buttonResume = std::make_shared<indie::button::ButtonResume>("buttonResume", _textureManager->getTexture("./assets/textures/gui/button_resume_x05.png"));
     this->addNode(buttonResume);
 
-    auto buttonRestart = std::make_shared<indie::button::ButtonRestart>("buttonRestart", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_restart_x05.png"));
+    auto buttonRestart = std::make_shared<indie::button::ButtonRestart>("buttonRestart", _textureManager->getTexture("./assets/textures/gui/button_restart_x05.png"));
     this->addNode(buttonRestart);
 
-    auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
+    auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu", _textureManager->getTexture("./assets/textures/gui/button_main_menu_x05.png"));
     this->addNode(buttonMainMenu);
 
-    auto buttonQuit = std::make_shared<indie::button::ButtonQuit>("buttonQuit", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_quit_x05.png"));
+    auto buttonQuit = std::make_shared<indie::button::ButtonQuit>("buttonQuit", _textureManager->getTexture("./assets/textures/gui/button_quit_x05.png"));
     this->addNode(buttonQuit);
 
     Vector2i size = {(int) this->_mapSize.x, (int) this->_mapSize.y};

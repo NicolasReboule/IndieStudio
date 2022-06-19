@@ -16,37 +16,38 @@ void indie::ChooseNumberPlayerScene::sceneLauncher()
 {
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
+    auto &textureManager = gameengine::TextureManager::getInstance();
 
     auto button1p = std::make_shared<indie::button::IndieButton>("button1p",
-    std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_1p.png"), [globalInstance, sceneManager](auto &name) {
+    textureManager->getTexture("./assets/textures/gui/button_1p.png"), [globalInstance, sceneManager](auto &name) {
             globalInstance->_numberPlayers = 1;
             sceneManager->changeScene("game");
         });
     this->addNode(button1p);
 
     auto button2p = std::make_shared<indie::button::IndieButton>("button2p",
-        std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_2p.png"), [globalInstance, sceneManager](auto &name) {
+        textureManager->getTexture("./assets/textures/gui/button_2p.png"), [globalInstance, sceneManager](auto &name) {
             globalInstance->_numberPlayers = 2;
             sceneManager->changeScene("game");
         });
     this->addNode(button2p);
 
     auto button3p = std::make_shared<indie::button::IndieButton>("button3p",
-        std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_3p.png"), [globalInstance, sceneManager](auto &name) {
+        textureManager->getTexture("./assets/textures/gui/button_3p.png"), [globalInstance, sceneManager](auto &name) {
         globalInstance->_numberPlayers = 3;
         sceneManager->changeScene("game");
     });
     this->addNode(button3p);
 
     auto button4p = std::make_shared<indie::button::IndieButton>("button4p",
-        std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_4p.png"), [globalInstance, sceneManager](auto &name) {
+        textureManager->getTexture("./assets/textures/gui/button_4p.png"), [globalInstance, sceneManager](auto &name) {
         globalInstance->_numberPlayers = 4;
         sceneManager->changeScene("game");
     });
     this->addNode(button4p);
 
     auto buttonLeft = std::make_shared<indie::button::IndieButton>("buttonLeft",
-        std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_left.png"), [globalInstance, sceneManager](auto &name) {
+        textureManager->getTexture("./assets/textures/gui/button_left.png"), [globalInstance, sceneManager](auto &name) {
         int index = globalInstance->_indexMap;
         if (index > 0)
             globalInstance->_indexMap = index - 1;
@@ -54,23 +55,23 @@ void indie::ChooseNumberPlayerScene::sceneLauncher()
     this->addNode(buttonLeft);
 
     auto buttonRight = std::make_shared<indie::button::IndieButton>("buttonRight",
-        std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_right.png"), [globalInstance, sceneManager](auto &name) {
+        textureManager->getTexture("./assets/textures/gui/button_right.png"), [globalInstance, sceneManager](auto &name) {
             int index = globalInstance->_indexMap;
             if (index < 2)
                 globalInstance->_indexMap = index + 1;
     });
     this->addNode(buttonRight);
 
-    auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_main_menu_x05.png"));
+    auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu", textureManager->getTexture("./assets/textures/gui/button_main_menu_x05.png"));
     this->addNode(buttonMainMenu);
 
-    auto mapDefault = std::make_shared<indie::Image>("mapDefault", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/map/default.png"));
+    auto mapDefault = std::make_shared<indie::Image>("mapDefault", textureManager->getTexture("./assets/textures/gui/map/default.png"));
     this->addNode(mapDefault);
 
-    auto mapEmpty = std::make_shared<indie::Image>("mapEmpty", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/map/empty.png"));
+    auto mapEmpty = std::make_shared<indie::Image>("mapEmpty", textureManager->getTexture("./assets/textures/gui/map/empty.png"));
     this->addNode(mapEmpty);
 
-    auto mapCool = std::make_shared<indie::Image>("mapCool", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/map/cool.png"));
+    auto mapCool = std::make_shared<indie::Image>("mapCool", textureManager->getTexture("./assets/textures/gui/map/cool.png"));
     this->addNode(mapCool);
 }
 

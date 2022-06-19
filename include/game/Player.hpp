@@ -63,6 +63,7 @@ namespace indie {
         int _bombStock;
         float _timerGhost;
         std::shared_ptr<gameengine::AudioManager> &_audioManager;
+        std::unique_ptr<gameengine::TextureManager> &_textureManager;
 
         State _state;
 

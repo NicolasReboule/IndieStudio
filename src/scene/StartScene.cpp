@@ -7,6 +7,7 @@
 
 #include "scene/StartScene.hpp"
 #include "Image.hpp"
+#include <thread>
 
 indie::StartScene::StartScene(const std::string &name, const std::string& sceneSource) : Scene(name, sceneSource)
 {
@@ -15,13 +16,14 @@ indie::StartScene::StartScene(const std::string &name, const std::string& sceneS
 
 void indie::StartScene::sceneLauncher()
 {
-    auto &audioManager = gameengine::AudioManager::getInstance();
-    audioManager->loadSounds();
+    auto &textureManager = gameengine::TextureManager::getInstance();
 
-    auto gameScreen = std::make_shared<indie::Image>("gameScreen", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/splashart.png"));
+    textureManager->loadTextures();
+
+    auto gameScreen = std::make_shared<indie::Image>("gameScreen", textureManager->getTexture("./assets/textures/gui/splashart.png"));
     this->addNode(gameScreen);
 
-    auto studioScreen = std::make_shared<indie::Image>("studioScreen", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/logo.png"));
+    auto studioScreen = std::make_shared<indie::Image>("studioScreen", textureManager->getTexture("./assets/textures/gui/logo.png"));
     this->addNode(studioScreen);
 }
 

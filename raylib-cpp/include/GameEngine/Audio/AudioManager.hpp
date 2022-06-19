@@ -73,6 +73,13 @@ namespace gameengine {
          */
         void setVolume(const float &volume, AbstractSound::SoundCategory category);
 
+        /**
+         * @brief Get a sound from the manager
+         * @param name the name of the file, or full path
+         * @return the sound
+         */
+        std::unique_ptr<AbstractSound> &getSound(const std::string &name);
+
     private:
         static std::shared_ptr<AudioManager> _instance; /**< The unique instance of the AudioManager */
 

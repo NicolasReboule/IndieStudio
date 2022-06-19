@@ -14,18 +14,19 @@ indie::MainMenuScene::MainMenuScene(const std::string &name, const std::string &
 
 void indie::MainMenuScene::sceneLauncher()
 {
-    auto background = std::make_shared<indie::Image>("background", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/logo_big.png"));
+    auto &textureManager = gameengine::TextureManager::getInstance();
+    auto background = std::make_shared<indie::Image>("background", textureManager->getTexture("./assets/textures/gui/logo_big.png"));
     this->addNode(background);
 
     auto buttonPlay = std::make_shared<indie::button::IndieButton>("buttonPlay",
-        std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_play_x05.png"),[](auto &name) {
+                                                                   textureManager->getTexture("./assets/textures/gui/button_play_x05.png"),[](auto &name) {
         auto &sceneManager = gameengine::SceneManager::getInstance();
         sceneManager->changeScene("chooseNumberPlayer");
     });
     buttonPlay->setScale({0.5f, 0.5f});
     this->addNode(buttonPlay);
 
-    auto buttonQuit = std::make_shared<indie::button::ButtonQuit>("buttonQuit", std::make_shared<raylib::texture::RlTexture>("./assets/textures/gui/button_quit_x05.png"));
+    auto buttonQuit = std::make_shared<indie::button::ButtonQuit>("buttonQuit", textureManager->getTexture("./assets/textures/gui/button_quit_x05.png"));
     buttonQuit->setScale({0.5f, 0.5f});
     this->addNode(buttonQuit);
 }
