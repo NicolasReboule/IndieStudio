@@ -73,6 +73,14 @@ void indie::WinningScene::sceneLauncher()
     auto buttonMainMenu = std::make_shared<indie::button::ButtonMainMenu>("buttonMainMenu",textureManager->getTexture("./assets/textures/gui/button_main_menu_x05.png"));
     buttonMainMenu->centerButton({(float) window->getWidth() / 2.0f, (float) window->getHeight() / 2 + buttonMainMenu->getBounds().height * 3.5f});
     this->addNode(buttonMainMenu);
+
+    auto winnerText = std::make_shared<gameengine::node::_2D::Label>("winnerText");
+    winnerText->setPosition({400, 0});
+    winnerText->setColor(RlColor::Gold);
+    winnerText->setScale({50, 50});
+    winnerText->setText(globalInstance->_playerWinner + "   WINNN !!!!");
+    this->addNode(winnerText);
+
 }
 
 void indie::WinningScene::initScene()

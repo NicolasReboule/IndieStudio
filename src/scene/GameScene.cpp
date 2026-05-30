@@ -253,19 +253,6 @@ void indie::GameScene::displayWinner(const std::string &name)
     auto &globalInstance = indie::GlobalInstance::getInstance();
     auto &sceneManager = gameengine::SceneManager::getInstance();
 
-    try {
-        auto &WinnerText = dynamic_cast<gameengine::node::_2D::Label &>(*sceneManager->getNode("winnerText"));
-        WinnerText.setText(name + "   WINNN !!!!");
-    }
-    catch (const std::bad_cast &e) {
-        auto winnerText = std::make_shared<gameengine::node::_2D::Label>("winnerText");
-        winnerText->setPosition({400, 0});
-        winnerText->setColor(RlColor::Gold);
-        winnerText->setScale({50, 50});
-        winnerText->setText(name + "  WINNN !!!!");
-        this->addNode(winnerText);
-    }
-
     if (this->_winTimer <= 0) {
         globalInstance->_playerWinner = name;
         sceneManager->changeScene("winning");

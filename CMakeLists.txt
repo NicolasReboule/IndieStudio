@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17) # Set minimum required cmake version
 project(IndieStudio) # Project name
-
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 set(CMAKE_CXX_STANDARD 20) # Standard version to use of C++
 set(BINARY_NAME "bomberman") # Binary name
 set(ASSETS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/assets/") # Directory containing resources

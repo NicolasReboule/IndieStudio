@@ -13,6 +13,7 @@
 #include "RlModel.hpp"
 #include <string>
 #include <vector>
+#include <algorithm>
 #include <raylib.h>
 
 namespace raylib {
