@@ -2,6 +2,16 @@
 
 Epitech project to recreate an indie studio. The project is a bomberman game.
 
+![IndieStudio GIF](images/Indie5FPS.gif)
+
+## Goals of the project
+
+The goal of the project was to create a C++ wrapper for the Raylib and use it to create a bomberman game.
+
+The wrapper should be easy to understand and use. It can be found in the [raylib-cpp/src/raylib](https://github.com/NicolasReboule/IndieStudio/tree/master/raylib-cpp/src/raylib) and [raylib-cpp/include/raylib](https://github.com/NicolasReboule/IndieStudio/tree/master/raylib-cpp/include/raylib) folders.
+
+We also created a simple [node based game engine](https://github.com/NicolasReboule/IndieStudio/tree/master/raylib-cpp/include/GameEngine) to develop the game.
+
 ## Team
 
 - [Alwyn Mattapullut](alwyn.mattapullut@epitech.eu) - **Leader**
@@ -26,7 +36,7 @@ The documentation is available [here](https://alwyn974.github.io/IndieStudio).
 If you want to build the game you can run the following command:
 
 ```
-git clone https://github.com/alwyn974/IndieStudio.git
+git clone https://github.com/NicolasReboule/IndieStudio.git
 cd IndieStudio
 mkdir build
 cd build
@@ -52,3 +62,17 @@ cpack
 ```
 
 At the root of the repository a `dist` directory will be created. It contains the game installer.
+
+## Play
+
+The game should be played in multiplayer as we did not put much effort in the AI.
+
+Each player should use a controller for controls.
+
+### Add a map
+
+You can add your own map by adding a txt file to the map folder.
+
+It should follow this format.
+
+![IndieStudio Map](images/map.png)
